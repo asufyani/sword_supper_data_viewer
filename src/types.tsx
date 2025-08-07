@@ -22,10 +22,13 @@ export type Upgrade = {
 
 export interface ItemsTableProps {
   itemsArray: Item[],
-  itemNameMap: ItemNameMap
+  itemNameMap: ItemNameMap,
+  goTo?: (tab: TabName, id: string) => void
 }
 
-export type ItemNameMap = Record<string, {name: string, id: string, rarity: Rarity}>
+export type TabName = 'Armor' | 'Weapons' | 'Blueprints';
+
+export type ItemNameMap = Record<string, Item>
 
 export type Slot = 'Amulet' | 'Belt' | 'Chest' | 'Head' | 'Ring' | 'Weapon';
 

@@ -10,7 +10,7 @@ import { useState, type ChangeEvent } from 'react'
 import { UpgradeList } from './UpgradeList'
 
 
-export const WeaponTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameMap}) => {
+export const WeaponTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameMap, goTo}) => {
 
   const [searchString, setSearchString] = useState('');
 
@@ -34,7 +34,7 @@ export const WeaponTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameMap}
         </TableHead>
       <TableBody>
         {itemsArray.filter(item => item.name.toLowerCase().includes(searchString)).map( item => <TableRow>
-          <TableCell id={item.key}><RarityChip key={item.key} label={item.name} rarity={item.rarity}/></TableCell>
+          <TableCell id={item.key}><RarityChip item={item} goTo={goTo}/></TableCell>
           {/* <TableCell><RarityChip rarity={weapon.rarity} key={weapon.key}/></TableCell> */}
           <TableCell>{(Object.keys(item.damage || {}) as damageType[]).map(typeString=> <span>{typeString} : {item.damage![typeString]} </span>)}</TableCell>
           <TableCell>
@@ -42,7 +42,7 @@ export const WeaponTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameMap}
             {item.abilities?.map(ability => <div>{ability.id}</div>)}
           </TableCell>
           <TableCell>{item.requiredLevel}</TableCell>
-          <TableCell><UpgradeList itemNameMap={itemNameMap} upgrades={item.upgrades}/></TableCell>
+          <TableCell><UpgradeList itemNameMap={itemNameMap} upgrades={item.upgrades} goTo={goTo}/></TableCell>
         </TableRow>)}
       </TableBody>
     </Table>

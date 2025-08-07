@@ -1,20 +1,21 @@
 import { RarityChip } from "./RarityChip"
-import type { ItemNameMap, Upgrade } from "./types"
+import type { ItemNameMap, TabName, Upgrade } from "./types"
 
 interface UpgradeListProps {
     upgrades: Upgrade[],
-    itemNameMap: ItemNameMap
+    itemNameMap: ItemNameMap,
+    goTo?: (tab: TabName, id: string) => void
 }
 
-export const UpgradeList: React.FC<UpgradeListProps> = ({upgrades, itemNameMap}) => {
+export const UpgradeList: React.FC<UpgradeListProps> = ({upgrades, itemNameMap, goTo}) => {
   return <>{upgrades.map(upgrade => <div>
     <RarityChip 
-      label={itemNameMap[upgrade.yields].name} 
-      rarity={itemNameMap[upgrade.yields].rarity}
-      key={itemNameMap[upgrade.yields].id}
+     item={itemNameMap[upgrade.yields]}
+     goTo={goTo}
+     showPopover={true}
     />
     <ul>
-      {upgrade.requires.map(requirement => <li>{itemNameMap[requirement.id].name}: {requirement.amount}</li>)}
+      {upgrade.requires.map(requirement => <li key={upgrade.yields + '-' + requirement.id}>{itemNameMap[requirement.id].name}: {requirement.amount}</li>)}
     </ul>
     </div>)}
     </>

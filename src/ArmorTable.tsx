@@ -11,7 +11,7 @@ import { TableContainer, Paper, ToggleButton, ToggleButtonGroup } from '@mui/mat
 import { UpgradeList } from './UpgradeList'
 
 
-export const ArmorTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameMap}) => {
+export const ArmorTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameMap, goTo}) => {
   const [searchString, setSearchString] = useState('');
     const [slot, setSlots] = useState<Slot>();
 
@@ -68,7 +68,7 @@ export const ArmorTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameMap})
       </TableHead>
       <TableBody>
         {filteredItems.map( item => <TableRow>
-          <TableCell id={item.key}><RarityChip label={item.name} key={item.key} rarity={item.rarity}/></TableCell>
+          <TableCell id={item.key}><RarityChip item={item} goTo={goTo}/></TableCell>
           <TableCell>{item.equipSlots}</TableCell>
           <TableCell>
             {item.statModifiers.map(modifier => <div>{modifier.stat}: {modifier.value}</div>)}
@@ -76,7 +76,7 @@ export const ArmorTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameMap})
           </TableCell>
           {/* <TableCell><RarityChip rarity={item.rarity} key={item.key}/></TableCell> */}
           <TableCell>{item.requiredLevel}</TableCell>
-          <TableCell><UpgradeList itemNameMap={itemNameMap} upgrades={item.upgrades}/></TableCell>
+          <TableCell><UpgradeList itemNameMap={itemNameMap} upgrades={item.upgrades} goTo={goTo}/></TableCell>
         </TableRow>)}
       </TableBody>
     </Table>

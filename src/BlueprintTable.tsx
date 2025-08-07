@@ -10,10 +10,9 @@ import { useState, type ChangeEvent } from 'react'
 import { UpgradeList } from './UpgradeList'
 
 
-export const BlueprintTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameMap}) => {
+export const BlueprintTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameMap, goTo}) => {
 
   const [searchString, setSearchString] = useState('');
-
 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
       setSearchString(event.target.value.toLowerCase())
@@ -30,8 +29,8 @@ export const BlueprintTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameM
         </TableHead>
       <TableBody>
         {itemsArray.filter(item => item.name.toLowerCase().includes(searchString)).map( item => <TableRow>
-          <TableCell id={item.key}><RarityChip key={item.key} label={item.name} rarity={item.rarity}/></TableCell>
-          <TableCell><UpgradeList itemNameMap={itemNameMap} upgrades={item.upgrades}/></TableCell>
+          <TableCell id={item.key}><RarityChip item={item} /></TableCell>
+          <TableCell><UpgradeList itemNameMap={itemNameMap} upgrades={item.upgrades} goTo={goTo}/></TableCell>
         </TableRow>)}
       </TableBody>
     </Table>

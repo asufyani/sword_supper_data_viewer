@@ -2,11 +2,11 @@ import './App.css'
 import items from './items.json'
 import WeaponTable from './WeaponTable'
 
-import type {Item, Rarity, statModifier, Slot, ItemNameMap} from './types'
+import type {Item, Rarity, statModifier, Slot, ItemNameMap, TabName} from './types'
 import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import React, { useMemo } from 'react';
+import React, { useCallback, useEffect, useMemo } from 'react';
 import ArmorTable from './ArmorTable';
 import BlueprintTable from './BlueprintTable';
 type itemsKey = keyof typeof items;
@@ -74,11 +74,28 @@ function App() {
   }, []);
 
   const [tabIndex, setTabIndex] = React.useState(0);
+  const [focusedItem, setFocusedItem] = React.useState('');
 
   const handleTabChange = (_event: React.SyntheticEvent, newValue: number) => {
     setTabIndex(newValue);
   };
 
+  const goTo = useCallback((tab: TabName, id: string) => {
+    const tabToIndex = {
+      'Weapons': 0,
+      'Armor': 1,
+      'Blueprints': 2
+    }
+    setTabIndex(tabToIndex[tab]);
+    setFocusedItem(id);
+  }, [setTabIndex]);
+
+  useEffect(() => {
+    if (focusedItem) {
+      const element = document.getElementById(focusedItem);
+      element?.scrollIntoView({behavior: 'smooth'});
+    }
+  }, [focusedItem])
   return (
     <>
     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -89,13 +106,13 @@ function App() {
       </Tabs>
     </Box>
     <CustomTabPanel value={tabIndex} index={0}>
-      <WeaponTable itemsArray={itemArrays.weaponsArray} itemNameMap={itemArrays.itemNameMap}/>
+      <WeaponTable itemsArray={itemArrays.weaponsArray} itemNameMap={itemArrays.itemNameMap}  goTo={goTo}/>
     </CustomTabPanel>
     <CustomTabPanel value={tabIndex} index={1}>
-      <ArmorTable itemsArray={itemArrays.armorArray}  itemNameMap={itemArrays.itemNameMap}/>
+      <ArmorTable itemsArray={itemArrays.armorArray}  itemNameMap={itemArrays.itemNameMap}  goTo={goTo}/>
     </CustomTabPanel>
     <CustomTabPanel value={tabIndex} index={2}>
-      <BlueprintTable itemNameMap={itemArrays.itemNameMap} itemsArray={itemArrays.blueprintArray}/>
+      <BlueprintTable itemNameMap={itemArrays.itemNameMap} itemsArray={itemArrays.blueprintArray} goTo={goTo}/>
     </CustomTabPanel>
     
     </>
