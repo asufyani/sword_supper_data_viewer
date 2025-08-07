@@ -1,35 +1,107 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import items from './items.json'
+import WeaponTable from './WeaponTable'
+
+import type {Item, Rarity, statModifier, Slot, ItemNameMap} from './types'
+import Box from '@mui/material/Box';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import React, { useMemo } from 'react';
+import ArmorTable from './ArmorTable';
+import BlueprintTable from './BlueprintTable';
+type itemsKey = keyof typeof items;
+
+interface TabPanelProps {
+  children?: React.ReactNode;
+  index: number;
+  value: number;
+}
+function a11yProps(index: number) {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  };
+}
+
+function CustomTabPanel(props: TabPanelProps) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+    </div>
+  );
+}
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const itemArrays = useMemo(() => {
+    const itemNameMap: ItemNameMap = {};
+    const weaponsArray: Item[] =[];
+    const armorArray: Item[] =[];
+    const blueprintArray: Item[] =[];
+    Object.keys(items).forEach(key => {
+      const item = {
+        key,
+        ...items[key as itemsKey],
+        rarity: items[key as itemsKey].rarity as Rarity,
+        statModifiers: items[key as itemsKey].statModifiers as statModifier[],
+        equipSlots: items[key as itemsKey].equipSlots as Slot[]
+      };
+      itemNameMap[key] = item;
+      if (item.tags.includes('equipment') && item.equipSlots.includes('Weapon')) {
+        weaponsArray.push(item);
+      }
+      else if (item.tags.includes('equipment') && !item.equipSlots.includes('Weapon')) {
+        armorArray.push(item);
+      }
+      else if (item.tags.includes('blueprint')) {
+        blueprintArray.push(item);
+      }
+    });
+    return {
+      itemNameMap,
+      weaponsArray,
+      armorArray,
+      blueprintArray
+    }
+  }, []);
+
+  const [tabIndex, setTabIndex] = React.useState(0);
+
+  const handleTabChange = (_event: React.SyntheticEvent, newValue: number) => {
+    setTabIndex(newValue);
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+      <Tabs value={tabIndex} onChange={handleTabChange}>
+        <Tab label="Weapons" {...a11yProps(0)} />
+        <Tab label="Armor" {...a11yProps(1)} />
+        <Tab label="Blueprints" {...a11yProps(2)} />
+      </Tabs>
+    </Box>
+    <CustomTabPanel value={tabIndex} index={0}>
+      <WeaponTable itemsArray={itemArrays.weaponsArray} itemNameMap={itemArrays.itemNameMap}/>
+    </CustomTabPanel>
+    <CustomTabPanel value={tabIndex} index={1}>
+      <ArmorTable itemsArray={itemArrays.armorArray}  itemNameMap={itemArrays.itemNameMap}/>
+    </CustomTabPanel>
+    <CustomTabPanel value={tabIndex} index={2}>
+      <BlueprintTable itemNameMap={itemArrays.itemNameMap} itemsArray={itemArrays.blueprintArray}/>
+    </CustomTabPanel>
+    
     </>
   )
+  
+      
 }
 
 export default App
