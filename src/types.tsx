@@ -52,7 +52,8 @@ export type Item = {
   description: string,
   damage?: { [key in damageType]?: number}
   id: string
-
 }
+
+export type ItemData = Partial<Item>
 
 export type damageType = 'physical' | 'lightning' | 'fire' | 'shadow' | 'ice'

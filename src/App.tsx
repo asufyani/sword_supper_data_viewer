@@ -48,11 +48,11 @@ function App() {
     const blueprintArray: Item[] =[];
     Object.keys(items).forEach(key => {
       const item = {
-        key,
         ...items[key as itemsKey],
         rarity: items[key as itemsKey].rarity as Rarity,
         statModifiers: items[key as itemsKey].statModifiers as statModifier[],
-        equipSlots: items[key as itemsKey].equipSlots as Slot[]
+        equipSlots: items[key as itemsKey].equipSlots as Slot[],
+        key
       };
         console.log(item);
 
