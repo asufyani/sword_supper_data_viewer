@@ -56,3 +56,6 @@ export type Item = {
 export type ItemData = Partial<Item>
 
 export type damageType = 'physical' | 'lightning' | 'fire' | 'shadow' | 'ice'
+
+export type SortableProperty = 'name' | 'requiredLevel' | 'dmg'
+

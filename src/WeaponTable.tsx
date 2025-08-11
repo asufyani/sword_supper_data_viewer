@@ -4,45 +4,21 @@ import TableCell from '@mui/material/TableCell'
 import TableHead from '@mui/material/TableHead'
 import TableBody from '@mui/material/TableBody'
 import TextField from '@mui/material/TextField'
-import type { damageType, Item, ItemsTableProps } from './types'
+import type { damageType, ItemsTableProps, SortableProperty } from './types'
 import { RarityChip } from './RarityChip'
 import { useState, type ChangeEvent } from 'react'
 import { UpgradeList } from './UpgradeList'
-import { TableSortLabel } from '@mui/material'
+import { SortableHeader } from './SortableHeader'
+import { getComparator } from './utils/get_comparator'
 
 
 export const WeaponTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameMap, goTo}) => {
 
   const [searchString, setSearchString] = useState('');
-  const [orderBy, setOrderBy] = useState<PropName>('name');
+  const [orderBy, setOrderBy] = useState<SortableProperty>('name');
   const [order, setOrder] = useState(1);
 
-  type PropName = 'name' | 'requiredLevel' | 'dmg'
-
-  const getComparator = (property: PropName, order: number): ((a: Item, b: Item) => number) => {
-    if (property == 'name' || property == 'requiredLevel') {
-      return (a:Item, b: Item) => { return order  * ((a[property] < b[property]) ? -1 : 1)}
-    }
-    else {
-      return (a:Item, b: Item) => {
-        let aDamage=0, bDamage=0;
-        Object.keys(a.damage || {}).forEach((key: string) => {
-          if (a.damage) {
-            aDamage += (a.damage[key as damageType] || 0);
-          }
-        });
-        Object.keys(b.damage || {}).forEach((key) => {
-          if (b.damage) {
-            bDamage += (b.damage[key as damageType] || 0);
-          }
-        });
-        return order * (aDamage < bDamage ? -1 : 1);
-      }
-    }
-
-  }
-
-  const handleHeaderClick = (propName: PropName) => {
+  const handleHeaderClick = (propName: SortableProperty) => {
     if (orderBy == propName) {
       setOrder(-1  * order);
     }
@@ -61,10 +37,10 @@ export const WeaponTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameMap,
     <Table stickyHeader >
         <TableHead>
       <TableRow>
-          <TableCell className='clickable' onClick={()=>{handleHeaderClick('name')}}>Name<TableSortLabel active={orderBy == 'name'} direction={(order > 0) ? 'asc' : 'desc'}/></TableCell>
-          <TableCell className='clickable' onClick={()=>{handleHeaderClick('dmg')}}>Damage<TableSortLabel active={orderBy == 'dmg'} direction={(order > 0) ? 'asc' : 'desc'}/></TableCell>
+          <SortableHeader handleHeaderClick={handleHeaderClick} orderBy={orderBy} order={order} label='Name' property='name'/>
+          <SortableHeader handleHeaderClick={handleHeaderClick} orderBy={orderBy} order={order} label='Damage' property='dmg'/>
           <TableCell>Stat Modifiers and Abilities</TableCell>
-          <TableCell className='clickable' onClick={()=>{handleHeaderClick('requiredLevel')}}>Minimum Level<TableSortLabel active={orderBy == 'requiredLevel'} direction={(order > 0) ? 'asc' : 'desc'}/></TableCell>
+          <SortableHeader handleHeaderClick={handleHeaderClick} orderBy={orderBy} order={order} label='Required Level' property='requiredLevel'/>
           <TableCell>Upgrades</TableCell>
       </TableRow>
         </TableHead>

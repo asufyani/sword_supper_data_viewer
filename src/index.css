@@ -8,6 +8,6 @@ body {
   cursor: zoom-in;
 }
 
-.clickable {
+.sortable {
   cursor: pointer;
 }

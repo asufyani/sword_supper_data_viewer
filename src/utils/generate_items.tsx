@@ -1,4 +1,4 @@
-import type { Item, ItemData } from "./types";
+import type { Item, ItemData } from "../types";
 
 const se = (args: ItemData) => {
 

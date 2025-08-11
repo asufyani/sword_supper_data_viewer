@@ -1,6 +1,6 @@
 import './App.css'
 // import items from './items.json'
-import {GL as items} from './generate_items'
+import {GL as items} from './utils/generate_items'
 import WeaponTable from './WeaponTable'
 
 import type {Item, Rarity, statModifier, Slot, ItemNameMap, TabName} from './types'
