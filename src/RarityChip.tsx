@@ -57,8 +57,8 @@ export const RarityChip: React.FC<RarityChipProps> = ({item, showPopover, goTo})
         <br/>
         <span>{(Object.keys(item.damage || {}) as damageType[]).map(typeString=> <span key={item.id+'-'+typeString}>{typeString} : {item.damage![typeString]} </span>)}</span>
         <br/>
-        {item.statModifiers.map(modifier => <><span>{modifier.stat}: {modifier.value}</span><br/></>)}
-        {item.abilities?.map(ability => <><span>{ability.id}</span><br/></>)}
+        {item.statModifiers.map(modifier => <><span key={item.id+'-'+modifier.stat}>{modifier.stat}: {modifier.value}</span><br/></>)}
+        {item.abilities?.map(ability => <><span key={item.id+'-'+ability.id}>{ability.id}</span><br/></>)}
       </Typography>
     </Popover></span>
 }

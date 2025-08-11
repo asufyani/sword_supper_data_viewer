@@ -8,7 +8,7 @@ interface UpgradeListProps {
 }
 
 export const UpgradeList: React.FC<UpgradeListProps> = ({upgrades, itemNameMap, goTo}) => {
-  return <>{upgrades.map(upgrade => <div>
+  return <>{upgrades.map(upgrade => <div key={upgrade.yields + '-upgrade'}>
     <RarityChip 
      item={itemNameMap[upgrade.yields]}
      goTo={goTo}

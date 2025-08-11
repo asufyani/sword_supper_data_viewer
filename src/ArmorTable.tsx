@@ -4,10 +4,10 @@ import TableCell from '@mui/material/TableCell'
 import TableHead from '@mui/material/TableHead'
 import TableBody from '@mui/material/TableBody'
 import TextField from '@mui/material/TextField'
-import type { ItemsTableProps, Slot} from './types'
+import type { damageType, Item, ItemsTableProps, Slot} from './types'
 import { RarityChip } from './RarityChip'
 import { useState, type ChangeEvent } from 'react'
-import { TableContainer, Paper, ToggleButton, ToggleButtonGroup } from '@mui/material'
+import { TableContainer, Paper, ToggleButton, ToggleButtonGroup, TableSortLabel } from '@mui/material'
 import { UpgradeList } from './UpgradeList'
 
 
@@ -26,6 +26,44 @@ export const ArmorTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameMap, 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
       setSearchString(event.target.value.toLowerCase())
   };
+
+  const [orderBy, setOrderBy] = useState<PropName>('name');
+    const [order, setOrder] = useState(1);
+  
+    type PropName = 'name' | 'requiredLevel' | 'dmg'
+  
+    const getComparator = (property: PropName, order: number): ((a: Item, b: Item) => number) => {
+      if (property == 'name' || property == 'requiredLevel') {
+        return (a:Item, b: Item) => { return order  * ((a[property] < b[property]) ? -1 : 1)}
+      }
+      else {
+        return (a:Item, b: Item) => {
+          let aDamage=0, bDamage=0;
+          Object.keys(a.damage || {}).forEach((key: string) => {
+            if (a.damage) {
+              aDamage += (a.damage[key as damageType] || 0);
+            }
+          });
+          Object.keys(b.damage || {}).forEach((key) => {
+            if (b.damage) {
+              bDamage += (b.damage[key as damageType] || 0);
+            }
+          });
+          return order * (aDamage < bDamage ? -1 : 1);
+        }
+      }
+  
+    }
+  
+    const handleHeaderClick = (propName: PropName) => {
+      if (orderBy == propName) {
+        setOrder(-1  * order);
+      }
+      else {
+        setOrder(1);
+        setOrderBy(propName);
+      }
+    }
 
 
   const filteredBySlots = slot ? itemsArray.filter(item => item.equipSlots.includes(slot)) : itemsArray;
@@ -63,17 +101,16 @@ export const ArmorTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameMap, 
     <Table>
       <TableHead>
         <TableRow>
-          <TableCell>Name</TableCell>
+          <TableCell className='clickable' onClick={()=>{handleHeaderClick('name')}}>Name<TableSortLabel active={orderBy == 'name'} direction={(order > 0) ? 'asc' : 'desc'}/></TableCell>
           <TableCell>Slot</TableCell>
-          {/* <TableCell>Rarity</TableCell> */}
           <TableCell>Stat Modifiers and Abilities</TableCell>
-          <TableCell>Minimum Level</TableCell>
+          <TableCell className='clickable' onClick={()=>{handleHeaderClick('requiredLevel')}}>Minimum Level<TableSortLabel active={orderBy == 'requiredLevel'} direction={(order > 0) ? 'asc' : 'desc'}/></TableCell>
           <TableCell>Upgrades</TableCell>
         </TableRow>
       </TableHead>
       <TableBody>
-        {filteredItems.map( item => <TableRow>
-          <TableCell id={item.key}><RarityChip item={item} goTo={goTo}/></TableCell>
+        {filteredItems.sort(getComparator(orderBy, order)).map( item => <TableRow>
+          <TableCell id={item.id}><RarityChip item={item} goTo={goTo}/></TableCell>
           <TableCell>{item.equipSlots}</TableCell>
           <TableCell>
             {item.statModifiers.map(modifier => <div>{modifier.stat}: {modifier.value}</div>)}

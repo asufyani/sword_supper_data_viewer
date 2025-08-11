@@ -29,7 +29,7 @@ export const BlueprintTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameM
         </TableHead>
       <TableBody>
         {itemsArray.filter(item => item.name.toLowerCase().includes(searchString)).map( item => <TableRow>
-          <TableCell id={item.key}><RarityChip item={item} /></TableCell>
+          <TableCell id={item.id}><RarityChip item={item} /></TableCell>
           <TableCell><UpgradeList itemNameMap={itemNameMap} upgrades={item.upgrades} goTo={goTo}/></TableCell>
         </TableRow>)}
       </TableBody>

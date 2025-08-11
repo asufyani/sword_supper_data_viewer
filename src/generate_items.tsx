@@ -3,7 +3,6 @@ import type { Item, ItemData } from "./types";
 const se = (args: ItemData) => {
 
   const item: Item =  {
-    key: '',
     rarity: args.rarity || 'common',
     abilities: args.abilities,
     tags: args.tags || [],

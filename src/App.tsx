@@ -10,6 +10,9 @@ import Tab from '@mui/material/Tab';
 import React, { useCallback, useEffect, useMemo } from 'react';
 import ArmorTable from './ArmorTable';
 import BlueprintTable from './BlueprintTable';
+import { ThemeProvider } from '@emotion/react';
+import { createTheme } from '@mui/material/styles';
+import { TableContainer, Card } from '@mui/material';
 type itemsKey = keyof typeof items;
 
 interface TabPanelProps {
@@ -52,7 +55,7 @@ function App() {
         rarity: items[key as itemsKey].rarity as Rarity,
         statModifiers: items[key as itemsKey].statModifiers as statModifier[],
         equipSlots: items[key as itemsKey].equipSlots as Slot[],
-        key
+        id: key
       };
         console.log(item);
 
@@ -83,6 +86,13 @@ function App() {
     setTabIndex(newValue);
   };
 
+  const theme = createTheme({
+    typography: {
+      fontFamily: 'Lexend'
+    }
+  });
+
+
   const goTo = useCallback((tab: TabName, id: string) => {
     const tabToIndex = {
       'Weapons': 0,
@@ -100,7 +110,7 @@ function App() {
     }
   }, [focusedItem])
   return (
-    <>
+    <ThemeProvider theme={theme}>
     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
       <Tabs value={tabIndex} onChange={handleTabChange}>
         <Tab label="Weapons" {...a11yProps(0)} />
@@ -109,16 +119,22 @@ function App() {
       </Tabs>
     </Box>
     <CustomTabPanel value={tabIndex} index={0}>
-      <WeaponTable itemsArray={itemArrays.weaponsArray} itemNameMap={itemArrays.itemNameMap}  goTo={goTo}/>
+      <TableContainer component={Card}>
+        <WeaponTable itemsArray={itemArrays.weaponsArray} itemNameMap={itemArrays.itemNameMap}  goTo={goTo}/>
+      </TableContainer>
     </CustomTabPanel>
     <CustomTabPanel value={tabIndex} index={1}>
-      <ArmorTable itemsArray={itemArrays.armorArray}  itemNameMap={itemArrays.itemNameMap}  goTo={goTo}/>
+      <TableContainer component={Card}>
+        <ArmorTable itemsArray={itemArrays.armorArray}  itemNameMap={itemArrays.itemNameMap}  goTo={goTo}/>
+      </TableContainer>
     </CustomTabPanel>
     <CustomTabPanel value={tabIndex} index={2}>
-      <BlueprintTable itemNameMap={itemArrays.itemNameMap} itemsArray={itemArrays.blueprintArray} goTo={goTo}/>
+      <TableContainer component={Card}>
+        <BlueprintTable itemNameMap={itemArrays.itemNameMap} itemsArray={itemArrays.blueprintArray} goTo={goTo}/>
+      </TableContainer>
     </CustomTabPanel>
     
-    </>
+    </ThemeProvider>
   )
   
       

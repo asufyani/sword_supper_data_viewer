@@ -35,7 +35,6 @@ export type Slot = 'Amulet' | 'Belt' | 'Chest' | 'Head' | 'Ring' | 'Weapon';
 export type Rarity = 'common' | 'uncommon' | 'rare' | 'epic' | 'legendary';
 
 export type Item = {
-  key: string;
   rarity: Rarity;
   abilities?: ability[],
   tags: string[],
