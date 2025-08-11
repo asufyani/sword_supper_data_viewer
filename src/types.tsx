@@ -36,7 +36,6 @@ export type Rarity = 'common' | 'uncommon' | 'rare' | 'epic' | 'legendary';
 
 export type Item = {
   key: string;
-  type: string;
   rarity: Rarity;
   abilities?: ability[],
   tags: string[],

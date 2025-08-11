@@ -1,5 +1,6 @@
 import './App.css'
-import items from './items.json'
+// import items from './items.json'
+import {GL as items} from './generate_items'
 import WeaponTable from './WeaponTable'
 
 import type {Item, Rarity, statModifier, Slot, ItemNameMap, TabName} from './types'
@@ -40,7 +41,6 @@ function CustomTabPanel(props: TabPanelProps) {
 }
 
 function App() {
-
   const itemArrays = useMemo(() => {
     const itemNameMap: ItemNameMap = {};
     const weaponsArray: Item[] =[];
@@ -54,6 +54,8 @@ function App() {
         statModifiers: items[key as itemsKey].statModifiers as statModifier[],
         equipSlots: items[key as itemsKey].equipSlots as Slot[]
       };
+        console.log(item);
+
       itemNameMap[key] = item;
       if (item.tags.includes('equipment') && item.equipSlots.includes('Weapon')) {
         weaponsArray.push(item);
@@ -73,6 +75,7 @@ function App() {
     }
   }, []);
 
+  console.log(itemArrays.weaponsArray);
   const [tabIndex, setTabIndex] = React.useState(0);
   const [focusedItem, setFocusedItem] = React.useState('');
 

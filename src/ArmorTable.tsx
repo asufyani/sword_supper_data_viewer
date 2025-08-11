@@ -50,8 +50,13 @@ export const ArmorTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameMap, 
       <ToggleButton value="Chest">
         Chest
       </ToggleButton>
+      
       <ToggleButton value="Head">
         Head
+      </ToggleButton>
+
+      <ToggleButton value="Ring">
+        Ring
       </ToggleButton>
     </ToggleButtonGroup>
     <TableContainer component={Paper}>
