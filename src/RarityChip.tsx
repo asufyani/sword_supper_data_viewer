@@ -8,6 +8,7 @@ interface RarityChipProps {
   item: Item,
   showPopover?: boolean,
   goTo?: (tab: TabName, id: string) => void
+  amount?: number[]
 }
 const colorMap: Record<Rarity, string>= {
   common: 'gray',
@@ -16,7 +17,7 @@ const colorMap: Record<Rarity, string>= {
   epic: 'blueviolet',
   legendary: 'orange',
 }
-export const RarityChip: React.FC<RarityChipProps> = ({item, showPopover, goTo}) => {
+export const RarityChip: React.FC<RarityChipProps> = ({item, showPopover, goTo, amount}) => {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
   const open = Boolean(anchorEl);
 
@@ -28,14 +29,15 @@ export const RarityChip: React.FC<RarityChipProps> = ({item, showPopover, goTo})
     setAnchorEl(null);
   };
 
-  const itemType = item.tags.includes('blueprint') ? 'Blueprints' : (item.tags.includes('equipment') && item.equipSlots.includes('Weapon')) ? 'Weapons' : 'Armor';
+  const itemType = item.tags.includes('map') ? 'Maps': item.tags.includes('blueprint') ? 'Blueprints' : (item.tags.includes('equipment') && item.equipSlots.includes('Weapon')) ? 'Weapons' : 'Armor';
   const handleClick = () => {
     if (goTo) {
       goTo(itemType, item.id)
     }
   }
+  const label = amount ? item.name + ': ' + amount : item.name;
   return <span onMouseOver={showPopover ? handlePopoverOpen : () => {}} onMouseOut={handlePopoverClose}  onClick={handleClick} className={goTo ? 'interactive' : ''}>
-    <Chip key={item.id} color='primary' style={{backgroundColor:colorMap[item.rarity]}} label={item.name} />
+    <Chip key={item.id} color='primary' style={{backgroundColor:colorMap[item.rarity]}} label={label} />
     <Popover
       id="mouse-over-popover"
       sx={{ pointerEvents: 'none' }}
@@ -52,7 +54,7 @@ export const RarityChip: React.FC<RarityChipProps> = ({item, showPopover, goTo})
       onClose={handlePopoverClose}
       disableRestoreFocus
     >
-      <Typography sx={{ p: 1 }}>
+      <Typography key={item.id} sx={{ p: 1 }}>
         <span>Required level: {item.requiredLevel}</span>
         <br/>
         <span>{(Object.keys(item.damage || {}) as damageType[]).map(typeString=> <span key={item.id+'-'+typeString}>{typeString} : {item.damage![typeString]} </span>)}</span>

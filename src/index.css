@@ -11,3 +11,10 @@ body {
 .sortable {
   cursor: pointer;
 }
+
+.loot-table-link {
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}

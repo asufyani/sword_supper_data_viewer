@@ -13,6 +13,8 @@ import BlueprintTable from './BlueprintTable';
 import { ThemeProvider } from '@emotion/react';
 import { createTheme } from '@mui/material/styles';
 import { TableContainer, Card } from '@mui/material';
+import LootTable from './LootTable';
+import MapTable from './MapTable';
 type itemsKey = keyof typeof items;
 
 interface TabPanelProps {
@@ -49,6 +51,7 @@ function App() {
     const weaponsArray: Item[] =[];
     const armorArray: Item[] =[];
     const blueprintArray: Item[] =[];
+    const mapArray: Item[]=[];
     Object.keys(items).forEach(key => {
       const item = {
         ...items[key as itemsKey],
@@ -57,7 +60,6 @@ function App() {
         equipSlots: items[key as itemsKey].equipSlots as Slot[],
         id: key
       };
-        console.log(item);
 
       itemNameMap[key] = item;
       if (item.tags.includes('equipment') && item.equipSlots.includes('Weapon')) {
@@ -69,16 +71,20 @@ function App() {
       else if (item.tags.includes('blueprint')) {
         blueprintArray.push(item);
       }
+      else if (item.tags.includes('map')) {
+        mapArray.push(item);
+      }
     });
     return {
       itemNameMap,
       weaponsArray,
       armorArray,
-      blueprintArray
+      blueprintArray,
+      mapArray
     }
   }, []);
 
-  console.log(itemArrays.weaponsArray);
+  console.log(itemArrays.mapArray);
   const [tabIndex, setTabIndex] = React.useState(0);
   const [focusedItem, setFocusedItem] = React.useState('');
 
@@ -97,7 +103,8 @@ function App() {
     const tabToIndex = {
       'Weapons': 0,
       'Armor': 1,
-      'Blueprints': 2
+      'Blueprints': 2,
+      'Maps': 3
     }
     setTabIndex(tabToIndex[tab]);
     setFocusedItem(id);
@@ -116,6 +123,8 @@ function App() {
         <Tab label="Weapons" {...a11yProps(0)} />
         <Tab label="Armor" {...a11yProps(1)} />
         <Tab label="Blueprints" {...a11yProps(2)} />
+        <Tab label="Maps" {...a11yProps(3)} />
+        <Tab label="Loot" {...a11yProps(4)} />
       </Tabs>
     </Box>
     <CustomTabPanel value={tabIndex} index={0}>
@@ -131,6 +140,16 @@ function App() {
     <CustomTabPanel value={tabIndex} index={2}>
       <TableContainer component={Card}>
         <BlueprintTable itemNameMap={itemArrays.itemNameMap} itemsArray={itemArrays.blueprintArray} goTo={goTo}/>
+      </TableContainer>
+    </CustomTabPanel>
+    <CustomTabPanel value={tabIndex} index={3}>
+      <TableContainer component={Card}>
+        <MapTable itemsArray={itemArrays.mapArray} itemNameMap={itemArrays.itemNameMap} goTo={goTo}/>
+      </TableContainer>
+    </CustomTabPanel>
+    <CustomTabPanel value={tabIndex} index={4}>
+      <TableContainer component={Card}>
+        <LootTable itemNameMap={itemArrays.itemNameMap} goTo={goTo}/>
       </TableContainer>
     </CustomTabPanel>
     

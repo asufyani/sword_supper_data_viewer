@@ -20,13 +20,15 @@ export type Upgrade = {
   yields: string
 }
 
+export type GoToType = (tab: TabName, id: string) => void
+
 export interface ItemsTableProps {
   itemsArray: Item[],
   itemNameMap: ItemNameMap,
-  goTo?: (tab: TabName, id: string) => void
+  goTo?: GoToType
 }
 
-export type TabName = 'Armor' | 'Weapons' | 'Blueprints';
+export type TabName = 'Armor' | 'Weapons' | 'Blueprints' | 'Maps';
 
 export type ItemNameMap = Record<string, Item>
 

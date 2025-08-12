@@ -7,9 +7,10 @@ import TextField from '@mui/material/TextField'
 import type { Item, ItemsTableProps, Slot} from './types'
 import { RarityChip } from './RarityChip'
 import { useState, useCallback, type ChangeEvent } from 'react'
-import { TableContainer, Paper, ToggleButton, ToggleButtonGroup, TableSortLabel, Tooltip } from '@mui/material'
+import { TableContainer, Paper, ToggleButton, ToggleButtonGroup } from '@mui/material'
 import { UpgradeList } from './UpgradeList'
 import { getComparator } from './utils/get_comparator'
+import { SortableHeader } from './SortableHeader'
 
 
 export const ArmorTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameMap, goTo}) => {
@@ -81,10 +82,10 @@ export const ArmorTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameMap, 
     <Table>
       <TableHead>
         <TableRow>
-          <TableCell className='sortable' onClick={()=>{handleHeaderClick('name')}}><Tooltip title="Click to sort"><span>Name<TableSortLabel active={orderBy == 'name'} direction={(order > 0) ? 'asc' : 'desc'}/></span></Tooltip></TableCell>
+          <SortableHeader handleHeaderClick={handleHeaderClick} order={order} orderBy={orderBy} label='Name' property='name'/>
           <TableCell>Slot</TableCell>
           <TableCell>Stat Modifiers and Abilities</TableCell>
-          <TableCell className='sortable' onClick={()=>{handleHeaderClick('requiredLevel')}}>Minimum Level<TableSortLabel active={orderBy == 'requiredLevel'} direction={(order > 0) ? 'asc' : 'desc'}/></TableCell>
+          <SortableHeader handleHeaderClick={handleHeaderClick} order={order} orderBy={orderBy} label='Required Level' property='requiredLevel'/>
           <TableCell>Upgrades</TableCell>
         </TableRow>
       </TableHead>
