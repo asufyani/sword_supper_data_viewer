@@ -2,7 +2,7 @@ import { Accordion, AccordionDetails, AccordionSummary, Chip, TextField, Typogra
 import type { ItemNameMap, GoToType } from './types';
 import {et} from './utils/loot'
 import { RarityChip } from './RarityChip';
-import { useCallback,  useMemo,  useState, type ChangeEvent } from 'react';
+import { useCallback,  useMemo, type ChangeEvent } from 'react';
 import { useDebounceValue } from 'usehooks-ts';
 
 interface LootTableProps {
