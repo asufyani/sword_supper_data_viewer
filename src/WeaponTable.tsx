@@ -10,11 +10,13 @@ import { useState, type ChangeEvent } from 'react'
 import { UpgradeList } from './UpgradeList'
 import { SortableHeader } from './SortableHeader'
 import { getComparator } from './utils/get_comparator'
+import { StatsDisplay } from './StatsDisplay'
+import { useDebounceValue } from 'usehooks-ts'
 
 
 export const WeaponTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameMap, goTo}) => {
 
-  const [searchString, setSearchString] = useState('');
+  const [searchString, setSearchString] = useDebounceValue('', 250);
   const [orderBy, setOrderBy] = useState<SortableProperty>('name');
   const [order, setOrder] = useState(1);
 
@@ -49,8 +51,7 @@ export const WeaponTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameMap,
           <TableCell key={item.id} id={item.id}><RarityChip item={item} goTo={goTo}/></TableCell>
           <TableCell key={item.id+'-damage'}>{(Object.keys(item.damage || {}) as damageType[]).map(typeString=> <span key={item.id+'-'+typeString}>{typeString} : {item.damage![typeString]} </span>)}</TableCell>
           <TableCell key={item.id+'-mods'}>
-            {item.statModifiers.map(modifier => <div key={item.id+'-'+modifier.stat}>{modifier.stat}: {modifier.value}</div>)}
-            {item.abilities?.map(ability => <div key={item.id+'-'+ability.id}>{ability.id}</div>)}
+            <StatsDisplay statModifiers={item.statModifiers} abilities={item.abilities} />
           </TableCell>
           <TableCell>{item.requiredLevel}</TableCell>
           <TableCell><UpgradeList itemNameMap={itemNameMap} upgrades={item.upgrades} goTo={goTo}/></TableCell>

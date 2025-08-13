@@ -11,10 +11,12 @@ import { TableContainer, Paper, ToggleButton, ToggleButtonGroup } from '@mui/mat
 import { UpgradeList } from './UpgradeList'
 import { getComparator } from './utils/get_comparator'
 import { SortableHeader } from './SortableHeader'
+import { StatsDisplay } from './StatsDisplay'
+import { useDebounceValue } from 'usehooks-ts'
 
 
 export const ArmorTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameMap, goTo}) => {
-  const [searchString, setSearchString] = useState('');
+  const [searchString, setSearchString] = useDebounceValue('', 250);
     const [slot, setSlots] = useState<Slot>();
 
     const handleChangeSlots = (
@@ -94,8 +96,7 @@ export const ArmorTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameMap, 
           <TableCell id={item.id}><RarityChip item={item} goTo={goTo}/></TableCell>
           <TableCell>{item.equipSlots}</TableCell>
           <TableCell>
-            {item.statModifiers.map(modifier => <div>{modifier.stat}: {modifier.value}</div>)}
-            {item.abilities?.map(ability => <div>{ability.id}</div>)}
+            <StatsDisplay statModifiers={item.statModifiers} abilities={item.abilities} />
           </TableCell>
           {/* <TableCell><RarityChip rarity={item.rarity} key={item.key}/></TableCell> */}
           <TableCell>{item.requiredLevel}</TableCell>

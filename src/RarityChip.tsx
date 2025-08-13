@@ -8,7 +8,7 @@ interface RarityChipProps {
   item: Item,
   showPopover?: boolean,
   goTo?: (tab: TabName, id: string) => void
-  amount?: number[]
+  weight?: string
 }
 const colorMap: Record<Rarity, string>= {
   common: 'gray',
@@ -17,7 +17,7 @@ const colorMap: Record<Rarity, string>= {
   epic: 'blueviolet',
   legendary: 'orange',
 }
-export const RarityChip: React.FC<RarityChipProps> = ({item, showPopover, goTo, amount}) => {
+export const RarityChip: React.FC<RarityChipProps> = ({item, showPopover, goTo, weight}) => {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
   const open = Boolean(anchorEl);
 
@@ -35,7 +35,7 @@ export const RarityChip: React.FC<RarityChipProps> = ({item, showPopover, goTo, 
       goTo(itemType, item.id)
     }
   }
-  const label = amount ? item.name + ': ' + amount : item.name;
+  const label = weight ? item.name + ' - ' + weight : item.name;
   return <span onMouseOver={showPopover ? handlePopoverOpen : () => {}} onMouseOut={handlePopoverClose}  onClick={handleClick} className={goTo ? 'interactive' : ''}>
     <Chip key={item.id} color='primary' style={{backgroundColor:colorMap[item.rarity]}} label={label} />
     <Popover

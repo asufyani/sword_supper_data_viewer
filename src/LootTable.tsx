@@ -1,8 +1,9 @@
-import { Accordion, AccordionDetails, AccordionSummary, Chip, Typography } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Chip, TextField, Typography } from '@mui/material';
 import type { ItemNameMap, GoToType } from './types';
 import {et} from './utils/loot'
 import { RarityChip } from './RarityChip';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback,  useMemo,  useState, type ChangeEvent } from 'react';
+import { useDebounceValue } from 'usehooks-ts';
 
 interface LootTableProps {
   itemNameMap: ItemNameMap
@@ -20,59 +21,73 @@ type LootTier = {
 }
 
 type LootItem = {
-  id?: string,
+  id?: string
   tableId?: string
+  weight?: number
 }
 
- 
+const formatter = new Intl.NumberFormat('en-US', {
+  style: 'percent',
+  maximumFractionDigits: 3,
+  minimumFractionDigits: 0,
+})
 
-type LootKey = keyof typeof et;
+
+
+type LootKey = keyof LootTable;
 export const ArmorTable: React.FC<LootTableProps> = ({itemNameMap, goTo}) => {
   const lootTable: Record<string, LootTable> = useMemo(() => {return et}, []);
-  console.log(lootTable);
 
-  const [focusedTable, setFocusedTable] = useState('');
-   const goToTable = useCallback((tableId: string) => {
-    setFocusedTable(tableId);
-  }, [setFocusedTable]);
+  const [searchString, setSearchString] = useDebounceValue('', 500);
 
-  useEffect(() => {
-    if (focusedTable) {
-      const element = document.getElementById(focusedTable);
-      element?.scrollIntoView({behavior: 'smooth'});
-      element?.click();
-    }
-  }, [focusedTable])
+  const handleSearchChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
+      setSearchString(event.target.value.toLowerCase().trim())
+  }, [setSearchString]);
+  const goToTable = useCallback((tableId: string) => {
+    const element = document.getElementById(tableId);
+    element?.scrollIntoView({behavior: 'smooth'});
+  }, []);
 
-  const handleClick = (panel: string) => () => {
-      setFocusedTable(panel);
-    };
+
   return (
     <>
-      {Object.keys(lootTable).map((key) => 
-        <Accordion id={key} key={key} expanded={key == focusedTable} onChange={handleClick(key)}>
-          <AccordionSummary id={key}>
-            <Typography component="span">{key}</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            {(lootTable[key as LootKey].tiers || []).map((tier, idx) =>
-              <Accordion key={key+'-'+idx} >
-                <AccordionSummary>{tier.minLevel}{tier.maxLevel ? '-'+tier.maxLevel : '+'}</AccordionSummary>
-                <AccordionDetails>
-                  {tier.items.map((item, itemIdx) => {
-                    const itemToLink = item.id && itemNameMap[item.id];
-                    return <span key={key+'-'+idx+'-'+ (item.id || item.tableId)+itemIdx}>
-                      {itemToLink && <RarityChip item={itemToLink} showPopover={true} goTo={goTo} />}
-                      
-                      {item.tableId && <Chip label={item.tableId} className='loot-table-link' onClick={() => {goToTable(item.tableId || '')}}/>}
-                    </span>
-                  }
-                  )}
-                </AccordionDetails>
-              </Accordion>
-            )}
-          </AccordionDetails>
-        </Accordion>
+      <TextField onChange={handleSearchChange}></TextField>
+    
+      {Object.keys(lootTable).map((key) => {
+        const tableHasItem = lootTable[key].tiers.some((tier) =>  tier.items.some((item) => item.id && itemNameMap[item.id].name.toLowerCase().includes(searchString)));
+        const showTable = tableHasItem || !searchString;
+        if (showTable) {
+          return <Accordion id={key} key={key}>
+            <AccordionSummary id={key}>
+              <Typography component="span">{key}</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              {(lootTable[key as LootKey].tiers || []).map((tier, idx) => {
+                const totalWeight: number = tier.items.reduce((total, item) => { return total + (item.weight || 0)}, 0);
+                const tierHasItem = tier.items.some((item) => item.id && itemNameMap[item.id].name.toLowerCase().includes(searchString));
+                const showTier = tierHasItem || !searchString;
+                if (showTier) {
+                  return <Accordion key={key+'-'+idx} >
+                    <AccordionSummary>{tier.minLevel}{tier.maxLevel ? '-'+tier.maxLevel : '+'}</AccordionSummary>
+                    <AccordionDetails>
+                      {tier.items.map((item, itemIdx) => {
+                        const itemToLink = item.id && itemNameMap[item.id];
+                        const dropPercentage = ((item.weight || 0)/totalWeight);
+                        const dropRate = dropPercentage ? formatter.format(dropPercentage) : undefined;
+                        return <span key={key+'-'+idx+'-'+ (item.id || item.tableId)+itemIdx}>
+                          {itemToLink && <RarityChip item={itemToLink} showPopover={true} goTo={goTo} weight={dropRate}/>}
+                          {item.tableId && <Chip label={dropRate ? `${item.tableId} - ${dropRate}` : item.tableId} className='loot-table-link' onClick={() => {goToTable(item.tableId || '')}}/>}
+                        </span>
+                      })}
+                    </AccordionDetails>
+                  </Accordion>
+                }
+              })}
+            </AccordionDetails>
+          </Accordion>
+        }
+      }
+
       )}
     </>
   )

@@ -1,0 +1,20 @@
+import type { ability, statModifier } from "./types"
+
+const formatter = new Intl.NumberFormat('en-US', {
+  style: 'percent',
+  maximumFractionDigits: 2,
+  minimumFractionDigits: 0,
+})
+
+interface StatsDisplayProps {
+    statModifiers: statModifier[]
+    abilities?: ability[]
+}
+
+
+export const StatsDisplay: React.FC<StatsDisplayProps> = ({statModifiers, abilities}) => {
+    return <>
+        {statModifiers.map(modifier => <div>{modifier.stat}: {(modifier.value > -1 && modifier.value < 1) ? formatter.format(modifier.value) : modifier.value}</div>)}
+        {abilities?.map(ability => <div>{ability.id}</div>)}
+    </>
+}

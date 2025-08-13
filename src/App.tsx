@@ -84,7 +84,6 @@ function App() {
     }
   }, []);
 
-  console.log(itemArrays.mapArray);
   const [tabIndex, setTabIndex] = React.useState(0);
   const [focusedItem, setFocusedItem] = React.useState('');
 
