@@ -9,35 +9,47 @@ import { RarityChip } from './RarityChip'
 import { useState, type ChangeEvent } from 'react'
 import { UpgradeList } from './UpgradeList'
 
-
-export const BlueprintTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameMap, goTo}) => {
-
-  const [searchString, setSearchString] = useState('');
+export const BlueprintTable: React.FC<ItemsTableProps> = ({
+  itemsArray,
+  itemNameMap,
+  goTo,
+}) => {
+  const [searchString, setSearchString] = useState('')
 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
-      setSearchString(event.target.value.toLowerCase())
-  };
+    setSearchString(event.target.value.toLowerCase())
+  }
   return (
     <>
-    <TextField onChange={handleSearchChange}></TextField>
-    <Table stickyHeader >
+      <TextField onChange={handleSearchChange}></TextField>
+      <Table stickyHeader>
         <TableHead>
-      <TableRow>
-          <TableCell>Name</TableCell>
-          <TableCell>Upgrades</TableCell>
-      </TableRow>
+          <TableRow>
+            <TableCell>Name</TableCell>
+            <TableCell>Upgrades</TableCell>
+          </TableRow>
         </TableHead>
-      <TableBody>
-        {itemsArray.filter(item => item.name.toLowerCase().includes(searchString)).map( item => <TableRow>
-          <TableCell id={item.id}><RarityChip item={item} /></TableCell>
-          <TableCell><UpgradeList itemNameMap={itemNameMap} upgrades={item.upgrades} goTo={goTo}/></TableCell>
-        </TableRow>)}
-      </TableBody>
-    </Table>
+        <TableBody>
+          {itemsArray
+            .filter((item) => item.name.toLowerCase().includes(searchString))
+            .map((item) => (
+              <TableRow>
+                <TableCell id={item.id}>
+                  <RarityChip item={item} />
+                </TableCell>
+                <TableCell>
+                  <UpgradeList
+                    itemNameMap={itemNameMap}
+                    upgrades={item.upgrades}
+                    goTo={goTo}
+                  />
+                </TableCell>
+              </TableRow>
+            ))}
+        </TableBody>
+      </Table>
     </>
   )
-  
-      
 }
 
-export default BlueprintTable;
+export default BlueprintTable
