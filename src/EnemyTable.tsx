@@ -54,7 +54,7 @@ export const EnemyTable: React.FC<{ itemNamesMap: ItemNameMap, goTo: GoToType}> 
               const resistType: keyof Enemy = (damageType + 'Resist') as keyof Enemy;
               if (enemy[resistType]) {
                 const resistAmount: number = enemy[resistType] as number;
-                return <div className={resistAmount < 0 ? 'bonus' : 'penalty'}>{`${damageTypeSymbols[damageType]}: ${formatter.format(resistAmount)}`}</div>
+                return <div className={resistAmount < 0 ? 'bonus' : 'penalty'} key={resistType}>{`${damageTypeSymbols[damageType]}: ${formatter.format(resistAmount)}`}</div>
               }
             })}
           </TableCell>
@@ -127,7 +127,7 @@ export const EnemyTable: React.FC<{ itemNamesMap: ItemNameMap, goTo: GoToType}> 
         </TableHead>
         <TableBody>
           {Object.keys(enemies).filter((key) => key.toLowerCase().includes(searchString.toLowerCase())).map((enemyKey) => {
-            return <Row enemy={enemies[enemyKey]} />
+            return <Row key={enemyKey} enemy={enemies[enemyKey]} />
           })}
         </TableBody>
       </Table>

@@ -14,7 +14,7 @@ interface StatsDisplayProps {
 
 export const StatsDisplay: React.FC<StatsDisplayProps> = ({statModifiers, abilities}) => {
   return <>
-    {statModifiers.map(modifier => <div>{modifier.stat}: <span className={modifier.value > 0 ? 'bonus' : 'penalty'}>{(modifier.value > -1 && modifier.value < 1) ? formatter.format(modifier.value) : modifier.value}</span></div>)}
-    {abilities?.map(ability => <div>{ability.id}</div>)}
+    {statModifiers.map(modifier => <div key={modifier.stat}>{modifier.stat}: <span className={modifier.value > 0 ? 'bonus' : 'penalty'}>{(modifier.value > -1 && modifier.value < 1) ? formatter.format(modifier.value) : modifier.value}</span></div>)}
+    {abilities?.map(ability => <div key={ability.id}>{ability.id}</div>)}
   </>
 }

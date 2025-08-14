@@ -130,8 +130,8 @@ function App() {
   }, [focusedItem])
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={tabIndex} onChange={handleTabChange}>
+      {/* <Box sx={{ borderBottom: 1, borderColor: 'divider' }}> */}
+        <Tabs value={tabIndex} onChange={handleTabChange} variant="scrollable" scrollButtons="auto">
           <Tab label="Weapons" {...a11yProps(0)} />
           <Tab label="Armor" {...a11yProps(1)} />
           <Tab label="Blueprints" {...a11yProps(2)} />
@@ -139,9 +139,9 @@ function App() {
           <Tab label="Loot" {...a11yProps(4)} />
           <Tab label="Enemies" {...a11yProps(5)}/>
         </Tabs>
-      </Box>
+      {/* </Box> */}
       <CustomTabPanel value={tabIndex} index={0}>
-        <TableContainer component={Card}>
+        <TableContainer>
           <WeaponTable
             itemsArray={itemArrays.weaponsArray}
             itemNameMap={itemArrays.itemNameMap}
