@@ -19,9 +19,10 @@ import ArmorTable from './ArmorTable'
 import BlueprintTable from './BlueprintTable'
 import { ThemeProvider } from '@emotion/react'
 import { createTheme } from '@mui/material/styles'
-import { TableContainer, Card } from '@mui/material'
+import { TableContainer, Card, Paper } from '@mui/material'
 import LootTable from './LootTable'
 import MapTable from './MapTable'
+import EnemyTable from './EnemyTable'
 type itemsKey = keyof typeof items
 
 interface TabPanelProps {
@@ -136,6 +137,7 @@ function App() {
           <Tab label="Blueprints" {...a11yProps(2)} />
           <Tab label="Maps" {...a11yProps(3)} />
           <Tab label="Loot" {...a11yProps(4)} />
+          <Tab label="Enemies" {...a11yProps(5)}/>
         </Tabs>
       </Box>
       <CustomTabPanel value={tabIndex} index={0}>
@@ -177,6 +179,11 @@ function App() {
       <CustomTabPanel value={tabIndex} index={4}>
         <TableContainer component={Card}>
           <LootTable itemNameMap={itemArrays.itemNameMap} goTo={goTo} />
+        </TableContainer>
+      </CustomTabPanel>
+      <CustomTabPanel value={tabIndex} index={5}>
+        <TableContainer component={Paper}>
+          <EnemyTable itemNamesMap={itemArrays.itemNameMap} goTo={goTo}/>
         </TableContainer>
       </CustomTabPanel>
     </ThemeProvider>

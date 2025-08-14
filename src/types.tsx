@@ -57,7 +57,39 @@ export type Item = {
 
 export type ItemData = Partial<Item>
 
-export type damageType = 'physical' | 'lightning' | 'fire' | 'shadow' | 'ice'
+export const damageTypes = ['physical' , 'lightning' , 'fire' , 'shadow' , 'ice'] as const;
 
-export type SortableProperty = 'name' | 'requiredLevel' | 'dmg'
+export type damageType = typeof damageTypes[number];
+
+export type Enemy = {
+  id: string
+  baseDamage: number
+  baseDefense: number
+  baseHp: number
+  crit: number
+  damageGrowth: number
+  damageType: damageType
+  defenseGrowth: number
+  hpGrowth: number
+  dodge: number
+  speed: number
+  lootTables: LootTable[]
+}
+
+type LootTable = {
+  tiers: LootTier[]
+}
+
+type LootTier = {
+  minLevel: number
+  maxLevel?: number
+  items: LootItem[]
+}
+
+type LootItem = {
+  id: string
+  quantity?: number[] | number
+}
+
+export type SortableProperty = 'name' |  'dmg' | keyof Item | keyof Enemy
 

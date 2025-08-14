@@ -12,6 +12,7 @@ import { SortableHeader } from './SortableHeader'
 import { getComparator } from './utils/get_comparator'
 import { StatsDisplay } from './StatsDisplay'
 import { useDebounceValue } from 'usehooks-ts'
+import { damageTypeSymbols } from './utils/constants'
 
 export const WeaponTable: React.FC<ItemsTableProps> = ({
     itemsArray,
@@ -86,8 +87,7 @@ export const WeaponTable: React.FC<ItemsTableProps> = ({
                                         ) as damageType[]
                                     ).map((typeString) => (
                                         <span key={item.id + '-' + typeString}>
-                                            {typeString} :{' '}
-                                            {item.damage![typeString]}{' '}
+                                            {item.damage![typeString]}{damageTypeSymbols[typeString]}
                                         </span>
                                     ))}
                                 </TableCell>

@@ -1,15 +1,15 @@
 import TableCell from '@mui/material/TableCell'
 import TableSortLabel from '@mui/material/TableSortLabel'
 import Tooltip from '@mui/material/Tooltip'
+import type { SortableProperty } from './types'
 
-type PropName = 'name' | 'requiredLevel' | 'dmg'
 
 interface SortableHeaderProps {
-  handleHeaderClick: (property: PropName) => void
-  orderBy: PropName
+  handleHeaderClick: (property: SortableProperty) => void
+  orderBy: SortableProperty
   order: number
   label: string
-  property: PropName
+  property: SortableProperty
 }
 
 export const SortableHeader: React.FC<SortableHeaderProps> = ({

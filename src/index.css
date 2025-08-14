@@ -18,3 +18,11 @@ body {
     text-decoration: underline;
   }
 }
+
+.penalty {
+  color:red;
+}
+
+.bonus {
+  color:limegreen;
+}

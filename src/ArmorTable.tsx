@@ -4,7 +4,7 @@ import TableCell from '@mui/material/TableCell'
 import TableHead from '@mui/material/TableHead'
 import TableBody from '@mui/material/TableBody'
 import TextField from '@mui/material/TextField'
-import type { Item, ItemsTableProps, Slot} from './types'
+import type { Item, ItemsTableProps, Slot, SortableProperty} from './types'
 import { RarityChip } from './RarityChip'
 import { useState, useCallback, type ChangeEvent } from 'react'
 import { TableContainer, Paper, ToggleButton, ToggleButtonGroup } from '@mui/material'
@@ -31,12 +31,10 @@ export const ArmorTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameMap, 
       setSearchString(event.target.value.toLowerCase())
   };
 
-  const [orderBy, setOrderBy] = useState<PropName>('name');
+  const [orderBy, setOrderBy] = useState<SortableProperty>('name');
   const [order, setOrder] = useState(1);
-
-  type PropName = 'name' | 'requiredLevel' | 'dmg'
   
-  const handleHeaderClick = useCallback((propName: PropName) => {
+  const handleHeaderClick = useCallback((propName: SortableProperty) => {
     if (orderBy == propName) {
       setOrder(-1  * order);
     }

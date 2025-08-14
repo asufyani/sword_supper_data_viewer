@@ -80,7 +80,7 @@ export const RarityChip: React.FC<RarityChipProps> = ({
         <Typography key={item.id} sx={{ p: 1 }}>
           <span>Required level: {item.requiredLevel}</span>
           <br />
-          <span>
+          {item.damage && <><span>
             {(Object.keys(item.damage || {}) as damageType[]).map(
               (typeString) => (
                 <span key={item.id + '-' + typeString}>
@@ -89,7 +89,8 @@ export const RarityChip: React.FC<RarityChipProps> = ({
               )
             )}
           </span>
-          <br />
+          <br /></>}
+          
           <StatsDisplay statModifiers={item.statModifiers} abilities={item.abilities}/>
         </Typography>
       </Popover>
