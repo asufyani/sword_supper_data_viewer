@@ -23,6 +23,7 @@ import { TableContainer, Card, Paper } from '@mui/material'
 import LootTable from './LootTable'
 import MapTable from './MapTable'
 import EnemyTable from './EnemyTable'
+import FoodTable from './FoodTable'
 type itemsKey = keyof typeof items
 
 interface TabPanelProps {
@@ -138,6 +139,7 @@ function App() {
           <Tab label="Maps" {...a11yProps(3)} />
           <Tab label="Loot" {...a11yProps(4)} />
           <Tab label="Enemies" {...a11yProps(5)}/>
+          <Tab label="Food" {...a11yProps(6)}/>
         </Tabs>
       {/* </Box> */}
       <CustomTabPanel value={tabIndex} index={0}>
@@ -184,6 +186,11 @@ function App() {
       <CustomTabPanel value={tabIndex} index={5}>
         <TableContainer component={Paper}>
           <EnemyTable itemNamesMap={itemArrays.itemNameMap} goTo={goTo}/>
+        </TableContainer>
+      </CustomTabPanel>
+      <CustomTabPanel value={tabIndex} index={6}>
+        <TableContainer component={Paper}>
+          <FoodTable itemNamesMap={itemArrays.itemNameMap}/>
         </TableContainer>
       </CustomTabPanel>
     </ThemeProvider>
