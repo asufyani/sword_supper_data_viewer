@@ -31,7 +31,6 @@ export const EnemyTable: React.FC<{ itemNamesMap: ItemNameMap, goTo: GoToType}> 
   const enemies: Record<string, Enemy> = useMemo(() => {
     return z3 as Record<string, Enemy>
   }, [])
-  console.log(enemies)
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchString(event.target.value.toLowerCase())
   }
@@ -55,7 +54,7 @@ export const EnemyTable: React.FC<{ itemNamesMap: ItemNameMap, goTo: GoToType}> 
               const resistType: keyof Enemy = (damageType + 'Resist') as keyof Enemy;
               if (enemy[resistType]) {
                 const resistAmount: number = enemy[resistType] as number;
-                return <div className={resistAmount < 0 ? 'bonus' : ''}>{`${damageTypeSymbols[damageType]}: ${formatter.format(resistAmount)}`}</div>
+                return <div className={resistAmount < 0 ? 'bonus' : 'penalty'}>{`${damageTypeSymbols[damageType]}: ${formatter.format(resistAmount)}`}</div>
               }
             })}
           </TableCell>
