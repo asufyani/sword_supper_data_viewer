@@ -24,6 +24,7 @@ import LootTable from './LootTable'
 import MapTable from './MapTable'
 import EnemyTable from './EnemyTable'
 import FoodTable from './FoodTable'
+import QuestsTable from './QuestsTable'
 type itemsKey = keyof typeof items
 
 interface TabPanelProps {
@@ -140,6 +141,7 @@ function App() {
           <Tab label="Loot" {...a11yProps(4)} />
           <Tab label="Enemies" {...a11yProps(5)}/>
           <Tab label="Food" {...a11yProps(6)}/>
+          <Tab label="Quests" {...a11yProps(7)}/>
         </Tabs>
       {/* </Box> */}
       <CustomTabPanel value={tabIndex} index={0}>
@@ -191,6 +193,11 @@ function App() {
       <CustomTabPanel value={tabIndex} index={6}>
         <TableContainer component={Paper}>
           <FoodTable itemNamesMap={itemArrays.itemNameMap}/>
+        </TableContainer>
+      </CustomTabPanel>
+      <CustomTabPanel value={tabIndex} index={7}>
+        <TableContainer component={Paper}>
+          <QuestsTable itemNamesMap={itemArrays.itemNameMap}/>
         </TableContainer>
       </CustomTabPanel>
     </ThemeProvider>
