@@ -19,7 +19,7 @@ import ArmorTable from './ArmorTable'
 import BlueprintTable from './BlueprintTable'
 import { ThemeProvider } from '@emotion/react'
 import { createTheme } from '@mui/material/styles'
-import { TableContainer, Card, Paper } from '@mui/material'
+import { TableContainer, Card, Paper, Typography } from '@mui/material'
 import LootTable from './LootTable'
 import MapTable from './MapTable'
 import EnemyTable from './EnemyTable'
@@ -200,6 +200,9 @@ function App() {
           <QuestsTable itemNamesMap={itemArrays.itemNameMap}/>
         </TableContainer>
       </CustomTabPanel>
+      <Typography><a href='https://www.reddit.com/r/SwordAndSupperGame/'>r/SwordAndSupperGame</a></Typography>
+      <Typography><a href='https://www.reddit.com/user/Thats_a_movie/'>u/Thats_a_movie</a></Typography>
+      <Typography><a href='https://github.com/asufyani/sword_supper_data_viewer'>github</a></Typography>
     </ThemeProvider>
   )
 }
