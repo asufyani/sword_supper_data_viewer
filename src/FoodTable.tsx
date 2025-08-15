@@ -29,12 +29,12 @@ export const FoodTable: React.FC<{itemNamesMap: ItemNameMap}> = ({itemNamesMap})
         <TableBody>
           {Object.keys(food).filter((key) => food[key as keyof typeof food].some((essence) => essence.id.toLowerCase().includes(searchString))).map((foodName) => {
             const essences = food[foodName as keyof typeof food];
-            return <TableRow>
+            return <TableRow key={foodName}>
               <TableCell>{foodName}</TableCell>
               <TableCell>
                 {
                   essences.map((essence) => {
-                    return <div>{itemNamesMap[essence.id].name}: {essence.quantity}</div>
+                    return <div key={essence.id}>{itemNamesMap[essence.id].name}: {essence.quantity}</div>
                   })
                 }
               </TableCell>

@@ -4,7 +4,12 @@ import TableCell from '@mui/material/TableCell'
 import TableHead from '@mui/material/TableHead'
 import TableBody from '@mui/material/TableBody'
 import TextField from '@mui/material/TextField'
-import { damageTypes, type Enemy, type GoToType, type ItemNameMap } from './types'
+import {
+  damageTypes,
+  type Enemy,
+  type GoToType,
+  type ItemNameMap,
+} from './types'
 import { useCallback, useMemo, type ChangeEvent } from 'react'
 import { z3 } from './utils/enemies'
 import React from 'react'
@@ -13,11 +18,19 @@ import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp'
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown'
 import Collapse from '@mui/material/Collapse'
 import Accordion from '@mui/material/Accordion'
-import { AccordionDetails, AccordionSummary, Box, Chip, Grid, Input, Slider, Typography } from '@mui/material'
+import {
+  AccordionDetails,
+  AccordionSummary,
+  Box,
+  Chip,
+  Grid,
+  Input,
+  Slider,
+  Typography,
+} from '@mui/material'
 import { RarityChip } from './RarityChip'
 import { damageTypeSymbols } from './utils/constants'
 import { useDebounceValue } from 'usehooks-ts'
-
 
 const formatter = new Intl.NumberFormat('en-US', {
   style: 'percent',
@@ -25,9 +38,12 @@ const formatter = new Intl.NumberFormat('en-US', {
   minimumFractionDigits: 0,
 })
 
-export const EnemyTable: React.FC<{ itemNamesMap: ItemNameMap, goTo: GoToType}> = ({itemNamesMap, goTo}) => {
+export const EnemyTable: React.FC<{
+  itemNamesMap: ItemNameMap
+  goTo: GoToType
+}> = ({ itemNamesMap, goTo }) => {
   const [searchString, setSearchString] = useDebounceValue('', 250)
-  const maxLevel = 300;
+  const maxLevel = 300
   const [level, setLevel] = React.useState(1)
   const enemies: Record<string, Enemy> = useMemo(() => {
     return z3 as Record<string, Enemy>
@@ -37,41 +53,47 @@ export const EnemyTable: React.FC<{ itemNamesMap: ItemNameMap, goTo: GoToType}> 
   }
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setLevel(event.target.value === '' ? 0 : Number(event.target.value));
-  };
+    setLevel(event.target.value === '' ? 0 : Number(event.target.value))
+  }
 
-    const handleSliderChange = (_event: Event, newValue: number) => {
-    setLevel(newValue);
-  };
+  const handleSliderChange = (_event: Event, newValue: number) => {
+    setLevel(newValue)
+  }
 
-  
   const handleBlur = () => {
     if (level < 0) {
-      setLevel(0);
+      setLevel(0)
     } else if (level > maxLevel) {
-      setLevel(maxLevel);
+      setLevel(maxLevel)
     }
-  };
-  
-  const calcScalingValues = useCallback((enemy: Enemy) => {
-    const health=Math.round(enemy.baseHp+enemy.hpGrowth*Math.pow(level,1.27))
-    const defense=Math.round(enemy.baseDefense+enemy.defenseGrowth*Math.pow(level,1.15))
-    const damage=Math.round(enemy.baseDamage+enemy.damageGrowth*Math.pow(level,1.1))
-    return {
-      health,
-      defense,
-      damage
-    }
+  }
 
-  }, [level]);
+  const calcScalingValues = useCallback(
+    (enemy: Enemy) => {
+      const health = Math.round(
+        enemy.baseHp + enemy.hpGrowth * Math.pow(level, 1.27)
+      )
+      const defense = Math.round(
+        enemy.baseDefense + enemy.defenseGrowth * Math.pow(level, 1.15)
+      )
+      const damage = Math.round(
+        enemy.baseDamage + enemy.damageGrowth * Math.pow(level, 1.1)
+      )
+      return {
+        health,
+        defense,
+        damage,
+      }
+    },
+    [level]
+  )
 
   function Row(props: { enemy: Enemy }) {
     const { enemy } = props
     const [open, setOpen] = React.useState(false)
     const lootTable = enemy.lootTables[0]
 
-    const scaledValues = calcScalingValues(enemy);
-
+    const scaledValues = calcScalingValues(enemy)
 
     return (
       <React.Fragment>
@@ -82,10 +104,16 @@ export const EnemyTable: React.FC<{ itemNamesMap: ItemNameMap, goTo: GoToType}> 
           <TableCell>{scaledValues.defense}</TableCell>
           <TableCell>
             {damageTypes.map((damageType) => {
-              const resistType: keyof Enemy = (damageType + 'Resist') as keyof Enemy;
+              const resistType: keyof Enemy =
+                `${damageType}Resist` as keyof Enemy
               if (enemy[resistType]) {
-                const resistAmount: number = enemy[resistType] as number;
-                return <div className={resistAmount < 0 ? 'bonus' : 'penalty'} key={resistType}>{`${damageTypeSymbols[damageType]}: ${formatter.format(resistAmount)}`}</div>
+                const resistAmount: number = enemy[resistType] as number
+                return (
+                  <div
+                    className={resistAmount < 0 ? 'bonus' : 'penalty'}
+                    key={resistType}
+                  >{`${damageTypeSymbols[damageType]}: ${formatter.format(resistAmount)}`}</div>
+                )
               }
             })}
           </TableCell>
@@ -114,13 +142,24 @@ export const EnemyTable: React.FC<{ itemNamesMap: ItemNameMap, goTo: GoToType}> 
                     <AccordionSummary>{levels}</AccordionSummary>
                     <AccordionDetails>
                       {tier.items.map((itemData) => {
-                        const item = itemNamesMap[itemData.id];
-                        if (item.tags.includes('resource') || item.tags.includes('currency')) {
-                          const quantities = (typeof itemData.quantity === 'number') ? itemData.quantity : itemData.quantity?.join(' or ');
+                        const item = itemNamesMap[itemData.id]
+                        if (
+                          item.tags.includes('resource') ||
+                          item.tags.includes('currency')
+                        ) {
+                          const quantities =
+                            typeof itemData.quantity === 'number'
+                              ? itemData.quantity
+                              : itemData.quantity?.join(' or ')
                           return <Chip label={`${item.id}: ${quantities}`} />
-                        }
-                        else {
-                          return <RarityChip item={item} goTo={goTo} showPopover={true}/>
+                        } else {
+                          return (
+                            <RarityChip
+                              item={item}
+                              goTo={goTo}
+                              showPopover={true}
+                            />
+                          )
                         }
                       })}
                     </AccordionDetails>
@@ -137,36 +176,36 @@ export const EnemyTable: React.FC<{ itemNamesMap: ItemNameMap, goTo: GoToType}> 
   return (
     <>
       <TextField onChange={handleSearchChange}></TextField>
-       <Box sx={{ width: '50%', margin: 5, alignItems: 'center'}}>
-      <Typography id="input-slider" gutterBottom>
-        Enemy Level
-      </Typography>
-      <Grid container spacing={2} sx={{ alignItems: 'center' }}>
-        <Grid size="grow">
-          <Slider
-            value={typeof level === 'number' ? level : 0}
-            max={maxLevel}
-            onChange={handleSliderChange}
-            aria-labelledby="input-slider"
-          />
+      <Box sx={{ width: '50%', margin: 5, alignItems: 'center' }}>
+        <Typography id="input-slider" gutterBottom>
+          Enemy Level
+        </Typography>
+        <Grid container spacing={2} sx={{ alignItems: 'center' }}>
+          <Grid size="grow">
+            <Slider
+              value={typeof level === 'number' ? level : 0}
+              max={maxLevel}
+              onChange={handleSliderChange}
+              aria-labelledby="input-slider"
+            />
+          </Grid>
+          <Grid>
+            <Input
+              value={level}
+              size="small"
+              onChange={handleInputChange}
+              onBlur={handleBlur}
+              inputProps={{
+                step: 10,
+                min: 1,
+                max: maxLevel,
+                type: 'number',
+                'aria-labelledby': 'input-slider',
+              }}
+            />
+          </Grid>
         </Grid>
-        <Grid>
-          <Input
-            value={level}
-            size="small"
-            onChange={handleInputChange}
-            onBlur={handleBlur}
-            inputProps={{
-              step: 10,
-              min: 1,
-              max: maxLevel,
-              type: 'number',
-              'aria-labelledby': 'input-slider',
-            }}
-          />
-        </Grid>
-      </Grid>
-    </Box>
+      </Box>
       <Table stickyHeader>
         <TableHead>
           <TableRow>
@@ -182,9 +221,13 @@ export const EnemyTable: React.FC<{ itemNamesMap: ItemNameMap, goTo: GoToType}> 
           </TableRow>
         </TableHead>
         <TableBody>
-          {Object.keys(enemies).filter((key) => key.toLowerCase().includes(searchString.toLowerCase())).map((enemyKey) => {
-            return <Row key={enemyKey} enemy={enemies[enemyKey]} />
-          })}
+          {Object.keys(enemies)
+            .filter((key) =>
+              key.toLowerCase().includes(searchString.toLowerCase())
+            )
+            .map((enemyKey) => {
+              return <Row key={enemyKey} enemy={enemies[enemyKey]} />
+            })}
         </TableBody>
       </Table>
     </>

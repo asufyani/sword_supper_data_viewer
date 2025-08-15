@@ -33,7 +33,7 @@ export const BlueprintTable: React.FC<ItemsTableProps> = ({
           {itemsArray
             .filter((item) => item.name.toLowerCase().includes(searchString))
             .map((item) => (
-              <TableRow>
+              <TableRow key={item.id}>
                 <TableCell id={item.id}>
                   <RarityChip item={item} />
                 </TableCell>

@@ -90,7 +90,7 @@ export const ArmorTable: React.FC<ItemsTableProps> = ({itemsArray, itemNameMap, 
         </TableRow>
       </TableHead>
       <TableBody>
-        {filteredItems.sort(getComparator(orderBy, order)).map( item => <TableRow>
+        {filteredItems.sort(getComparator(orderBy, order)).map( item => <TableRow key={item.id}>
           <TableCell id={item.id}><RarityChip item={item} goTo={goTo}/></TableCell>
           <TableCell>{item.equipSlots}</TableCell>
           <TableCell>

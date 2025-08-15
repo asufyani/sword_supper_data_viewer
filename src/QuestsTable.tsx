@@ -21,14 +21,14 @@ export const QuestsTable: React.FC<{ itemNamesMap: ItemNameMap }> = ({
         <TableBody>
           {Object.keys(quests).map((questKey) => {
             return (
-              <TableRow>
+              <TableRow key={questKey}>
                 <TableCell>
                   {quests[questKey as keyof typeof quests].description}
                 </TableCell>
                 <TableCell>
                   {quests[questKey as keyof typeof quests].rewardTiers.map(
                     (tier) => (
-                      <div>
+                      <div key={tier.goal}>
                         {`${tier.goal}: ${tier.rewardValue} ${itemNamesMap[tier.rewardItem].name}`}
                       </div>
                     )

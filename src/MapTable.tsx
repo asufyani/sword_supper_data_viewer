@@ -20,7 +20,7 @@ export const MapTable: React.FC<ItemsTableProps> = ({
                 </TableHead>
                 <TableBody>
                     {itemsArray.map((item) => (
-                        <TableRow>
+                        <TableRow key={item.id}>
                             <TableCell id={item.id}>
                                 <RarityChip item={itemNameMap[item.id]} />
                             </TableCell>

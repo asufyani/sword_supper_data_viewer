@@ -22,8 +22,8 @@ export const UpgradeList: React.FC<UpgradeListProps> = ({
             showPopover={true}
           />
           <ul>
-            {upgrade.requires.map((requirement) => (
-              <li key={upgrade.yields + '-' + requirement.id}>
+            {upgrade.requires.map((requirement, idx) => (
+              <li key={`${upgrade.yields}-${requirement.id}-${idx}`}>
                 {itemNameMap[requirement.id].name}: {requirement.amount}
               </li>
             ))}
