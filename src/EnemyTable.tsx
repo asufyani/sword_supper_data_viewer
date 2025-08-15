@@ -5,7 +5,7 @@ import TableHead from '@mui/material/TableHead'
 import TableBody from '@mui/material/TableBody'
 import TextField from '@mui/material/TextField'
 import { damageTypes, type Enemy, type GoToType, type ItemNameMap } from './types'
-import { useMemo, type ChangeEvent } from 'react'
+import { useCallback, useMemo, type ChangeEvent } from 'react'
 import { z3 } from './utils/enemies'
 import React from 'react'
 import IconButton from '@mui/material/IconButton'
@@ -13,11 +13,10 @@ import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp'
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown'
 import Collapse from '@mui/material/Collapse'
 import Accordion from '@mui/material/Accordion'
-import { AccordionDetails, AccordionSummary, Chip } from '@mui/material'
+import { AccordionDetails, AccordionSummary, Box, Chip, Grid, Input, Slider, Typography } from '@mui/material'
 import { RarityChip } from './RarityChip'
 import { damageTypeSymbols } from './utils/constants'
 import { useDebounceValue } from 'usehooks-ts'
-
 
 
 const formatter = new Intl.NumberFormat('en-US', {
@@ -28,6 +27,8 @@ const formatter = new Intl.NumberFormat('en-US', {
 
 export const EnemyTable: React.FC<{ itemNamesMap: ItemNameMap, goTo: GoToType}> = ({itemNamesMap, goTo}) => {
   const [searchString, setSearchString] = useDebounceValue('', 250)
+  const maxLevel = 300;
+  const [level, setLevel] = React.useState(1)
   const enemies: Record<string, Enemy> = useMemo(() => {
     return z3 as Record<string, Enemy>
   }, [])
@@ -35,20 +36,50 @@ export const EnemyTable: React.FC<{ itemNamesMap: ItemNameMap, goTo: GoToType}> 
     setSearchString(event.target.value.toLowerCase())
   }
 
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setLevel(event.target.value === '' ? 0 : Number(event.target.value));
+  };
+
+    const handleSliderChange = (_event: Event, newValue: number) => {
+    setLevel(newValue);
+  };
+
+  
+  const handleBlur = () => {
+    if (level < 0) {
+      setLevel(0);
+    } else if (level > maxLevel) {
+      setLevel(maxLevel);
+    }
+  };
+  
+  const calcScalingValues = useCallback((enemy: Enemy) => {
+    const health=Math.round(enemy.baseHp+enemy.hpGrowth*Math.pow(level,1.27))
+    const defense=Math.round(enemy.baseDefense+enemy.defenseGrowth*Math.pow(level,1.15))
+    const damage=Math.round(enemy.baseDamage+enemy.damageGrowth*Math.pow(level,1.1))
+    return {
+      health,
+      defense,
+      damage
+    }
+
+  }, [level]);
+
   function Row(props: { enemy: Enemy }) {
     const { enemy } = props
     const [open, setOpen] = React.useState(false)
     const lootTable = enemy.lootTables[0]
+
+    const scaledValues = calcScalingValues(enemy);
 
 
     return (
       <React.Fragment>
         <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
           <TableCell>{enemy.id}</TableCell>
-          <TableCell>{`${enemy.baseDamage} ${damageTypeSymbols[enemy.damageType]}`}</TableCell>
-          <TableCell>{enemy.damageGrowth}</TableCell>
-          <TableCell>{enemy.baseDefense}</TableCell>
-          <TableCell>{enemy.defenseGrowth}</TableCell>
+          <TableCell>{`${scaledValues.damage} ${damageTypeSymbols[enemy.damageType]}`}</TableCell>
+          <TableCell>{scaledValues.health}</TableCell>
+          <TableCell>{scaledValues.defense}</TableCell>
           <TableCell>
             {damageTypes.map((damageType) => {
               const resistType: keyof Enemy = (damageType + 'Resist') as keyof Enemy;
@@ -58,8 +89,6 @@ export const EnemyTable: React.FC<{ itemNamesMap: ItemNameMap, goTo: GoToType}> 
               }
             })}
           </TableCell>
-          <TableCell>{enemy.baseHp}</TableCell>
-          <TableCell>{enemy.hpGrowth}</TableCell>
           <TableCell>{formatter.format(enemy.crit)}</TableCell>
           <TableCell>{formatter.format(enemy.dodge)}</TableCell>
           <TableCell>{enemy.speed}</TableCell>
@@ -108,17 +137,44 @@ export const EnemyTable: React.FC<{ itemNamesMap: ItemNameMap, goTo: GoToType}> 
   return (
     <>
       <TextField onChange={handleSearchChange}></TextField>
+       <Box sx={{ width: '50%', margin: 5, alignItems: 'center'}}>
+      <Typography id="input-slider" gutterBottom>
+        Enemy Level
+      </Typography>
+      <Grid container spacing={2} sx={{ alignItems: 'center' }}>
+        <Grid size="grow">
+          <Slider
+            value={typeof level === 'number' ? level : 0}
+            max={maxLevel}
+            onChange={handleSliderChange}
+            aria-labelledby="input-slider"
+          />
+        </Grid>
+        <Grid>
+          <Input
+            value={level}
+            size="small"
+            onChange={handleInputChange}
+            onBlur={handleBlur}
+            inputProps={{
+              step: 10,
+              min: 1,
+              max: maxLevel,
+              type: 'number',
+              'aria-labelledby': 'input-slider',
+            }}
+          />
+        </Grid>
+      </Grid>
+    </Box>
       <Table stickyHeader>
         <TableHead>
           <TableRow>
             <TableCell>Name</TableCell>
-            <TableCell>Base Damage</TableCell>
-            <TableCell>Damage Growth</TableCell>
-            <TableCell>Base Defense</TableCell>
-            <TableCell>Defense Growth</TableCell>
+            <TableCell>Damage</TableCell>
+            <TableCell>HP</TableCell>
+            <TableCell>Defense</TableCell>
             <TableCell>Resistances</TableCell>
-            <TableCell>Base HP</TableCell>
-            <TableCell>HP Growth</TableCell>
             <TableCell>Crit Rate</TableCell>
             <TableCell>Dodge</TableCell>
             <TableCell>Speed</TableCell>

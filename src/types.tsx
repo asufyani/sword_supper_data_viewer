@@ -91,5 +91,5 @@ type LootItem = {
   quantity?: number[] | number
 }
 
-export type SortableProperty = 'name' |  'dmg' | keyof Item | keyof Enemy
+export type SortableProperty = 'dmg' | keyof Item | keyof Enemy
 
