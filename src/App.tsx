@@ -133,7 +133,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       {/* <Box sx={{ borderBottom: 1, borderColor: 'divider' }}> */}
-        <Tabs value={tabIndex} onChange={handleTabChange} variant="scrollable" scrollButtons="auto">
+        <Tabs value={tabIndex} onChange={handleTabChange} variant="scrollable" scrollButtons="auto" allowScrollButtonsMobile sx={{ alignItems: 'center'}}>
           <Tab label="Weapons" {...a11yProps(0)} />
           <Tab label="Armor" {...a11yProps(1)} />
           <Tab label="Blueprints" {...a11yProps(2)} />

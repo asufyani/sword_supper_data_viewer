@@ -2,6 +2,12 @@
 
 body {
   font-family: 'Lexend';
+  #root {
+    padding: .5rem;
+    .MuiBox-root {
+      padding: .5rem;
+    }
+  }
 }
 
 .interactive { 
@@ -26,3 +32,4 @@ body {
 .bonus {
   color:limegreen;
 }
+

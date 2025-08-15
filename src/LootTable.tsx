@@ -68,7 +68,7 @@ export const ArmorTable: React.FC<LootTableProps> = ({itemNameMap, goTo}) => {
                 const showTier = tierHasItem || !searchString;
                 if (showTier) {
                   return <Accordion key={key+'-'+idx} >
-                    <AccordionSummary>{tier.minLevel}{tier.maxLevel ? '-'+tier.maxLevel : '+'}</AccordionSummary>
+                    <AccordionSummary><Typography component={'span'}>{tier.minLevel}{tier.maxLevel ? '-'+tier.maxLevel : '+'}</Typography></AccordionSummary>
                     <AccordionDetails>
                       {tier.items.map((item, itemIdx) => {
                         const itemToLink = item.id && itemNameMap[item.id];
