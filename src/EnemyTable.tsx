@@ -93,7 +93,7 @@ export const EnemyTable: React.FC<{
     const [open, setOpen] = React.useState(false)
     const lootTable = enemy.lootTables[0]
 
-    const scaledValues = calcScalingValues(enemy)
+    const scaledValues = calcScalingValues(enemy, level)
 
     return (
       <React.Fragment>
