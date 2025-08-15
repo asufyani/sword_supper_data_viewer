@@ -69,7 +69,7 @@ export const EnemyTable: React.FC<{
   }
 
   const calcScalingValues = useCallback(
-    (enemy: Enemy) => {
+    (enemy: Enemy, level: number) => {
       const health = Math.round(
         enemy.baseHp + enemy.hpGrowth * Math.pow(level, 1.27)
       )
@@ -85,7 +85,7 @@ export const EnemyTable: React.FC<{
         damage,
       }
     },
-    [level]
+    []
   )
 
   function Row(props: { enemy: Enemy }) {
