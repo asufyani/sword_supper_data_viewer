@@ -10,6 +10,7 @@ interface RarityChipProps {
   showPopover?: boolean
   goTo?: (tab: TabName, id: string) => void
   weight?: string
+  quantityString?: string
 }
 const colorMap: Record<Rarity, string> = {
   common: 'gray',
@@ -23,6 +24,7 @@ export const RarityChip: React.FC<RarityChipProps> = ({
   showPopover,
   goTo,
   weight,
+  quantityString,
 }) => {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null)
   const open = Boolean(anchorEl)
@@ -47,7 +49,10 @@ export const RarityChip: React.FC<RarityChipProps> = ({
       goTo(itemType, item.id)
     }
   }
-  const label = weight ? item.name + ' - ' + weight : item.name
+  let label = weight ? item.name + ' - ' + weight : item.name
+  if (quantityString) {
+    label += ' ' + quantityString
+  }
   return (
     <span
       onMouseOver={showPopover ? handlePopoverOpen : () => {}}
@@ -80,18 +85,25 @@ export const RarityChip: React.FC<RarityChipProps> = ({
         <Typography key={item.id} sx={{ p: 1 }}>
           <span>Required level: {item.requiredLevel}</span>
           <br />
-          {item.damage && <><span>
-            {(Object.keys(item.damage || {}) as damageType[]).map(
-              (typeString) => (
-                <span key={item.id + '-' + typeString}>
-                  {typeString} : {item.damage![typeString]}{' '}
-                </span>
-              )
-            )}
-          </span>
-          <br /></>}
-          
-          <StatsDisplay statModifiers={item.statModifiers} abilities={item.abilities}/>
+          {item.damage && (
+            <>
+              <span>
+                {(Object.keys(item.damage || {}) as damageType[]).map(
+                  (typeString) => (
+                    <span key={item.id + '-' + typeString}>
+                      {typeString} : {item.damage![typeString]}{' '}
+                    </span>
+                  )
+                )}
+              </span>
+              <br />
+            </>
+          )}
+
+          <StatsDisplay
+            statModifiers={item.statModifiers}
+            abilities={item.abilities}
+          />
         </Typography>
       </Popover>
     </span>

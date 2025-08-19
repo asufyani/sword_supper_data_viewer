@@ -68,25 +68,27 @@ export const EnemyTable: React.FC<{
     }
   }
 
-  const calcScalingValues = useCallback(
-    (enemy: Enemy, level: number) => {
-      const health = Math.round(
-        enemy.baseHp + enemy.hpGrowth * Math.pow(level, 1.27)
-      )
-      const defense = Math.round(
-        enemy.baseDefense + enemy.defenseGrowth * Math.pow(level, 1.15)
-      )
-      const damage = Math.round(
-        enemy.baseDamage + enemy.damageGrowth * Math.pow(level, 1.1)
-      )
-      return {
-        health,
-        defense,
-        damage,
-      }
-    },
-    []
+  const filterFunction = useCallback(
+    (key: string) => key.toLowerCase().includes(searchString.toLowerCase()),
+    [searchString]
   )
+
+  const calcScalingValues = useCallback((enemy: Enemy, level: number) => {
+    const health = Math.round(
+      enemy.baseHp + enemy.hpGrowth * Math.pow(level, 1.27)
+    )
+    const defense = Math.round(
+      enemy.baseDefense + enemy.defenseGrowth * Math.pow(level, 1.15)
+    )
+    const damage = Math.round(
+      enemy.baseDamage + enemy.damageGrowth * Math.pow(level, 1.1)
+    )
+    return {
+      health,
+      defense,
+      damage,
+    }
+  }, [])
 
   function Row(props: { enemy: Enemy }) {
     const { enemy } = props
@@ -150,7 +152,7 @@ export const EnemyTable: React.FC<{
                           const quantities =
                             typeof itemData.quantity === 'number'
                               ? itemData.quantity
-                              : itemData.quantity?.join(' or ')
+                              : itemData.quantity?.join('-')
                           return <Chip label={`${item.id}: ${quantities}`} />
                         } else {
                           return (
@@ -222,9 +224,7 @@ export const EnemyTable: React.FC<{
         </TableHead>
         <TableBody>
           {Object.keys(enemies)
-            .filter((key) =>
-              key.toLowerCase().includes(searchString.toLowerCase())
-            )
+            .filter(filterFunction)
             .map((enemyKey) => {
               return <Row key={enemyKey} enemy={enemies[enemyKey]} />
             })}

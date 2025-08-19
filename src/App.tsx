@@ -133,16 +133,23 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       {/* <Box sx={{ borderBottom: 1, borderColor: 'divider' }}> */}
-        <Tabs value={tabIndex} onChange={handleTabChange} variant="scrollable" scrollButtons="auto" allowScrollButtonsMobile sx={{ alignItems: 'center'}}>
-          <Tab label="Weapons" {...a11yProps(0)} />
-          <Tab label="Armor" {...a11yProps(1)} />
-          <Tab label="Blueprints" {...a11yProps(2)} />
-          <Tab label="Maps" {...a11yProps(3)} />
-          <Tab label="Loot" {...a11yProps(4)} />
-          <Tab label="Enemies" {...a11yProps(5)}/>
-          <Tab label="Food" {...a11yProps(6)}/>
-          <Tab label="Quests" {...a11yProps(7)}/>
-        </Tabs>
+      <Tabs
+        value={tabIndex}
+        onChange={handleTabChange}
+        variant="scrollable"
+        scrollButtons="auto"
+        allowScrollButtonsMobile
+        sx={{ alignItems: 'center' }}
+      >
+        <Tab label="Weapons" {...a11yProps(0)} />
+        <Tab label="Armor" {...a11yProps(1)} />
+        <Tab label="Blueprints" {...a11yProps(2)} />
+        <Tab label="Maps" {...a11yProps(3)} />
+        <Tab label="Loot" {...a11yProps(4)} />
+        <Tab label="Enemies" {...a11yProps(5)} />
+        <Tab label="Food" {...a11yProps(6)} />
+        <Tab label="Quests" {...a11yProps(7)} />
+      </Tabs>
       {/* </Box> */}
       <CustomTabPanel value={tabIndex} index={0}>
         <TableContainer>
@@ -187,22 +194,32 @@ function App() {
       </CustomTabPanel>
       <CustomTabPanel value={tabIndex} index={5}>
         <TableContainer component={Paper}>
-          <EnemyTable itemNamesMap={itemArrays.itemNameMap} goTo={goTo}/>
+          <EnemyTable itemNamesMap={itemArrays.itemNameMap} goTo={goTo} />
         </TableContainer>
       </CustomTabPanel>
       <CustomTabPanel value={tabIndex} index={6}>
         <TableContainer component={Paper}>
-          <FoodTable itemNamesMap={itemArrays.itemNameMap}/>
+          <FoodTable itemNamesMap={itemArrays.itemNameMap} />
         </TableContainer>
       </CustomTabPanel>
       <CustomTabPanel value={tabIndex} index={7}>
         <TableContainer component={Paper}>
-          <QuestsTable itemNamesMap={itemArrays.itemNameMap}/>
+          <QuestsTable itemNamesMap={itemArrays.itemNameMap} />
         </TableContainer>
       </CustomTabPanel>
-      <Typography><a href='https://www.reddit.com/r/SwordAndSupperGame/'>r/SwordAndSupperGame</a></Typography>
-      <Typography><a href='https://www.reddit.com/user/Thats_a_movie/'>u/Thats_a_movie</a></Typography>
-      <Typography><a href='https://github.com/asufyani/sword_supper_data_viewer'>github</a></Typography>
+      <Typography>
+        <a href="https://www.reddit.com/r/SwordAndSupperGame/">
+          r/SwordAndSupperGame
+        </a>
+      </Typography>
+      <Typography>
+        <a href="https://www.reddit.com/user/Thats_a_movie/">u/Thats_a_movie</a>
+      </Typography>
+      <Typography>
+        <a href="https://github.com/asufyani/sword_supper_data_viewer">
+          github
+        </a>
+      </Typography>
     </ThemeProvider>
   )
 }
