@@ -1,65 +1,71 @@
 export type ability = {
-  type: string,
+  type: string
   id: string
 }
 
 export type statModifier = {
-  type: string,
-  stat: string,
-  value: number,
+  type: string
+  stat: string
+  value: number
   modifierType: 'add'
 }
 
 export type UpgradeRequirement = {
-  id: string,
+  id: string
   amount: number
 }
 
 export type Upgrade = {
-  requires: UpgradeRequirement[],
+  requires: UpgradeRequirement[]
   yields: string
 }
 
 export type GoToType = (tab: TabName, id: string) => void
 
 export interface ItemsTableProps {
-  itemsArray: Item[],
-  itemNameMap: ItemNameMap,
+  itemsArray: Item[]
+  itemNameMap: ItemNameMap
   goTo?: GoToType
 }
 
-export type TabName = 'Armor' | 'Weapons' | 'Blueprints' | 'Maps';
+export type TabName = 'Armor' | 'Weapons' | 'Blueprints' | 'Maps'
 
 export type ItemNameMap = Record<string, Item>
 
-export type Slot = 'Amulet' | 'Belt' | 'Chest' | 'Head' | 'Ring' | 'Weapon';
+export type Slot = 'Amulet' | 'Belt' | 'Chest' | 'Head' | 'Ring' | 'Weapon'
 
-export type Rarity = 'common' | 'uncommon' | 'rare' | 'epic' | 'legendary';
+export type Rarity = 'common' | 'uncommon' | 'rare' | 'epic' | 'legendary'
 
 export type Item = {
-  rarity: Rarity;
-  abilities?: ability[],
-  tags: string[],
+  rarity: Rarity
+  abilities?: ability[]
+  tags: string[]
   statModifiers: statModifier[]
-  equipSlots: Slot[],
-  isStackable: boolean,
-  amount: number,
+  equipSlots: Slot[]
+  isStackable: boolean
+  amount: number
   upgrades: Upgrade[]
-  retainOnUpgrade: boolean,
-  requiredLevel: number,
-  sellPrice: number,
-  name: string,
-  assetName?: string,
-  description: string,
-  damage?: { [key in damageType]?: number}
+  retainOnUpgrade: boolean
+  requiredLevel: number
+  sellPrice: number
+  name: string
+  assetName: string
+  description: string
+  damage?: { [key in damageType]?: number }
   id: string
 }
 
 export type ItemData = Partial<Item>
 
-export const damageTypes = ['physical' , 'lightning' , 'fire' , 'shadow' , 'ice'] as const;
+export const damageTypes = [
+  'physical',
+  'lightning',
+  'fire',
+  'shadow',
+  'ice',
+] as const
 
-export type damageType = typeof damageTypes[number];
+export type damageType = (typeof damageTypes)[number]
 
 export type Enemy = {
   id: string
@@ -92,4 +98,3 @@ type LootItem = {
 }
 
 export type SortableProperty = 'dmg' | keyof Item | keyof Enemy
-

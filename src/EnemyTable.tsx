@@ -31,6 +31,7 @@ import {
 import { RarityChip } from './RarityChip'
 import { damageTypeSymbols } from './utils/constants'
 import { useDebounceValue } from 'usehooks-ts'
+import { enemyNames } from './utils/enemyNames'
 
 const formatter = new Intl.NumberFormat('en-US', {
   style: 'percent',
@@ -48,6 +49,9 @@ export const EnemyTable: React.FC<{
   const enemies: Record<string, Enemy> = useMemo(() => {
     return z3 as Record<string, Enemy>
   }, [])
+
+  const enemyNameMap: Record<string, string> = enemyNames
+
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchString(event.target.value.toLowerCase())
   }
@@ -100,7 +104,9 @@ export const EnemyTable: React.FC<{
     return (
       <React.Fragment>
         <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
-          <TableCell>{enemy.id}</TableCell>
+          <TableCell>
+            <Typography component={'span'}>{enemyNameMap[enemy.id]}</Typography>
+          </TableCell>
           <TableCell>{`${scaledValues.damage} ${damageTypeSymbols[enemy.damageType]}`}</TableCell>
           <TableCell>{scaledValues.health}</TableCell>
           <TableCell>{scaledValues.defense}</TableCell>
@@ -141,7 +147,9 @@ export const EnemyTable: React.FC<{
                   : `${tier.minLevel}+`
                 return (
                   <Accordion>
-                    <AccordionSummary>{levels}</AccordionSummary>
+                    <AccordionSummary>
+                      <Typography component={'span'}>{levels}</Typography>
+                    </AccordionSummary>
                     <AccordionDetails>
                       {tier.items.map((itemData) => {
                         const item = itemNamesMap[itemData.id]

@@ -188,9 +188,7 @@ function App() {
         </TableContainer>
       </CustomTabPanel>
       <CustomTabPanel value={tabIndex} index={4}>
-        <TableContainer component={Card}>
-          <LootTable itemNameMap={itemArrays.itemNameMap} goTo={goTo} />
-        </TableContainer>
+        <LootTable itemNameMap={itemArrays.itemNameMap} goTo={goTo} />
       </CustomTabPanel>
       <CustomTabPanel value={tabIndex} index={5}>
         <TableContainer component={Paper}>

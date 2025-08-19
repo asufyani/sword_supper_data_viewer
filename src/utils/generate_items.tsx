@@ -14,7 +14,7 @@ const se = (args: ItemData) => {
     requiredLevel: args.requiredLevel || 1,
     sellPrice: args.sellPrice || 0,
     name: args.name || 'unknown name',
-    assetName: args.assetName,
+    assetName: args.assetName || '',
     description: args.description || '',
     damage: args.damage,
     id: args.id || '',

@@ -2,15 +2,18 @@
 
 body {
   font-family: 'Lexend';
+  margin: 0;
+  padding: 0;
+  height: 100vh;
   #root {
-    padding: .5rem;
+    padding: 0.5rem;
     .MuiBox-root {
-      padding: .5rem;
+      padding: 0.5rem;
     }
   }
 }
 
-.interactive { 
+.interactive {
   cursor: zoom-in;
 }
 
@@ -26,10 +29,9 @@ body {
 }
 
 .penalty {
-  color:red;
+  color: red;
 }
 
 .bonus {
-  color:limegreen;
+  color: limegreen;
 }
-
