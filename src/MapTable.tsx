@@ -3,7 +3,7 @@ import TableRow from '@mui/material/TableRow'
 import TableCell from '@mui/material/TableCell'
 import TableHead from '@mui/material/TableHead'
 import TableBody from '@mui/material/TableBody'
-import type { ItemsTableProps } from './types'
+import type { Item, ItemsTableProps } from './types'
 import { RarityChip } from './RarityChip'
 import { Z0, $0 } from './utils/mapEnemies'
 import { enemyNames } from './utils/enemyNames'
@@ -37,6 +37,15 @@ export const MapTable: React.FC<ItemsTableProps> = ({
   itemsArray,
   itemNameMap,
 }) => {
+  const mapKeys: Set<string> = new Set()
+  const mapsByKey: Record<string, Item[]> = {}
+
+  itemsArray.forEach((map) => {
+    const mapKey = map.assetName.replace('map_', '')
+    mapKeys.add(mapKey)
+    mapsByKey[mapKey] ||= []
+    mapsByKey[mapKey].push(map)
+  })
   return (
     <>
       <Table stickyHeader>
@@ -48,12 +57,15 @@ export const MapTable: React.FC<ItemsTableProps> = ({
           </TableRow>
         </TableHead>
         <TableBody>
-          {itemsArray.map((item) => {
-            const mapKey = item.assetName.replace('map_', '')
+          {[...mapKeys].map((mapKey) => {
             return (
-              <TableRow key={item.id}>
-                <TableCell id={item.id}>
-                  <RarityChip item={itemNameMap[item.id]} />
+              <TableRow key={mapKey}>
+                <TableCell id={mapKey}>
+                  {mapsByKey[mapKey].map((map) => (
+                    <div>
+                      <RarityChip item={itemNameMap[map.id]} />
+                    </div>
+                  ))}
                 </TableCell>
                 <TableCell>
                   {enemiesByMap[mapKey].tiers.map((tier) => {
