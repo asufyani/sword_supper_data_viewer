@@ -32,6 +32,7 @@ export const StatsDisplay: React.FC<StatsDisplayProps> = ({
       ))}
       {abilities?.map((ability) => (
         <Tooltip
+          key={ability.id}
           title={
             abilityNameMap[ability.id as keyof typeof abilityNameMap]
               .description

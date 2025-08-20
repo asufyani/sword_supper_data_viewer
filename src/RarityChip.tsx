@@ -82,7 +82,7 @@ export const RarityChip: React.FC<RarityChipProps> = ({
         onClose={handlePopoverClose}
         disableRestoreFocus
       >
-        <Typography key={item.id} sx={{ p: 1 }}>
+        <Typography component={'div'} key={item.id} sx={{ padding: 1 }}>
           <span>Required level: {item.requiredLevel}</span>
           <br />
           {item.damage && (
