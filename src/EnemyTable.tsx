@@ -73,7 +73,9 @@ export const EnemyTable: React.FC<{
   }
 
   const filterFunction = useCallback(
-    (key: string) => key.toLowerCase().includes(searchString.toLowerCase()),
+    (key: string) =>
+      key.toLowerCase().includes(searchString.toLowerCase()) ||
+      enemyNameMap[key].toLowerCase().includes(searchString.toLowerCase()),
     [searchString]
   )
 
