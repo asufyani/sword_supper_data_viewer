@@ -25,6 +25,7 @@ import MapTable from './MapTable'
 import EnemyTable from './EnemyTable'
 import FoodTable from './FoodTable'
 import QuestsTable from './QuestsTable'
+import { HelpPanel } from './HelpPanel'
 type itemsKey = keyof typeof items
 
 interface TabPanelProps {
@@ -149,6 +150,7 @@ function App() {
         <Tab label="Enemies" {...a11yProps(5)} />
         <Tab label="Food" {...a11yProps(6)} />
         <Tab label="Quests" {...a11yProps(7)} />
+        <Tab label="Help" {...a11yProps(8)} />
       </Tabs>
       {/* </Box> */}
       <CustomTabPanel value={tabIndex} index={0}>
@@ -204,6 +206,9 @@ function App() {
         <TableContainer component={Paper}>
           <QuestsTable itemNamesMap={itemArrays.itemNameMap} />
         </TableContainer>
+      </CustomTabPanel>
+      <CustomTabPanel value={tabIndex} index={8}>
+        <HelpPanel />
       </CustomTabPanel>
       <Typography>
         <a href="https://www.reddit.com/r/SwordAndSupperGame/">
