@@ -7,6 +7,7 @@ import TextField from '@mui/material/TextField'
 import { useState, type ChangeEvent } from 'react'
 import { foods, foodNames } from './utils/foods'
 import type { ItemNameMap } from './types'
+import Typography from '@mui/material/Typography'
 
 const food = foods
 export const FoodTable: React.FC<{ itemNamesMap: ItemNameMap }> = ({
@@ -14,6 +15,18 @@ export const FoodTable: React.FC<{ itemNamesMap: ItemNameMap }> = ({
 }) => {
   const [searchString, setSearchString] = useState('')
 
+  function getImageUrl(name: string) {
+    // Assuming images are in a 'dir' subdirectory relative to the current module
+    return new URL(`${window.location}/food/${name}`, import.meta.url).href
+  }
+  // const urls: string[] = []
+  // Object.keys(foods).forEach((filename) =>
+  //   urls.push(
+  //     'https://eimoap--5ea9dfdf-b835-45a9-b89d-e27ea9f9a35c-0-0-37-webview.devvit.net/assets/food/' +
+  //       filename
+  //   )
+  // )
+  // console.log(urls)
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchString(event.target.value.toLowerCase())
   }
@@ -23,7 +36,7 @@ export const FoodTable: React.FC<{ itemNamesMap: ItemNameMap }> = ({
       <Table stickyHeader>
         <TableHead>
           <TableRow>
-            <TableCell>Name</TableCell>
+            <TableCell align="center">Name</TableCell>
             <TableCell>Essences</TableCell>
             <TableCell>Default Names</TableCell>
           </TableRow>
@@ -38,9 +51,13 @@ export const FoodTable: React.FC<{ itemNamesMap: ItemNameMap }> = ({
             .map((foodName) => {
               const essences = food[foodName as keyof typeof food]
               const names = foodNames[foodName as keyof typeof foodNames]
+              const imgSrc = getImageUrl(foodName)
               return (
                 <TableRow key={foodName}>
-                  <TableCell>{foodName}</TableCell>
+                  <TableCell align="center">
+                    <img src={imgSrc} height={'100px'} />
+                    <Typography component="div">{foodName}</Typography>
+                  </TableCell>
                   <TableCell>
                     {essences.map((essence) => {
                       return (
