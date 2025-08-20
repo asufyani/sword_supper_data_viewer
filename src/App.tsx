@@ -108,7 +108,7 @@ function App() {
 
   const theme = createTheme({
     typography: {
-      fontFamily: 'Lexend',
+      fontFamily: 'Poppins',
     },
   })
 

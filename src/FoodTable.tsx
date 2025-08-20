@@ -5,12 +5,13 @@ import TableHead from '@mui/material/TableHead'
 import TableBody from '@mui/material/TableBody'
 import TextField from '@mui/material/TextField'
 import { useState, type ChangeEvent } from 'react'
-import { foods } from './utils/foods'
+import { foods, foodNames } from './utils/foods'
 import type { ItemNameMap } from './types'
 
-
-const food = foods;
-export const FoodTable: React.FC<{itemNamesMap: ItemNameMap}> = ({itemNamesMap}) => {
+const food = foods
+export const FoodTable: React.FC<{ itemNamesMap: ItemNameMap }> = ({
+  itemNamesMap,
+}) => {
   const [searchString, setSearchString] = useState('')
 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -24,23 +25,39 @@ export const FoodTable: React.FC<{itemNamesMap: ItemNameMap}> = ({itemNamesMap})
           <TableRow>
             <TableCell>Name</TableCell>
             <TableCell>Essences</TableCell>
+            <TableCell>Default Names</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {Object.keys(food).filter((key) => food[key as keyof typeof food].some((essence) => essence.id.toLowerCase().includes(searchString))).map((foodName) => {
-            const essences = food[foodName as keyof typeof food];
-            return <TableRow key={foodName}>
-              <TableCell>{foodName}</TableCell>
-              <TableCell>
-                {
-                  essences.map((essence) => {
-                    return <div key={essence.id}>{itemNamesMap[essence.id].name}: {essence.quantity}</div>
-                  })
-                }
-              </TableCell>
-            </TableRow>
-          })}
-            
+          {Object.keys(food)
+            .filter((key) =>
+              food[key as keyof typeof food].some((essence) =>
+                essence.id.toLowerCase().includes(searchString)
+              )
+            )
+            .map((foodName) => {
+              const essences = food[foodName as keyof typeof food]
+              const names = foodNames[foodName as keyof typeof foodNames]
+              return (
+                <TableRow key={foodName}>
+                  <TableCell>{foodName}</TableCell>
+                  <TableCell>
+                    {essences.map((essence) => {
+                      return (
+                        <div key={essence.id}>
+                          {itemNamesMap[essence.id].name}: {essence.quantity}
+                        </div>
+                      )
+                    })}
+                  </TableCell>
+                  <TableCell>
+                    {names.map((name) => {
+                      return <div key={name}>{name}</div>
+                    })}
+                  </TableCell>
+                </TableRow>
+              )
+            })}
         </TableBody>
       </Table>
     </>

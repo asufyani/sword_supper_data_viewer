@@ -63,8 +63,13 @@ export const RarityChip: React.FC<RarityChipProps> = ({
       <Chip
         key={item.id}
         color="primary"
-        style={{ backgroundColor: colorMap[item.rarity] }}
+        style={{
+          backgroundColor: colorMap[item.rarity],
+          margin: '3px',
+          padding: '4px 2px 4px 2px',
+        }}
         label={label}
+        className="rarityChip"
       />
       <Popover
         id="mouse-over-popover"

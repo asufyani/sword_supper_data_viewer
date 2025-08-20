@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+@font-face {
+  font-family: 'Poppins';
+  src: local('Poppins'), url('./assets/Poppins-Bold.ttf');
+}
+
 body {
-  font-family: 'Lexend';
+  font-family: 'Poppins';
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -34,4 +39,12 @@ body {
 
 .bonus {
   color: limegreen;
+}
+
+.rarityChip {
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
 }

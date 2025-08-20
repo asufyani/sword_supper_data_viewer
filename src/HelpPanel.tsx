@@ -19,7 +19,6 @@ export const HelpPanel = () => {
       <Typography variant={'body1'}>
         Filter the list using the search box at the top. Click on an item name
         in the upgrades column to jump to that item in the Weapons/Armor tabs.
-        headers.
       </Typography>
       <Typography variant={'h4'}>Maps</Typography>
       <Typography variant={'body1'}>
