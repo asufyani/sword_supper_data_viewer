@@ -26,6 +26,7 @@ import EnemyTable from './EnemyTable'
 import FoodTable from './FoodTable'
 import QuestsTable from './QuestsTable'
 import { HelpPanel } from './HelpPanel'
+import AbilityTable from './AbilityTable'
 type itemsKey = keyof typeof items
 
 interface TabPanelProps {
@@ -150,7 +151,8 @@ function App() {
         <Tab label="Enemies" {...a11yProps(5)} />
         <Tab label="Food" {...a11yProps(6)} />
         <Tab label="Quests" {...a11yProps(7)} />
-        <Tab label="Help" {...a11yProps(8)} />
+        <Tab label="Abilities" {...a11yProps(8)} />
+        <Tab label="Help" {...a11yProps(9)} />
       </Tabs>
       {/* </Box> */}
       <CustomTabPanel value={tabIndex} index={0}>
@@ -208,6 +210,9 @@ function App() {
         </TableContainer>
       </CustomTabPanel>
       <CustomTabPanel value={tabIndex} index={8}>
+        <AbilityTable itemNamesMap={itemArrays.itemNameMap} />
+      </CustomTabPanel>
+      <CustomTabPanel value={tabIndex} index={9}>
         <HelpPanel />
       </CustomTabPanel>
       <Typography>
