@@ -155,24 +155,24 @@ export const EnemyTable: React.FC<{
                     <AccordionDetails>
                       {tier.items.map((itemData) => {
                         const item = itemNamesMap[itemData.id]
-                        if (
-                          item.tags.includes('resource') ||
-                          item.tags.includes('currency')
-                        ) {
-                          const quantities =
-                            typeof itemData.quantity === 'number'
-                              ? itemData.quantity
-                              : itemData.quantity?.join('-')
-                          return <Chip label={`${item.id}: ${quantities}`} />
-                        } else {
-                          return (
-                            <RarityChip
-                              item={item}
-                              goTo={goTo}
-                              showPopover={true}
-                            />
-                          )
-                        }
+
+                        const quantities = !itemData.quantity
+                          ? ''
+                          : typeof itemData.quantity === 'number'
+                            ? itemData.quantity == 1
+                              ? ''
+                              : `: ${itemData.quantity}`
+                            : `: ${itemData.quantity?.join('-')}`
+
+                        return (
+                          <RarityChip
+                            item={item}
+                            goTo={goTo}
+                            showPopover={item.tags.includes('equipment')}
+                            quantityString={quantities}
+                            showIcon={true}
+                          />
+                        )
                       })}
                     </AccordionDetails>
                   </Accordion>

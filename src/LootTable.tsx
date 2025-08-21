@@ -146,7 +146,9 @@ export const LootTable: React.FC<LootTableProps> = ({ itemNameMap, goTo }) => {
                                 {itemToLink && (
                                   <RarityChip
                                     item={itemToLink}
-                                    showPopover={!!itemToLink.assetName}
+                                    showPopover={itemToLink.tags.includes(
+                                      'equipment'
+                                    )}
                                     goTo={goTo}
                                     weight={dropRate}
                                     quantityString={quantityString}
