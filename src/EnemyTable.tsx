@@ -22,7 +22,6 @@ import {
   AccordionDetails,
   AccordionSummary,
   Box,
-  Chip,
   Grid,
   Input,
   Slider,
