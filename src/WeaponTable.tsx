@@ -13,104 +13,100 @@ import { getComparator } from './utils/get_comparator'
 import { StatsDisplay } from './StatsDisplay'
 import { useDebounceValue } from 'usehooks-ts'
 import { damageTypeSymbols } from './utils/constants'
+import { AssetIcon } from './AssetIcon'
 
 export const WeaponTable: React.FC<ItemsTableProps> = ({
-    itemsArray,
-    itemNameMap,
-    goTo,
+  itemsArray,
+  itemNameMap,
+  goTo,
 }) => {
-    const [searchString, setSearchString] = useDebounceValue('', 250)
-    const [orderBy, setOrderBy] = useState<SortableProperty>('name')
-    const [order, setOrder] = useState(1)
+  const [searchString, setSearchString] = useDebounceValue('', 250)
+  const [orderBy, setOrderBy] = useState<SortableProperty>('name')
+  const [order, setOrder] = useState(1)
 
-    const handleHeaderClick = (propName: SortableProperty) => {
-        if (orderBy == propName) {
-            setOrder(-1 * order)
-        } else {
-            setOrder(1)
-            setOrderBy(propName)
-        }
+  const handleHeaderClick = (propName: SortableProperty) => {
+    if (orderBy == propName) {
+      setOrder(-1 * order)
+    } else {
+      setOrder(1)
+      setOrderBy(propName)
     }
+  }
 
-    const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
-        setSearchString(event.target.value.toLowerCase())
-    }
-    return (
-        <>
-            <TextField onChange={handleSearchChange}></TextField>
-            <Table stickyHeader>
-                <TableHead>
-                    <TableRow>
-                        <SortableHeader
-                            handleHeaderClick={handleHeaderClick}
-                            orderBy={orderBy}
-                            order={order}
-                            label="Name"
-                            property="name"
-                        />
-                        <SortableHeader
-                            handleHeaderClick={handleHeaderClick}
-                            orderBy={orderBy}
-                            order={order}
-                            label="Damage"
-                            property="dmg"
-                        />
-                        <TableCell>Stat Modifiers and Abilities</TableCell>
-                        <SortableHeader
-                            handleHeaderClick={handleHeaderClick}
-                            orderBy={orderBy}
-                            order={order}
-                            label="Required Level"
-                            property="requiredLevel"
-                        />
-                        <TableCell>Upgrades</TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {itemsArray
-                        .filter((item) =>
-                            item.name.toLowerCase().includes(searchString)
-                        )
-                        .sort(getComparator(orderBy, order))
-                        .map((item) => (
-                            <TableRow
-                                key={item.id + '-row'}
-                                id={item.id + '-row'}
-                            >
-                                <TableCell key={item.id} id={item.id}>
-                                    <RarityChip item={item} goTo={goTo} />
-                                </TableCell>
-                                <TableCell key={item.id + '-damage'}>
-                                    {(
-                                        Object.keys(
-                                            item.damage || {}
-                                        ) as damageType[]
-                                    ).map((typeString) => (
-                                        <span key={item.id + '-' + typeString}>
-                                            {item.damage![typeString]}{damageTypeSymbols[typeString]}
-                                        </span>
-                                    ))}
-                                </TableCell>
-                                <TableCell key={item.id + '-mods'}>
-                                    <StatsDisplay
-                                        statModifiers={item.statModifiers}
-                                        abilities={item.abilities}
-                                    />
-                                </TableCell>
-                                <TableCell>{item.requiredLevel}</TableCell>
-                                <TableCell>
-                                    <UpgradeList
-                                        itemNameMap={itemNameMap}
-                                        upgrades={item.upgrades}
-                                        goTo={goTo}
-                                    />
-                                </TableCell>
-                            </TableRow>
-                        ))}
-                </TableBody>
-            </Table>
-        </>
-    )
+  const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setSearchString(event.target.value.toLowerCase())
+  }
+  return (
+    <>
+      <TextField onChange={handleSearchChange}></TextField>
+      <Table stickyHeader>
+        <TableHead>
+          <TableRow>
+            <SortableHeader
+              handleHeaderClick={handleHeaderClick}
+              orderBy={orderBy}
+              order={order}
+              label="Name"
+              property="name"
+            />
+            <SortableHeader
+              handleHeaderClick={handleHeaderClick}
+              orderBy={orderBy}
+              order={order}
+              label="Damage"
+              property="dmg"
+            />
+            <TableCell>Stat Modifiers and Abilities</TableCell>
+            <SortableHeader
+              handleHeaderClick={handleHeaderClick}
+              orderBy={orderBy}
+              order={order}
+              label="Required Level"
+              property="requiredLevel"
+            />
+            <TableCell>Upgrades</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {itemsArray
+            .filter((item) => item.name.toLowerCase().includes(searchString))
+            .sort(getComparator(orderBy, order))
+            .map((item) => (
+              <TableRow key={item.id + '-row'} id={item.id + '-row'}>
+                <TableCell key={item.id} id={item.id}>
+                  <AssetIcon assetName={item.assetName} rarity={item.rarity} />
+                  <RarityChip item={item} goTo={goTo} />
+                </TableCell>
+                <TableCell key={item.id + '-damage'}>
+                  {(Object.keys(item.damage || {}) as damageType[]).map(
+                    (typeString) => (
+                      <span key={item.id + '-' + typeString}>
+                        {item.damage![typeString]}
+                        {damageTypeSymbols[typeString]}
+                      </span>
+                    )
+                  )}
+                </TableCell>
+                <TableCell key={item.id + '-mods'}>
+                  <StatsDisplay
+                    statModifiers={item.statModifiers}
+                    abilities={item.abilities}
+                  />
+                </TableCell>
+                <TableCell>{item.requiredLevel}</TableCell>
+                <TableCell>
+                  <UpgradeList
+                    itemNameMap={itemNameMap}
+                    upgrades={item.upgrades}
+                    goTo={goTo}
+                  />
+                </TableCell>
+              </TableRow>
+            ))}
+        </TableBody>
+      </Table>
+    </>
+  )
 }
 
 export default WeaponTable

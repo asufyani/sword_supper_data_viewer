@@ -48,3 +48,14 @@ body {
     -1px 1px 0 black,
     1px 1px 0 black;
 }
+
+.assetIconContainer {
+  position: relative;
+  top: 10px;
+}
+.assetIcon {
+  height: 40px;
+  position: relative;
+  left: 5px;
+  top: 5px;
+}

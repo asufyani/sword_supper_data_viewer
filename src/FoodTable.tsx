@@ -55,7 +55,7 @@ export const FoodTable: React.FC<{ itemNamesMap: ItemNameMap }> = ({
               return (
                 <TableRow key={foodName}>
                   <TableCell align="center">
-                    <img src={imgSrc} height={'100px'} />
+                    <img src={imgSrc} height={'100px'} alt={foodName} />
                     <Typography component="div">{foodName}</Typography>
                   </TableCell>
                   <TableCell>

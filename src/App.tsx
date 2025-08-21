@@ -64,6 +64,7 @@ function App() {
     const armorArray: Item[] = []
     const blueprintArray: Item[] = []
     const mapArray: Item[] = []
+    const assetsArray: string[] = []
     Object.keys(items).forEach((key) => {
       const item = {
         ...items[key as itemsKey],
@@ -71,6 +72,11 @@ function App() {
         statModifiers: items[key as itemsKey].statModifiers as statModifier[],
         equipSlots: items[key as itemsKey].equipSlots as Slot[],
         id: key,
+      }
+      if (item.assetName) {
+        assetsArray.push(
+          `https://eimoap--5ea9dfdf-b835-45a9-b89d-e27ea9f9a35c-0-0-37-webview.devvit.net/assets/ui/item-icons/${item.assetName}.png`
+        )
       }
 
       itemNameMap[key] = item
@@ -90,6 +96,7 @@ function App() {
         mapArray.push(item)
       }
     })
+    console.log(assetsArray)
     return {
       itemNameMap,
       weaponsArray,

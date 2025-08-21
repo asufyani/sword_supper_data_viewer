@@ -18,6 +18,7 @@ import { getComparator } from './utils/get_comparator'
 import { SortableHeader } from './SortableHeader'
 import { StatsDisplay } from './StatsDisplay'
 import { useDebounceValue } from 'usehooks-ts'
+import { AssetIcon } from './AssetIcon'
 
 export const ArmorTable: React.FC<ItemsTableProps> = ({
   itemsArray,
@@ -109,6 +110,7 @@ export const ArmorTable: React.FC<ItemsTableProps> = ({
             {filteredItems.sort(getComparator(orderBy, order)).map((item) => (
               <TableRow key={item.id}>
                 <TableCell id={item.id}>
+                  <AssetIcon assetName={item.assetName} rarity={item.rarity} />
                   <RarityChip item={item} goTo={goTo} />
                 </TableCell>
                 <TableCell>{item.equipSlots}</TableCell>

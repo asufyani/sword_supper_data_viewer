@@ -1,0 +1,5 @@
+https://eimoap--5ea9dfdf-b835-45a9-b89d-e27ea9f9a35c-0-0-37-webview.devvit.net/assets/ui/equip_bg_common.png
+https://eimoap--5ea9dfdf-b835-45a9-b89d-e27ea9f9a35c-0-0-37-webview.devvit.net/assets/ui/equip_bg_uncommon.png
+https://eimoap--5ea9dfdf-b835-45a9-b89d-e27ea9f9a35c-0-0-37-webview.devvit.net/assets/ui/equip_bg_rare.png
+https://eimoap--5ea9dfdf-b835-45a9-b89d-e27ea9f9a35c-0-0-37-webview.devvit.net/assets/ui/equip_bg_epic.png
+https://eimoap--5ea9dfdf-b835-45a9-b89d-e27ea9f9a35c-0-0-37-webview.devvit.net/assets/ui/equip_bg_legendary.png
