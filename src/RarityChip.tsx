@@ -4,6 +4,8 @@ import { useState } from 'react'
 import Popover from '@mui/material/Popover'
 import Typography from '@mui/material/Typography'
 import { StatsDisplay } from './StatsDisplay'
+import { AssetIcon } from './AssetIcon'
+import { Stack } from '@mui/material'
 
 interface RarityChipProps {
   item: Item
@@ -11,6 +13,7 @@ interface RarityChipProps {
   goTo?: (tab: TabName, id: string) => void
   weight?: string
   quantityString?: string
+  showIcon?: boolean
 }
 const colorMap: Record<Rarity, string> = {
   common: 'gray',
@@ -25,9 +28,16 @@ export const RarityChip: React.FC<RarityChipProps> = ({
   goTo,
   weight,
   quantityString,
+  showIcon,
 }) => {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null)
   const open = Boolean(anchorEl)
+
+  function getImageIconUrl(name: string) {
+    // Assuming images are in a 'dir' subdirectory relative to the current module
+    return new URL(`${window.location}/itemIcons/${name}.png`, import.meta.url)
+      .href
+  }
 
   const handlePopoverOpen = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget)
@@ -61,6 +71,16 @@ export const RarityChip: React.FC<RarityChipProps> = ({
       className={goTo ? 'interactive' : ''}
     >
       <Chip
+        icon={
+          showIcon ? (
+            <img
+              src={getImageIconUrl(item.assetName || item.id)}
+              className="chipIcon"
+            />
+          ) : (
+            <></>
+          )
+        }
         key={item.id}
         color="primary"
         style={{
@@ -87,29 +107,34 @@ export const RarityChip: React.FC<RarityChipProps> = ({
         onClose={handlePopoverClose}
         disableRestoreFocus
       >
-        <Typography component={'div'} key={item.id} sx={{ padding: 1 }}>
-          <span>Required level: {item.requiredLevel}</span>
-          <br />
-          {item.damage && (
-            <>
-              <span>
-                {(Object.keys(item.damage || {}) as damageType[]).map(
-                  (typeString) => (
-                    <span key={item.id + '-' + typeString}>
-                      {typeString} : {item.damage![typeString]}{' '}
-                    </span>
-                  )
-                )}
-              </span>
-              <br />
-            </>
-          )}
-
-          <StatsDisplay
-            statModifiers={item.statModifiers}
-            abilities={item.abilities}
+        <Stack direction="row" spacing={1} style={{ paddingLeft: '10px' }}>
+          <AssetIcon
+            assetName={item.assetName || item.id}
+            rarity={item.rarity}
           />
-        </Typography>
+          <Typography component={'div'} key={item.id} sx={{ padding: 1 }}>
+            <span>Required level: {item.requiredLevel}</span>
+            <br />
+            {item.damage && (
+              <>
+                <span>
+                  {(Object.keys(item.damage || {}) as damageType[]).map(
+                    (typeString) => (
+                      <span key={item.id + '-' + typeString}>
+                        {typeString} : {item.damage![typeString]}{' '}
+                      </span>
+                    )
+                  )}
+                </span>
+                <br />
+              </>
+            )}
+            <StatsDisplay
+              statModifiers={item.statModifiers}
+              abilities={item.abilities}
+            />
+          </Typography>
+        </Stack>
       </Popover>
     </span>
   )

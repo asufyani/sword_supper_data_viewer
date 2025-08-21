@@ -17,22 +17,23 @@ function getRarityBgUrl(rarity: Rarity) {
 export const AssetIcon = ({
   rarity,
   assetName,
+  mini,
 }: {
   rarity: Rarity
   assetName: string
+  mini?: boolean
 }) => {
   return (
     <span
-      className="assetIconContainer"
+      className={mini ? 'assetIconContainer mini' : 'assetIconContainer'}
       style={{
         backgroundImage: `url(${getRarityBgUrl(rarity)})`,
-        backgroundSize: '50px',
-        height: '50px',
-        width: '50px',
-        display: 'inline-block',
       }}
     >
-      <img className="assetIcon" src={getImageIconUrl(assetName)} />
+      <img
+        className={mini ? 'assetIcon mini' : 'assetIcon'}
+        src={getImageIconUrl(assetName)}
+      />
     </span>
   )
 }

@@ -146,10 +146,11 @@ export const LootTable: React.FC<LootTableProps> = ({ itemNameMap, goTo }) => {
                                 {itemToLink && (
                                   <RarityChip
                                     item={itemToLink}
-                                    showPopover={true}
+                                    showPopover={!!itemToLink.assetName}
                                     goTo={goTo}
                                     weight={dropRate}
                                     quantityString={quantityString}
+                                    showIcon={true}
                                   />
                                 )}
                                 {item.tableId && (

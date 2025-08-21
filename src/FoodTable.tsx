@@ -8,6 +8,7 @@ import { useState, type ChangeEvent } from 'react'
 import { foods, foodNames } from './utils/foods'
 import type { ItemNameMap } from './types'
 import Typography from '@mui/material/Typography'
+import { AssetIcon } from './AssetIcon'
 
 const food = foods
 export const FoodTable: React.FC<{ itemNamesMap: ItemNameMap }> = ({
@@ -62,6 +63,12 @@ export const FoodTable: React.FC<{ itemNamesMap: ItemNameMap }> = ({
                     {essences.map((essence) => {
                       return (
                         <div key={essence.id}>
+                          <AssetIcon
+                            assetName={essence.id}
+                            rarity="rare"
+                            mini={true}
+                          />
+                          {'  '}
                           {itemNamesMap[essence.id].name}: {essence.quantity}
                         </div>
                       )

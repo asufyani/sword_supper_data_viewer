@@ -17,19 +17,35 @@ export const UpgradeList: React.FC<UpgradeListProps> = ({
     <>
       {upgrades.map((upgrade) => (
         <div key={upgrade.yields + '-upgrade'}>
-          <AssetIcon
+          {/* <AssetIcon
             assetName={itemNameMap[upgrade.yields].assetName}
             rarity={itemNameMap[upgrade.yields].rarity}
-          />
+          /> */}
           <RarityChip
             item={itemNameMap[upgrade.yields]}
             goTo={goTo}
             showPopover={true}
+            showIcon={true}
           />
           <ul>
             {upgrade.requires.map((requirement, idx) => (
               <li key={`${upgrade.yields}-${requirement.id}-${idx}`}>
-                {itemNameMap[requirement.id].name}: {requirement.amount}
+                {requirement.amount > 1 ? (
+                  <>
+                    <AssetIcon
+                      assetName={requirement.id}
+                      rarity={itemNameMap[requirement.id].rarity}
+                      mini={true}
+                    />
+                    {'  '}
+                    {itemNameMap[requirement.id].name}: {requirement.amount}
+                  </>
+                ) : (
+                  <RarityChip
+                    item={itemNameMap[requirement.id]}
+                    showIcon={true}
+                  />
+                )}
               </li>
             ))}
           </ul>
