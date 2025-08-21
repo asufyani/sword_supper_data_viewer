@@ -16,11 +16,11 @@ interface RarityChipProps {
   showIcon?: boolean
 }
 const colorMap: Record<Rarity, string> = {
-  common: 'gray',
-  uncommon: 'limegreen',
-  rare: 'blue',
-  epic: 'blueviolet',
-  legendary: 'orange',
+  common: '#617E8A',
+  uncommon: '#1DC056',
+  rare: '#00A8FF',
+  epic: '#B260FD',
+  legendary: '#FFC900',
 }
 export const RarityChip: React.FC<RarityChipProps> = ({
   item,

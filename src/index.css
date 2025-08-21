@@ -85,3 +85,7 @@ a {
 .chipIcon {
   height: 20px;
 }
+
+.raritycolor {
+  background-color: rgb(127, 255, 212);
+}
