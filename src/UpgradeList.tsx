@@ -1,3 +1,4 @@
+import { AssetIcon } from './AssetIcon'
 import { RarityChip } from './RarityChip'
 import type { ItemNameMap, TabName, Upgrade } from './types'
 
@@ -16,6 +17,10 @@ export const UpgradeList: React.FC<UpgradeListProps> = ({
     <>
       {upgrades.map((upgrade) => (
         <div key={upgrade.yields + '-upgrade'}>
+          <AssetIcon
+            assetName={itemNameMap[upgrade.yields].assetName}
+            rarity={itemNameMap[upgrade.yields].rarity}
+          />
           <RarityChip
             item={itemNameMap[upgrade.yields]}
             goTo={goTo}

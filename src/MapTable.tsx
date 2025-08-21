@@ -13,6 +13,7 @@ import {
   AccordionSummary,
   Typography,
 } from '@mui/material'
+import { AssetIcon } from './AssetIcon'
 
 type MapEnemy = {
   id: string
@@ -63,6 +64,10 @@ export const MapTable: React.FC<ItemsTableProps> = ({
                 <TableCell id={mapKey}>
                   {mapsByKey[mapKey].map((map) => (
                     <div>
+                      <AssetIcon
+                        assetName={map.assetName}
+                        rarity={map.rarity}
+                      />
                       <RarityChip item={itemNameMap[map.id]} />
                     </div>
                   ))}

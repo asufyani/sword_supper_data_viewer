@@ -8,6 +8,7 @@ import type { ItemsTableProps } from './types'
 import { RarityChip } from './RarityChip'
 import { useState, type ChangeEvent } from 'react'
 import { UpgradeList } from './UpgradeList'
+import { AssetIcon } from './AssetIcon'
 
 export const BlueprintTable: React.FC<ItemsTableProps> = ({
   itemsArray,
@@ -35,6 +36,7 @@ export const BlueprintTable: React.FC<ItemsTableProps> = ({
             .map((item) => (
               <TableRow key={item.id}>
                 <TableCell id={item.id}>
+                  <AssetIcon assetName={item.assetName} rarity={item.rarity} />
                   <RarityChip item={item} />
                 </TableCell>
                 <TableCell>
