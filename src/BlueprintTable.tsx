@@ -41,6 +41,7 @@ export const BlueprintTable: React.FC<ItemsTableProps> = ({
                 </TableCell>
                 <TableCell>
                   <UpgradeList
+                    itemId={item.id}
                     itemNameMap={itemNameMap}
                     upgrades={item.upgrades}
                     goTo={goTo}
