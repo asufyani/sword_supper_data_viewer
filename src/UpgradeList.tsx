@@ -25,11 +25,14 @@ export const UpgradeList: React.FC<UpgradeListProps> = ({
         <>
           <Typography component={'h3'}>Required by:</Typography>
           {upgradeMaterialsList[itemId].map((upgradeResult) => (
-            <RarityChip
-              item={itemNameMap[upgradeResult]}
-              goTo={goTo}
-              showIcon={true}
-            />
+            <div>
+              <RarityChip
+                item={itemNameMap[upgradeResult]}
+                goTo={goTo}
+                showIcon={true}
+                key={upgradeResult}
+              />
+            </div>
           ))}
         </>
       )
