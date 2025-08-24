@@ -19,6 +19,7 @@ export const WeaponTable: React.FC<ItemsTableProps> = ({
   itemsArray,
   itemNameMap,
   goTo,
+  upgradeMaterialsList,
 }) => {
   const [searchString, setSearchString] = useDebounceValue('', 250)
   const [orderBy, setOrderBy] = useState<SortableProperty>('name')
@@ -96,9 +97,11 @@ export const WeaponTable: React.FC<ItemsTableProps> = ({
                 <TableCell>{item.requiredLevel}</TableCell>
                 <TableCell>
                   <UpgradeList
+                    itemId={item.id}
                     itemNameMap={itemNameMap}
                     upgrades={item.upgrades}
                     goTo={goTo}
+                    upgradeMaterialsList={upgradeMaterialsList}
                   />
                 </TableCell>
               </TableRow>

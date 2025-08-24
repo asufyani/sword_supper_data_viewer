@@ -24,6 +24,7 @@ export const ArmorTable: React.FC<ItemsTableProps> = ({
   itemsArray,
   itemNameMap,
   goTo,
+  upgradeMaterialsList,
 }) => {
   const [searchString, setSearchString] = useDebounceValue('', 250)
   const [slot, setSlots] = useState<Slot>()
@@ -124,8 +125,10 @@ export const ArmorTable: React.FC<ItemsTableProps> = ({
                 <TableCell>{item.requiredLevel}</TableCell>
                 <TableCell>
                   <UpgradeList
+                    itemId={item.id}
                     itemNameMap={itemNameMap}
                     upgrades={item.upgrades}
+                    upgradeMaterialsList={upgradeMaterialsList}
                     goTo={goTo}
                   />
                 </TableCell>

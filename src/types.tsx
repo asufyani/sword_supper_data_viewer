@@ -26,6 +26,7 @@ export interface ItemsTableProps {
   itemsArray: Item[]
   itemNameMap: ItemNameMap
   goTo?: GoToType
+  upgradeMaterialsList?: Record<string, string[]>
 }
 
 export type TabName = 'Armor' | 'Weapons' | 'Blueprints' | 'Maps'

@@ -64,7 +64,8 @@ function App() {
     const armorArray: Item[] = []
     const blueprintArray: Item[] = []
     const mapArray: Item[] = []
-    const assetsArray: string[] = []
+    // const assetsArray: string[] = []
+    const upgradeMaterialItems: Record<string, string[]> = {}
     Object.keys(items).forEach((key) => {
       const item = {
         ...items[key as itemsKey],
@@ -73,11 +74,11 @@ function App() {
         equipSlots: items[key as itemsKey].equipSlots as Slot[],
         id: key,
       }
-      if (item.assetName) {
-        assetsArray.push(
-          `https://eimoap--5ea9dfdf-b835-45a9-b89d-e27ea9f9a35c-0-0-37-webview.devvit.net/assets/ui/item-icons/${item.assetName}.png`
-        )
-      }
+      // if (item.assetName) {
+      //   assetsArray.push(
+      //     `https://eimoap--5ea9dfdf-b835-45a9-b89d-e27ea9f9a35c-0-0-37-webview.devvit.net/assets/ui/item-icons/${item.assetName}.png`
+      //   )
+      // }
 
       itemNameMap[key] = item
       if (
@@ -95,14 +96,23 @@ function App() {
       } else if (item.tags.includes('map')) {
         mapArray.push(item)
       }
+
+      item.upgrades.forEach((upgrade) => {
+        upgrade.requires.forEach((requirement) => {
+          upgradeMaterialItems[requirement.id] ||= []
+          upgradeMaterialItems[requirement.id].push(item.id)
+        })
+      })
     })
-    console.log(assetsArray)
+
+    // console.log(assetsArray)
     return {
       itemNameMap,
       weaponsArray,
       armorArray,
       blueprintArray,
       mapArray,
+      upgradeMaterialItems,
     }
   }, [])
 
@@ -168,6 +178,7 @@ function App() {
             itemsArray={itemArrays.weaponsArray}
             itemNameMap={itemArrays.itemNameMap}
             goTo={goTo}
+            upgradeMaterialsList={itemArrays.upgradeMaterialItems}
           />
         </TableContainer>
       </CustomTabPanel>
@@ -177,6 +188,7 @@ function App() {
             itemsArray={itemArrays.armorArray}
             itemNameMap={itemArrays.itemNameMap}
             goTo={goTo}
+            upgradeMaterialsList={itemArrays.upgradeMaterialItems}
           />
         </TableContainer>
       </CustomTabPanel>
