@@ -153,25 +153,27 @@ export const EnemyTable: React.FC<{
                     </AccordionSummary>
                     <AccordionDetails>
                       {tier.items.map((itemData) => {
-                        const item = itemNamesMap[itemData.id]
+                        if (itemData.id) {
+                          const item = itemNamesMap[itemData.id]
 
-                        const quantities = !itemData.quantity
-                          ? ''
-                          : typeof itemData.quantity === 'number'
-                            ? itemData.quantity == 1
-                              ? ''
-                              : `: ${itemData.quantity}`
-                            : `: ${itemData.quantity?.join('-')}`
+                          const quantities = !itemData.quantity
+                            ? ''
+                            : typeof itemData.quantity === 'number'
+                              ? itemData.quantity == 1
+                                ? ''
+                                : `: ${itemData.quantity}`
+                              : `: ${itemData.quantity?.join('-')}`
 
-                        return (
-                          <RarityChip
-                            item={item}
-                            goTo={goTo}
-                            showPopover={item.tags.includes('equipment')}
-                            quantityString={quantities}
-                            showIcon={true}
-                          />
-                        )
+                          return (
+                            <RarityChip
+                              item={item}
+                              goTo={goTo}
+                              showPopover={item.tags.includes('equipment')}
+                              quantityString={quantities}
+                              showIcon={true}
+                            />
+                          )
+                        }
                       })}
                     </AccordionDetails>
                   </Accordion>
