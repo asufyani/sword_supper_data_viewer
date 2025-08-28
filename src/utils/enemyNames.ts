@@ -1,4 +1,4 @@
-export const enemyNames = {
+export const enemyNames: Record<string, string> = {
   golemBaby: 'Baby Golem',
   slimeKnight: 'Slime Knight',
   slimeBigMouth: 'Chomp Slime',

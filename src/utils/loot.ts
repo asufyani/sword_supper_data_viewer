@@ -1,4 +1,5 @@
-export const et = {
+import { type LootTable } from '../types'
+export const et: Record<string, LootTable> = {
   emptyDropLoot: { type: 'always', tiers: [{ minLevel: 1, items: [] }] },
   missionGoldLoot: {
     type: 'oneOf',

@@ -6,32 +6,23 @@ import {
   TextField,
   Typography,
 } from '@mui/material'
-import type { ItemNameMap, GoToType } from './types'
+import type {
+  ItemNameMap,
+  GoToType,
+  Enemy,
+  LootTier,
+  LootTable as LootTableData,
+} from './types'
 import { et } from './utils/loot'
 import { RarityChip } from './RarityChip'
 import { useCallback, useMemo, type ChangeEvent } from 'react'
 import { useDebounceValue } from 'usehooks-ts'
+import { z3 } from './utils/enemies'
+import { enemyNames } from './utils/enemyNames'
 
 interface LootTableProps {
   itemNameMap: ItemNameMap
   goTo: GoToType
-}
-
-type LootTableData = {
-  tiers: LootTier[]
-}
-
-type LootTier = {
-  minLevel: number
-  maxLevel?: number
-  items: LootItem[]
-}
-
-type LootItem = {
-  id?: string
-  tableId?: string
-  weight?: number
-  quantity?: number | number[]
 }
 
 const formatter = new Intl.NumberFormat('en-US', {
@@ -43,7 +34,21 @@ const formatter = new Intl.NumberFormat('en-US', {
 type LootKey = keyof LootTableData
 export const LootTable: React.FC<LootTableProps> = ({ itemNameMap, goTo }) => {
   const lootTable: Record<string, LootTableData> = useMemo(() => {
-    return et
+    const processedLoot: Record<string, LootTableData> = {}
+    Object.keys(et).forEach((lootTableName) => {
+      processedLoot[lootTableName] = {
+        enemies: [],
+        ...et[lootTableName],
+      }
+      Object.keys(z3 as Record<string, Enemy>).forEach((enemyKey) => {
+        if (
+          z3[enemyKey as keyof typeof z3].lootTables.includes(et[lootTableName])
+        ) {
+          processedLoot[lootTableName].enemies?.push(enemyKey)
+        }
+      })
+    })
+    return processedLoot
   }, [])
 
   const [searchString, setSearchString] = useDebounceValue('', 500)
@@ -68,6 +73,12 @@ export const LootTable: React.FC<LootTableProps> = ({ itemNameMap, goTo }) => {
       ),
     [itemNameMap]
   )
+
+  const getEnemyNames = useCallback((enemyKeys: string[]) => {
+    return enemyKeys.map((enemyName) => {
+      return enemyNames[enemyName]
+    })
+  }, [])
 
   const filterTables = useCallback(
     (key: string) => {
@@ -95,7 +106,11 @@ export const LootTable: React.FC<LootTableProps> = ({ itemNameMap, goTo }) => {
           return (
             <Accordion id={key} key={key}>
               <AccordionSummary id={key}>
-                <Typography component="span">{key}</Typography>
+                <Typography component="span">
+                  {lootTable[key].enemies?.length
+                    ? getEnemyNames(lootTable[key].enemies).join(', ')
+                    : key}
+                </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 {(lootTable[key as LootKey].tiers || []).map((tier, idx) => {

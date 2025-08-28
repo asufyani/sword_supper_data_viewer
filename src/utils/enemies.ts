@@ -1,6 +1,7 @@
+import type { Enemy } from '../types'
 import { et } from './loot'
 
-export const z3 = {
+export const z3: Record<string, Enemy> = {
   golemBaby: {
     id: 'golemBaby',
     spineAssetKey: 'golem_baby',

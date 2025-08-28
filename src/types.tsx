@@ -81,20 +81,32 @@ export type Enemy = {
   dodge: number
   speed: number
   lootTables: LootTable[]
+  spineAssetKey?: string
+  tags: string[]
+  lightningResist?: number
+  iceResist?: number
+  fireResist?: number
+  shadowResist?: number
+  abilities?: string[]
 }
 
-type LootTable = {
+export type LootTable = {
   tiers: LootTier[]
+  type: string
+  enemies?: string[]
+  count?: number[]
 }
 
-type LootTier = {
+export type LootTier = {
   minLevel: number
   maxLevel?: number
   items: LootItem[]
 }
 
 type LootItem = {
-  id: string
+  id?: string
+  tableId?: string
+  weight?: number
   quantity?: number[] | number
 }
 

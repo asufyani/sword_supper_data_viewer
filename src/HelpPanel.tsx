@@ -38,10 +38,10 @@ export const HelpPanel = () => {
       </Typography>
       <Typography variant={'body1'}>
         Alternatively, to find a specific piece of loot, use the search box to
-        find tables that include the item. Loot tables like "darkLoot" or
-        "golemLoot" apply to all enemies of that subtype, so golemLoot items can
-        drop from any rock golem dude. Map loot tables like fieldsEquipLoot mean
-        that the item can drop as an end-of-mission reward in that map type.
+        find tables that include the item. Map loot tables like fieldsEquipLoot
+        mean that the item can drop as an end-of-mission reward in that map
+        type. Loot tables tied to specific enemies will list all enemies with
+        that loot table.
       </Typography>
       <Typography variant={'h4'}>Enemies</Typography>
       <Typography variant={'body1'}>
@@ -52,6 +52,10 @@ export const HelpPanel = () => {
         be used to figure out what damage an enemy is weak to:{' '}
         <span className="penalty">red numbers</span> indicate resistances and{' '}
         <span className="bonus">green numbers</span> indicate weaknesses.
+      </Typography>
+      <Typography variant={'body1'}>
+        Click the down arrow in the far right column to see the enemy's loot
+        table.
       </Typography>
       <Typography variant={'h4'}>Food</Typography>
       <Typography variant={'body1'}>
