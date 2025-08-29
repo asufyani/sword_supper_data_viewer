@@ -70,6 +70,7 @@ export type damageType = (typeof damageTypes)[number]
 
 export type Enemy = {
   id: string
+  name?: string
   baseDamage: number
   baseDefense: number
   baseHp: number
@@ -88,6 +89,9 @@ export type Enemy = {
   fireResist?: number
   shadowResist?: number
   abilities?: string[]
+  scaledHp?: number
+  scaledDamage?: number
+  scaledDefense?: number
 }
 
 export type LootTable = {

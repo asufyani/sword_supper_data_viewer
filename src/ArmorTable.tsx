@@ -14,7 +14,7 @@ import {
   ToggleButtonGroup,
 } from '@mui/material'
 import { UpgradeList } from './UpgradeList'
-import { getComparator } from './utils/get_comparator'
+import { getItemComparator } from './utils/get_comparator'
 import { SortableHeader } from './SortableHeader'
 import { StatsDisplay } from './StatsDisplay'
 import { useDebounceValue } from 'usehooks-ts'
@@ -108,32 +108,37 @@ export const ArmorTable: React.FC<ItemsTableProps> = ({
             </TableRow>
           </TableHead>
           <TableBody>
-            {filteredItems.sort(getComparator(orderBy, order)).map((item) => (
-              <TableRow key={item.id}>
-                <TableCell id={item.id}>
-                  <AssetIcon assetName={item.assetName} rarity={item.rarity} />
-                  <RarityChip item={item} goTo={goTo} />
-                </TableCell>
-                <TableCell>{item.equipSlots}</TableCell>
-                <TableCell>
-                  <StatsDisplay
-                    statModifiers={item.statModifiers}
-                    abilities={item.abilities}
-                  />
-                </TableCell>
-                {/* <TableCell><RarityChip rarity={item.rarity} key={item.key}/></TableCell> */}
-                <TableCell>{item.requiredLevel}</TableCell>
-                <TableCell>
-                  <UpgradeList
-                    itemId={item.id}
-                    itemNameMap={itemNameMap}
-                    upgrades={item.upgrades}
-                    upgradeMaterialsList={upgradeMaterialsList}
-                    goTo={goTo}
-                  />
-                </TableCell>
-              </TableRow>
-            ))}
+            {filteredItems
+              .sort(getItemComparator(orderBy, order))
+              .map((item) => (
+                <TableRow key={item.id}>
+                  <TableCell id={item.id}>
+                    <AssetIcon
+                      assetName={item.assetName}
+                      rarity={item.rarity}
+                    />
+                    <RarityChip item={item} goTo={goTo} />
+                  </TableCell>
+                  <TableCell>{item.equipSlots}</TableCell>
+                  <TableCell>
+                    <StatsDisplay
+                      statModifiers={item.statModifiers}
+                      abilities={item.abilities}
+                    />
+                  </TableCell>
+                  {/* <TableCell><RarityChip rarity={item.rarity} key={item.key}/></TableCell> */}
+                  <TableCell>{item.requiredLevel}</TableCell>
+                  <TableCell>
+                    <UpgradeList
+                      itemId={item.id}
+                      itemNameMap={itemNameMap}
+                      upgrades={item.upgrades}
+                      upgradeMaterialsList={upgradeMaterialsList}
+                      goTo={goTo}
+                    />
+                  </TableCell>
+                </TableRow>
+              ))}
           </TableBody>
         </Table>
       </TableContainer>

@@ -1,6 +1,6 @@
-import type { Item, SortableProperty, damageType } from '../types'
+import type { Enemy, Item, SortableProperty, damageType } from '../types'
 
-export const getComparator = (
+export const getItemComparator = (
   property: SortableProperty,
   order: number
 ): ((a: Item, b: Item) => number) => {
@@ -24,5 +24,19 @@ export const getComparator = (
       })
       return order * (aDamage < bDamage ? -1 : 1)
     }
+  }
+}
+
+export const getEnemyComparator = (
+  property: keyof Enemy,
+  order: number
+): ((a: Enemy, b: Enemy) => number) => {
+  return (a: Enemy, b: Enemy) => {
+    if (!a[property]) {
+      return -1
+    } else if (!b[property]) {
+      return 1
+    }
+    return order * (a[property] < b[property] ? -1 : 1)
   }
 }

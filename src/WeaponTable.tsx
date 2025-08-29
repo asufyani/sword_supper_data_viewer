@@ -9,7 +9,7 @@ import { RarityChip } from './RarityChip'
 import { useState, type ChangeEvent } from 'react'
 import { UpgradeList } from './UpgradeList'
 import { SortableHeader } from './SortableHeader'
-import { getComparator } from './utils/get_comparator'
+import { getItemComparator } from './utils/get_comparator'
 import { StatsDisplay } from './StatsDisplay'
 import { useDebounceValue } from 'usehooks-ts'
 import { damageTypeSymbols } from './utils/constants'
@@ -71,7 +71,7 @@ export const WeaponTable: React.FC<ItemsTableProps> = ({
         <TableBody>
           {itemsArray
             .filter((item) => item.name.toLowerCase().includes(searchString))
-            .sort(getComparator(orderBy, order))
+            .sort(getItemComparator(orderBy, order))
             .map((item) => (
               <TableRow key={item.id + '-row'} id={item.id + '-row'}>
                 <TableCell key={item.id} id={item.id}>

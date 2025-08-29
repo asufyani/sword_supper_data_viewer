@@ -48,8 +48,9 @@ export const HelpPanel = () => {
         Use the Enemy Level slider to set the level of mission you're doing and
         the table will display stats for enemies of that level. The search box
         can filter by enemy id or by enemy name (e.g. searching for livingArmor
-        or Steel Revenant will both find that boss). The resistances column can
-        be used to figure out what damage an enemy is weak to:{' '}
+        or Steel Revenant will both find that boss). You can click on most of
+        the column headers to sort by that column. The resistances column can be
+        used to figure out what damage an enemy is weak to:{' '}
         <span className="penalty">red numbers</span> indicate resistances and{' '}
         <span className="bonus">green numbers</span> indicate weaknesses.
       </Typography>

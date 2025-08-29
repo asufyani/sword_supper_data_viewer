@@ -31,6 +31,8 @@ import { RarityChip } from './RarityChip'
 import { damageTypeSymbols } from './utils/constants'
 import { useDebounceValue } from 'usehooks-ts'
 import { enemyNames } from './utils/enemyNames'
+import { getEnemyComparator } from './utils/get_comparator'
+import { SortableEnemyHeader } from './SortableEnemyHeader'
 
 const formatter = new Intl.NumberFormat('en-US', {
   style: 'percent',
@@ -45,6 +47,8 @@ export const EnemyTable: React.FC<{
   const [searchString, setSearchString] = useDebounceValue('', 250)
   const maxLevel = 300
   const [level, setLevel] = React.useState(1)
+  const [order, setOrder] = React.useState(1)
+  const [orderBy, setOrderBy] = React.useState<keyof Enemy>('name')
   const enemies: Record<string, Enemy> = useMemo(() => {
     return z3 as Record<string, Enemy>
   }, [])
@@ -79,38 +83,47 @@ export const EnemyTable: React.FC<{
   )
 
   const calcScalingValues = useCallback((enemy: Enemy, level: number) => {
-    const health = Math.round(
+    const scaledHp = Math.round(
       enemy.baseHp + enemy.hpGrowth * Math.pow(level, 1.27)
     )
-    const defense = Math.round(
+    const scaledDefense = Math.round(
       enemy.baseDefense + enemy.defenseGrowth * Math.pow(level, 1.15)
     )
-    const damage = Math.round(
+    const scaledDamage = Math.round(
       enemy.baseDamage + enemy.damageGrowth * Math.pow(level, 1.1)
     )
     return {
-      health,
-      defense,
-      damage,
+      scaledHp,
+      scaledDefense,
+      scaledDamage,
     }
   }, [])
+
+  const handleHeaderClick = (propName: keyof Enemy) => {
+    if (orderBy == propName) {
+      setOrder(-1 * order)
+    } else {
+      setOrder(1)
+      setOrderBy(propName)
+    }
+  }
 
   function Row(props: { enemy: Enemy }) {
     const { enemy } = props
     const [open, setOpen] = React.useState(false)
     const lootTable = enemy.lootTables[0]
 
-    const scaledValues = calcScalingValues(enemy, level)
+    // const scaledValues = calcScalingValues(enemy, level)
 
     return (
       <React.Fragment>
         <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
           <TableCell>
-            <Typography component={'span'}>{enemyNameMap[enemy.id]}</Typography>
+            <Typography component={'span'}>{enemy.name}</Typography>
           </TableCell>
-          <TableCell>{`${scaledValues.damage} ${damageTypeSymbols[enemy.damageType]}`}</TableCell>
-          <TableCell>{scaledValues.health}</TableCell>
-          <TableCell>{scaledValues.defense}</TableCell>
+          <TableCell>{`${enemy.scaledDamage} ${damageTypeSymbols[enemy.damageType]}`}</TableCell>
+          <TableCell>{enemy.scaledHp}</TableCell>
+          <TableCell>{enemy.scaledDefense}</TableCell>
           <TableCell>
             {damageTypes.map((damageType) => {
               const resistType: keyof Enemy =
@@ -222,14 +235,56 @@ export const EnemyTable: React.FC<{
       <Table stickyHeader>
         <TableHead>
           <TableRow>
-            <TableCell>Name</TableCell>
-            <TableCell>Damage</TableCell>
-            <TableCell>HP</TableCell>
-            <TableCell>Defense</TableCell>
+            <SortableEnemyHeader
+              handleHeaderClick={handleHeaderClick}
+              order={order}
+              orderBy={orderBy}
+              label="Name"
+              property="name"
+            />
+            <SortableEnemyHeader
+              handleHeaderClick={handleHeaderClick}
+              order={order}
+              orderBy={orderBy}
+              label="Damage"
+              property="scaledDamage"
+            />
+            <SortableEnemyHeader
+              handleHeaderClick={handleHeaderClick}
+              order={order}
+              orderBy={orderBy}
+              label="HP"
+              property="scaledHp"
+            />
+            <SortableEnemyHeader
+              handleHeaderClick={handleHeaderClick}
+              order={order}
+              orderBy={orderBy}
+              label="Defense"
+              property="scaledDefense"
+            />
             <TableCell>Resistances</TableCell>
-            <TableCell>Crit Rate</TableCell>
-            <TableCell>Dodge</TableCell>
-            <TableCell>Speed</TableCell>
+            <SortableEnemyHeader
+              handleHeaderClick={handleHeaderClick}
+              order={order}
+              orderBy={orderBy}
+              label="Crit Rate"
+              property="crit"
+            />
+            <SortableEnemyHeader
+              handleHeaderClick={handleHeaderClick}
+              order={order}
+              orderBy={orderBy}
+              label="Dodge"
+              property="dodge"
+            />
+            <SortableEnemyHeader
+              handleHeaderClick={handleHeaderClick}
+              order={order}
+              orderBy={orderBy}
+              label="Speed"
+              property="speed"
+            />
             <TableCell>Loot</TableCell>
           </TableRow>
         </TableHead>
@@ -237,7 +292,16 @@ export const EnemyTable: React.FC<{
           {Object.keys(enemies)
             .filter(filterFunction)
             .map((enemyKey) => {
-              return <Row key={enemyKey} enemy={enemies[enemyKey]} />
+              const scaledValues = calcScalingValues(enemies[enemyKey], level)
+              return (enemies[enemyKey] = {
+                name: enemyNameMap[enemyKey],
+                ...enemies[enemyKey],
+                ...scaledValues,
+              })
+            })
+            .sort(getEnemyComparator(orderBy, order))
+            .map((enemy) => {
+              return <Row key={enemy.id} enemy={enemy} />
             })}
         </TableBody>
       </Table>
