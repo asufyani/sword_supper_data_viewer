@@ -82,7 +82,7 @@ export type Enemy = {
   dodge: number
   speed: number
   lootTables: LootTable[]
-  spineAssetKey?: string
+  spineAssetKey: string
   tags: string[]
   lightningResist?: number
   iceResist?: number

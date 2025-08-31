@@ -1,0 +1,15 @@
+slime_knight.png
+size:512,256
+filter:Linear,Linear
+pma:true
+scale:0.25
+body
+bounds:2,31,134,87
+eye
+bounds:137,66,15,28
+helmet
+bounds:378,16,130,130
+shadow
+bounds:2,120,150,26
+weapon
+bounds:154,2,222,144

@@ -1,0 +1,17 @@
+slime_bigMouth.png
+size:256,256
+filter:Linear,Linear
+pma:true
+scale:0.25
+body
+bounds:2,56,174,153
+eye
+bounds:203,202,35,43
+jaw
+bounds:27,2,136,76
+rotate:180
+mouth
+bounds:152,34,102,118
+rotate:180
+shadow
+bounds:2,211,199,34

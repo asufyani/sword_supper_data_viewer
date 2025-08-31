@@ -1,0 +1,17 @@
+slime_cat.png
+size:256,256
+filter:Linear,Linear
+pma:true
+scale:0.25
+body
+bounds:2,2,130,137
+rotate:90
+eye
+bounds:218,134,13,31
+jaw
+bounds:155,37,94,55
+rotate:180
+mouth
+bounds:145,70,71,95
+shadow
+bounds:2,134,148,31

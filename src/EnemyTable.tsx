@@ -33,6 +33,7 @@ import { useDebounceValue } from 'usehooks-ts'
 import { enemyNames } from './utils/enemyNames'
 import { getEnemyComparator } from './utils/get_comparator'
 import { SortableEnemyHeader } from './SortableEnemyHeader'
+import { EnemyViewer } from './EnemyViewer'
 
 const formatter = new Intl.NumberFormat('en-US', {
   style: 'percent',
@@ -54,6 +55,22 @@ export const EnemyTable: React.FC<{
   }, [])
 
   const enemyNameMap: Record<string, string> = enemyNames
+  // const spineAssetURLS: string[] = []
+  // Object.keys(enemies).forEach((enemyName) => {
+  //   const assetKey = enemies[enemyName].spineAssetKey
+  //   if (assetKey) {
+  //     spineAssetURLS.push(
+  //       `https://cabbageidle-eimoap-0-0-39-webview.devvit.net/assets/spine/${assetKey}.png`
+  //     )
+  //     spineAssetURLS.push(
+  //       `https://cabbageidle-eimoap-0-0-39-webview.devvit.net/assets/spine/${assetKey}.skel`
+  //     )
+  //     spineAssetURLS.push(
+  //       `https://cabbageidle-eimoap-0-0-39-webview.devvit.net/assets/spine/${assetKey}.atlas`
+  //     )
+  //   }
+  // })
+  // console.log(spineAssetURLS)
 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchString(event.target.value.toLowerCase())
@@ -142,7 +159,7 @@ export const EnemyTable: React.FC<{
           <TableCell>{formatter.format(enemy.crit)}</TableCell>
           <TableCell>{formatter.format(enemy.dodge)}</TableCell>
           <TableCell>{enemy.speed}</TableCell>
-          <TableCell>
+          <TableCell align="center">
             <IconButton
               aria-label="expand row"
               size="small"
@@ -155,6 +172,7 @@ export const EnemyTable: React.FC<{
         <TableRow>
           <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={11}>
             <Collapse in={open} timeout="auto" unmountOnExit>
+              <EnemyViewer enemy={enemy} />
               {lootTable.tiers.map((tier) => {
                 const levels = tier.maxLevel
                   ? `${tier.minLevel}-${tier.maxLevel}`
@@ -285,7 +303,7 @@ export const EnemyTable: React.FC<{
               label="Speed"
               property="speed"
             />
-            <TableCell>Loot</TableCell>
+            <TableCell>Loot/Appearance</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
