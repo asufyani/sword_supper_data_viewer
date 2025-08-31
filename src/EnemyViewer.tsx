@@ -11,11 +11,12 @@ export const EnemyAnimationViewer = ({
   useEffect(() => {
     const spineRoot = spineRef.current
     if (spineRoot) {
-      new SpinePlayer(spineRoot, {
-        preserveDrawingBuffer: false,
+      const sp = new SpinePlayer(spineRoot, {
+        preserveDrawingBuffer: true,
         skeleton: `./spine/${spineAssetKey}.skel`,
-        atlas: `./spine/${spineAssetKey}.atlas`,
+        showControls: true,
         animation: 'idle',
+        atlas: `./spine/${spineAssetKey}.atlas`,
         backgroundColor: '#ffffff',
       })
     }
@@ -23,10 +24,12 @@ export const EnemyAnimationViewer = ({
   return (
     <div
       style={{
+        width: '600px',
         height: '400px',
         overflow: 'hidden',
         left: 'auto',
         right: 'auto',
+        margin: 'auto',
       }}
       ref={spineRef}
     ></div>
