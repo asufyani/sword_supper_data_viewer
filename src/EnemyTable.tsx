@@ -177,6 +177,9 @@ export const EnemyTable: React.FC<{
                 const levels = tier.maxLevel
                   ? `${tier.minLevel}-${tier.maxLevel}`
                   : `${tier.minLevel}+`
+                const totalWeight: number = tier.items.reduce((total, item) => {
+                  return total + (item.weight || 0)
+                }, 0)
                 return (
                   <Accordion>
                     <AccordionSummary>
@@ -202,6 +205,13 @@ export const EnemyTable: React.FC<{
                               showPopover={item.tags.includes('equipment')}
                               quantityString={quantities}
                               showIcon={true}
+                              weight={
+                                itemData.weight
+                                  ? formatter.format(
+                                      itemData.weight / totalWeight
+                                    )
+                                  : undefined
+                              }
                             />
                           )
                         }
