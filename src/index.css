@@ -89,3 +89,9 @@ a {
 .raritycolor {
   background-color: rgb(127, 255, 212);
 }
+
+.spine-player {
+  width: 50%;
+  height: 400px;
+  display: inline-block;
+}

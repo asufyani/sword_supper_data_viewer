@@ -33,7 +33,7 @@ import { useDebounceValue } from 'usehooks-ts'
 import { enemyNames } from './utils/enemyNames'
 import { getEnemyComparator } from './utils/get_comparator'
 import { SortableEnemyHeader } from './SortableEnemyHeader'
-import { EnemyViewer } from './EnemyViewer'
+import { EnemyAnimationViewer } from './EnemyViewer'
 
 const formatter = new Intl.NumberFormat('en-US', {
   style: 'percent',
@@ -51,7 +51,7 @@ export const EnemyTable: React.FC<{
   const [order, setOrder] = React.useState(1)
   const [orderBy, setOrderBy] = React.useState<keyof Enemy>('name')
   const enemies: Record<string, Enemy> = useMemo(() => {
-    return z3 as Record<string, Enemy>
+    return z3
   }, [])
 
   const enemyNameMap: Record<string, string> = enemyNames
@@ -172,7 +172,10 @@ export const EnemyTable: React.FC<{
         <TableRow>
           <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={11}>
             <Collapse in={open} timeout="auto" unmountOnExit>
-              <EnemyViewer enemy={enemy} />
+              <EnemyAnimationViewer
+                spineAssetKey={enemy.spineAssetKey}
+                showControls={true}
+              />
               {lootTable.tiers.map((tier) => {
                 const levels = tier.maxLevel
                   ? `${tier.minLevel}-${tier.maxLevel}`

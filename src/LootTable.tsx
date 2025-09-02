@@ -9,7 +9,6 @@ import {
 import type {
   ItemNameMap,
   GoToType,
-  Enemy,
   LootTier,
   LootTable as LootTableData,
 } from './types'
@@ -19,6 +18,7 @@ import { useCallback, useMemo, type ChangeEvent } from 'react'
 import { useDebounceValue } from 'usehooks-ts'
 import { z3 } from './utils/enemies'
 import { enemyNames } from './utils/enemyNames'
+import { EnemyAnimationViewer } from './EnemyViewer'
 
 interface LootTableProps {
   itemNameMap: ItemNameMap
@@ -40,10 +40,8 @@ export const LootTable: React.FC<LootTableProps> = ({ itemNameMap, goTo }) => {
         enemies: [],
         ...et[lootTableName],
       }
-      Object.keys(z3 as Record<string, Enemy>).forEach((enemyKey) => {
-        if (
-          z3[enemyKey as keyof typeof z3].lootTables.includes(et[lootTableName])
-        ) {
+      Object.keys(z3).forEach((enemyKey) => {
+        if (z3[enemyKey].lootTables.includes(et[lootTableName])) {
           processedLoot[lootTableName].enemies?.push(enemyKey)
         }
       })
@@ -104,7 +102,11 @@ export const LootTable: React.FC<LootTableProps> = ({ itemNameMap, goTo }) => {
         const showTable = tableHasItem || !searchString
         if (showTable) {
           return (
-            <Accordion id={key} key={key}>
+            <Accordion
+              id={key}
+              key={key}
+              slotProps={{ transition: { unmountOnExit: true } }}
+            >
               <AccordionSummary id={key}>
                 <Typography component="span">
                   {lootTable[key].enemies?.length
@@ -113,6 +115,17 @@ export const LootTable: React.FC<LootTableProps> = ({ itemNameMap, goTo }) => {
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
+                <div style={{ display: 'flex' }}>
+                  {!!lootTable[key].enemies?.length &&
+                    lootTable[key].enemies?.length < 10 &&
+                    lootTable[key].enemies?.map((enemyKey) => {
+                      return (
+                        <EnemyAnimationViewer
+                          spineAssetKey={z3[enemyKey].spineAssetKey}
+                        />
+                      )
+                    })}
+                </div>
                 {(lootTable[key as LootKey].tiers || []).map((tier, idx) => {
                   const totalWeight: number = tier.items.reduce(
                     (total, item) => {
@@ -133,7 +146,6 @@ export const LootTable: React.FC<LootTableProps> = ({ itemNameMap, goTo }) => {
                         </AccordionSummary>
                         <AccordionDetails>
                           {tier.items.map((item, itemIdx) => {
-                            debugger
                             const itemToLink = item.id && itemNameMap[item.id]
                             const dropPercentage =
                               (item.weight || 0) / totalWeight
