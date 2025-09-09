@@ -12,7 +12,6 @@ import {
   Paper,
   ToggleButton,
   ToggleButtonGroup,
-  Typography,
   Collapse,
   IconButton,
 } from '@mui/material'
