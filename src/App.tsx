@@ -58,7 +58,7 @@ function CustomTabPanel(props: TabPanelProps) {
 }
 
 function App() {
-  const assetsArray = []
+  // const assetsArray = []
   const itemArrays = useMemo(() => {
     const itemNameMap: ItemNameMap = {}
     const weaponsArray: Item[] = []
@@ -75,11 +75,11 @@ function App() {
         equipSlots: items[key as itemsKey].equipSlots as Slot[],
         id: key,
       }
-      if (item.assetName) {
-        assetsArray.push(
-          `https://cabbageidle-eimoap-0-0-40-webview.devvit.net/assets/ui/item-icons/${item.assetName}.png`
-        )
-      }
+      // if (item.assetName) {
+      //   assetsArray.push(
+      //     `https://cabbageidle-eimoap-0-0-40-webview.devvit.net/assets/ui/item-icons/${item.assetName}.png`
+      //   )
+      // }
 
       itemNameMap[key] = item
       if (
@@ -106,7 +106,7 @@ function App() {
       })
     })
 
-    console.log(assetsArray)
+    // console.log(assetsArray)
     return {
       itemNameMap,
       weaponsArray,
