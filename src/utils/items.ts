@@ -1,6 +1,6 @@
 import type { Item, ItemData } from '../types'
 
-const se = (args: ItemData) => {
+const ie = (args: ItemData) => {
   const item: Item = {
     rarity: args.rarity || 'common',
     abilities: args.abilities,
@@ -21,21 +21,22 @@ const se = (args: ItemData) => {
   }
   return item
 }
-const VT = se({
+
+const zT = ie({
     name: 'Coins',
     description: 'The currency of the realm.',
     sellPrice: 1,
     isStackable: !0,
     tags: ['currency'],
   }),
-  zT = se({
+  XT = ie({
     name: 'Gem',
     description: 'The premium currency of the realm.',
     sellPrice: 1,
     isStackable: !0,
     tags: ['currency'],
   }),
-  XT = se({
+  YT = ie({
     name: 'Benevolent Charm',
     assetName: 'BenevolentCharm',
     rarity: 'rare',
@@ -59,7 +60,7 @@ const VT = se({
     sellPrice: 65,
     tags: ['equipment'],
   }),
-  YT = se({
+  WT = ie({
     name: 'Blazing Amulet Lvl 1',
     assetName: 'BlazingAmulet',
     rarity: 'common',
@@ -87,7 +88,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  WT = se({
+  jT = ie({
     name: 'Blazing Amulet Lvl 2',
     assetName: 'BlazingAmulet',
     rarity: 'common',
@@ -108,20 +109,19 @@ const VT = se({
         modifierType: 'add',
       },
     ],
-    requiredLevel: 9,
     sellPrice: 27,
     upgrades: [
       {
         requires: [
           { id: 'EssenceSpicy', amount: 8 },
-          { id: 'Iron', amount: 95 },
+          { id: 'Iron', amount: 80 },
         ],
         yields: 'BlazingAmulet3',
       },
     ],
     tags: ['equipment'],
   }),
-  jT = se({
+  KT = ie({
     name: 'Blazing Amulet Lvl 3',
     assetName: 'BlazingAmulet',
     rarity: 'common',
@@ -137,11 +137,10 @@ const VT = se({
         modifierType: 'add',
       },
     ],
-    requiredLevel: 14,
     sellPrice: 27,
     tags: ['equipment'],
   }),
-  KT = se({
+  QT = ie({
     name: 'Bronze Amulet',
     assetName: 'BronzeAmulet',
     rarity: 'rare',
@@ -155,11 +154,11 @@ const VT = se({
         modifierType: 'add',
       },
     ],
-    requiredLevel: 6,
+    requiredLevel: 5,
     sellPrice: 40,
     tags: ['equipment'],
   }),
-  QT = se({
+  ZT = ie({
     name: 'Bulwark Chain Lvl 1',
     assetName: 'BulwarkChain',
     rarity: 'uncommon',
@@ -175,7 +174,7 @@ const VT = se({
       },
     ],
     abilities: [{ type: 'Ability', id: 'HealOnEnemyDeath' }],
-    requiredLevel: 21,
+    requiredLevel: 18,
     sellPrice: 32,
     upgrades: [
       {
@@ -189,7 +188,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  ZT = se({
+  $T = ie({
     name: 'Bulwark Chain Lvl 2',
     assetName: 'BulwarkChain',
     rarity: 'uncommon',
@@ -205,11 +204,11 @@ const VT = se({
       },
     ],
     abilities: [{ type: 'Ability', id: 'HealOnEnemyDeath' }],
-    requiredLevel: 27,
+    requiredLevel: 23,
     sellPrice: 39,
     tags: ['equipment'],
   }),
-  $T = se({
+  JT = ie({
     name: 'Chipped Pendant Lvl 1',
     assetName: 'ChippedPendant',
     rarity: 'common',
@@ -222,7 +221,7 @@ const VT = se({
     upgrades: [
       {
         requires: [
-          { id: 'Ore', amount: 45 },
+          { id: 'Ore', amount: 30 },
           { id: 'EssenceCreamy', amount: 1 },
         ],
         yields: 'ChippedPendant2',
@@ -230,7 +229,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  JT = se({
+  qT = ie({
     name: 'Chipped Pendant Lvl 2',
     assetName: 'ChippedPendant',
     rarity: 'common',
@@ -239,12 +238,11 @@ const VT = se({
     statModifiers: [
       { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
     ],
-    requiredLevel: 5,
     sellPrice: 50,
     upgrades: [
       {
         requires: [
-          { id: 'Ore', amount: 150 },
+          { id: 'Ore', amount: 100 },
           { id: 'EssenceCreamy', amount: 4 },
         ],
         yields: 'ChippedPendant3',
@@ -252,7 +250,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  qT = se({
+  _T = ie({
     name: 'Chipped Pendant Lvl 3',
     assetName: 'ChippedPendant',
     rarity: 'common',
@@ -261,11 +259,10 @@ const VT = se({
     statModifiers: [
       { type: 'StatModifier', stat: 'Dodge', value: 0.04, modifierType: 'add' },
     ],
-    requiredLevel: 11,
     sellPrice: 100,
     tags: ['equipment'],
   }),
-  _T = se({
+  e2 = ie({
     name: 'Crystal Heart Charm',
     assetName: 'CrystalHeartCharm',
     rarity: 'uncommon',
@@ -285,7 +282,7 @@ const VT = se({
     sellPrice: 34,
     tags: ['equipment'],
   }),
-  e2 = se({
+  t2 = ie({
     name: 'Dark Bargain Charm',
     assetName: 'DarkBargainCharm',
     rarity: 'epic',
@@ -306,7 +303,7 @@ const VT = se({
     sellPrice: 90,
     tags: ['equipment'],
   }),
-  t2 = se({
+  i2 = ie({
     name: 'Deadly Relic',
     assetName: 'DeadlyRelic',
     rarity: 'uncommon',
@@ -321,7 +318,7 @@ const VT = se({
     sellPrice: 55,
     tags: ['equipment'],
   }),
-  i2 = se({
+  s2 = ie({
     name: 'Deathzone Necklet EX',
     assetName: 'DeathzoneNecklet',
     rarity: 'rare',
@@ -340,7 +337,7 @@ const VT = se({
     sellPrice: 270,
     tags: ['equipment'],
   }),
-  s2 = se({
+  n2 = ie({
     name: 'Deathzone Necklet',
     assetName: 'DeathzoneNecklet',
     rarity: 'rare',
@@ -356,7 +353,7 @@ const VT = se({
     sellPrice: 240,
     tags: ['equipment'],
   }),
-  n2 = se({
+  a2 = ie({
     name: 'Defensive Charm Lvl 1',
     assetName: 'DefensiveCharm',
     rarity: 'rare',
@@ -370,7 +367,7 @@ const VT = se({
         modifierType: 'add',
       },
     ],
-    requiredLevel: 6,
+    requiredLevel: 4,
     sellPrice: 33,
     upgrades: [
       {
@@ -383,7 +380,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  a2 = se({
+  r2 = ie({
     name: 'Defensive Charm Ultimate',
     assetName: 'DefensiveCharm',
     rarity: 'epic',
@@ -402,7 +399,7 @@ const VT = se({
     sellPrice: 41,
     tags: ['equipment'],
   }),
-  r2 = se({
+  o2 = ie({
     name: 'Evasion Amulet',
     assetName: 'EvasionAmulet',
     rarity: 'epic',
@@ -418,7 +415,7 @@ const VT = se({
     sellPrice: 70,
     tags: ['equipment'],
   }),
-  o2 = se({
+  l2 = ie({
     name: 'Furybringer Lvl 1',
     assetName: 'Furybringer',
     rarity: 'rare',
@@ -446,7 +443,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  l2 = se({
+  h2 = ie({
     name: 'Furybringer Ultimate',
     assetName: 'Furybringer',
     rarity: 'rare',
@@ -465,7 +462,7 @@ const VT = se({
     sellPrice: 80,
     tags: ['equipment'],
   }),
-  h2 = se({
+  u2 = ie({
     name: 'Ghostly Pendant Lvl 1',
     assetName: 'GhostlyPendant',
     rarity: 'epic',
@@ -493,7 +490,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  u2 = se({
+  d2 = ie({
     name: 'Ghostly Pendant Lvl 2',
     assetName: 'GhostlyPendant',
     rarity: 'epic',
@@ -516,7 +513,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  d2 = se({
+  f2 = ie({
     name: 'Ghostly Pendant Ultimate',
     assetName: 'GhostlyPendant',
     rarity: 'legendary',
@@ -530,7 +527,7 @@ const VT = se({
     sellPrice: 290,
     tags: ['equipment'],
   }),
-  f2 = se({
+  c2 = ie({
     name: 'Lucky Locket',
     assetName: 'LuckyLocket',
     rarity: 'uncommon',
@@ -549,7 +546,7 @@ const VT = se({
     sellPrice: 20,
     tags: ['equipment'],
   }),
-  c2 = se({
+  m2 = ie({
     name: 'Phase Charm Lvl 1',
     assetName: 'PhaseCharm',
     rarity: 'common',
@@ -563,7 +560,7 @@ const VT = se({
     upgrades: [
       {
         requires: [
-          { id: 'Ore', amount: 60 },
+          { id: 'Ore', amount: 40 },
           { id: 'EssenceCreamy', amount: 2 },
         ],
         yields: 'PhaseCharm2',
@@ -571,7 +568,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  m2 = se({
+  g2 = ie({
     name: 'Phase Charm Lvl 2',
     assetName: 'PhaseCharm',
     rarity: 'common',
@@ -585,7 +582,7 @@ const VT = se({
         modifierType: 'add',
       },
     ],
-    requiredLevel: 12,
+    requiredLevel: 8,
     sellPrice: 90,
     upgrades: [
       {
@@ -598,7 +595,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  g2 = se({
+  p2 = ie({
     name: 'Phase Charm Lvl 3',
     assetName: 'PhaseCharm',
     rarity: 'common',
@@ -611,7 +608,7 @@ const VT = se({
     sellPrice: 140,
     tags: ['equipment'],
   }),
-  p2 = se({
+  v2 = ie({
     name: 'Radiant Charm',
     assetName: 'RadiantCharm',
     rarity: 'epic',
@@ -635,7 +632,7 @@ const VT = se({
     sellPrice: 45,
     tags: ['equipment'],
   }),
-  v2 = se({
+  y2 = ie({
     name: 'Raging Charm',
     assetName: 'RagingCharm',
     rarity: 'uncommon',
@@ -650,11 +647,11 @@ const VT = se({
       },
     ],
     abilities: [{ type: 'Ability', id: 'HealOnRage' }],
-    requiredLevel: 11,
+    requiredLevel: 8,
     sellPrice: 60,
     tags: ['equipment'],
   }),
-  y2 = se({
+  x2 = ie({
     name: 'Raging Charm EX',
     assetName: 'RagingCharm',
     rarity: 'uncommon',
@@ -673,7 +670,80 @@ const VT = se({
     sellPrice: 140,
     tags: ['equipment'],
   }),
-  x2 = se({
+  S2 = ie({
+    name: 'Stalwart Solidus Lvl 1',
+    assetName: 'StalwartSolidus',
+    rarity: 'epic',
+    description:
+      'An ancient coin which marks the wearer as a tough, resilient warrior.',
+    equipSlots: ['Amulet'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'MaxHp', value: 100, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 75, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.025, modifierType: 'add' },
+    ],
+    requiredLevel: 121,
+    sellPrice: 325,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Ore', amount: 1e3 },
+          { id: 'Iron', amount: 1e3 },
+          { id: 'EssenceHearty', amount: 40 },
+        ],
+        yields: 'StalwartSolidus2',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  w2 = ie({
+    name: 'Stalwart Solidus Lvl 2',
+    assetName: 'StalwartSolidus',
+    rarity: 'epic',
+    description:
+      'An ancient coin which marks the wearer as a tough, resilient warrior.',
+    equipSlots: ['Amulet'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'MaxHp', value: 115, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 90, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.03, modifierType: 'add' },
+    ],
+    requiredLevel: 121,
+    sellPrice: 400,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Ore', amount: 1250 },
+          { id: 'Iron', amount: 1250 },
+          { id: 'EssenceHearty', amount: 55 },
+        ],
+        yields: 'StalwartSolidus3',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  T2 = ie({
+    name: 'Stalwart Solidus Lvl 3',
+    assetName: 'StalwartSolidus',
+    rarity: 'epic',
+    description:
+      'An ancient coin which marks the wearer as a tough, resilient warrior.',
+    equipSlots: ['Amulet'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'MaxHp', value: 140, modifierType: 'add' },
+      {
+        type: 'StatModifier',
+        stat: 'Defense',
+        value: 120,
+        modifierType: 'add',
+      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.035, modifierType: 'add' },
+    ],
+    requiredLevel: 121,
+    sellPrice: 520,
+    tags: ['equipment'],
+  }),
+  C2 = ie({
     name: 'Survival Charm Lvl 1',
     assetName: 'SurvivalCharm',
     rarity: 'rare',
@@ -698,7 +768,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  S2 = se({
+  A2 = ie({
     name: 'Survival Charm Lvl 2',
     assetName: 'SurvivalCharm',
     rarity: 'rare',
@@ -723,7 +793,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  w2 = se({
+  E2 = ie({
     name: 'Survival Charm Ultimate',
     assetName: 'SurvivalCharm',
     rarity: 'rare',
@@ -738,7 +808,105 @@ const VT = se({
     sellPrice: 100,
     tags: ['equipment'],
   }),
-  T2 = se({
+  M2 = ie({
+    name: 'Twisted Charm Lvl 1',
+    assetName: 'TwistedCharm',
+    rarity: 'rare',
+    description: 'A coiled amulet that brings blessings and banes.',
+    equipSlots: ['Amulet'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'MaxHp', value: -160, modifierType: 'add' },
+      {
+        type: 'StatModifier',
+        stat: 'Defense',
+        value: -50,
+        modifierType: 'add',
+      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.04, modifierType: 'add' },
+    ],
+    requiredLevel: 60,
+    sellPrice: 275,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Stone', amount: 600 },
+          { id: 'Iron', amount: 700 },
+          { id: 'EssenceHearty', amount: 15 },
+        ],
+        yields: 'TwistedCharm2',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  b2 = ie({
+    name: 'Twisted Charm Lvl 2',
+    assetName: 'TwistedCharm',
+    rarity: 'rare',
+    description: 'A coiled amulet that brings blessings and banes.',
+    equipSlots: ['Amulet'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'MaxHp', value: -200, modifierType: 'add' },
+      {
+        type: 'StatModifier',
+        stat: 'Defense',
+        value: -65,
+        modifierType: 'add',
+      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.025, modifierType: 'add' },
+      {
+        type: 'StatModifier',
+        stat: 'Dodge',
+        value: 0.045,
+        modifierType: 'add',
+      },
+    ],
+    requiredLevel: 67,
+    sellPrice: 230,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Stone', amount: 900 },
+          { id: 'Iron', amount: 850 },
+          { id: 'EssenceHearty', amount: 22 },
+        ],
+        yields: 'TwistedCharm3',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  L2 = ie({
+    name: 'Twisted Charm Lvl 3',
+    assetName: 'TwistedCharm',
+    rarity: 'rare',
+    description: 'A coiled amulet that brings blessings and banes.',
+    equipSlots: ['Amulet'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'MaxHp', value: -220, modifierType: 'add' },
+      {
+        type: 'StatModifier',
+        stat: 'Defense',
+        value: -75,
+        modifierType: 'add',
+      },
+      {
+        type: 'StatModifier',
+        stat: 'Crit',
+        value: 0.0325,
+        modifierType: 'add',
+      },
+      {
+        type: 'StatModifier',
+        stat: 'Dodge',
+        value: 0.055,
+        modifierType: 'add',
+      },
+    ],
+    requiredLevel: 79,
+    sellPrice: 300,
+    tags: ['equipment'],
+  }),
+  R2 = ie({
     name: 'Vengeful Locket',
     assetName: 'VengefulLocket',
     rarity: 'uncommon',
@@ -748,11 +916,11 @@ const VT = se({
       { type: 'StatModifier', stat: 'Dodge', value: 0.02, modifierType: 'add' },
     ],
     abilities: [{ type: 'Ability', id: 'EveryOtherTurnAddRage' }],
-    requiredLevel: 7,
+    requiredLevel: 5,
     sellPrice: 24,
     tags: ['equipment'],
   }),
-  C2 = se({
+  P2 = ie({
     name: 'Warpstone Amulet Lvl 1',
     assetName: 'WarpstoneAmulet',
     rarity: 'uncommon',
@@ -774,7 +942,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  A2 = se({
+  B2 = ie({
     name: 'Warpstone Amulet Lvl 2',
     assetName: 'WarpstoneAmulet',
     rarity: 'uncommon',
@@ -796,7 +964,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  E2 = se({
+  D2 = ie({
     name: 'Warpstone Amulet Ultimate',
     assetName: 'WarpstoneAmulet',
     rarity: 'uncommon',
@@ -809,7 +977,7 @@ const VT = se({
     sellPrice: 105,
     tags: ['equipment'],
   }),
-  M2 = se({
+  F2 = ie({
     name: 'Watcher’s Locket',
     assetName: 'WatchersLocket',
     rarity: 'legendary',
@@ -826,7 +994,7 @@ const VT = se({
     sellPrice: 300,
     tags: ['equipment'],
   }),
-  b2 = se({
+  O2 = ie({
     name: 'Watcher’s Locket EX',
     assetName: 'WatchersLocket',
     rarity: 'legendary',
@@ -843,7 +1011,7 @@ const VT = se({
     sellPrice: 440,
     tags: ['equipment'],
   }),
-  L2 = se({
+  I2 = ie({
     name: 'Wizard Sigil Lvl 1',
     assetName: 'WizardSigil',
     rarity: 'rare',
@@ -871,7 +1039,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  R2 = se({
+  N2 = ie({
     name: 'Wizard Sigil Lvl 2',
     assetName: 'WizardSigil',
     rarity: 'rare',
@@ -894,7 +1062,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  P2 = se({
+  G2 = ie({
     name: 'Wizard Sigil Ultimate',
     assetName: 'WizardSigil',
     rarity: 'epic',
@@ -908,7 +1076,7 @@ const VT = se({
     sellPrice: 275,
     tags: ['equipment'],
   }),
-  B2 = se({
+  H2 = ie({
     name: 'Wrathful Locket',
     assetName: 'WrathfulLocket',
     rarity: 'common',
@@ -919,7 +1087,7 @@ const VT = se({
     sellPrice: 35,
     tags: ['equipment'],
   }),
-  D2 = se({
+  U2 = ie({
     name: 'Audacity Chain Lvl 1',
     assetName: 'AudacityChain',
     rarity: 'rare',
@@ -928,13 +1096,13 @@ const VT = se({
     statModifiers: [
       { type: 'StatModifier', stat: 'Speed', value: 3, modifierType: 'add' },
     ],
-    requiredLevel: 18,
+    requiredLevel: 16,
     sellPrice: 45,
     upgrades: [
       {
         requires: [
-          { id: 'Stone', amount: 120 },
-          { id: 'EssenceCrunchy', amount: 8 },
+          { id: 'Stone', amount: 100 },
+          { id: 'EssenceCrunchy', amount: 6 },
           { id: 'EssenceFluffy', amount: 2 },
         ],
         yields: 'AudacityChain2',
@@ -942,7 +1110,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  F2 = se({
+  k2 = ie({
     name: 'Audacity Chain Lvl 2',
     assetName: 'AudacityChain',
     rarity: 'rare',
@@ -951,7 +1119,7 @@ const VT = se({
     statModifiers: [
       { type: 'StatModifier', stat: 'Speed', value: 4, modifierType: 'add' },
     ],
-    requiredLevel: 24,
+    requiredLevel: 20,
     sellPrice: 50,
     upgrades: [
       {
@@ -965,7 +1133,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  O2 = se({
+  V2 = ie({
     name: 'Audacity Chain Lvl 3',
     assetName: 'AudacityChain',
     rarity: 'rare',
@@ -988,7 +1156,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  I2 = se({
+  z2 = ie({
     name: 'Audacity Chain Lvl 4',
     assetName: 'AudacityChain',
     rarity: 'rare',
@@ -1011,7 +1179,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  N2 = se({
+  X2 = ie({
     name: 'Audacity Chain Ultimate',
     assetName: 'AudacityChain',
     rarity: 'epic',
@@ -1025,7 +1193,7 @@ const VT = se({
     sellPrice: 140,
     tags: ['equipment'],
   }),
-  G2 = se({
+  Y2 = ie({
     name: 'Bladed Belt Lvl 1',
     assetName: 'BladedBelt',
     rarity: 'common',
@@ -1038,7 +1206,7 @@ const VT = se({
     upgrades: [
       {
         requires: [
-          { id: 'Iron', amount: 40 },
+          { id: 'Iron', amount: 20 },
           { id: 'EssenceSpicy', amount: 9 },
         ],
         yields: 'BladedBeltUltimate',
@@ -1046,7 +1214,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  H2 = se({
+  W2 = ie({
     name: 'Bladed Belt Ultimate',
     assetName: 'BladedBelt',
     rarity: 'uncommon',
@@ -1056,11 +1224,10 @@ const VT = se({
       { type: 'StatModifier', stat: 'Speed', value: 3, modifierType: 'add' },
     ],
     abilities: [{ type: 'Ability', id: 'MagicKnifeOnHitCount' }],
-    requiredLevel: 17,
     sellPrice: 25,
     tags: ['equipment'],
   }),
-  U2 = se({
+  j2 = ie({
     name: 'Flawed Clasp',
     assetName: 'FlawedClasp',
     rarity: 'uncommon',
@@ -1074,7 +1241,7 @@ const VT = se({
     sellPrice: 40,
     tags: ['equipment'],
   }),
-  k2 = se({
+  K2 = ie({
     name: 'Frenzied Sash',
     assetName: 'FrenziedSash',
     rarity: 'uncommon',
@@ -1088,7 +1255,7 @@ const VT = se({
     sellPrice: 100,
     tags: ['equipment'],
   }),
-  V2 = se({
+  Q2 = ie({
     name: 'Grounding Belt Lvl 1',
     assetName: 'GroundingBelt',
     rarity: 'rare',
@@ -1117,7 +1284,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  z2 = se({
+  Z2 = ie({
     name: 'Grounding Belt Lvl 2',
     assetName: 'GroundingBelt',
     rarity: 'rare',
@@ -1146,7 +1313,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  X2 = se({
+  $2 = ie({
     name: 'Grounding Belt Lvl 3',
     assetName: 'GroundingBelt',
     rarity: 'rare',
@@ -1165,7 +1332,7 @@ const VT = se({
     sellPrice: 139,
     tags: ['equipment'],
   }),
-  Y2 = se({
+  J2 = ie({
     name: 'Guard’s Belt',
     assetName: 'GuardsBelt',
     rarity: 'uncommon',
@@ -1179,7 +1346,7 @@ const VT = se({
     sellPrice: 72,
     tags: ['equipment'],
   }),
-  W2 = se({
+  q2 = ie({
     name: 'Hasty Sash',
     assetName: 'HastySash',
     rarity: 'common',
@@ -1194,11 +1361,10 @@ const VT = se({
         modifierType: 'add',
       },
     ],
-    requiredLevel: 15,
     sellPrice: 40,
     tags: ['equipment'],
   }),
-  j2 = se({
+  _2 = ie({
     name: 'Hearty Belt',
     assetName: 'HeartyBelt',
     rarity: 'legendary',
@@ -1214,7 +1380,7 @@ const VT = se({
     sellPrice: 200,
     tags: ['equipment'],
   }),
-  K2 = se({
+  eC = ie({
     name: 'Hearty Belt EX',
     assetName: 'HeartyBelt',
     rarity: 'legendary',
@@ -1230,7 +1396,7 @@ const VT = se({
     sellPrice: 420,
     tags: ['equipment'],
   }),
-  Q2 = se({
+  tC = ie({
     name: 'Heavy Belt',
     assetName: 'HeavyBelt',
     rarity: 'common',
@@ -1244,7 +1410,7 @@ const VT = se({
     sellPrice: 35,
     tags: ['equipment'],
   }),
-  Z2 = se({
+  iC = ie({
     name: 'Insulated Wrap',
     assetName: 'InsulatedWrap',
     rarity: 'uncommon',
@@ -1263,7 +1429,7 @@ const VT = se({
     sellPrice: 67,
     tags: ['equipment'],
   }),
-  $2 = se({
+  sC = ie({
     name: 'Knife Collector’s Belt Lvl 1',
     assetName: 'KnifeCollectorsBelt',
     rarity: 'rare',
@@ -1282,16 +1448,16 @@ const VT = se({
     upgrades: [
       {
         requires: [
-          { id: 'Iron', amount: 88 },
-          { id: 'EssenceDecadent', amount: 10 },
-          { id: 'Iron', amount: 88 },
+          { id: 'Iron', amount: 66 },
+          { id: 'EssenceDecadent', amount: 8 },
+          { id: 'Iron', amount: 66 },
         ],
         yields: 'KnifeCollectorsBeltUltimate',
       },
     ],
     tags: ['equipment'],
   }),
-  J2 = se({
+  nC = ie({
     name: 'Knife Collector’s Belt Ultimate',
     assetName: 'KnifeCollectorsBelt',
     rarity: 'rare',
@@ -1310,7 +1476,7 @@ const VT = se({
     sellPrice: 110,
     tags: ['equipment'],
   }),
-  q2 = se({
+  aC = ie({
     name: 'Lifevine Belt Lvl 1',
     assetName: 'LifevineBelt',
     rarity: 'uncommon',
@@ -1334,7 +1500,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  _2 = se({
+  rC = ie({
     name: 'Lifevine Belt Lvl 2',
     assetName: 'LifevineBelt',
     rarity: 'uncommon',
@@ -1358,7 +1524,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  eC = se({
+  oC = ie({
     name: 'Lifevine Belt Lvl 3',
     assetName: 'LifevineBelt',
     rarity: 'uncommon',
@@ -1372,7 +1538,7 @@ const VT = se({
     sellPrice: 100,
     tags: ['equipment'],
   }),
-  tC = se({
+  lC = ie({
     name: 'Painful Wrap',
     assetName: 'PainfulWrap',
     rarity: 'uncommon',
@@ -1386,7 +1552,7 @@ const VT = se({
     sellPrice: 55,
     tags: ['equipment'],
   }),
-  iC = se({
+  hC = ie({
     name: 'Plated Belt Lvl 1',
     assetName: 'PlatedBelt',
     rarity: 'uncommon',
@@ -1410,7 +1576,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  sC = se({
+  uC = ie({
     name: 'Plated Belt Lvl 2',
     assetName: 'PlatedBelt',
     rarity: 'uncommon',
@@ -1434,7 +1600,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  nC = se({
+  dC = ie({
     name: 'Plated Belt Lvl 3',
     assetName: 'PlatedBelt',
     rarity: 'uncommon',
@@ -1448,7 +1614,7 @@ const VT = se({
     sellPrice: 160,
     tags: ['equipment'],
   }),
-  aC = se({
+  fC = ie({
     name: 'Rope Braid Lvl 1',
     assetName: 'RopeBraid',
     rarity: 'common',
@@ -1461,7 +1627,7 @@ const VT = se({
     upgrades: [
       {
         requires: [
-          { id: 'Wood', amount: 20 },
+          { id: 'Wood', amount: 15 },
           { id: 'EssenceFluffy', amount: 1 },
         ],
         yields: 'RopeBraid2',
@@ -1469,7 +1635,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  rC = se({
+  cC = ie({
     name: 'Rope Braid Lvl 2',
     assetName: 'RopeBraid',
     rarity: 'common',
@@ -1478,12 +1644,11 @@ const VT = se({
     statModifiers: [
       { type: 'StatModifier', stat: 'Speed', value: 4, modifierType: 'add' },
     ],
-    requiredLevel: 13,
     sellPrice: 40,
     upgrades: [
       {
         requires: [
-          { id: 'Wood', amount: 120 },
+          { id: 'Wood', amount: 100 },
           { id: 'EssenceFluffy', amount: 2 },
         ],
         yields: 'RopeBraid3',
@@ -1491,7 +1656,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  oC = se({
+  mC = ie({
     name: 'Rope Braid Lvl 3',
     assetName: 'RopeBraid',
     rarity: 'common',
@@ -1500,11 +1665,67 @@ const VT = se({
     statModifiers: [
       { type: 'StatModifier', stat: 'Speed', value: 5, modifierType: 'add' },
     ],
-    requiredLevel: 19,
     sellPrice: 60,
     tags: ['equipment'],
   }),
-  lC = se({
+  gC = ie({
+    name: 'Rustic Belt Lvl 1',
+    assetName: 'RusticBelt',
+    rarity: 'common',
+    description: 'A rough hewn belt that boosts Speed and HP.',
+    equipSlots: ['Belt'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'MaxHp', value: 6, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 1, modifierType: 'add' },
+    ],
+    sellPrice: 25,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Wood', amount: 5 },
+          { id: 'Ore', amount: 3 },
+        ],
+        yields: 'RusticBelt2',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  pC = ie({
+    name: 'Rustic Belt Lvl 2',
+    assetName: 'RusticBelt',
+    rarity: 'common',
+    description: 'A rough hewn belt that boosts Speed and HP.',
+    equipSlots: ['Belt'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'MaxHp', value: 11, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 2, modifierType: 'add' },
+    ],
+    sellPrice: 40,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Wood', amount: 10 },
+          { id: 'Ore', amount: 7 },
+        ],
+        yields: 'RusticBelt3',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  vC = ie({
+    name: 'Rustic Belt Lvl 3',
+    assetName: 'RusticBelt',
+    rarity: 'common',
+    description: 'A rough hewn belt that boosts Speed and HP.',
+    equipSlots: ['Belt'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'MaxHp', value: 20, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 3, modifierType: 'add' },
+    ],
+    sellPrice: 50,
+    tags: ['equipment'],
+  }),
+  yC = ie({
     name: 'Second Chance Belt',
     assetName: 'SecondChanceBelt',
     rarity: 'legendary',
@@ -1527,7 +1748,79 @@ const VT = se({
     sellPrice: 320,
     tags: ['equipment'],
   }),
-  hC = se({
+  xC = ie({
+    name: 'Seething Sash Lvl 1',
+    assetName: 'SeethingSash',
+    rarity: 'epic',
+    description: 'A sash for adventurers who seethe with rage.',
+    equipSlots: ['Belt'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Attack', value: -50, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 5, modifierType: 'add' },
+    ],
+    abilities: [
+      { type: 'Ability', id: 'BonusRageOnAttack' },
+      { type: 'Ability', id: 'RageOnFirstTurn' },
+    ],
+    requiredLevel: 81,
+    sellPrice: 200,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Iron', amount: 1100 },
+          { id: 'EssenceHearty', amount: 67 },
+        ],
+        yields: 'SeethingSash2',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  SC = ie({
+    name: 'Seething Sash Lvl 2',
+    assetName: 'SeethingSash',
+    rarity: 'epic',
+    description: 'A sash for adventurers who seethe with rage.',
+    equipSlots: ['Belt'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Attack', value: -60, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 6, modifierType: 'add' },
+    ],
+    abilities: [
+      { type: 'Ability', id: 'BonusRageOnAttack' },
+      { type: 'Ability', id: 'RageOnFirstTurn' },
+    ],
+    requiredLevel: 90,
+    sellPrice: 240,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Iron', amount: 1430 },
+          { id: 'EssenceHearty', amount: 81 },
+        ],
+        yields: 'SeethingSash3',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  wC = ie({
+    name: 'Seething Sash Lvl 3',
+    assetName: 'SeethingSash',
+    rarity: 'epic',
+    description: 'A sash for adventurers who seethe with rage.',
+    equipSlots: ['Belt'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Attack', value: -75, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 7, modifierType: 'add' },
+    ],
+    abilities: [
+      { type: 'Ability', id: 'BonusRageOnAttack' },
+      { type: 'Ability', id: 'RageOnFirstTurn' },
+    ],
+    requiredLevel: 103,
+    sellPrice: 300,
+    tags: ['equipment'],
+  }),
+  TC = ie({
     name: 'Storm Curse Wrap',
     assetName: 'StormCurseWrap',
     rarity: 'rare',
@@ -1548,7 +1841,7 @@ const VT = se({
     sellPrice: 55,
     tags: ['equipment'],
   }),
-  uC = se({
+  CC = ie({
     name: 'StormWrathBelt',
     assetName: 'StormWrathBelt',
     rarity: 'epic',
@@ -1572,7 +1865,7 @@ const VT = se({
     sellPrice: 65,
     tags: ['equipment'],
   }),
-  dC = se({
+  AC = ie({
     name: 'Thermal Binding',
     assetName: 'ThermalBinding',
     rarity: 'epic',
@@ -1601,7 +1894,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  fC = se({
+  EC = ie({
     name: 'Thermal Binding Ultimate',
     assetName: 'ThermalBinding',
     rarity: 'epic',
@@ -1622,7 +1915,7 @@ const VT = se({
     sellPrice: 125,
     tags: ['equipment'],
   }),
-  cC = se({
+  MC = ie({
     name: 'Twine Cinch Lvl 1',
     assetName: 'TwineCinch',
     rarity: 'common',
@@ -1635,7 +1928,7 @@ const VT = se({
     upgrades: [
       {
         requires: [
-          { id: 'Wood', amount: 80 },
+          { id: 'Wood', amount: 60 },
           { id: 'EssenceFluffy', amount: 2 },
         ],
         yields: 'TwineCinch2',
@@ -1643,7 +1936,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  mC = se({
+  bC = ie({
     name: 'Twine Cinch Lvl 2',
     assetName: 'TwineCinch',
     rarity: 'common',
@@ -1652,12 +1945,11 @@ const VT = se({
     statModifiers: [
       { type: 'StatModifier', stat: 'Speed', value: 2, modifierType: 'add' },
     ],
-    requiredLevel: 12,
     sellPrice: 50,
     upgrades: [
       {
         requires: [
-          { id: 'Wood', amount: 250 },
+          { id: 'Wood', amount: 200 },
           { id: 'EssenceFluffy', amount: 4 },
         ],
         yields: 'TwineCinch3',
@@ -1665,7 +1957,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  gC = se({
+  LC = ie({
     name: 'Twine Cinch Lvl 3',
     assetName: 'TwineCinch',
     rarity: 'common',
@@ -1674,11 +1966,10 @@ const VT = se({
     statModifiers: [
       { type: 'StatModifier', stat: 'Speed', value: 3, modifierType: 'add' },
     ],
-    requiredLevel: 15,
     sellPrice: 55,
     tags: ['equipment'],
   }),
-  pC = se({
+  RC = ie({
     name: 'Twine Cord Lvl 1',
     assetName: 'TwineCord',
     rarity: 'rare',
@@ -1690,7 +1981,7 @@ const VT = se({
       { type: 'StatModifier', stat: 'Crit', value: 0.025, modifierType: 'add' },
       { type: 'StatModifier', stat: 'Dodge', value: 0.02, modifierType: 'add' },
     ],
-    requiredLevel: 18,
+    requiredLevel: 10,
     sellPrice: 55,
     upgrades: [
       {
@@ -1704,7 +1995,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  vC = se({
+  PC = ie({
     name: 'Twine Cord Lvl 2',
     assetName: 'TwineCord',
     rarity: 'rare',
@@ -1725,7 +2016,7 @@ const VT = se({
     sellPrice: 60,
     tags: ['equipment'],
   }),
-  yC = se({
+  BC = ie({
     name: 'Twin-Forked Sash',
     assetName: 'TwinForkedSash',
     rarity: 'epic',
@@ -1745,7 +2036,7 @@ const VT = se({
     sellPrice: 280,
     tags: ['equipment'],
   }),
-  xC = se({
+  DC = ie({
     name: 'Twin-Forked Sash EX',
     assetName: 'TwinForkedSash',
     rarity: 'epic',
@@ -1765,7 +2056,7 @@ const VT = se({
     sellPrice: 380,
     tags: ['equipment'],
   }),
-  SC = se({
+  FC = ie({
     name: 'Volatile Sash',
     assetName: 'VolatileSash',
     rarity: 'rare',
@@ -1785,7 +2076,7 @@ const VT = se({
     sellPrice: 85,
     tags: ['equipment'],
   }),
-  wC = se({
+  OC = ie({
     name: 'Volatile Sash EX',
     assetName: 'VolatileSash',
     rarity: 'rare',
@@ -1805,7 +2096,7 @@ const VT = se({
     sellPrice: 125,
     tags: ['equipment'],
   }),
-  TC = se({
+  IC = ie({
     name: 'Warding Belt',
     assetName: 'WardingBelt',
     rarity: 'rare',
@@ -1825,7 +2116,7 @@ const VT = se({
     sellPrice: 165,
     tags: ['equipment'],
   }),
-  CC = se({
+  NC = ie({
     name: 'Warding Belt EX',
     assetName: 'WardingBelt',
     rarity: 'rare',
@@ -1845,7 +2136,7 @@ const VT = se({
     sellPrice: 278,
     tags: ['equipment'],
   }),
-  AC = se({
+  GC = ie({
     name: 'Wraith Sash Lvl 1',
     assetName: 'WraithSash',
     rarity: 'uncommon',
@@ -1873,7 +2164,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  EC = se({
+  HC = ie({
     name: 'Wraith Sash Lvl 2',
     assetName: 'WraithSash',
     rarity: 'uncommon',
@@ -1901,7 +2192,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  MC = se({
+  UC = ie({
     name: 'Wraith Sash Lvl 3',
     assetName: 'WraithSash',
     rarity: 'uncommon',
@@ -1920,7 +2211,7 @@ const VT = se({
     sellPrice: 85,
     tags: ['equipment'],
   }),
-  bC = se({
+  kC = ie({
     name: 'Battle Hardened Vest',
     assetName: 'BattleHardendedVest',
     rarity: 'epic',
@@ -1935,7 +2226,7 @@ const VT = se({
     sellPrice: 60,
     tags: ['equipment'],
   }),
-  LC = se({
+  VC = ie({
     name: 'Battlethirsty Vest',
     assetName: 'BattlethirstyVest',
     rarity: 'legendary',
@@ -1953,7 +2244,7 @@ const VT = se({
     sellPrice: 80,
     tags: ['equipment'],
   }),
-  RC = se({
+  zC = ie({
     name: 'Bloodied Chain Mail Lvl 1',
     assetName: 'BloodiedChainMail',
     rarity: 'common',
@@ -1962,7 +2253,6 @@ const VT = se({
     statModifiers: [
       { type: 'StatModifier', stat: 'Defense', value: 14, modifierType: 'add' },
     ],
-    requiredLevel: 8,
     sellPrice: 28,
     upgrades: [
       {
@@ -1976,7 +2266,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  PC = se({
+  XC = ie({
     name: 'Bloodied Chain Mail Ultimate',
     assetName: 'BloodiedChainMail',
     rarity: 'uncommon',
@@ -1986,11 +2276,10 @@ const VT = se({
       { type: 'StatModifier', stat: 'Defense', value: 24, modifierType: 'add' },
     ],
     abilities: [{ type: 'Ability', id: 'LowHPRageFill' }],
-    requiredLevel: 14,
     sellPrice: 34,
     tags: ['equipment'],
   }),
-  BC = se({
+  YC = ie({
     name: 'Bright Plate',
     assetName: 'BrightPlate',
     rarity: 'uncommon',
@@ -2005,11 +2294,87 @@ const VT = se({
         modifierType: 'add',
       },
     ],
-    requiredLevel: 16,
+    requiredLevel: 14,
     sellPrice: 26,
     tags: ['equipment'],
   }),
-  DC = se({
+  WC = ie({
+    name: 'Conductive Chestplate Lvl 1',
+    assetName: 'ConductiveChestplate',
+    rarity: 'epic',
+    description: 'Armor which reacts whenever the wearer summons Lightning.',
+    equipSlots: ['Chest'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Defense', value: 75, modifierType: 'add' },
+    ],
+    abilities: [
+      { type: 'Ability', id: 'HealOnLightning' },
+      { type: 'Ability', id: 'AddRageOnLightning' },
+    ],
+    requiredLevel: 141,
+    sellPrice: 280,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Iron', amount: 780 },
+          { id: 'Ore', amount: 890 },
+          { id: 'EssenceFluffy', amount: 55 },
+        ],
+        yields: 'ConductiveChestplate2',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  jC = ie({
+    name: 'Conductive Chestplate Lvl 2',
+    assetName: 'ConductiveChestplate',
+    rarity: 'epic',
+    description: 'Armor which reacts whenever the wearer summons Lightning.',
+    equipSlots: ['Chest'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Defense', value: 90, modifierType: 'add' },
+    ],
+    abilities: [
+      { type: 'Ability', id: 'HealOnLightning' },
+      { type: 'Ability', id: 'AddRageOnLightning' },
+    ],
+    requiredLevel: 141,
+    sellPrice: 340,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Iron', amount: 1050 },
+          { id: 'Ore', amount: 1200 },
+          { id: 'EssenceFluffy', amount: 70 },
+        ],
+        yields: 'ConductiveChestplate3',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  KC = ie({
+    name: 'Conductive Chestplate Lvl 3',
+    assetName: 'ConductiveChestplate',
+    rarity: 'epic',
+    description: 'Armor which reacts whenever the wearer summons Lightning.',
+    equipSlots: ['Chest'],
+    statModifiers: [
+      {
+        type: 'StatModifier',
+        stat: 'Defense',
+        value: 112,
+        modifierType: 'add',
+      },
+    ],
+    abilities: [
+      { type: 'Ability', id: 'HealOnLightning' },
+      { type: 'Ability', id: 'AddRageOnLightning' },
+    ],
+    requiredLevel: 141,
+    sellPrice: 440,
+    tags: ['equipment'],
+  }),
+  QC = ie({
     name: 'Darksteel Plate',
     assetName: 'DarksteelPlate',
     rarity: 'legendary',
@@ -2030,7 +2395,7 @@ const VT = se({
     sellPrice: 150,
     tags: ['equipment'],
   }),
-  FC = se({
+  ZC = ie({
     name: 'Darksteel Plate EX',
     assetName: 'DarksteelPlate',
     rarity: 'legendary',
@@ -2051,7 +2416,7 @@ const VT = se({
     sellPrice: 280,
     tags: ['equipment'],
   }),
-  OC = se({
+  $C = ie({
     name: 'Firststrike Vest',
     assetName: 'FirststrikeVest',
     rarity: 'rare',
@@ -2065,7 +2430,7 @@ const VT = se({
     sellPrice: 70,
     tags: ['equipment'],
   }),
-  IC = se({
+  JC = ie({
     name: 'Flameguard Jacket Lvl 1',
     assetName: 'FlameguardJacket',
     rarity: 'rare',
@@ -2094,7 +2459,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  NC = se({
+  qC = ie({
     name: 'Flameguard Jacket Lvl 2',
     assetName: 'FlameguardJacket',
     rarity: 'rare',
@@ -2123,7 +2488,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  GC = se({
+  _C = ie({
     name: 'Flameguard Jacket Lvl 3',
     assetName: 'FlameguardJacket',
     rarity: 'rare',
@@ -2147,7 +2512,7 @@ const VT = se({
     sellPrice: 250,
     tags: ['equipment'],
   }),
-  HC = se({
+  eA = ie({
     name: 'Fluttering Cape',
     assetName: 'FlutteringCape',
     rarity: 'legendary',
@@ -2164,7 +2529,7 @@ const VT = se({
     sellPrice: 50,
     tags: ['equipment'],
   }),
-  UC = se({
+  tA = ie({
     name: 'Fury Vest Lvl 1',
     assetName: 'FuryVest',
     rarity: 'epic',
@@ -2192,7 +2557,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  kC = se({
+  iA = ie({
     name: 'Fury Vest Lvl 2',
     assetName: 'FuryVest',
     rarity: 'epic',
@@ -2220,7 +2585,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  VC = se({
+  sA = ie({
     name: 'Fury Vest Lvl 3',
     assetName: 'FuryVest',
     rarity: 'legendary',
@@ -2239,7 +2604,7 @@ const VT = se({
     sellPrice: 275,
     tags: ['equipment'],
   }),
-  zC = se({
+  nA = ie({
     name: 'Grounded Plate',
     assetName: 'GroundedPlate',
     rarity: 'uncommon',
@@ -2258,7 +2623,7 @@ const VT = se({
     sellPrice: 64,
     tags: ['equipment'],
   }),
-  XC = se({
+  aA = ie({
     name: 'Guardian Plate Lvl 1',
     assetName: 'GuardianPlate',
     rarity: 'rare',
@@ -2281,7 +2646,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  YC = se({
+  rA = ie({
     name: 'Guardian Plate Lvl 2',
     assetName: 'GuardianPlate',
     rarity: 'rare',
@@ -2304,7 +2669,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  WC = se({
+  oA = ie({
     name: 'Guardian Plate Ultimate',
     assetName: 'GuardianPlate',
     rarity: 'epic',
@@ -2323,7 +2688,7 @@ const VT = se({
     sellPrice: 300,
     tags: ['equipment'],
   }),
-  jC = se({
+  lA = ie({
     name: 'Hardened Garb',
     assetName: 'HardenedGarb',
     rarity: 'uncommon',
@@ -2336,7 +2701,7 @@ const VT = se({
     sellPrice: 35,
     tags: ['equipment'],
   }),
-  KC = se({
+  hA = ie({
     name: 'Leather Tunic Lvl 1',
     assetName: 'LeatherTunic',
     rarity: 'common',
@@ -2350,7 +2715,7 @@ const VT = se({
     upgrades: [
       {
         requires: [
-          { id: 'Wood', amount: 20 },
+          { id: 'Wood', amount: 12 },
           { id: 'EssenceHearty', amount: 1 },
         ],
         yields: 'LeatherTunic2',
@@ -2358,7 +2723,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  QC = se({
+  uA = ie({
     name: 'Leather Tunic Lvl 2',
     assetName: 'LeatherTunic',
     rarity: 'common',
@@ -2372,7 +2737,7 @@ const VT = se({
     upgrades: [
       {
         requires: [
-          { id: 'Wood', amount: 70 },
+          { id: 'Wood', amount: 50 },
           { id: 'EssenceHearty', amount: 5 },
         ],
         yields: 'LeatherTunic3',
@@ -2380,7 +2745,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  ZC = se({
+  dA = ie({
     name: 'Leather Tunic Lvl 3',
     assetName: 'LeatherTunic',
     rarity: 'common',
@@ -2390,11 +2755,10 @@ const VT = se({
       { type: 'StatModifier', stat: 'MaxHp', value: 36, modifierType: 'add' },
       { type: 'StatModifier', stat: 'Defense', value: 30, modifierType: 'add' },
     ],
-    requiredLevel: 13,
     sellPrice: 45,
     tags: ['equipment'],
   }),
-  $C = se({
+  fA = ie({
     name: 'Mantle of Need',
     assetName: 'MantleofNeed',
     rarity: 'legendary',
@@ -2415,7 +2779,7 @@ const VT = se({
     sellPrice: 450,
     tags: ['equipment'],
   }),
-  JC = se({
+  cA = ie({
     name: 'Mantle of Need EX',
     assetName: 'MantleofNeed',
     rarity: 'legendary',
@@ -2441,7 +2805,66 @@ const VT = se({
     sellPrice: 650,
     tags: ['equipment'],
   }),
-  qC = se({
+  mA = ie({
+    name: 'Mercenary Cuirass Lvl 1',
+    assetName: 'MercenaryCuirass',
+    rarity: 'common',
+    description: 'A tough chest piece relied on by hired fighters.',
+    equipSlots: ['Chest'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Defense', value: 45, modifierType: 'add' },
+    ],
+    requiredLevel: 19,
+    sellPrice: 90,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Wood', amount: 200 },
+          { id: 'Iron', amount: 200 },
+          { id: 'EssenceTangy', amount: 3 },
+        ],
+        yields: 'MercenaryCuirass2',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  gA = ie({
+    name: 'Mercenary Cuirass Lvl 2',
+    assetName: 'MercenaryCuirass',
+    rarity: 'common',
+    description: 'A tough chest piece relied on by hired fighters.',
+    equipSlots: ['Chest'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Defense', value: 54, modifierType: 'add' },
+    ],
+    requiredLevel: 24,
+    sellPrice: 110,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Wood', amount: 275 },
+          { id: 'Iron', amount: 275 },
+          { id: 'EssenceTangy', amount: 5 },
+        ],
+        yields: 'MercenaryCuirass3',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  pA = ie({
+    name: 'Mercenary Cuirass Lvl 3',
+    assetName: 'MercenaryCuirass',
+    rarity: 'common',
+    description: 'A tough chest piece relied on by hired fighters.',
+    equipSlots: ['Chest'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Defense', value: 72, modifierType: 'add' },
+    ],
+    requiredLevel: 30,
+    sellPrice: 140,
+    tags: ['equipment'],
+  }),
+  vA = ie({
     name: 'Power Vest',
     assetName: 'PowerVest',
     rarity: 'uncommon',
@@ -2454,7 +2877,7 @@ const VT = se({
     sellPrice: 55,
     tags: ['equipment'],
   }),
-  _C = se({
+  yA = ie({
     name: 'Protective Mantle Lvl 1',
     assetName: 'ProtectiveMantle',
     rarity: 'common',
@@ -2476,7 +2899,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  eA = se({
+  xA = ie({
     name: 'Protective Mantle Lvl 2',
     assetName: 'ProtectiveMantle',
     rarity: 'common',
@@ -2488,7 +2911,7 @@ const VT = se({
     sellPrice: 29,
     tags: ['equipment'],
   }),
-  tA = se({
+  SA = ie({
     name: 'Recovery Vest',
     assetName: 'RecoveryVest',
     rarity: 'rare',
@@ -2502,7 +2925,7 @@ const VT = se({
     sellPrice: 400,
     tags: ['equipment'],
   }),
-  iA = se({
+  wA = ie({
     name: 'Recovery Vest EX',
     assetName: 'RecoveryVest',
     rarity: 'rare',
@@ -2521,7 +2944,7 @@ const VT = se({
     sellPrice: 400,
     tags: ['equipment'],
   }),
-  sA = se({
+  TA = ie({
     name: 'Restoration Chainmail',
     assetName: 'RestorationChainmail',
     rarity: 'rare',
@@ -2542,7 +2965,7 @@ const VT = se({
     sellPrice: 90,
     tags: ['equipment'],
   }),
-  nA = se({
+  CA = ie({
     name: 'Restoration Chainmail EX',
     assetName: 'RestorationChainmail',
     rarity: 'rare',
@@ -2563,7 +2986,7 @@ const VT = se({
     sellPrice: 180,
     tags: ['equipment'],
   }),
-  aA = se({
+  AA = ie({
     name: 'Rugged Jerkin Lvl 1',
     assetName: 'RuggedJerkin',
     rarity: 'common',
@@ -2572,7 +2995,6 @@ const VT = se({
     statModifiers: [
       { type: 'StatModifier', stat: 'Defense', value: 28, modifierType: 'add' },
     ],
-    requiredLevel: 24,
     sellPrice: 30,
     upgrades: [
       {
@@ -2585,7 +3007,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  rA = se({
+  EA = ie({
     name: 'Rugged Jerkin Lvl 2',
     assetName: 'RuggedJerkin',
     rarity: 'common',
@@ -2607,7 +3029,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  oA = se({
+  MA = ie({
     name: 'Rugged Jerkin Lvl 3',
     assetName: 'RuggedJerkin',
     rarity: 'common',
@@ -2620,7 +3042,7 @@ const VT = se({
     sellPrice: 100,
     tags: ['equipment'],
   }),
-  lA = se({
+  bA = ie({
     name: 'Sharkskin Shirt Lvl 1',
     assetName: 'SharkskinShirt',
     rarity: 'uncommon',
@@ -2643,7 +3065,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  hA = se({
+  LA = ie({
     name: 'Sharkskin Shirt Lvl 2',
     assetName: 'SharkskinShirt',
     rarity: 'uncommon',
@@ -2666,7 +3088,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  uA = se({
+  RA = ie({
     name: 'Sharkskin Shirt Lvl 3',
     assetName: 'SharkskinShirt',
     rarity: 'uncommon',
@@ -2680,7 +3102,7 @@ const VT = se({
     sellPrice: 110,
     tags: ['equipment'],
   }),
-  dA = se({
+  PA = ie({
     name: 'Silken Robe Lvl 1',
     assetName: 'SilkenRobe',
     rarity: 'uncommon',
@@ -2700,7 +3122,7 @@ const VT = se({
     upgrades: [
       {
         requires: [
-          { id: 'Wood', amount: 80 },
+          { id: 'Wood', amount: 70 },
           { id: 'EssenceCreamy', amount: 3 },
           { id: 'EssenceHearty', amount: 8 },
         ],
@@ -2709,7 +3131,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  fA = se({
+  BA = ie({
     name: 'Silken Robe Lvl 2',
     assetName: 'SilkenRobe',
     rarity: 'uncommon',
@@ -2738,7 +3160,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  cA = se({
+  DA = ie({
     name: 'Silken Robe Lvl 3',
     assetName: 'SilkenRobe',
     rarity: 'uncommon',
@@ -2757,7 +3179,7 @@ const VT = se({
     sellPrice: 100,
     tags: ['equipment'],
   }),
-  mA = se({
+  FA = ie({
     name: 'Soulplate',
     assetName: 'Soulplate',
     rarity: 'epic',
@@ -2770,7 +3192,7 @@ const VT = se({
     sellPrice: 90,
     tags: ['equipment'],
   }),
-  gA = se({
+  OA = ie({
     name: 'Swift Cowl ',
     assetName: 'SwiftCowl',
     rarity: 'rare',
@@ -2789,7 +3211,7 @@ const VT = se({
     sellPrice: 41,
     tags: ['equipment'],
   }),
-  pA = se({
+  IA = ie({
     name: 'Tattered Cuirass',
     assetName: 'TatteredCuirass',
     rarity: 'uncommon',
@@ -2817,7 +3239,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  vA = se({
+  NA = ie({
     name: 'Tattered Cuirass Ultimate',
     assetName: 'TatteredCuirass',
     rarity: 'uncommon',
@@ -2826,11 +3248,10 @@ const VT = se({
     statModifiers: [
       { type: 'StatModifier', stat: 'Defense', value: 28, modifierType: 'add' },
     ],
-    requiredLevel: 14,
     sellPrice: 45,
     tags: ['equipment'],
   }),
-  yA = se({
+  GA = ie({
     name: 'Untouchable Mantle',
     assetName: 'UntouchableMantle',
     rarity: 'legendary',
@@ -2848,7 +3269,7 @@ const VT = se({
     sellPrice: 420,
     tags: ['equipment'],
   }),
-  xA = se({
+  HA = ie({
     name: 'Untouchable Mantle EX',
     assetName: 'UntouchableMantle',
     rarity: 'legendary',
@@ -2866,7 +3287,7 @@ const VT = se({
     sellPrice: 600,
     tags: ['equipment'],
   }),
-  SA = se({
+  UA = ie({
     name: 'Acuity Helm Lvl 1',
     assetName: 'AcuityHelm',
     rarity: 'uncommon',
@@ -2890,7 +3311,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  wA = se({
+  kA = ie({
     name: 'Acuity Helm Lvl 2',
     assetName: 'AcuityHelm',
     rarity: 'uncommon',
@@ -2914,7 +3335,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  TA = se({
+  VA = ie({
     name: 'Acuity Helm Ultimate',
     assetName: 'AcuityHelm',
     rarity: 'rare',
@@ -2929,7 +3350,7 @@ const VT = se({
     sellPrice: 400,
     tags: ['equipment'],
   }),
-  CA = se({
+  zA = ie({
     name: 'Adrenaline Cap',
     assetName: 'AdrenalineCap',
     rarity: 'epic',
@@ -2949,7 +3370,7 @@ const VT = se({
     sellPrice: 150,
     tags: ['equipment'],
   }),
-  AA = se({
+  XA = ie({
     name: 'Adrenaline Cap EX',
     assetName: 'AdrenalineCap',
     rarity: 'epic',
@@ -2969,7 +3390,7 @@ const VT = se({
     sellPrice: 250,
     tags: ['equipment'],
   }),
-  EA = se({
+  YA = ie({
     name: 'Bolstering Headgear',
     assetName: 'BolsteringHeadgear',
     rarity: 'epic',
@@ -2989,7 +3410,7 @@ const VT = se({
     sellPrice: 110,
     tags: ['equipment'],
   }),
-  MA = se({
+  WA = ie({
     name: 'Bolstering Headgear EX',
     assetName: 'BolsteringHeadgear',
     rarity: 'epic',
@@ -3009,7 +3430,7 @@ const VT = se({
     sellPrice: 200,
     tags: ['equipment'],
   }),
-  bA = se({
+  jA = ie({
     name: 'Braveheart Helm Lvl 1',
     assetName: 'BraveheartHelm',
     rarity: 'epic',
@@ -3032,7 +3453,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  LA = se({
+  KA = ie({
     name: 'Braveheart Helm Lvl 2',
     assetName: 'BraveheartHelm',
     rarity: 'epic',
@@ -3055,7 +3476,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  RA = se({
+  QA = ie({
     name: 'Braveheart Helm Ultimate',
     assetName: 'BraveheartHelm',
     rarity: 'legendary',
@@ -3069,7 +3490,7 @@ const VT = se({
     sellPrice: 500,
     tags: ['equipment'],
   }),
-  PA = se({
+  ZA = ie({
     name: 'Confounding Mask Lvl 1',
     assetName: 'ConfoundingMask',
     rarity: 'uncommon',
@@ -3079,12 +3500,12 @@ const VT = se({
       { type: 'StatModifier', stat: 'MaxHp', value: 35, modifierType: 'add' },
       { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
     ],
-    requiredLevel: 11,
+    requiredLevel: 9,
     sellPrice: 35,
     upgrades: [
       {
         requires: [
-          { id: 'Wood', amount: 100 },
+          { id: 'Wood', amount: 80 },
           { id: 'EssenceCreamy', amount: 5 },
         ],
         yields: 'ConfoundingMask2',
@@ -3092,7 +3513,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  BA = se({
+  $A = ie({
     name: 'Confounding Mask Lvl 2',
     assetName: 'ConfoundingMask',
     rarity: 'uncommon',
@@ -3102,11 +3523,129 @@ const VT = se({
       { type: 'StatModifier', stat: 'MaxHp', value: 60, modifierType: 'add' },
       { type: 'StatModifier', stat: 'Dodge', value: 0.04, modifierType: 'add' },
     ],
-    requiredLevel: 16,
+    requiredLevel: 13,
     sellPrice: 40,
     tags: ['equipment'],
   }),
-  DA = se({
+  JA = ie({
+    name: 'Conjurer’s Cap Lvl 1',
+    assetName: 'ConjurersCap',
+    rarity: 'uncommon',
+    description: 'A flimsy cap with an unlockable ability.',
+    equipSlots: ['Head'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'MaxHp', value: 22, modifierType: 'add' },
+    ],
+    requiredLevel: 4,
+    sellPrice: 20,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Iron', amount: 3 },
+          { id: 'Stone', amount: 3 },
+        ],
+        yields: 'ConjurersCap2',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  qA = ie({
+    name: 'Conjurer’s Cap Lvl 2',
+    assetName: 'ConjurersCap',
+    rarity: 'uncommon',
+    description: 'A flimsy cap with an unlockable ability.',
+    equipSlots: ['Head'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'MaxHp', value: 30, modifierType: 'add' },
+    ],
+    requiredLevel: 6,
+    sellPrice: 30,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Iron', amount: 5 },
+          { id: 'Stone', amount: 5 },
+          { id: 'EssenceCreamy', amount: 1 },
+        ],
+        yields: 'ConjurersCapUltimate',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  _A = ie({
+    name: 'Conjurer’s Cap Ultimate',
+    assetName: 'ConjurersCap',
+    rarity: 'uncommon',
+    description: 'A flimsy cap that summons a Magic Knife on Attack.',
+    equipSlots: ['Head'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'MaxHp', value: 35, modifierType: 'add' },
+    ],
+    abilities: [{ type: 'Ability', id: 'MagicKnifeAbility' }],
+    requiredLevel: 10,
+    sellPrice: 50,
+    tags: ['equipment'],
+  }),
+  eE = ie({
+    name: 'Cordovan Hood Lvl 1',
+    assetName: 'CordovanHood',
+    rarity: 'common',
+    description: 'A tough hood that offers decent protection.',
+    equipSlots: ['Head'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'MaxHp', value: 80, modifierType: 'add' },
+    ],
+    requiredLevel: 18,
+    sellPrice: 55,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Stone', amount: 40 },
+          { id: 'Ore', amount: 40 },
+          { id: 'EssenceCreamy', amount: 5 },
+        ],
+        yields: 'CordovanHood2',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  tE = ie({
+    name: 'Cordovan Hood Lvl 2',
+    assetName: 'CordovanHood',
+    rarity: 'common',
+    description: 'A tough hood that offers decent protection.',
+    equipSlots: ['Head'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'MaxHp', value: 97, modifierType: 'add' },
+    ],
+    requiredLevel: 22,
+    sellPrice: 75,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Stone', amount: 65 },
+          { id: 'Ore', amount: 65 },
+          { id: 'EssenceCreamy', amount: 7 },
+        ],
+        yields: 'CordovanHood3',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  iE = ie({
+    name: 'Cordovan Hood Lvl 3',
+    assetName: 'CordovanHood',
+    rarity: 'common',
+    description: 'A tough hood that offers decent protection.',
+    equipSlots: ['Head'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'MaxHp', value: 129, modifierType: 'add' },
+    ],
+    requiredLevel: 27,
+    sellPrice: 92,
+    tags: ['equipment'],
+  }),
+  sE = ie({
     name: 'Flame Hood',
     assetName: 'FlameHood',
     rarity: 'rare',
@@ -3126,7 +3665,7 @@ const VT = se({
     sellPrice: 150,
     tags: ['equipment'],
   }),
-  FA = se({
+  nE = ie({
     name: 'Helm of Blades',
     assetName: 'HelmOfBlades',
     rarity: 'rare',
@@ -3149,7 +3688,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  OA = se({
+  aE = ie({
     name: 'Helm of Blades Ultimate',
     assetName: 'HelmOfBlades',
     rarity: 'rare',
@@ -3165,7 +3704,7 @@ const VT = se({
     sellPrice: 124,
     tags: ['equipment'],
   }),
-  IA = se({
+  rE = ie({
     name: 'Intricate Headgear',
     assetName: 'IntricateHeadgear',
     rarity: 'rare',
@@ -3179,7 +3718,7 @@ const VT = se({
     sellPrice: 40,
     tags: ['equipment'],
   }),
-  NA = se({
+  oE = ie({
     name: 'Leather Cap Lvl 1',
     assetName: 'LeatherCap',
     rarity: 'common',
@@ -3188,12 +3727,12 @@ const VT = se({
     statModifiers: [
       { type: 'StatModifier', stat: 'MaxHp', value: 52, modifierType: 'add' },
     ],
-    requiredLevel: 21,
+    requiredLevel: 15,
     sellPrice: 35,
     upgrades: [
       {
         requires: [
-          { id: 'Iron', amount: 60 },
+          { id: 'Iron', amount: 30 },
           { id: 'EssenceChewy', amount: 2 },
         ],
         yields: 'LeatherCap2',
@@ -3201,7 +3740,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  GA = se({
+  lE = ie({
     name: 'Leather Cap Lvl 2',
     assetName: 'LeatherCap',
     rarity: 'common',
@@ -3210,7 +3749,7 @@ const VT = se({
     statModifiers: [
       { type: 'StatModifier', stat: 'MaxHp', value: 78, modifierType: 'add' },
     ],
-    requiredLevel: 23,
+    requiredLevel: 18,
     sellPrice: 40,
     upgrades: [
       {
@@ -3223,7 +3762,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  HA = se({
+  hE = ie({
     name: 'Leather Cap Lvl 3',
     assetName: 'LeatherCap',
     rarity: 'common',
@@ -3236,7 +3775,7 @@ const VT = se({
     sellPrice: 60,
     tags: ['equipment'],
   }),
-  UA = se({
+  uE = ie({
     name: 'PaddedHelmet',
     assetName: 'PaddedHelmet',
     rarity: 'uncommon',
@@ -3250,7 +3789,7 @@ const VT = se({
     sellPrice: 55,
     tags: ['equipment'],
   }),
-  kA = se({
+  dE = ie({
     name: 'Rawhide Cap Lvl 1',
     assetName: 'RawhideCap',
     rarity: 'common',
@@ -3259,12 +3798,11 @@ const VT = se({
     statModifiers: [
       { type: 'StatModifier', stat: 'MaxHp', value: 40, modifierType: 'add' },
     ],
-    requiredLevel: 12,
     sellPrice: 30,
     upgrades: [
       {
         requires: [
-          { id: 'Stone', amount: 35 },
+          { id: 'Stone', amount: 20 },
           { id: 'EssenceChewy', amount: 1 },
         ],
         yields: 'RawhideCap2',
@@ -3272,7 +3810,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  VA = se({
+  fE = ie({
     name: 'Rawhide Cap Lvl 2',
     assetName: 'RawhideCap',
     rarity: 'common',
@@ -3281,12 +3819,11 @@ const VT = se({
     statModifiers: [
       { type: 'StatModifier', stat: 'MaxHp', value: 60, modifierType: 'add' },
     ],
-    requiredLevel: 15,
     sellPrice: 50,
     upgrades: [
       {
         requires: [
-          { id: 'Stone', amount: 105 },
+          { id: 'Stone', amount: 95 },
           { id: 'EssenceChewy', amount: 4 },
         ],
         yields: 'RawhideCap3',
@@ -3294,7 +3831,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  zA = se({
+  cE = ie({
     name: 'Rawhide Cap Lvl 3',
     assetName: 'RawhideCap',
     rarity: 'common',
@@ -3303,11 +3840,10 @@ const VT = se({
     statModifiers: [
       { type: 'StatModifier', stat: 'MaxHp', value: 100, modifierType: 'add' },
     ],
-    requiredLevel: 15,
     sellPrice: 80,
     tags: ['equipment'],
   }),
-  XA = se({
+  mE = ie({
     name: 'Restoration Helm',
     assetName: 'RestorationHelm',
     rarity: 'uncommon',
@@ -3321,7 +3857,7 @@ const VT = se({
     sellPrice: 40,
     tags: ['equipment'],
   }),
-  YA = se({
+  gE = ie({
     name: 'Rusted Helm',
     assetName: 'RustedHelm',
     rarity: 'uncommon',
@@ -3334,7 +3870,7 @@ const VT = se({
     sellPrice: 60,
     tags: ['equipment'],
   }),
-  WA = se({
+  pE = ie({
     name: 'Shadownbane Circlet',
     assetName: 'ShadowbaneCirclet',
     rarity: 'rare',
@@ -3353,7 +3889,7 @@ const VT = se({
     sellPrice: 50,
     tags: ['equipment'],
   }),
-  jA = se({
+  vE = ie({
     name: 'Shadow Drinker Helm Lvl 1',
     assetName: 'ShadowDrinkerHelm',
     rarity: 'uncommon',
@@ -3382,12 +3918,12 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  KA = se({
+  yE = ie({
     name: 'Shadow Drinker Helm Ultimate',
     assetName: 'ShadowDrinkerHelm',
     rarity: 'rare',
     description:
-      'An enchanted helmet that can heal the wearer when dealing Shadow damage.',
+      'An enchanted helmet that can heal the wearer when receiving Shadow damage.',
     equipSlots: ['Head'],
     statModifiers: [
       { type: 'StatModifier', stat: 'MaxHp', value: 160, modifierType: 'add' },
@@ -3403,7 +3939,7 @@ const VT = se({
     sellPrice: 90,
     tags: ['equipment'],
   }),
-  QA = se({
+  xE = ie({
     name: 'Shielding Helm',
     assetName: 'ShieldingHelm',
     rarity: 'common',
@@ -3424,7 +3960,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  ZA = se({
+  SE = ie({
     name: 'Shielding Helm Ultimate',
     assetName: 'ShieldingHelm',
     rarity: 'uncommon',
@@ -3438,7 +3974,7 @@ const VT = se({
     sellPrice: 40,
     tags: ['equipment'],
   }),
-  $A = se({
+  wE = ie({
     name: 'Spiked Cowl',
     assetName: 'SpikedCowl',
     rarity: 'epic',
@@ -3460,7 +3996,7 @@ const VT = se({
     sellPrice: 40,
     tags: ['equipment'],
   }),
-  JA = se({
+  TE = ie({
     name: 'Spiked Cowl EX',
     assetName: 'SpikedCowl',
     rarity: 'epic',
@@ -3482,7 +4018,7 @@ const VT = se({
     sellPrice: 220,
     tags: ['equipment'],
   }),
-  qA = se({
+  CE = ie({
     name: 'Sturdy Headguard Lvl 1',
     assetName: 'SturdyHeadguard',
     rarity: 'common',
@@ -3503,7 +4039,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  _A = se({
+  AE = ie({
     name: 'Sturdy Headguard Ultimate',
     assetName: 'SturdyHeadguard',
     rarity: 'uncommon',
@@ -3517,7 +4053,7 @@ const VT = se({
     sellPrice: 50,
     tags: ['equipment'],
   }),
-  eE = se({
+  EE = ie({
     name: 'Sunstone Helmet',
     assetName: 'SunstoneHelmet',
     rarity: 'epic',
@@ -3537,7 +4073,7 @@ const VT = se({
     sellPrice: 125,
     tags: ['equipment'],
   }),
-  tE = se({
+  ME = ie({
     name: 'Surge Helm',
     assetName: 'SurgeHelm',
     rarity: 'epic',
@@ -3555,11 +4091,11 @@ const VT = se({
       },
     ],
     abilities: [{ type: 'Ability', id: 'HealOnLightning' }],
-    requiredLevel: 9,
+    requiredLevel: 7,
     sellPrice: 100,
     tags: ['equipment'],
   }),
-  iE = se({
+  bE = ie({
     name: 'Surge Helm EX',
     assetName: 'SurgeHelm',
     rarity: 'epic',
@@ -3581,7 +4117,7 @@ const VT = se({
     sellPrice: 225,
     tags: ['equipment'],
   }),
-  sE = se({
+  LE = ie({
     name: 'Thunder Helm',
     assetName: 'ThunderHelm',
     rarity: 'rare',
@@ -3602,7 +4138,7 @@ const VT = se({
     sellPrice: 120,
     tags: ['equipment'],
   }),
-  nE = se({
+  RE = ie({
     name: 'Tough Helmet Lvl 1',
     assetName: 'ToughHelmet',
     rarity: 'uncommon',
@@ -3612,12 +4148,12 @@ const VT = se({
       { type: 'StatModifier', stat: 'MaxHp', value: 90, modifierType: 'add' },
       { type: 'StatModifier', stat: 'Defense', value: 10, modifierType: 'add' },
     ],
-    requiredLevel: 21,
+    requiredLevel: 17,
     sellPrice: 40,
     upgrades: [
       {
         requires: [
-          { id: 'Iron', amount: 225 },
+          { id: 'Iron', amount: 180 },
           { id: 'EssenceHearty', amount: 5 },
         ],
         yields: 'ToughHelmet2',
@@ -3625,7 +4161,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  aE = se({
+  PE = ie({
     name: 'Tough Helmet Lvl 2',
     assetName: 'ToughHelmet',
     rarity: 'uncommon',
@@ -3635,7 +4171,7 @@ const VT = se({
       { type: 'StatModifier', stat: 'MaxHp', value: 115, modifierType: 'add' },
       { type: 'StatModifier', stat: 'Defense', value: 17, modifierType: 'add' },
     ],
-    requiredLevel: 21,
+    requiredLevel: 20,
     sellPrice: 70,
     upgrades: [
       {
@@ -3648,7 +4184,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  rE = se({
+  BE = ie({
     name: 'Tough Helmet Lvl 3',
     assetName: 'ToughHelmet',
     rarity: 'uncommon',
@@ -3662,7 +4198,7 @@ const VT = se({
     sellPrice: 100,
     tags: ['equipment'],
   }),
-  oE = se({
+  DE = ie({
     name: 'Vanishing Hood Lvl 1',
     assetName: 'VanishingHood',
     rarity: 'rare',
@@ -3686,7 +4222,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  lE = se({
+  FE = ie({
     name: 'Vanishing Hood Lvl 2',
     assetName: 'VanishingHood',
     rarity: 'rare',
@@ -3715,7 +4251,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  hE = se({
+  OE = ie({
     name: 'Vanishing Hood Lvl 3',
     assetName: 'VanishingHood',
     rarity: 'rare',
@@ -3729,7 +4265,7 @@ const VT = se({
     sellPrice: 150,
     tags: ['equipment'],
   }),
-  uE = se({
+  IE = ie({
     name: 'Wrathful Visor',
     assetName: 'WrathfulVisor',
     rarity: 'epic',
@@ -3744,7 +4280,7 @@ const VT = se({
     sellPrice: 270,
     tags: ['equipment'],
   }),
-  dE = se({
+  NE = ie({
     name: 'Wrathful Visor EX',
     assetName: 'WrathfulVisor',
     rarity: 'epic',
@@ -3759,7 +4295,7 @@ const VT = se({
     sellPrice: 320,
     tags: ['equipment'],
   }),
-  fE = se({
+  GE = ie({
     name: 'Amberfire Ring',
     assetName: 'AmberfireRing',
     rarity: 'uncommon',
@@ -3778,7 +4314,7 @@ const VT = se({
     sellPrice: 55,
     tags: ['equipment'],
   }),
-  cE = se({
+  HE = ie({
     name: 'Blasting Ring',
     assetName: 'BlastingRing',
     rarity: 'epic',
@@ -3794,7 +4330,7 @@ const VT = se({
     sellPrice: 200,
     tags: ['equipment'],
   }),
-  mE = se({
+  UE = ie({
     name: 'Blasting Ring EX',
     assetName: 'BlastingRing',
     rarity: 'epic',
@@ -3810,7 +4346,7 @@ const VT = se({
     sellPrice: 240,
     tags: ['equipment'],
   }),
-  gE = se({
+  kE = ie({
     name: 'Blazing Ring',
     assetName: 'BlazingRing',
     rarity: 'common',
@@ -3829,7 +4365,7 @@ const VT = se({
     sellPrice: 30,
     tags: ['equipment'],
   }),
-  pE = se({
+  VE = ie({
     name: 'Copper Ring',
     assetName: 'CopperRing',
     rarity: 'common',
@@ -3838,11 +4374,10 @@ const VT = se({
     statModifiers: [
       { type: 'StatModifier', stat: 'Crit', value: 0.025, modifierType: 'add' },
     ],
-    requiredLevel: 8,
     sellPrice: 16,
     tags: ['equipment'],
   }),
-  vE = se({
+  zE = ie({
     name: 'Elemental Ring',
     assetName: 'ElementalRing',
     rarity: 'rare',
@@ -3878,7 +4413,7 @@ const VT = se({
     sellPrice: 50,
     tags: ['equipment'],
   }),
-  yE = se({
+  XE = ie({
     name: 'Ferocity Ring',
     assetName: 'FerocityRing',
     rarity: 'epic',
@@ -3892,7 +4427,72 @@ const VT = se({
     sellPrice: 350,
     tags: ['equipment'],
   }),
-  xE = se({
+  YE = ie({
+    name: 'Filigree Band Lvl 1',
+    assetName: 'FiligreeBand',
+    rarity: 'epic',
+    description:
+      'A delicate ring with a deadly ability triggered by a foe’s demise.',
+    equipSlots: ['Ring'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Crit', value: 0.05, modifierType: 'add' },
+    ],
+    abilities: [{ type: 'Ability', id: 'MagicKnifeOnEnemyDeath' }],
+    requiredLevel: 121,
+    sellPrice: 280,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Ore', amount: 1400 },
+          { id: 'Wood', amount: 1200 },
+          { id: 'EssenceCreamy', amount: 25 },
+        ],
+        yields: 'FiligreeBand2',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  WE = ie({
+    name: 'Filigree Band Lvl 2',
+    assetName: 'FiligreeBand',
+    rarity: 'epic',
+    description:
+      'A delicate ring with a deadly ability triggered by a foe’s demise.',
+    equipSlots: ['Ring'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Crit', value: 0.06, modifierType: 'add' },
+    ],
+    abilities: [{ type: 'Ability', id: 'MagicKnifeOnEnemyDeath' }],
+    requiredLevel: 121,
+    sellPrice: 340,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Ore', amount: 1500 },
+          { id: 'Wood', amount: 1650 },
+          { id: 'EssenceCreamy', amount: 40 },
+        ],
+        yields: 'FiligreeBand3',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  jE = ie({
+    name: 'Filigree Band Lvl 3',
+    assetName: 'FiligreeBand',
+    rarity: 'epic',
+    description:
+      'A delicate ring with a deadly ability triggered by a foe’s demise.',
+    equipSlots: ['Ring'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Crit', value: 0.07, modifierType: 'add' },
+    ],
+    abilities: [{ type: 'Ability', id: 'MagicKnifeOnEnemyDeath' }],
+    requiredLevel: 121,
+    sellPrice: 500,
+    tags: ['equipment'],
+  }),
+  KE = ie({
     name: 'Focus Ring',
     assetName: 'FocusRing',
     rarity: 'rare',
@@ -3911,7 +4511,7 @@ const VT = se({
     sellPrice: 70,
     tags: ['equipment'],
   }),
-  SE = se({
+  QE = ie({
     name: 'Fragile Ring',
     assetName: 'FragileRing',
     rarity: 'uncommon',
@@ -3924,7 +4524,7 @@ const VT = se({
     sellPrice: 40,
     tags: ['equipment'],
   }),
-  wE = se({
+  ZE = ie({
     name: 'Heavy Band',
     assetName: 'HeavyBand',
     rarity: 'common',
@@ -3937,7 +4537,7 @@ const VT = se({
     sellPrice: 17,
     tags: ['equipment'],
   }),
-  TE = se({
+  $E = ie({
     name: 'Inferno Ring Lvl 1',
     assetName: 'InfernoRing',
     rarity: 'rare',
@@ -3946,7 +4546,7 @@ const VT = se({
     statModifiers: [
       { type: 'StatModifier', stat: 'Crit', value: 0.045, modifierType: 'add' },
     ],
-    requiredLevel: 23,
+    requiredLevel: 20,
     sellPrice: 70,
     upgrades: [
       {
@@ -3960,7 +4560,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  CE = se({
+  JE = ie({
     name: 'Inferno Ring Lvl 2',
     assetName: 'InfernoRing',
     rarity: 'rare',
@@ -3983,7 +4583,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  AE = se({
+  qE = ie({
     name: 'Inferno Ring Ultimate',
     assetName: 'InfernoRing',
     rarity: 'epic',
@@ -3997,7 +4597,7 @@ const VT = se({
     sellPrice: 275,
     tags: ['equipment'],
   }),
-  EE = se({
+  _E = ie({
     name: 'Jagged Ring Lvl 1',
     assetName: 'JaggedRing',
     rarity: 'uncommon',
@@ -4010,7 +4610,7 @@ const VT = se({
     upgrades: [
       {
         requires: [
-          { id: 'Wood', amount: 120 },
+          { id: 'Wood', amount: 100 },
           { id: 'EssenceFluffy', amount: 2 },
         ],
         yields: 'JaggedRing2',
@@ -4018,7 +4618,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  ME = se({
+  eM = ie({
     name: 'Jagged Ring Lvl 2',
     assetName: 'JaggedRing',
     rarity: 'uncommon',
@@ -4027,7 +4627,6 @@ const VT = se({
     statModifiers: [
       { type: 'StatModifier', stat: 'Crit', value: 0.03, modifierType: 'add' },
     ],
-    requiredLevel: 18,
     sellPrice: 70,
     upgrades: [
       {
@@ -4040,7 +4639,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  bE = se({
+  tM = ie({
     name: 'Jagged Ring Lvl 3',
     assetName: 'JaggedRing',
     rarity: 'uncommon',
@@ -4058,7 +4657,7 @@ const VT = se({
     sellPrice: 100,
     tags: ['equipment'],
   }),
-  LE = se({
+  iM = ie({
     name: 'Luckstone Ring',
     assetName: 'LuckstoneRing',
     rarity: 'common',
@@ -4071,7 +4670,7 @@ const VT = se({
     sellPrice: 40,
     tags: ['equipment'],
   }),
-  RE = se({
+  sM = ie({
     name: 'Muscle Ring Lvl 1',
     assetName: 'MuscleRing',
     rarity: 'common',
@@ -4081,7 +4680,7 @@ const VT = se({
       { type: 'StatModifier', stat: 'MaxHp', value: 55, modifierType: 'add' },
       { type: 'StatModifier', stat: 'Crit', value: 0.015, modifierType: 'add' },
     ],
-    requiredLevel: 12,
+    requiredLevel: 10,
     sellPrice: 30,
     upgrades: [
       {
@@ -4095,7 +4694,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  PE = se({
+  nM = ie({
     name: 'Muscle Ring Lvl 2',
     assetName: 'MuscleRing',
     rarity: 'common',
@@ -4119,7 +4718,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  BE = se({
+  aM = ie({
     name: 'Muscle Ring Lvl 3',
     assetName: 'MuscleRing',
     rarity: 'common',
@@ -4138,7 +4737,7 @@ const VT = se({
     sellPrice: 100,
     tags: ['equipment'],
   }),
-  DE = se({
+  rM = ie({
     name: 'Quicksilver Ring',
     assetName: 'QuicksilverRing',
     rarity: 'rare',
@@ -4152,7 +4751,7 @@ const VT = se({
     sellPrice: 65,
     tags: ['equipment'],
   }),
-  FE = se({
+  oM = ie({
     name: 'Razor Ring',
     assetName: 'RazorRing',
     rarity: 'rare',
@@ -4166,7 +4765,7 @@ const VT = se({
         modifierType: 'add',
       },
     ],
-    requiredLevel: 6,
+    requiredLevel: 5,
     sellPrice: 32,
     upgrades: [
       {
@@ -4180,7 +4779,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  OE = se({
+  lM = ie({
     name: 'Razor Ring Ultimate',
     assetName: 'RazorRing',
     rarity: 'rare',
@@ -4199,7 +4798,66 @@ const VT = se({
     sellPrice: 44,
     tags: ['equipment'],
   }),
-  IE = se({
+  hM = ie({
+    name: 'Ring Of Repair Lvl 1',
+    assetName: 'RingOfRepair',
+    rarity: 'uncommon',
+    description: 'A simple ring with an unlockable ability.',
+    equipSlots: ['Ring'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Crit', value: 0.015, modifierType: 'add' },
+    ],
+    sellPrice: 25,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Stone', amount: 30 },
+          { id: 'Ore', amount: 40 },
+          { id: 'EssenceFresh', amount: 12 },
+        ],
+        yields: 'RingOfRepair2',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  uM = ie({
+    name: 'Ring Of Repair Lvl 2',
+    assetName: 'RingOfRepair',
+    rarity: 'uncommon',
+    description: 'A simple ring with an unlockable ability.',
+    equipSlots: ['Ring'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
+    ],
+    requiredLevel: 4,
+    sellPrice: 38,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Stone', amount: 50 },
+          { id: 'Ore', amount: 60 },
+          { id: 'EssenceFresh', amount: 15 },
+        ],
+        yields: 'RingOfRepairUltimate',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  dM = ie({
+    name: 'Ring Of Repair Ultimate',
+    assetName: 'RingOfRepair',
+    rarity: 'uncommon',
+    description: 'A simple ring that heals on Critical attacks.',
+    equipSlots: ['Ring'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Crit', value: 0.025, modifierType: 'add' },
+    ],
+    abilities: [{ type: 'Ability', id: 'HealOnCritAbility' }],
+    requiredLevel: 8,
+    sellPrice: 56,
+    tags: ['equipment'],
+  }),
+  fM = ie({
     name: 'Ruby Clawed Ring',
     assetName: 'RubyClawedRing',
     rarity: 'rare',
@@ -4219,7 +4877,7 @@ const VT = se({
     sellPrice: 75,
     tags: ['equipment'],
   }),
-  NE = se({
+  cM = ie({
     name: 'Ruby Clawed Ring EX',
     assetName: 'RubyClawedRing',
     rarity: 'rare',
@@ -4239,7 +4897,7 @@ const VT = se({
     sellPrice: 205,
     tags: ['equipment'],
   }),
-  GE = se({
+  mM = ie({
     name: 'Shielding Band',
     assetName: 'ShieldingBand',
     rarity: 'uncommon',
@@ -4254,7 +4912,7 @@ const VT = se({
     sellPrice: 40,
     tags: ['equipment'],
   }),
-  HE = se({
+  gM = ie({
     name: 'Smiting Ring',
     assetName: 'SmitingRing',
     rarity: 'epic',
@@ -4276,7 +4934,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  UE = se({
+  pM = ie({
     name: 'Smiting Ring Ultimate',
     assetName: 'SmitingRing',
     rarity: 'epic',
@@ -4290,7 +4948,7 @@ const VT = se({
     sellPrice: 138,
     tags: ['equipment'],
   }),
-  kE = se({
+  vM = ie({
     name: 'Stacked Signet Lvl 1',
     assetName: 'StackedSignet',
     rarity: 'epic',
@@ -4315,7 +4973,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  VE = se({
+  yM = ie({
     name: 'Stacked Signet Lvl 2',
     assetName: 'StackedSignet',
     rarity: 'epic',
@@ -4340,7 +4998,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  zE = se({
+  xM = ie({
     name: 'Stacked Signet Ultimate',
     assetName: 'StackedSignet',
     rarity: 'legendary',
@@ -4356,7 +5014,7 @@ const VT = se({
     sellPrice: 285,
     tags: ['equipment'],
   }),
-  XE = se({
+  SM = ie({
     name: 'Stormseeker Lvl 1',
     assetName: 'Stormseeker',
     rarity: 'uncommon',
@@ -4385,7 +5043,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  YE = se({
+  wM = ie({
     name: 'Stormseeker Lvl 2',
     assetName: 'Stormseeker',
     rarity: 'rare',
@@ -4404,7 +5062,7 @@ const VT = se({
     sellPrice: 31,
     tags: ['equipment'],
   }),
-  WE = se({
+  TM = ie({
     name: 'Tarnished Band Lvl 1',
     assetName: 'TarnishedBand',
     rarity: 'common',
@@ -4417,8 +5075,8 @@ const VT = se({
     upgrades: [
       {
         requires: [
-          { id: 'Iron', amount: 20 },
-          { id: 'Ore', amount: 20 },
+          { id: 'Iron', amount: 12 },
+          { id: 'Ore', amount: 12 },
           { id: 'EssenceDecadent', amount: 2 },
         ],
         yields: 'TarnishedBand2',
@@ -4426,7 +5084,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  jE = se({
+  CM = ie({
     name: 'Tarnished Band Lvl 2',
     assetName: 'TarnishedBand',
     rarity: 'common',
@@ -4435,13 +5093,12 @@ const VT = se({
     statModifiers: [
       { type: 'StatModifier', stat: 'Crit', value: 0.015, modifierType: 'add' },
     ],
-    requiredLevel: 18,
     sellPrice: 50,
     upgrades: [
       {
         requires: [
-          { id: 'Iron', amount: 60 },
-          { id: 'Ore', amount: 60 },
+          { id: 'Iron', amount: 50 },
+          { id: 'Ore', amount: 50 },
           { id: 'EssenceDecadent', amount: 12 },
         ],
         yields: 'TarnishedBand3',
@@ -4449,7 +5106,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  KE = se({
+  AM = ie({
     name: 'Tarnished Band Lvl 3',
     assetName: 'TarnishedBand',
     rarity: 'common',
@@ -4462,7 +5119,7 @@ const VT = se({
     sellPrice: 100,
     tags: ['equipment'],
   }),
-  QE = se({
+  EM = ie({
     name: 'Twilight Band Lvl 1',
     assetName: 'TwilightBand',
     rarity: 'uncommon',
@@ -4490,7 +5147,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  ZE = se({
+  MM = ie({
     name: 'Twilight Band Lvl 2',
     assetName: 'TwilightBand',
     rarity: 'uncommon',
@@ -4518,7 +5175,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  $E = se({
+  bM = ie({
     name: 'Twilight Band Lvl 3',
     assetName: 'TwilightBand',
     rarity: 'uncommon',
@@ -4536,35 +5193,35 @@ const VT = se({
     sellPrice: 165,
     tags: ['equipment'],
   }),
-  JE = se({
+  LM = ie({
     name: 'Twinblade Band',
     assetName: 'TwinbladeBand',
     rarity: 'rare',
-    description: 'A ring that doubles the summoning of elemental daggers.',
+    description: 'A ring that enables double attacks.',
     equipSlots: ['Ring'],
     statModifiers: [
       { type: 'StatModifier', stat: 'Crit', value: 0.01, modifierType: 'add' },
     ],
-    abilities: [{ type: 'Ability', id: 'KnifeDoubler' }],
+    abilities: [{ type: 'Ability', id: 'EveryOtherTurnDoubleAttack' }],
     requiredLevel: 121,
     sellPrice: 200,
     tags: ['equipment'],
   }),
-  qE = se({
+  RM = ie({
     name: 'Twinblade Band EX',
     assetName: 'TwinbladeBand',
     rarity: 'rare',
-    description: 'A ring that doubles the summoning of elemental daggers.',
+    description: 'A ring that enables double attacks.',
     equipSlots: ['Ring'],
     statModifiers: [
       { type: 'StatModifier', stat: 'Crit', value: 0.025, modifierType: 'add' },
     ],
-    abilities: [{ type: 'Ability', id: 'KnifeDoubler' }],
+    abilities: [{ type: 'Ability', id: 'EveryOtherTurnDoubleAttack' }],
     requiredLevel: 141,
     sellPrice: 250,
     tags: ['equipment'],
   }),
-  _E = se({
+  PM = ie({
     name: 'Watcher’s Spark',
     assetName: 'WatchersSpark',
     rarity: 'rare',
@@ -4585,7 +5242,7 @@ const VT = se({
     sellPrice: 125,
     tags: ['equipment'],
   }),
-  eM = se({
+  BM = ie({
     name: 'Watcher’s Spark EX',
     assetName: 'WatchersSpark',
     rarity: 'rare',
@@ -4606,7 +5263,7 @@ const VT = se({
     sellPrice: 275,
     tags: ['equipment'],
   }),
-  tM = se({
+  DM = ie({
     name: 'Adventurer’s Blade Lvl 1',
     assetName: 'AdventurersBlade',
     rarity: 'uncommon',
@@ -4630,7 +5287,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  iM = se({
+  FM = ie({
     name: 'Adventurer’s Blade Lvl 2',
     assetName: 'AdventurersBlade',
     rarity: 'uncommon',
@@ -4654,7 +5311,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  sM = se({
+  OM = ie({
     name: 'Adventurer’s Blade Lvl 3',
     assetName: 'AdventurersBlade',
     rarity: 'uncommon',
@@ -4668,7 +5325,7 @@ const VT = se({
     sellPrice: 130,
     tags: ['equipment'],
   }),
-  nM = se({
+  IM = ie({
     name: 'Battered Broadsword',
     assetName: 'BatteredBroadsword',
     rarity: 'common',
@@ -4682,7 +5339,7 @@ const VT = se({
     sellPrice: 50,
     tags: ['equipment'],
   }),
-  aM = se({
+  NM = ie({
     name: 'Battleready Blade Lvl 1',
     assetName: 'BattlereadyBlade',
     rarity: 'uncommon',
@@ -4706,7 +5363,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  rM = se({
+  GM = ie({
     name: 'Battleready Blade Ultimate',
     assetName: 'BattlereadyBlade',
     rarity: 'uncommon',
@@ -4721,7 +5378,7 @@ const VT = se({
     sellPrice: 60,
     tags: ['equipment'],
   }),
-  oM = se({
+  HM = ie({
     name: 'Berserker Axe Lvl 1',
     assetName: 'BerserkerAxe',
     rarity: 'epic',
@@ -4750,7 +5407,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  lM = se({
+  UM = ie({
     name: 'Berserker Axe Lvl 2',
     assetName: 'BerserkerAxe',
     rarity: 'epic',
@@ -4779,7 +5436,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  hM = se({
+  kM = ie({
     name: 'Berserker Axe Ultimate',
     assetName: 'BerserkerAxe',
     rarity: 'legendary',
@@ -4800,7 +5457,7 @@ const VT = se({
     sellPrice: 500,
     tags: ['equipment'],
   }),
-  uM = se({
+  VM = ie({
     name: 'Blazing Shortsword',
     assetName: 'BlazingShortsword',
     rarity: 'uncommon',
@@ -4818,7 +5475,7 @@ const VT = se({
     sellPrice: 55,
     tags: ['equipment'],
   }),
-  dM = se({
+  zM = ie({
     name: 'Bloodseeker',
     assetName: 'Bloodseeker',
     rarity: 'epic',
@@ -4844,7 +5501,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  fM = se({
+  XM = ie({
     name: 'Bloodseeker Ultimate',
     assetName: 'Bloodseeker',
     rarity: 'epic',
@@ -4861,7 +5518,7 @@ const VT = se({
     sellPrice: 170,
     tags: ['equipment'],
   }),
-  cM = se({
+  YM = ie({
     name: 'Blunt Bludgeon Lvl 1',
     assetName: 'BluntBludgeon',
     rarity: 'uncommon',
@@ -4871,20 +5528,20 @@ const VT = se({
     statModifiers: [
       { type: 'StatModifier', stat: 'MaxHp', value: 12, modifierType: 'add' },
     ],
-    requiredLevel: 12,
+    requiredLevel: 8,
     sellPrice: 50,
     upgrades: [
       {
         requires: [
-          { id: 'Iron', amount: 55 },
-          { id: 'Stone', amount: 50 },
+          { id: 'Iron', amount: 40 },
+          { id: 'Stone', amount: 35 },
         ],
         yields: 'BluntBludgeon2',
       },
     ],
     tags: ['equipment'],
   }),
-  mM = se({
+  WM = ie({
     name: 'Blunt Bludgeon Lvl 2',
     assetName: 'BluntBludgeon',
     rarity: 'uncommon',
@@ -4894,7 +5551,7 @@ const VT = se({
     statModifiers: [
       { type: 'StatModifier', stat: 'MaxHp', value: 22, modifierType: 'add' },
     ],
-    requiredLevel: 17,
+    requiredLevel: 14,
     sellPrice: 50,
     upgrades: [
       {
@@ -4907,7 +5564,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  gM = se({
+  jM = ie({
     name: 'Blunt Bludgeon Lvl 3',
     assetName: 'BluntBludgeon',
     rarity: 'uncommon',
@@ -4921,34 +5578,34 @@ const VT = se({
     sellPrice: 90,
     tags: ['equipment'],
   }),
-  pM = se({
+  KM = ie({
     name: 'Brutal Blade Lvl 1',
     assetName: 'BrutalBlade',
     rarity: 'uncommon',
     description: 'A merciless blade with an unlockable Ability.',
     equipSlots: ['Weapon'],
     damage: { physical: 32 },
-    requiredLevel: 17,
+    requiredLevel: 15,
     sellPrice: 50,
     upgrades: [
       {
         requires: [
-          { id: 'Ore', amount: 70 },
-          { id: 'Stone', amount: 35 },
+          { id: 'Ore', amount: 50 },
+          { id: 'Stone', amount: 20 },
         ],
         yields: 'BrutalBlade2',
       },
     ],
     tags: ['equipment'],
   }),
-  vM = se({
+  QM = ie({
     name: 'Brutal Blade Lvl 2',
     assetName: 'BrutalBlade',
     rarity: 'uncommon',
     description: 'A merciless blade with an unlockable Ability.',
     equipSlots: ['Weapon'],
     damage: { physical: 44 },
-    requiredLevel: 23,
+    requiredLevel: 20,
     sellPrice: 70,
     upgrades: [
       {
@@ -4961,7 +5618,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  yM = se({
+  ZM = ie({
     name: 'Brutal Blade Ultimate',
     assetName: 'BrutalBlade',
     rarity: 'uncommon',
@@ -4973,7 +5630,80 @@ const VT = se({
     sellPrice: 100,
     tags: ['equipment'],
   }),
-  xM = se({
+  $M = ie({
+    name: 'Buccaneer’s Friend Lvl 1',
+    assetName: 'BuccaneersFriend',
+    rarity: 'epic',
+    description:
+      'A swashbuckling blade that infuses its bearer with improved Crit and Dodge.',
+    equipSlots: ['Weapon'],
+    damage: { physical: 100 },
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Crit', value: 0.03, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
+    ],
+    requiredLevel: 81,
+    sellPrice: 175,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Stone', amount: 700 },
+          { id: 'Iron', amount: 300 },
+          { id: 'EssenceChewy', amount: 19 },
+        ],
+        yields: 'BuccaneersFriend2',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  JM = ie({
+    name: 'Buccaneer’s Friend Lvl 2',
+    assetName: 'BuccaneersFriend',
+    rarity: 'epic',
+    description:
+      'A swashbuckling blade that infuses its bearer with improved Crit and Dodge.',
+    equipSlots: ['Weapon'],
+    damage: { physical: 109 },
+    statModifiers: [
+      {
+        type: 'StatModifier',
+        stat: 'Crit',
+        value: 0.0325,
+        modifierType: 'add',
+      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
+    ],
+    requiredLevel: 85,
+    sellPrice: 225,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Stone', amount: 880 },
+          { id: 'Iron', amount: 430 },
+          { id: 'EssenceChewy', amount: 32 },
+        ],
+        yields: 'BuccaneersFriend3',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  qM = ie({
+    name: 'Buccaneer’s Friend Lvl 3',
+    assetName: 'BuccaneersFriend',
+    rarity: 'epic',
+    description:
+      'A swashbuckling blade that infuses its bearer with improved Crit and Dodge.',
+    equipSlots: ['Weapon'],
+    damage: { physical: 121 },
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Crit', value: 0.035, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
+    ],
+    requiredLevel: 90,
+    sellPrice: 260,
+    tags: ['equipment'],
+  }),
+  _M = ie({
     name: 'Charged Falchion',
     assetName: 'ChargedFalchion',
     rarity: 'rare',
@@ -4984,7 +5714,7 @@ const VT = se({
     sellPrice: 45,
     tags: ['equipment'],
   }),
-  SM = se({
+  eb = ie({
     name: 'Chipped Shortsword',
     assetName: 'ChippedShortsword',
     rarity: 'common',
@@ -4994,7 +5724,7 @@ const VT = se({
     sellPrice: 20,
     tags: ['equipment'],
   }),
-  wM = se({
+  tb = ie({
     name: 'Cursed Naginata',
     assetName: 'CursedNaginata',
     rarity: 'legendary',
@@ -5013,7 +5743,7 @@ const VT = se({
     sellPrice: 900,
     tags: ['equipment'],
   }),
-  TM = se({
+  ib = ie({
     name: 'Dark Shortsword',
     assetName: 'DarkShortsword',
     rarity: 'uncommon',
@@ -5031,7 +5761,108 @@ const VT = se({
     sellPrice: 55,
     tags: ['equipment'],
   }),
-  CM = se({
+  sb = ie({
+    name: 'Dark Ward Lvl 1',
+    assetName: 'DarkWard',
+    rarity: 'legendary',
+    description:
+      'A fabled sword which protects the wielder from shadow and phyical damage.',
+    equipSlots: ['Weapon'],
+    damage: { physical: 46 },
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Defense', value: 15, modifierType: 'add' },
+      {
+        type: 'StatModifier',
+        stat: 'Dodge',
+        value: 0.025,
+        modifierType: 'add',
+      },
+      {
+        type: 'StatModifier',
+        stat: 'ShadowResist',
+        value: 0.15,
+        modifierType: 'add',
+      },
+    ],
+    requiredLevel: 10,
+    sellPrice: 150,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Wood', amount: 50 },
+          { id: 'Ore', amount: 50 },
+          { id: 'EssenceSpicy', amount: 3 },
+        ],
+        yields: 'DarkWard2',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  nb = ie({
+    name: 'Dark Ward Lvl 2',
+    assetName: 'DarkWard',
+    rarity: 'legendary',
+    description:
+      'A fabled sword which protects the wielder from shadow and phyical damage.',
+    equipSlots: ['Weapon'],
+    damage: { physical: 49 },
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Defense', value: 22, modifierType: 'add' },
+      {
+        type: 'StatModifier',
+        stat: 'Dodge',
+        value: 0.025,
+        modifierType: 'add',
+      },
+      {
+        type: 'StatModifier',
+        stat: 'ShadowResist',
+        value: 0.15,
+        modifierType: 'add',
+      },
+    ],
+    requiredLevel: 12,
+    sellPrice: 180,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Wood', amount: 75 },
+          { id: 'Ore', amount: 75 },
+          { id: 'EssenceSpicy', amount: 5 },
+        ],
+        yields: 'DarkWard3',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  ab = ie({
+    name: 'Dark Ward Lvl 3',
+    assetName: 'DarkWard',
+    rarity: 'legendary',
+    description:
+      'A fabled sword which protects the wielder from shadow and phyical damage.',
+    equipSlots: ['Weapon'],
+    damage: { physical: 56 },
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Defense', value: 29, modifierType: 'add' },
+      {
+        type: 'StatModifier',
+        stat: 'Dodge',
+        value: 0.025,
+        modifierType: 'add',
+      },
+      {
+        type: 'StatModifier',
+        stat: 'ShadowResist',
+        value: 0.15,
+        modifierType: 'add',
+      },
+    ],
+    requiredLevel: 14,
+    sellPrice: 225,
+    tags: ['equipment'],
+  }),
+  rb = ie({
     name: 'Double Pole Axe Lvl 1',
     assetName: 'DoublePoleAxe',
     rarity: 'epic',
@@ -5052,7 +5883,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  AM = se({
+  ob = ie({
     name: 'Double Pole Axe Lvl 2',
     assetName: 'DoublePoleAxe',
     rarity: 'epic',
@@ -5073,7 +5904,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  EM = se({
+  lb = ie({
     name: 'Double Pole Axe Ultimate',
     assetName: 'DoublePoleAxe',
     rarity: 'legendary',
@@ -5085,7 +5916,7 @@ const VT = se({
     sellPrice: 500,
     tags: ['equipment'],
   }),
-  MM = se({
+  hb = ie({
     name: 'Draining Edge',
     assetName: 'DrainingEdge',
     rarity: 'uncommon',
@@ -5100,7 +5931,7 @@ const VT = se({
     sellPrice: 200,
     tags: ['equipment'],
   }),
-  bM = se({
+  ub = ie({
     name: 'Duskbringer Lvl 1',
     assetName: 'Duskbringer',
     rarity: 'epic',
@@ -5121,7 +5952,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  LM = se({
+  db = ie({
     name: 'Duskbringer Lvl 2',
     assetName: 'Duskbringer',
     rarity: 'epic',
@@ -5142,7 +5973,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  RM = se({
+  fb = ie({
     name: 'Duskbringer Lvl 3',
     assetName: 'Duskbringer',
     rarity: 'epic',
@@ -5153,7 +5984,7 @@ const VT = se({
     sellPrice: 320,
     tags: ['equipment'],
   }),
-  PM = se({
+  cb = ie({
     name: 'Electric Shortsword',
     assetName: 'ElectricShortsword',
     rarity: 'uncommon',
@@ -5171,7 +6002,7 @@ const VT = se({
     sellPrice: 55,
     tags: ['equipment'],
   }),
-  BM = se({
+  mb = ie({
     name: 'Eternity Mace Lvl 1',
     assetName: 'EternityMace',
     rarity: 'legendary',
@@ -5193,7 +6024,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  DM = se({
+  gb = ie({
     name: 'Eternity Mace Lvl 2',
     assetName: 'EternityMace',
     rarity: 'legendary',
@@ -5215,7 +6046,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  FM = se({
+  pb = ie({
     name: 'Eternity Mace Lvl 3',
     assetName: 'EternityMace',
     rarity: 'legendary',
@@ -5227,7 +6058,7 @@ const VT = se({
     sellPrice: 800,
     tags: ['equipment'],
   }),
-  OM = se({
+  vb = ie({
     name: 'A-27 Fangblade',
     assetName: 'A27Fangblade',
     rarity: 'epic',
@@ -5243,7 +6074,7 @@ const VT = se({
     sellPrice: 500,
     tags: ['equipment'],
   }),
-  IM = se({
+  yb = ie({
     name: 'A-27 Fangblade EX',
     assetName: 'A27Fangblade',
     rarity: 'epic',
@@ -5262,7 +6093,7 @@ const VT = se({
     sellPrice: 750,
     tags: ['equipment'],
   }),
-  NM = se({
+  xb = ie({
     name: 'Fatal Farewell',
     assetName: 'FatalFarewell',
     rarity: 'rare',
@@ -5274,7 +6105,7 @@ const VT = se({
     sellPrice: 40,
     tags: ['equipment'],
   }),
-  GM = se({
+  Sb = ie({
     name: 'Flameguard Sword Lvl 1',
     assetName: 'FlameguardSword',
     rarity: 'rare',
@@ -5303,7 +6134,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  HM = se({
+  wb = ie({
     name: 'Flameguard Sword Lvl 2',
     assetName: 'FlameguardSword',
     rarity: 'rare',
@@ -5332,7 +6163,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  UM = se({
+  Tb = ie({
     name: 'Flameguard Sword Lvl 3',
     assetName: 'FlameguardSword',
     rarity: 'rare',
@@ -5351,7 +6182,7 @@ const VT = se({
     sellPrice: 180,
     tags: ['equipment'],
   }),
-  kM = se({
+  Cb = ie({
     name: 'Forgefang Lvl 1',
     assetName: 'Forgefang',
     rarity: 'rare',
@@ -5366,7 +6197,7 @@ const VT = se({
         modifierType: 'add',
       },
     ],
-    requiredLevel: 17,
+    requiredLevel: 14,
     sellPrice: 50,
     upgrades: [
       {
@@ -5379,7 +6210,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  VM = se({
+  Ab = ie({
     name: 'Forgefang Lvl 2',
     assetName: 'Forgefang',
     rarity: 'rare',
@@ -5394,11 +6225,26 @@ const VT = se({
         modifierType: 'add',
       },
     ],
-    requiredLevel: 23,
+    requiredLevel: 18,
     sellPrice: 70,
     tags: ['equipment'],
   }),
-  zM = se({
+  Eb = ie({
+    name: 'Fragment Of The Great Sword',
+    assetName: 'FragmentOfTheGreatSword',
+    rarity: 'rare',
+    description: 'The shattered remnant of a fabled weapon.',
+    equipSlots: ['Weapon'],
+    damage: { physical: 25 },
+    statModifiers: [
+      { type: 'StatModifier', stat: 'MaxHp', value: 25, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Attack', value: 10, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 5, modifierType: 'add' },
+    ],
+    sellPrice: 50,
+    tags: ['equipment'],
+  }),
+  Mb = ie({
     name: 'Frozen Shortsword',
     assetName: 'FrozenShortsword',
     rarity: 'uncommon',
@@ -5416,7 +6262,7 @@ const VT = se({
     sellPrice: 55,
     tags: ['equipment'],
   }),
-  XM = se({
+  bb = ie({
     name: 'Fury Blade Lvl 1',
     assetName: 'FuryBlade',
     rarity: 'rare',
@@ -5437,7 +6283,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  YM = se({
+  Lb = ie({
     name: 'Fury Blade Lvl 2',
     assetName: 'FuryBlade',
     rarity: 'rare',
@@ -5458,7 +6304,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  WM = se({
+  Rb = ie({
     name: 'Fury Blade Lvl 3',
     assetName: 'FuryBlade',
     rarity: 'rare',
@@ -5474,7 +6320,7 @@ const VT = se({
     sellPrice: 180,
     tags: ['equipment'],
   }),
-  jM = se({
+  Pb = ie({
     name: 'Glacial Shard Lvl 1',
     assetName: 'GlacialShard',
     rarity: 'uncommon',
@@ -5503,7 +6349,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  KM = se({
+  Bb = ie({
     name: 'Glacial Shard Lvl 2',
     assetName: 'GlacialShard',
     rarity: 'uncommon',
@@ -5514,7 +6360,7 @@ const VT = se({
     sellPrice: 90,
     tags: ['equipment'],
   }),
-  QM = se({
+  Db = ie({
     name: 'Hateful Darkness',
     assetName: 'HatefulDarkness',
     rarity: 'legendary',
@@ -5535,7 +6381,7 @@ const VT = se({
     sellPrice: 150,
     tags: ['equipment'],
   }),
-  ZM = se({
+  Fb = ie({
     name: 'Hateful Darkness EX',
     assetName: 'HatefulDarkness',
     rarity: 'legendary',
@@ -5556,7 +6402,7 @@ const VT = se({
     sellPrice: 270,
     tags: ['equipment'],
   }),
-  $M = se({
+  Ob = ie({
     name: 'Hero’s Long Sword Lvl 1',
     assetName: 'HerosLongSword',
     rarity: 'epic',
@@ -5578,7 +6424,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  JM = se({
+  Ib = ie({
     name: 'Hero’s Long Sword Lvl 2',
     assetName: 'HerosLongSword',
     rarity: 'epic',
@@ -5600,7 +6446,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  qM = se({
+  Nb = ie({
     name: 'Hero’s Long Sword Ultimate',
     assetName: 'HerosLongSword',
     rarity: 'legendary',
@@ -5615,7 +6461,7 @@ const VT = se({
     sellPrice: 275,
     tags: ['equipment'],
   }),
-  _M = se({
+  Gb = ie({
     name: 'Inferno Caller',
     assetName: 'InfernoCaller',
     rarity: 'legendary',
@@ -5637,7 +6483,7 @@ const VT = se({
     sellPrice: 200,
     tags: ['equipment'],
   }),
-  eb = se({
+  Hb = ie({
     name: 'Inferno Caller EX',
     assetName: 'InfernoCaller',
     rarity: 'legendary',
@@ -5659,7 +6505,7 @@ const VT = se({
     sellPrice: 450,
     tags: ['equipment'],
   }),
-  tb = se({
+  Ub = ie({
     name: 'Phantom Blade Sword',
     assetName: 'PhantomBladeSword',
     rarity: 'rare',
@@ -5671,11 +6517,11 @@ const VT = se({
       { type: 'StatModifier', stat: 'Crit', value: 0.035, modifierType: 'add' },
     ],
     abilities: [{ type: 'Ability', id: 'KnifeOnAttack' }],
-    requiredLevel: 8,
+    requiredLevel: 6,
     sellPrice: 55,
     tags: ['equipment'],
   }),
-  ib = se({
+  kb = ie({
     name: 'Phantom Edge',
     assetName: 'PhantomEdge',
     rarity: 'uncommon',
@@ -5690,14 +6536,14 @@ const VT = se({
     sellPrice: 200,
     tags: ['equipment'],
   }),
-  sb = se({
+  Vb = ie({
     name: 'Piercing Blade Lvl 1',
     assetName: 'PiercingBlade',
     rarity: 'rare',
     description: 'A penetrating blade that delivers high damage.',
     equipSlots: ['Weapon'],
     damage: { physical: 33 },
-    requiredLevel: 31,
+    requiredLevel: 25,
     sellPrice: 70,
     upgrades: [
       {
@@ -5711,7 +6557,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  nb = se({
+  zb = ie({
     name: 'Piercing Blade Lvl 2',
     assetName: 'PiercingBlade',
     rarity: 'rare',
@@ -5735,7 +6581,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  ab = se({
+  Xb = ie({
     name: 'Piercing Blade Lvl 3',
     assetName: 'PiercingBlade',
     rarity: 'rare',
@@ -5754,7 +6600,81 @@ const VT = se({
     sellPrice: 135,
     tags: ['equipment'],
   }),
-  rb = se({
+  Yb = ie({
+    name: 'Plowshare Lvl 1',
+    assetName: 'Plowshare',
+    rarity: 'epic',
+    description: 'A repurposed tool for harvesting defeat from your foes.',
+    equipSlots: ['Weapon'],
+    damage: { physical: 135 },
+    statModifiers: [
+      { type: 'StatModifier', stat: 'MaxHp', value: 200, modifierType: 'add' },
+    ],
+    abilities: [
+      { type: 'Ability', id: 'MagicKnifeOnEnemyDeath' },
+      { type: 'Ability', id: 'SecondWindAbility' },
+    ],
+    requiredLevel: 121,
+    sellPrice: 300,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Ore', amount: 800 },
+          { id: 'Stone', amount: 500 },
+          { id: 'EssenceCreamy', amount: 22 },
+        ],
+        yields: 'Plowshare2',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  Wb = ie({
+    name: 'Plowshare Lvl 2',
+    assetName: 'Plowshare',
+    rarity: 'epic',
+    description: 'A repurposed tool for harvesting defeat from your foes.',
+    equipSlots: ['Weapon'],
+    damage: { physical: 141 },
+    statModifiers: [
+      { type: 'StatModifier', stat: 'MaxHp', value: 235, modifierType: 'add' },
+    ],
+    abilities: [
+      { type: 'Ability', id: 'MagicKnifeOnEnemyDeath' },
+      { type: 'Ability', id: 'SecondWindAbility' },
+    ],
+    requiredLevel: 124,
+    sellPrice: 340,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Ore', amount: 1050 },
+          { id: 'Stone', amount: 700 },
+          { id: 'EssenceCreamy', amount: 40 },
+        ],
+        yields: 'Plowshare3',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  jb = ie({
+    name: 'Plowshare Lvl 3',
+    assetName: 'Plowshare',
+    rarity: 'epic',
+    description: 'A repurposed tool for harvesting defeat from your foes.',
+    equipSlots: ['Weapon'],
+    damage: { physical: 150 },
+    statModifiers: [
+      { type: 'StatModifier', stat: 'MaxHp', value: 280, modifierType: 'add' },
+    ],
+    abilities: [
+      { type: 'Ability', id: 'MagicKnifeOnEnemyDeath' },
+      { type: 'Ability', id: 'SecondWindAbility' },
+    ],
+    requiredLevel: 127,
+    sellPrice: 400,
+    tags: ['equipment'],
+  }),
+  Kb = ie({
     name: 'Rough Razor Lvl 1',
     assetName: 'RoughRazor',
     rarity: 'common',
@@ -5775,7 +6695,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  ob = se({
+  Qb = ie({
     name: 'Rough Razor Lvl 2',
     assetName: 'RoughRazor',
     rarity: 'common',
@@ -5796,7 +6716,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  lb = se({
+  Zb = ie({
     name: 'Rough Razor Lvl 3',
     assetName: 'RoughRazor',
     rarity: 'common',
@@ -5807,7 +6727,77 @@ const VT = se({
     sellPrice: 125,
     tags: ['equipment'],
   }),
-  hb = se({
+  $b = ie({
+    name: 'Ruined Rod Lvl 1',
+    assetName: 'RuinedRod',
+    rarity: 'epic',
+    description: 'A makeshift weapon pulled from the rubble.',
+    equipSlots: ['Weapon'],
+    damage: { physical: 90 },
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Speed', value: -3, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.015, modifierType: 'add' },
+    ],
+    requiredLevel: 28,
+    sellPrice: 105,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Stone', amount: 180 },
+          { id: 'Iron', amount: 180 },
+          { id: 'EssenceHearty', amount: 6 },
+        ],
+        yields: 'RuinedRod2',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  Jb = ie({
+    name: 'Ruined Rod Lvl 2',
+    assetName: 'RuinedRod',
+    rarity: 'epic',
+    description: 'A makeshift weapon pulled from the rubble.',
+    equipSlots: ['Weapon'],
+    damage: { physical: 96 },
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Speed', value: -3, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
+    ],
+    requiredLevel: 34,
+    sellPrice: 140,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Stone', amount: 240 },
+          { id: 'Iron', amount: 220 },
+          { id: 'EssenceHearty', amount: 8 },
+        ],
+        yields: 'RuinedRod3',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  qb = ie({
+    name: 'Ruined Rod Lvl 3',
+    assetName: 'RuinedRod',
+    rarity: 'epic',
+    description: 'A makeshift weapon pulled from the rubble.',
+    equipSlots: ['Weapon'],
+    damage: { physical: 103 },
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Speed', value: -3, modifierType: 'add' },
+      {
+        type: 'StatModifier',
+        stat: 'Crit',
+        value: 0.0275,
+        modifierType: 'add',
+      },
+    ],
+    requiredLevel: 40,
+    sellPrice: 200,
+    tags: ['equipment'],
+  }),
+  _b = ie({
     name: 'Rustic Sword ',
     assetName: 'RusticSword',
     rarity: 'common',
@@ -5817,7 +6807,7 @@ const VT = se({
     sellPrice: 10,
     tags: ['equipment'],
   }),
-  ub = se({
+  eL = ie({
     name: 'Salvation Scimitar Lvl 1',
     assetName: 'SalvationScimitar',
     rarity: 'epic',
@@ -5839,7 +6829,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  db = se({
+  tL = ie({
     name: 'Salvation Scimitar Lvl 2',
     assetName: 'SalvationScimitar',
     rarity: 'epic',
@@ -5861,7 +6851,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  fb = se({
+  iL = ie({
     name: 'Salvation Scimitar Ultimate',
     assetName: 'SalvationScimitar',
     rarity: 'legendary',
@@ -5876,7 +6866,7 @@ const VT = se({
     sellPrice: 275,
     tags: ['equipment'],
   }),
-  cb = se({
+  sL = ie({
     name: 'Sawtooth Axe Lvl 1',
     assetName: 'SawtoothAxe',
     rarity: 'uncommon',
@@ -5900,7 +6890,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  mb = se({
+  nL = ie({
     name: 'Sawtooth Axe Lvl 2',
     assetName: 'SawtoothAxe',
     rarity: 'uncommon',
@@ -5924,7 +6914,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  gb = se({
+  aL = ie({
     name: 'Sawtooth Axe Lvl 3',
     assetName: 'SawtoothAxe',
     rarity: 'uncommon',
@@ -5938,7 +6928,7 @@ const VT = se({
     sellPrice: 140,
     tags: ['equipment'],
   }),
-  pb = se({
+  rL = ie({
     name: 'Scarsteel Lvl 1',
     assetName: 'Scarsteel',
     rarity: 'epic',
@@ -5962,7 +6952,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  vb = se({
+  oL = ie({
     name: 'Scarsteel Lvl 2',
     assetName: 'Scarsteel',
     rarity: 'epic',
@@ -5986,7 +6976,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  yb = se({
+  lL = ie({
     name: 'Scarsteel Ultimate',
     assetName: 'Scarsteel',
     rarity: 'epic',
@@ -6000,14 +6990,13 @@ const VT = se({
     sellPrice: 1,
     tags: ['equipment'],
   }),
-  xb = se({
+  hL = ie({
     name: 'Serrated Sword Lvl 1',
     assetName: 'SerratedSword',
     rarity: 'common',
     description: 'A sword with some real bite.',
     equipSlots: ['Weapon'],
     damage: { physical: 28 },
-    requiredLevel: 15,
     sellPrice: 20,
     upgrades: [
       {
@@ -6021,7 +7010,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  Sb = se({
+  uL = ie({
     name: 'Serrated Sword Lvl 2',
     assetName: 'SerratedSword',
     rarity: 'common',
@@ -6042,7 +7031,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  wb = se({
+  dL = ie({
     name: 'Serrated Sword Lvl 3',
     assetName: 'SerratedSword',
     rarity: 'common',
@@ -6053,7 +7042,7 @@ const VT = se({
     sellPrice: 90,
     tags: ['equipment'],
   }),
-  Tb = se({
+  fL = ie({
     name: 'Shadow Slicer',
     assetName: 'ShadowSlicer',
     rarity: 'rare',
@@ -6068,7 +7057,7 @@ const VT = se({
     sellPrice: 80,
     tags: ['equipment'],
   }),
-  Cb = se({
+  cL = ie({
     name: 'Shatterblade Lvl 1',
     assetName: 'Shatterblade',
     rarity: 'epic',
@@ -6096,7 +7085,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  Ab = se({
+  mL = ie({
     name: 'Shatterblade Lvl 2',
     assetName: 'Shatterblade',
     rarity: 'epic',
@@ -6124,7 +7113,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  Eb = se({
+  gL = ie({
     name: 'Shatterblade Lvl 3',
     assetName: 'Shatterblade',
     rarity: 'epic',
@@ -6143,7 +7132,7 @@ const VT = se({
     sellPrice: 220,
     tags: ['equipment'],
   }),
-  Mb = se({
+  pL = ie({
     name: 'Simple Cutlass Lvl 1',
     assetName: 'SimpleCutlass',
     rarity: 'common',
@@ -6152,36 +7141,34 @@ const VT = se({
     damage: { physical: 15 },
     sellPrice: 20,
     upgrades: [
-      { requires: [{ id: 'Iron', amount: 45 }], yields: 'SimpleCutlass2' },
+      { requires: [{ id: 'Iron', amount: 30 }], yields: 'SimpleCutlass2' },
     ],
     tags: ['equipment'],
   }),
-  bb = se({
+  vL = ie({
     name: 'Simple Cutlass Lvl 2',
     assetName: 'SimpleCutlass',
     rarity: 'common',
     description: 'An old cutlass with a sharp edge.',
     equipSlots: ['Weapon'],
     damage: { physical: 18 },
-    requiredLevel: 8,
     sellPrice: 20,
     upgrades: [
-      { requires: [{ id: 'Iron', amount: 100 }], yields: 'SimpleCutlass3' },
+      { requires: [{ id: 'Iron', amount: 85 }], yields: 'SimpleCutlass3' },
     ],
     tags: ['equipment'],
   }),
-  Lb = se({
+  yL = ie({
     name: 'Simple Cutlass Lvl 3',
     assetName: 'SimpleCutlass',
     rarity: 'common',
     description: 'An old cutlass with a sharp edge.',
     equipSlots: ['Weapon'],
     damage: { physical: 24 },
-    requiredLevel: 13,
     sellPrice: 30,
     tags: ['equipment'],
   }),
-  Rb = se({
+  xL = ie({
     name: 'Smiting Edge',
     assetName: 'SmitingEdge',
     rarity: 'uncommon',
@@ -6196,7 +7183,7 @@ const VT = se({
     sellPrice: 200,
     tags: ['equipment'],
   }),
-  Pb = se({
+  SL = ie({
     name: 'Souldrain Axe',
     assetName: 'SouldrainAxe',
     rarity: 'legendary',
@@ -6212,7 +7199,7 @@ const VT = se({
     sellPrice: 300,
     tags: ['equipment'],
   }),
-  Bb = se({
+  wL = ie({
     name: 'Souldrain Axe EX',
     assetName: 'SouldrainAxe',
     rarity: 'legendary',
@@ -6228,7 +7215,81 @@ const VT = se({
     sellPrice: 530,
     tags: ['equipment'],
   }),
-  Db = se({
+  TL = ie({
+    name: 'Sower’s Lament Lvl 1',
+    assetName: 'SowersLament',
+    rarity: 'legendary',
+    description: 'An axe whetted with the tears of a forgotten settler.',
+    equipSlots: ['Weapon'],
+    damage: { physical: 145 },
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
+    ],
+    abilities: [
+      { type: 'Ability', id: 'GainShieldOnHitCount' },
+      { type: 'Ability', id: 'FireKnifeOnAttack' },
+    ],
+    requiredLevel: 141,
+    sellPrice: 400,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Wood', amount: 800 },
+          { id: 'Ore', amount: 700 },
+          { id: 'EssenceFresh', amount: 22 },
+        ],
+        yields: 'SowersLament2',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  CL = ie({
+    name: 'Sower’s Lament Lvl 2',
+    assetName: 'SowersLament',
+    rarity: 'legendary',
+    description: 'An axe whetted with the tears of a forgotten settler.',
+    equipSlots: ['Weapon'],
+    damage: { physical: 150 },
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
+    ],
+    abilities: [
+      { type: 'Ability', id: 'GainShieldOnHitCount' },
+      { type: 'Ability', id: 'FireKnifeOnAttack' },
+    ],
+    requiredLevel: 124,
+    sellPrice: 470,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Wood', amount: 1100 },
+          { id: 'Ore', amount: 900 },
+          { id: 'EssenceFresh', amount: 30 },
+        ],
+        yields: 'SowersLament3',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  AL = ie({
+    name: 'Sower’s Lament Lvl 3',
+    assetName: 'SowersLament',
+    rarity: 'legendary',
+    description: 'An axe whetted with the tears of a forgotten settler.',
+    equipSlots: ['Weapon'],
+    damage: { physical: 158 },
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
+    ],
+    abilities: [
+      { type: 'Ability', id: 'GainShieldOnHitCount' },
+      { type: 'Ability', id: 'FireKnifeOnAttack' },
+    ],
+    requiredLevel: 150,
+    sellPrice: 600,
+    tags: ['equipment'],
+  }),
+  EL = ie({
     name: 'Stone Blade Lvl 1',
     assetName: 'StoneBlade',
     rarity: 'uncommon',
@@ -6239,7 +7300,7 @@ const VT = se({
     upgrades: [
       {
         requires: [
-          { id: 'Stone', amount: 150 },
+          { id: 'Stone', amount: 130 },
           { id: 'EssenceSpicy', amount: 24 },
           { id: 'Ore', amount: 140 },
         ],
@@ -6248,7 +7309,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  Fb = se({
+  ML = ie({
     name: 'Stone Blade Lvl 2',
     assetName: 'StoneBlade',
     rarity: 'uncommon',
@@ -6269,7 +7330,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  Ob = se({
+  bL = ie({
     name: 'Stone Blade Ultimate',
     assetName: 'StoneBlade',
     rarity: 'uncommon',
@@ -6285,7 +7346,7 @@ const VT = se({
     sellPrice: 90,
     tags: ['equipment'],
   }),
-  Ib = se({
+  LL = ie({
     name: 'Sturdy Cleaver Lvl 1',
     assetName: 'SturdyCleaver',
     rarity: 'common',
@@ -6295,20 +7356,19 @@ const VT = se({
     statModifiers: [
       { type: 'StatModifier', stat: 'Speed', value: -3, modifierType: 'add' },
     ],
-    requiredLevel: 8,
     sellPrice: 20,
     upgrades: [
       {
         requires: [
-          { id: 'Iron', amount: 90 },
-          { id: 'Wood', amount: 70 },
+          { id: 'Iron', amount: 70 },
+          { id: 'Wood', amount: 60 },
         ],
         yields: 'SturdyCleaver2',
       },
     ],
     tags: ['equipment'],
   }),
-  Nb = se({
+  RL = ie({
     name: 'Sturdy Cleaver Lvl 2',
     assetName: 'SturdyCleaver',
     rarity: 'common',
@@ -6318,7 +7378,6 @@ const VT = se({
     statModifiers: [
       { type: 'StatModifier', stat: 'Speed', value: -2, modifierType: 'add' },
     ],
-    requiredLevel: 15,
     sellPrice: 40,
     upgrades: [
       {
@@ -6331,7 +7390,7 @@ const VT = se({
     ],
     tags: ['equipment'],
   }),
-  Gb = se({
+  PL = ie({
     name: 'Sturdy Cleaver Lvl 3',
     assetName: 'SturdyCleaver',
     rarity: 'common',
@@ -6345,7 +7404,7 @@ const VT = se({
     sellPrice: 80,
     tags: ['equipment'],
   }),
-  Hb = se({
+  BL = ie({
     name: 'Sudden Vengeance',
     assetName: 'SuddenVengeance',
     rarity: 'rare',
@@ -6357,7 +7416,7 @@ const VT = se({
     sellPrice: 45,
     tags: ['equipment'],
   }),
-  Ub = se({
+  DL = ie({
     name: 'Surge Blade',
     assetName: 'SurgeBlade',
     rarity: 'epic',
@@ -6370,11 +7429,11 @@ const VT = se({
       { type: 'StatModifier', stat: 'Dodge', value: 0.02, modifierType: 'add' },
     ],
     abilities: [{ type: 'Ability', id: 'LightningOnAttack' }],
-    requiredLevel: 9,
+    requiredLevel: 6,
     sellPrice: 100,
     tags: ['equipment'],
   }),
-  kb = se({
+  FL = ie({
     name: 'Surge Blade EX',
     assetName: 'SurgeBlade',
     rarity: 'epic',
@@ -6396,7 +7455,7 @@ const VT = se({
     sellPrice: 190,
     tags: ['equipment'],
   }),
-  Vb = se({
+  OL = ie({
     name: 'Sword Of Respite',
     assetName: 'SwordOfRespite',
     rarity: 'legendary',
@@ -6411,7 +7470,7 @@ const VT = se({
     sellPrice: 500,
     tags: ['equipment'],
   }),
-  zb = se({
+  IL = ie({
     name: 'Sword Of Respite EX',
     assetName: 'SwordOfRespite',
     rarity: 'legendary',
@@ -6431,7 +7490,7 @@ const VT = se({
     sellPrice: 720,
     tags: ['equipment'],
   }),
-  Xb = se({
+  NL = ie({
     name: 'Vectra Edge',
     assetName: 'VectraEdge',
     rarity: 'legendary',
@@ -6452,7 +7511,7 @@ const VT = se({
     sellPrice: 600,
     tags: ['equipment'],
   }),
-  Yb = se({
+  GL = ie({
     name: 'Vectra Edge EX',
     assetName: 'VectraEdge',
     rarity: 'legendary',
@@ -6476,7 +7535,7 @@ const VT = se({
     sellPrice: 200,
     tags: ['equipment'],
   }),
-  Wb = se({
+  HL = ie({
     name: 'Wasteland Blade',
     assetName: 'WastelandBlade',
     rarity: 'rare',
@@ -6497,7 +7556,7 @@ const VT = se({
     sellPrice: 220,
     tags: ['equipment'],
   }),
-  jb = se({
+  UL = ie({
     name: 'Wasteland Blade EX',
     assetName: 'WastelandBlade',
     rarity: 'rare',
@@ -6517,7 +7576,77 @@ const VT = se({
     sellPrice: 125,
     tags: ['equipment'],
   }),
-  Kb = se({
+  kL = ie({
+    name: 'Wind Powered Blade Lvl 1',
+    assetName: 'WindPoweredBlade',
+    rarity: 'epic',
+    description: 'A broad blade recovered from a towering hilltop ruin.',
+    equipSlots: ['Weapon'],
+    damage: { physical: 150 },
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Speed', value: 5, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.02, modifierType: 'add' },
+    ],
+    requiredLevel: 121,
+    sellPrice: 350,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Stone', amount: 800 },
+          { id: 'Iron', amount: 800 },
+          { id: 'EssenceFluffy', amount: 22 },
+        ],
+        yields: 'WindPoweredBlade2',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  VL = ie({
+    name: 'Wind Powered Blade Lvl 2',
+    assetName: 'WindPoweredBlade',
+    rarity: 'epic',
+    description: 'A broad blade recovered from a towering hilltop ruin.',
+    equipSlots: ['Weapon'],
+    damage: { physical: 156 },
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Speed', value: 6, modifierType: 'add' },
+      {
+        type: 'StatModifier',
+        stat: 'Dodge',
+        value: 0.025,
+        modifierType: 'add',
+      },
+    ],
+    requiredLevel: 124,
+    sellPrice: 410,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Stone', amount: 800 },
+          { id: 'Iron', amount: 800 },
+          { id: 'EssenceFluffy', amount: 22 },
+        ],
+        yields: 'WindPoweredBlade3',
+      },
+    ],
+    tags: ['equipment'],
+  }),
+  zL = ie({
+    name: 'Wind Powered Blade Lvl 3',
+    assetName: 'WindPoweredBlade',
+    rarity: 'epic',
+    description: 'A broad blade recovered from a towering hilltop ruin.',
+    equipSlots: ['Weapon'],
+    damage: { physical: 164 },
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Speed', value: 7, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
+    ],
+    requiredLevel: 129,
+    sellPrice: 500,
+    tags: ['equipment'],
+  }),
+  XL = ie({
     name: 'Blueprint: Battlethirsty Vest',
     assetName: 'BlueprintBattlethirstyVest',
     rarity: 'legendary',
@@ -6536,7 +7665,7 @@ const VT = se({
     ],
     tags: ['blueprint'],
   }),
-  Qb = se({
+  YL = ie({
     name: 'Blueprint: Blazing Shortsword',
     assetName: 'BlueprintBlazingShortsword',
     rarity: 'uncommon',
@@ -6554,7 +7683,7 @@ const VT = se({
     ],
     tags: ['blueprint'],
   }),
-  Zb = se({
+  WL = ie({
     name: 'Blueprint: Cursed Naginata',
     assetName: 'BlueprintCursedNaginata',
     rarity: 'legendary',
@@ -6572,7 +7701,7 @@ const VT = se({
     ],
     tags: ['blueprint'],
   }),
-  $b = se({
+  jL = ie({
     name: 'Blueprint: Dark Bargain Charm',
     assetName: 'BlueprintDarkBargainCharm',
     rarity: 'epic',
@@ -6589,7 +7718,7 @@ const VT = se({
     ],
     tags: ['blueprint'],
   }),
-  Jb = se({
+  KL = ie({
     name: 'Blueprint: Dark Shortsword',
     assetName: 'BlueprintDarkShortsword',
     rarity: 'uncommon',
@@ -6607,7 +7736,7 @@ const VT = se({
     ],
     tags: ['blueprint'],
   }),
-  qb = se({
+  QL = ie({
     name: 'Blueprint: Deadly Relic',
     assetName: 'BlueprintDeadlyRelic',
     rarity: 'uncommon',
@@ -6625,7 +7754,7 @@ const VT = se({
     ],
     tags: ['blueprint'],
   }),
-  _b = se({
+  ZL = ie({
     name: 'Blueprint: Draining Edge',
     assetName: 'BlueprintDrainingEdge',
     rarity: 'uncommon',
@@ -6643,7 +7772,7 @@ const VT = se({
     ],
     tags: ['blueprint'],
   }),
-  eL = se({
+  $L = ie({
     name: 'Blueprint: Electric Shortsword',
     assetName: 'BlueprintElectricShortsword',
     rarity: 'uncommon',
@@ -6661,7 +7790,7 @@ const VT = se({
     ],
     tags: ['blueprint'],
   }),
-  tL = se({
+  JL = ie({
     name: 'Blueprint: FerocityRing',
     assetName: 'BlueprintFerocityRing',
     rarity: 'epic',
@@ -6679,7 +7808,7 @@ const VT = se({
     ],
     tags: ['blueprint'],
   }),
-  iL = se({
+  qL = ie({
     name: 'Blueprint: Frozen Shortsword',
     assetName: 'BlueprintFrozenShortsword',
     rarity: 'uncommon',
@@ -6697,7 +7826,7 @@ const VT = se({
     ],
     tags: ['blueprint'],
   }),
-  sL = se({
+  _L = ie({
     name: 'Blueprint: Phantom Edge',
     assetName: 'BlueprintPhantomEdge',
     rarity: 'uncommon',
@@ -6715,7 +7844,7 @@ const VT = se({
     ],
     tags: ['blueprint'],
   }),
-  nL = se({
+  e3 = ie({
     name: 'Blueprint: Shielding Band',
     assetName: 'BlueprintShieldingBand',
     rarity: 'uncommon',
@@ -6733,7 +7862,7 @@ const VT = se({
     ],
     tags: ['blueprint'],
   }),
-  aL = se({
+  t3 = ie({
     name: 'Blueprint: Smiting Edge',
     assetName: 'BlueprintSmitingEdge',
     rarity: 'uncommon',
@@ -6751,7 +7880,7 @@ const VT = se({
     ],
     tags: ['blueprint'],
   }),
-  rL = se({
+  i3 = ie({
     name: 'Blueprint: StormWrath Belt',
     assetName: 'BlueprintStormWrathBelt',
     rarity: 'rare',
@@ -6769,7 +7898,7 @@ const VT = se({
     ],
     tags: ['blueprint'],
   }),
-  oL = se({
+  s3 = ie({
     name: 'Blueprint: Thunder Helm',
     assetName: 'BlueprintThunderHelm',
     rarity: 'uncommon',
@@ -6787,7 +7916,7 @@ const VT = se({
     ],
     tags: ['blueprint'],
   }),
-  lL = se({
+  n3 = ie({
     name: 'Chewy Essence',
     rarity: 'rare',
     description: 'One of the Flavor Essences: Chewy',
@@ -6795,7 +7924,7 @@ const VT = se({
     isStackable: !0,
     tags: ['material', 'essence'],
   }),
-  hL = se({
+  a3 = ie({
     name: 'Creamy Essence',
     rarity: 'rare',
     description: 'One of the Flavor Essences: Creamy',
@@ -6803,7 +7932,7 @@ const VT = se({
     isStackable: !0,
     tags: ['material', 'essence'],
   }),
-  uL = se({
+  r3 = ie({
     name: 'Crunchy Essence',
     rarity: 'rare',
     description: 'One of the Flavor Essences: Crunchy',
@@ -6811,7 +7940,7 @@ const VT = se({
     isStackable: !0,
     tags: ['material', 'essence'],
   }),
-  dL = se({
+  o3 = ie({
     name: 'Decadent Essence',
     rarity: 'rare',
     description: 'One of the Flavor Essences: Decadent',
@@ -6819,7 +7948,7 @@ const VT = se({
     isStackable: !0,
     tags: ['material', 'essence'],
   }),
-  fL = se({
+  l3 = ie({
     name: 'Fluffy Essence',
     rarity: 'rare',
     description: 'One of the Flavor Essences: Fluffy',
@@ -6827,7 +7956,7 @@ const VT = se({
     isStackable: !0,
     tags: ['material', 'essence'],
   }),
-  cL = se({
+  h3 = ie({
     name: 'Fresh Essence',
     rarity: 'rare',
     description: 'One of the Flavor Essences: Fresh',
@@ -6835,7 +7964,7 @@ const VT = se({
     isStackable: !0,
     tags: ['material', 'essence'],
   }),
-  mL = se({
+  u3 = ie({
     name: 'Hearty Essence',
     rarity: 'rare',
     description: 'One of the Flavor Essences: Hearty',
@@ -6843,7 +7972,7 @@ const VT = se({
     isStackable: !0,
     tags: ['material', 'essence'],
   }),
-  gL = se({
+  d3 = ie({
     name: 'Spicy Essence',
     rarity: 'rare',
     description: 'One of the Flavor Essences: Spicy',
@@ -6851,7 +7980,7 @@ const VT = se({
     isStackable: !0,
     tags: ['material', 'essence'],
   }),
-  pL = se({
+  f3 = ie({
     name: 'Tangy Essence',
     rarity: 'rare',
     description: 'One of the Flavor Essences: Tangy',
@@ -6859,35 +7988,35 @@ const VT = se({
     isStackable: !0,
     tags: ['material', 'essence'],
   }),
-  vL = se({
+  c3 = ie({
     name: 'Iron',
     description: 'A piece of iron.',
     sellPrice: 10,
     isStackable: !0,
     tags: ['material', 'resource'],
   }),
-  yL = se({
+  m3 = ie({
     name: 'Ore',
     description: 'A piece of ore.',
     sellPrice: 10,
     isStackable: !0,
     tags: ['material', 'resource'],
   }),
-  xL = se({
+  g3 = ie({
     name: 'Stone',
     description: 'A piece of stone.',
     sellPrice: 10,
     isStackable: !0,
     tags: ['material', 'resource'],
   }),
-  SL = se({
+  p3 = ie({
     name: 'Wood',
     description: 'A piece of wood.',
     sellPrice: 10,
     isStackable: !0,
     tags: ['material', 'resource'],
   }),
-  wL = se({
+  v3 = ie({
     name: 'Map: Fields',
     assetName: 'map_fields',
     rarity: 'uncommon',
@@ -6895,7 +8024,7 @@ const VT = se({
     sellPrice: 20,
     tags: ['map', 'usable'],
   }),
-  TL = se({
+  y3 = ie({
     name: 'Map: Forbidden City',
     assetName: 'map_forbidden_city',
     rarity: 'uncommon',
@@ -6903,7 +8032,7 @@ const VT = se({
     sellPrice: 20,
     tags: ['map', 'usable'],
   }),
-  CL = se({
+  x3 = ie({
     name: 'Map: Mossy Forest',
     assetName: 'map_mossy_forest',
     rarity: 'uncommon',
@@ -6911,7 +8040,7 @@ const VT = se({
     sellPrice: 20,
     tags: ['map', 'usable'],
   }),
-  AL = se({
+  S3 = ie({
     name: 'Map: Mountain Pass',
     assetName: 'map_mountain_pass',
     rarity: 'uncommon',
@@ -6919,7 +8048,7 @@ const VT = se({
     sellPrice: 20,
     tags: ['map', 'usable'],
   }),
-  EL = se({
+  w3 = ie({
     name: 'Map: New Eden',
     assetName: 'map_new_eden',
     rarity: 'uncommon',
@@ -6927,7 +8056,7 @@ const VT = se({
     sellPrice: 20,
     tags: ['map', 'usable'],
   }),
-  ML = se({
+  T3 = ie({
     name: 'Map: Outer Temple',
     assetName: 'map_outer_temple',
     rarity: 'uncommon',
@@ -6935,7 +8064,7 @@ const VT = se({
     sellPrice: 40,
     tags: ['map', 'usable'],
   }),
-  bL = se({
+  C3 = ie({
     name: 'Map: Ruined Path',
     assetName: 'map_ruined_path',
     rarity: 'uncommon',
@@ -6943,7 +8072,7 @@ const VT = se({
     sellPrice: 20,
     tags: ['map', 'usable'],
   }),
-  LL = se({
+  A3 = ie({
     name: 'Map: Seaside Cliffs',
     assetName: 'map_seaside_cliffs',
     rarity: 'uncommon',
@@ -6951,7 +8080,7 @@ const VT = se({
     sellPrice: 20,
     tags: ['map', 'usable'],
   }),
-  RL = se({
+  E3 = ie({
     name: 'Map: Fields',
     assetName: 'map_fields',
     rarity: 'rare',
@@ -6959,7 +8088,7 @@ const VT = se({
     sellPrice: 40,
     tags: ['map', 'usable'],
   }),
-  PL = se({
+  M3 = ie({
     name: 'Map: Forbidden City',
     assetName: 'map_forbidden_city',
     rarity: 'rare',
@@ -6967,7 +8096,7 @@ const VT = se({
     sellPrice: 40,
     tags: ['map', 'usable'],
   }),
-  BL = se({
+  b3 = ie({
     name: 'Map: Mossy Forest',
     assetName: 'map_mossy_forest',
     rarity: 'rare',
@@ -6975,7 +8104,7 @@ const VT = se({
     sellPrice: 40,
     tags: ['map', 'usable'],
   }),
-  DL = se({
+  L3 = ie({
     name: 'Map: Mountain Pass',
     assetName: 'map_mountain_pass',
     rarity: 'rare',
@@ -6983,7 +8112,7 @@ const VT = se({
     sellPrice: 40,
     tags: ['map', 'usable'],
   }),
-  FL = se({
+  R3 = ie({
     name: 'Map: New Eden',
     assetName: 'map_new_eden',
     rarity: 'rare',
@@ -6991,7 +8120,7 @@ const VT = se({
     sellPrice: 40,
     tags: ['map', 'usable'],
   }),
-  OL = se({
+  P3 = ie({
     name: 'Map: Outer Temple',
     assetName: 'map_outer_temple',
     rarity: 'rare',
@@ -6999,7 +8128,7 @@ const VT = se({
     sellPrice: 20,
     tags: ['map', 'usable'],
   }),
-  IL = se({
+  B3 = ie({
     name: 'Map: Ruined Path',
     assetName: 'map_ruined_path',
     rarity: 'rare',
@@ -7007,7 +8136,7 @@ const VT = se({
     sellPrice: 40,
     tags: ['map', 'usable'],
   }),
-  NL = se({
+  D3 = ie({
     name: 'Map: Seaside Cliffs',
     assetName: 'map_seaside_cliffs',
     rarity: 'rare',
@@ -7015,380 +8144,428 @@ const VT = se({
     sellPrice: 40,
     tags: ['map', 'usable'],
   })
-
-export const GL = {
-  Gem: zT,
-  Gold: VT,
-  BenevolentCharm: XT,
-  BlazingAmulet: YT,
-  BlazingAmulet2: WT,
-  BlazingAmulet3: jT,
-  BronzeAmulet: KT,
-  BulwarkChain: QT,
-  BulwarkChain2: ZT,
-  ChippedPendant: $T,
-  ChippedPendant2: JT,
-  ChippedPendant3: qT,
-  CrystalHeartCharm: _T,
-  DarkBargainCharm: e2,
-  DeadlyRelic: t2,
-  DeathzoneLocketEX: i2,
-  DeathzoneNecklet: s2,
-  DefensiveCharm: n2,
-  DefensiveCharmUltimate: a2,
-  EvasionAmulet: r2,
-  Furybringer: o2,
-  FurybringerUltimate: l2,
-  GhostlyPendant: h2,
-  GhostlyPendant2: u2,
-  GhostlyPendantUltimate: d2,
-  LuckyLocket: f2,
-  PhaseCharm: c2,
-  PhaseCharm2: m2,
-  PhaseCharm3: g2,
-  RadiantCharm: p2,
-  RagingCharm: v2,
-  RagingCharmEX: y2,
-  SurvivalCharm: x2,
-  SurvivalCharm2: S2,
-  SurvivalCharm3: w2,
-  VengefulLocket: T2,
-  WarpstoneAmulet: C2,
-  WarpstoneAmulet2: A2,
-  WarpstoneAmulet3: E2,
-  WatchersLocket: M2,
-  WatchersLocketEX: b2,
-  WizardSigil: L2,
-  WizardSigil2: R2,
-  WizardSigilUltimate: P2,
-  WrathfulLocket: B2,
-  AudacityChain: D2,
-  AudacityChain2: F2,
-  AudacityChain3: O2,
-  AudacityChain4: I2,
-  AudacityChainUltimate: N2,
-  BladedBelt: G2,
-  BladedBeltUltimate: H2,
-  FlawedClasp: U2,
-  FrenziedSash: k2,
-  GroundingBelt: V2,
-  GroundingBelt2: z2,
-  GroundingBelt3: X2,
-  GuardsBelt: Y2,
-  HastySash: W2,
-  HeartyBelt: j2,
-  HeartyBeltEX: K2,
-  HeavyBelt: Q2,
-  InsulatedWrap: Z2,
-  KnifeCollectorsBelt: $2,
-  KnifeCollectorsBeltUltimate: J2,
-  LifevineBelt: q2,
-  LifevineBelt2: _2,
-  LifevineBelt3: eC,
-  PainfulWrap: tC,
-  PlatedBelt: iC,
-  PlatedBelt2: sC,
-  PlatedBelt3: nC,
-  RopeBraid: aC,
-  RopeBraid2: rC,
-  RopeBraid3: oC,
-  SecondChanceBelt: lC,
-  StormCurseWrap: hC,
-  StormWrathBelt: uC,
-  ThermalBinding: dC,
-  ThermalBindingUltimate: fC,
-  TwineCinch: cC,
-  TwineCinch2: mC,
-  TwineCinch3: gC,
-  TwineCord: pC,
-  TwineCord2: vC,
-  TwinForkedSash: yC,
-  TwinForkedSashEX: xC,
-  VolatileSash: SC,
-  VolatileSashEX: wC,
-  WardingBelt: TC,
-  WardingBeltEX: CC,
-  WraithSash: AC,
-  WraithSash2: EC,
-  WraithSash3: MC,
-  BattleHardendedVest: bC,
-  BattlethirstyVest: LC,
-  BloodiedChainMail: RC,
-  BloodiedChainMailUltimate: PC,
-  BrightPlate: BC,
-  DarksteelPlate: DC,
-  DarksteelPlateEX: FC,
-  FirststrikeVest: OC,
-  FlameguardJacket: IC,
-  FlameguardJacket2: NC,
-  FlameguardJacket3: GC,
-  FlutteringCape: HC,
-  FuryVest: UC,
-  FuryVest2: kC,
-  FuryVest3: VC,
-  GroundedPlate: zC,
-  GuardianPlate: XC,
-  GuardianPlate2: YC,
-  GuardianPlateUltimate: WC,
-  HardenedGarb: jC,
-  LeatherTunic: KC,
-  LeatherTunic2: QC,
-  LeatherTunic3: ZC,
-  MantleofNeed: $C,
-  MantleofNeedEX: JC,
-  PowerVest: qC,
-  ProtectiveMantle: _C,
-  ProtectiveMantle2: eA,
-  RecoveryVest: tA,
-  RecoveryVestEX: iA,
-  RestorationChainmail: sA,
-  RestorationChainmailEX: nA,
-  RuggedJerkin: aA,
-  RuggedJerkin2: rA,
-  RuggedJerkin3: oA,
-  SharkskinShirt: lA,
-  SharkskinShirt2: hA,
-  SharkskinShirt3: uA,
-  SilkenRobe: dA,
-  SilkenRobe2: fA,
-  SilkenRobe3: cA,
-  Soulplate: mA,
-  SwiftCowl: gA,
-  TatteredCuirass: pA,
-  TatteredCuirassUltimate: vA,
-  UntouchableMantle: yA,
-  UntouchableMantleEX: xA,
-  AcuityHelm: SA,
-  AcuityHelm2: wA,
-  AcuityHelmUltimate: TA,
-  AdrenalineCap: CA,
-  AdrenalineCapEX: AA,
-  BolsteringHeadgear: EA,
-  BolsteringHeadgearEX: MA,
-  BraveheartHelm: bA,
-  BraveheartHelm2: LA,
-  BraveheartHelmUltimate: RA,
-  ConfoundingMask: PA,
-  ConfoundingMask2: BA,
-  FlameHood: DA,
-  HelmOfBlades: FA,
-  HelmofBladesUltimate: OA,
-  IntricateHeadgear: IA,
-  LeatherCap: NA,
-  LeatherCap2: GA,
-  LeatherCap3: HA,
-  PaddedHelmet: UA,
-  RawhideCap: kA,
-  RawhideCap2: VA,
-  RawhideCap3: zA,
-  RestorationHelm: XA,
-  RustedHelm: YA,
-  ShadowbaneCirclet: WA,
-  ShadowDrinkerHelm: jA,
-  ShadowDrinkerHelmUltimate: KA,
-  ShieldingHelm: QA,
-  ShieldingHelmUltimate: ZA,
-  SpikedCowl: $A,
-  SpikedCowlEX: JA,
-  SturdyHeadguard: qA,
-  SturdyHeadguardUltimate: _A,
-  SunstoneHelmet: eE,
-  SurgeHelm: tE,
-  SurgeHelmEX: iE,
-  ThunderHelm: sE,
-  ToughHelmet: nE,
-  ToughHelmet2: aE,
-  ToughHelmet3: rE,
-  VanishingHood: oE,
-  VanishingHood2: lE,
-  VanishingHood3: hE,
-  WrathfulVisor: uE,
-  WrathfulVisorEX: dE,
-  AmberfireRing: fE,
-  BlastingRing: cE,
-  BlastingRingEX: mE,
-  BlazingRing: gE,
-  CopperRing: pE,
-  ElementalRing: vE,
-  FerocityRing: yE,
-  FocusRing: xE,
-  FragileRing: SE,
-  HeavyBand: wE,
-  InfernoRing: TE,
-  InfernoRing2: CE,
-  InfernoRingUltimate: AE,
-  JaggedRing: EE,
-  JaggedRing2: ME,
-  JaggedRing3: bE,
-  LuckstoneRing: LE,
-  MuscleRing: RE,
-  MuscleRing2: PE,
-  MuscleRing3: BE,
-  QuicksilverRing: DE,
-  RazorRing: FE,
-  RazorRingUltimate: OE,
-  RubyClawedRing: IE,
-  RubyClawedRingEX: NE,
-  ShieldingBand: GE,
-  SmitingRing: HE,
-  SmitingRingUltimate: UE,
-  StackedSignet: kE,
-  StackedSignet2: VE,
-  StackedSignetUltimate: zE,
-  Stormseeker: XE,
-  Stormseeker2: YE,
-  TarnishedBand: WE,
-  TarnishedBand2: jE,
-  TarnishedBand3: KE,
-  TwilightBand: QE,
-  TwilightBand2: ZE,
-  TwilightBand3: $E,
-  TwinbladeBand: JE,
-  TwinbladeBandEX: qE,
-  WatchersSpark: _E,
-  WatchersSparkEX: eM,
-  AdventurersBlade: tM,
-  AdventurersBlade2: iM,
-  AdventurersBlade3: sM,
-  BatteredBroadsword: nM,
-  BattlereadyBlade: aM,
-  BattleReadyBladeUltimate: rM,
-  BerserkerAxe: oM,
-  BerserkerAxe2: lM,
-  BerserkerAxeUltimate: hM,
-  BlazingShortsword: uM,
-  Bloodseeker: dM,
-  BloodseekerUltimate: fM,
-  BluntBludgeon: cM,
-  BluntBludgeon2: mM,
-  BluntBludgeon3: gM,
-  BrutalBlade: pM,
-  BrutalBlade2: vM,
-  BrutalBladeUltimate: yM,
-  ChargedFalchion: xM,
-  ChippedShortsword: SM,
-  CursedNaginata: wM,
-  DarkShortsword: TM,
-  DoublePoleAxe: CM,
-  DoublePoleAxe2: AM,
-  DoublePoleAxeUltimate: EM,
-  DrainingEdge: MM,
-  Duskbringer: bM,
-  Duskbringer2: LM,
-  Duskbringer3: RM,
-  ElectricShortsword: PM,
-  EternityMace: BM,
-  EternityMace2: DM,
-  EternityMace3: FM,
-  Fangblade: OM,
-  FangbladeEX: IM,
-  FatalFarewell: NM,
-  FlameguardSword: GM,
-  FlameguardSword2: HM,
-  FlameguardSword3: UM,
-  Forgefang: kM,
-  Forgefang2: VM,
-  FrozenShortsword: zM,
-  FuryBlade: XM,
-  FuryBlade2: YM,
-  FuryBlade3: WM,
-  GlacialShard: jM,
-  GlacialShard2: KM,
-  HatefulDarkness: QM,
-  HatefulDarknessEX: ZM,
-  HerosLongSword: $M,
-  HerosLongSword2: JM,
-  HerosLongSwordUltimate: qM,
-  InfernoCaller: _M,
-  InfernoCallerEX: eb,
-  PhantomBladeSword: tb,
-  PhantomEdge: ib,
-  PiercingBlade: sb,
-  PiercingBlade2: nb,
-  PiercingBlade3: ab,
-  RoughRazor: rb,
-  RoughRazor2: ob,
-  RoughRazor3: lb,
-  RusticSword: hb,
-  SalvationScimitar: ub,
-  SalvationScimitar2: db,
-  SalvationScimitarUltimate: fb,
-  SawtoothAxe: cb,
-  SawtoothAxe2: mb,
-  SawtoothAxe3: gb,
-  Scarsteel: pb,
-  Scarsteel2: vb,
-  ScarsteelUltimate: yb,
-  SerratedSword: xb,
-  SerratedSword2: Sb,
-  SerratedSword3: wb,
-  ShadowSlicer: Tb,
-  Shatterblade: Cb,
-  Shatterblade2: Ab,
-  Shatterblade3: Eb,
-  SimpleCutlass: Mb,
-  SimpleCutlass2: bb,
-  SimpleCutlass3: Lb,
-  SmitingEdge: Rb,
-  SouldrainAxe: Pb,
-  SouldrainAxeEX: Bb,
-  StoneBlade: Db,
-  StoneBlade2: Fb,
-  StoneBladeUltimate: Ob,
-  SturdyCleaver: Ib,
-  SturdyCleaver2: Nb,
-  SturdyCleaver3: Gb,
-  SuddenVengeance: Hb,
-  SurgeBlade: Ub,
-  SurgeBladeEX: kb,
-  SwordOfRespite: Vb,
-  SwordOfRespiteEX: zb,
-  VectraEdge: Xb,
-  VectraEdgeEX: Yb,
-  WastelandBlade: Wb,
-  WastelandBladeEX: jb,
-  BlueprintBattlethirstyVest: Kb,
-  BlueprintBlazingShortsword: Qb,
-  BlueprintCursedNaginata: Zb,
-  BlueprintDarkBargainCharm: $b,
-  BlueprintDarkShortsword: Jb,
-  BlueprintDeadlyRelic: qb,
-  BlueprintDrainingEdge: _b,
-  BlueprintElectricShortsword: eL,
-  BlueprintFerocityRing: tL,
-  BlueprintFrozenShortsword: iL,
-  BlueprintPhantomEdge: sL,
-  BlueprintShieldingBand: nL,
-  BlueprintSmitingEdge: aL,
-  BlueprintStormWrathBelt: rL,
-  BlueprintThunderHelm: oL,
-  EssenceChewy: lL,
-  EssenceCreamy: hL,
-  EssenceCrunchy: uL,
-  EssenceDecadent: dL,
-  EssenceFluffy: fL,
-  EssenceFresh: cL,
-  EssenceHearty: mL,
-  EssenceSpicy: gL,
-  EssenceTangy: pL,
-  Iron: vL,
-  Ore: yL,
-  Stone: xL,
-  Wood: SL,
-  MapFieldsUncommon: wL,
-  MapForbiddenCityUncommon: TL,
-  MapMossyForestUncommon: CL,
-  MapMountainPassUncommon: AL,
-  MapNewEdenUncommon: EL,
-  MapOuterTempleUncommon: ML,
-  MapRuinedPathUncommon: bL,
-  MapSeasideCliffsUncommon: LL,
-  MapFieldsRare: RL,
-  MapForbiddenCityRare: PL,
-  MapMossyForestRare: BL,
-  MapMountainPassRare: DL,
-  MapNewEdenRare: FL,
-  MapOuterTempleRare: OL,
-  MapRuinedPathRare: IL,
-  MapSeasideCliffsRare: NL,
+export const items = {
+  Gem: XT,
+  Gold: zT,
+  BenevolentCharm: YT,
+  BlazingAmulet: WT,
+  BlazingAmulet2: jT,
+  BlazingAmulet3: KT,
+  BronzeAmulet: QT,
+  BulwarkChain: ZT,
+  BulwarkChain2: $T,
+  ChippedPendant: JT,
+  ChippedPendant2: qT,
+  ChippedPendant3: _T,
+  CrystalHeartCharm: e2,
+  DarkBargainCharm: t2,
+  DeadlyRelic: i2,
+  DeathzoneLocketEX: s2,
+  DeathzoneNecklet: n2,
+  DefensiveCharm: a2,
+  DefensiveCharmUltimate: r2,
+  EvasionAmulet: o2,
+  Furybringer: l2,
+  FurybringerUltimate: h2,
+  GhostlyPendant: u2,
+  GhostlyPendant2: d2,
+  GhostlyPendantUltimate: f2,
+  LuckyLocket: c2,
+  PhaseCharm: m2,
+  PhaseCharm2: g2,
+  PhaseCharm3: p2,
+  RadiantCharm: v2,
+  RagingCharm: y2,
+  RagingCharmEX: x2,
+  StalwartSolidus: S2,
+  StalwartSolidus2: w2,
+  StalwartSolidus3: T2,
+  SurvivalCharm: C2,
+  SurvivalCharm2: A2,
+  SurvivalCharm3: E2,
+  TwistedCharm: M2,
+  TwistedCharm2: b2,
+  TwistedCharm3: L2,
+  VengefulLocket: R2,
+  WarpstoneAmulet: P2,
+  WarpstoneAmulet2: B2,
+  WarpstoneAmulet3: D2,
+  WatchersLocket: F2,
+  WatchersLocketEX: O2,
+  WizardSigil: I2,
+  WizardSigil2: N2,
+  WizardSigilUltimate: G2,
+  WrathfulLocket: H2,
+  AudacityChain: U2,
+  AudacityChain2: k2,
+  AudacityChain3: V2,
+  AudacityChain4: z2,
+  AudacityChainUltimate: X2,
+  BladedBelt: Y2,
+  BladedBeltUltimate: W2,
+  FlawedClasp: j2,
+  FrenziedSash: K2,
+  GroundingBelt: Q2,
+  GroundingBelt2: Z2,
+  GroundingBelt3: $2,
+  GuardsBelt: J2,
+  HastySash: q2,
+  HeartyBelt: _2,
+  HeartyBeltEX: eC,
+  HeavyBelt: tC,
+  InsulatedWrap: iC,
+  KnifeCollectorsBelt: sC,
+  KnifeCollectorsBeltUltimate: nC,
+  LifevineBelt: aC,
+  LifevineBelt2: rC,
+  LifevineBelt3: oC,
+  PainfulWrap: lC,
+  PlatedBelt: hC,
+  PlatedBelt2: uC,
+  PlatedBelt3: dC,
+  RopeBraid: fC,
+  RopeBraid2: cC,
+  RopeBraid3: mC,
+  RusticBelt: gC,
+  RusticBelt2: pC,
+  RusticBelt3: vC,
+  SecondChanceBelt: yC,
+  SeethingSash: xC,
+  SeethingSash2: SC,
+  SeethingSash3: wC,
+  StormCurseWrap: TC,
+  StormWrathBelt: CC,
+  ThermalBinding: AC,
+  ThermalBindingUltimate: EC,
+  TwineCinch: MC,
+  TwineCinch2: bC,
+  TwineCinch3: LC,
+  TwineCord: RC,
+  TwineCord2: PC,
+  TwinForkedSash: BC,
+  TwinForkedSashEX: DC,
+  VolatileSash: FC,
+  VolatileSashEX: OC,
+  WardingBelt: IC,
+  WardingBeltEX: NC,
+  WraithSash: GC,
+  WraithSash2: HC,
+  WraithSash3: UC,
+  BattleHardendedVest: kC,
+  BattlethirstyVest: VC,
+  BloodiedChainMail: zC,
+  BloodiedChainMailUltimate: XC,
+  BrightPlate: YC,
+  ConductiveChestplate: WC,
+  ConductiveChestplate2: jC,
+  ConductiveChestplate3: KC,
+  DarksteelPlate: QC,
+  DarksteelPlateEX: ZC,
+  FirststrikeVest: $C,
+  FlameguardJacket: JC,
+  FlameguardJacket2: qC,
+  FlameguardJacket3: _C,
+  FlutteringCape: eA,
+  FuryVest: tA,
+  FuryVest2: iA,
+  FuryVest3: sA,
+  GroundedPlate: nA,
+  GuardianPlate: aA,
+  GuardianPlate2: rA,
+  GuardianPlateUltimate: oA,
+  HardenedGarb: lA,
+  LeatherTunic: hA,
+  LeatherTunic2: uA,
+  LeatherTunic3: dA,
+  MantleofNeed: fA,
+  MantleofNeedEX: cA,
+  MercenaryCuirass: mA,
+  MercenaryCuirass2: gA,
+  MercenaryCuirass3: pA,
+  PowerVest: vA,
+  ProtectiveMantle: yA,
+  ProtectiveMantle2: xA,
+  RecoveryVest: SA,
+  RecoveryVestEX: wA,
+  RestorationChainmail: TA,
+  RestorationChainmailEX: CA,
+  RuggedJerkin: AA,
+  RuggedJerkin2: EA,
+  RuggedJerkin3: MA,
+  SharkskinShirt: bA,
+  SharkskinShirt2: LA,
+  SharkskinShirt3: RA,
+  SilkenRobe: PA,
+  SilkenRobe2: BA,
+  SilkenRobe3: DA,
+  Soulplate: FA,
+  SwiftCowl: OA,
+  TatteredCuirass: IA,
+  TatteredCuirassUltimate: NA,
+  UntouchableMantle: GA,
+  UntouchableMantleEX: HA,
+  AcuityHelm: UA,
+  AcuityHelm2: kA,
+  AcuityHelmUltimate: VA,
+  AdrenalineCap: zA,
+  AdrenalineCapEX: XA,
+  BolsteringHeadgear: YA,
+  BolsteringHeadgearEX: WA,
+  BraveheartHelm: jA,
+  BraveheartHelm2: KA,
+  BraveheartHelmUltimate: QA,
+  ConfoundingMask: ZA,
+  ConfoundingMask2: $A,
+  ConjurersCap: JA,
+  ConjurersCap2: qA,
+  ConjurersCapUltimate: _A,
+  CordovanHood: eE,
+  CordovanHood2: tE,
+  CordovanHood3: iE,
+  FlameHood: sE,
+  HelmOfBlades: nE,
+  HelmofBladesUltimate: aE,
+  IntricateHeadgear: rE,
+  LeatherCap: oE,
+  LeatherCap2: lE,
+  LeatherCap3: hE,
+  PaddedHelmet: uE,
+  RawhideCap: dE,
+  RawhideCap2: fE,
+  RawhideCap3: cE,
+  RestorationHelm: mE,
+  RustedHelm: gE,
+  ShadowbaneCirclet: pE,
+  ShadowDrinkerHelm: vE,
+  ShadowDrinkerHelmUltimate: yE,
+  ShieldingHelm: xE,
+  ShieldingHelmUltimate: SE,
+  SpikedCowl: wE,
+  SpikedCowlEX: TE,
+  SturdyHeadguard: CE,
+  SturdyHeadguardUltimate: AE,
+  SunstoneHelmet: EE,
+  SurgeHelm: ME,
+  SurgeHelmEX: bE,
+  ThunderHelm: LE,
+  ToughHelmet: RE,
+  ToughHelmet2: PE,
+  ToughHelmet3: BE,
+  VanishingHood: DE,
+  VanishingHood2: FE,
+  VanishingHood3: OE,
+  WrathfulVisor: IE,
+  WrathfulVisorEX: NE,
+  AmberfireRing: GE,
+  BlastingRing: HE,
+  BlastingRingEX: UE,
+  BlazingRing: kE,
+  CopperRing: VE,
+  ElementalRing: zE,
+  FerocityRing: XE,
+  FiligreeBand: YE,
+  FiligreeBand2: WE,
+  FiligreeBand3: jE,
+  FocusRing: KE,
+  FragileRing: QE,
+  HeavyBand: ZE,
+  InfernoRing: $E,
+  InfernoRing2: JE,
+  InfernoRingUltimate: qE,
+  JaggedRing: _E,
+  JaggedRing2: eM,
+  JaggedRing3: tM,
+  LuckstoneRing: iM,
+  MuscleRing: sM,
+  MuscleRing2: nM,
+  MuscleRing3: aM,
+  QuicksilverRing: rM,
+  RazorRing: oM,
+  RazorRingUltimate: lM,
+  RingOfRepair: hM,
+  RingOfRepair2: uM,
+  RingOfRepairUltimate: dM,
+  RubyClawedRing: fM,
+  RubyClawedRingEX: cM,
+  ShieldingBand: mM,
+  SmitingRing: gM,
+  SmitingRingUltimate: pM,
+  StackedSignet: vM,
+  StackedSignet2: yM,
+  StackedSignetUltimate: xM,
+  Stormseeker: SM,
+  Stormseeker2: wM,
+  TarnishedBand: TM,
+  TarnishedBand2: CM,
+  TarnishedBand3: AM,
+  TwilightBand: EM,
+  TwilightBand2: MM,
+  TwilightBand3: bM,
+  TwinbladeBand: LM,
+  TwinbladeBandEX: RM,
+  WatchersSpark: PM,
+  WatchersSparkEX: BM,
+  AdventurersBlade: DM,
+  AdventurersBlade2: FM,
+  AdventurersBlade3: OM,
+  BatteredBroadsword: IM,
+  BattlereadyBlade: NM,
+  BattleReadyBladeUltimate: GM,
+  BerserkerAxe: HM,
+  BerserkerAxe2: UM,
+  BerserkerAxeUltimate: kM,
+  BlazingShortsword: VM,
+  Bloodseeker: zM,
+  BloodseekerUltimate: XM,
+  BluntBludgeon: YM,
+  BluntBludgeon2: WM,
+  BluntBludgeon3: jM,
+  BrutalBlade: KM,
+  BrutalBlade2: QM,
+  BrutalBladeUltimate: ZM,
+  BuccaneersFriend: $M,
+  BuccaneersFriend2: JM,
+  BuccaneersFriend3: qM,
+  ChargedFalchion: _M,
+  ChippedShortsword: eb,
+  CursedNaginata: tb,
+  DarkShortsword: ib,
+  DarkWard: sb,
+  DarkWard2: nb,
+  DarkWard3: ab,
+  DoublePoleAxe: rb,
+  DoublePoleAxe2: ob,
+  DoublePoleAxeUltimate: lb,
+  DrainingEdge: hb,
+  Duskbringer: ub,
+  Duskbringer2: db,
+  Duskbringer3: fb,
+  ElectricShortsword: cb,
+  EternityMace: mb,
+  EternityMace2: gb,
+  EternityMace3: pb,
+  Fangblade: vb,
+  FangbladeEX: yb,
+  FatalFarewell: xb,
+  FlameguardSword: Sb,
+  FlameguardSword2: wb,
+  FlameguardSword3: Tb,
+  Forgefang: Cb,
+  Forgefang2: Ab,
+  FragmentOfTheGreatSword: Eb,
+  FrozenShortsword: Mb,
+  FuryBlade: bb,
+  FuryBlade2: Lb,
+  FuryBlade3: Rb,
+  GlacialShard: Pb,
+  GlacialShard2: Bb,
+  HatefulDarkness: Db,
+  HatefulDarknessEX: Fb,
+  HerosLongSword: Ob,
+  HerosLongSword2: Ib,
+  HerosLongSwordUltimate: Nb,
+  InfernoCaller: Gb,
+  InfernoCallerEX: Hb,
+  PhantomBladeSword: Ub,
+  PhantomEdge: kb,
+  PiercingBlade: Vb,
+  PiercingBlade2: zb,
+  PiercingBlade3: Xb,
+  Plowshare: Yb,
+  Plowshare2: Wb,
+  Plowshare3: jb,
+  RoughRazor: Kb,
+  RoughRazor2: Qb,
+  RoughRazor3: Zb,
+  RuinedRod: $b,
+  RuinedRod2: Jb,
+  RuinedRod3: qb,
+  RusticSword: _b,
+  SalvationScimitar: eL,
+  SalvationScimitar2: tL,
+  SalvationScimitarUltimate: iL,
+  SawtoothAxe: sL,
+  SawtoothAxe2: nL,
+  SawtoothAxe3: aL,
+  Scarsteel: rL,
+  Scarsteel2: oL,
+  ScarsteelUltimate: lL,
+  SerratedSword: hL,
+  SerratedSword2: uL,
+  SerratedSword3: dL,
+  ShadowSlicer: fL,
+  Shatterblade: cL,
+  Shatterblade2: mL,
+  Shatterblade3: gL,
+  SimpleCutlass: pL,
+  SimpleCutlass2: vL,
+  SimpleCutlass3: yL,
+  SmitingEdge: xL,
+  SouldrainAxe: SL,
+  SouldrainAxeEX: wL,
+  SowersLament: TL,
+  SowersLament2: CL,
+  SowersLament3: AL,
+  StoneBlade: EL,
+  StoneBlade2: ML,
+  StoneBladeUltimate: bL,
+  SturdyCleaver: LL,
+  SturdyCleaver2: RL,
+  SturdyCleaver3: PL,
+  SuddenVengeance: BL,
+  SurgeBlade: DL,
+  SurgeBladeEX: FL,
+  SwordOfRespite: OL,
+  SwordOfRespiteEX: IL,
+  VectraEdge: NL,
+  VectraEdgeEX: GL,
+  WastelandBlade: HL,
+  WastelandBladeEX: UL,
+  WindPoweredBlade: kL,
+  WindPoweredBlade2: VL,
+  WindPoweredBlade3: zL,
+  BlueprintBattlethirstyVest: XL,
+  BlueprintBlazingShortsword: YL,
+  BlueprintCursedNaginata: WL,
+  BlueprintDarkBargainCharm: jL,
+  BlueprintDarkShortsword: KL,
+  BlueprintDeadlyRelic: QL,
+  BlueprintDrainingEdge: ZL,
+  BlueprintElectricShortsword: $L,
+  BlueprintFerocityRing: JL,
+  BlueprintFrozenShortsword: qL,
+  BlueprintPhantomEdge: _L,
+  BlueprintShieldingBand: e3,
+  BlueprintSmitingEdge: t3,
+  BlueprintStormWrathBelt: i3,
+  BlueprintThunderHelm: s3,
+  EssenceChewy: n3,
+  EssenceCreamy: a3,
+  EssenceCrunchy: r3,
+  EssenceDecadent: o3,
+  EssenceFluffy: l3,
+  EssenceFresh: h3,
+  EssenceHearty: u3,
+  EssenceSpicy: d3,
+  EssenceTangy: f3,
+  Iron: c3,
+  Ore: m3,
+  Stone: g3,
+  Wood: p3,
+  MapFieldsUncommon: v3,
+  MapForbiddenCityUncommon: y3,
+  MapMossyForestUncommon: x3,
+  MapMountainPassUncommon: S3,
+  MapNewEdenUncommon: w3,
+  MapOuterTempleUncommon: T3,
+  MapRuinedPathUncommon: C3,
+  MapSeasideCliffsUncommon: A3,
+  MapFieldsRare: E3,
+  MapForbiddenCityRare: M3,
+  MapMossyForestRare: b3,
+  MapMountainPassRare: L3,
+  MapNewEdenRare: R3,
+  MapOuterTempleRare: P3,
+  MapRuinedPathRare: B3,
+  MapSeasideCliffsRare: D3,
 }

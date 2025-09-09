@@ -1,6 +1,6 @@
 import './App.css'
 // import items from './items.json'
-import { GL as items } from './utils/generate_items'
+import { items } from './utils/items'
 import WeaponTable from './WeaponTable'
 
 import type {
@@ -58,6 +58,7 @@ function CustomTabPanel(props: TabPanelProps) {
 }
 
 function App() {
+  const assetsArray = []
   const itemArrays = useMemo(() => {
     const itemNameMap: ItemNameMap = {}
     const weaponsArray: Item[] = []
@@ -74,11 +75,11 @@ function App() {
         equipSlots: items[key as itemsKey].equipSlots as Slot[],
         id: key,
       }
-      // if (item.assetName) {
-      //   assetsArray.push(
-      //     `https://eimoap--5ea9dfdf-b835-45a9-b89d-e27ea9f9a35c-0-0-37-webview.devvit.net/assets/ui/item-icons/${item.assetName}.png`
-      //   )
-      // }
+      if (item.assetName) {
+        assetsArray.push(
+          `https://cabbageidle-eimoap-0-0-40-webview.devvit.net/assets/ui/item-icons/${item.assetName}.png`
+        )
+      }
 
       itemNameMap[key] = item
       if (
@@ -105,7 +106,7 @@ function App() {
       })
     })
 
-    // console.log(assetsArray)
+    console.log(assetsArray)
     return {
       itemNameMap,
       weaponsArray,
