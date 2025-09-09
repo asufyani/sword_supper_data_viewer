@@ -27,6 +27,7 @@ import FoodTable from './FoodTable'
 import QuestsTable from './QuestsTable'
 import { HelpPanel } from './HelpPanel'
 import AbilityTable from './AbilityTable'
+import { et } from './utils/loot'
 type itemsKey = keyof typeof items
 
 interface TabPanelProps {
@@ -65,6 +66,7 @@ function App() {
     const armorArray: Item[] = []
     const blueprintArray: Item[] = []
     const mapArray: Item[] = []
+    const itemDropLocations: Record<string, Record<string, number>> = {}
     // const assetsArray: string[] = []
     const upgradeMaterialItems: Record<string, string[]> = {}
     Object.keys(items).forEach((key) => {
@@ -75,6 +77,7 @@ function App() {
         equipSlots: items[key as itemsKey].equipSlots as Slot[],
         id: key,
       }
+      itemDropLocations[item.id] = {}
       // if (item.assetName) {
       //   assetsArray.push(
       //     `https://cabbageidle-eimoap-0-0-40-webview.devvit.net/assets/ui/item-icons/${item.assetName}.png`
@@ -106,6 +109,23 @@ function App() {
       })
     })
 
+    Object.keys(et).forEach((lootTableName) => {
+      et[lootTableName].tiers.forEach((tier) => {
+        const totalWeight: number = tier.items.reduce((total, item) => {
+          return total + (item.weight || 0)
+        }, 0)
+        const levels = tier.maxLevel
+          ? `${tier.minLevel}-${tier.maxLevel}`
+          : `${tier.minLevel}+`
+        tier.items.forEach((item) => {
+          if (item.id) {
+            itemDropLocations[item.id][`${lootTableName} ${levels}`] =
+              item.weight! / totalWeight
+          }
+        })
+      })
+    })
+
     // console.log(assetsArray)
     return {
       itemNameMap,
@@ -114,6 +134,7 @@ function App() {
       blueprintArray,
       mapArray,
       upgradeMaterialItems,
+      itemDropLocations,
     }
   }, [])
 
@@ -180,6 +201,7 @@ function App() {
             itemNameMap={itemArrays.itemNameMap}
             goTo={goTo}
             upgradeMaterialsList={itemArrays.upgradeMaterialItems}
+            itemDropLocations={itemArrays.itemDropLocations}
           />
         </TableContainer>
       </CustomTabPanel>
@@ -190,6 +212,7 @@ function App() {
             itemNameMap={itemArrays.itemNameMap}
             goTo={goTo}
             upgradeMaterialsList={itemArrays.upgradeMaterialItems}
+            itemDropLocations={itemArrays.itemDropLocations}
           />
         </TableContainer>
       </CustomTabPanel>
@@ -198,6 +221,7 @@ function App() {
           <BlueprintTable
             itemNameMap={itemArrays.itemNameMap}
             itemsArray={itemArrays.blueprintArray}
+            itemDropLocations={itemArrays.itemDropLocations}
             goTo={goTo}
           />
         </TableContainer>
@@ -207,6 +231,7 @@ function App() {
           <MapTable
             itemsArray={itemArrays.mapArray}
             itemNameMap={itemArrays.itemNameMap}
+            itemDropLocations={itemArrays.itemDropLocations}
             goTo={goTo}
           />
         </TableContainer>

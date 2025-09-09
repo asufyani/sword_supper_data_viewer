@@ -110,7 +110,9 @@ export const LootTable: React.FC<LootTableProps> = ({ itemNameMap, goTo }) => {
               <AccordionSummary id={key}>
                 <Typography component="span">
                   {lootTable[key].enemies?.length
-                    ? getEnemyNames(lootTable[key].enemies).join(', ')
+                    ? key +
+                      ': ' +
+                      getEnemyNames(lootTable[key].enemies).join(', ')
                     : key}
                 </Typography>
               </AccordionSummary>
