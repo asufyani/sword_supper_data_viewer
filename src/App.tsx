@@ -143,6 +143,7 @@ function App() {
 
   const handleTabChange = (_event: React.SyntheticEvent, newValue: number) => {
     setTabIndex(newValue)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   const theme = createTheme({
@@ -180,7 +181,13 @@ function App() {
         variant="scrollable"
         scrollButtons="auto"
         allowScrollButtonsMobile
-        sx={{ alignItems: 'center' }}
+        sx={{
+          alignItems: 'center',
+          position: 'sticky',
+          top: 0,
+          zIndex: 1000,
+          backgroundColor: 'background.paper',
+        }}
       >
         <Tab label="Weapons" {...a11yProps(0)} />
         <Tab label="Armor" {...a11yProps(1)} />
