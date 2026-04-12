@@ -1,7 +1,6 @@
 import './App.css'
 // import items from './items.json'
 import { items } from './utils/items'
-import WeaponTable from './WeaponTable'
 
 import type {
   Item,
@@ -14,25 +13,31 @@ import type {
 import Box from '@mui/material/Box'
 import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
-import React, { useCallback, useEffect, useMemo } from 'react'
-import ArmorTable from './ArmorTable'
-import BlueprintTable from './BlueprintTable'
+import React, { Suspense, useCallback, useEffect, useMemo } from 'react'
 import { ThemeProvider } from '@emotion/react'
 import { createTheme } from '@mui/material/styles'
 import { TableContainer, Card, Paper, Typography } from '@mui/material'
-import LootTable from './LootTable'
-import MapTable from './MapTable'
-import EnemyTable from './EnemyTable'
-import FoodTable from './FoodTable'
-import QuestsTable from './QuestsTable'
-import { HelpPanel } from './HelpPanel'
-import AbilityTable from './AbilityTable'
 import { et } from './utils/loot'
+
+const WeaponTable = React.lazy(() => import('./WeaponTable'))
+const ArmorTable = React.lazy(() => import('./ArmorTable'))
+const BlueprintTable = React.lazy(() => import('./BlueprintTable'))
+const MapTable = React.lazy(() => import('./MapTable'))
+const LootTable = React.lazy(() => import('./LootTable'))
+const EnemyTable = React.lazy(() => import('./EnemyTable'))
+const FoodTable = React.lazy(() => import('./FoodTable'))
+const QuestsTable = React.lazy(() => import('./QuestsTable'))
+const AbilityTable = React.lazy(() => import('./AbilityTable'))
+const HelpPanel = React.lazy(() =>
+  import('./HelpPanel').then((module) => ({ default: module.HelpPanel }))
+)
+
 type itemsKey = keyof typeof items
 
 interface TabPanelProps {
   children?: React.ReactNode
   index: number
+  loaded: boolean
   value: number
 }
 function a11yProps(index: number) {
@@ -43,7 +48,7 @@ function a11yProps(index: number) {
 }
 
 function CustomTabPanel(props: TabPanelProps) {
-  const { children, value, index, ...other } = props
+  const { children, loaded, value, index, ...other } = props
 
   return (
     <div
@@ -53,7 +58,11 @@ function CustomTabPanel(props: TabPanelProps) {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+      {loaded && (
+        <Box sx={{ display: value === index ? 'block' : 'none', p: 3 }}>
+          {children}
+        </Box>
+      )}
     </div>
   )
 }
@@ -140,9 +149,11 @@ function App() {
 
   const [tabIndex, setTabIndex] = React.useState(0)
   const [focusedItem, setFocusedItem] = React.useState('')
+  const [loadedTabs, setLoadedTabs] = React.useState(() => new Set([0]))
 
   const handleTabChange = (_event: React.SyntheticEvent, newValue: number) => {
     setTabIndex(newValue)
+    setLoadedTabs((current) => new Set(current).add(newValue))
   }
 
   const theme = useMemo(
@@ -164,6 +175,7 @@ function App() {
         Maps: 3,
       }
       setTabIndex(tabToIndex[tab])
+      setLoadedTabs((current) => new Set(current).add(tabToIndex[tab]))
       setFocusedItem(id)
     },
     [setTabIndex]
@@ -198,71 +210,91 @@ function App() {
         <Tab label="Help" {...a11yProps(9)} />
       </Tabs>
       {/* </Box> */}
-      <CustomTabPanel value={tabIndex} index={0}>
-        <TableContainer>
-          <WeaponTable
-            itemsArray={itemArrays.weaponsArray}
-            itemNameMap={itemArrays.itemNameMap}
-            goTo={goTo}
-            upgradeMaterialsList={itemArrays.upgradeMaterialItems}
-            itemDropLocations={itemArrays.itemDropLocations}
-          />
-        </TableContainer>
+      <CustomTabPanel value={tabIndex} index={0} loaded={loadedTabs.has(0)}>
+        <Suspense fallback={<Typography>Loading weapons...</Typography>}>
+          <TableContainer>
+            <WeaponTable
+              itemsArray={itemArrays.weaponsArray}
+              itemNameMap={itemArrays.itemNameMap}
+              goTo={goTo}
+              upgradeMaterialsList={itemArrays.upgradeMaterialItems}
+              itemDropLocations={itemArrays.itemDropLocations}
+            />
+          </TableContainer>
+        </Suspense>
       </CustomTabPanel>
-      <CustomTabPanel value={tabIndex} index={1}>
-        <TableContainer component={Card}>
-          <ArmorTable
-            itemsArray={itemArrays.armorArray}
-            itemNameMap={itemArrays.itemNameMap}
-            goTo={goTo}
-            upgradeMaterialsList={itemArrays.upgradeMaterialItems}
-            itemDropLocations={itemArrays.itemDropLocations}
-          />
-        </TableContainer>
+      <CustomTabPanel value={tabIndex} index={1} loaded={loadedTabs.has(1)}>
+        <Suspense fallback={<Typography>Loading armor...</Typography>}>
+          <TableContainer component={Card}>
+            <ArmorTable
+              itemsArray={itemArrays.armorArray}
+              itemNameMap={itemArrays.itemNameMap}
+              goTo={goTo}
+              upgradeMaterialsList={itemArrays.upgradeMaterialItems}
+              itemDropLocations={itemArrays.itemDropLocations}
+            />
+          </TableContainer>
+        </Suspense>
       </CustomTabPanel>
-      <CustomTabPanel value={tabIndex} index={2}>
-        <TableContainer component={Card}>
-          <BlueprintTable
-            itemNameMap={itemArrays.itemNameMap}
-            itemsArray={itemArrays.blueprintArray}
-            itemDropLocations={itemArrays.itemDropLocations}
-            goTo={goTo}
-          />
-        </TableContainer>
+      <CustomTabPanel value={tabIndex} index={2} loaded={loadedTabs.has(2)}>
+        <Suspense fallback={<Typography>Loading blueprints...</Typography>}>
+          <TableContainer component={Card}>
+            <BlueprintTable
+              itemNameMap={itemArrays.itemNameMap}
+              itemsArray={itemArrays.blueprintArray}
+              itemDropLocations={itemArrays.itemDropLocations}
+              goTo={goTo}
+            />
+          </TableContainer>
+        </Suspense>
       </CustomTabPanel>
-      <CustomTabPanel value={tabIndex} index={3}>
-        <TableContainer component={Card}>
-          <MapTable
-            itemsArray={itemArrays.mapArray}
-            itemNameMap={itemArrays.itemNameMap}
-            itemDropLocations={itemArrays.itemDropLocations}
-            goTo={goTo}
-          />
-        </TableContainer>
+      <CustomTabPanel value={tabIndex} index={3} loaded={loadedTabs.has(3)}>
+        <Suspense fallback={<Typography>Loading maps...</Typography>}>
+          <TableContainer component={Card}>
+            <MapTable
+              itemsArray={itemArrays.mapArray}
+              itemNameMap={itemArrays.itemNameMap}
+              itemDropLocations={itemArrays.itemDropLocations}
+              goTo={goTo}
+            />
+          </TableContainer>
+        </Suspense>
       </CustomTabPanel>
-      <CustomTabPanel value={tabIndex} index={4}>
-        <LootTable itemNameMap={itemArrays.itemNameMap} goTo={goTo} />
+      <CustomTabPanel value={tabIndex} index={4} loaded={loadedTabs.has(4)}>
+        <Suspense fallback={<Typography>Loading loot...</Typography>}>
+          <LootTable itemNameMap={itemArrays.itemNameMap} goTo={goTo} />
+        </Suspense>
       </CustomTabPanel>
-      <CustomTabPanel value={tabIndex} index={5}>
-        <TableContainer component={Paper}>
-          <EnemyTable itemNamesMap={itemArrays.itemNameMap} goTo={goTo} />
-        </TableContainer>
+      <CustomTabPanel value={tabIndex} index={5} loaded={loadedTabs.has(5)}>
+        <Suspense fallback={<Typography>Loading enemies...</Typography>}>
+          <TableContainer component={Paper}>
+            <EnemyTable itemNamesMap={itemArrays.itemNameMap} goTo={goTo} />
+          </TableContainer>
+        </Suspense>
       </CustomTabPanel>
-      <CustomTabPanel value={tabIndex} index={6}>
-        <TableContainer component={Paper}>
-          <FoodTable itemNamesMap={itemArrays.itemNameMap} />
-        </TableContainer>
+      <CustomTabPanel value={tabIndex} index={6} loaded={loadedTabs.has(6)}>
+        <Suspense fallback={<Typography>Loading food...</Typography>}>
+          <TableContainer component={Paper}>
+            <FoodTable itemNamesMap={itemArrays.itemNameMap} />
+          </TableContainer>
+        </Suspense>
       </CustomTabPanel>
-      <CustomTabPanel value={tabIndex} index={7}>
-        <TableContainer component={Paper}>
-          <QuestsTable itemNamesMap={itemArrays.itemNameMap} />
-        </TableContainer>
+      <CustomTabPanel value={tabIndex} index={7} loaded={loadedTabs.has(7)}>
+        <Suspense fallback={<Typography>Loading quests...</Typography>}>
+          <TableContainer component={Paper}>
+            <QuestsTable itemNamesMap={itemArrays.itemNameMap} />
+          </TableContainer>
+        </Suspense>
       </CustomTabPanel>
-      <CustomTabPanel value={tabIndex} index={8}>
-        <AbilityTable itemNamesMap={itemArrays.itemNameMap} />
+      <CustomTabPanel value={tabIndex} index={8} loaded={loadedTabs.has(8)}>
+        <Suspense fallback={<Typography>Loading abilities...</Typography>}>
+          <AbilityTable itemNamesMap={itemArrays.itemNameMap} />
+        </Suspense>
       </CustomTabPanel>
-      <CustomTabPanel value={tabIndex} index={9}>
-        <HelpPanel />
+      <CustomTabPanel value={tabIndex} index={9} loaded={loadedTabs.has(9)}>
+        <Suspense fallback={<Typography>Loading help...</Typography>}>
+          <HelpPanel />
+        </Suspense>
       </CustomTabPanel>
       <Typography>
         <a href="https://www.reddit.com/r/SwordAndSupperGame/">
