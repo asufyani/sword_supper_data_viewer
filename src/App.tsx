@@ -145,11 +145,15 @@ function App() {
     setTabIndex(newValue)
   }
 
-  const theme = createTheme({
-    typography: {
-      fontFamily: 'Poppins',
-    },
-  })
+  const theme = useMemo(
+    () =>
+      createTheme({
+        typography: {
+          fontFamily: 'Poppins',
+        },
+      }),
+    []
+  )
 
   const goTo = useCallback(
     (tab: TabName, id: string) => {
