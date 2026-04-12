@@ -66,7 +66,10 @@ export const WeaponTable: React.FC<ItemsTableProps> = ({
           id={item.id + '-row'}
         >
           <TableCell key={item.id} id={item.id}>
-            <AssetIcon assetName={item.assetName} rarity={item.rarity} />
+            <AssetIcon
+              assetName={item.assetName || item.id}
+              rarity={item.rarity}
+            />
             <RarityChip item={item} goTo={goTo} />
           </TableCell>
           <TableCell key={item.id + '-damage'}>

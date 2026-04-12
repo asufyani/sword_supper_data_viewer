@@ -192,6 +192,9 @@ export const EnemyTable: React.FC<{
                       {tier.items.map((itemData) => {
                         if (itemData.id) {
                           const item = itemNamesMap[itemData.id]
+                          if (!item) {
+                            return null
+                          }
 
                           const quantities = !itemData.quantity
                             ? ''

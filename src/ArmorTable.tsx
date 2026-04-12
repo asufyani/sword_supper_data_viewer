@@ -87,7 +87,10 @@ export const ArmorTable: React.FC<ItemsTableProps> = ({
       <React.Fragment>
         <TableRow sx={{ '& > *': { borderBottom: 'unset' } }} key={item.id}>
           <TableCell id={item.id}>
-            <AssetIcon assetName={item.assetName} rarity={item.rarity} />
+            <AssetIcon
+              assetName={item.assetName || item.id}
+              rarity={item.rarity}
+            />
             <RarityChip item={item} goTo={goTo} />
           </TableCell>
           <TableCell>{item.equipSlots}</TableCell>

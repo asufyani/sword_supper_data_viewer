@@ -118,7 +118,7 @@ function App() {
           ? `${tier.minLevel}-${tier.maxLevel}`
           : `${tier.minLevel}+`
         tier.items.forEach((item) => {
-          if (item.id) {
+          if (item.id && itemDropLocations[item.id]) {
             itemDropLocations[item.id][`${lootTableName} ${levels}`] =
               item.weight! / totalWeight
           }

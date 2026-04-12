@@ -21,6 +21,7 @@ const colorMap: Record<Rarity, string> = {
   rare: '#00A8FF',
   epic: '#B260FD',
   legendary: '#FFC900',
+  mythic: '#EB2F47',
 }
 export const RarityChip: React.FC<RarityChipProps> = ({
   item,

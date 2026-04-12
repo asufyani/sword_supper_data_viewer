@@ -54,4 +54,11 @@ export const enemyNames: Record<string, string> = {
   robotNo6: 'BRX-7 Sentry Chassis',
   robotNo7: 'Minifax Model B',
   robotBoss: 'Slumbering Guardian-X5',
+  poisonDemon: 'Poison Demon',
+  blossomGolem: 'Blossom Golem',
+  corruptedSkeleton: 'Corrupted Warrior Skeleton',
+  corruptedSkelNoHead: 'Corrupted Headless Skeleton',
+  corruptedSkel2Axe: 'Corrupted Barbarian Skeleton',
+  corruptedSkelWizard: 'Corrupted Skeleton Wizard',
+  corruptedSkelAssassin: 'Corrupted Skeleton Assassin',
 }

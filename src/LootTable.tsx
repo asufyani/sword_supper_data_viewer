@@ -67,7 +67,7 @@ export const LootTable: React.FC<LootTableProps> = ({ itemNameMap, goTo }) => {
       tier.items.some(
         (item) =>
           item.id &&
-          itemNameMap[item.id].name.toLowerCase().includes(searchString)
+          itemNameMap[item.id]?.name.toLowerCase().includes(searchString)
       ),
     [itemNameMap]
   )
@@ -182,6 +182,15 @@ export const LootTable: React.FC<LootTableProps> = ({ itemNameMap, goTo }) => {
                                     weight={dropRate}
                                     quantityString={quantityString}
                                     showIcon={true}
+                                  />
+                                )}
+                                {item.id && !itemToLink && (
+                                  <Chip
+                                    label={
+                                      dropRate
+                                        ? `${item.id} - ${dropRate}`
+                                        : item.id
+                                    }
                                   />
                                 )}
                                 {item.tableId && (

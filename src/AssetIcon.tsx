@@ -7,9 +7,10 @@ function getImageIconUrl(name: string) {
 }
 
 function getRarityBgUrl(rarity: Rarity) {
+  const bgRarity = rarity === 'mythic' ? 'legendary' : rarity
   // Assuming images are in a 'dir' subdirectory relative to the current module
   return new URL(
-    `${window.location}/backgrounds/equip_bg_${rarity}.png`,
+    `${window.location}/backgrounds/equip_bg_${bgRarity}.png`,
     import.meta.url
   ).href
 }
