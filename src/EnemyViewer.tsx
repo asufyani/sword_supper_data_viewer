@@ -15,24 +15,37 @@ export const EnemyAnimationViewer = ({
   showControls?: boolean
 }) => {
   const spineRef = useRef<HTMLDivElement>(null)
-  const playerRef = useRef<SpinePlayer>(null)
+  const playerRef = useRef<SpinePlayer | null>(null)
+
   useEffect(() => {
     const spineRoot = spineRef.current
-    if (spineRoot && !playerRef.current) {
-      playerRef.current = new SpinePlayer(spineRoot, {
-        preserveDrawingBuffer: true,
-        skeleton: `${getBaseHref(spineAssetKey)}.skel`,
-        atlas: `${getBaseHref(spineAssetKey)}.atlas`,
-        showControls: showControls || false,
-        animation: 'idle',
-        backgroundColor: '#ffffff',
-        viewport: {
-          width: 600,
-          height: 400,
-        },
-      })
+
+    if (!spineRoot) {
+      return
     }
-  }, [spineAssetKey])
+
+    const player = new SpinePlayer(spineRoot, {
+      preserveDrawingBuffer: true,
+      skeleton: `${getBaseHref(spineAssetKey)}.skel`,
+      atlas: `${getBaseHref(spineAssetKey)}.atlas`,
+      showControls: showControls || false,
+      animation: 'idle',
+      backgroundColor: '#ffffff',
+      viewport: {
+        width: 600,
+        height: 400,
+      },
+    })
+
+    playerRef.current = player
+
+    return () => {
+      player.dispose()
+      playerRef.current = null
+      spineRoot.replaceChildren()
+    }
+  }, [showControls, spineAssetKey])
+
   return (
     <div
       style={{

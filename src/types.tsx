@@ -1,13 +1,25 @@
 export type ability = {
-  type: string
   id: string
+  type?: string
+  params?: Record<string, number>
+}
+
+export type EnemyAbility = {
+  id: string
+  params?: Record<string, number>
+}
+
+export type EnemyLevelOverride = {
+  minLevel: number
+  maxLevel?: number
+  abilities?: EnemyAbility[]
 }
 
 export type statModifier = {
   type: string
   stat: string
   value: number
-  modifierType: 'add'
+  modifierType: 'add' | 'multiply'
 }
 
 export type UpgradeRequirement = {
@@ -34,11 +46,27 @@ export type TabName = 'Armor' | 'Weapons' | 'Blueprints' | 'Maps'
 
 export type ItemNameMap = Record<string, Item>
 
-export type Slot = 'Amulet' | 'Belt' | 'Chest' | 'Head' | 'Ring' | 'Weapon'
+export type Slot =
+  | 'Amulet'
+  | 'Belt'
+  | 'Chest'
+  | 'Cloak'
+  | 'Hat'
+  | 'Head'
+  | 'Ring'
+  | 'Shirt'
+  | 'Weapon'
 
-export type Rarity = 'common' | 'uncommon' | 'rare' | 'epic' | 'legendary'
+export type Rarity =
+  | 'common'
+  | 'uncommon'
+  | 'rare'
+  | 'epic'
+  | 'legendary'
+  | 'mythic'
 
 export type Item = {
+  type?: string
   rarity: Rarity
   abilities?: ability[]
   tags: string[]
@@ -51,7 +79,7 @@ export type Item = {
   requiredLevel: number
   sellPrice: number
   name: string
-  assetName: string
+  assetName?: string
   description: string
   damage?: { [key in damageType]?: number }
   id: string
@@ -89,7 +117,8 @@ export type Enemy = {
   iceResist?: number
   fireResist?: number
   shadowResist?: number
-  abilities?: string[]
+  abilities?: EnemyAbility[]
+  levelOverrides?: EnemyLevelOverride[]
   scaledHp?: number
   scaledDamage?: number
   scaledDefense?: number

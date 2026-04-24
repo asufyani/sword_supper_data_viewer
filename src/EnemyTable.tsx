@@ -41,6 +41,129 @@ const formatter = new Intl.NumberFormat('en-US', {
   minimumFractionDigits: 0,
 })
 
+type DisplayEnemy = Enemy & {
+  name: string
+  scaledHp: number
+  scaledDamage: number
+  scaledDefense: number
+}
+
+function EnemyRow({
+  enemy,
+  itemNamesMap,
+  goTo,
+}: {
+  enemy: DisplayEnemy
+  itemNamesMap: ItemNameMap
+  goTo: GoToType
+}) {
+  const [open, setOpen] = React.useState(false)
+  const lootTable = enemy.lootTables[0]
+
+  return (
+    <React.Fragment>
+      <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
+        <TableCell>
+          <Typography component={'span'}>{enemy.name}</Typography>
+        </TableCell>
+        <TableCell>{`${enemy.scaledDamage} ${damageTypeSymbols[enemy.damageType]}`}</TableCell>
+        <TableCell>{enemy.scaledHp}</TableCell>
+        <TableCell>{enemy.scaledDefense}</TableCell>
+        <TableCell>
+          {damageTypes.map((damageType) => {
+            const resistType: keyof Enemy = `${damageType}Resist` as keyof Enemy
+            if (enemy[resistType]) {
+              const resistAmount: number = enemy[resistType] as number
+              return (
+                <div
+                  className={resistAmount < 0 ? 'bonus' : 'penalty'}
+                  key={resistType}
+                >{`${damageTypeSymbols[damageType]}: ${formatter.format(resistAmount)}`}</div>
+              )
+            }
+
+            return null
+          })}
+        </TableCell>
+        <TableCell>{formatter.format(enemy.crit)}</TableCell>
+        <TableCell>{formatter.format(enemy.dodge)}</TableCell>
+        <TableCell>{enemy.speed}</TableCell>
+        <TableCell align="center">
+          <IconButton
+            aria-label="expand row"
+            size="small"
+            onClick={() => setOpen(!open)}
+          >
+            {open ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
+          </IconButton>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={11}>
+          <Collapse in={open} timeout="auto" unmountOnExit>
+            <EnemyAnimationViewer
+              spineAssetKey={enemy.spineAssetKey}
+              showControls={true}
+            />
+            {lootTable.tiers.map((tier) => {
+              const levels = tier.maxLevel
+                ? `${tier.minLevel}-${tier.maxLevel}`
+                : `${tier.minLevel}+`
+              const totalWeight: number = tier.items.reduce((total, item) => {
+                return total + (item.weight || 0)
+              }, 0)
+
+              return (
+                <Accordion key={`${enemy.id}-${levels}`}>
+                  <AccordionSummary>
+                    <Typography component={'span'}>{levels}</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    {tier.items.map((itemData, itemIndex) => {
+                      if (!itemData.id) {
+                        return null
+                      }
+
+                      const item = itemNamesMap[itemData.id]
+                      if (!item) {
+                        return null
+                      }
+
+                      const quantities = !itemData.quantity
+                        ? ''
+                        : typeof itemData.quantity === 'number'
+                          ? itemData.quantity === 1
+                            ? ''
+                            : `: ${itemData.quantity}`
+                          : `: ${itemData.quantity.join('-')}`
+
+                      return (
+                        <RarityChip
+                          key={`${enemy.id}-${levels}-${item.id}-${itemIndex}`}
+                          item={item}
+                          goTo={goTo}
+                          showPopover={item.tags.includes('equipment')}
+                          quantityString={quantities}
+                          showIcon={true}
+                          weight={
+                            itemData.weight
+                              ? formatter.format(itemData.weight / totalWeight)
+                              : undefined
+                          }
+                        />
+                      )
+                    })}
+                  </AccordionDetails>
+                </Accordion>
+              )
+            })}
+          </Collapse>
+        </TableCell>
+      </TableRow>
+    </React.Fragment>
+  )
+}
+
 export const EnemyTable: React.FC<{
   itemNamesMap: ItemNameMap
   goTo: GoToType
@@ -50,27 +173,7 @@ export const EnemyTable: React.FC<{
   const [level, setLevel] = React.useState(1)
   const [order, setOrder] = React.useState(1)
   const [orderBy, setOrderBy] = React.useState<keyof Enemy>('name')
-  const enemies: Record<string, Enemy> = useMemo(() => {
-    return z3
-  }, [])
-
   const enemyNameMap: Record<string, string> = enemyNames
-  // const spineAssetURLS: string[] = []
-  // Object.keys(enemies).forEach((enemyName) => {
-  //   const assetKey = enemies[enemyName].spineAssetKey
-  //   if (assetKey) {
-  //     spineAssetURLS.push(
-  //       `https://cabbageidle-eimoap-0-0-39-webview.devvit.net/assets/spine/${assetKey}.png`
-  //     )
-  //     spineAssetURLS.push(
-  //       `https://cabbageidle-eimoap-0-0-39-webview.devvit.net/assets/spine/${assetKey}.skel`
-  //     )
-  //     spineAssetURLS.push(
-  //       `https://cabbageidle-eimoap-0-0-39-webview.devvit.net/assets/spine/${assetKey}.atlas`
-  //     )
-  //   }
-  // })
-  // console.log(spineAssetURLS)
 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchString(event.target.value.toLowerCase())
@@ -96,7 +199,7 @@ export const EnemyTable: React.FC<{
     (key: string) =>
       key.toLowerCase().includes(searchString.toLowerCase()) ||
       enemyNameMap[key].toLowerCase().includes(searchString.toLowerCase()),
-    [searchString]
+    [enemyNameMap, searchString]
   )
 
   const calcScalingValues = useCallback((enemy: Enemy, level: number) => {
@@ -125,114 +228,30 @@ export const EnemyTable: React.FC<{
     }
   }
 
-  function Row(props: { enemy: Enemy }) {
-    const { enemy } = props
-    const [open, setOpen] = React.useState(false)
-    const lootTable = enemy.lootTables[0]
+  const visibleEnemies = useMemo<DisplayEnemy[]>(
+    () =>
+      Object.keys(z3)
+        .filter(filterFunction)
+        .map((enemyKey) => {
+          const enemy = z3[enemyKey]
+          const scaledValues = calcScalingValues(enemy, level)
 
-    // const scaledValues = calcScalingValues(enemy, level)
-
-    return (
-      <React.Fragment>
-        <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
-          <TableCell>
-            <Typography component={'span'}>{enemy.name}</Typography>
-          </TableCell>
-          <TableCell>{`${enemy.scaledDamage} ${damageTypeSymbols[enemy.damageType]}`}</TableCell>
-          <TableCell>{enemy.scaledHp}</TableCell>
-          <TableCell>{enemy.scaledDefense}</TableCell>
-          <TableCell>
-            {damageTypes.map((damageType) => {
-              const resistType: keyof Enemy =
-                `${damageType}Resist` as keyof Enemy
-              if (enemy[resistType]) {
-                const resistAmount: number = enemy[resistType] as number
-                return (
-                  <div
-                    className={resistAmount < 0 ? 'bonus' : 'penalty'}
-                    key={resistType}
-                  >{`${damageTypeSymbols[damageType]}: ${formatter.format(resistAmount)}`}</div>
-                )
-              }
-            })}
-          </TableCell>
-          <TableCell>{formatter.format(enemy.crit)}</TableCell>
-          <TableCell>{formatter.format(enemy.dodge)}</TableCell>
-          <TableCell>{enemy.speed}</TableCell>
-          <TableCell align="center">
-            <IconButton
-              aria-label="expand row"
-              size="small"
-              onClick={() => setOpen(!open)}
-            >
-              {open ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
-            </IconButton>
-          </TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={11}>
-            <Collapse in={open} timeout="auto" unmountOnExit>
-              <EnemyAnimationViewer
-                spineAssetKey={enemy.spineAssetKey}
-                showControls={true}
-              />
-              {lootTable.tiers.map((tier) => {
-                const levels = tier.maxLevel
-                  ? `${tier.minLevel}-${tier.maxLevel}`
-                  : `${tier.minLevel}+`
-                const totalWeight: number = tier.items.reduce((total, item) => {
-                  return total + (item.weight || 0)
-                }, 0)
-                return (
-                  <Accordion>
-                    <AccordionSummary>
-                      <Typography component={'span'}>{levels}</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      {tier.items.map((itemData) => {
-                        if (itemData.id) {
-                          const item = itemNamesMap[itemData.id]
-
-                          const quantities = !itemData.quantity
-                            ? ''
-                            : typeof itemData.quantity === 'number'
-                              ? itemData.quantity == 1
-                                ? ''
-                                : `: ${itemData.quantity}`
-                              : `: ${itemData.quantity?.join('-')}`
-
-                          return (
-                            <RarityChip
-                              item={item}
-                              goTo={goTo}
-                              showPopover={item.tags.includes('equipment')}
-                              quantityString={quantities}
-                              showIcon={true}
-                              weight={
-                                itemData.weight
-                                  ? formatter.format(
-                                      itemData.weight / totalWeight
-                                    )
-                                  : undefined
-                              }
-                            />
-                          )
-                        }
-                      })}
-                    </AccordionDetails>
-                  </Accordion>
-                )
-              })}
-            </Collapse>
-          </TableCell>
-        </TableRow>
-      </React.Fragment>
-    )
-  }
+          return {
+            ...enemy,
+            ...scaledValues,
+            name: enemyNameMap[enemyKey],
+          }
+        })
+        .sort(getEnemyComparator(orderBy, order)),
+    [calcScalingValues, enemyNameMap, filterFunction, level, order, orderBy]
+  )
 
   return (
     <>
-      <TextField onChange={handleSearchChange}></TextField>
+      <TextField
+        label="Search enemies"
+        onChange={handleSearchChange}
+      ></TextField>
       <Box sx={{ width: '50%', margin: 5, alignItems: 'center' }}>
         <Typography id="input-slider" gutterBottom>
           Enemy Level
@@ -320,20 +339,14 @@ export const EnemyTable: React.FC<{
           </TableRow>
         </TableHead>
         <TableBody>
-          {Object.keys(enemies)
-            .filter(filterFunction)
-            .map((enemyKey) => {
-              const scaledValues = calcScalingValues(enemies[enemyKey], level)
-              return (enemies[enemyKey] = {
-                name: enemyNameMap[enemyKey],
-                ...enemies[enemyKey],
-                ...scaledValues,
-              })
-            })
-            .sort(getEnemyComparator(orderBy, order))
-            .map((enemy) => {
-              return <Row key={enemy.id} enemy={enemy} />
-            })}
+          {visibleEnemies.map((enemy) => (
+            <EnemyRow
+              key={enemy.id}
+              enemy={enemy}
+              itemNamesMap={itemNamesMap}
+              goTo={goTo}
+            />
+          ))}
         </TableBody>
       </Table>
     </>

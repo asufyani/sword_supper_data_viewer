@@ -1,11 +1,6 @@
 import Chip from '@mui/material/Chip'
-import type { damageType, Item, Rarity, TabName } from './types'
-import { useState } from 'react'
-import Popover from '@mui/material/Popover'
-import Typography from '@mui/material/Typography'
-import { StatsDisplay } from './StatsDisplay'
-import { AssetIcon } from './AssetIcon'
-import { Stack } from '@mui/material'
+import type { Item, Rarity, TabName } from './types'
+import { getItemType, useItemDetailsPopover } from './ItemDetailsPopover'
 
 interface RarityChipProps {
   item: Item
@@ -21,6 +16,7 @@ const colorMap: Record<Rarity, string> = {
   rare: '#00A8FF',
   epic: '#B260FD',
   legendary: '#FFC900',
+  mythic: '#EB2F47',
 }
 export const RarityChip: React.FC<RarityChipProps> = ({
   item,
@@ -30,8 +26,7 @@ export const RarityChip: React.FC<RarityChipProps> = ({
   quantityString,
   showIcon,
 }) => {
-  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null)
-  const open = Boolean(anchorEl)
+  const { openPopover, closePopover } = useItemDetailsPopover()
 
   function getImageIconUrl(name: string) {
     // Assuming images are in a 'dir' subdirectory relative to the current module
@@ -39,21 +34,7 @@ export const RarityChip: React.FC<RarityChipProps> = ({
       .href
   }
 
-  const handlePopoverOpen = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget)
-  }
-
-  const handlePopoverClose = () => {
-    setAnchorEl(null)
-  }
-
-  const itemType = item.tags.includes('map')
-    ? 'Maps'
-    : item.tags.includes('blueprint')
-      ? 'Blueprints'
-      : item.tags.includes('equipment') && item.equipSlots.includes('Weapon')
-        ? 'Weapons'
-        : 'Armor'
+  const itemType = getItemType(item)
   const handleClick = () => {
     if (goTo) {
       goTo(itemType, item.id)
@@ -65,8 +46,14 @@ export const RarityChip: React.FC<RarityChipProps> = ({
   }
   return (
     <span
-      onMouseOver={showPopover ? handlePopoverOpen : () => {}}
-      onMouseOut={handlePopoverClose}
+      onMouseEnter={
+        showPopover
+          ? (event) => {
+              openPopover(item, event.currentTarget)
+            }
+          : undefined
+      }
+      onMouseLeave={showPopover ? closePopover : undefined}
       onClick={handleClick}
       className={goTo ? 'interactive' : ''}
     >
@@ -91,51 +78,6 @@ export const RarityChip: React.FC<RarityChipProps> = ({
         label={label}
         className="rarityChip"
       />
-      <Popover
-        id="mouse-over-popover"
-        sx={{ pointerEvents: 'none' }}
-        open={open}
-        anchorEl={anchorEl}
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'left',
-        }}
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
-        }}
-        onClose={handlePopoverClose}
-        disableRestoreFocus
-      >
-        <Stack direction="row" spacing={1} style={{ paddingLeft: '10px' }}>
-          <AssetIcon
-            assetName={item.assetName || item.id}
-            rarity={item.rarity}
-          />
-          <Typography component={'div'} key={item.id} sx={{ padding: 1 }}>
-            <span>Required level: {item.requiredLevel}</span>
-            <br />
-            {item.damage && (
-              <>
-                <span>
-                  {(Object.keys(item.damage || {}) as damageType[]).map(
-                    (typeString) => (
-                      <span key={item.id + '-' + typeString}>
-                        {typeString} : {item.damage![typeString]}{' '}
-                      </span>
-                    )
-                  )}
-                </span>
-                <br />
-              </>
-            )}
-            <StatsDisplay
-              statModifiers={item.statModifiers}
-              abilities={item.abilities}
-            />
-          </Typography>
-        </Stack>
-      </Popover>
     </span>
   )
 }

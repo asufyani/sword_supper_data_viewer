@@ -67,7 +67,7 @@ export const LootTable: React.FC<LootTableProps> = ({ itemNameMap, goTo }) => {
       tier.items.some(
         (item) =>
           item.id &&
-          itemNameMap[item.id].name.toLowerCase().includes(searchString)
+          itemNameMap[item.id]?.name.toLowerCase().includes(searchString)
       ),
     [itemNameMap]
   )
@@ -78,138 +78,133 @@ export const LootTable: React.FC<LootTableProps> = ({ itemNameMap, goTo }) => {
     })
   }, [])
 
-  const filterTables = useCallback(
-    (key: string) => {
-      const tableHasItem = lootTable[key].tiers.some(tierHasItem(searchString))
-      const showTable = tableHasItem || !searchString
-      return showTable
-    },
-    [tierHasItem, lootTable]
-  )
+  const visibleTables = useMemo(() => {
+    return Object.keys(lootTable)
+      .map((key) => {
+        const tiers = (lootTable[key as LootKey].tiers || []).filter(
+          (tier) => !searchString || tierHasItem(searchString)(tier)
+        )
 
-  const filteredTableKeys = useMemo(() => {
-    return Object.keys(lootTable).filter(filterTables)
-  }, [lootTable, filterTables])
+        if (searchString && tiers.length === 0) {
+          return null
+        }
+
+        return {
+          enemies: lootTable[key].enemies || [],
+          enemyNames: getEnemyNames(lootTable[key].enemies || []),
+          key,
+          tiers,
+        }
+      })
+      .filter((table): table is NonNullable<typeof table> => table !== null)
+  }, [getEnemyNames, lootTable, searchString, tierHasItem])
 
   return (
     <>
-      <TextField onChange={handleSearchChange}></TextField>
+      <TextField label="Search loot" onChange={handleSearchChange}></TextField>
 
-      {filteredTableKeys.map((key) => {
-        const tableHasItem = lootTable[key].tiers.some(
-          tierHasItem(searchString)
-        )
-        const showTable = tableHasItem || !searchString
-        if (showTable) {
-          return (
-            <Accordion
-              id={key}
-              key={key}
-              slotProps={{ transition: { unmountOnExit: true } }}
-            >
-              <AccordionSummary id={key}>
-                <Typography component="span">
-                  {lootTable[key].enemies?.length
-                    ? key +
-                      ': ' +
-                      getEnemyNames(lootTable[key].enemies).join(', ')
-                    : key}
-                </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <div style={{ display: 'flex' }}>
-                  {!!lootTable[key].enemies?.length &&
-                    lootTable[key].enemies?.length < 10 &&
-                    lootTable[key].enemies?.map((enemyKey) => {
+      {visibleTables.map((table) => (
+        <Accordion
+          id={table.key}
+          key={table.key}
+          slotProps={{ transition: { unmountOnExit: true } }}
+        >
+          <AccordionSummary id={table.key}>
+            <Typography component="span">
+              {table.enemies.length
+                ? `${table.key}: ${table.enemyNames.join(', ')}`
+                : table.key}
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <div style={{ display: 'flex' }}>
+              {table.enemies.length > 0 &&
+                table.enemies.length < 10 &&
+                table.enemies.map((enemyKey) => (
+                  <EnemyAnimationViewer
+                    key={`${table.key}-${enemyKey}`}
+                    spineAssetKey={z3[enemyKey].spineAssetKey}
+                  />
+                ))}
+            </div>
+            {table.tiers.map((tier, idx) => {
+              const totalWeight: number = tier.items.reduce((total, item) => {
+                return total + (item.weight || 0)
+              }, 0)
+
+              return (
+                <Accordion key={table.key + '-' + idx}>
+                  <AccordionSummary>
+                    <Typography component={'span'}>
+                      {tier.minLevel}
+                      {tier.maxLevel ? '-' + tier.maxLevel : '+'}
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    {tier.items.map((item, itemIdx) => {
+                      const itemToLink = item.id && itemNameMap[item.id]
+                      const dropPercentage = (item.weight || 0) / totalWeight
+                      const dropRate = dropPercentage
+                        ? formatter.format(dropPercentage)
+                        : undefined
+                      let quantityString
+                      if (item.quantity && typeof item.quantity !== 'number') {
+                        quantityString = item.quantity.join('-')
+                      }
+
                       return (
-                        <EnemyAnimationViewer
-                          spineAssetKey={z3[enemyKey].spineAssetKey}
-                        />
+                        <span
+                          key={
+                            table.key +
+                            '-' +
+                            idx +
+                            '-' +
+                            (item.id || item.tableId) +
+                            itemIdx
+                          }
+                        >
+                          {itemToLink && (
+                            <RarityChip
+                              item={itemToLink}
+                              showPopover={itemToLink.tags.includes(
+                                'equipment'
+                              )}
+                              goTo={goTo}
+                              weight={dropRate}
+                              quantityString={quantityString}
+                              showIcon={true}
+                            />
+                          )}
+                          {item.id && !itemToLink && (
+                            <Chip
+                              label={
+                                dropRate ? `${item.id} - ${dropRate}` : item.id
+                              }
+                            />
+                          )}
+                          {item.tableId && (
+                            <Chip
+                              label={
+                                dropRate
+                                  ? `${item.tableId} - ${dropRate}`
+                                  : item.tableId
+                              }
+                              className="loot-table-link"
+                              onClick={() => {
+                                goToTable(item.tableId || '')
+                              }}
+                            />
+                          )}
+                        </span>
                       )
                     })}
-                </div>
-                {(lootTable[key as LootKey].tiers || []).map((tier, idx) => {
-                  const totalWeight: number = tier.items.reduce(
-                    (total, item) => {
-                      return total + (item.weight || 0)
-                    },
-                    0
-                  )
-                  const showTier =
-                    tierHasItem(searchString)(tier) || !searchString
-                  if (showTier) {
-                    return (
-                      <Accordion key={key + '-' + idx}>
-                        <AccordionSummary>
-                          <Typography component={'span'}>
-                            {tier.minLevel}
-                            {tier.maxLevel ? '-' + tier.maxLevel : '+'}
-                          </Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                          {tier.items.map((item, itemIdx) => {
-                            const itemToLink = item.id && itemNameMap[item.id]
-                            const dropPercentage =
-                              (item.weight || 0) / totalWeight
-                            const dropRate = dropPercentage
-                              ? formatter.format(dropPercentage)
-                              : undefined
-                            let quantityString
-                            if (
-                              item.quantity &&
-                              typeof item.quantity !== 'number'
-                            ) {
-                              quantityString = item.quantity.join('-')
-                            }
-                            return (
-                              <span
-                                key={
-                                  key +
-                                  '-' +
-                                  idx +
-                                  '-' +
-                                  (item.id || item.tableId) +
-                                  itemIdx
-                                }
-                              >
-                                {itemToLink && (
-                                  <RarityChip
-                                    item={itemToLink}
-                                    showPopover={itemToLink.tags.includes(
-                                      'equipment'
-                                    )}
-                                    goTo={goTo}
-                                    weight={dropRate}
-                                    quantityString={quantityString}
-                                    showIcon={true}
-                                  />
-                                )}
-                                {item.tableId && (
-                                  <Chip
-                                    label={
-                                      dropRate
-                                        ? `${item.tableId} - ${dropRate}`
-                                        : item.tableId
-                                    }
-                                    className="loot-table-link"
-                                    onClick={() => {
-                                      goToTable(item.tableId || '')
-                                    }}
-                                  />
-                                )}
-                              </span>
-                            )
-                          })}
-                        </AccordionDetails>
-                      </Accordion>
-                    )
-                  }
-                })}
-              </AccordionDetails>
-            </Accordion>
-          )
-        }
-      })}
+                  </AccordionDetails>
+                </Accordion>
+              )
+            })}
+          </AccordionDetails>
+        </Accordion>
+      ))}
     </>
   )
 }

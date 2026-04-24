@@ -1,0 +1,44 @@
+import test from 'node:test'
+import assert from 'node:assert/strict'
+import fs from 'node:fs'
+
+test('App lazy-loads tab panels and keeps loaded tabs mounted', () => {
+  const appSource = fs.readFileSync('src/App.tsx', 'utf8')
+
+  assert.match(appSource, /React\.lazy\(\(\) => import\('\.\/LootTable'\)\)/)
+  assert.match(
+    appSource,
+    /React\.lazy\(\(\) => import\('\.\/VaultLootTable'\)\)/
+  )
+  assert.match(appSource, /React\.lazy\(\(\) => import\('\.\/EnemyTable'\)\)/)
+  assert.match(
+    appSource,
+    /React\.lazy\(\(\) => import\('\.\/LevelCostTable'\)\)/
+  )
+  assert.match(appSource, /<Suspense fallback=/)
+  assert.match(appSource, /loadedTabs\.has\(/)
+  assert.match(
+    appSource,
+    /setLoadedTabs\(\(current\) => new Set\(current\)\.add\(newValue\)\)/
+  )
+  assert.match(
+    appSource,
+    /<Tab label="Vault Loot" \{\.\.\.a11yProps\(9\)\} \/>/
+  )
+  assert.match(
+    appSource,
+    /<Tab label="Level Costs" \{\.\.\.a11yProps\(10\)\} \/>/
+  )
+  assert.match(
+    appSource,
+    /<CustomTabPanel value=\{tabIndex\} index=\{9\} loaded=\{loadedTabs\.has\(9\)\}>/
+  )
+  assert.match(
+    appSource,
+    /<CustomTabPanel value=\{tabIndex\} index=\{10\} loaded=\{loadedTabs\.has\(10\)\}>/
+  )
+  assert.match(
+    appSource,
+    /<CustomTabPanel value=\{tabIndex\} index=\{11\} loaded=\{loadedTabs\.has\(11\)\}>/
+  )
+})

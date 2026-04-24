@@ -22,7 +22,10 @@ export const BlueprintTable: React.FC<ItemsTableProps> = ({
   }
   return (
     <>
-      <TextField onChange={handleSearchChange}></TextField>
+      <TextField
+        label="Search blueprints"
+        onChange={handleSearchChange}
+      ></TextField>
       <Table stickyHeader>
         <TableHead>
           <TableRow>
@@ -36,7 +39,10 @@ export const BlueprintTable: React.FC<ItemsTableProps> = ({
             .map((item) => (
               <TableRow key={item.id}>
                 <TableCell id={item.id}>
-                  <AssetIcon assetName={item.assetName} rarity={item.rarity} />
+                  <AssetIcon
+                    assetName={item.assetName || item.id}
+                    rarity={item.rarity}
+                  />
                   <RarityChip item={item} />
                 </TableCell>
                 <TableCell>

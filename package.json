@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "get:item-assets": "node scripts/get_item_assets.mjs",
+    "get:spine-assets": "node scripts/get_spine_assets.mjs"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",

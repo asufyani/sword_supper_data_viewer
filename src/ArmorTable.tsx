@@ -30,6 +30,79 @@ const formatter = new Intl.NumberFormat('en-US', {
   minimumFractionDigits: 0,
 })
 
+function ArmorRow({
+  item,
+  itemDropLocations,
+  itemNameMap,
+  upgradeMaterialsList,
+  goTo,
+}: {
+  item: Item
+  itemDropLocations: Record<string, Record<string, number>>
+  itemNameMap: ItemsTableProps['itemNameMap']
+  upgradeMaterialsList: ItemsTableProps['upgradeMaterialsList']
+  goTo: ItemsTableProps['goTo']
+}) {
+  const [open, setOpen] = React.useState(false)
+  const dropLocations = itemDropLocations[item.id]
+  const tierNames = Object.keys(dropLocations)
+  const itemHasDropLocations = tierNames.length > 0
+
+  return (
+    <React.Fragment>
+      <TableRow sx={{ '& > *': { borderBottom: 'unset' } }} key={item.id}>
+        <TableCell id={item.id}>
+          <AssetIcon
+            assetName={item.assetName || item.id}
+            rarity={item.rarity}
+          />
+          <RarityChip item={item} goTo={goTo} />
+        </TableCell>
+        <TableCell>{item.equipSlots}</TableCell>
+        <TableCell>
+          <StatsDisplay
+            statModifiers={item.statModifiers}
+            abilities={item.abilities}
+          />
+        </TableCell>
+        <TableCell>{item.requiredLevel}</TableCell>
+        <TableCell>
+          <UpgradeList
+            itemId={item.id}
+            itemNameMap={itemNameMap}
+            upgrades={item.upgrades}
+            upgradeMaterialsList={upgradeMaterialsList}
+            goTo={goTo}
+          />
+        </TableCell>
+        <TableCell align="center">
+          {itemHasDropLocations && (
+            <IconButton
+              aria-label="expand row"
+              size="small"
+              onClick={() => setOpen(!open)}
+            >
+              {open ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
+            </IconButton>
+          )}
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
+          <Collapse in={open} timeout="auto" unmountOnExit>
+            {tierNames.map((tierName) => (
+              <div key={`${item.id}-${tierName}`}>
+                {tierName}:{' '}
+                {formatter.format(itemDropLocations[item.id][tierName])}
+              </div>
+            ))}
+          </Collapse>
+        </TableCell>
+      </TableRow>
+    </React.Fragment>
+  )
+}
+
 export const ArmorTable: React.FC<ItemsTableProps> = ({
   itemsArray,
   itemNameMap,
@@ -76,71 +149,17 @@ export const ArmorTable: React.FC<ItemsTableProps> = ({
     [searchString, slot]
   )
 
-  const filteredItems = itemsArray.filter(filterFunction)
-
-  function Row(props: { item: Item }) {
-    const { item } = props
-    const [open, setOpen] = React.useState(false)
-    const itemHasDropLocations = !!Object.keys(itemDropLocations[item.id])
-      .length
-    return (
-      <React.Fragment>
-        <TableRow sx={{ '& > *': { borderBottom: 'unset' } }} key={item.id}>
-          <TableCell id={item.id}>
-            <AssetIcon assetName={item.assetName} rarity={item.rarity} />
-            <RarityChip item={item} goTo={goTo} />
-          </TableCell>
-          <TableCell>{item.equipSlots}</TableCell>
-          <TableCell>
-            <StatsDisplay
-              statModifiers={item.statModifiers}
-              abilities={item.abilities}
-            />
-          </TableCell>
-          {/* <TableCell><RarityChip rarity={item.rarity} key={item.key}/></TableCell> */}
-          <TableCell>{item.requiredLevel}</TableCell>
-          <TableCell>
-            <UpgradeList
-              itemId={item.id}
-              itemNameMap={itemNameMap}
-              upgrades={item.upgrades}
-              upgradeMaterialsList={upgradeMaterialsList}
-              goTo={goTo}
-            />
-          </TableCell>
-          <TableCell align="center">
-            {itemHasDropLocations && (
-              <IconButton
-                aria-label="expand row"
-                size="small"
-                onClick={() => setOpen(!open)}
-              >
-                {open ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
-              </IconButton>
-            )}
-          </TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
-            <Collapse in={open} timeout="auto" unmountOnExit>
-              {Object.keys(itemDropLocations[item.id]).map((tierName) => {
-                return (
-                  <div>
-                    {tierName}:{' '}
-                    {formatter.format(itemDropLocations[item.id][tierName])}
-                  </div>
-                )
-              })}
-            </Collapse>
-          </TableCell>
-        </TableRow>
-      </React.Fragment>
-    )
-  }
+  const visibleItems = React.useMemo<Item[]>(
+    () =>
+      [...itemsArray.filter(filterFunction)].sort(
+        getItemComparator(orderBy, order)
+      ),
+    [filterFunction, itemsArray, order, orderBy]
+  )
 
   return (
     <>
-      <TextField onChange={handleSearchChange}></TextField>
+      <TextField label="Search armor" onChange={handleSearchChange}></TextField>
       <ToggleButtonGroup
         value={slot}
         exclusive
@@ -180,11 +199,16 @@ export const ArmorTable: React.FC<ItemsTableProps> = ({
             </TableRow>
           </TableHead>
           <TableBody>
-            {filteredItems
-              .sort(getItemComparator(orderBy, order))
-              .map((item) => (
-                <Row item={item} />
-              ))}
+            {visibleItems.map((item) => (
+              <ArmorRow
+                key={item.id}
+                item={item}
+                itemDropLocations={itemDropLocations}
+                itemNameMap={itemNameMap}
+                upgradeMaterialsList={upgradeMaterialsList}
+                goTo={goTo}
+              />
+            ))}
           </TableBody>
         </Table>
       </TableContainer>

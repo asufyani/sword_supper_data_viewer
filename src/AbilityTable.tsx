@@ -16,7 +16,10 @@ export const AbilityTable: React.FC<{ itemNamesMap: ItemNameMap }> = () => {
 
   return (
     <>
-      <TextField onChange={handleSearchChange}></TextField>
+      <TextField
+        label="Search abilities"
+        onChange={handleSearchChange}
+      ></TextField>
       <Table stickyHeader>
         <TableHead>
           <TableRow>

@@ -42,7 +42,7 @@ export const MapTable: React.FC<ItemsTableProps> = ({
   const mapsByKey: Record<string, Item[]> = {}
 
   itemsArray.forEach((map) => {
-    const mapKey = map.assetName.replace('map_', '')
+    const mapKey = (map.assetName || map.id).replace('map_', '')
     mapKeys.add(mapKey)
     mapsByKey[mapKey] ||= []
     mapsByKey[mapKey].push(map)
@@ -63,9 +63,9 @@ export const MapTable: React.FC<ItemsTableProps> = ({
               <TableRow key={mapKey}>
                 <TableCell id={mapKey}>
                   {mapsByKey[mapKey].map((map) => (
-                    <div>
+                    <div key={map.id}>
                       <AssetIcon
-                        assetName={map.assetName}
+                        assetName={map.assetName || map.id}
                         rarity={map.rarity}
                       />
                       <RarityChip item={itemNameMap[map.id]} />

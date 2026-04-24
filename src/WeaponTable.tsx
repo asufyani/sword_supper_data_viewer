@@ -29,6 +29,92 @@ const formatter = new Intl.NumberFormat('en-US', {
   minimumFractionDigits: 0,
 })
 
+function WeaponRow({
+  item,
+  itemDropLocations,
+  itemNameMap,
+  upgradeMaterialsList,
+  goTo,
+}: {
+  item: Item
+  itemDropLocations: Record<string, Record<string, number>>
+  itemNameMap: ItemsTableProps['itemNameMap']
+  upgradeMaterialsList: ItemsTableProps['upgradeMaterialsList']
+  goTo: ItemsTableProps['goTo']
+}) {
+  const [open, setOpen] = React.useState(false)
+  const dropLocations = itemDropLocations[item.id]
+  const tierNames = Object.keys(dropLocations)
+  const itemHasDropLocations = tierNames.length > 0
+
+  return (
+    <React.Fragment>
+      <TableRow
+        sx={{ '& > *': { borderBottom: 'unset' } }}
+        key={item.id + '-row'}
+        id={item.id + '-row'}
+      >
+        <TableCell key={item.id} id={item.id}>
+          <AssetIcon
+            assetName={item.assetName || item.id}
+            rarity={item.rarity}
+          />
+          <RarityChip item={item} goTo={goTo} />
+        </TableCell>
+        <TableCell key={item.id + '-damage'}>
+          {(Object.keys(item.damage || {}) as damageType[]).map(
+            (typeString) => (
+              <span key={item.id + '-' + typeString}>
+                {item.damage![typeString]}
+                {damageTypeSymbols[typeString]}
+              </span>
+            )
+          )}
+        </TableCell>
+        <TableCell key={item.id + '-mods'}>
+          <StatsDisplay
+            statModifiers={item.statModifiers}
+            abilities={item.abilities}
+          />
+        </TableCell>
+        <TableCell>{item.requiredLevel}</TableCell>
+        <TableCell>
+          <UpgradeList
+            itemId={item.id}
+            itemNameMap={itemNameMap}
+            upgrades={item.upgrades}
+            goTo={goTo}
+            upgradeMaterialsList={upgradeMaterialsList}
+          />
+        </TableCell>
+
+        <TableCell align="center">
+          {itemHasDropLocations && (
+            <IconButton
+              aria-label="expand row"
+              size="small"
+              onClick={() => setOpen(!open)}
+            >
+              {open ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
+            </IconButton>
+          )}
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
+          <Collapse in={open} timeout="auto" unmountOnExit>
+            {tierNames.map((tierName) => (
+              <div key={`${item.id}-${tierName}`}>
+                {tierName}: {formatter.format(dropLocations[tierName])}
+              </div>
+            ))}
+          </Collapse>
+        </TableCell>
+      </TableRow>
+    </React.Fragment>
+  )
+}
+
 export const WeaponTable: React.FC<ItemsTableProps> = ({
   itemsArray,
   itemNameMap,
@@ -53,82 +139,22 @@ export const WeaponTable: React.FC<ItemsTableProps> = ({
     setSearchString(event.target.value.toLowerCase())
   }
 
-  function Row(props: { item: Item }) {
-    const { item } = props
-    const [open, setOpen] = React.useState(false)
-    const itemHasDropLocations = !!Object.keys(itemDropLocations[item.id])
-      .length
-    return (
-      <React.Fragment>
-        <TableRow
-          sx={{ '& > *': { borderBottom: 'unset' } }}
-          key={item.id + '-row'}
-          id={item.id + '-row'}
-        >
-          <TableCell key={item.id} id={item.id}>
-            <AssetIcon assetName={item.assetName} rarity={item.rarity} />
-            <RarityChip item={item} goTo={goTo} />
-          </TableCell>
-          <TableCell key={item.id + '-damage'}>
-            {(Object.keys(item.damage || {}) as damageType[]).map(
-              (typeString) => (
-                <span key={item.id + '-' + typeString}>
-                  {item.damage![typeString]}
-                  {damageTypeSymbols[typeString]}
-                </span>
-              )
-            )}
-          </TableCell>
-          <TableCell key={item.id + '-mods'}>
-            <StatsDisplay
-              statModifiers={item.statModifiers}
-              abilities={item.abilities}
-            />
-          </TableCell>
-          <TableCell>{item.requiredLevel}</TableCell>
-          <TableCell>
-            <UpgradeList
-              itemId={item.id}
-              itemNameMap={itemNameMap}
-              upgrades={item.upgrades}
-              goTo={goTo}
-              upgradeMaterialsList={upgradeMaterialsList}
-            />
-          </TableCell>
-
-          <TableCell align="center">
-            {itemHasDropLocations && (
-              <IconButton
-                aria-label="expand row"
-                size="small"
-                onClick={() => setOpen(!open)}
-              >
-                {open ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
-              </IconButton>
-            )}
-          </TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
-            <Collapse in={open} timeout="auto" unmountOnExit>
-              {Object.keys(itemDropLocations[item.id]).map((tierName) => {
-                return (
-                  <div>
-                    {tierName}:{' '}
-                    {formatter.format(itemDropLocations[item.id][tierName])}
-                  </div>
-                )
-              })}
-            </Collapse>
-          </TableCell>
-        </TableRow>
-      </React.Fragment>
-    )
-  }
+  const visibleItems = React.useMemo(
+    () =>
+      [
+        ...itemsArray.filter((item) =>
+          item.name.toLowerCase().includes(searchString)
+        ),
+      ].sort(getItemComparator(orderBy, order)),
+    [itemsArray, order, orderBy, searchString]
+  )
 
   return (
     <>
-      <TextField onChange={handleSearchChange}></TextField>
+      <TextField
+        label="Search weapons"
+        onChange={handleSearchChange}
+      ></TextField>
       <Table stickyHeader>
         <TableHead>
           <TableRow>
@@ -159,12 +185,16 @@ export const WeaponTable: React.FC<ItemsTableProps> = ({
           </TableRow>
         </TableHead>
         <TableBody>
-          {itemsArray
-            .filter((item) => item.name.toLowerCase().includes(searchString))
-            .sort(getItemComparator(orderBy, order))
-            .map((item) => (
-              <Row item={item} />
-            ))}
+          {visibleItems.map((item) => (
+            <WeaponRow
+              key={item.id}
+              item={item}
+              itemDropLocations={itemDropLocations}
+              itemNameMap={itemNameMap}
+              upgradeMaterialsList={upgradeMaterialsList}
+              goTo={goTo}
+            />
+          ))}
         </TableBody>
       </Table>
     </>
