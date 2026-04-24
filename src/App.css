@@ -5,6 +5,25 @@
   text-align: center;
 }
 
+.app-tab-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.app-tab-header .MuiTabs-root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-inline: 0.5rem;
+  box-sizing: border-box;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

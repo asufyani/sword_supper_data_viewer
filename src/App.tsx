@@ -199,29 +199,29 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <ItemDetailsPopoverProvider>
-        {/* <Box sx={{ borderBottom: 1, borderColor: 'divider' }}> */}
-        <Tabs
-          value={tabIndex}
-          onChange={handleTabChange}
-          variant="scrollable"
-          scrollButtons="auto"
-          allowScrollButtonsMobile
-          sx={{ alignItems: 'center' }}
-        >
-          <Tab label="Weapons" {...a11yProps(0)} />
-          <Tab label="Armor" {...a11yProps(1)} />
-          <Tab label="Blueprints" {...a11yProps(2)} />
-          <Tab label="Maps" {...a11yProps(3)} />
-          <Tab label="Loot" {...a11yProps(4)} />
-          <Tab label="Enemies" {...a11yProps(5)} />
-          <Tab label="Food" {...a11yProps(6)} />
-          <Tab label="Quests" {...a11yProps(7)} />
-          <Tab label="Abilities" {...a11yProps(8)} />
-          <Tab label="Vault Loot" {...a11yProps(9)} />
-          <Tab label="Level Costs" {...a11yProps(10)} />
-          <Tab label="Help" {...a11yProps(11)} />
-        </Tabs>
-        {/* </Box> */}
+        <Box component="header" className="app-tab-header">
+          <Tabs
+            value={tabIndex}
+            onChange={handleTabChange}
+            variant="scrollable"
+            scrollButtons="auto"
+            allowScrollButtonsMobile
+            sx={{ alignItems: 'center' }}
+          >
+            <Tab label="Weapons" {...a11yProps(0)} />
+            <Tab label="Armor" {...a11yProps(1)} />
+            <Tab label="Blueprints" {...a11yProps(2)} />
+            <Tab label="Maps" {...a11yProps(3)} />
+            <Tab label="Loot" {...a11yProps(4)} />
+            <Tab label="Enemies" {...a11yProps(5)} />
+            <Tab label="Food" {...a11yProps(6)} />
+            <Tab label="Quests" {...a11yProps(7)} />
+            <Tab label="Abilities" {...a11yProps(8)} />
+            <Tab label="Vault Loot" {...a11yProps(9)} />
+            <Tab label="Level Costs" {...a11yProps(10)} />
+            <Tab label="Help" {...a11yProps(11)} />
+          </Tabs>
+        </Box>
         <CustomTabPanel value={tabIndex} index={0} loaded={loadedTabs.has(0)}>
           <Suspense fallback={<Typography>Loading weapons...</Typography>}>
             <TableContainer>

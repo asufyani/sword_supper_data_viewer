@@ -42,3 +42,15 @@ test('App lazy-loads tab panels and keeps loaded tabs mounted', () => {
     /<CustomTabPanel value=\{tabIndex\} index=\{11\} loaded=\{loadedTabs\.has\(11\)\}>/
   )
 })
+
+test('App renders the tab navigation in a sticky header', () => {
+  const appSource = fs.readFileSync('src/App.tsx', 'utf8')
+  const appStyles = fs.readFileSync('src/App.css', 'utf8')
+
+  assert.match(appSource, /component="header"/)
+  assert.match(appSource, /className="app-tab-header"/)
+  assert.match(appStyles, /\.app-tab-header\s*{/)
+  assert.match(appStyles, /position:\s*sticky/)
+  assert.match(appStyles, /top:\s*0/)
+  assert.match(appStyles, /z-index:\s*10/)
+})
