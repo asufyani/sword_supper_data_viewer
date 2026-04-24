@@ -7,7 +7,11 @@ test('App lazy-loads tab panels and keeps loaded tabs mounted', () => {
 
   assert.match(appSource, /React\.lazy\(\(\) => import\('\.\/LootTable'\)\)/)
   assert.match(appSource, /React\.lazy\(\(\) => import\('\.\/EnemyTable'\)\)/)
+  assert.match(appSource, /React\.lazy\(\(\) => import\('\.\/LevelCostTable'\)\)/)
   assert.match(appSource, /<Suspense fallback=/)
   assert.match(appSource, /loadedTabs\.has\(/)
   assert.match(appSource, /setLoadedTabs\(\(current\) => new Set\(current\)\.add\(newValue\)\)/)
+  assert.match(appSource, /<Tab label="Level Costs" \{\.\.\.a11yProps\(9\)\} \/>/)
+  assert.match(appSource, /<CustomTabPanel value=\{tabIndex\} index=\{9\} loaded=\{loadedTabs\.has\(9\)\}>/)
+  assert.match(appSource, /<CustomTabPanel value=\{tabIndex\} index=\{10\} loaded=\{loadedTabs\.has\(10\)\}>/)
 })

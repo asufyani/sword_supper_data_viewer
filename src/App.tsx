@@ -29,6 +29,7 @@ const EnemyTable = React.lazy(() => import('./EnemyTable'))
 const FoodTable = React.lazy(() => import('./FoodTable'))
 const QuestsTable = React.lazy(() => import('./QuestsTable'))
 const AbilityTable = React.lazy(() => import('./AbilityTable'))
+const LevelCostTable = React.lazy(() => import('./LevelCostTable'))
 const HelpPanel = React.lazy(() =>
   import('./HelpPanel').then((module) => ({ default: module.HelpPanel }))
 )
@@ -209,7 +210,8 @@ function App() {
           <Tab label="Food" {...a11yProps(6)} />
           <Tab label="Quests" {...a11yProps(7)} />
           <Tab label="Abilities" {...a11yProps(8)} />
-          <Tab label="Help" {...a11yProps(9)} />
+          <Tab label="Level Costs" {...a11yProps(9)} />
+          <Tab label="Help" {...a11yProps(10)} />
         </Tabs>
         {/* </Box> */}
         <CustomTabPanel value={tabIndex} index={0} loaded={loadedTabs.has(0)}>
@@ -294,6 +296,11 @@ function App() {
           </Suspense>
         </CustomTabPanel>
         <CustomTabPanel value={tabIndex} index={9} loaded={loadedTabs.has(9)}>
+          <Suspense fallback={<Typography>Loading level costs...</Typography>}>
+            <LevelCostTable />
+          </Suspense>
+        </CustomTabPanel>
+        <CustomTabPanel value={tabIndex} index={10} loaded={loadedTabs.has(10)}>
           <Suspense fallback={<Typography>Loading help...</Typography>}>
             <HelpPanel />
           </Suspense>
