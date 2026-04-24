@@ -161,6 +161,7 @@ function App() {
 
   const handleTabChange = (_event: React.SyntheticEvent, newValue: number) => {
     setTabIndex(newValue)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
     setLoadedTabs((current) => new Set(current).add(newValue))
   }
 
