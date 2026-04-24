@@ -4,73 +4,93 @@ export const HelpPanel = () => {
   return (
     <>
       <Typography variant={'h3'}>How to Use This Tool</Typography>
+
       <Typography variant={'h4'}>Weapons</Typography>
       <Typography variant={'body1'}>
-        Filter the list using the search box at the top. Sort by
-        name/damage/required level by clicking on the column headers.
+        Use the search box to filter by name and click the sortable headers to
+        reorder the table. Expand the row in the far right column to see where a
+        weapon drops. The Drops From list includes both regular mission rewards
+        and Daily Dungeon vault rewards when that weapon can appear in either
+        place.
       </Typography>
+
       <Typography variant={'h4'}>Armor</Typography>
       <Typography variant={'body1'}>
-        Filter the list using the search box at the top and/or the buttons to
-        filter by slot. Sort by name/required level by clicking on the column
-        headers.
+        Use the search box and slot buttons together to narrow the list. Expand
+        the row in the far right column to see where that armor piece can drop,
+        including Daily Dungeon vault rewards when applicable.
       </Typography>
+
       <Typography variant={'h4'}>Blueprints</Typography>
       <Typography variant={'body1'}>
-        Filter the list using the search box at the top. Click on an item name
-        in the upgrades column to jump to that item in the Weapons/Armor tabs.
+        Filter the list with the search box. Click an item name in the upgrades
+        column to jump directly to that item in the Weapons or Armor tabs.
       </Typography>
+
       <Typography variant={'h4'}>Maps</Typography>
       <Typography variant={'body1'}>
-        Click the level ranges in the Enemies column to view breakdown of chance
-        of seeing each enemy type in that level range. The Bosses column
-        indicates the chance that a boss map of this type will have each boss
-        type.
+        Click the level ranges in the Enemies column to see the breakdown of
+        which enemies can appear in that range. The Bosses column shows the odds
+        for boss variants of that map type.
       </Typography>
+
       <Typography variant={'h4'}>Loot</Typography>
       <Typography variant={'body1'}>
-        Click on a map's top level loot table to see what it drops in any given
-        level range. Example: To see what drops in the Fields, I click on
-        fieldsLoot. That contains 3 sub loot tables, missionGoldLoot,
-        fieldsEquipWrapperLoot, and missionMapLoot. I can then click on those
-        sub loot tables to drill down to see what drops in each of those tables
-        in any given level range.
+        Use this tab to drill through the main mission and enemy loot tables.
+        Open a top-level table such as fieldsLoot, then keep opening nested loot
+        table entries to trace where the final item drops come from at each
+        level range.
       </Typography>
       <Typography variant={'body1'}>
-        Alternatively, to find a specific piece of loot, use the search box to
-        find tables that include the item. Map loot tables like fieldsEquipLoot
-        mean that the item can drop as an end-of-mission reward in that map
-        type. Loot tables tied to specific enemies will list all enemies with
-        that loot table.
+        The search box is useful when you already know the item you want. It
+        filters to loot tables that contain matching items. Enemy-linked loot
+        tables list the enemies that use that table.
       </Typography>
+
+      <Typography variant={'h4'}>Vault Loot</Typography>
+      <Typography variant={'body1'}>
+        This tab shows the Daily Dungeon vault rewards. Use the search box to
+        find matching items, then open the gold, resource, or equipment groups
+        to see what can appear at each level range.
+      </Typography>
+
       <Typography variant={'h4'}>Enemies</Typography>
       <Typography variant={'body1'}>
-        Use the Enemy Level slider to set the level of mission you're doing and
-        the table will display stats for enemies of that level. The search box
-        can filter by enemy id or by enemy name (e.g. searching for livingArmor
-        or Steel Revenant will both find that boss). You can click on most of
-        the column headers to sort by that column. The resistances column can be
-        used to figure out what damage an enemy is weak to:{' '}
-        <span className="penalty">red numbers</span> indicate resistances and{' '}
-        <span className="bonus">green numbers</span> indicate weaknesses.
+        Use the Enemy Level slider to scale the enemy stats to the mission level
+        you care about. The search box works with both enemy ids and display
+        names, and most headers can be clicked to sort the table.
       </Typography>
       <Typography variant={'body1'}>
-        Click the down arrow in the far right column to see the enemy's loot
-        table.
+        The resistances column helps you spot strengths and weaknesses:
+        <span className="penalty"> red numbers</span> are resistances and
+        <span className="bonus"> green numbers</span> are weaknesses. Expand the
+        row on the far right to inspect that enemy&apos;s loot table.
       </Typography>
+
       <Typography variant={'h4'}>Food</Typography>
       <Typography variant={'body1'}>
-        If you're looking for specific essences, use the search box in the Food
-        tab to find what food types will drop which essences. Essence drops are
-        determined by the food image you pick when creating the mission.
-        Assuming people name their foods somewhat reasonably you can use this
-        tab to get an idea of things to search for in the subreddit, like "cake"
-        or "doughnut" would be good searches to find Fluffy Essence missions.
+        Use the search box to find foods that can drop a specific essence. Since
+        essence drops depend on the food image used for a mission, this tab is
+        helpful for identifying naming patterns worth searching for.
       </Typography>
+
       <Typography variant={'h4'}>Quests</Typography>
       <Typography variant={'body1'}>
-        Just a reference of the possible quests the game can give and the
-        requirements/rewards for each tier.
+        This is a reference list of quest types, their tier requirements, and
+        their rewards.
+      </Typography>
+
+      <Typography variant={'h4'}>Abilities</Typography>
+      <Typography variant={'body1'}>
+        Use the search box to find an ability by name and read its description.
+      </Typography>
+
+      <Typography variant={'h4'}>Level Costs</Typography>
+      <Typography variant={'body1'}>
+        This tab shows how much it costs to level up from level 1 through level
+        1000. Use the Jump to level box at the top to go straight to the level
+        you want. Each row shows the current level, the total cost so far, and
+        the cost to the next level.
       </Typography>
     </>
   )

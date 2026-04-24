@@ -101,7 +101,7 @@ export const LootTable: React.FC<LootTableProps> = ({ itemNameMap, goTo }) => {
 
   return (
     <>
-      <TextField onChange={handleSearchChange}></TextField>
+      <TextField label="Search loot" onChange={handleSearchChange}></TextField>
 
       {visibleTables.map((table) => (
         <Accordion
@@ -166,7 +166,9 @@ export const LootTable: React.FC<LootTableProps> = ({ itemNameMap, goTo }) => {
                           {itemToLink && (
                             <RarityChip
                               item={itemToLink}
-                              showPopover={itemToLink.tags.includes('equipment')}
+                              showPopover={itemToLink.tags.includes(
+                                'equipment'
+                              )}
                               goTo={goTo}
                               weight={dropRate}
                               quantityString={quantityString}
@@ -175,7 +177,9 @@ export const LootTable: React.FC<LootTableProps> = ({ itemNameMap, goTo }) => {
                           )}
                           {item.id && !itemToLink && (
                             <Chip
-                              label={dropRate ? `${item.id} - ${dropRate}` : item.id}
+                              label={
+                                dropRate ? `${item.id} - ${dropRate}` : item.id
+                              }
                             />
                           )}
                           {item.tableId && (

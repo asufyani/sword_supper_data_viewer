@@ -9,6 +9,7 @@ import type {
   Slot,
   ItemNameMap,
   TabName,
+  LootTable,
 } from './types'
 import Box from '@mui/material/Box'
 import Tabs from '@mui/material/Tabs'
@@ -19,12 +20,14 @@ import { createTheme } from '@mui/material/styles'
 import { TableContainer, Card, Paper, Typography } from '@mui/material'
 import { ItemDetailsPopoverProvider } from './ItemDetailsPopover'
 import { et } from './utils/loot'
+import { vaultLootTables } from './utils/vaultLoot'
 
 const WeaponTable = React.lazy(() => import('./WeaponTable'))
 const ArmorTable = React.lazy(() => import('./ArmorTable'))
 const BlueprintTable = React.lazy(() => import('./BlueprintTable'))
 const MapTable = React.lazy(() => import('./MapTable'))
 const LootTable = React.lazy(() => import('./LootTable'))
+const VaultLootTable = React.lazy(() => import('./VaultLootTable'))
 const EnemyTable = React.lazy(() => import('./EnemyTable'))
 const FoodTable = React.lazy(() => import('./FoodTable'))
 const QuestsTable = React.lazy(() => import('./QuestsTable'))
@@ -119,23 +122,26 @@ function App() {
         })
       })
     })
-
-    Object.keys(et).forEach((lootTableName) => {
-      et[lootTableName].tiers.forEach((tier) => {
-        const totalWeight: number = tier.items.reduce((total, item) => {
-          return total + (item.weight || 0)
-        }, 0)
-        const levels = tier.maxLevel
-          ? `${tier.minLevel}-${tier.maxLevel}`
-          : `${tier.minLevel}+`
-        tier.items.forEach((item) => {
-          if (item.id && itemDropLocations[item.id]) {
-            itemDropLocations[item.id][`${lootTableName} ${levels}`] =
-              item.weight! / totalWeight
-          }
+    ;[et, vaultLootTables as Record<string, LootTable>].forEach(
+      (lootTables) => {
+        Object.keys(lootTables).forEach((lootTableName) => {
+          lootTables[lootTableName].tiers.forEach((tier) => {
+            const totalWeight: number = tier.items.reduce((total, item) => {
+              return total + (item.weight || 0)
+            }, 0)
+            const levels = tier.maxLevel
+              ? `${tier.minLevel}-${tier.maxLevel}`
+              : `${tier.minLevel}+`
+            tier.items.forEach((item) => {
+              if (item.id && itemDropLocations[item.id]) {
+                itemDropLocations[item.id][`${lootTableName} ${levels}`] =
+                  item.weight! / totalWeight
+              }
+            })
+          })
         })
-      })
-    })
+      }
+    )
 
     // console.log(assetsArray)
     return {
@@ -210,8 +216,9 @@ function App() {
           <Tab label="Food" {...a11yProps(6)} />
           <Tab label="Quests" {...a11yProps(7)} />
           <Tab label="Abilities" {...a11yProps(8)} />
-          <Tab label="Level Costs" {...a11yProps(9)} />
-          <Tab label="Help" {...a11yProps(10)} />
+          <Tab label="Vault Loot" {...a11yProps(9)} />
+          <Tab label="Level Costs" {...a11yProps(10)} />
+          <Tab label="Help" {...a11yProps(11)} />
         </Tabs>
         {/* </Box> */}
         <CustomTabPanel value={tabIndex} index={0} loaded={loadedTabs.has(0)}>
@@ -296,11 +303,16 @@ function App() {
           </Suspense>
         </CustomTabPanel>
         <CustomTabPanel value={tabIndex} index={9} loaded={loadedTabs.has(9)}>
+          <Suspense fallback={<Typography>Loading vault loot...</Typography>}>
+            <VaultLootTable itemNameMap={itemArrays.itemNameMap} goTo={goTo} />
+          </Suspense>
+        </CustomTabPanel>
+        <CustomTabPanel value={tabIndex} index={10} loaded={loadedTabs.has(10)}>
           <Suspense fallback={<Typography>Loading level costs...</Typography>}>
             <LevelCostTable />
           </Suspense>
         </CustomTabPanel>
-        <CustomTabPanel value={tabIndex} index={10} loaded={loadedTabs.has(10)}>
+        <CustomTabPanel value={tabIndex} index={11} loaded={loadedTabs.has(11)}>
           <Suspense fallback={<Typography>Loading help...</Typography>}>
             <HelpPanel />
           </Suspense>
@@ -311,7 +323,9 @@ function App() {
           </a>
         </Typography>
         <Typography>
-          <a href="https://www.reddit.com/user/Thats_a_movie/">u/Thats_a_movie</a>
+          <a href="https://www.reddit.com/user/Thats_a_movie/">
+            u/Thats_a_movie
+          </a>
         </Typography>
         <Typography>
           <a href="https://github.com/asufyani/sword_supper_data_viewer">

@@ -52,7 +52,10 @@ function ArmorRow({
     <React.Fragment>
       <TableRow sx={{ '& > *': { borderBottom: 'unset' } }} key={item.id}>
         <TableCell id={item.id}>
-          <AssetIcon assetName={item.assetName || item.id} rarity={item.rarity} />
+          <AssetIcon
+            assetName={item.assetName || item.id}
+            rarity={item.rarity}
+          />
           <RarityChip item={item} goTo={goTo} />
         </TableCell>
         <TableCell>{item.equipSlots}</TableCell>
@@ -89,7 +92,8 @@ function ArmorRow({
           <Collapse in={open} timeout="auto" unmountOnExit>
             {tierNames.map((tierName) => (
               <div key={`${item.id}-${tierName}`}>
-                {tierName}: {formatter.format(itemDropLocations[item.id][tierName])}
+                {tierName}:{' '}
+                {formatter.format(itemDropLocations[item.id][tierName])}
               </div>
             ))}
           </Collapse>
@@ -155,7 +159,7 @@ export const ArmorTable: React.FC<ItemsTableProps> = ({
 
   return (
     <>
-      <TextField onChange={handleSearchChange}></TextField>
+      <TextField label="Search armor" onChange={handleSearchChange}></TextField>
       <ToggleButtonGroup
         value={slot}
         exclusive
@@ -193,20 +197,20 @@ export const ArmorTable: React.FC<ItemsTableProps> = ({
               <TableCell>Upgrades</TableCell>
               <TableCell>Drops From</TableCell>
             </TableRow>
-        </TableHead>
-        <TableBody>
-          {visibleItems.map((item) => (
-            <ArmorRow
-              key={item.id}
-              item={item}
-              itemDropLocations={itemDropLocations}
-              itemNameMap={itemNameMap}
-              upgradeMaterialsList={upgradeMaterialsList}
-              goTo={goTo}
-            />
-          ))}
-        </TableBody>
-      </Table>
+          </TableHead>
+          <TableBody>
+            {visibleItems.map((item) => (
+              <ArmorRow
+                key={item.id}
+                item={item}
+                itemDropLocations={itemDropLocations}
+                itemNameMap={itemNameMap}
+                upgradeMaterialsList={upgradeMaterialsList}
+                goTo={goTo}
+              />
+            ))}
+          </TableBody>
+        </Table>
       </TableContainer>
     </>
   )

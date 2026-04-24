@@ -22,7 +22,10 @@ export const BlueprintTable: React.FC<ItemsTableProps> = ({
   }
   return (
     <>
-      <TextField onChange={handleSearchChange}></TextField>
+      <TextField
+        label="Search blueprints"
+        onChange={handleSearchChange}
+      ></TextField>
       <Table stickyHeader>
         <TableHead>
           <TableRow>

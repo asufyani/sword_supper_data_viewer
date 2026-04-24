@@ -55,16 +55,21 @@ function WeaponRow({
         id={item.id + '-row'}
       >
         <TableCell key={item.id} id={item.id}>
-          <AssetIcon assetName={item.assetName || item.id} rarity={item.rarity} />
+          <AssetIcon
+            assetName={item.assetName || item.id}
+            rarity={item.rarity}
+          />
           <RarityChip item={item} goTo={goTo} />
         </TableCell>
         <TableCell key={item.id + '-damage'}>
-          {(Object.keys(item.damage || {}) as damageType[]).map((typeString) => (
-            <span key={item.id + '-' + typeString}>
-              {item.damage![typeString]}
-              {damageTypeSymbols[typeString]}
-            </span>
-          ))}
+          {(Object.keys(item.damage || {}) as damageType[]).map(
+            (typeString) => (
+              <span key={item.id + '-' + typeString}>
+                {item.damage![typeString]}
+                {damageTypeSymbols[typeString]}
+              </span>
+            )
+          )}
         </TableCell>
         <TableCell key={item.id + '-mods'}>
           <StatsDisplay
@@ -136,14 +141,20 @@ export const WeaponTable: React.FC<ItemsTableProps> = ({
 
   const visibleItems = React.useMemo(
     () =>
-      [...itemsArray.filter((item) => item.name.toLowerCase().includes(searchString))]
-        .sort(getItemComparator(orderBy, order)),
+      [
+        ...itemsArray.filter((item) =>
+          item.name.toLowerCase().includes(searchString)
+        ),
+      ].sort(getItemComparator(orderBy, order)),
     [itemsArray, order, orderBy, searchString]
   )
 
   return (
     <>
-      <TextField onChange={handleSearchChange}></TextField>
+      <TextField
+        label="Search weapons"
+        onChange={handleSearchChange}
+      ></TextField>
       <Table stickyHeader>
         <TableHead>
           <TableRow>

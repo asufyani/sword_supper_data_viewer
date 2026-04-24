@@ -248,7 +248,10 @@ export const EnemyTable: React.FC<{
 
   return (
     <>
-      <TextField onChange={handleSearchChange}></TextField>
+      <TextField
+        label="Search enemies"
+        onChange={handleSearchChange}
+      ></TextField>
       <Box sx={{ width: '50%', margin: 5, alignItems: 'center' }}>
         <Typography id="input-slider" gutterBottom>
           Enemy Level
