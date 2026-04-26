@@ -1,8 +1,9 @@
 #root {
-  max-width: 1280px;
+  max-width: 1480px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
+  color: var(--game-ink);
 }
 
 .app-tab-header {
@@ -12,50 +13,138 @@
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  background: #fff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  background: var(--game-navy);
+  border-bottom: 4px solid var(--game-outline);
+  box-shadow: 0 7px 0 rgba(0, 0, 0, 0.72);
 }
 
 .app-tab-header .MuiTabs-root {
   max-width: 1280px;
   margin: 0 auto;
-  padding-inline: 0.5rem;
+  min-height: 64px;
+  padding-inline: 0.75rem;
   box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.app-tab-header .MuiTabs-scroller {
+  padding: 0.55rem 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.app-tab-header .MuiTab-root {
+  min-height: 44px;
+  margin: 0.25rem;
+  padding: 0.5rem 1rem;
+  color: var(--game-ink);
+  background: var(--game-panel);
+  border: 3px solid var(--game-outline);
+  border-radius: 12px;
+  box-shadow: 0 4px 0 var(--game-outline);
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: none;
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease,
+    background-color 120ms ease;
+}
+
+.app-tab-header .MuiTab-root:hover {
+  background: #f8fcff;
+  transform: translateY(-1px);
+}
+
+.app-tab-header .Mui-selected {
+  color: #fff !important;
+  background: linear-gradient(180deg, #ff7684 0%, var(--game-danger) 100%);
+  box-shadow: 0 2px 0 var(--game-outline);
+  text-shadow:
+    -1px -1px 0 var(--game-outline),
+    1px -1px 0 var(--game-outline),
+    -1px 1px 0 var(--game-outline),
+    1px 1px 0 var(--game-outline);
+  transform: translateY(2px);
+}
+
+.app-tab-header .MuiTabs-indicator {
+  display: none;
+}
+
+.app-tab-header .MuiTabScrollButton-root {
+  color: #fff;
+  background: var(--game-purple);
+  border: 3px solid var(--game-outline);
+  border-radius: 10px;
+  box-shadow: 0 3px 0 var(--game-outline);
+  margin: 0.25rem;
+}
+
+.app-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem;
+  margin: 2rem auto 0.75rem;
+}
+
+.app-footer-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0.48rem 0.9rem;
+  color: var(--game-ink);
+  background: var(--game-panel);
+  border: 3px solid var(--game-outline);
+  border-radius: 12px;
+  box-shadow: 0 4px 0 var(--game-outline);
+  font-weight: 900;
+  line-height: 1.1;
+  text-decoration: none;
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease,
+    background-color 120ms ease;
+}
+
+.app-footer-links a:nth-child(1),
+.app-footer-links a:nth-child(2) {
+  background: var(--game-panel-strong);
+}
+
+.app-footer-links a:nth-child(3) {
+  color: #fff;
+  background: var(--game-purple);
+  text-shadow:
+    -1px -1px 0 var(--game-outline),
+    1px -1px 0 var(--game-outline),
+    -1px 1px 0 var(--game-outline),
+    1px 1px 0 var(--game-outline);
+}
+
+.app-footer-links a:hover {
+  background: #f8fcff;
+  box-shadow: 0 2px 0 var(--game-outline);
+  text-decoration: none;
+  transform: translateY(2px);
+}
+
+.app-footer-links a:nth-child(3):hover {
+  background: #b25cff;
+}
+
+@media (max-width: 700px) {
+  #root {
+    padding: 0.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .app-tab-header .MuiTab-root {
+    min-width: 82px;
+    padding-inline: 0.65rem;
+    font-size: 0.78rem;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .app-footer-links {
+    align-items: stretch;
+    flex-direction: column;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

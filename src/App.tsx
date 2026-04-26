@@ -295,7 +295,9 @@ function App() {
         </CustomTabPanel>
         <CustomTabPanel value={tabIndex} index={8} loaded={loadedTabs.has(8)}>
           <Suspense fallback={<Typography>Loading abilities...</Typography>}>
-            <AbilityTable itemNamesMap={itemArrays.itemNameMap} />
+            <TableContainer component={Paper}>
+              <AbilityTable itemNamesMap={itemArrays.itemNameMap} />
+            </TableContainer>
           </Suspense>
         </CustomTabPanel>
         <CustomTabPanel value={tabIndex} index={9} loaded={loadedTabs.has(9)}>
@@ -310,24 +312,22 @@ function App() {
         </CustomTabPanel>
         <CustomTabPanel value={tabIndex} index={11} loaded={loadedTabs.has(11)}>
           <Suspense fallback={<Typography>Loading help...</Typography>}>
-            <HelpPanel />
+            <Paper className="help-panel">
+              <HelpPanel />
+            </Paper>
           </Suspense>
         </CustomTabPanel>
-        <Typography>
+        <Box component="footer" className="app-footer-links">
           <a href="https://www.reddit.com/r/SwordAndSupperGame/">
             r/SwordAndSupperGame
           </a>
-        </Typography>
-        <Typography>
           <a href="https://www.reddit.com/user/Thats_a_movie/">
             u/Thats_a_movie
           </a>
-        </Typography>
-        <Typography>
           <a href="https://github.com/asufyani/sword_supper_data_viewer">
             github
           </a>
-        </Typography>
+        </Box>
       </ItemDetailsPopoverProvider>
     </ThemeProvider>
   )

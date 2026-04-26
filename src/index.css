@@ -5,21 +5,72 @@
   src: local('Poppins'), url('./assets/Poppins-Bold.ttf');
 }
 
+:root {
+  --game-navy: #23283f;
+  --game-deep-navy: #171b2f;
+  --game-panel: #e9f7ff;
+  --game-panel-strong: #cfeeff;
+  --game-outline: #05060a;
+  --game-ink: #10111c;
+  --game-blue: #3c83cf;
+  --game-grass: #a9c94e;
+  --game-danger: #ee4055;
+  --game-purple: #9b48ee;
+  --game-gold: #ffc94a;
+  --game-shadow: 0 6px 0 rgba(0, 0, 0, 0.92),
+    0 16px 26px rgba(17, 23, 44, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--game-navy);
+}
+
 body {
   font-family: 'Poppins';
   margin: 0;
   padding: 0;
-  height: 100vh;
-  #root {
-    padding: 0.5rem;
-    .MuiBox-root {
-      padding: 0.5rem;
-    }
-  }
+  min-height: 100vh;
+  color: var(--game-ink);
+  background: linear-gradient(
+    180deg,
+    #8ed4f6 0%,
+    #eaf8ff 28%,
+    var(--game-grass) 28%,
+    #7d9644 43%,
+    var(--game-navy) 43%,
+    var(--game-deep-navy) 100%
+  );
+  background-attachment: fixed;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.08) 0,
+      rgba(255, 255, 255, 0.08) 1px,
+      transparent 1px,
+      transparent 18px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.12), transparent 34%);
+}
+
+#root .MuiBox-root {
+  padding: 0.5rem;
 }
 
 .interactive {
-  cursor: zoom-in;
+  cursor: pointer;
 }
 
 .sortable {
@@ -34,19 +85,166 @@ body {
 }
 
 .penalty {
-  color: red;
+  color: #d52138;
 }
 
 .bonus {
-  color: limegreen;
+  color: #128f42;
+}
+
+.MuiTypography-h3,
+.MuiTypography-h4 {
+  color: #fff;
+  text-shadow:
+    -2px -2px 0 var(--game-outline),
+    2px -2px 0 var(--game-outline),
+    -2px 2px 0 var(--game-outline),
+    2px 2px 0 var(--game-outline),
+    0 4px 0 rgba(0, 0, 0, 0.45);
+}
+
+.MuiPaper-root,
+.MuiTableContainer-root,
+.MuiAccordion-root {
+  background: var(--game-panel) !important;
+  border: 4px solid var(--game-outline);
+  border-radius: 14px !important;
+  box-shadow: var(--game-shadow);
+  overflow: hidden;
+}
+
+.MuiTableContainer-root {
+  margin: 0.75rem auto 1.5rem;
+}
+
+.MuiTable-root {
+  background: transparent;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.MuiTableCell-root {
+  color: var(--game-ink);
+  border-bottom: 2px solid rgba(5, 6, 10, 0.16);
+  font-weight: 800;
+}
+
+.MuiTableCell-head {
+  color: #fff !important;
+  background: var(--game-blue) !important;
+  border-bottom: 4px solid var(--game-outline) !important;
+  font-size: 0.88rem;
+  font-weight: 900 !important;
+  text-shadow:
+    -1px -1px 0 var(--game-outline),
+    1px -1px 0 var(--game-outline),
+    -1px 1px 0 var(--game-outline),
+    1px 1px 0 var(--game-outline);
+}
+
+.MuiTableBody-root .MuiTableRow-root:nth-of-type(even) .MuiTableCell-body {
+  background: rgba(255, 255, 255, 0.32);
+}
+
+.MuiTableBody-root .MuiTableRow-root:hover .MuiTableCell-body {
+  background: #f8fcff;
+}
+
+.help-panel {
+  margin: 0.75rem auto 1.5rem;
+  max-width: 980px;
+  padding: clamp(1rem, 3vw, 1.75rem);
+  text-align: left;
+}
+
+.help-panel .MuiTypography-h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.help-panel .MuiTypography-h4 {
+  margin: 1.4rem 0 0.35rem;
+  color: var(--game-blue);
+  text-shadow: none;
+}
+
+.help-panel .MuiTypography-body1 {
+  color: var(--game-ink);
+  line-height: 1.65;
+}
+
+.MuiAccordion-root {
+  margin: 0.85rem 0 !important;
+}
+
+.MuiAccordionSummary-root {
+  min-height: 52px;
+  background: var(--game-panel-strong);
+  border-bottom: 3px solid var(--game-outline);
+}
+
+.MuiAccordionSummary-content .MuiTypography-root {
+  font-weight: 900;
+}
+
+.MuiAccordionDetails-root {
+  background: #f5fbff;
+}
+
+.MuiTextField-root {
+  margin: 0.65rem !important;
+}
+
+.MuiInputBase-root {
+  background: var(--game-panel);
+  border-radius: 12px !important;
+  box-shadow: 0 4px 0 var(--game-outline);
+  font-weight: 900;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border: 3px solid var(--game-outline) !important;
+}
+
+.MuiInputLabel-root {
+  color: var(--game-blue) !important;
+  font-weight: 900 !important;
+}
+
+.MuiToggleButtonGroup-root {
+  margin: 0.6rem;
+  border-radius: 14px;
+}
+
+.MuiToggleButton-root,
+.MuiIconButton-root {
+  color: var(--game-ink) !important;
+  background: var(--game-panel) !important;
+  border: 3px solid var(--game-outline) !important;
+  box-shadow: 0 3px 0 var(--game-outline);
+  font-weight: 900 !important;
+}
+
+.MuiToggleButton-root.Mui-selected {
+  color: #fff !important;
+  background: var(--game-purple) !important;
+}
+
+.MuiChip-root {
+  border: 2px solid var(--game-outline);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.86);
+  font-weight: 900;
 }
 
 .rarityChip {
+  color: #fff !important;
+  border: 2px solid var(--game-outline) !important;
+  font-weight: 900;
   text-shadow:
-    -1px -1px 0 black,
-    1px -1px 0 black,
-    -1px 1px 0 black,
-    1px 1px 0 black;
+    -1px -1px 0 var(--game-outline),
+    1px -1px 0 var(--game-outline),
+    -1px 1px 0 var(--game-outline),
+    1px 1px 0 var(--game-outline);
 }
 
 .assetIconContainer {
@@ -56,6 +254,7 @@ body {
   height: 50px;
   width: 50px;
   display: inline-block;
+  filter: drop-shadow(0 3px 0 rgba(0, 0, 0, 0.72));
   &.mini {
     top: 2px;
     background-size: 25px;
@@ -83,7 +282,8 @@ a {
 }
 
 .chipIcon {
-  height: 20px;
+  height: 22px;
+  filter: drop-shadow(0 1px 0 var(--game-outline));
 }
 
 .raritycolor {
@@ -94,4 +294,12 @@ a {
   width: 50%;
   height: 400px;
   display: inline-block;
+}
+
+#item-details-popover .MuiPaper-root {
+  background: var(--game-panel) !important;
+  border: 4px solid var(--game-outline) !important;
+  border-top: 8px solid var(--game-purple) !important;
+  border-radius: 14px !important;
+  box-shadow: var(--game-shadow) !important;
 }
