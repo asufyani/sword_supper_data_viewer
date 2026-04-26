@@ -2,9 +2,10 @@ import { createContext, useContext, useMemo, useState, type ReactNode } from 're
 import Popover from '@mui/material/Popover'
 import Typography from '@mui/material/Typography'
 import { Box, Chip, Stack } from '@mui/material'
-import type { Item, damageType, Rarity, TabName } from './types'
+import type { Item, Rarity, TabName } from './types'
 import { StatsDisplay } from './StatsDisplay'
 import { AssetIcon } from './AssetIcon'
+import { DamageDisplay } from './DamageDisplay'
 
 type ItemDetailsPopoverValue = {
   closePopover: () => void
@@ -159,11 +160,7 @@ function ItemDetailsPopover({
           )}
           {item.damage && (
             <Typography component="div" sx={{ color: '#102033', mb: 1 }}>
-              {(Object.keys(item.damage || {}) as damageType[]).map((typeString) => (
-                <span key={item.id + '-' + typeString}>
-                  {typeString}: {item.damage![typeString]}{' '}
-                </span>
-              ))}
+              Damage: <DamageDisplay damage={item.damage} />
             </Typography>
           )}
           <StatsDisplay statModifiers={item.statModifiers} abilities={item.abilities} />

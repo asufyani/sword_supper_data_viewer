@@ -4,12 +4,7 @@ import TableCell from '@mui/material/TableCell'
 import TableHead from '@mui/material/TableHead'
 import TableBody from '@mui/material/TableBody'
 import TextField from '@mui/material/TextField'
-import type {
-  damageType,
-  Item,
-  ItemsTableProps,
-  SortableProperty,
-} from './types'
+import type { Item, ItemsTableProps, SortableProperty } from './types'
 import { RarityChip } from './RarityChip'
 import { useState, type ChangeEvent } from 'react'
 import { UpgradeList } from './UpgradeList'
@@ -17,11 +12,11 @@ import { SortableHeader } from './SortableHeader'
 import { getItemComparator } from './utils/get_comparator'
 import { StatsDisplay } from './StatsDisplay'
 import { useDebounceValue } from 'usehooks-ts'
-import { damageTypeSymbols } from './utils/constants'
 import { AssetIcon } from './AssetIcon'
 import { KeyboardArrowUp, KeyboardArrowDown } from '@mui/icons-material'
 import { IconButton, Collapse } from '@mui/material'
 import React from 'react'
+import { DamageDisplay } from './DamageDisplay'
 
 const formatter = new Intl.NumberFormat('en-US', {
   style: 'percent',
@@ -62,14 +57,7 @@ function WeaponRow({
           <RarityChip item={item} goTo={goTo} />
         </TableCell>
         <TableCell key={item.id + '-damage'}>
-          {(Object.keys(item.damage || {}) as damageType[]).map(
-            (typeString) => (
-              <span key={item.id + '-' + typeString}>
-                {item.damage![typeString]}
-                {damageTypeSymbols[typeString]}
-              </span>
-            )
-          )}
+          <DamageDisplay damage={item.damage} />
         </TableCell>
         <TableCell key={item.id + '-mods'}>
           <StatsDisplay

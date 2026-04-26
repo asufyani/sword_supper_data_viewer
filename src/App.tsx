@@ -21,6 +21,12 @@ import { TableContainer, Card, Paper, Typography } from '@mui/material'
 import { ItemDetailsPopoverProvider } from './ItemDetailsPopover'
 import { et } from './utils/loot'
 import { vaultLootTables } from './utils/vaultLoot'
+import {
+  buildEnemyNamesByLootTable,
+  buildItemDropLocations,
+} from './utils/itemDropLocations'
+import { z3 } from './utils/enemies'
+import { enemyNames } from './utils/enemyNames'
 
 const WeaponTable = React.lazy(() => import('./WeaponTable'))
 const ArmorTable = React.lazy(() => import('./ArmorTable'))
@@ -80,7 +86,6 @@ function App() {
     const armorArray: Item[] = []
     const blueprintArray: Item[] = []
     const mapArray: Item[] = []
-    const itemDropLocations: Record<string, Record<string, number>> = {}
     // const assetsArray: string[] = []
     const upgradeMaterialItems: Record<string, string[]> = {}
     Object.keys(items).forEach((key) => {
@@ -91,7 +96,6 @@ function App() {
         equipSlots: items[key as itemsKey].equipSlots as Slot[],
         id: key,
       }
-      itemDropLocations[item.id] = {}
       // if (item.assetName) {
       //   assetsArray.push(
       //     `https://cabbageidle-eimoap-0-0-40-webview.devvit.net/assets/ui/item-icons/${item.assetName}.png`
@@ -122,25 +126,16 @@ function App() {
         })
       })
     })
-    ;[et, vaultLootTables as Record<string, LootTable>].forEach(
-      (lootTables) => {
-        Object.keys(lootTables).forEach((lootTableName) => {
-          lootTables[lootTableName].tiers.forEach((tier) => {
-            const totalWeight: number = tier.items.reduce((total, item) => {
-              return total + (item.weight || 0)
-            }, 0)
-            const levels = tier.maxLevel
-              ? `${tier.minLevel}-${tier.maxLevel}`
-              : `${tier.minLevel}+`
-            tier.items.forEach((item) => {
-              if (item.id && itemDropLocations[item.id]) {
-                itemDropLocations[item.id][`${lootTableName} ${levels}`] =
-                  item.weight! / totalWeight
-              }
-            })
-          })
-        })
-      }
+
+    const enemyNamesByLootTable = buildEnemyNamesByLootTable(
+      et,
+      z3,
+      enemyNames
+    )
+    const itemDropLocations = buildItemDropLocations(
+      itemNameMap,
+      [et, vaultLootTables as Record<string, LootTable>],
+      enemyNamesByLootTable
     )
 
     // console.log(assetsArray)
