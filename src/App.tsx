@@ -281,7 +281,10 @@ function App() {
         </CustomTabPanel>
         <CustomTabPanel value={tabIndex} index={6} loaded={loadedTabs.has(6)}>
           <Suspense fallback={<Typography>Loading food...</Typography>}>
-            <TableContainer className="sticky-data-table" component={Paper}>
+            <TableContainer
+              className="sticky-data-table food-data-table"
+              component={Paper}
+            >
               <FoodTable itemNamesMap={itemArrays.itemNameMap} />
             </TableContainer>
           </Suspense>

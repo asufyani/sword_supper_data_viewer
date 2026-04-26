@@ -78,7 +78,7 @@ test('wide data tables opt into sticky scroll headers only where requested', () 
     'EnemyTable',
     'FoodTable',
   ]) {
-    assert.match(wrapperFor(componentName), /className="sticky-data-table"/)
+    assert.match(wrapperFor(componentName), /className="[^"]*sticky-data-table/)
   }
 
   assert.doesNotMatch(wrapperFor('ArmorTable'), /component=\{Card\}/)
@@ -108,4 +108,39 @@ test('enemy level numeric control uses the outlined text field styling', () => {
   assert.match(enemySource, /<TextField[\s\S]*label="Level"/)
   assert.match(enemySource, /className="enemy-level-input"/)
   assert.match(globalStyles, /\.enemy-level-input\s*{/)
+})
+
+test('mobile styles compact controls, tables, and item popovers', () => {
+  const appStyles = fs.readFileSync('src/App.css', 'utf8')
+  const globalStyles = fs.readFileSync('src/index.css', 'utf8')
+  const enemySource = fs.readFileSync('src/EnemyTable.tsx', 'utf8')
+  const foodSource = fs.readFileSync('src/FoodTable.tsx', 'utf8')
+  const popoverSource = fs.readFileSync('src/ItemDetailsPopover.tsx', 'utf8')
+  const enemyViewerSource = fs.readFileSync('src/EnemyViewer.tsx', 'utf8')
+
+  assert.match(appStyles, /@media \(max-width: 700px\)/)
+  assert.match(appStyles, /\.sticky-data-table::after\s*{/)
+  assert.match(
+    appStyles,
+    /\.MuiTableContainer-root\.sticky-data-table \.MuiTable-root\s*{[\s\S]*min-width:/
+  )
+  assert.match(globalStyles, /@media \(max-width: 700px\)/)
+  assert.match(globalStyles, /\.MuiTableCell-root\s*{[\s\S]*padding:/)
+  assert.match(globalStyles, /\.MuiToggleButtonGroup-root\s*{[\s\S]*flex-wrap:/)
+  assert.match(appStyles, /\.food-data-table \.MuiTable-root\s*{[\s\S]*min-width:/)
+  assert.match(
+    appStyles,
+    /\.MuiTableContainer-root\.food-data-table \.MuiTable-root\s*{[\s\S]*table-layout: fixed/
+  )
+  assert.match(foodSource, /className="food-image"/)
+  assert.match(foodSource, /className="food-name-cell"/)
+  assert.match(foodSource, /className="food-name-label"/)
+  assert.match(globalStyles, /\.food-image\s*{[\s\S]*width: 100px/)
+  assert.match(globalStyles, /\.food-image\s*{[\s\S]*width: 56px/)
+  assert.match(globalStyles, /\.food-data-table \.food-name-cell\s*{[\s\S]*width: 76px/)
+  assert.match(enemySource, /className="enemy-level-control"/)
+  assert.match(enemySource, /size=\{\{ xs: 12, sm: 'grow' \}\}/)
+  assert.match(popoverSource, /slotProps=\{\{[\s\S]*root:/)
+  assert.match(enemyViewerSource, /className="spine-player"/)
+  assert.match(globalStyles, /#item-details-popover \.MuiPaper-root\s*{[\s\S]*position: fixed/)
 })

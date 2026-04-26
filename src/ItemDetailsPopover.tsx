@@ -95,7 +95,6 @@ function ItemDetailsPopover({
   return (
     <Popover
       id="item-details-popover"
-      sx={{ pointerEvents: 'none' }}
       open={open}
       anchorEl={anchorEl}
       anchorOrigin={{
@@ -108,6 +107,11 @@ function ItemDetailsPopover({
       }}
       disableRestoreFocus
       slotProps={{
+        root: {
+          sx: {
+            pointerEvents: { xs: 'auto', sm: 'none' },
+          },
+        },
         paper: {
           sx: {
             background:

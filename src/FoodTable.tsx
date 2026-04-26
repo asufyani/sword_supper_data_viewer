@@ -40,7 +40,9 @@ export const FoodTable: React.FC<{ itemNamesMap: ItemNameMap }> = ({
       <Table stickyHeader>
         <TableHead>
           <TableRow>
-            <TableCell align="center">Name</TableCell>
+            <TableCell className="food-name-cell" align="center">
+              Name
+            </TableCell>
             <TableCell>Essences</TableCell>
             <TableCell>Default Names</TableCell>
           </TableRow>
@@ -56,11 +58,14 @@ export const FoodTable: React.FC<{ itemNamesMap: ItemNameMap }> = ({
               const essences = food[foodName as keyof typeof food]
               const names = foodNames[foodName as keyof typeof foodNames]
               const imgSrc = getImageUrl(foodName)
+              const trimmedName = foodName.substring(0, foodName.length-4);
               return (
                 <TableRow key={foodName}>
-                  <TableCell align="center">
-                    <img src={imgSrc} height={'100px'} alt={foodName} />
-                    <Typography component="div">{foodName}</Typography>
+                  <TableCell className="food-name-cell" align="center">
+                    <img src={imgSrc} className="food-image" alt={foodName} />
+                    <Typography className="food-name-label" component="div">
+                      {trimmedName}
+                    </Typography>
                   </TableCell>
                   <TableCell>
                     {essences.map((essence) => {

@@ -251,12 +251,12 @@ export const EnemyTable: React.FC<{
         label="Search enemies"
         onChange={handleSearchChange}
       ></TextField>
-      <Box sx={{ width: '50%', margin: 5, alignItems: 'center' }}>
+      <Box className="enemy-level-control">
         <Typography id="input-slider" gutterBottom>
           Enemy Level
         </Typography>
         <Grid container spacing={2} sx={{ alignItems: 'center' }}>
-          <Grid size="grow">
+          <Grid size={{ xs: 12, sm: 'grow' }}>
             <Slider
               value={typeof level === 'number' ? level : 0}
               max={maxLevel}
@@ -264,7 +264,7 @@ export const EnemyTable: React.FC<{
               aria-labelledby="input-slider"
             />
           </Grid>
-          <Grid>
+          <Grid size={{ xs: 12, sm: 'auto' }}>
             <TextField
               className="enemy-level-input"
               label="Level"

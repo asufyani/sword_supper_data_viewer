@@ -48,9 +48,8 @@ export const EnemyAnimationViewer = ({
 
   return (
     <div
+      className="spine-player"
       style={{
-        width: '50%',
-        height: '400px',
         overflow: 'hidden',
         margin: 'auto',
       }}

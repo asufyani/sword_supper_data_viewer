@@ -79,13 +79,27 @@
 }
 
 .sticky-data-table {
+  position: relative;
   max-height: min(760px, calc(100vh - 112px));
   overflow: auto;
   scrollbar-gutter: stable;
 }
 
+.sticky-data-table::after {
+  content: '';
+  display: none;
+}
+
 .MuiTableContainer-root.sticky-data-table {
   overflow: auto;
+}
+
+.MuiTableContainer-root.sticky-data-table .MuiTable-root {
+  min-width: 760px;
+}
+
+.MuiTableContainer-root.food-data-table .MuiTable-root {
+  min-width: 520px;
 }
 
 .sticky-data-table .MuiTableCell-stickyHeader {
@@ -150,13 +164,69 @@
 
 @media (max-width: 700px) {
   #root {
-    padding: 0.5rem;
+    padding: 0.35rem;
+  }
+
+  .app-tab-header {
+    border-bottom-width: 3px;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.72);
+  }
+
+  .app-tab-header .MuiTabs-root {
+    min-height: 52px;
+    padding-inline: 0.4rem;
+  }
+
+  .app-tab-header .MuiTabs-scroller {
+    padding: 0.35rem 0;
   }
 
   .app-tab-header .MuiTab-root {
-    min-width: 82px;
-    padding-inline: 0.65rem;
-    font-size: 0.78rem;
+    min-height: 38px;
+    min-width: 72px;
+    margin: 0.15rem;
+    padding: 0.35rem 0.55rem;
+    border-width: 2px;
+    border-radius: 10px;
+    box-shadow: 0 3px 0 var(--game-outline);
+    font-size: 0.72rem;
+  }
+
+  .sticky-data-table {
+    max-height: calc(100vh - 86px);
+    margin-inline: -0.1rem;
+  }
+
+  .sticky-data-table::after {
+    content: '';
+    position: sticky;
+    right: 0;
+    display: block;
+    float: right;
+    width: 20px;
+    height: 100%;
+    min-height: 260px;
+    margin-left: -20px;
+    pointer-events: none;
+    background: linear-gradient(
+      90deg,
+      rgba(233, 247, 255, 0),
+      rgba(35, 40, 63, 0.28)
+    );
+  }
+
+  .MuiTableContainer-root.sticky-data-table .MuiTable-root {
+    min-width: 680px;
+  }
+
+  .MuiTableContainer-root.food-data-table .MuiTable-root {
+    min-width: 0;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .sticky-data-table .MuiTableCell-stickyHeader {
+    box-shadow: inset 0 -3px 0 var(--game-outline);
   }
 
   .app-footer-links {
