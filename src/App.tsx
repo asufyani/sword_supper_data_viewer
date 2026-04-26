@@ -219,7 +219,7 @@ function App() {
         </Box>
         <CustomTabPanel value={tabIndex} index={0} loaded={loadedTabs.has(0)}>
           <Suspense fallback={<Typography>Loading weapons...</Typography>}>
-            <TableContainer>
+            <TableContainer className="sticky-data-table">
               <WeaponTable
                 itemsArray={itemArrays.weaponsArray}
                 itemNameMap={itemArrays.itemNameMap}
@@ -232,7 +232,7 @@ function App() {
         </CustomTabPanel>
         <CustomTabPanel value={tabIndex} index={1} loaded={loadedTabs.has(1)}>
           <Suspense fallback={<Typography>Loading armor...</Typography>}>
-            <TableContainer component={Card}>
+            <TableContainer className="sticky-data-table">
               <ArmorTable
                 itemsArray={itemArrays.armorArray}
                 itemNameMap={itemArrays.itemNameMap}
@@ -257,7 +257,7 @@ function App() {
         </CustomTabPanel>
         <CustomTabPanel value={tabIndex} index={3} loaded={loadedTabs.has(3)}>
           <Suspense fallback={<Typography>Loading maps...</Typography>}>
-            <TableContainer component={Card}>
+            <TableContainer className="sticky-data-table" component={Card}>
               <MapTable
                 itemsArray={itemArrays.mapArray}
                 itemNameMap={itemArrays.itemNameMap}
@@ -274,14 +274,14 @@ function App() {
         </CustomTabPanel>
         <CustomTabPanel value={tabIndex} index={5} loaded={loadedTabs.has(5)}>
           <Suspense fallback={<Typography>Loading enemies...</Typography>}>
-            <TableContainer component={Paper}>
+            <TableContainer className="sticky-data-table" component={Paper}>
               <EnemyTable itemNamesMap={itemArrays.itemNameMap} goTo={goTo} />
             </TableContainer>
           </Suspense>
         </CustomTabPanel>
         <CustomTabPanel value={tabIndex} index={6} loaded={loadedTabs.has(6)}>
           <Suspense fallback={<Typography>Loading food...</Typography>}>
-            <TableContainer component={Paper}>
+            <TableContainer className="sticky-data-table" component={Paper}>
               <FoodTable itemNamesMap={itemArrays.itemNameMap} />
             </TableContainer>
           </Suspense>

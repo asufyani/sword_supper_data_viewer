@@ -78,6 +78,22 @@
   margin: 0.25rem;
 }
 
+.sticky-data-table {
+  max-height: min(760px, calc(100vh - 112px));
+  overflow: auto;
+  scrollbar-gutter: stable;
+}
+
+.MuiTableContainer-root.sticky-data-table {
+  overflow: auto;
+}
+
+.sticky-data-table .MuiTableCell-stickyHeader {
+  top: 0;
+  z-index: 4;
+  box-shadow: inset 0 -4px 0 var(--game-outline);
+}
+
 .app-footer-links {
   display: flex;
   flex-wrap: wrap;

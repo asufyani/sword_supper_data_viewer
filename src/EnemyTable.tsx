@@ -23,7 +23,6 @@ import {
   AccordionSummary,
   Box,
   Grid,
-  Input,
   Slider,
   Typography,
 } from '@mui/material'
@@ -266,16 +265,18 @@ export const EnemyTable: React.FC<{
             />
           </Grid>
           <Grid>
-            <Input
+            <TextField
+              className="enemy-level-input"
+              label="Level"
               value={level}
               size="small"
+              type="number"
               onChange={handleInputChange}
               onBlur={handleBlur}
               inputProps={{
                 step: 10,
                 min: 1,
                 max: maxLevel,
-                type: 'number',
                 'aria-labelledby': 'input-slider',
               }}
             />

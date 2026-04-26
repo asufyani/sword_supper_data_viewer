@@ -195,6 +195,11 @@ body::before {
   margin: 0.65rem !important;
 }
 
+.enemy-level-input {
+  width: 112px;
+  margin: 0 !important;
+}
+
 .MuiInputBase-root {
   background: var(--game-panel);
   border-radius: 12px !important;

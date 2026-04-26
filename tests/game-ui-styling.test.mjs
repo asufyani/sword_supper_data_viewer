@@ -50,3 +50,62 @@ test('footer links use game button styling for the dark background', () => {
   assert.match(appStyles, /border:\s*3px solid var\(--game-outline\)/)
   assert.match(appStyles, /\.app-footer-links a:hover\s*{/)
 })
+
+test('wide data tables opt into sticky scroll headers only where requested', () => {
+  const appSource = fs.readFileSync('src/App.tsx', 'utf8')
+  const appStyles = fs.readFileSync('src/App.css', 'utf8')
+  const armorSource = fs.readFileSync('src/ArmorTable.tsx', 'utf8')
+  const levelCostSource = fs.readFileSync('src/LevelCostTable.tsx', 'utf8')
+
+  function wrapperFor(componentName) {
+    const componentIndex = appSource.indexOf(`<${componentName}`)
+    assert.notEqual(componentIndex, -1, `${componentName} should render in App`)
+
+    const wrapperStart = appSource.lastIndexOf('<TableContainer', componentIndex)
+    assert.notEqual(
+      wrapperStart,
+      -1,
+      `${componentName} should be wrapped in a TableContainer`
+    )
+
+    return appSource.slice(wrapperStart, appSource.indexOf('>', wrapperStart))
+  }
+
+  for (const componentName of [
+    'WeaponTable',
+    'ArmorTable',
+    'MapTable',
+    'EnemyTable',
+    'FoodTable',
+  ]) {
+    assert.match(wrapperFor(componentName), /className="sticky-data-table"/)
+  }
+
+  assert.doesNotMatch(wrapperFor('ArmorTable'), /component=\{Card\}/)
+  assert.doesNotMatch(armorSource, /<TableContainer/)
+  assert.doesNotMatch(
+    wrapperFor('QuestsTable'),
+    /className="sticky-data-table"/
+  )
+  assert.doesNotMatch(
+    wrapperFor('AbilityTable'),
+    /className="sticky-data-table"/
+  )
+
+  assert.match(armorSource, /<Table stickyHeader>/)
+  assert.match(levelCostSource, /className="sticky-data-table"/)
+  assert.match(appStyles, /\.sticky-data-table\s*{/)
+  assert.match(appStyles, /\.MuiTableContainer-root\.sticky-data-table\s*{/)
+  assert.match(appStyles, /\.sticky-data-table \.MuiTableCell-stickyHeader\s*{/)
+})
+
+test('enemy level numeric control uses the outlined text field styling', () => {
+  const enemySource = fs.readFileSync('src/EnemyTable.tsx', 'utf8')
+  const globalStyles = fs.readFileSync('src/index.css', 'utf8')
+
+  assert.doesNotMatch(enemySource, /\n\s*Input,\n/)
+  assert.doesNotMatch(enemySource, /<Input\b/)
+  assert.match(enemySource, /<TextField[\s\S]*label="Level"/)
+  assert.match(enemySource, /className="enemy-level-input"/)
+  assert.match(globalStyles, /\.enemy-level-input\s*{/)
+})

@@ -80,6 +80,7 @@ export default function LevelCostTable() {
       </Stack>
 
       <div
+        className="sticky-data-table"
         ref={scrollRef}
         onScroll={(event) => {
           setScrollTop(event.currentTarget.scrollTop)

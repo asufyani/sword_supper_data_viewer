@@ -8,8 +8,6 @@ import type { Item, ItemsTableProps, Slot, SortableProperty } from './types'
 import { RarityChip } from './RarityChip'
 import { useState, useCallback, type ChangeEvent } from 'react'
 import {
-  TableContainer,
-  Paper,
   ToggleButton,
   ToggleButtonGroup,
   Collapse,
@@ -174,44 +172,42 @@ export const ArmorTable: React.FC<ItemsTableProps> = ({
 
         <ToggleButton value="Ring">Ring</ToggleButton>
       </ToggleButtonGroup>
-      <TableContainer component={Paper}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <SortableHeader
-                handleHeaderClick={handleHeaderClick}
-                order={order}
-                orderBy={orderBy}
-                label="Name"
-                property="name"
-              />
-              <TableCell>Slot</TableCell>
-              <TableCell>Stat Modifiers and Abilities</TableCell>
-              <SortableHeader
-                handleHeaderClick={handleHeaderClick}
-                order={order}
-                orderBy={orderBy}
-                label="Required Level"
-                property="requiredLevel"
-              />
-              <TableCell>Upgrades</TableCell>
-              <TableCell>Drops From</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {visibleItems.map((item) => (
-              <ArmorRow
-                key={item.id}
-                item={item}
-                itemDropLocations={itemDropLocations}
-                itemNameMap={itemNameMap}
-                upgradeMaterialsList={upgradeMaterialsList}
-                goTo={goTo}
-              />
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+      <Table stickyHeader>
+        <TableHead>
+          <TableRow>
+            <SortableHeader
+              handleHeaderClick={handleHeaderClick}
+              order={order}
+              orderBy={orderBy}
+              label="Name"
+              property="name"
+            />
+            <TableCell>Slot</TableCell>
+            <TableCell>Stat Modifiers and Abilities</TableCell>
+            <SortableHeader
+              handleHeaderClick={handleHeaderClick}
+              order={order}
+              orderBy={orderBy}
+              label="Required Level"
+              property="requiredLevel"
+            />
+            <TableCell>Upgrades</TableCell>
+            <TableCell>Drops From</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {visibleItems.map((item) => (
+            <ArmorRow
+              key={item.id}
+              item={item}
+              itemDropLocations={itemDropLocations}
+              itemNameMap={itemNameMap}
+              upgradeMaterialsList={upgradeMaterialsList}
+              goTo={goTo}
+            />
+          ))}
+        </TableBody>
+      </Table>
     </>
   )
 }
