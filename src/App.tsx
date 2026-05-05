@@ -70,7 +70,10 @@ function CustomTabPanel(props: TabPanelProps) {
       {...other}
     >
       {loaded && (
-        <Box sx={{ display: value === index ? 'block' : 'none', p: 3 }}>
+        <Box
+          className="app-tab-panel"
+          sx={{ display: value === index ? 'block' : 'none' }}
+        >
           {children}
         </Box>
       )}

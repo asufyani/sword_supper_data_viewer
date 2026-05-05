@@ -44,8 +44,21 @@ test('footer links use game button styling for the dark background', () => {
     appSource,
     /<Box component="footer" className="app-footer-links">/
   )
+  assert.match(appStyles, /#root\s*{[\s\S]*padding: 1rem 1rem 0;/)
+  assert.match(appSource, /className="app-tab-panel"/)
+  assert.match(appStyles, /#root \.app-tab-header\s*{[\s\S]*padding: 0;/)
+  assert.match(appStyles, /#root \.app-tab-panel\s*{[\s\S]*padding: 0\.75rem 0\.75rem 0;/)
+  assert.match(appStyles, /max-height:\s*min\(720px, calc\(100vh - 156px\)\);/)
+  assert.match(
+    appStyles,
+    /\.MuiTableContainer-root\.sticky-data-table\s*{[\s\S]*margin: 0\.35rem auto 0\.35rem;/
+  )
   assert.match(appStyles, /\.app-footer-links\s*{/)
+  assert.match(appStyles, /gap:\s*0\.5rem;/)
+  assert.match(appStyles, /margin:\s*0 auto;/)
+  assert.match(appStyles, /padding:\s*0;/)
   assert.match(appStyles, /\.app-footer-links a\s*{/)
+  assert.match(appStyles, /min-height:\s*38px;/)
   assert.match(appStyles, /background:\s*var\(--game-panel\)/)
   assert.match(appStyles, /border:\s*3px solid var\(--game-outline\)/)
   assert.match(appStyles, /\.app-footer-links a:hover\s*{/)
@@ -119,7 +132,19 @@ test('mobile styles compact controls, tables, and item popovers', () => {
   const enemyViewerSource = fs.readFileSync('src/EnemyViewer.tsx', 'utf8')
 
   assert.match(appStyles, /@media \(max-width: 700px\)/)
+  assert.match(
+    appStyles,
+    /@media \(max-width: 700px\)[\s\S]*#root\s*{[\s\S]*padding: 0\.35rem 0\.35rem 0;/
+  )
   assert.match(appStyles, /\.sticky-data-table::after\s*{/)
+  assert.match(
+    appStyles,
+    /@media \(max-width: 700px\)[\s\S]*#root \.app-tab-panel\s*{[\s\S]*padding: 0\.35rem 0\.15rem 0;/
+  )
+  assert.match(appStyles, /max-height:\s*calc\(100vh - 176px\);/)
+  assert.match(appStyles, /gap:\s*0\.2rem;/)
+  assert.match(appStyles, /margin:\s*0\.1rem auto 0;/)
+  assert.match(appStyles, /min-height:\s*30px;/)
   assert.match(
     appStyles,
     /\.MuiTableContainer-root\.sticky-data-table \.MuiTable-root\s*{[\s\S]*min-width:/

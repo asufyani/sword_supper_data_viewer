@@ -1,7 +1,7 @@
 #root {
   max-width: 1480px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 1rem 0;
   text-align: center;
   color: var(--game-ink);
 }
@@ -16,6 +16,10 @@
   background: var(--game-navy);
   border-bottom: 4px solid var(--game-outline);
   box-shadow: 0 7px 0 rgba(0, 0, 0, 0.72);
+}
+
+#root .app-tab-header {
+  padding: 0;
 }
 
 .app-tab-header .MuiTabs-root {
@@ -78,9 +82,13 @@
   margin: 0.25rem;
 }
 
+#root .app-tab-panel {
+  padding: 0.75rem 0.75rem 0;
+}
+
 .sticky-data-table {
   position: relative;
-  max-height: min(760px, calc(100vh - 112px));
+  max-height: min(720px, calc(100vh - 156px));
   overflow: auto;
   scrollbar-gutter: stable;
 }
@@ -91,6 +99,7 @@
 }
 
 .MuiTableContainer-root.sticky-data-table {
+  margin: 0.35rem auto 0.35rem;
   overflow: auto;
 }
 
@@ -112,16 +121,20 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.85rem;
-  margin: 2rem auto 0.75rem;
+  gap: 0.5rem;
+  margin: 0 auto;
+}
+
+#root .app-footer-links {
+  padding: 0;
 }
 
 .app-footer-links a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 42px;
-  padding: 0.48rem 0.9rem;
+  min-height: 38px;
+  padding: 0.35rem 0.75rem;
   color: var(--game-ink);
   background: var(--game-panel);
   border: 3px solid var(--game-outline);
@@ -164,7 +177,7 @@
 
 @media (max-width: 700px) {
   #root {
-    padding: 0.35rem;
+    padding: 0.35rem 0.35rem 0;
   }
 
   .app-tab-header {
@@ -192,8 +205,12 @@
     font-size: 0.72rem;
   }
 
+  #root .app-tab-panel {
+    padding: 0.35rem 0.15rem 0;
+  }
+
   .sticky-data-table {
-    max-height: calc(100vh - 86px);
+    max-height: calc(100vh - 176px);
     margin-inline: -0.1rem;
   }
 
@@ -232,5 +249,15 @@
   .app-footer-links {
     align-items: stretch;
     flex-direction: column;
+    gap: 0.2rem;
+    margin: 0.1rem auto 0;
+  }
+
+  .app-footer-links a {
+    min-height: 30px;
+    padding: 0.2rem 0.5rem;
+    border-width: 2px;
+    border-radius: 10px;
+    font-size: 0.72rem;
   }
 }
