@@ -41,12 +41,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'FireResist',
@@ -78,12 +73,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'FireResist',
@@ -97,14 +87,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceSpicy',
-            amount: 5,
-          },
-          {
-            id: 'Iron',
-            amount: 12,
-          },
+          { id: 'EssenceSpicy', amount: 5 },
+          { id: 'Iron', amount: 12 },
         ],
         yields: 'BlazingAmulet2',
       },
@@ -143,14 +127,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceSpicy',
-            amount: 6,
-          },
-          {
-            id: 'Iron',
-            amount: 25,
-          },
+          { id: 'EssenceSpicy', amount: 6 },
+          { id: 'Iron', amount: 25 },
         ],
         yields: 'BlazingAmulet3',
       },
@@ -170,12 +148,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.04,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.04, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'FireResist',
@@ -224,11 +197,7 @@ export const items: Record<string, Item> = {
   BulwarkChain: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'HealOnEnemyDeath',
-      },
-    ],
+    abilities: [{ id: 'HealOnEnemyDeath' }],
     tags: ['equipment'],
     statModifiers: [
       {
@@ -244,18 +213,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 22,
-          },
-          {
-            id: 'Stone',
-            amount: 22,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 9,
-          },
+          { id: 'Ore', amount: 22 },
+          { id: 'Stone', amount: 22 },
+          { id: 'EssenceTangy', amount: 9 },
         ],
         yields: 'BulwarkChain2',
       },
@@ -272,11 +232,7 @@ export const items: Record<string, Item> = {
   BulwarkChain2: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'HealOnEnemyDeath',
-      },
-    ],
+    abilities: [{ id: 'HealOnEnemyDeath' }],
     tags: ['equipment'],
     statModifiers: [
       {
@@ -305,12 +261,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -318,14 +269,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 6,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 1,
-          },
+          { id: 'Ore', amount: 6 },
+          { id: 'EssenceCreamy', amount: 1 },
         ],
         yields: 'ChippedPendant2',
       },
@@ -344,12 +289,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -357,14 +297,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 12,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 4,
-          },
+          { id: 'Ore', amount: 12 },
+          { id: 'EssenceCreamy', amount: 4 },
         ],
         yields: 'ChippedPendant3',
       },
@@ -383,12 +317,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.04,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.04, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -408,18 +337,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 25,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 2,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 25, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 2, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Dodge',
@@ -442,19 +361,10 @@ export const items: Record<string, Item> = {
   DarkBargainCharm: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'HealChanceOnShadowDamage',
-      },
-    ],
+    abilities: [{ id: 'HealChanceOnShadowDamage' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.05,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.05, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'ShadowResist',
@@ -478,19 +388,10 @@ export const items: Record<string, Item> = {
   DeadlyRelic: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'HealOnEnemyDeath',
-      },
-    ],
+    abilities: [{ id: 'HealOnEnemyDeath' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -508,28 +409,11 @@ export const items: Record<string, Item> = {
   DeathzoneLocketEX: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'LowHPKnives',
-      },
-      {
-        id: 'LowHpDodgeBoostAbility',
-      },
-    ],
+    abilities: [{ id: 'LowHPKnives' }, { id: 'LowHpDodgeBoostAbility' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.02,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -547,25 +431,11 @@ export const items: Record<string, Item> = {
   DeathzoneNecklet: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'LowHPKnives',
-      },
-    ],
+    abilities: [{ id: 'LowHPKnives' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.02,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -599,20 +469,11 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceHearty',
-            amount: 11,
-          },
-          {
-            id: 'Luminite',
-            amount: 2,
-          },
-          {
-            id: 'Stone',
-            amount: 80,
-          },
+          { id: 'EssenceHearty', amount: 11 },
+          { id: 'Luminite', amount: 2 },
+          { id: 'Stone', amount: 80 },
         ],
-        yields: 'WardenCharmUltimate',
+        yields: 'DefensiveCharmUltimate',
       },
     ],
     retainOnUpgrade: false,
@@ -620,17 +481,13 @@ export const items: Record<string, Item> = {
     sellPrice: 33,
     name: 'Defensive Charm Lvl 1',
     assetName: 'DefensiveCharm',
-    description: 'A protective charm with an unlockable Ability.',
+    description: 'Legacy item. A protective charm with an unlockable Ability.',
     id: 'DefensiveCharm',
   },
   DefensiveCharmUltimate: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'ShieldOnLowHP',
-      },
-    ],
+    abilities: [{ id: 'ShieldOnLowHP' }],
     tags: ['equipment'],
     statModifiers: [
       {
@@ -656,25 +513,11 @@ export const items: Record<string, Item> = {
   EvasionAmulet: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'HealOnEnemyDeath',
-      },
-    ],
+    abilities: [{ id: 'HealOnEnemyDeath' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: -25,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: -25, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -692,28 +535,11 @@ export const items: Record<string, Item> = {
   FearsomeAmulet: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'WeakOnCrit',
-        params: {
-          applyChance: 0.5,
-        },
-      },
-    ],
+    abilities: [{ id: 'WeakOnCrit', params: { applyChance: 0.5 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Attack',
-        value: 25,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.015,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Attack', value: 25, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.015, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -730,28 +556,11 @@ export const items: Record<string, Item> = {
   FearsomeAmuletEX: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'WeakOnCrit',
-        params: {
-          applyChance: 0.5,
-        },
-      },
-    ],
+    abilities: [{ id: 'WeakOnCrit', params: { applyChance: 0.5 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Attack',
-        value: 25,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Attack', value: 25, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'HypnotizeResist',
@@ -777,18 +586,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 1,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 1, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -796,18 +595,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceCreamy',
-            amount: 5,
-          },
-          {
-            id: 'Wood',
-            amount: 24,
-          },
-          {
-            id: 'Luminite',
-            amount: 1,
-          },
+          { id: 'EssenceCreamy', amount: 5 },
+          { id: 'Wood', amount: 24 },
+          { id: 'Luminite', amount: 1 },
         ],
         yields: 'FulguriteShard2',
       },
@@ -827,18 +617,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 1,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.04,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 1, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.04, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -846,18 +626,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 125,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 12,
-          },
-          {
-            id: 'Luminite',
-            amount: 4,
-          },
+          { id: 'Wood', amount: 125 },
+          { id: 'EssenceCreamy', amount: 12 },
+          { id: 'Luminite', amount: 4 },
         ],
         yields: 'FulguriteShard3',
       },
@@ -877,18 +648,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 1,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.05,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 1, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.05, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -896,18 +657,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 155,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 18,
-          },
-          {
-            id: 'Luminite',
-            amount: 4,
-          },
+          { id: 'Ore', amount: 155 },
+          { id: 'EssenceCreamy', amount: 18 },
+          { id: 'Luminite', amount: 4 },
         ],
         yields: 'FulguriteShard4',
       },
@@ -927,18 +679,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 1,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.06,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 1, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.06, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -946,18 +688,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 300,
-          },
-          {
-            id: 'Luminite',
-            amount: 12,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 32,
-          },
+          { id: 'Stone', amount: 300 },
+          { id: 'Luminite', amount: 12 },
+          { id: 'EssenceCreamy', amount: 32 },
         ],
         yields: 'FulguriteShardUltimate',
       },
@@ -974,25 +707,11 @@ export const items: Record<string, Item> = {
   FulguriteShardUltimate: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'RemoveVulnerableOnDodge',
-      },
-    ],
+    abilities: [{ id: 'RemoveVulnerableOnDodge' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 2,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.07,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 2, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.07, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -1026,22 +745,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 300,
-          },
-          {
-            id: 'Luminite',
-            amount: 12,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 30,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 30,
-          },
+          { id: 'Ore', amount: 300 },
+          { id: 'Luminite', amount: 12 },
+          { id: 'EssenceCreamy', amount: 30 },
+          { id: 'EssenceSpicy', amount: 30 },
         ],
         yields: 'FurybringerUltimate',
       },
@@ -1057,11 +764,7 @@ export const items: Record<string, Item> = {
   FurybringerUltimate: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'LightningOnRage',
-      },
-    ],
+    abilities: [{ id: 'LightningOnRage' }],
     tags: ['equipment'],
     statModifiers: [
       {
@@ -1102,22 +805,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 900,
-          },
-          {
-            id: 'Luminite',
-            amount: 24,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 18,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 18,
-          },
+          { id: 'Stone', amount: 900 },
+          { id: 'Luminite', amount: 24 },
+          { id: 'EssenceCreamy', amount: 18 },
+          { id: 'EssenceTangy', amount: 18 },
         ],
         yields: 'GhostlyPendant2',
       },
@@ -1136,12 +827,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.08,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.08, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -1149,22 +835,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 1600,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 18,
-          },
-          {
-            id: 'Luminite',
-            amount: 42,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 33,
-          },
+          { id: 'Stone', amount: 1600 },
+          { id: 'EssenceTangy', amount: 18 },
+          { id: 'Luminite', amount: 42 },
+          { id: 'EssenceCreamy', amount: 33 },
         ],
         yields: 'GhostlyPendantUltimate',
       },
@@ -1180,19 +854,10 @@ export const items: Record<string, Item> = {
   GhostlyPendantUltimate: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'LowHpDodgeBoostAbility',
-      },
-    ],
+    abilities: [{ id: 'LowHpDodgeBoostAbility' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.1,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.1, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -1212,18 +877,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 20,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.015,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 20, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.015, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Dodge',
@@ -1250,12 +905,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -1263,14 +913,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 18,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 2,
-          },
+          { id: 'Ore', amount: 18 },
+          { id: 'EssenceCreamy', amount: 2 },
         ],
         yields: 'PhaseCharm2',
       },
@@ -1302,14 +946,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 80,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 4,
-          },
+          { id: 'Ore', amount: 80 },
+          { id: 'EssenceCreamy', amount: 4 },
         ],
         yields: 'PhaseCharm3',
       },
@@ -1328,12 +966,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.05,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.05, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -1381,11 +1014,7 @@ export const items: Record<string, Item> = {
   RagingCharm: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'HealOnRage',
-      },
-    ],
+    abilities: [{ id: 'HealOnRage' }],
     tags: ['equipment'],
     statModifiers: [
       {
@@ -1410,11 +1039,7 @@ export const items: Record<string, Item> = {
   RagingCharmEX: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'HealOnRage',
-      },
-    ],
+    abilities: [{ id: 'HealOnRage' }],
     tags: ['equipment'],
     statModifiers: [
       {
@@ -1442,20 +1067,12 @@ export const items: Record<string, Item> = {
     abilities: [
       {
         id: 'RemovePoisonEveryHitCount',
-        params: {
-          multiplier: 5,
-          removeChance: 0.25,
-        },
+        params: { multiplier: 5, removeChance: 0.25 },
       },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 25,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 25, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -1463,18 +1080,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceFresh',
-            amount: 35,
-          },
-          {
-            id: 'Luminite',
-            amount: 44,
-          },
-          {
-            id: 'Ore',
-            amount: 1450,
-          },
+          { id: 'EssenceFresh', amount: 35 },
+          { id: 'Luminite', amount: 44 },
+          { id: 'Ore', amount: 1450 },
         ],
         yields: 'SalvestoneAmulet2',
       },
@@ -1493,20 +1101,12 @@ export const items: Record<string, Item> = {
     abilities: [
       {
         id: 'RemovePoisonEveryHitCount',
-        params: {
-          multiplier: 5,
-          removeChance: 0.3,
-        },
+        params: { multiplier: 5, removeChance: 0.3 },
       },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 25,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 25, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -1514,18 +1114,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceFresh',
-            amount: 43,
-          },
-          {
-            id: 'Wood',
-            amount: 1670,
-          },
-          {
-            id: 'Luminite',
-            amount: 50,
-          },
+          { id: 'EssenceFresh', amount: 43 },
+          { id: 'Wood', amount: 1670 },
+          { id: 'Luminite', amount: 50 },
         ],
         yields: 'SalvestoneAmulet3',
       },
@@ -1544,20 +1135,12 @@ export const items: Record<string, Item> = {
     abilities: [
       {
         id: 'RemovePoisonEveryHitCount',
-        params: {
-          multiplier: 5,
-          removeChance: 0.35,
-        },
+        params: { multiplier: 5, removeChance: 0.35 },
       },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 25,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 25, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -1565,18 +1148,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceFresh',
-            amount: 48,
-          },
-          {
-            id: 'Iron',
-            amount: 1660,
-          },
-          {
-            id: 'Luminite',
-            amount: 50,
-          },
+          { id: 'EssenceFresh', amount: 48 },
+          { id: 'Iron', amount: 1660 },
+          { id: 'Luminite', amount: 50 },
         ],
         yields: 'SalvestoneAmulet4',
       },
@@ -1595,20 +1169,12 @@ export const items: Record<string, Item> = {
     abilities: [
       {
         id: 'RemovePoisonEveryHitCount',
-        params: {
-          multiplier: 5,
-          removeChance: 0.4,
-        },
+        params: { multiplier: 5, removeChance: 0.4 },
       },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 25,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 25, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -1616,18 +1182,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceFresh',
-            amount: 60,
-          },
-          {
-            id: 'Luminite',
-            amount: 55,
-          },
-          {
-            id: 'Stone',
-            amount: 2220,
-          },
+          { id: 'EssenceFresh', amount: 60 },
+          { id: 'Luminite', amount: 55 },
+          { id: 'Stone', amount: 2220 },
         ],
         yields: 'SalvestoneAmuletUltimate',
       },
@@ -1646,20 +1203,12 @@ export const items: Record<string, Item> = {
     abilities: [
       {
         id: 'RemovePoisonEveryHitCount',
-        params: {
-          multiplier: 5,
-          removeChance: 0.45,
-        },
+        params: { multiplier: 5, removeChance: 0.45 },
       },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 25,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 25, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -1676,22 +1225,10 @@ export const items: Record<string, Item> = {
   SapStone: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'WeakOnTurnCount',
-        params: {
-          applyChance: 0.75,
-        },
-      },
-    ],
+    abilities: [{ id: 'WeakOnTurnCount', params: { applyChance: 0.75 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.03, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -1712,24 +1249,9 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 100,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 75,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.025,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 100, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 75, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.025, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -1737,22 +1259,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 690,
-          },
-          {
-            id: 'Iron',
-            amount: 690,
-          },
-          {
-            id: 'Luminite',
-            amount: 44,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 40,
-          },
+          { id: 'Ore', amount: 690 },
+          { id: 'Iron', amount: 690 },
+          { id: 'Luminite', amount: 44 },
+          { id: 'EssenceHearty', amount: 40 },
         ],
         yields: 'StalwartSolidus2',
       },
@@ -1772,24 +1282,9 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 115,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 90,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 115, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 90, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.03, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -1797,22 +1292,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 810,
-          },
-          {
-            id: 'Iron',
-            amount: 810,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 55,
-          },
-          {
-            id: 'Luminite',
-            amount: 44,
-          },
+          { id: 'Ore', amount: 810 },
+          { id: 'Iron', amount: 810 },
+          { id: 'EssenceHearty', amount: 55 },
+          { id: 'Luminite', amount: 44 },
         ],
         yields: 'StalwartSolidus3',
       },
@@ -1832,24 +1315,14 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 140,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 140, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Defense',
         value: 120,
         modifierType: 'add',
       },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.035,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.035, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -1870,24 +1343,9 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 45,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 15,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.05,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 45, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 15, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.05, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -1895,22 +1353,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceChewy',
-            amount: 32,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 32,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 32,
-          },
-          {
-            id: 'Luminite',
-            amount: 12,
-          },
+          { id: 'EssenceChewy', amount: 32 },
+          { id: 'EssenceHearty', amount: 32 },
+          { id: 'EssenceCreamy', amount: 32 },
+          { id: 'Luminite', amount: 12 },
         ],
         yields: 'SurvivalCharm2',
       },
@@ -1929,24 +1375,9 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 65,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 35,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.06,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 65, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 35, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.06, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -1954,22 +1385,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceChewy',
-            amount: 88,
-          },
-          {
-            id: 'Luminite',
-            amount: 18,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 88,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 88,
-          },
+          { id: 'EssenceChewy', amount: 88 },
+          { id: 'Luminite', amount: 18 },
+          { id: 'EssenceHearty', amount: 88 },
+          { id: 'EssenceCreamy', amount: 88 },
         ],
         yields: 'SurvivalCharm3',
       },
@@ -1988,24 +1407,9 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 85,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 44,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.08,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 85, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 44, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.08, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -2022,28 +1426,11 @@ export const items: Record<string, Item> = {
   ToxicTrinket: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'PoisonOnMagicKnife',
-        params: {
-          damagePerTurn: 25,
-        },
-      },
-    ],
+    abilities: [{ id: 'PoisonOnMagicKnife', params: { damagePerTurn: 25 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 1,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 1, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -2051,14 +1438,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceSpicy',
-            amount: 16,
-          },
-          {
-            id: 'Iron',
-            amount: 560,
-          },
+          { id: 'EssenceSpicy', amount: 16 },
+          { id: 'Iron', amount: 560 },
         ],
         yields: 'ToxicTrinket2',
       },
@@ -2075,28 +1456,11 @@ export const items: Record<string, Item> = {
   ToxicTrinket2: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'PoisonOnMagicKnife',
-        params: {
-          damagePerTurn: 28,
-        },
-      },
-    ],
+    abilities: [{ id: 'PoisonOnMagicKnife', params: { damagePerTurn: 28 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 1,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.025,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 1, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.025, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -2104,14 +1468,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 640,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 22,
-          },
+          { id: 'Ore', amount: 640 },
+          { id: 'EssenceSpicy', amount: 22 },
         ],
         yields: 'ToxicTrinket3',
       },
@@ -2128,28 +1486,11 @@ export const items: Record<string, Item> = {
   ToxicTrinket3: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'PoisonOnMagicKnife',
-        params: {
-          damagePerTurn: 35,
-        },
-      },
-    ],
+    abilities: [{ id: 'PoisonOnMagicKnife', params: { damagePerTurn: 35 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 1,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 1, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.03, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -2157,14 +1498,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 750,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 31,
-          },
+          { id: 'Stone', amount: 750 },
+          { id: 'EssenceSpicy', amount: 31 },
         ],
         yields: 'ToxicTrinket4',
       },
@@ -2181,28 +1516,11 @@ export const items: Record<string, Item> = {
   ToxicTrinket4: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'PoisonOnMagicKnife',
-        params: {
-          damagePerTurn: 45,
-        },
-      },
-    ],
+    abilities: [{ id: 'PoisonOnMagicKnife', params: { damagePerTurn: 45 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 1,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.04,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 1, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.04, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -2210,18 +1528,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 940,
-          },
-          {
-            id: 'Luminite',
-            amount: 32,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 44,
-          },
+          { id: 'Wood', amount: 940 },
+          { id: 'Luminite', amount: 32 },
+          { id: 'EssenceSpicy', amount: 44 },
         ],
         yields: 'ToxicTrinketUltimate',
       },
@@ -2238,28 +1547,11 @@ export const items: Record<string, Item> = {
   ToxicTrinketUltimate: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'PoisonOnMagicKnife',
-        params: {
-          damagePerTurn: 60,
-        },
-      },
-    ],
+    abilities: [{ id: 'PoisonOnMagicKnife', params: { damagePerTurn: 60 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 1,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.05,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 1, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.05, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -2280,30 +1572,15 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: -160,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: -160, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Defense',
         value: -50,
         modifierType: 'add',
       },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.02,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.04,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.04, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -2311,18 +1588,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 520,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 15,
-          },
-          {
-            id: 'Luminite',
-            amount: 18,
-          },
+          { id: 'Stone', amount: 520 },
+          { id: 'EssenceHearty', amount: 15 },
+          { id: 'Luminite', amount: 18 },
         ],
         yields: 'TwistedCharm2',
       },
@@ -2341,24 +1609,14 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: -200,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: -200, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Defense',
         value: -65,
         modifierType: 'add',
       },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.025,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.025, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Dodge',
@@ -2372,18 +1630,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 660,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 22,
-          },
-          {
-            id: 'Luminite',
-            amount: 18,
-          },
+          { id: 'Stone', amount: 660 },
+          { id: 'EssenceHearty', amount: 22 },
+          { id: 'Luminite', amount: 18 },
         ],
         yields: 'TwistedCharm3',
       },
@@ -2402,12 +1651,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: -220,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: -220, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Defense',
@@ -2442,19 +1686,10 @@ export const items: Record<string, Item> = {
   VengefulLocket: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'EveryOtherTurnAddRage',
-      },
-    ],
+    abilities: [{ id: 'EveryOtherTurnAddRage' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -2474,12 +1709,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.05,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.05, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -2487,14 +1717,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 110,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 12,
-          },
+          { id: 'Iron', amount: 110 },
+          { id: 'EssenceCreamy', amount: 12 },
         ],
         yields: 'WarpstoneAmulet2',
       },
@@ -2513,12 +1737,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.06,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.06, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -2526,14 +1745,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 220,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 27,
-          },
+          { id: 'Iron', amount: 220 },
+          { id: 'EssenceCreamy', amount: 27 },
         ],
         yields: 'WarpstoneAmulet3',
       },
@@ -2552,12 +1765,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.07,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.07, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -2574,31 +1782,12 @@ export const items: Record<string, Item> = {
   WatchersLocket: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'AddRageOnEnemyDeath',
-      },
-    ],
+    abilities: [{ id: 'AddRageOnEnemyDeath' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: -50,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 75,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.05,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: -50, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 75, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.05, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -2607,7 +1796,7 @@ export const items: Record<string, Item> = {
     retainOnUpgrade: false,
     requiredLevel: 54,
     sellPrice: 300,
-    name: 'Watcher\u2019s Locket',
+    name: 'Watcher’s Locket',
     assetName: 'WatchersLocket',
     description:
       'Legacy item. A protective locket which grants Rage when enemies are felled.',
@@ -2616,31 +1805,12 @@ export const items: Record<string, Item> = {
   WatchersLocketEX: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'AddRageOnEnemyDeath',
-      },
-    ],
+    abilities: [{ id: 'AddRageOnEnemyDeath' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: -35,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 98,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.06,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: -35, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 98, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.06, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -2649,7 +1819,7 @@ export const items: Record<string, Item> = {
     retainOnUpgrade: false,
     requiredLevel: 77,
     sellPrice: 440,
-    name: 'Watcher\u2019s Locket EX',
+    name: 'Watcher’s Locket EX',
     assetName: 'WatchersLocket',
     description:
       'Legacy item. A protective locket which grants Rage when enemies are felled.',
@@ -2658,14 +1828,7 @@ export const items: Record<string, Item> = {
   BastionChain: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'HealOnEnemyDeath',
-        params: {
-          healAmount: 0.025,
-        },
-      },
-    ],
+    abilities: [{ id: 'HealOnEnemyDeath', params: { healAmount: 0.025 } }],
     tags: ['equipment'],
     statModifiers: [
       {
@@ -2681,18 +1844,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 22,
-          },
-          {
-            id: 'Stone',
-            amount: 22,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 9,
-          },
+          { id: 'Ore', amount: 22 },
+          { id: 'Stone', amount: 22 },
+          { id: 'EssenceTangy', amount: 9 },
         ],
         yields: 'BastionChain2',
       },
@@ -2709,14 +1863,7 @@ export const items: Record<string, Item> = {
   BastionChain2: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'HealOnEnemyDeath',
-        params: {
-          healAmount: 0.025,
-        },
-      },
-    ],
+    abilities: [{ id: 'HealOnEnemyDeath', params: { healAmount: 0.025 } }],
     tags: ['equipment'],
     statModifiers: [
       {
@@ -2742,22 +1889,10 @@ export const items: Record<string, Item> = {
   MortalRelic: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'HealOnEnemyDeath',
-        params: {
-          healAmount: 0.025,
-        },
-      },
-    ],
+    abilities: [{ id: 'HealOnEnemyDeath', params: { healAmount: 0.025 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -2772,17 +1907,45 @@ export const items: Record<string, Item> = {
       'A neck piece that channels the energy of dead enemies to heal the wearer.',
     id: 'MortalRelic',
   },
+  WardenCharm: {
+    type: 'ItemDefinition',
+    rarity: 'rare',
+    abilities: [],
+    tags: ['equipment'],
+    statModifiers: [
+      {
+        type: 'StatModifier',
+        stat: 'Dodge',
+        value: 0.025,
+        modifierType: 'add',
+      },
+    ],
+    equipSlots: ['Amulet'],
+    isStackable: false,
+    amount: 1,
+    upgrades: [
+      {
+        requires: [
+          { id: 'EssenceHearty', amount: 11 },
+          { id: 'Luminite', amount: 2 },
+          { id: 'Stone', amount: 80 },
+        ],
+        yields: 'WardenCharmUltimate',
+      },
+    ],
+    retainOnUpgrade: false,
+    requiredLevel: 4,
+    sellPrice: 33,
+    name: 'Warden Charm',
+    assetName: 'DefensiveCharm',
+    description: 'A protective charm with an unlockable Ability.',
+    id: 'WardenCharm',
+  },
   WardenCharmUltimate: {
     type: 'ItemDefinition',
     rarity: 'epic',
     abilities: [
-      {
-        id: 'ShieldOnLowHP',
-        params: {
-          threshold: 0.2,
-          shieldAmount: 0.15,
-        },
-      },
+      { id: 'ShieldOnLowHP', params: { threshold: 0.2, shieldAmount: 0.15 } },
     ],
     tags: ['equipment'],
     statModifiers: [
@@ -2808,28 +1971,11 @@ export const items: Record<string, Item> = {
   NimbleAmulet: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'HealOnEnemyDeath',
-        params: {
-          healAmount: 0.025,
-        },
-      },
-    ],
+    abilities: [{ id: 'HealOnEnemyDeath', params: { healAmount: 0.025 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: -25,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: -25, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -2847,34 +1993,12 @@ export const items: Record<string, Item> = {
   VigilLocket: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'AddRageOnEnemyDeath',
-        params: {
-          rageAmount: 20,
-        },
-      },
-    ],
+    abilities: [{ id: 'AddRageOnEnemyDeath', params: { rageAmount: 20 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: -50,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 75,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.05,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: -50, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 75, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.05, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -2892,34 +2016,12 @@ export const items: Record<string, Item> = {
   VigilLocketEX: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'AddRageOnEnemyDeath',
-        params: {
-          rageAmount: 20,
-        },
-      },
-    ],
+    abilities: [{ id: 'AddRageOnEnemyDeath', params: { rageAmount: 20 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: -35,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 98,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.06,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: -35, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 98, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.06, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -2953,22 +2055,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceSpicy',
-            amount: 22,
-          },
-          {
-            id: 'Luminite',
-            amount: 12,
-          },
-          {
-            id: 'Stone',
-            amount: 333,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 22,
-          },
+          { id: 'EssenceSpicy', amount: 22 },
+          { id: 'Luminite', amount: 12 },
+          { id: 'Stone', amount: 333 },
+          { id: 'EssenceCreamy', amount: 22 },
         ],
         yields: 'WizardSigil2',
       },
@@ -2987,12 +2077,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.07,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.07, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -3000,22 +2085,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceSpicy',
-            amount: 55,
-          },
-          {
-            id: 'Stone',
-            amount: 950,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 55,
-          },
-          {
-            id: 'Luminite',
-            amount: 24,
-          },
+          { id: 'EssenceSpicy', amount: 55 },
+          { id: 'Stone', amount: 950 },
+          { id: 'EssenceCreamy', amount: 55 },
+          { id: 'Luminite', amount: 24 },
         ],
         yields: 'WizardSigilUltimate',
       },
@@ -3031,19 +2104,10 @@ export const items: Record<string, Item> = {
   WizardSigilUltimate: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'LightningOnRage',
-      },
-    ],
+    abilities: [{ id: 'LightningOnRage' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.09,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.09, modifierType: 'add' },
     ],
     equipSlots: ['Amulet'],
     isStackable: false,
@@ -3060,11 +2124,7 @@ export const items: Record<string, Item> = {
   WrathfulLocket: {
     type: 'ItemDefinition',
     rarity: 'common',
-    abilities: [
-      {
-        id: 'EveryOtherTurnAddRage',
-      },
-    ],
+    abilities: [{ id: 'EveryOtherTurnAddRage' }],
     tags: ['equipment'],
     statModifiers: [],
     equipSlots: ['Amulet'],
@@ -3086,12 +2146,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 3,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 3, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -3099,22 +2154,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 100,
-          },
-          {
-            id: 'EssenceCrunchy',
-            amount: 6,
-          },
-          {
-            id: 'Luminite',
-            amount: 1,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 2,
-          },
+          { id: 'Stone', amount: 100 },
+          { id: 'EssenceCrunchy', amount: 6 },
+          { id: 'Luminite', amount: 1 },
+          { id: 'EssenceFluffy', amount: 2 },
         ],
         yields: 'AudacityChain2',
       },
@@ -3133,12 +2176,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 4,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 4, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -3146,22 +2184,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceCrunchy',
-            amount: 22,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 15,
-          },
-          {
-            id: 'Luminite',
-            amount: 4,
-          },
-          {
-            id: 'Stone',
-            amount: 150,
-          },
+          { id: 'EssenceCrunchy', amount: 22 },
+          { id: 'EssenceFluffy', amount: 15 },
+          { id: 'Luminite', amount: 4 },
+          { id: 'Stone', amount: 150 },
         ],
         yields: 'AudacityChain3',
       },
@@ -3180,12 +2206,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 5,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 5, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -3193,22 +2214,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 300,
-          },
-          {
-            id: 'Luminite',
-            amount: 4,
-          },
-          {
-            id: 'EssenceCrunchy',
-            amount: 33,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 28,
-          },
+          { id: 'Stone', amount: 300 },
+          { id: 'Luminite', amount: 4 },
+          { id: 'EssenceCrunchy', amount: 33 },
+          { id: 'EssenceFluffy', amount: 28 },
         ],
         yields: 'AudacityChain4',
       },
@@ -3227,12 +2236,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 7,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 7, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -3240,22 +2244,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 500,
-          },
-          {
-            id: 'EssenceCrunchy',
-            amount: 44,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 48,
-          },
-          {
-            id: 'Luminite',
-            amount: 15,
-          },
+          { id: 'Stone', amount: 500 },
+          { id: 'EssenceCrunchy', amount: 44 },
+          { id: 'EssenceFluffy', amount: 48 },
+          { id: 'Luminite', amount: 15 },
         ],
         yields: 'AudacityChainUltimate',
       },
@@ -3271,19 +2263,10 @@ export const items: Record<string, Item> = {
   AudacityChainUltimate: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'LowHpCritBoostAbility',
-      },
-    ],
+    abilities: [{ id: 'LowHpCritBoostAbility' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 10,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 10, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -3303,12 +2286,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 2,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 2, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -3316,14 +2294,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 20,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 9,
-          },
+          { id: 'Iron', amount: 20 },
+          { id: 'EssenceSpicy', amount: 9 },
         ],
         yields: 'BladedBeltUltimate',
       },
@@ -3339,19 +2311,10 @@ export const items: Record<string, Item> = {
   BladedBeltUltimate: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'MagicKnifeOnHitCount',
-      },
-    ],
+    abilities: [{ id: 'MagicKnifeOnHitCount' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 3,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 3, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -3368,19 +2331,10 @@ export const items: Record<string, Item> = {
   BravadoBinding: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'RemoveSilenceOnEnemyDeath',
-      },
-    ],
+    abilities: [{ id: 'RemoveSilenceOnEnemyDeath' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 5,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 5, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -3392,25 +2346,16 @@ export const items: Record<string, Item> = {
     name: 'Bravado Binding',
     assetName: 'BravadoBinding',
     description:
-      'A protective cinch that can restore the wearer\u2019s voice if Silenced.',
+      'A protective cinch that can restore the wearer’s voice if Silenced.',
     id: 'BravadoBinding',
   },
   BravadoBindingEX: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'RemoveSilenceOnEnemyDeath',
-      },
-    ],
+    abilities: [{ id: 'RemoveSilenceOnEnemyDeath' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 6,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 6, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'PoisonResist',
@@ -3428,7 +2373,7 @@ export const items: Record<string, Item> = {
     name: 'Bravado Binding EX',
     assetName: 'BravadoBinding',
     description:
-      'A protective cinch that can restore the wearer\u2019s voice if Silenced.',
+      'A protective cinch that can restore the wearer’s voice if Silenced.',
     id: 'BravadoBindingEX',
   },
   CordofClarity: {
@@ -3437,12 +2382,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 6,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 6, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'HypnotizeResist',
@@ -3478,7 +2418,7 @@ export const items: Record<string, Item> = {
     name: 'Cord Of Clarity',
     assetName: 'CordofClarity',
     description:
-      'A secure belt which defends the wearer\u2019s state of mind from multiple status effects.',
+      'A secure belt which defends the wearer’s state of mind from multiple status effects.',
     id: 'CordofClarity',
   },
   FlawedClasp: {
@@ -3487,18 +2427,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: -8,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 6,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: -8, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 6, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -3515,19 +2445,10 @@ export const items: Record<string, Item> = {
   FrenziedSash: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'TripleAttack',
-      },
-    ],
+    abilities: [{ id: 'TripleAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 5,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 5, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -3547,12 +2468,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 6,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 6, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'LightningResist',
@@ -3566,22 +2482,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 340,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 5,
-          },
-          {
-            id: 'Luminite',
-            amount: 12,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 5,
-          },
+          { id: 'Stone', amount: 340 },
+          { id: 'EssenceSpicy', amount: 5 },
+          { id: 'Luminite', amount: 12 },
+          { id: 'EssenceFluffy', amount: 5 },
         ],
         yields: 'GroundingBelt2',
       },
@@ -3600,12 +2504,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 8,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 8, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'LightningResist',
@@ -3619,22 +2518,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 750,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 21,
-          },
-          {
-            id: 'Luminite',
-            amount: 18,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 21,
-          },
+          { id: 'Stone', amount: 750 },
+          { id: 'EssenceSpicy', amount: 21 },
+          { id: 'Luminite', amount: 18 },
+          { id: 'EssenceFluffy', amount: 21 },
         ],
         yields: 'GroundingBelt3',
       },
@@ -3653,12 +2540,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 10,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 10, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'LightningResist',
@@ -3684,18 +2566,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 11,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 5,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 11, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 5, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -3704,7 +2576,7 @@ export const items: Record<string, Item> = {
     retainOnUpgrade: false,
     requiredLevel: 32,
     sellPrice: 72,
-    name: 'Guard\u2019s Belt',
+    name: 'Guard’s Belt',
     assetName: 'GuardsBelt',
     description: 'A sturdy belt made for guards.',
     id: 'GuardsBelt',
@@ -3715,12 +2587,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 6,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 6, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Dodge',
@@ -3743,25 +2610,11 @@ export const items: Record<string, Item> = {
   HeartyBelt: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'MaxHpCritBoostAbility',
-      },
-    ],
+    abilities: [{ id: 'MaxHpCritBoostAbility' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 5,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 5, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -3779,25 +2632,11 @@ export const items: Record<string, Item> = {
   HeartyBeltEX: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'MaxHpCritBoostAbility',
-      },
-    ],
+    abilities: [{ id: 'MaxHpCritBoostAbility' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 8,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.035,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 8, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.035, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -3818,24 +2657,9 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 25,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 25,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: -3,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 25, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 25, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: -3, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -3856,12 +2680,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 6,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 6, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'IceResist',
@@ -3887,12 +2706,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 5,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 5, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'ShadowResist',
@@ -3906,22 +2720,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 36,
-          },
-          {
-            id: 'Luminite',
-            amount: 1,
-          },
-          {
-            id: 'EssenceDecadent',
-            amount: 8,
-          },
-          {
-            id: 'Ore',
-            amount: 36,
-          },
+          { id: 'Iron', amount: 36 },
+          { id: 'Luminite', amount: 1 },
+          { id: 'EssenceDecadent', amount: 8 },
+          { id: 'Ore', amount: 36 },
         ],
         yields: 'KnifeCollectorsBeltUltimate',
       },
@@ -3929,7 +2731,7 @@ export const items: Record<string, Item> = {
     retainOnUpgrade: false,
     requiredLevel: 1,
     sellPrice: 70,
-    name: 'Knife Collector\u2019s Belt Lvl 1',
+    name: 'Knife Collector’s Belt Lvl 1',
     assetName: 'KnifeCollectorsBelt',
     description: 'A belt with an unlockable ability.',
     id: 'KnifeCollectorsBelt',
@@ -3937,19 +2739,10 @@ export const items: Record<string, Item> = {
   KnifeCollectorsBeltUltimate: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'KnifeDoubler',
-      },
-    ],
+    abilities: [{ id: 'KnifeDoubler' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 5,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 5, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'ShadowResist',
@@ -3964,7 +2757,7 @@ export const items: Record<string, Item> = {
     retainOnUpgrade: false,
     requiredLevel: 1,
     sellPrice: 110,
-    name: 'Knife Collector\u2019s Belt Ultimate',
+    name: 'Knife Collector’s Belt Ultimate',
     assetName: 'KnifeCollectorsBelt',
     description: 'A belt that confers the Imperfect Knife Doubler ability.',
     id: 'KnifeCollectorsBeltUltimate',
@@ -3975,18 +2768,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 125,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 3,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 125, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 3, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -3994,18 +2777,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 230,
-          },
-          {
-            id: 'EssenceFresh',
-            amount: 2,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 18,
-          },
+          { id: 'Wood', amount: 230 },
+          { id: 'EssenceFresh', amount: 2 },
+          { id: 'EssenceFluffy', amount: 18 },
         ],
         yields: 'LifevineBelt2',
       },
@@ -4024,18 +2798,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 155,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 4,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 155, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 4, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -4043,18 +2807,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 425,
-          },
-          {
-            id: 'EssenceFresh',
-            amount: 5,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 25,
-          },
+          { id: 'Wood', amount: 425 },
+          { id: 'EssenceFresh', amount: 5 },
+          { id: 'EssenceFluffy', amount: 25 },
         ],
         yields: 'LifevineBelt3',
       },
@@ -4073,18 +2828,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 205,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 5,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 205, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 5, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -4101,19 +2846,10 @@ export const items: Record<string, Item> = {
   PainfulWrap: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'BonusRageOnAttack',
-      },
-    ],
+    abilities: [{ id: 'BonusRageOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 3,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 3, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -4133,18 +2869,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 35,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 7,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 35, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 7, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -4152,18 +2878,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 440,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 12,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 32,
-          },
+          { id: 'Wood', amount: 440 },
+          { id: 'EssenceHearty', amount: 12 },
+          { id: 'EssenceFluffy', amount: 32 },
         ],
         yields: 'PlatedBelt2',
       },
@@ -4182,18 +2899,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 65,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 8,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 65, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 8, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -4201,18 +2908,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 640,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 32,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 48,
-          },
+          { id: 'Wood', amount: 640 },
+          { id: 'EssenceHearty', amount: 32 },
+          { id: 'EssenceFluffy', amount: 48 },
         ],
         yields: 'PlatedBelt3',
       },
@@ -4231,18 +2929,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 55,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 9,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 55, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 9, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -4262,26 +2950,13 @@ export const items: Record<string, Item> = {
     abilities: [
       {
         id: 'RemoveSilenceOnHitCount',
-        params: {
-          hitCount: 2,
-          removeChance: 1,
-        },
+        params: { hitCount: 2, removeChance: 1 },
       },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 50,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 7,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 50, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 7, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'HypnotizeResist',
@@ -4296,7 +2971,7 @@ export const items: Record<string, Item> = {
     retainOnUpgrade: false,
     requiredLevel: 149,
     sellPrice: 480,
-    name: 'Reclaimer\u2019s Clasp',
+    name: 'Reclaimer’s Clasp',
     assetName: 'ReclaimersClasp',
     description: 'A belt that can restore the voice of a Silenced adventurer.',
     id: 'ReclaimersClasp',
@@ -4307,18 +2982,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 15,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 3,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 15, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 3, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -4326,14 +2991,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 15,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 1,
-          },
+          { id: 'Wood', amount: 15 },
+          { id: 'EssenceFluffy', amount: 1 },
         ],
         yields: 'RopeBraid2',
       },
@@ -4352,18 +3011,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 20,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 4,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 20, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 4, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -4371,14 +3020,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 25,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 2,
-          },
+          { id: 'Wood', amount: 25 },
+          { id: 'EssenceFluffy', amount: 2 },
         ],
         yields: 'RopeBraid3',
       },
@@ -4397,18 +3040,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 25,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 5,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 25, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 5, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -4428,18 +3061,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 6,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 1,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 6, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 1, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -4447,14 +3070,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 5,
-          },
-          {
-            id: 'Ore',
-            amount: 3,
-          },
+          { id: 'Wood', amount: 5 },
+          { id: 'Ore', amount: 3 },
         ],
         yields: 'RusticBelt2',
       },
@@ -4473,18 +3090,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 11,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 2,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 11, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 2, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -4492,14 +3099,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 10,
-          },
-          {
-            id: 'Ore',
-            amount: 7,
-          },
+          { id: 'Wood', amount: 10 },
+          { id: 'Ore', amount: 7 },
         ],
         yields: 'RusticBelt3',
       },
@@ -4518,18 +3119,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 20,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 3,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 20, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 3, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -4546,22 +3137,10 @@ export const items: Record<string, Item> = {
   SecondChanceBelt: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'SecondWindAbility',
-      },
-      {
-        id: 'ShieldOnLowHP',
-      },
-    ],
+    abilities: [{ id: 'SecondWindAbility' }, { id: 'ShieldOnLowHP' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 7,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 7, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Dodge',
@@ -4585,28 +3164,11 @@ export const items: Record<string, Item> = {
   SeethingSash: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'BonusRageOnAttack',
-      },
-      {
-        id: 'RageOnFirstTurn',
-      },
-    ],
+    abilities: [{ id: 'BonusRageOnAttack' }, { id: 'RageOnFirstTurn' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Attack',
-        value: -50,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 5,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Attack', value: -50, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 5, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -4614,18 +3176,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 1160,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 67,
-          },
-          {
-            id: 'Luminite',
-            amount: 36,
-          },
+          { id: 'Iron', amount: 1160 },
+          { id: 'EssenceHearty', amount: 67 },
+          { id: 'Luminite', amount: 36 },
         ],
         yields: 'SeethingSash2',
       },
@@ -4641,28 +3194,11 @@ export const items: Record<string, Item> = {
   SeethingSash2: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'BonusRageOnAttack',
-      },
-      {
-        id: 'RageOnFirstTurn',
-      },
-    ],
+    abilities: [{ id: 'BonusRageOnAttack' }, { id: 'RageOnFirstTurn' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Attack',
-        value: -60,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 6,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Attack', value: -60, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 6, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -4670,18 +3206,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 1230,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 81,
-          },
-          {
-            id: 'Luminite',
-            amount: 36,
-          },
+          { id: 'Iron', amount: 1230 },
+          { id: 'EssenceHearty', amount: 81 },
+          { id: 'Luminite', amount: 36 },
         ],
         yields: 'SeethingSash3',
       },
@@ -4697,28 +3224,11 @@ export const items: Record<string, Item> = {
   SeethingSash3: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'BonusRageOnAttack',
-      },
-      {
-        id: 'RageOnFirstTurn',
-      },
-    ],
+    abilities: [{ id: 'BonusRageOnAttack' }, { id: 'RageOnFirstTurn' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Attack',
-        value: -75,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 7,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Attack', value: -75, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 7, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -4736,25 +3246,12 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'legendary',
     abilities: [
-      {
-        id: 'SecondWindAbility',
-      },
-      {
-        id: 'ShieldOnLowHP',
-        params: {
-          threshold: 0.2,
-          shieldAmount: 0.15,
-        },
-      },
+      { id: 'SecondWindAbility' },
+      { id: 'ShieldOnLowHP', params: { threshold: 0.2, shieldAmount: 0.15 } },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 7,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 7, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Dodge',
@@ -4778,18 +3275,8 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'epic',
     abilities: [
-      {
-        id: 'BonusRageOnAttack',
-        params: {
-          rageAmount: 5,
-        },
-      },
-      {
-        id: 'RageOnFirstTurn',
-        params: {
-          rageAmount: 30,
-        },
-      },
+      { id: 'BonusRageOnAttack', params: { rageAmount: 5 } },
+      { id: 'RageOnFirstTurn', params: { rageAmount: 30 } },
     ],
     tags: ['equipment'],
     statModifiers: [
@@ -4799,12 +3286,7 @@ export const items: Record<string, Item> = {
         value: -0.15,
         modifierType: 'multiply',
       },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 5,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 5, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -4812,18 +3294,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 1160,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 67,
-          },
-          {
-            id: 'Luminite',
-            amount: 36,
-          },
+          { id: 'Iron', amount: 1160 },
+          { id: 'EssenceHearty', amount: 67 },
+          { id: 'Luminite', amount: 36 },
         ],
         yields: 'WrathfulSash2',
       },
@@ -4840,18 +3313,8 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'epic',
     abilities: [
-      {
-        id: 'BonusRageOnAttack',
-        params: {
-          rageAmount: 5,
-        },
-      },
-      {
-        id: 'RageOnFirstTurn',
-        params: {
-          rageAmount: 30,
-        },
-      },
+      { id: 'BonusRageOnAttack', params: { rageAmount: 5 } },
+      { id: 'RageOnFirstTurn', params: { rageAmount: 30 } },
     ],
     tags: ['equipment'],
     statModifiers: [
@@ -4861,12 +3324,7 @@ export const items: Record<string, Item> = {
         value: -0.15,
         modifierType: 'multiply',
       },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 6,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 6, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -4874,18 +3332,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 1230,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 81,
-          },
-          {
-            id: 'Luminite',
-            amount: 36,
-          },
+          { id: 'Iron', amount: 1230 },
+          { id: 'EssenceHearty', amount: 81 },
+          { id: 'Luminite', amount: 36 },
         ],
         yields: 'WrathfulSash3',
       },
@@ -4902,18 +3351,8 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'epic',
     abilities: [
-      {
-        id: 'BonusRageOnAttack',
-        params: {
-          rageAmount: 5,
-        },
-      },
-      {
-        id: 'RageOnFirstTurn',
-        params: {
-          rageAmount: 30,
-        },
-      },
+      { id: 'BonusRageOnAttack', params: { rageAmount: 5 } },
+      { id: 'RageOnFirstTurn', params: { rageAmount: 30 } },
     ],
     tags: ['equipment'],
     statModifiers: [
@@ -4923,12 +3362,7 @@ export const items: Record<string, Item> = {
         value: -0.15,
         modifierType: 'multiply',
       },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 7,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 7, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -4948,12 +3382,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 3,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 3, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'HypnotizeResist',
@@ -4967,18 +3396,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 820,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 22,
-          },
-          {
-            id: 'Luminite',
-            amount: 32,
-          },
+          { id: 'Stone', amount: 820 },
+          { id: 'EssenceFluffy', amount: 22 },
+          { id: 'Luminite', amount: 32 },
         ],
         yields: 'SteadfastWrap2',
       },
@@ -4997,12 +3417,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 3,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 3, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'HypnotizeResist',
@@ -5016,18 +3431,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 900,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 26,
-          },
-          {
-            id: 'Luminite',
-            amount: 38,
-          },
+          { id: 'Iron', amount: 900 },
+          { id: 'EssenceFluffy', amount: 26 },
+          { id: 'Luminite', amount: 38 },
         ],
         yields: 'SteadfastWrap3',
       },
@@ -5046,12 +3452,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 4,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 4, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'HypnotizeResist',
@@ -5065,18 +3466,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 1050,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 33,
-          },
-          {
-            id: 'Luminite',
-            amount: 38,
-          },
+          { id: 'Ore', amount: 1050 },
+          { id: 'EssenceFluffy', amount: 33 },
+          { id: 'Luminite', amount: 38 },
         ],
         yields: 'SteadfastWrap4',
       },
@@ -5095,12 +3487,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 4,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 4, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'HypnotizeResist',
@@ -5114,18 +3501,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 1230,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 44,
-          },
-          {
-            id: 'Luminite',
-            amount: 40,
-          },
+          { id: 'Wood', amount: 1230 },
+          { id: 'EssenceFluffy', amount: 44 },
+          { id: 'Luminite', amount: 40 },
         ],
         yields: 'SteadfastWrapUltimate',
       },
@@ -5144,12 +3522,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 5,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 5, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'HypnotizeResist',
@@ -5172,25 +3545,11 @@ export const items: Record<string, Item> = {
   StealthslicerBelt: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'MagicKnifeEveryHitCount',
-      },
-    ],
+    abilities: [{ id: 'MagicKnifeEveryHitCount' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 60,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 4,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 60, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 4, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -5207,19 +3566,10 @@ export const items: Record<string, Item> = {
   StormCurseWrap: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'LightningOnTurnStart',
-      },
-    ],
+    abilities: [{ id: 'LightningOnTurnStart' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 4,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 4, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'LightningResist',
@@ -5244,21 +3594,12 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'epic',
     abilities: [
-      {
-        id: 'LightningOnTurnStart',
-      },
-      {
-        id: 'LightningOnEnemyDeath',
-      },
+      { id: 'LightningOnTurnStart' },
+      { id: 'LightningOnEnemyDeath' },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 4,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 4, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Dodge',
@@ -5285,12 +3626,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 7,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 7, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'IceResist',
@@ -5304,18 +3640,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 425,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 34,
-          },
-          {
-            id: 'Luminite',
-            amount: 15,
-          },
+          { id: 'Wood', amount: 425 },
+          { id: 'EssenceFluffy', amount: 34 },
+          { id: 'Luminite', amount: 15 },
         ],
         yields: 'ThermalBindingUltimate',
       },
@@ -5332,19 +3659,10 @@ export const items: Record<string, Item> = {
   ThermalBindingUltimate: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'EveryOtherTurnAddRage',
-      },
-    ],
+    abilities: [{ id: 'EveryOtherTurnAddRage' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 7,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 7, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'IceResist',
@@ -5362,7 +3680,7 @@ export const items: Record<string, Item> = {
     name: 'Thermal Binding Ultimate',
     assetName: 'ThermalBinding',
     description:
-      'A warm shawl to keep out the cold that stokes the wearer\u2019s Rage.',
+      'A warm shawl to keep out the cold that stokes the wearer’s Rage.',
     id: 'ThermalBindingUltimate',
   },
   TwineCinch: {
@@ -5371,18 +3689,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 15,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 1,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 15, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 1, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -5390,14 +3698,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 8,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 2,
-          },
+          { id: 'Wood', amount: 8 },
+          { id: 'EssenceFluffy', amount: 2 },
         ],
         yields: 'TwineCinch2',
       },
@@ -5416,18 +3718,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 19,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 2,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 19, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 2, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -5435,14 +3727,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 12,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 4,
-          },
+          { id: 'Wood', amount: 12 },
+          { id: 'EssenceFluffy', amount: 4 },
         ],
         yields: 'TwineCinch3',
       },
@@ -5461,18 +3747,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 24,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 3,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 24, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 3, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -5492,24 +3768,9 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 2,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.025,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 2, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.025, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -5517,22 +3778,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 90,
-          },
-          {
-            id: 'Luminite',
-            amount: 4,
-          },
-          {
-            id: 'Wood',
-            amount: 60,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 15,
-          },
+          { id: 'Ore', amount: 90 },
+          { id: 'Luminite', amount: 4 },
+          { id: 'Wood', amount: 60 },
+          { id: 'EssenceFluffy', amount: 15 },
         ],
         yields: 'TwineCord2',
       },
@@ -5552,18 +3801,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 5,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.04,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 5, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.04, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Dodge',
@@ -5587,11 +3826,7 @@ export const items: Record<string, Item> = {
   TwinForkedSash: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'DoubleLightningOnTurn',
-      },
-    ],
+    abilities: [{ id: 'DoubleLightningOnTurn' }],
     tags: ['equipment'],
     statModifiers: [
       {
@@ -5600,12 +3835,7 @@ export const items: Record<string, Item> = {
         value: -60,
         modifierType: 'add',
       },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 5,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 5, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -5622,11 +3852,7 @@ export const items: Record<string, Item> = {
   TwinForkedSashEX: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'DoubleLightningOnTurn',
-      },
-    ],
+    abilities: [{ id: 'DoubleLightningOnTurn' }],
     tags: ['equipment'],
     statModifiers: [
       {
@@ -5635,12 +3861,7 @@ export const items: Record<string, Item> = {
         value: -45,
         modifierType: 'add',
       },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 6,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 6, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -5657,19 +3878,10 @@ export const items: Record<string, Item> = {
   VolatileSash: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'AddRageOnHeal',
-      },
-    ],
+    abilities: [{ id: 'AddRageOnHeal' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 3,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 3, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'ShadowResist',
@@ -5692,19 +3904,10 @@ export const items: Record<string, Item> = {
   VolatileSashEX: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'AddRageOnHeal',
-      },
-    ],
+    abilities: [{ id: 'AddRageOnHeal' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 4,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 4, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'ShadowResist',
@@ -5727,19 +3930,10 @@ export const items: Record<string, Item> = {
   WardingBelt: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'SecondWindAbility',
-      },
-    ],
+    abilities: [{ id: 'SecondWindAbility' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 8,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 8, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'LightningResist',
@@ -5762,19 +3956,10 @@ export const items: Record<string, Item> = {
   WardingBeltEX: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'SecondWindAbility',
-      },
-    ],
+    abilities: [{ id: 'SecondWindAbility' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 10,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 10, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'LightningResist',
@@ -5800,12 +3985,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 5,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 5, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Dodge',
@@ -5819,14 +3999,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 100,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 9,
-          },
+          { id: 'Iron', amount: 100 },
+          { id: 'EssenceFluffy', amount: 9 },
         ],
         yields: 'WraithSash2',
       },
@@ -5845,12 +4019,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 6,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 6, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Dodge',
@@ -5864,14 +4033,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 215,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 19,
-          },
+          { id: 'Iron', amount: 215 },
+          { id: 'EssenceFluffy', amount: 19 },
         ],
         yields: 'WraithSash3',
       },
@@ -5890,18 +4053,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 7,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 7, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
     ],
     equipSlots: ['Belt'],
     isStackable: false,
@@ -5918,28 +4071,11 @@ export const items: Record<string, Item> = {
   ArticulatedVest: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'RemoveWeakOnRage',
-        params: {
-          removeChance: 0.25,
-        },
-      },
-    ],
+    abilities: [{ id: 'RemoveWeakOnRage', params: { removeChance: 0.25 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 58,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 2,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 58, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 2, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -5957,19 +4093,10 @@ export const items: Record<string, Item> = {
   BattleHardendedVest: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'AddRageOnEnemyDeath',
-      },
-    ],
+    abilities: [{ id: 'AddRageOnEnemyDeath' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 40,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 40, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -5981,28 +4108,16 @@ export const items: Record<string, Item> = {
     name: 'Battle Hardened Vest',
     assetName: 'BattleHardendedVest',
     description:
-      'Legacy item. A vest that fuels the wearer\u2019s rage when striking down their foes.',
+      'Legacy item. A vest that fuels the wearer’s rage when striking down their foes.',
     id: 'BattleHardendedVest',
   },
   BattlethirstyVest: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'AddRageOnEnemyDeath',
-      },
-      {
-        id: 'HealOnRage',
-      },
-    ],
+    abilities: [{ id: 'AddRageOnEnemyDeath' }, { id: 'HealOnRage' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 50,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 50, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -6014,7 +4129,7 @@ export const items: Record<string, Item> = {
     name: 'Battlethirsty Vest',
     assetName: 'BattlethirstyVest',
     description:
-      'Legacy item. A vest that fuels the wearer\u2019s rage when striking down their foes.',
+      'Legacy item. A vest that fuels the wearer’s rage when striking down their foes.',
     id: 'BattlethirstyVest',
   },
   BloodiedChainMail: {
@@ -6023,12 +4138,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 14,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 14, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -6036,18 +4146,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceHearty',
-            amount: 2,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 2,
-          },
-          {
-            id: 'Ore',
-            amount: 35,
-          },
+          { id: 'EssenceHearty', amount: 2 },
+          { id: 'EssenceSpicy', amount: 2 },
+          { id: 'Ore', amount: 35 },
         ],
         yields: 'BloodiedChainMailUltimate',
       },
@@ -6063,19 +4164,10 @@ export const items: Record<string, Item> = {
   BloodiedChainMailUltimate: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'LowHPRageFill',
-      },
-    ],
+    abilities: [{ id: 'LowHPRageFill' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 24,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 24, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -6095,12 +4187,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 13,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 13, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'ShadowResist',
@@ -6123,22 +4210,10 @@ export const items: Record<string, Item> = {
   CobaltCape: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'RemoveWeakOnTurnCount',
-        params: {
-          removeChance: 0.5,
-        },
-      },
-    ],
+    abilities: [{ id: 'RemoveWeakOnTurnCount', params: { removeChance: 0.5 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 50,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 50, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -6146,18 +4221,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceHearty',
-            amount: 20,
-          },
-          {
-            id: 'Luminite',
-            amount: 32,
-          },
-          {
-            id: 'Iron',
-            amount: 830,
-          },
+          { id: 'EssenceHearty', amount: 20 },
+          { id: 'Luminite', amount: 32 },
+          { id: 'Iron', amount: 830 },
         ],
         yields: 'CobaltCape2',
       },
@@ -6174,21 +4240,11 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'rare',
     abilities: [
-      {
-        id: 'RemoveWeakOnTurnCount',
-        params: {
-          removeChance: 0.55,
-        },
-      },
+      { id: 'RemoveWeakOnTurnCount', params: { removeChance: 0.55 } },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 60,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 60, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -6196,18 +4252,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceHearty',
-            amount: 24,
-          },
-          {
-            id: 'Wood',
-            amount: 1100,
-          },
-          {
-            id: 'Luminite',
-            amount: 38,
-          },
+          { id: 'EssenceHearty', amount: 24 },
+          { id: 'Wood', amount: 1100 },
+          { id: 'Luminite', amount: 38 },
         ],
         yields: 'CobaltCape3',
       },
@@ -6223,22 +4270,10 @@ export const items: Record<string, Item> = {
   CobaltCape3: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'RemoveWeakOnTurnCount',
-        params: {
-          removeChance: 0.6,
-        },
-      },
-    ],
+    abilities: [{ id: 'RemoveWeakOnTurnCount', params: { removeChance: 0.6 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 70,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 70, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -6246,18 +4281,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceHearty',
-            amount: 39,
-          },
-          {
-            id: 'Luminite',
-            amount: 38,
-          },
-          {
-            id: 'Ore',
-            amount: 1040,
-          },
+          { id: 'EssenceHearty', amount: 39 },
+          { id: 'Luminite', amount: 38 },
+          { id: 'Ore', amount: 1040 },
         ],
         yields: 'CobaltCape4',
       },
@@ -6274,21 +4300,11 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'rare',
     abilities: [
-      {
-        id: 'RemoveWeakOnTurnCount',
-        params: {
-          removeChance: 0.65,
-        },
-      },
+      { id: 'RemoveWeakOnTurnCount', params: { removeChance: 0.65 } },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 80,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 80, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -6296,18 +4312,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceHearty',
-            amount: 35,
-          },
-          {
-            id: 'Luminite',
-            amount: 40,
-          },
-          {
-            id: 'Stone',
-            amount: 1150,
-          },
+          { id: 'EssenceHearty', amount: 35 },
+          { id: 'Luminite', amount: 40 },
+          { id: 'Stone', amount: 1150 },
         ],
         yields: 'CobaltCapeUltimate',
       },
@@ -6324,21 +4331,11 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'rare',
     abilities: [
-      {
-        id: 'RemoveWeakOnTurnCount',
-        params: {
-          removeChance: 0.75,
-        },
-      },
+      { id: 'RemoveWeakOnTurnCount', params: { removeChance: 0.75 } },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 90,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 90, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -6355,22 +4352,10 @@ export const items: Record<string, Item> = {
   ConductiveChestplate: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'HealOnLightning',
-      },
-      {
-        id: 'AddRageOnLightning',
-      },
-    ],
+    abilities: [{ id: 'HealOnLightning' }, { id: 'AddRageOnLightning' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 75,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 75, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -6378,22 +4363,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 780,
-          },
-          {
-            id: 'Ore',
-            amount: 680,
-          },
-          {
-            id: 'Luminite',
-            amount: 44,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 55,
-          },
+          { id: 'Iron', amount: 780 },
+          { id: 'Ore', amount: 680 },
+          { id: 'Luminite', amount: 44 },
+          { id: 'EssenceFluffy', amount: 55 },
         ],
         yields: 'ConductiveChestplate2',
       },
@@ -6410,22 +4383,10 @@ export const items: Record<string, Item> = {
   ConductiveChestplate2: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'HealOnLightning',
-      },
-      {
-        id: 'AddRageOnLightning',
-      },
-    ],
+    abilities: [{ id: 'HealOnLightning' }, { id: 'AddRageOnLightning' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 90,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 90, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -6433,22 +4394,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 850,
-          },
-          {
-            id: 'Luminite',
-            amount: 44,
-          },
-          {
-            id: 'Ore',
-            amount: 900,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 70,
-          },
+          { id: 'Iron', amount: 850 },
+          { id: 'Luminite', amount: 44 },
+          { id: 'Ore', amount: 900 },
+          { id: 'EssenceFluffy', amount: 70 },
         ],
         yields: 'ConductiveChestplate3',
       },
@@ -6465,14 +4414,7 @@ export const items: Record<string, Item> = {
   ConductiveChestplate3: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'HealOnLightning',
-      },
-      {
-        id: 'AddRageOnLightning',
-      },
-    ],
+    abilities: [{ id: 'HealOnLightning' }, { id: 'AddRageOnLightning' }],
     tags: ['equipment'],
     statModifiers: [
       {
@@ -6498,19 +4440,10 @@ export const items: Record<string, Item> = {
   DarksteelPlate: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'AddRageOnMagicKnife',
-      },
-    ],
+    abilities: [{ id: 'AddRageOnMagicKnife' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 30,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 30, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'FireResist',
@@ -6534,19 +4467,10 @@ export const items: Record<string, Item> = {
   DarksteelPlateEX: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'AddRageOnMagicKnife',
-      },
-    ],
+    abilities: [{ id: 'AddRageOnMagicKnife' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 48,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 48, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'FireResist',
@@ -6570,19 +4494,10 @@ export const items: Record<string, Item> = {
   FirststrikeVest: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'BoostAttackOnHighHP',
-      },
-    ],
+    abilities: [{ id: 'BoostAttackOnHighHP' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 44,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 44, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -6602,12 +4517,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 65,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 65, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'FireResist',
@@ -6621,22 +4531,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 325,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 14,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 4,
-          },
-          {
-            id: 'Luminite',
-            amount: 12,
-          },
+          { id: 'Iron', amount: 325 },
+          { id: 'EssenceHearty', amount: 14 },
+          { id: 'EssenceTangy', amount: 4 },
+          { id: 'Luminite', amount: 12 },
         ],
         yields: 'FlameguardJacket2',
       },
@@ -6655,12 +4553,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 85,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 85, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'FireResist',
@@ -6674,22 +4567,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 650,
-          },
-          {
-            id: 'Luminite',
-            amount: 18,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 18,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 8,
-          },
+          { id: 'Iron', amount: 650 },
+          { id: 'Luminite', amount: 18 },
+          { id: 'EssenceHearty', amount: 18 },
+          { id: 'EssenceTangy', amount: 8 },
         ],
         yields: 'FlameguardJacket3',
       },
@@ -6739,30 +4620,10 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 92,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 2,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.02,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 92, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 2, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -6796,22 +4657,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 500,
-          },
-          {
-            id: 'Luminite',
-            amount: 36,
-          },
-          {
-            id: 'Stone',
-            amount: 600,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 44,
-          },
+          { id: 'Ore', amount: 500 },
+          { id: 'Luminite', amount: 36 },
+          { id: 'Stone', amount: 600 },
+          { id: 'EssenceSpicy', amount: 44 },
         ],
         yields: 'FuryVest2',
       },
@@ -6821,7 +4670,7 @@ export const items: Record<string, Item> = {
     sellPrice: 120,
     name: 'Fury Vest Lvl 1',
     assetName: 'FuryVest',
-    description: 'A powerful vest with an unlockable Ability.',
+    description: 'Legacy item. A powerful vest with an unlockable Ability.',
     id: 'FuryVest',
   },
   FuryVest2: {
@@ -6843,24 +4692,12 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 850,
-          },
-          {
-            id: 'Luminite',
-            amount: 50,
-          },
-          {
-            id: 'Stone',
-            amount: 1200,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 68,
-          },
+          { id: 'Ore', amount: 850 },
+          { id: 'Luminite', amount: 50 },
+          { id: 'Stone', amount: 1200 },
+          { id: 'EssenceSpicy', amount: 68 },
         ],
-        yields: 'FerociousVestUltimate',
+        yields: 'FuryVest3',
       },
     ],
     retainOnUpgrade: false,
@@ -6868,17 +4705,13 @@ export const items: Record<string, Item> = {
     sellPrice: 150,
     name: 'Fury Vest Lvl 2',
     assetName: 'FuryVest',
-    description: 'A powerful vest with an unlockable Ability.',
+    description: 'Legacy item. A powerful vest with an unlockable Ability.',
     id: 'FuryVest2',
   },
   FuryVest3: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'BonusRageOnAttack',
-      },
-    ],
+    abilities: [{ id: 'BonusRageOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
       {
@@ -6906,12 +4739,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 67,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 67, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'LightningResist',
@@ -6937,12 +4765,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 64,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 64, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -6950,22 +4773,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 340,
-          },
-          {
-            id: 'Luminite',
-            amount: 18,
-          },
-          {
-            id: 'Stone',
-            amount: 340,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 21,
-          },
+          { id: 'Iron', amount: 340 },
+          { id: 'Luminite', amount: 18 },
+          { id: 'Stone', amount: 340 },
+          { id: 'EssenceHearty', amount: 21 },
         ],
         yields: 'GuardianPlate2',
       },
@@ -6975,7 +4786,7 @@ export const items: Record<string, Item> = {
     sellPrice: 60,
     name: 'Guardian Plate Lvl 1',
     assetName: 'GuardianPlate',
-    description: 'Heavy armor with an unlockable Ability.',
+    description: 'Legacy item. Heavy armor with an unlockable Ability.',
     id: 'GuardianPlate',
   },
   GuardianPlate2: {
@@ -6984,12 +4795,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 86,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 86, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -6997,24 +4803,12 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 880,
-          },
-          {
-            id: 'Luminite',
-            amount: 36,
-          },
-          {
-            id: 'Stone',
-            amount: 440,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 48,
-          },
+          { id: 'Iron', amount: 880 },
+          { id: 'Luminite', amount: 36 },
+          { id: 'Stone', amount: 440 },
+          { id: 'EssenceHearty', amount: 48 },
         ],
-        yields: 'SentinelPlateUltimate',
+        yields: 'GuardianPlateUltimate',
       },
     ],
     retainOnUpgrade: false,
@@ -7022,17 +4816,13 @@ export const items: Record<string, Item> = {
     sellPrice: 120,
     name: 'Guardian Plate Lvl 2',
     assetName: 'GuardianPlate',
-    description: 'Heavy armor with an unlockable Ability.',
+    description: 'Legacy item. Heavy armor with an unlockable Ability.',
     id: 'GuardianPlate2',
   },
   GuardianPlateUltimate: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'ShieldOnLowHP',
-      },
-    ],
+    abilities: [{ id: 'ShieldOnLowHP' }],
     tags: ['equipment'],
     statModifiers: [
       {
@@ -7057,19 +4847,10 @@ export const items: Record<string, Item> = {
   HardenedGarb: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'GainShieldOnTurn',
-      },
-    ],
+    abilities: [{ id: 'GainShieldOnTurn' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 10,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 10, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -7089,12 +4870,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 55,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 55, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'WeakResist',
@@ -7114,14 +4890,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceHearty',
-            amount: 21,
-          },
-          {
-            id: 'Ore',
-            amount: 600,
-          },
+          { id: 'EssenceHearty', amount: 21 },
+          { id: 'Ore', amount: 600 },
         ],
         yields: 'HeartrootTabard2',
       },
@@ -7141,12 +4911,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 65,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 65, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'WeakResist',
@@ -7166,14 +4931,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceHearty',
-            amount: 27,
-          },
-          {
-            id: 'Iron',
-            amount: 680,
-          },
+          { id: 'EssenceHearty', amount: 27 },
+          { id: 'Iron', amount: 680 },
         ],
         yields: 'HeartrootTabard3',
       },
@@ -7193,12 +4952,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 75,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 75, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'WeakResist',
@@ -7218,14 +4972,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceHearty',
-            amount: 35,
-          },
-          {
-            id: 'Wood',
-            amount: 800,
-          },
+          { id: 'EssenceHearty', amount: 35 },
+          { id: 'Wood', amount: 800 },
         ],
         yields: 'HeartrootTabard4',
       },
@@ -7245,12 +4993,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 75,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 75, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'WeakResist',
@@ -7270,18 +5013,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceHearty',
-            amount: 44,
-          },
-          {
-            id: 'Luminite',
-            amount: 32,
-          },
-          {
-            id: 'Stone',
-            amount: 945,
-          },
+          { id: 'EssenceHearty', amount: 44 },
+          { id: 'Luminite', amount: 32 },
+          { id: 'Stone', amount: 945 },
         ],
         yields: 'HeartrootTabardUltimate',
       },
@@ -7301,12 +5035,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 75,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 75, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'WeakResist',
@@ -7339,18 +5068,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 12,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 10,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 12, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 10, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -7358,14 +5077,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 12,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 1,
-          },
+          { id: 'Wood', amount: 12 },
+          { id: 'EssenceHearty', amount: 1 },
         ],
         yields: 'LeatherTunic2',
       },
@@ -7384,18 +5097,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 20,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 18,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 20, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 18, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -7403,14 +5106,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 18,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 5,
-          },
+          { id: 'Wood', amount: 18 },
+          { id: 'EssenceHearty', amount: 5 },
         ],
         yields: 'LeatherTunic3',
       },
@@ -7429,18 +5126,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 36,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 30,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 36, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 30, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -7457,25 +5144,11 @@ export const items: Record<string, Item> = {
   MantleofNeed: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'ShieldOnLowHP',
-      },
-    ],
+    abilities: [{ id: 'ShieldOnLowHP' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 120,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 80,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 120, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 80, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'LightningResist',
@@ -7498,19 +5171,10 @@ export const items: Record<string, Item> = {
   MantleofNeedEX: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'ShieldOnLowHP',
-      },
-    ],
+    abilities: [{ id: 'ShieldOnLowHP' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 210,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 210, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Defense',
@@ -7542,12 +5206,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 45,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 45, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -7555,18 +5214,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 90,
-          },
-          {
-            id: 'Iron',
-            amount: 90,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 3,
-          },
+          { id: 'Wood', amount: 90 },
+          { id: 'Iron', amount: 90 },
+          { id: 'EssenceTangy', amount: 3 },
         ],
         yields: 'MercenaryCuirass2',
       },
@@ -7585,12 +5235,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 54,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 54, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -7598,18 +5243,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 100,
-          },
-          {
-            id: 'Iron',
-            amount: 80,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 5,
-          },
+          { id: 'Wood', amount: 100 },
+          { id: 'Iron', amount: 80 },
+          { id: 'EssenceTangy', amount: 5 },
         ],
         yields: 'MercenaryCuirass3',
       },
@@ -7628,12 +5264,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 72,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 72, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -7650,19 +5281,10 @@ export const items: Record<string, Item> = {
   PowerVest: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'RageOnFirstTurn',
-      },
-    ],
+    abilities: [{ id: 'RageOnFirstTurn' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 15,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 15, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -7682,12 +5304,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 7,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 7, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -7695,18 +5312,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 7,
-          },
-          {
-            id: 'Ore',
-            amount: 7,
-          },
-          {
-            id: 'Iron',
-            amount: 7,
-          },
+          { id: 'Wood', amount: 7 },
+          { id: 'Ore', amount: 7 },
+          { id: 'Iron', amount: 7 },
         ],
         yields: 'ProtectiveMantle2',
       },
@@ -7725,12 +5333,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 15,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 15, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -7747,19 +5350,10 @@ export const items: Record<string, Item> = {
   RadiantSurplice: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'ApplyVulnerableOnAttack',
-      },
-    ],
+    abilities: [{ id: 'ApplyVulnerableOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 95,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 95, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -7777,19 +5371,10 @@ export const items: Record<string, Item> = {
   RecoveryVest: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'HealOnMagicKnife',
-      },
-    ],
+    abilities: [{ id: 'HealOnMagicKnife' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 80,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 80, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -7806,11 +5391,7 @@ export const items: Record<string, Item> = {
   RecoveryVestEX: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'HealOnMagicKnife',
-      },
-    ],
+    abilities: [{ id: 'HealOnMagicKnife' }],
     tags: ['equipment'],
     statModifiers: [
       {
@@ -7835,25 +5416,11 @@ export const items: Record<string, Item> = {
   RestorationChainmail: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'HealOnCritAbility',
-      },
-    ],
+    abilities: [{ id: 'HealOnCritAbility' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 40,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 40, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.03, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'IceResist',
@@ -7876,25 +5443,11 @@ export const items: Record<string, Item> = {
   RestorationChainmailEX: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'HealOnCritAbility',
-      },
-    ],
+    abilities: [{ id: 'HealOnCritAbility' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 88,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.04,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 88, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.04, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'IceResist',
@@ -7920,12 +5473,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 28,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 28, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -7933,14 +5481,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 80,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 1,
-          },
+          { id: 'Ore', amount: 80 },
+          { id: 'EssenceHearty', amount: 1 },
         ],
         yields: 'RuggedJerkin2',
       },
@@ -7959,12 +5501,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 42,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 42, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -7972,14 +5509,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 150,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 5,
-          },
+          { id: 'Ore', amount: 150 },
+          { id: 'EssenceHearty', amount: 5 },
         ],
         yields: 'RuggedJerkin3',
       },
@@ -7998,12 +5529,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 60,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 60, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -8023,18 +5549,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 33,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 2,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 33, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 2, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -8042,14 +5558,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 215,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 12,
-          },
+          { id: 'Stone', amount: 215 },
+          { id: 'EssenceHearty', amount: 12 },
         ],
         yields: 'SharkskinShirt2',
       },
@@ -8068,18 +5578,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 47,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 3,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 47, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 3, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -8087,14 +5587,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 435,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 24,
-          },
+          { id: 'Stone', amount: 435 },
+          { id: 'EssenceHearty', amount: 24 },
         ],
         yields: 'SharkskinShirt3',
       },
@@ -8113,18 +5607,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 77,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 4,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 77, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 4, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -8144,12 +5628,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 15,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 15, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Dodge',
@@ -8163,18 +5642,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 24,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 3,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 8,
-          },
+          { id: 'Wood', amount: 24 },
+          { id: 'EssenceCreamy', amount: 3 },
+          { id: 'EssenceHearty', amount: 8 },
         ],
         yields: 'SilkenRobe2',
       },
@@ -8193,12 +5663,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 28,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 28, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Dodge',
@@ -8212,18 +5677,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 110,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 5,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 16,
-          },
+          { id: 'Wood', amount: 110 },
+          { id: 'EssenceCreamy', amount: 5 },
+          { id: 'EssenceHearty', amount: 16 },
         ],
         yields: 'SilkenRobe3',
       },
@@ -8242,12 +5698,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 45,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 45, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Dodge',
@@ -8270,19 +5721,10 @@ export const items: Record<string, Item> = {
   Soulplate: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'GainShieldOnEnemyDeath',
-      },
-    ],
+    abilities: [{ id: 'GainShieldOnEnemyDeath' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 20,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 20, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -8303,12 +5745,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 41,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 41, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Dodge',
@@ -8334,12 +5771,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 15,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 15, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -8347,18 +5779,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceHearty',
-            amount: 4,
-          },
-          {
-            id: 'Iron',
-            amount: 15,
-          },
-          {
-            id: 'Stone',
-            amount: 15,
-          },
+          { id: 'EssenceHearty', amount: 4 },
+          { id: 'Iron', amount: 15 },
+          { id: 'Stone', amount: 15 },
         ],
         yields: 'TatteredCuirassUltimate',
       },
@@ -8377,12 +5800,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 28,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 28, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -8399,22 +5817,10 @@ export const items: Record<string, Item> = {
   UntouchableMantle: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'GainShieldOnEnemyDeath',
-      },
-      {
-        id: 'GainShieldOnRage',
-      },
-    ],
+    abilities: [{ id: 'GainShieldOnEnemyDeath' }, { id: 'GainShieldOnRage' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 100,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 100, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -8432,22 +5838,10 @@ export const items: Record<string, Item> = {
   UntouchableMantleEX: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'GainShieldOnEnemyDeath',
-      },
-      {
-        id: 'GainShieldOnRage',
-      },
-    ],
+    abilities: [{ id: 'GainShieldOnEnemyDeath' }, { id: 'GainShieldOnRage' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 140,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 140, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -8465,22 +5859,10 @@ export const items: Record<string, Item> = {
   BattleforgedVest: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'AddRageOnEnemyDeath',
-        params: {
-          rageAmount: 20,
-        },
-      },
-    ],
+    abilities: [{ id: 'AddRageOnEnemyDeath', params: { rageAmount: 20 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 40,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 40, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -8492,31 +5874,19 @@ export const items: Record<string, Item> = {
     name: 'Battleforged Vest',
     assetName: 'BattleHardendedVest',
     description:
-      'A vest that fuels the wearer\u2019s rage when striking down their foes.',
+      'A vest that fuels the wearer’s rage when striking down their foes.',
     id: 'BattleforgedVest',
   },
   BloodhungryVest: {
     type: 'ItemDefinition',
     rarity: 'legendary',
     abilities: [
-      {
-        id: 'AddRageOnEnemyDeath',
-        params: {
-          rageAmount: 20,
-        },
-      },
-      {
-        id: 'HealOnRage',
-      },
+      { id: 'AddRageOnEnemyDeath', params: { rageAmount: 20 } },
+      { id: 'HealOnRage' },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 50,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 50, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -8528,31 +5898,19 @@ export const items: Record<string, Item> = {
     name: 'Bloodhungry Vest',
     assetName: 'BattlethirstyVest',
     description:
-      'A vest that fuels the wearer\u2019s rage when striking down their foes.',
+      'A vest that fuels the wearer’s rage when striking down their foes.',
     id: 'BloodhungryVest',
   },
   VoltaicChestplate: {
     type: 'ItemDefinition',
     rarity: 'epic',
     abilities: [
-      {
-        id: 'HealOnLightning',
-        params: {
-          healAmount: 0.015,
-        },
-      },
-      {
-        id: 'AddRageOnLightning',
-      },
+      { id: 'HealOnLightning', params: { healAmount: 0.015 } },
+      { id: 'AddRageOnLightning' },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 75,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 75, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -8560,22 +5918,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 780,
-          },
-          {
-            id: 'Ore',
-            amount: 680,
-          },
-          {
-            id: 'Luminite',
-            amount: 44,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 55,
-          },
+          { id: 'Iron', amount: 780 },
+          { id: 'Ore', amount: 680 },
+          { id: 'Luminite', amount: 44 },
+          { id: 'EssenceFluffy', amount: 55 },
         ],
         yields: 'VoltaicChestplate2',
       },
@@ -8592,24 +5938,12 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'epic',
     abilities: [
-      {
-        id: 'HealOnLightning',
-        params: {
-          healAmount: 0.015,
-        },
-      },
-      {
-        id: 'AddRageOnLightning',
-      },
+      { id: 'HealOnLightning', params: { healAmount: 0.015 } },
+      { id: 'AddRageOnLightning' },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 90,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 90, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -8617,22 +5951,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 850,
-          },
-          {
-            id: 'Luminite',
-            amount: 44,
-          },
-          {
-            id: 'Ore',
-            amount: 900,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 70,
-          },
+          { id: 'Iron', amount: 850 },
+          { id: 'Luminite', amount: 44 },
+          { id: 'Ore', amount: 900 },
+          { id: 'EssenceFluffy', amount: 70 },
         ],
         yields: 'VoltaicChestplate3',
       },
@@ -8649,15 +5971,8 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'epic',
     abilities: [
-      {
-        id: 'HealOnLightning',
-        params: {
-          healAmount: 0.015,
-        },
-      },
-      {
-        id: 'AddRageOnLightning',
-      },
+      { id: 'HealOnLightning', params: { healAmount: 0.015 } },
+      { id: 'AddRageOnLightning' },
     ],
     tags: ['equipment'],
     statModifiers: [
@@ -8680,17 +5995,80 @@ export const items: Record<string, Item> = {
     description: 'Armor which reacts whenever the wearer summons Lightning.',
     id: 'VoltaicChestplate3',
   },
+  FerociousVest: {
+    type: 'ItemDefinition',
+    rarity: 'epic',
+    abilities: [],
+    tags: ['equipment'],
+    statModifiers: [
+      {
+        type: 'StatModifier',
+        stat: 'Defense',
+        value: 105,
+        modifierType: 'add',
+      },
+    ],
+    equipSlots: ['Chest'],
+    isStackable: false,
+    amount: 1,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Ore', amount: 500 },
+          { id: 'Luminite', amount: 36 },
+          { id: 'Stone', amount: 600 },
+          { id: 'EssenceSpicy', amount: 44 },
+        ],
+        yields: 'FerociousVest2',
+      },
+    ],
+    retainOnUpgrade: false,
+    requiredLevel: 66,
+    sellPrice: 120,
+    name: 'Ferocious Vest Lvl 1',
+    assetName: 'FuryVest',
+    description: 'A powerful vest with an unlockable Ability.',
+    id: 'FerociousVest',
+  },
+  FerociousVest2: {
+    type: 'ItemDefinition',
+    rarity: 'epic',
+    abilities: [],
+    tags: ['equipment'],
+    statModifiers: [
+      {
+        type: 'StatModifier',
+        stat: 'Defense',
+        value: 125,
+        modifierType: 'add',
+      },
+    ],
+    equipSlots: ['Chest'],
+    isStackable: false,
+    amount: 1,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Ore', amount: 850 },
+          { id: 'Luminite', amount: 50 },
+          { id: 'Stone', amount: 1200 },
+          { id: 'EssenceSpicy', amount: 68 },
+        ],
+        yields: 'FerociousVestUltimate',
+      },
+    ],
+    retainOnUpgrade: false,
+    requiredLevel: 73,
+    sellPrice: 150,
+    name: 'Ferocious Vest Lvl 2',
+    assetName: 'FuryVest',
+    description: 'A powerful vest with an unlockable Ability.',
+    id: 'FerociousVest2',
+  },
   FerociousVestUltimate: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'BonusRageOnAttack',
-        params: {
-          rageAmount: 5,
-        },
-      },
-    ],
+    abilities: [{ id: 'BonusRageOnAttack', params: { rageAmount: 5 } }],
     tags: ['equipment'],
     statModifiers: [
       {
@@ -8712,17 +6090,71 @@ export const items: Record<string, Item> = {
     description: 'A powerful vest that adds Rage on attack.',
     id: 'FerociousVestUltimate',
   },
+  SentinelPlate: {
+    type: 'ItemDefinition',
+    rarity: 'rare',
+    abilities: [],
+    tags: ['equipment'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Defense', value: 64, modifierType: 'add' },
+    ],
+    equipSlots: ['Chest'],
+    isStackable: false,
+    amount: 1,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Iron', amount: 340 },
+          { id: 'Luminite', amount: 18 },
+          { id: 'Stone', amount: 340 },
+          { id: 'EssenceHearty', amount: 21 },
+        ],
+        yields: 'SentinelPlate2',
+      },
+    ],
+    retainOnUpgrade: false,
+    requiredLevel: 53,
+    sellPrice: 60,
+    name: 'Sentinel Plate Lvl 1',
+    assetName: 'GuardianPlate',
+    description: 'Heavy armor with an unlockable Ability.',
+    id: 'SentinelPlate',
+  },
+  SentinelPlate2: {
+    type: 'ItemDefinition',
+    rarity: 'rare',
+    abilities: [],
+    tags: ['equipment'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Defense', value: 86, modifierType: 'add' },
+    ],
+    equipSlots: ['Chest'],
+    isStackable: false,
+    amount: 1,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Iron', amount: 880 },
+          { id: 'Luminite', amount: 36 },
+          { id: 'Stone', amount: 440 },
+          { id: 'EssenceHearty', amount: 48 },
+        ],
+        yields: 'SentinelPlateUltimate',
+      },
+    ],
+    retainOnUpgrade: false,
+    requiredLevel: 58,
+    sellPrice: 120,
+    name: 'Sentinel Plate Lvl 2',
+    assetName: 'GuardianPlate',
+    description: 'Heavy armor with an unlockable Ability.',
+    id: 'SentinelPlate2',
+  },
   SentinelPlateUltimate: {
     type: 'ItemDefinition',
     rarity: 'epic',
     abilities: [
-      {
-        id: 'ShieldOnLowHP',
-        params: {
-          threshold: 0.2,
-          shieldAmount: 0.15,
-        },
-      },
+      { id: 'ShieldOnLowHP', params: { threshold: 0.2, shieldAmount: 0.15 } },
     ],
     tags: ['equipment'],
     statModifiers: [
@@ -8749,28 +6181,12 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'legendary',
     abilities: [
-      {
-        id: 'ShieldOnLowHP',
-        params: {
-          threshold: 0.2,
-          shieldAmount: 0.15,
-        },
-      },
+      { id: 'ShieldOnLowHP', params: { threshold: 0.2, shieldAmount: 0.15 } },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 120,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 80,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 120, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 80, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'LightningResist',
@@ -8794,22 +6210,11 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'legendary',
     abilities: [
-      {
-        id: 'ShieldOnLowHP',
-        params: {
-          threshold: 0.2,
-          shieldAmount: 0.15,
-        },
-      },
+      { id: 'ShieldOnLowHP', params: { threshold: 0.2, shieldAmount: 0.15 } },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 210,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 210, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Defense',
@@ -8838,22 +6243,10 @@ export const items: Record<string, Item> = {
   VigorVest: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'RageOnFirstTurn',
-        params: {
-          rageAmount: 35,
-        },
-      },
-    ],
+    abilities: [{ id: 'RageOnFirstTurn', params: { rageAmount: 35 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 15,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 15, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -8871,21 +6264,11 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'epic',
     abilities: [
-      {
-        id: 'GainShieldOnEnemyDeath',
-        params: {
-          shieldAmount: 0.15,
-        },
-      },
+      { id: 'GainShieldOnEnemyDeath', params: { shieldAmount: 0.05 } },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 20,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 20, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -8903,27 +6286,12 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'legendary',
     abilities: [
-      {
-        id: 'GainShieldOnEnemyDeath',
-        params: {
-          shieldAmount: 0.15,
-        },
-      },
-      {
-        id: 'GainShieldOnRage',
-        params: {
-          shieldAmount: 0.05,
-        },
-      },
+      { id: 'GainShieldOnEnemyDeath', params: { shieldAmount: 0.05 } },
+      { id: 'GainShieldOnRage', params: { shieldAmount: 0.05 } },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 100,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 100, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -8942,27 +6310,12 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'legendary',
     abilities: [
-      {
-        id: 'GainShieldOnEnemyDeath',
-        params: {
-          shieldAmount: 0.15,
-        },
-      },
-      {
-        id: 'GainShieldOnRage',
-        params: {
-          shieldAmount: 0.05,
-        },
-      },
+      { id: 'GainShieldOnEnemyDeath', params: { shieldAmount: 0.05 } },
+      { id: 'GainShieldOnRage', params: { shieldAmount: 0.05 } },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 140,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 140, modifierType: 'add' },
     ],
     equipSlots: ['Chest'],
     isStackable: false,
@@ -8980,19 +6333,10 @@ export const items: Record<string, Item> = {
   UpholsteredJerkin: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'LowHPBoostDefense',
-      },
-    ],
+    abilities: [{ id: 'LowHPBoostDefense' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 25,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 25, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'FireResist',
@@ -9022,19 +6366,10 @@ export const items: Record<string, Item> = {
   UpholsteredJerkinEX: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'LowHPBoostDefense',
-      },
-    ],
+    abilities: [{ id: 'LowHPBoostDefense' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 40,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 40, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'FireResist',
@@ -9067,18 +6402,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 110,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.015,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 110, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.015, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -9086,22 +6411,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 220,
-          },
-          {
-            id: 'EssenceChewy',
-            amount: 13,
-          },
-          {
-            id: 'Luminite',
-            amount: 8,
-          },
-          {
-            id: 'EssenceDecadent',
-            amount: 28,
-          },
+          { id: 'Ore', amount: 220 },
+          { id: 'EssenceChewy', amount: 13 },
+          { id: 'Luminite', amount: 8 },
+          { id: 'EssenceDecadent', amount: 28 },
         ],
         yields: 'AcuityHelm2',
       },
@@ -9120,18 +6433,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 150,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.025,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 150, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.025, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -9139,22 +6442,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 590,
-          },
-          {
-            id: 'EssenceChewy',
-            amount: 27,
-          },
-          {
-            id: 'EssenceDecadent',
-            amount: 38,
-          },
-          {
-            id: 'Luminite',
-            amount: 18,
-          },
+          { id: 'Ore', amount: 590 },
+          { id: 'EssenceChewy', amount: 27 },
+          { id: 'EssenceDecadent', amount: 38 },
+          { id: 'Luminite', amount: 18 },
         ],
         yields: 'AcuityHelmUltimate',
       },
@@ -9170,25 +6461,11 @@ export const items: Record<string, Item> = {
   AcuityHelmUltimate: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'HealOnCritAbility',
-      },
-    ],
+    abilities: [{ id: 'HealOnCritAbility' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 190,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.04,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 190, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.04, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -9205,19 +6482,10 @@ export const items: Record<string, Item> = {
   AdrenalineCap: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'LowHPRageFill',
-      },
-    ],
+    abilities: [{ id: 'LowHPRageFill' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 235,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 235, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'LightningResist',
@@ -9240,19 +6508,10 @@ export const items: Record<string, Item> = {
   AdrenalineCapEX: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'LowHPRageFill',
-      },
-    ],
+    abilities: [{ id: 'LowHPRageFill' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 280,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 280, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'LightningResist',
@@ -9278,24 +6537,9 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 82,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 2,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 82, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 2, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -9304,7 +6548,7 @@ export const items: Record<string, Item> = {
     retainOnUpgrade: false,
     requiredLevel: 21,
     sellPrice: 72,
-    name: 'Alpine Hunter\u2019s Hat',
+    name: 'Alpine Hunter’s Hat',
     assetName: 'AlpineHuntersHat',
     description: 'A rustic hat that enables its wearer to outfox their foes.',
     id: 'AlpineHuntersHat',
@@ -9312,19 +6556,10 @@ export const items: Record<string, Item> = {
   ArcticMantle: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'IceKnifeOnAttack',
-      },
-    ],
+    abilities: [{ id: 'IceKnifeOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 90,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 90, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'IceResist',
@@ -9338,14 +6573,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceSpicy',
-            amount: 18,
-          },
-          {
-            id: 'Wood',
-            amount: 780,
-          },
+          { id: 'EssenceSpicy', amount: 18 },
+          { id: 'Wood', amount: 780 },
         ],
         yields: 'ArcticMantle2',
       },
@@ -9362,19 +6591,10 @@ export const items: Record<string, Item> = {
   ArcticMantle2: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'IceKnifeOnAttack',
-      },
-    ],
+    abilities: [{ id: 'IceKnifeOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 100,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 100, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'IceResist',
@@ -9388,18 +6608,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceSpicy',
-            amount: 23,
-          },
-          {
-            id: 'Luminite',
-            amount: 32,
-          },
-          {
-            id: 'Iron',
-            amount: 880,
-          },
+          { id: 'EssenceSpicy', amount: 23 },
+          { id: 'Luminite', amount: 32 },
+          { id: 'Iron', amount: 880 },
         ],
         yields: 'ArcticMantle3',
       },
@@ -9416,19 +6627,10 @@ export const items: Record<string, Item> = {
   ArcticMantle3: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'IceKnifeOnAttack',
-      },
-    ],
+    abilities: [{ id: 'IceKnifeOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 110,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 110, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'IceResist',
@@ -9442,18 +6644,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceSpicy',
-            amount: 30,
-          },
-          {
-            id: 'Luminite',
-            amount: 32,
-          },
-          {
-            id: 'Stone',
-            amount: 890,
-          },
+          { id: 'EssenceSpicy', amount: 30 },
+          { id: 'Luminite', amount: 32 },
+          { id: 'Stone', amount: 890 },
         ],
         yields: 'ArcticMantle4',
       },
@@ -9470,19 +6663,10 @@ export const items: Record<string, Item> = {
   ArcticMantle4: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'IceKnifeOnAttack',
-      },
-    ],
+    abilities: [{ id: 'IceKnifeOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 120,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 120, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'IceResist',
@@ -9496,18 +6680,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceSpicy',
-            amount: 37,
-          },
-          {
-            id: 'Luminite',
-            amount: 35,
-          },
-          {
-            id: 'Ore',
-            amount: 1280,
-          },
+          { id: 'EssenceSpicy', amount: 37 },
+          { id: 'Luminite', amount: 35 },
+          { id: 'Ore', amount: 1280 },
         ],
         yields: 'ArcticMantleUltimate',
       },
@@ -9524,19 +6699,10 @@ export const items: Record<string, Item> = {
   ArcticMantleUltimate: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'IceKnifeOnAttack',
-      },
-    ],
+    abilities: [{ id: 'IceKnifeOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 130,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 130, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'IceResist',
@@ -9560,19 +6726,10 @@ export const items: Record<string, Item> = {
   BolsteringHeadgear: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'BoostAttackOnHighHP',
-      },
-    ],
+    abilities: [{ id: 'BoostAttackOnHighHP' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 105,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 105, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'IceResist',
@@ -9595,19 +6752,10 @@ export const items: Record<string, Item> = {
   BolsteringHeadgearEX: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'BoostAttackOnHighHP',
-      },
-    ],
+    abilities: [{ id: 'BoostAttackOnHighHP' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 175,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 175, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'IceResist',
@@ -9633,12 +6781,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 160,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 160, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -9646,22 +6789,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceHearty',
-            amount: 34,
-          },
-          {
-            id: 'Luminite',
-            amount: 15,
-          },
-          {
-            id: 'Iron',
-            amount: 510,
-          },
-          {
-            id: 'EssenceFresh',
-            amount: 11,
-          },
+          { id: 'EssenceHearty', amount: 34 },
+          { id: 'Luminite', amount: 15 },
+          { id: 'Iron', amount: 510 },
+          { id: 'EssenceFresh', amount: 11 },
         ],
         yields: 'BraveheartHelm2',
       },
@@ -9680,12 +6811,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 220,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 220, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -9693,22 +6819,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceHearty',
-            amount: 25,
-          },
-          {
-            id: 'Luminite',
-            amount: 30,
-          },
-          {
-            id: 'Iron',
-            amount: 1250,
-          },
-          {
-            id: 'EssenceFresh',
-            amount: 38,
-          },
+          { id: 'EssenceHearty', amount: 25 },
+          { id: 'Luminite', amount: 30 },
+          { id: 'Iron', amount: 1250 },
+          { id: 'EssenceFresh', amount: 38 },
         ],
         yields: 'BraveheartHelmUltimate',
       },
@@ -9724,19 +6838,10 @@ export const items: Record<string, Item> = {
   BraveheartHelmUltimate: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'HealOnRage',
-      },
-    ],
+    abilities: [{ id: 'HealOnRage' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 330,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 330, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -9753,19 +6858,10 @@ export const items: Record<string, Item> = {
   CharmCap: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'HypnotizeOnAttack',
-      },
-    ],
+    abilities: [{ id: 'HypnotizeOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 120,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 120, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -9785,18 +6881,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 41,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 41, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -9804,14 +6890,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 16,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 5,
-          },
+          { id: 'Wood', amount: 16 },
+          { id: 'EssenceCreamy', amount: 5 },
         ],
         yields: 'ConfoundingMask2',
       },
@@ -9830,18 +6910,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 68,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.04,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 68, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.04, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -9861,12 +6931,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 28,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 28, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -9874,14 +6939,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 7,
-          },
-          {
-            id: 'Stone',
-            amount: 6,
-          },
+          { id: 'Iron', amount: 7 },
+          { id: 'Stone', amount: 6 },
         ],
         yields: 'ConjurersCap2',
       },
@@ -9889,7 +6948,7 @@ export const items: Record<string, Item> = {
     retainOnUpgrade: false,
     requiredLevel: 4,
     sellPrice: 20,
-    name: 'Conjurer\u2019s Cap Lvl 1',
+    name: 'Conjurer’s Cap Lvl 1',
     assetName: 'ConjurersCap',
     description: 'A flimsy cap with an unlockable ability.',
     id: 'ConjurersCap',
@@ -9900,12 +6959,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 35,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 35, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -9913,18 +6967,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 13,
-          },
-          {
-            id: 'Stone',
-            amount: 13,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 1,
-          },
+          { id: 'Iron', amount: 13 },
+          { id: 'Stone', amount: 13 },
+          { id: 'EssenceCreamy', amount: 1 },
         ],
         yields: 'ConjurersCapUltimate',
       },
@@ -9932,7 +6977,7 @@ export const items: Record<string, Item> = {
     retainOnUpgrade: false,
     requiredLevel: 6,
     sellPrice: 30,
-    name: 'Conjurer\u2019s Cap Lvl 2',
+    name: 'Conjurer’s Cap Lvl 2',
     assetName: 'ConjurersCap',
     description: 'A flimsy cap with an unlockable ability.',
     id: 'ConjurersCap2',
@@ -9940,19 +6985,10 @@ export const items: Record<string, Item> = {
   ConjurersCapUltimate: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'MagicKnifeAbility',
-      },
-    ],
+    abilities: [{ id: 'MagicKnifeAbility' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 46,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 46, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -9961,7 +6997,7 @@ export const items: Record<string, Item> = {
     retainOnUpgrade: false,
     requiredLevel: 10,
     sellPrice: 50,
-    name: 'Conjurer\u2019s Cap Ultimate',
+    name: 'Conjurer’s Cap Ultimate',
     assetName: 'ConjurersCap',
     description: 'A flimsy cap that summons a Magic Knife on Attack.',
     id: 'ConjurersCapUltimate',
@@ -9972,12 +7008,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 80,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 80, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -9985,18 +7016,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 35,
-          },
-          {
-            id: 'Ore',
-            amount: 30,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 5,
-          },
+          { id: 'Stone', amount: 35 },
+          { id: 'Ore', amount: 30 },
+          { id: 'EssenceCreamy', amount: 5 },
         ],
         yields: 'CordovanHood2',
       },
@@ -10015,12 +7037,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 97,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 97, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -10028,18 +7045,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 55,
-          },
-          {
-            id: 'Ore',
-            amount: 45,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 7,
-          },
+          { id: 'Stone', amount: 55 },
+          { id: 'Ore', amount: 45 },
+          { id: 'EssenceCreamy', amount: 7 },
         ],
         yields: 'CordovanHood3',
       },
@@ -10058,12 +7066,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 129,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 129, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -10083,18 +7086,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 135,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 24,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 135, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 24, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'FireResist',
@@ -10120,12 +7113,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 95,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 95, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -10133,22 +7121,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 1100,
-          },
-          {
-            id: 'EssenceChewy',
-            amount: 33,
-          },
-          {
-            id: 'EssenceDecadent',
-            amount: 33,
-          },
-          {
-            id: 'Luminite',
-            amount: 32,
-          },
+          { id: 'Stone', amount: 1100 },
+          { id: 'EssenceChewy', amount: 33 },
+          { id: 'EssenceDecadent', amount: 33 },
+          { id: 'Luminite', amount: 32 },
         ],
         yields: 'HelmofBladesUltimate',
       },
@@ -10165,25 +7141,11 @@ export const items: Record<string, Item> = {
   HelmofBladesUltimate: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'MagicKnifeOnCrit',
-      },
-    ],
+    abilities: [{ id: 'MagicKnifeOnCrit' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 146,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.01,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 146, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.01, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -10201,25 +7163,11 @@ export const items: Record<string, Item> = {
   IntricateHeadgear: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'HealOnCritAbility',
-      },
-    ],
+    abilities: [{ id: 'HealOnCritAbility' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 60,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 60, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -10239,12 +7187,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 57,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 57, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -10252,14 +7195,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 12,
-          },
-          {
-            id: 'EssenceChewy',
-            amount: 2,
-          },
+          { id: 'Iron', amount: 12 },
+          { id: 'EssenceChewy', amount: 2 },
         ],
         yields: 'LeatherCap2',
       },
@@ -10278,12 +7215,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 90,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 90, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -10291,14 +7223,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 60,
-          },
-          {
-            id: 'EssenceChewy',
-            amount: 5,
-          },
+          { id: 'Iron', amount: 60 },
+          { id: 'EssenceChewy', amount: 5 },
         ],
         yields: 'LeatherCap3',
       },
@@ -10317,12 +7243,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 104,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 104, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -10342,18 +7263,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 135,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: -0.04,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 135, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: -0.04, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -10371,25 +7282,15 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'rare',
     abilities: [
-      {
-        id: 'HypnotizeOnHitCount',
-      },
+      { id: 'HypnotizeOnHitCount' },
       {
         id: 'RemoveSilenceOnHitCount',
-        params: {
-          hitCount: 2,
-          removeChance: 1,
-        },
+        params: { hitCount: 2, removeChance: 1 },
       },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 130,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 130, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -10397,18 +7298,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceChewy',
-            amount: 45,
-          },
-          {
-            id: 'Luminite',
-            amount: 40,
-          },
-          {
-            id: 'Stone',
-            amount: 1200,
-          },
+          { id: 'EssenceChewy', amount: 45 },
+          { id: 'Luminite', amount: 40 },
+          { id: 'Stone', amount: 1200 },
         ],
         yields: 'RadiantHeadgear2',
       },
@@ -10426,25 +7318,15 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'rare',
     abilities: [
-      {
-        id: 'HypnotizeOnHitCount',
-      },
+      { id: 'HypnotizeOnHitCount' },
       {
         id: 'RemoveSilenceOnHitCount',
-        params: {
-          hitCount: 2,
-          removeChance: 1,
-        },
+        params: { hitCount: 2, removeChance: 1 },
       },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 135,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 135, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -10452,18 +7334,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceChewy',
-            amount: 51,
-          },
-          {
-            id: 'Wood',
-            amount: 1410,
-          },
-          {
-            id: 'Luminite',
-            amount: 44,
-          },
+          { id: 'EssenceChewy', amount: 51 },
+          { id: 'Wood', amount: 1410 },
+          { id: 'Luminite', amount: 44 },
         ],
         yields: 'RadiantHeadgear3',
       },
@@ -10481,25 +7354,15 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'rare',
     abilities: [
-      {
-        id: 'HypnotizeOnHitCount',
-      },
+      { id: 'HypnotizeOnHitCount' },
       {
         id: 'RemoveSilenceOnHitCount',
-        params: {
-          hitCount: 2,
-          removeChance: 1,
-        },
+        params: { hitCount: 2, removeChance: 1 },
       },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 140,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 140, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -10507,18 +7370,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceChewy',
-            amount: 60,
-          },
-          {
-            id: 'Ore',
-            amount: 1560,
-          },
-          {
-            id: 'Luminite',
-            amount: 44,
-          },
+          { id: 'EssenceChewy', amount: 60 },
+          { id: 'Ore', amount: 1560 },
+          { id: 'Luminite', amount: 44 },
         ],
         yields: 'RadiantHeadgear4',
       },
@@ -10536,25 +7390,15 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'rare',
     abilities: [
-      {
-        id: 'HypnotizeOnHitCount',
-      },
+      { id: 'HypnotizeOnHitCount' },
       {
         id: 'RemoveSilenceOnHitCount',
-        params: {
-          hitCount: 2,
-          removeChance: 1,
-        },
+        params: { hitCount: 2, removeChance: 1 },
       },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 145,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 145, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -10562,18 +7406,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceChewy',
-            amount: 71,
-          },
-          {
-            id: 'Iron',
-            amount: 1970,
-          },
-          {
-            id: 'Luminite',
-            amount: 50,
-          },
+          { id: 'EssenceChewy', amount: 71 },
+          { id: 'Iron', amount: 1970 },
+          { id: 'Luminite', amount: 50 },
         ],
         yields: 'RadiantHeadgearUltimate',
       },
@@ -10591,25 +7426,15 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'rare',
     abilities: [
-      {
-        id: 'HypnotizeOnHitCount',
-      },
+      { id: 'HypnotizeOnHitCount' },
       {
         id: 'RemoveSilenceOnHitCount',
-        params: {
-          hitCount: 2,
-          removeChance: 1,
-        },
+        params: { hitCount: 2, removeChance: 1 },
       },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 160,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 160, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -10630,12 +7455,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 46,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 46, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -10643,14 +7463,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 12,
-          },
-          {
-            id: 'EssenceChewy',
-            amount: 1,
-          },
+          { id: 'Stone', amount: 12 },
+          { id: 'EssenceChewy', amount: 1 },
         ],
         yields: 'RawhideCap2',
       },
@@ -10669,12 +7483,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 67,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 67, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -10682,14 +7491,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 18,
-          },
-          {
-            id: 'EssenceChewy',
-            amount: 3,
-          },
+          { id: 'Stone', amount: 18 },
+          { id: 'EssenceChewy', amount: 3 },
         ],
         yields: 'RawhideCap3',
       },
@@ -10708,12 +7511,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 110,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 110, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -10730,19 +7528,10 @@ export const items: Record<string, Item> = {
   RestorationHelm: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'HealOnRage',
-      },
-    ],
+    abilities: [{ id: 'HealOnRage' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 58,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 58, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -10762,18 +7551,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 100,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 50,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 100, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 50, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'VulnerableResist',
@@ -10800,18 +7579,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 125,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 60,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 125, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 60, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'VulnerableResist',
@@ -10838,12 +7607,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 110,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 110, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -10863,12 +7627,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 81,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 81, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'ShadowResist',
@@ -10894,12 +7653,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 120,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 120, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'ShadowResist',
@@ -10913,22 +7667,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 150,
-          },
-          {
-            id: 'Wood',
-            amount: 150,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 22,
-          },
-          {
-            id: 'Luminite',
-            amount: 12,
-          },
+          { id: 'Iron', amount: 150 },
+          { id: 'Wood', amount: 150 },
+          { id: 'EssenceTangy', amount: 22 },
+          { id: 'Luminite', amount: 12 },
         ],
         yields: 'ShadowDrinkerHelmUltimate',
       },
@@ -10944,19 +7686,10 @@ export const items: Record<string, Item> = {
   ShadowDrinkerHelmUltimate: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'HealChanceOnShadowDamage',
-      },
-    ],
+    abilities: [{ id: 'HealChanceOnShadowDamage' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 160,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 160, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'ShadowResist',
@@ -10983,12 +7716,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 40,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 40, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -10996,16 +7724,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 22,
-          },
-          {
-            id: 'EssenceChewy',
-            amount: 2,
-          },
+          { id: 'Iron', amount: 22 },
+          { id: 'EssenceChewy', amount: 2 },
         ],
-        yields: 'WardingHelmUltimate',
+        yields: 'ShieldingHelmUltimate',
       },
     ],
     retainOnUpgrade: false,
@@ -11013,25 +7735,16 @@ export const items: Record<string, Item> = {
     sellPrice: 20,
     name: 'Shielding Helm',
     assetName: 'ShieldingHelm',
-    description: 'A sturdy helmet with an unlockable Ability.',
+    description: 'Legacy item. A sturdy helmet with an unlockable Ability.',
     id: 'ShieldingHelm',
   },
   ShieldingHelmUltimate: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'ShieldOnLowHP',
-      },
-    ],
+    abilities: [{ id: 'ShieldOnLowHP' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 90,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 90, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -11049,25 +7762,11 @@ export const items: Record<string, Item> = {
   SpikedCowl: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'HealOnMagicKnife',
-      },
-    ],
+    abilities: [{ id: 'HealOnMagicKnife' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 79,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 30,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 79, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 30, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'FireResist',
@@ -11091,25 +7790,11 @@ export const items: Record<string, Item> = {
   SpikedCowlEX: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'HealOnMagicKnife',
-      },
-    ],
+    abilities: [{ id: 'HealOnMagicKnife' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 105,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 62,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 105, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 62, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'FireResist',
@@ -11136,12 +7821,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 35,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 35, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -11149,14 +7829,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 110,
-          },
-          {
-            id: 'EssenceFresh',
-            amount: 10,
-          },
+          { id: 'Wood', amount: 110 },
+          { id: 'EssenceFresh', amount: 10 },
         ],
         yields: 'SturdyHeadguardUltimate',
       },
@@ -11172,19 +7846,10 @@ export const items: Record<string, Item> = {
   SturdyHeadguardUltimate: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'HealOnRage',
-      },
-    ],
+    abilities: [{ id: 'HealOnRage' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 75,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 75, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -11204,12 +7869,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 142,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 142, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'ShadowResist',
@@ -11233,25 +7893,11 @@ export const items: Record<string, Item> = {
   SurgeHelm: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'HealOnLightning',
-      },
-    ],
+    abilities: [{ id: 'HealOnLightning' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 90,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 10,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 90, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 10, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'ShadowResist',
@@ -11275,25 +7921,11 @@ export const items: Record<string, Item> = {
   SurgeHelmEX: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'HealOnLightning',
-      },
-    ],
+    abilities: [{ id: 'HealOnLightning' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 140,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 22,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 140, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 22, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'ShadowResist',
@@ -11314,26 +7946,43 @@ export const items: Record<string, Item> = {
       'Legacy item. A protective helmet that absorbs Lightning and heals the wearer.',
     id: 'SurgeHelmEX',
   },
+  WardingHelm: {
+    type: 'ItemDefinition',
+    rarity: 'common',
+    abilities: [],
+    tags: ['equipment'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'MaxHp', value: 40, modifierType: 'add' },
+    ],
+    equipSlots: ['Head'],
+    isStackable: false,
+    amount: 1,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Iron', amount: 22 },
+          { id: 'EssenceChewy', amount: 2 },
+        ],
+        yields: 'WardingHelmUltimate',
+      },
+    ],
+    retainOnUpgrade: false,
+    requiredLevel: 1,
+    sellPrice: 20,
+    name: 'Warding Helm',
+    assetName: 'ShieldingHelm',
+    description: 'A sturdy helmet with an unlockable Ability.',
+    id: 'WardingHelm',
+  },
   WardingHelmUltimate: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
     abilities: [
-      {
-        id: 'ShieldOnLowHP',
-        params: {
-          threshold: 0.2,
-          shieldAmount: 0.15,
-        },
-      },
+      { id: 'ShieldOnLowHP', params: { threshold: 0.2, shieldAmount: 0.15 } },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 90,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 90, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -11350,28 +7999,11 @@ export const items: Record<string, Item> = {
   StormHelm: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'HealOnLightning',
-        params: {
-          healAmount: 0.01,
-        },
-      },
-    ],
+    abilities: [{ id: 'HealOnLightning', params: { healAmount: 0.01 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 90,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 10,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 90, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 10, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'ShadowResist',
@@ -11395,28 +8027,11 @@ export const items: Record<string, Item> = {
   StormHelmEX: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'HealOnLightning',
-        params: {
-          healAmount: 0.01,
-        },
-      },
-    ],
+    abilities: [{ id: 'HealOnLightning', params: { healAmount: 0.01 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 140,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 22,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 140, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 22, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'ShadowResist',
@@ -11440,19 +8055,10 @@ export const items: Record<string, Item> = {
   ThunderHelm: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'DoubleLightningOnTurn',
-      },
-    ],
+    abilities: [{ id: 'DoubleLightningOnTurn' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 95,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 95, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'LightningResist',
@@ -11479,18 +8085,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 101,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 10,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 101, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 10, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -11498,14 +8094,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 38,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 5,
-          },
+          { id: 'Iron', amount: 38 },
+          { id: 'EssenceHearty', amount: 5 },
         ],
         yields: 'ToughHelmet2',
       },
@@ -11524,18 +8114,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 125,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 17,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 125, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 17, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -11543,14 +8123,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 110,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 15,
-          },
+          { id: 'Iron', amount: 110 },
+          { id: 'EssenceHearty', amount: 15 },
         ],
         yields: 'ToughHelmet3',
       },
@@ -11569,18 +8143,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 120,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 36,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 120, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 36, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -11600,18 +8164,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 90,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 90, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -11619,22 +8173,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 160,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 5,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 5,
-          },
-          {
-            id: 'Luminite',
-            amount: 4,
-          },
+          { id: 'Wood', amount: 160 },
+          { id: 'EssenceCreamy', amount: 5 },
+          { id: 'EssenceHearty', amount: 5 },
+          { id: 'Luminite', amount: 4 },
         ],
         yields: 'VanishingHood2',
       },
@@ -11644,7 +8186,7 @@ export const items: Record<string, Item> = {
     sellPrice: 60,
     name: 'Vanishing Hood Lvl 1',
     assetName: 'VanishingHood',
-    description: 'A thief\u2019s hood which adds Dodge.',
+    description: 'A thief’s hood which adds Dodge.',
     id: 'VanishingHood',
   },
   VanishingHood2: {
@@ -11653,12 +8195,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 112,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 112, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Dodge',
@@ -11672,22 +8209,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 300,
-          },
-          {
-            id: 'Luminite',
-            amount: 12,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 16,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 16,
-          },
+          { id: 'Wood', amount: 300 },
+          { id: 'Luminite', amount: 12 },
+          { id: 'EssenceCreamy', amount: 16 },
+          { id: 'EssenceHearty', amount: 16 },
         ],
         yields: 'VanishingHood3',
       },
@@ -11697,7 +8222,7 @@ export const items: Record<string, Item> = {
     sellPrice: 90,
     name: 'Vanishing Hood Lvl 2',
     assetName: 'VanishingHood',
-    description: 'A thief\u2019s hood which adds Dodge.',
+    description: 'A thief’s hood which adds Dodge.',
     id: 'VanishingHood2',
   },
   VanishingHood3: {
@@ -11706,18 +8231,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 134,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.04,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 134, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.04, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -11728,31 +8243,17 @@ export const items: Record<string, Item> = {
     sellPrice: 150,
     name: 'Vanishing Hood Lvl 3',
     assetName: 'VanishingHood',
-    description: 'A thief\u2019s hood which adds Dodge.',
+    description: 'A thief’s hood which adds Dodge.',
     id: 'VanishingHood3',
   },
   WrathfulVisor: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'AddRageOnHeal',
-      },
-    ],
+    abilities: [{ id: 'AddRageOnHeal' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 250,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 22,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 250, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 22, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -11769,25 +8270,11 @@ export const items: Record<string, Item> = {
   WrathfulVisorEX: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'AddRageOnHeal',
-      },
-    ],
+    abilities: [{ id: 'AddRageOnHeal' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 290,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 34,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 290, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 34, modifierType: 'add' },
     ],
     equipSlots: ['Head'],
     isStackable: false,
@@ -11804,19 +8291,10 @@ export const items: Record<string, Item> = {
   AmberfireRing: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'FireKnifeOnTurnStart',
-      },
-    ],
+    abilities: [{ id: 'FireKnifeOnTurnStart' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.01,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.01, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'FireResist',
@@ -11839,31 +8317,12 @@ export const items: Record<string, Item> = {
   BlastingRing: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'LightningOnShieldActivate',
-      },
-    ],
+    abilities: [{ id: 'LightningOnShieldActivate' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 55,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 5,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.07,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 55, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 5, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.07, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -11880,31 +8339,12 @@ export const items: Record<string, Item> = {
   BlastingRingEX: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'LightningOnShieldActivate',
-      },
-    ],
+    abilities: [{ id: 'LightningOnShieldActivate' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 85,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 6,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.07,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 85, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Speed', value: 6, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.07, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -11924,12 +8364,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.055,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.055, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'FireResist',
@@ -11952,22 +8387,10 @@ export const items: Record<string, Item> = {
   Breathtaker: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'SilenceOnRage',
-        params: {
-          turnDuration: 3,
-        },
-      },
-    ],
+    abilities: [{ id: 'SilenceOnRage', params: { turnDuration: 3 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.1,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.1, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -11984,22 +8407,10 @@ export const items: Record<string, Item> = {
   BreathtakerEX: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'SilenceOnRage',
-        params: {
-          turnDuration: 3,
-        },
-      },
-    ],
+    abilities: [{ id: 'SilenceOnRage', params: { turnDuration: 3 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.1,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.1, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'SilenceResist',
@@ -12025,12 +8436,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.025,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.025, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -12090,19 +8496,10 @@ export const items: Record<string, Item> = {
   FerocityRing: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'AddRageOnCrit',
-      },
-    ],
+    abilities: [{ id: 'AddRageOnCrit' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.04,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.04, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -12119,19 +8516,10 @@ export const items: Record<string, Item> = {
   FiligreeBand: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'MagicKnifeOnEnemyDeath',
-      },
-    ],
+    abilities: [{ id: 'MagicKnifeOnEnemyDeath' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.05,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.05, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -12139,22 +8527,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 950,
-          },
-          {
-            id: 'Luminite',
-            amount: 44,
-          },
-          {
-            id: 'Wood',
-            amount: 1100,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 25,
-          },
+          { id: 'Ore', amount: 950 },
+          { id: 'Luminite', amount: 44 },
+          { id: 'Wood', amount: 1100 },
+          { id: 'EssenceCreamy', amount: 25 },
         ],
         yields: 'FiligreeBand2',
       },
@@ -12165,25 +8541,16 @@ export const items: Record<string, Item> = {
     name: 'Filigree Band Lvl 1',
     assetName: 'FiligreeBand',
     description:
-      'A delicate ring with a deadly ability triggered by a foe\u2019s demise.',
+      'A delicate ring with a deadly ability triggered by a foe’s demise.',
     id: 'FiligreeBand',
   },
   FiligreeBand2: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'MagicKnifeOnEnemyDeath',
-      },
-    ],
+    abilities: [{ id: 'MagicKnifeOnEnemyDeath' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.06,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.06, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -12191,22 +8558,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 800,
-          },
-          {
-            id: 'Luminite',
-            amount: 44,
-          },
-          {
-            id: 'Wood',
-            amount: 1100,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 40,
-          },
+          { id: 'Ore', amount: 800 },
+          { id: 'Luminite', amount: 44 },
+          { id: 'Wood', amount: 1100 },
+          { id: 'EssenceCreamy', amount: 40 },
         ],
         yields: 'FiligreeBand3',
       },
@@ -12217,25 +8572,16 @@ export const items: Record<string, Item> = {
     name: 'Filigree Band Lvl 2',
     assetName: 'FiligreeBand',
     description:
-      'A delicate ring with a deadly ability triggered by a foe\u2019s demise.',
+      'A delicate ring with a deadly ability triggered by a foe’s demise.',
     id: 'FiligreeBand2',
   },
   FiligreeBand3: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'MagicKnifeOnEnemyDeath',
-      },
-    ],
+    abilities: [{ id: 'MagicKnifeOnEnemyDeath' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.07,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.07, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -12247,17 +8593,13 @@ export const items: Record<string, Item> = {
     name: 'Filigree Band Lvl 3',
     assetName: 'FiligreeBand',
     description:
-      'A delicate ring with a deadly ability triggered by a foe\u2019s demise.',
+      'A delicate ring with a deadly ability triggered by a foe’s demise.',
     id: 'FiligreeBand3',
   },
   FocusRing: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'LowHPRageFill',
-      },
-    ],
+    abilities: [{ id: 'LowHPRageFill' }],
     tags: ['equipment'],
     statModifiers: [
       {
@@ -12285,18 +8627,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: -30,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: -30, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.03, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -12313,25 +8645,11 @@ export const items: Record<string, Item> = {
   FrostflakeBand: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'IceKnifeOnTurnStart',
-      },
-    ],
+    abilities: [{ id: 'IceKnifeOnTurnStart' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.05,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.01,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.05, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.01, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'LightningResist',
@@ -12355,19 +8673,10 @@ export const items: Record<string, Item> = {
   FrostflakeBandEX: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'IceKnifeOnTurnStart',
-      },
-    ],
+    abilities: [{ id: 'IceKnifeOnTurnStart' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.055,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.055, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Dodge',
@@ -12406,18 +8715,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 6,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.015,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 6, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.015, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -12437,12 +8736,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.045,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.045, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -12450,22 +8744,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 140,
-          },
-          {
-            id: 'EssenceDecadent',
-            amount: 45,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 4,
-          },
-          {
-            id: 'Luminite',
-            amount: 4,
-          },
+          { id: 'Wood', amount: 140 },
+          { id: 'EssenceDecadent', amount: 45 },
+          { id: 'EssenceSpicy', amount: 4 },
+          { id: 'Luminite', amount: 4 },
         ],
         yields: 'InfernoRing2',
       },
@@ -12475,7 +8757,7 @@ export const items: Record<string, Item> = {
     sellPrice: 70,
     name: 'Inferno Ring Lvl 1',
     assetName: 'InfernoRing',
-    description: 'A powerful ring with an unlockable Ability.',
+    description: 'Legacy item. A powerful ring with an unlockable Ability.',
     id: 'InfernoRing',
   },
   InfernoRing2: {
@@ -12484,12 +8766,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.07,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.07, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -12497,24 +8774,12 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 650,
-          },
-          {
-            id: 'EssenceDecadent',
-            amount: 32,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 15,
-          },
-          {
-            id: 'Luminite',
-            amount: 15,
-          },
+          { id: 'Wood', amount: 650 },
+          { id: 'EssenceDecadent', amount: 32 },
+          { id: 'EssenceSpicy', amount: 15 },
+          { id: 'Luminite', amount: 15 },
         ],
-        yields: 'ConflagrationRingUltimate',
+        yields: 'InfernoRingUltimate',
       },
     ],
     retainOnUpgrade: false,
@@ -12522,25 +8787,16 @@ export const items: Record<string, Item> = {
     sellPrice: 150,
     name: 'Inferno Ring Lvl 2',
     assetName: 'InfernoRing',
-    description: 'A powerful ring with an unlockable Ability.',
+    description: 'Legacy item. A powerful ring with an unlockable Ability.',
     id: 'InfernoRing2',
   },
   InfernoRingUltimate: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'RageOnFirstTurn',
-      },
-    ],
+    abilities: [{ id: 'RageOnFirstTurn' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.09,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.09, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -12560,12 +8816,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -12573,14 +8824,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 22,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 2,
-          },
+          { id: 'Wood', amount: 22 },
+          { id: 'EssenceFluffy', amount: 2 },
         ],
         yields: 'JaggedRing2',
       },
@@ -12599,12 +8844,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.03, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -12612,14 +8852,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 110,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 6,
-          },
+          { id: 'Wood', amount: 110 },
+          { id: 'EssenceFluffy', amount: 6 },
         ],
         yields: 'JaggedRing3',
       },
@@ -12663,18 +8897,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 35,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 35, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -12694,18 +8918,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 55,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.015,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 55, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.015, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -12713,18 +8927,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 40,
-          },
-          {
-            id: 'Stone',
-            amount: 60,
-          },
-          {
-            id: 'EssenceCrunchy',
-            amount: 15,
-          },
+          { id: 'Wood', amount: 40 },
+          { id: 'Stone', amount: 60 },
+          { id: 'EssenceCrunchy', amount: 15 },
         ],
         yields: 'MuscleRing2',
       },
@@ -12743,18 +8948,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 62,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.025,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 62, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.025, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -12762,18 +8957,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 105,
-          },
-          {
-            id: 'Stone',
-            amount: 80,
-          },
-          {
-            id: 'EssenceCrunchy',
-            amount: 25,
-          },
+          { id: 'Wood', amount: 105 },
+          { id: 'Stone', amount: 80 },
+          { id: 'EssenceCrunchy', amount: 25 },
         ],
         yields: 'MuscleRing3',
       },
@@ -12792,12 +8978,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 78,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 78, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Crit',
@@ -12821,25 +9002,12 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'epic',
     abilities: [
-      {
-        id: 'PoisonShield',
-        params: {
-          damagePerTurn: 35,
-          applyChance: 0.75,
-        },
-      },
-      {
-        id: 'GainShieldOnEnemyDeath',
-      },
+      { id: 'PoisonShield', params: { damagePerTurn: 35, applyChance: 0.75 } },
+      { id: 'GainShieldOnEnemyDeath' },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.05,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.05, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -12858,25 +9026,12 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'epic',
     abilities: [
-      {
-        id: 'PoisonShield',
-        params: {
-          damagePerTurn: 45,
-          applyChance: 0.75,
-        },
-      },
-      {
-        id: 'GainShieldOnEnemyDeath',
-      },
+      { id: 'PoisonShield', params: { damagePerTurn: 45, applyChance: 0.75 } },
+      { id: 'GainShieldOnEnemyDeath' },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.055,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.055, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'SilenceResist',
@@ -12901,21 +9056,11 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'uncommon',
     abilities: [
-      {
-        id: 'RemovePoisonEveryHitCount',
-        params: {
-          removeChance: 0.1,
-        },
-      },
+      { id: 'RemovePoisonEveryHitCount', params: { removeChance: 0.1 } },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.03, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'PoisonResist',
@@ -12929,14 +9074,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceDecadent',
-            amount: 25,
-          },
-          {
-            id: 'Stone',
-            amount: 680,
-          },
+          { id: 'EssenceDecadent', amount: 25 },
+          { id: 'Stone', amount: 680 },
         ],
         yields: 'PristineRing2',
       },
@@ -12953,21 +9092,11 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'uncommon',
     abilities: [
-      {
-        id: 'RemovePoisonEveryHitCount',
-        params: {
-          removeChance: 0.12,
-        },
-      },
+      { id: 'RemovePoisonEveryHitCount', params: { removeChance: 0.12 } },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.04,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.04, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'PoisonResist',
@@ -12981,18 +9110,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceDecadent',
-            amount: 28,
-          },
-          {
-            id: 'Luminite',
-            amount: 32,
-          },
-          {
-            id: 'Ore',
-            amount: 750,
-          },
+          { id: 'EssenceDecadent', amount: 28 },
+          { id: 'Luminite', amount: 32 },
+          { id: 'Ore', amount: 750 },
         ],
         yields: 'PristineRing3',
       },
@@ -13009,21 +9129,11 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'uncommon',
     abilities: [
-      {
-        id: 'RemovePoisonEveryHitCount',
-        params: {
-          removeChance: 0.15,
-        },
-      },
+      { id: 'RemovePoisonEveryHitCount', params: { removeChance: 0.15 } },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.05,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.05, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'PoisonResist',
@@ -13037,18 +9147,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceDecadent',
-            amount: 33,
-          },
-          {
-            id: 'Iron',
-            amount: 880,
-          },
-          {
-            id: 'Luminite',
-            amount: 32,
-          },
+          { id: 'EssenceDecadent', amount: 33 },
+          { id: 'Iron', amount: 880 },
+          { id: 'Luminite', amount: 32 },
         ],
         yields: 'PristineRing4',
       },
@@ -13065,21 +9166,11 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'uncommon',
     abilities: [
-      {
-        id: 'RemovePoisonEveryHitCount',
-        params: {
-          removeChance: 0.18,
-        },
-      },
+      { id: 'RemovePoisonEveryHitCount', params: { removeChance: 0.18 } },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.06,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.06, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'PoisonResist',
@@ -13093,18 +9184,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceDecadent',
-            amount: 45,
-          },
-          {
-            id: 'Stone',
-            amount: 1200,
-          },
-          {
-            id: 'Luminite',
-            amount: 35,
-          },
+          { id: 'EssenceDecadent', amount: 45 },
+          { id: 'Stone', amount: 1200 },
+          { id: 'Luminite', amount: 35 },
         ],
         yields: 'PristineRingUltimate',
       },
@@ -13121,21 +9203,11 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'uncommon',
     abilities: [
-      {
-        id: 'RemovePoisonEveryHitCount',
-        params: {
-          removeChance: 0.25,
-        },
-      },
+      { id: 'RemovePoisonEveryHitCount', params: { removeChance: 0.25 } },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.075,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.075, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'PoisonResist',
@@ -13161,18 +9233,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 3,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.025,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 3, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.025, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -13205,22 +9267,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 32,
-          },
-          {
-            id: 'Iron',
-            amount: 32,
-          },
-          {
-            id: 'Luminite',
-            amount: 1,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 15,
-          },
+          { id: 'Ore', amount: 32 },
+          { id: 'Iron', amount: 32 },
+          { id: 'Luminite', amount: 1 },
+          { id: 'EssenceSpicy', amount: 15 },
         ],
         yields: 'RazorRingUltimate',
       },
@@ -13236,11 +9286,7 @@ export const items: Record<string, Item> = {
   RazorRingUltimate: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'MagicKnifeOnCrit',
-      },
-    ],
+    abilities: [{ id: 'MagicKnifeOnCrit' }],
     tags: ['equipment'],
     statModifiers: [
       {
@@ -13268,12 +9314,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.015,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.015, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -13281,18 +9322,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 20,
-          },
-          {
-            id: 'Ore',
-            amount: 15,
-          },
-          {
-            id: 'EssenceFresh',
-            amount: 8,
-          },
+          { id: 'Stone', amount: 20 },
+          { id: 'Ore', amount: 15 },
+          { id: 'EssenceFresh', amount: 8 },
         ],
         yields: 'RingOfRepair2',
       },
@@ -13311,12 +9343,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -13324,18 +9351,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 25,
-          },
-          {
-            id: 'Ore',
-            amount: 20,
-          },
-          {
-            id: 'EssenceFresh',
-            amount: 12,
-          },
+          { id: 'Stone', amount: 25 },
+          { id: 'Ore', amount: 20 },
+          { id: 'EssenceFresh', amount: 12 },
         ],
         yields: 'RingOfRepairUltimate',
       },
@@ -13351,19 +9369,10 @@ export const items: Record<string, Item> = {
   RingOfRepairUltimate: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'HealOnCritAbility',
-      },
-    ],
+    abilities: [{ id: 'HealOnCritAbility' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.025,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.025, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -13380,19 +9389,10 @@ export const items: Record<string, Item> = {
   RubyClawedRing: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'MagicKnifeOnRage',
-      },
-    ],
+    abilities: [{ id: 'MagicKnifeOnRage' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.035,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.035, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'FireResist',
@@ -13415,19 +9415,10 @@ export const items: Record<string, Item> = {
   RubyClawedRingEX: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'MagicKnifeOnRage',
-      },
-    ],
+    abilities: [{ id: 'MagicKnifeOnRage' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.05,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.05, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'FireResist',
@@ -13450,25 +9441,11 @@ export const items: Record<string, Item> = {
   ShieldingBand: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'ShieldOnLowHP',
-      },
-    ],
+    abilities: [{ id: 'ShieldOnLowHP' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 12,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 12, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -13483,25 +9460,73 @@ export const items: Record<string, Item> = {
       'Legacy item. A sturdy ring that toughens the wearer and grants a Shield when health is low.',
     id: 'ShieldingBand',
   },
+  ConflagrationRing: {
+    type: 'ItemDefinition',
+    rarity: 'rare',
+    abilities: [],
+    tags: ['equipment'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Crit', value: 0.045, modifierType: 'add' },
+    ],
+    equipSlots: ['Ring'],
+    isStackable: false,
+    amount: 1,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Wood', amount: 140 },
+          { id: 'EssenceDecadent', amount: 45 },
+          { id: 'EssenceSpicy', amount: 4 },
+          { id: 'Luminite', amount: 4 },
+        ],
+        yields: 'ConflagrationRing2',
+      },
+    ],
+    retainOnUpgrade: false,
+    requiredLevel: 20,
+    sellPrice: 70,
+    name: 'Conflagration Ring Lvl 1',
+    assetName: 'InfernoRing',
+    description: 'A powerful ring with an unlockable Ability.',
+    id: 'ConflagrationRing',
+  },
+  ConflagrationRing2: {
+    type: 'ItemDefinition',
+    rarity: 'rare',
+    abilities: [],
+    tags: ['equipment'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Crit', value: 0.07, modifierType: 'add' },
+    ],
+    equipSlots: ['Ring'],
+    isStackable: false,
+    amount: 1,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Wood', amount: 650 },
+          { id: 'EssenceDecadent', amount: 32 },
+          { id: 'EssenceSpicy', amount: 15 },
+          { id: 'Luminite', amount: 15 },
+        ],
+        yields: 'ConflagrationRingUltimate',
+      },
+    ],
+    retainOnUpgrade: false,
+    requiredLevel: 29,
+    sellPrice: 150,
+    name: 'Conflagration Ring Lvl 2',
+    assetName: 'InfernoRing',
+    description: 'A powerful ring with an unlockable Ability.',
+    id: 'ConflagrationRing2',
+  },
   ConflagrationRingUltimate: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'RageOnFirstTurn',
-        params: {
-          rageAmount: 30,
-        },
-      },
-    ],
+    abilities: [{ id: 'RageOnFirstTurn', params: { rageAmount: 30 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.09,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.09, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -13519,28 +9544,12 @@ export const items: Record<string, Item> = {
     type: 'ItemDefinition',
     rarity: 'uncommon',
     abilities: [
-      {
-        id: 'ShieldOnLowHP',
-        params: {
-          threshold: 0.2,
-          shieldAmount: 0.15,
-        },
-      },
+      { id: 'ShieldOnLowHP', params: { threshold: 0.2, shieldAmount: 0.15 } },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 12,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 12, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -13561,20 +9570,12 @@ export const items: Record<string, Item> = {
     abilities: [
       {
         id: 'VulnerableOnLightning',
-        params: {
-          applyChance: 0.1,
-          turnDuration: 2,
-        },
+        params: { applyChance: 0.1, turnDuration: 2 },
       },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.03, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'LightningResist',
@@ -13588,18 +9589,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 590,
-          },
-          {
-            id: 'EssenceDecadent',
-            amount: 21,
-          },
-          {
-            id: 'Luminite',
-            amount: 18,
-          },
+          { id: 'Iron', amount: 590 },
+          { id: 'EssenceDecadent', amount: 21 },
+          { id: 'Luminite', amount: 18 },
         ],
         yields: 'ShockwaveSolitaire2',
       },
@@ -13619,20 +9611,12 @@ export const items: Record<string, Item> = {
     abilities: [
       {
         id: 'VulnerableOnLightning',
-        params: {
-          applyChance: 0.12,
-          turnDuration: 2,
-        },
+        params: { applyChance: 0.12, turnDuration: 2 },
       },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.035,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.035, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'LightningResist',
@@ -13646,18 +9630,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 820,
-          },
-          {
-            id: 'EssenceDecadent',
-            amount: 26,
-          },
-          {
-            id: 'Luminite',
-            amount: 32,
-          },
+          { id: 'Iron', amount: 820 },
+          { id: 'EssenceDecadent', amount: 26 },
+          { id: 'Luminite', amount: 32 },
         ],
         yields: 'ShockwaveSolitaire3',
       },
@@ -13677,20 +9652,12 @@ export const items: Record<string, Item> = {
     abilities: [
       {
         id: 'VulnerableOnLightning',
-        params: {
-          applyChance: 0.15,
-          turnDuration: 2,
-        },
+        params: { applyChance: 0.15, turnDuration: 2 },
       },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.04,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.04, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'LightningResist',
@@ -13704,18 +9671,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 810,
-          },
-          {
-            id: 'EssenceDecadent',
-            amount: 32,
-          },
-          {
-            id: 'Luminite',
-            amount: 32,
-          },
+          { id: 'Iron', amount: 810 },
+          { id: 'EssenceDecadent', amount: 32 },
+          { id: 'Luminite', amount: 32 },
         ],
         yields: 'ShockwaveSolitaire4',
       },
@@ -13735,20 +9693,12 @@ export const items: Record<string, Item> = {
     abilities: [
       {
         id: 'VulnerableOnLightning',
-        params: {
-          applyChance: 0.2,
-          turnDuration: 2,
-        },
+        params: { applyChance: 0.2, turnDuration: 2 },
       },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.045,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.045, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'LightningResist',
@@ -13762,18 +9712,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 1010,
-          },
-          {
-            id: 'EssenceDecadent',
-            amount: 41,
-          },
-          {
-            id: 'Luminite',
-            amount: 38,
-          },
+          { id: 'Iron', amount: 1010 },
+          { id: 'EssenceDecadent', amount: 41 },
+          { id: 'Luminite', amount: 38 },
         ],
         yields: 'ShockwaveSolitaireUltimate',
       },
@@ -13793,20 +9734,12 @@ export const items: Record<string, Item> = {
     abilities: [
       {
         id: 'VulnerableOnLightning',
-        params: {
-          applyChance: 0.25,
-          turnDuration: 2,
-        },
+        params: { applyChance: 0.25, turnDuration: 2 },
       },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.05,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.05, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'LightningResist',
@@ -13833,12 +9766,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -13846,18 +9774,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 420,
-          },
-          {
-            id: 'Luminite',
-            amount: 15,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 55,
-          },
+          { id: 'Iron', amount: 420 },
+          { id: 'Luminite', amount: 15 },
+          { id: 'EssenceSpicy', amount: 55 },
         ],
         yields: 'SmitingRingUltimate',
       },
@@ -13873,19 +9792,10 @@ export const items: Record<string, Item> = {
   SmitingRingUltimate: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'LightningOnAttack',
-      },
-    ],
+    abilities: [{ id: 'LightningOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -13905,24 +9815,9 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 100,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 25,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 100, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 25, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.03, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -13930,22 +9825,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 950,
-          },
-          {
-            id: 'EssenceDecadent',
-            amount: 67,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 20,
-          },
-          {
-            id: 'Luminite',
-            amount: 24,
-          },
+          { id: 'Iron', amount: 950 },
+          { id: 'EssenceDecadent', amount: 67 },
+          { id: 'EssenceHearty', amount: 20 },
+          { id: 'Luminite', amount: 24 },
         ],
         yields: 'StackedSignet2',
       },
@@ -13964,24 +9847,9 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 125,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 35,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.05,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 125, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 35, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.05, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -13989,18 +9857,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 1750,
-          },
-          {
-            id: 'EssenceDecadent',
-            amount: 85,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 40,
-          },
+          { id: 'Iron', amount: 1750 },
+          { id: 'EssenceDecadent', amount: 85 },
+          { id: 'EssenceHearty', amount: 40 },
         ],
         yields: 'StackedSignetUltimate',
       },
@@ -14016,31 +9875,12 @@ export const items: Record<string, Item> = {
   StackedSignetUltimate: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'AddRageOnHitCount',
-      },
-    ],
+    abilities: [{ id: 'AddRageOnHitCount' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 160,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 45,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.07,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 160, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 45, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.07, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -14060,12 +9900,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.05,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.05, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'LightningResist',
@@ -14079,22 +9914,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 180,
-          },
-          {
-            id: 'EssenceDecadent',
-            amount: 22,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 22,
-          },
-          {
-            id: 'Luminite',
-            amount: 4,
-          },
+          { id: 'Iron', amount: 180 },
+          { id: 'EssenceDecadent', amount: 22 },
+          { id: 'EssenceTangy', amount: 22 },
+          { id: 'Luminite', amount: 4 },
         ],
         yields: 'Stormseeker2',
       },
@@ -14113,12 +9936,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.07,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.07, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'LightningResist',
@@ -14144,12 +9962,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.01,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.01, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -14157,18 +9970,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 8,
-          },
-          {
-            id: 'Ore',
-            amount: 8,
-          },
-          {
-            id: 'EssenceDecadent',
-            amount: 2,
-          },
+          { id: 'Iron', amount: 8 },
+          { id: 'Ore', amount: 8 },
+          { id: 'EssenceDecadent', amount: 2 },
         ],
         yields: 'TarnishedBand2',
       },
@@ -14187,12 +9991,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.015,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.015, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -14200,18 +9999,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 12,
-          },
-          {
-            id: 'Ore',
-            amount: 12,
-          },
-          {
-            id: 'EssenceDecadent',
-            amount: 12,
-          },
+          { id: 'Iron', amount: 12 },
+          { id: 'Ore', amount: 12 },
+          { id: 'EssenceDecadent', amount: 12 },
         ],
         yields: 'TarnishedBand3',
       },
@@ -14230,12 +10020,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.025,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.025, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -14268,18 +10053,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 220,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 12,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 5,
-          },
+          { id: 'Stone', amount: 220 },
+          { id: 'EssenceFluffy', amount: 12 },
+          { id: 'EssenceSpicy', amount: 5 },
         ],
         yields: 'TwilightBand2',
       },
@@ -14311,18 +10087,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 440,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 22,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 12,
-          },
+          { id: 'Stone', amount: 440 },
+          { id: 'EssenceFluffy', amount: 22 },
+          { id: 'EssenceSpicy', amount: 12 },
         ],
         yields: 'TwilightBand3',
       },
@@ -14363,19 +10130,10 @@ export const items: Record<string, Item> = {
   TwinbladeBand: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'EveryOtherTurnDoubleAttack',
-      },
-    ],
+    abilities: [{ id: 'EveryOtherTurnDoubleAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.01,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.01, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -14392,19 +10150,10 @@ export const items: Record<string, Item> = {
   TwinbladeBandEX: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'EveryOtherTurnDoubleAttack',
-      },
-    ],
+    abilities: [{ id: 'EveryOtherTurnDoubleAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.025,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.025, modifierType: 'add' },
     ],
     equipSlots: ['Ring'],
     isStackable: false,
@@ -14421,25 +10170,11 @@ export const items: Record<string, Item> = {
   WatchersSpark: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'LightningOnEnemyDeath',
-      },
-    ],
+    abilities: [{ id: 'LightningOnEnemyDeath' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 40,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.05,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 40, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.05, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'LightningResist',
@@ -14454,7 +10189,7 @@ export const items: Record<string, Item> = {
     retainOnUpgrade: false,
     requiredLevel: 53,
     sellPrice: 125,
-    name: 'Watcher\u2019s Spark',
+    name: 'Watcher’s Spark',
     assetName: 'WatchersSpark',
     description: 'When an enemy falls, smite the next with Lightning.',
     id: 'WatchersSpark',
@@ -14462,25 +10197,11 @@ export const items: Record<string, Item> = {
   WatchersSparkEX: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'LightningOnEnemyDeath',
-      },
-    ],
+    abilities: [{ id: 'LightningOnEnemyDeath' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 80,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.055,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 80, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.055, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'LightningResist',
@@ -14495,7 +10216,7 @@ export const items: Record<string, Item> = {
     retainOnUpgrade: false,
     requiredLevel: 83,
     sellPrice: 275,
-    name: 'Watcher\u2019s Spark EX',
+    name: 'Watcher’s Spark EX',
     assetName: 'WatchersSpark',
     description: 'When an enemy falls, smite the next with Lightning.',
     id: 'WatchersSparkEX',
@@ -14506,12 +10227,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 2,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 2, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -14519,18 +10235,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceFluffy',
-            amount: 6,
-          },
-          {
-            id: 'Ore',
-            amount: 115,
-          },
-          {
-            id: 'EssenceCrunchy',
-            amount: 22,
-          },
+          { id: 'EssenceFluffy', amount: 6 },
+          { id: 'Ore', amount: 115 },
+          { id: 'EssenceCrunchy', amount: 22 },
         ],
         yields: 'AdventurersBlade2',
       },
@@ -14538,12 +10245,10 @@ export const items: Record<string, Item> = {
     retainOnUpgrade: false,
     requiredLevel: 12,
     sellPrice: 50,
-    name: 'Adventurer\u2019s Blade Lvl 1',
+    name: 'Adventurer’s Blade Lvl 1',
     assetName: 'AdventurersBlade',
     description: 'A clean blade that boosts Speed.',
-    damage: {
-      physical: 24,
-    },
+    damage: { physical: 24 },
     id: 'AdventurersBlade',
   },
   AdventurersBlade2: {
@@ -14552,12 +10257,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 3,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 3, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -14565,22 +10265,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 225,
-          },
-          {
-            id: 'EssenceCrunchy',
-            amount: 22,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 8,
-          },
-          {
-            id: 'Luminite',
-            amount: 8,
-          },
+          { id: 'Iron', amount: 225 },
+          { id: 'EssenceCrunchy', amount: 22 },
+          { id: 'EssenceFluffy', amount: 8 },
+          { id: 'Luminite', amount: 8 },
         ],
         yields: 'AdventurersBlade3',
       },
@@ -14588,12 +10276,10 @@ export const items: Record<string, Item> = {
     retainOnUpgrade: false,
     requiredLevel: 17,
     sellPrice: 85,
-    name: 'Adventurer\u2019s Blade Lvl 2',
+    name: 'Adventurer’s Blade Lvl 2',
     assetName: 'AdventurersBlade',
     description: 'A clean blade that boosts Speed.',
-    damage: {
-      physical: 45,
-    },
+    damage: { physical: 45 },
     id: 'AdventurersBlade2',
   },
   AdventurersBlade3: {
@@ -14602,12 +10288,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 4,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 4, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -14616,12 +10297,10 @@ export const items: Record<string, Item> = {
     retainOnUpgrade: false,
     requiredLevel: 23,
     sellPrice: 130,
-    name: 'Adventurer\u2019s Blade Lvl 3',
+    name: 'Adventurer’s Blade Lvl 3',
     assetName: 'AdventurersBlade',
     description: 'A clean blade that boosts Speed.',
-    damage: {
-      physical: 67,
-    },
+    damage: { physical: 67 },
     id: 'AdventurersBlade3',
   },
   AshbornBlade: {
@@ -14643,18 +10322,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 180,
-          },
-          {
-            id: 'Luminite',
-            amount: 4,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 12,
-          },
+          { id: 'Stone', amount: 180 },
+          { id: 'Luminite', amount: 4 },
+          { id: 'EssenceSpicy', amount: 12 },
         ],
         yields: 'AshbornBlade2',
       },
@@ -14666,9 +10336,7 @@ export const items: Record<string, Item> = {
     assetName: 'AshbornBlade',
     description:
       'A blade tempered in volcanic heat, with an unlockable Ability.',
-    damage: {
-      fire: 38,
-    },
+    damage: { fire: 38 },
     id: 'AshbornBlade',
   },
   AshbornBlade2: {
@@ -14690,18 +10358,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 225,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 16,
-          },
-          {
-            id: 'Luminite',
-            amount: 12,
-          },
+          { id: 'Ore', amount: 225 },
+          { id: 'EssenceSpicy', amount: 16 },
+          { id: 'Luminite', amount: 12 },
         ],
         yields: 'AshbornBlade3',
       },
@@ -14713,9 +10372,7 @@ export const items: Record<string, Item> = {
     assetName: 'AshbornBlade',
     description:
       'A blade tempered in volcanic heat, with an unlockable Ability.',
-    damage: {
-      fire: 42,
-    },
+    damage: { fire: 42 },
     id: 'AshbornBlade2',
   },
   AshbornBlade3: {
@@ -14737,18 +10394,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 325,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 22,
-          },
-          {
-            id: 'Luminite',
-            amount: 12,
-          },
+          { id: 'Iron', amount: 325 },
+          { id: 'EssenceSpicy', amount: 22 },
+          { id: 'Luminite', amount: 12 },
         ],
         yields: 'AshbornBlade4',
       },
@@ -14760,9 +10408,7 @@ export const items: Record<string, Item> = {
     assetName: 'AshbornBlade',
     description:
       'A blade tempered in volcanic heat, with an unlockable Ability.',
-    damage: {
-      fire: 48,
-    },
+    damage: { fire: 48 },
     id: 'AshbornBlade3',
   },
   AshbornBlade4: {
@@ -14784,18 +10430,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 600,
-          },
-          {
-            id: 'Luminite',
-            amount: 18,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 35,
-          },
+          { id: 'Stone', amount: 600 },
+          { id: 'Luminite', amount: 18 },
+          { id: 'EssenceSpicy', amount: 35 },
         ],
         yields: 'AshbornBladeUltimate',
       },
@@ -14807,19 +10444,13 @@ export const items: Record<string, Item> = {
     assetName: 'AshbornBlade',
     description:
       'A blade tempered in volcanic heat, with an unlockable Ability.',
-    damage: {
-      fire: 54,
-    },
+    damage: { fire: 54 },
     id: 'AshbornBlade4',
   },
   AshbornBladeUltimate: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'FireKnifeOnAttack',
-      },
-    ],
+    abilities: [{ id: 'FireKnifeOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
       {
@@ -14840,9 +10471,7 @@ export const items: Record<string, Item> = {
     assetName: 'AshbornBlade',
     description:
       'A blade tempered in volcanic heat, with an unlockable Ability.',
-    damage: {
-      fire: 58,
-    },
+    damage: { fire: 58 },
     id: 'AshbornBladeUltimate',
   },
   BatteredBroadsword: {
@@ -14851,12 +10480,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 35,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 35, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -14868,9 +10492,7 @@ export const items: Record<string, Item> = {
     name: 'Battered Broadsword',
     assetName: 'BatteredBroadsword',
     description: 'A hefty broadsword for offense and defense.',
-    damage: {
-      physical: 39,
-    },
+    damage: { physical: 39 },
     id: 'BatteredBroadsword',
   },
   BattlereadyBlade: {
@@ -14879,12 +10501,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 36,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 36, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -14892,20 +10509,11 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 15,
-          },
-          {
-            id: 'Stone',
-            amount: 15,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 6,
-          },
+          { id: 'Ore', amount: 15 },
+          { id: 'Stone', amount: 15 },
+          { id: 'EssenceSpicy', amount: 6 },
         ],
-        yields: 'VanguardBladeUltimate',
+        yields: 'BattleReadyBladeUltimate',
       },
     ],
     retainOnUpgrade: false,
@@ -14914,28 +10522,17 @@ export const items: Record<string, Item> = {
     name: 'Battleready Blade Lvl 1',
     assetName: 'BattlereadyBlade',
     description:
-      'A reliable weapon that gives the wielder HP. Has an unlockable Ability.',
-    damage: {
-      physical: 28,
-    },
+      'Legacy item. A reliable weapon that gives the wielder HP. Has an unlockable Ability.',
+    damage: { physical: 28 },
     id: 'BattlereadyBlade',
   },
   BattleReadyBladeUltimate: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'HealOnFirstTurn',
-      },
-    ],
+    abilities: [{ id: 'HealOnFirstTurn' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 45,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 45, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -14948,9 +10545,7 @@ export const items: Record<string, Item> = {
     assetName: 'BattlereadyBlade',
     description:
       'Legacy item. A reliable weapon that gives the wielder HP and heals on first turn.',
-    damage: {
-      physical: 40,
-    },
+    damage: { physical: 40 },
     id: 'BattleReadyBladeUltimate',
   },
   BerserkerAxe: {
@@ -14972,22 +10567,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 220,
-          },
-          {
-            id: 'Luminite',
-            amount: 15,
-          },
-          {
-            id: 'Stone',
-            amount: 220,
-          },
-          {
-            id: 'EssenceChewy',
-            amount: 38,
-          },
+          { id: 'Ore', amount: 220 },
+          { id: 'Luminite', amount: 15 },
+          { id: 'Stone', amount: 220 },
+          { id: 'EssenceChewy', amount: 38 },
         ],
         yields: 'BerserkerAxe2',
       },
@@ -14998,9 +10581,7 @@ export const items: Record<string, Item> = {
     name: 'Berserker Axe Lvl 1',
     assetName: 'BerserkerAxe',
     description: 'A crushing axe with an unlockable Ability.',
-    damage: {
-      physical: 78,
-    },
+    damage: { physical: 78 },
     id: 'BerserkerAxe',
   },
   BerserkerAxe2: {
@@ -15022,22 +10603,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 600,
-          },
-          {
-            id: 'Luminite',
-            amount: 30,
-          },
-          {
-            id: 'Stone',
-            amount: 700,
-          },
-          {
-            id: 'EssenceChewy',
-            amount: 75,
-          },
+          { id: 'Ore', amount: 600 },
+          { id: 'Luminite', amount: 30 },
+          { id: 'Stone', amount: 700 },
+          { id: 'EssenceChewy', amount: 75 },
         ],
         yields: 'BerserkerAxeUltimate',
       },
@@ -15048,19 +10617,13 @@ export const items: Record<string, Item> = {
     name: 'Berserker Axe Lvl 2',
     assetName: 'BerserkerAxe',
     description: 'A crushing axe with an unlockable Ability.',
-    damage: {
-      physical: 87,
-    },
+    damage: { physical: 87 },
     id: 'BerserkerAxe2',
   },
   BerserkerAxeUltimate: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'BoostAttackOnHighHP',
-      },
-    ],
+    abilities: [{ id: 'BoostAttackOnHighHP' }],
     tags: ['equipment'],
     statModifiers: [
       {
@@ -15081,9 +10644,7 @@ export const items: Record<string, Item> = {
     assetName: 'BerserkerAxe',
     description:
       'Crush your enemies with boosted ATK while your health is full.',
-    damage: {
-      physical: 111,
-    },
+    damage: { physical: 111 },
     id: 'BerserkerAxeUltimate',
   },
   BlazingShortsword: {
@@ -15109,9 +10670,7 @@ export const items: Record<string, Item> = {
     name: 'Blazing Shortsword',
     assetName: 'BlazingShortsword',
     description: 'A fiery shortsword for hacking down enemies.',
-    damage: {
-      fire: 15,
-    },
+    damage: { fire: 15 },
     id: 'BlazingShortsword',
   },
   Bloodseeker: {
@@ -15120,18 +10679,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: -120,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.025,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: -120, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.025, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -15139,22 +10688,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceDecadent',
-            amount: 70,
-          },
-          {
-            id: 'Ore',
-            amount: 800,
-          },
-          {
-            id: 'Luminite',
-            amount: 36,
-          },
-          {
-            id: 'Wood',
-            amount: 700,
-          },
+          { id: 'EssenceDecadent', amount: 70 },
+          { id: 'Ore', amount: 800 },
+          { id: 'Luminite', amount: 36 },
+          { id: 'Wood', amount: 700 },
         ],
         yields: 'BloodseekerUltimate',
       },
@@ -15166,33 +10703,17 @@ export const items: Record<string, Item> = {
     assetName: 'Bloodseeker',
     description:
       'A dark blade that yearns for blood, and hides an unlockable Ability.',
-    damage: {
-      shadow: 25,
-    },
+    damage: { shadow: 25 },
     id: 'Bloodseeker',
   },
   BloodseekerUltimate: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'LowHpCritBoostAbility',
-      },
-    ],
+    abilities: [{ id: 'LowHpCritBoostAbility' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: -180,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.035,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: -180, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.035, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -15205,9 +10726,7 @@ export const items: Record<string, Item> = {
     assetName: 'Bloodseeker',
     description:
       'A dark blade that yearns for blood. Boosts Crit when the wielder is hurt.',
-    damage: {
-      shadow: 32,
-    },
+    damage: { shadow: 32 },
     id: 'BloodseekerUltimate',
   },
   BluntBludgeon: {
@@ -15216,12 +10735,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 12,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 12, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -15229,14 +10743,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 20,
-          },
-          {
-            id: 'Stone',
-            amount: 12,
-          },
+          { id: 'Ore', amount: 20 },
+          { id: 'Stone', amount: 12 },
         ],
         yields: 'BluntBludgeon2',
       },
@@ -15247,9 +10755,7 @@ export const items: Record<string, Item> = {
     name: 'Blunt Bludgeon Lvl 1',
     assetName: 'BluntBludgeon',
     description: 'A basic bludgeon that boosts HP.',
-    damage: {
-      physical: 25,
-    },
+    damage: { physical: 25 },
     id: 'BluntBludgeon',
   },
   BluntBludgeon2: {
@@ -15258,12 +10764,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 22,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 22, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -15271,14 +10772,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 50,
-          },
-          {
-            id: 'Stone',
-            amount: 50,
-          },
+          { id: 'Ore', amount: 50 },
+          { id: 'Stone', amount: 50 },
         ],
         yields: 'BluntBludgeon3',
       },
@@ -15289,9 +10784,7 @@ export const items: Record<string, Item> = {
     name: 'Blunt Bludgeon Lvl 2',
     assetName: 'BluntBludgeon',
     description: 'A basic bludgeon that boosts HP.',
-    damage: {
-      physical: 38,
-    },
+    damage: { physical: 38 },
     id: 'BluntBludgeon2',
   },
   BluntBludgeon3: {
@@ -15300,12 +10793,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 40,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 40, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -15317,9 +10805,7 @@ export const items: Record<string, Item> = {
     name: 'Blunt Bludgeon Lvl 3',
     assetName: 'BluntBludgeon',
     description: 'A basic bludgeon that boosts HP.',
-    damage: {
-      physical: 58,
-    },
+    damage: { physical: 58 },
     id: 'BluntBludgeon3',
   },
   BrutalBlade: {
@@ -15334,14 +10820,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 25,
-          },
-          {
-            id: 'Stone',
-            amount: 15,
-          },
+          { id: 'Ore', amount: 25 },
+          { id: 'Stone', amount: 15 },
         ],
         yields: 'BrutalBlade2',
       },
@@ -15352,9 +10832,7 @@ export const items: Record<string, Item> = {
     name: 'Brutal Blade Lvl 1',
     assetName: 'BrutalBlade',
     description: 'A merciless blade with an unlockable Ability.',
-    damage: {
-      physical: 37,
-    },
+    damage: { physical: 37 },
     id: 'BrutalBlade',
   },
   BrutalBlade2: {
@@ -15369,14 +10847,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 130,
-          },
-          {
-            id: 'Stone',
-            amount: 130,
-          },
+          { id: 'Iron', amount: 130 },
+          { id: 'Stone', amount: 130 },
         ],
         yields: 'BrutalBladeUltimate',
       },
@@ -15387,19 +10859,13 @@ export const items: Record<string, Item> = {
     name: 'Brutal Blade Lvl 2',
     assetName: 'BrutalBlade',
     description: 'A merciless blade with an unlockable Ability.',
-    damage: {
-      physical: 49,
-    },
+    damage: { physical: 49 },
     id: 'BrutalBlade2',
   },
   BrutalBladeUltimate: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'MagicKnifeOnCrit',
-      },
-    ],
+    abilities: [{ id: 'MagicKnifeOnCrit' }],
     tags: ['equipment'],
     statModifiers: [],
     equipSlots: ['Weapon'],
@@ -15412,9 +10878,7 @@ export const items: Record<string, Item> = {
     name: 'Brutal Blade Ultimate',
     assetName: 'BrutalBlade',
     description: 'A merciless blade that summons a Magic Knife on Crit.',
-    damage: {
-      physical: 72,
-    },
+    damage: { physical: 72 },
     id: 'BrutalBladeUltimate',
   },
   BuccaneersFriend: {
@@ -15423,18 +10887,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.03,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.03, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -15442,22 +10896,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 700,
-          },
-          {
-            id: 'Ore',
-            amount: 300,
-          },
-          {
-            id: 'Luminite',
-            amount: 24,
-          },
-          {
-            id: 'EssenceChewy',
-            amount: 19,
-          },
+          { id: 'Stone', amount: 700 },
+          { id: 'Ore', amount: 300 },
+          { id: 'Luminite', amount: 24 },
+          { id: 'EssenceChewy', amount: 19 },
         ],
         yields: 'BuccaneersFriend2',
       },
@@ -15465,13 +10907,11 @@ export const items: Record<string, Item> = {
     retainOnUpgrade: false,
     requiredLevel: 81,
     sellPrice: 175,
-    name: 'Buccaneer\u2019s Friend Lvl 1',
+    name: 'Buccaneer’s Friend Lvl 1',
     assetName: 'BuccaneersFriend',
     description:
       'A swashbuckling blade that infuses its bearer with improved Crit and Dodge.',
-    damage: {
-      physical: 100,
-    },
+    damage: { physical: 100 },
     id: 'BuccaneersFriend',
   },
   BuccaneersFriend2: {
@@ -15486,12 +10926,7 @@ export const items: Record<string, Item> = {
         value: 0.0325,
         modifierType: 'add',
       },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -15499,22 +10934,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 540,
-          },
-          {
-            id: 'Ore',
-            amount: 330,
-          },
-          {
-            id: 'Luminite',
-            amount: 24,
-          },
-          {
-            id: 'EssenceChewy',
-            amount: 32,
-          },
+          { id: 'Stone', amount: 540 },
+          { id: 'Ore', amount: 330 },
+          { id: 'Luminite', amount: 24 },
+          { id: 'EssenceChewy', amount: 32 },
         ],
         yields: 'BuccaneersFriend3',
       },
@@ -15522,13 +10945,11 @@ export const items: Record<string, Item> = {
     retainOnUpgrade: false,
     requiredLevel: 85,
     sellPrice: 225,
-    name: 'Buccaneer\u2019s Friend Lvl 2',
+    name: 'Buccaneer’s Friend Lvl 2',
     assetName: 'BuccaneersFriend',
     description:
       'A swashbuckling blade that infuses its bearer with improved Crit and Dodge.',
-    damage: {
-      physical: 109,
-    },
+    damage: { physical: 109 },
     id: 'BuccaneersFriend2',
   },
   BuccaneersFriend3: {
@@ -15537,18 +10958,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.035,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.035, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -15557,23 +10968,17 @@ export const items: Record<string, Item> = {
     retainOnUpgrade: false,
     requiredLevel: 90,
     sellPrice: 260,
-    name: 'Buccaneer\u2019s Friend Lvl 3',
+    name: 'Buccaneer’s Friend Lvl 3',
     assetName: 'BuccaneersFriend',
     description:
       'A swashbuckling blade that infuses its bearer with improved Crit and Dodge.',
-    damage: {
-      physical: 121,
-    },
+    damage: { physical: 121 },
     id: 'BuccaneersFriend3',
   },
   ChargedFalchion: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'LightningOnTurnStart',
-      },
-    ],
+    abilities: [{ id: 'LightningOnTurnStart' }],
     tags: ['equipment'],
     statModifiers: [],
     equipSlots: ['Weapon'],
@@ -15586,9 +10991,7 @@ export const items: Record<string, Item> = {
     name: 'Charged Falchion',
     assetName: 'ChargedFalchion',
     description: 'A quick blade that smites your foes every turn.',
-    damage: {
-      physical: 8,
-    },
+    damage: { physical: 8 },
     id: 'ChargedFalchion',
   },
   ChippedShortsword: {
@@ -15607,30 +11010,19 @@ export const items: Record<string, Item> = {
     name: 'Chipped Shortsword',
     assetName: 'ChippedShortsword',
     description: 'An old shortsword for hacking down enemies.',
-    damage: {
-      physical: 16,
-    },
+    damage: { physical: 16 },
     id: 'ChippedShortsword',
   },
   CursedNaginata: {
     type: 'ItemDefinition',
     rarity: 'legendary',
     abilities: [
-      {
-        id: 'EveryOtherTurnDoubleAttack',
-      },
-      {
-        id: 'HealEveryHitCount',
-      },
+      { id: 'EveryOtherTurnDoubleAttack' },
+      { id: 'HealEveryHitCount' },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: -400,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: -400, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -15643,9 +11035,7 @@ export const items: Record<string, Item> = {
     assetName: 'CursedNaginata',
     description:
       'A blade that reduces health, but grants additional attacks, and frequent healing.',
-    damage: {
-      physical: 85,
-    },
+    damage: { physical: 85 },
     id: 'CursedNaginata',
   },
   DarkShortsword: {
@@ -15671,9 +11061,7 @@ export const items: Record<string, Item> = {
     name: 'Dark Shortsword',
     assetName: 'DarkShortsword',
     description: 'A shadowy shortsword for hacking down enemies.',
-    damage: {
-      shadow: 15,
-    },
+    damage: { shadow: 15 },
     id: 'DarkShortsword',
   },
   DarkWard: {
@@ -15682,12 +11070,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 15,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 15, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Dodge',
@@ -15707,22 +11090,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 65,
-          },
-          {
-            id: 'Luminite',
-            amount: 3,
-          },
-          {
-            id: 'Ore',
-            amount: 65,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 3,
-          },
+          { id: 'Wood', amount: 65 },
+          { id: 'Luminite', amount: 3 },
+          { id: 'Ore', amount: 65 },
+          { id: 'EssenceSpicy', amount: 3 },
         ],
         yields: 'DarkWard2',
       },
@@ -15734,9 +11105,7 @@ export const items: Record<string, Item> = {
     assetName: 'DarkWard',
     description:
       'A fabled sword which protects the wielder from shadow and physical damage.',
-    damage: {
-      physical: 56,
-    },
+    damage: { physical: 56 },
     id: 'DarkWard',
   },
   DarkWard2: {
@@ -15745,12 +11114,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 22,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 22, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Dodge',
@@ -15770,22 +11134,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 85,
-          },
-          {
-            id: 'Ore',
-            amount: 85,
-          },
-          {
-            id: 'Luminite',
-            amount: 3,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 5,
-          },
+          { id: 'Wood', amount: 85 },
+          { id: 'Ore', amount: 85 },
+          { id: 'Luminite', amount: 3 },
+          { id: 'EssenceSpicy', amount: 5 },
         ],
         yields: 'DarkWard3',
       },
@@ -15797,9 +11149,7 @@ export const items: Record<string, Item> = {
     assetName: 'DarkWard',
     description:
       'A fabled sword which protects the wielder from shadow and physical damage.',
-    damage: {
-      physical: 62,
-    },
+    damage: { physical: 62 },
     id: 'DarkWard2',
   },
   DarkWard3: {
@@ -15808,12 +11158,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 29,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 29, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Dodge',
@@ -15838,9 +11183,7 @@ export const items: Record<string, Item> = {
     assetName: 'DarkWard',
     description:
       'A fabled sword which protects the wielder from shadow and physical damage.',
-    damage: {
-      physical: 69,
-    },
+    damage: { physical: 69 },
     id: 'DarkWard3',
   },
   DoublePoleAxe: {
@@ -15855,22 +11198,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 450,
-          },
-          {
-            id: 'Luminite',
-            amount: 24,
-          },
-          {
-            id: 'Wood',
-            amount: 450,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 15,
-          },
+          { id: 'Ore', amount: 450 },
+          { id: 'Luminite', amount: 24 },
+          { id: 'Wood', amount: 450 },
+          { id: 'EssenceTangy', amount: 15 },
         ],
         yields: 'DoublePoleAxe2',
       },
@@ -15881,9 +11212,7 @@ export const items: Record<string, Item> = {
     name: 'Double Pole Axe Lvl 1',
     assetName: 'DoublePoleAxe',
     description: 'A two-headed axe with an unlockable Ability.',
-    damage: {
-      physical: 44,
-    },
+    damage: { physical: 44 },
     id: 'DoublePoleAxe',
   },
   DoublePoleAxe2: {
@@ -15898,22 +11227,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 900,
-          },
-          {
-            id: 'Luminite',
-            amount: 42,
-          },
-          {
-            id: 'Wood',
-            amount: 825,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 25,
-          },
+          { id: 'Ore', amount: 900 },
+          { id: 'Luminite', amount: 42 },
+          { id: 'Wood', amount: 825 },
+          { id: 'EssenceTangy', amount: 25 },
         ],
         yields: 'DoublePoleAxeUltimate',
       },
@@ -15924,19 +11241,13 @@ export const items: Record<string, Item> = {
     name: 'Double Pole Axe Lvl 2',
     assetName: 'DoublePoleAxe',
     description: 'A two-headed axe with an unlockable Ability.',
-    damage: {
-      physical: 60,
-    },
+    damage: { physical: 60 },
     id: 'DoublePoleAxe2',
   },
   DoublePoleAxeUltimate: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'EveryOtherTurnDoubleAttack',
-      },
-    ],
+    abilities: [{ id: 'EveryOtherTurnDoubleAttack' }],
     tags: ['equipment'],
     statModifiers: [],
     equipSlots: ['Weapon'],
@@ -15949,27 +11260,16 @@ export const items: Record<string, Item> = {
     name: 'Double Pole Axe Ultimate',
     assetName: 'DoublePoleAxe',
     description: 'A two-headed axe that hits twice every second turn.',
-    damage: {
-      physical: 78,
-    },
+    damage: { physical: 78 },
     id: 'DoublePoleAxeUltimate',
   },
   DrainingEdge: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'LifeStealOnAttack',
-      },
-    ],
+    abilities: [{ id: 'LifeStealOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 2,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 2, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -15981,27 +11281,16 @@ export const items: Record<string, Item> = {
     name: 'Draining Edge',
     assetName: 'DrainingEdge',
     description: 'A swift blade that grants Lifesteal On Attack.',
-    damage: {
-      physical: 100,
-    },
+    damage: { physical: 100 },
     id: 'DrainingEdge',
   },
   DualDicer: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'KnifeOnAttack',
-      },
-    ],
+    abilities: [{ id: 'KnifeOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.015,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.015, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -16014,9 +11303,7 @@ export const items: Record<string, Item> = {
     assetName: 'DualDicer',
     description:
       'Every attack with this enchanted blade summons an additional Knife attack.',
-    damage: {
-      physical: 71,
-    },
+    damage: { physical: 71 },
     id: 'DualDicer',
   },
   Duskbringer: {
@@ -16031,22 +11318,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 750,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 27,
-          },
-          {
-            id: 'EssenceCrunchy',
-            amount: 66,
-          },
-          {
-            id: 'Luminite',
-            amount: 15,
-          },
+          { id: 'Ore', amount: 750 },
+          { id: 'EssenceSpicy', amount: 27 },
+          { id: 'EssenceCrunchy', amount: 66 },
+          { id: 'Luminite', amount: 15 },
         ],
         yields: 'Duskbringer2',
       },
@@ -16057,9 +11332,7 @@ export const items: Record<string, Item> = {
     name: 'Duskbringer Lvl 1',
     assetName: 'Duskbringer',
     description: 'A mysterious blade which deals Shadow damage.',
-    damage: {
-      shadow: 31,
-    },
+    damage: { shadow: 31 },
     id: 'Duskbringer',
   },
   Duskbringer2: {
@@ -16074,22 +11347,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 1600,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 48,
-          },
-          {
-            id: 'Luminite',
-            amount: 24,
-          },
-          {
-            id: 'EssenceCrunchy',
-            amount: 88,
-          },
+          { id: 'Ore', amount: 1600 },
+          { id: 'EssenceSpicy', amount: 48 },
+          { id: 'Luminite', amount: 24 },
+          { id: 'EssenceCrunchy', amount: 88 },
         ],
         yields: 'Duskbringer3',
       },
@@ -16100,9 +11361,7 @@ export const items: Record<string, Item> = {
     name: 'Duskbringer Lvl 2',
     assetName: 'Duskbringer',
     description: 'A mysterious blade which deals Shadow damage.',
-    damage: {
-      shadow: 36,
-    },
+    damage: { shadow: 36 },
     id: 'Duskbringer2',
   },
   Duskbringer3: {
@@ -16121,9 +11380,7 @@ export const items: Record<string, Item> = {
     name: 'Duskbringer Lvl 3',
     assetName: 'Duskbringer',
     description: 'A mysterious blade which deals Shadow Damage.',
-    damage: {
-      shadow: 44,
-    },
+    damage: { shadow: 44 },
     id: 'Duskbringer3',
   },
   ElectricShortsword: {
@@ -16149,19 +11406,13 @@ export const items: Record<string, Item> = {
     name: 'Electric Shortsword',
     assetName: 'ElectricShortsword',
     description: 'An electrified shortsword for hacking down enemies.',
-    damage: {
-      lightning: 15,
-    },
+    damage: { lightning: 15 },
     id: 'ElectricShortsword',
   },
   EternityMace: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'LifeStealOnAttack',
-      },
-    ],
+    abilities: [{ id: 'LifeStealOnAttack' }],
     tags: ['equipment'],
     statModifiers: [],
     equipSlots: ['Weapon'],
@@ -16170,22 +11421,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 1600,
-          },
-          {
-            id: 'Luminite',
-            amount: 30,
-          },
-          {
-            id: 'Wood',
-            amount: 1600,
-          },
-          {
-            id: 'EssenceFresh',
-            amount: 66,
-          },
+          { id: 'Ore', amount: 1600 },
+          { id: 'Luminite', amount: 30 },
+          { id: 'Wood', amount: 1600 },
+          { id: 'EssenceFresh', amount: 66 },
         ],
         yields: 'EternityMace2',
       },
@@ -16196,19 +11435,13 @@ export const items: Record<string, Item> = {
     name: 'Eternity Mace Lvl 1',
     assetName: 'EternityMace',
     description: 'Heal for a small amount of damage dealt every attack.',
-    damage: {
-      physical: 64,
-    },
+    damage: { physical: 64 },
     id: 'EternityMace',
   },
   EternityMace2: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'LifeStealOnAttack',
-      },
-    ],
+    abilities: [{ id: 'LifeStealOnAttack' }],
     tags: ['equipment'],
     statModifiers: [],
     equipSlots: ['Weapon'],
@@ -16217,22 +11450,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 1860,
-          },
-          {
-            id: 'Luminite',
-            amount: 42,
-          },
-          {
-            id: 'Wood',
-            amount: 1960,
-          },
-          {
-            id: 'EssenceFresh',
-            amount: 84,
-          },
+          { id: 'Ore', amount: 1860 },
+          { id: 'Luminite', amount: 42 },
+          { id: 'Wood', amount: 1960 },
+          { id: 'EssenceFresh', amount: 84 },
         ],
         yields: 'EternityMace3',
       },
@@ -16243,19 +11464,13 @@ export const items: Record<string, Item> = {
     name: 'Eternity Mace Lvl 2',
     assetName: 'EternityMace',
     description: 'Heal for a small amount of damage dealt every attack.',
-    damage: {
-      physical: 88,
-    },
+    damage: { physical: 88 },
     id: 'EternityMace2',
   },
   EternityMace3: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'LifeStealOnAttack',
-      },
-    ],
+    abilities: [{ id: 'LifeStealOnAttack' }],
     tags: ['equipment'],
     statModifiers: [],
     equipSlots: ['Weapon'],
@@ -16268,27 +11483,16 @@ export const items: Record<string, Item> = {
     name: 'Eternity Mace Lvl 3',
     assetName: 'EternityMace',
     description: 'Heal for a small amount of damage dealt every attack.',
-    damage: {
-      physical: 123,
-    },
+    damage: { physical: 123 },
     id: 'EternityMace3',
   },
   Fangblade: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'HealOnCritAbility',
-      },
-    ],
+    abilities: [{ id: 'HealOnCritAbility' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 60,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 60, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -16301,30 +11505,16 @@ export const items: Record<string, Item> = {
     assetName: 'A27Fangblade',
     description:
       'A machine-tooled blade that heals when making precise strikes.',
-    damage: {
-      physical: 93,
-    },
+    damage: { physical: 93 },
     id: 'Fangblade',
   },
   FangbladeEX: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'HealOnCritAbility',
-      },
-      {
-        id: 'LowHpCritBoostAbility',
-      },
-    ],
+    abilities: [{ id: 'HealOnCritAbility' }, { id: 'LowHpCritBoostAbility' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 110,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 110, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -16337,19 +11527,13 @@ export const items: Record<string, Item> = {
     assetName: 'A27Fangblade',
     description:
       'A machine-tooled blade that heals when making precise strikes.',
-    damage: {
-      physical: 105,
-    },
+    damage: { physical: 105 },
     id: 'FangbladeEX',
   },
   FatalFarewell: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'LightningOnEnemyDeath',
-      },
-    ],
+    abilities: [{ id: 'LightningOnEnemyDeath' }],
     tags: ['equipment'],
     statModifiers: [],
     equipSlots: ['Weapon'],
@@ -16362,9 +11546,7 @@ export const items: Record<string, Item> = {
     name: 'Fatal Farewell',
     assetName: 'FatalFarewell',
     description: 'A charged blade that summons Lightning when an enemy dies.',
-    damage: {
-      physical: 31,
-    },
+    damage: { physical: 31 },
     id: 'FatalFarewell',
   },
   FlameguardSword: {
@@ -16386,22 +11568,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 325,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 8,
-          },
-          {
-            id: 'Luminite',
-            amount: 12,
-          },
-          {
-            id: 'EssenceChewy',
-            amount: 33,
-          },
+          { id: 'Iron', amount: 325 },
+          { id: 'EssenceTangy', amount: 8 },
+          { id: 'Luminite', amount: 12 },
+          { id: 'EssenceChewy', amount: 33 },
         ],
         yields: 'FlameguardSword2',
       },
@@ -16412,9 +11582,7 @@ export const items: Record<string, Item> = {
     name: 'Flameguard Sword Lvl 1',
     assetName: 'FlameguardSword',
     description: 'A sturdy sword that resists Fire damage.',
-    damage: {
-      physical: 63,
-    },
+    damage: { physical: 63 },
     id: 'FlameguardSword',
   },
   FlameguardSword2: {
@@ -16436,22 +11604,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 750,
-          },
-          {
-            id: 'EssenceChewy',
-            amount: 22,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 16,
-          },
-          {
-            id: 'Luminite',
-            amount: 18,
-          },
+          { id: 'Iron', amount: 750 },
+          { id: 'EssenceChewy', amount: 22 },
+          { id: 'EssenceTangy', amount: 16 },
+          { id: 'Luminite', amount: 18 },
         ],
         yields: 'FlameguardSword3',
       },
@@ -16462,9 +11618,7 @@ export const items: Record<string, Item> = {
     name: 'Flameguard Sword Lvl 2',
     assetName: 'FlameguardSword',
     description: 'A sturdy sword that resists Fire damage.',
-    damage: {
-      physical: 78,
-    },
+    damage: { physical: 78 },
     id: 'FlameguardSword2',
   },
   FlameguardSword3: {
@@ -16490,9 +11644,7 @@ export const items: Record<string, Item> = {
     name: 'Flameguard Sword Lvl 3',
     assetName: 'FlameguardSword',
     description: 'A sturdy sword that resists Fire damage.',
-    damage: {
-      physical: 97,
-    },
+    damage: { physical: 97 },
     id: 'FlameguardSword3',
   },
   Forgefang: {
@@ -16514,18 +11666,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 32,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 5,
-          },
-          {
-            id: 'Luminite',
-            amount: 1,
-          },
+          { id: 'Ore', amount: 32 },
+          { id: 'EssenceSpicy', amount: 5 },
+          { id: 'Luminite', amount: 1 },
         ],
         yields: 'Forgefang2',
       },
@@ -16536,9 +11679,7 @@ export const items: Record<string, Item> = {
     name: 'Forgefang Lvl 1',
     assetName: 'Forgefang',
     description: 'A fire-forged blade that wards against the looming shadows.',
-    damage: {
-      fire: 22,
-    },
+    damage: { fire: 22 },
     id: 'Forgefang',
   },
   Forgefang2: {
@@ -16564,9 +11705,7 @@ export const items: Record<string, Item> = {
     name: 'Forgefang Lvl 2',
     assetName: 'Forgefang',
     description: 'A fire-forged blade that wards against the looming shadows.',
-    damage: {
-      fire: 32,
-    },
+    damage: { fire: 32 },
     id: 'Forgefang2',
   },
   FragmentOfTheGreatSword: {
@@ -16575,24 +11714,9 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 25,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Attack',
-        value: 10,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 5,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 25, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Attack', value: 10, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 5, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -16604,9 +11728,7 @@ export const items: Record<string, Item> = {
     name: 'Fragment Of The Great Sword',
     assetName: 'FragmentOfTheGreatSword',
     description: 'The shattered remnant of a fabled weapon.',
-    damage: {
-      physical: 32,
-    },
+    damage: { physical: 32 },
     id: 'FragmentOfTheGreatSword',
   },
   Frosthack: {
@@ -16615,12 +11737,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 1,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 1, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -16628,14 +11745,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 680,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 45,
-          },
+          { id: 'Stone', amount: 680 },
+          { id: 'EssenceTangy', amount: 45 },
         ],
         yields: 'Frosthack2',
       },
@@ -16646,10 +11757,8 @@ export const items: Record<string, Item> = {
     name: 'Frosthack Lvl 1',
     assetName: 'Frosthack',
     description:
-      'This crude blade\u2019s unlockable Ability summons the power of the glacier from which it was hewn.',
-    damage: {
-      ice: 60,
-    },
+      'This crude blade’s unlockable Ability summons the power of the glacier from which it was hewn.',
+    damage: { ice: 60 },
     id: 'Frosthack',
   },
   Frosthack2: {
@@ -16658,12 +11767,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 1,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 1, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -16671,18 +11775,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 825,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 55,
-          },
-          {
-            id: 'Luminite',
-            amount: 32,
-          },
+          { id: 'Ore', amount: 825 },
+          { id: 'EssenceTangy', amount: 55 },
+          { id: 'Luminite', amount: 32 },
         ],
         yields: 'Frosthack3',
       },
@@ -16693,10 +11788,8 @@ export const items: Record<string, Item> = {
     name: 'Frosthack Lvl 2',
     assetName: 'Frosthack',
     description:
-      'This crude blade\u2019s unlockable Ability summons the power of the glacier from which it was hewn.',
-    damage: {
-      ice: 66,
-    },
+      'This crude blade’s unlockable Ability summons the power of the glacier from which it was hewn.',
+    damage: { ice: 66 },
     id: 'Frosthack2',
   },
   Frosthack3: {
@@ -16705,12 +11798,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 1,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 1, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -16718,18 +11806,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 900,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 64,
-          },
-          {
-            id: 'Luminite',
-            amount: 32,
-          },
+          { id: 'Stone', amount: 900 },
+          { id: 'EssenceTangy', amount: 64 },
+          { id: 'Luminite', amount: 32 },
         ],
         yields: 'Frosthack4',
       },
@@ -16740,10 +11819,8 @@ export const items: Record<string, Item> = {
     name: 'Frosthack Lvl 3',
     assetName: 'Frosthack',
     description:
-      'This crude blade\u2019s unlockable Ability summons the power of the glacier from which it was hewn.',
-    damage: {
-      ice: 72,
-    },
+      'This crude blade’s unlockable Ability summons the power of the glacier from which it was hewn.',
+    damage: { ice: 72 },
     id: 'Frosthack3',
   },
   Frosthack4: {
@@ -16752,12 +11829,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 1,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 1, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -16765,18 +11837,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 1200,
-          },
-          {
-            id: 'Luminite',
-            amount: 35,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 85,
-          },
+          { id: 'Ore', amount: 1200 },
+          { id: 'Luminite', amount: 35 },
+          { id: 'EssenceTangy', amount: 85 },
         ],
         yields: 'FrosthackUltimate',
       },
@@ -16787,28 +11850,17 @@ export const items: Record<string, Item> = {
     name: 'Frosthack Lvl 4',
     assetName: 'Frosthack',
     description:
-      'This crude blade\u2019s unlockable Ability summons the power of the glacier from which it was hewn.',
-    damage: {
-      ice: 76,
-    },
+      'This crude blade’s unlockable Ability summons the power of the glacier from which it was hewn.',
+    damage: { ice: 76 },
     id: 'Frosthack4',
   },
   FrosthackUltimate: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'IceKnifeOnAttack',
-      },
-    ],
+    abilities: [{ id: 'IceKnifeOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 1,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 1, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -16820,10 +11872,8 @@ export const items: Record<string, Item> = {
     name: 'Frosthack Ultimate',
     assetName: 'Frosthack',
     description:
-      'This crude blade\u2019s unlockable Ability summons the power of the glacier from which it was hewn.',
-    damage: {
-      ice: 76,
-    },
+      'This crude blade’s unlockable Ability summons the power of the glacier from which it was hewn.',
+    damage: { ice: 76 },
     id: 'FrosthackUltimate',
   },
   FrozenShortsword: {
@@ -16849,9 +11899,7 @@ export const items: Record<string, Item> = {
     name: 'Frozen Shortsword',
     assetName: 'FrozenShortsword',
     description: 'An icy shortsword for hacking down enemies.',
-    damage: {
-      ice: 15,
-    },
+    damage: { ice: 15 },
     id: 'FrozenShortsword',
   },
   FuryBlade: {
@@ -16866,22 +11914,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 300,
-          },
-          {
-            id: 'Luminite',
-            amount: 18,
-          },
-          {
-            id: 'Stone',
-            amount: 350,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 19,
-          },
+          { id: 'Iron', amount: 300 },
+          { id: 'Luminite', amount: 18 },
+          { id: 'Stone', amount: 350 },
+          { id: 'EssenceTangy', amount: 19 },
         ],
         yields: 'FuryBlade2',
       },
@@ -16892,9 +11928,7 @@ export const items: Record<string, Item> = {
     name: 'Fury Blade Lvl 1',
     assetName: 'FuryBlade',
     description: 'A brutal blade with an unlockable Ability.',
-    damage: {
-      physical: 66,
-    },
+    damage: { physical: 66 },
     id: 'FuryBlade',
   },
   FuryBlade2: {
@@ -16909,22 +11943,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 350,
-          },
-          {
-            id: 'Luminite',
-            amount: 32,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 36,
-          },
-          {
-            id: 'Stone',
-            amount: 450,
-          },
+          { id: 'Iron', amount: 350 },
+          { id: 'Luminite', amount: 32 },
+          { id: 'EssenceTangy', amount: 36 },
+          { id: 'Stone', amount: 450 },
         ],
         yields: 'FuryBlade3',
       },
@@ -16935,27 +11957,16 @@ export const items: Record<string, Item> = {
     name: 'Fury Blade Lvl 2',
     assetName: 'FuryBlade',
     description: 'A brutal blade with an unlockable Ability.',
-    damage: {
-      physical: 74,
-    },
+    damage: { physical: 74 },
     id: 'FuryBlade2',
   },
   FuryBlade3: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'EveryOtherTurnAddRage',
-      },
-    ],
+    abilities: [{ id: 'EveryOtherTurnAddRage' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 35,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 35, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -16968,9 +11979,7 @@ export const items: Record<string, Item> = {
     assetName: 'FuryBlade',
     description:
       'A brutal blade that feeds your Rage every other turn and adds a small Defense boost.',
-    damage: {
-      physical: 88,
-    },
+    damage: { physical: 88 },
     id: 'FuryBlade3',
   },
   GlacialShard: {
@@ -16992,18 +12001,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 180,
-          },
-          {
-            id: 'Ore',
-            amount: 180,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 12,
-          },
+          { id: 'Stone', amount: 180 },
+          { id: 'Ore', amount: 180 },
+          { id: 'EssenceTangy', amount: 12 },
         ],
         yields: 'GlacialShard2',
       },
@@ -17014,9 +12014,7 @@ export const items: Record<string, Item> = {
     name: 'Glacial Shard Lvl 1',
     assetName: 'GlacialShard',
     description: 'A jagged blade fashioned from ice.',
-    damage: {
-      ice: 21,
-    },
+    damage: { ice: 21 },
     id: 'GlacialShard',
   },
   GlacialShard2: {
@@ -17035,27 +12033,16 @@ export const items: Record<string, Item> = {
     name: 'Glacial Shard Lvl 2',
     assetName: 'GlacialShard',
     description: 'A jagged blade fashioned from ice.',
-    damage: {
-      ice: 31,
-    },
+    damage: { ice: 31 },
     id: 'GlacialShard2',
   },
   HatefulDarkness: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'MagicKnifeOnHitCount',
-      },
-    ],
+    abilities: [{ id: 'MagicKnifeOnHitCount' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.025,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.025, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Dodge',
@@ -17073,27 +12060,16 @@ export const items: Record<string, Item> = {
     name: 'Hateful Darkness',
     assetName: 'HatefulDarkness',
     description: 'A sword forged of darkness to strike down foes.',
-    damage: {
-      shadow: 15,
-    },
+    damage: { shadow: 15 },
     id: 'HatefulDarkness',
   },
   HatefulDarknessEX: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'MagicKnifeOnHitCount',
-      },
-    ],
+    abilities: [{ id: 'MagicKnifeOnHitCount' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.03, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Dodge',
@@ -17111,19 +12087,13 @@ export const items: Record<string, Item> = {
     name: 'Hateful Darkness EX',
     assetName: 'HatefulDarkness',
     description: 'A sword forged of darkness to strike down foes.',
-    damage: {
-      shadow: 28,
-    },
+    damage: { shadow: 28 },
     id: 'HatefulDarknessEX',
   },
   HerosLongSword: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'LightningOnCrit',
-      },
-    ],
+    abilities: [{ id: 'LightningOnCrit' }],
     tags: ['equipment'],
     statModifiers: [],
     equipSlots: ['Weapon'],
@@ -17132,22 +12102,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 500,
-          },
-          {
-            id: 'Luminite',
-            amount: 24,
-          },
-          {
-            id: 'Wood',
-            amount: 430,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 22,
-          },
+          { id: 'Ore', amount: 500 },
+          { id: 'Luminite', amount: 24 },
+          { id: 'Wood', amount: 430 },
+          { id: 'EssenceSpicy', amount: 22 },
         ],
         yields: 'HerosLongSword2',
       },
@@ -17155,22 +12113,16 @@ export const items: Record<string, Item> = {
     retainOnUpgrade: false,
     requiredLevel: 48,
     sellPrice: 165,
-    name: 'Hero\u2019s Long Sword Lvl 1',
+    name: 'Hero’s Long Sword Lvl 1',
     assetName: 'HerosLongSword',
     description: 'A fabled blade with an unlockable Ability.',
-    damage: {
-      physical: 55,
-    },
+    damage: { physical: 55 },
     id: 'HerosLongSword',
   },
   HerosLongSword2: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'LightningOnCrit',
-      },
-    ],
+    abilities: [{ id: 'LightningOnCrit' }],
     tags: ['equipment'],
     statModifiers: [],
     equipSlots: ['Weapon'],
@@ -17179,22 +12131,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceSpicy',
-            amount: 55,
-          },
-          {
-            id: 'Ore',
-            amount: 1250,
-          },
-          {
-            id: 'Luminite',
-            amount: 42,
-          },
-          {
-            id: 'Wood',
-            amount: 600,
-          },
+          { id: 'EssenceSpicy', amount: 55 },
+          { id: 'Ore', amount: 1250 },
+          { id: 'Luminite', amount: 42 },
+          { id: 'Wood', amount: 600 },
         ],
         yields: 'HerosLongSwordUltimate',
       },
@@ -17202,30 +12142,19 @@ export const items: Record<string, Item> = {
     retainOnUpgrade: false,
     requiredLevel: 54,
     sellPrice: 250,
-    name: 'Hero\u2019s Long Sword Lvl 2',
+    name: 'Hero’s Long Sword Lvl 2',
     assetName: 'HerosLongSword',
     description: 'A fabled blade with an unlockable Ability.',
-    damage: {
-      physical: 89,
-    },
+    damage: { physical: 89 },
     id: 'HerosLongSword2',
   },
   HerosLongSwordUltimate: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'LightningOnCrit',
-      },
-    ],
+    abilities: [{ id: 'LightningOnCrit' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.025,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.025, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -17234,30 +12163,19 @@ export const items: Record<string, Item> = {
     retainOnUpgrade: false,
     requiredLevel: 62,
     sellPrice: 275,
-    name: 'Hero\u2019s Long Sword Ultimate',
+    name: 'Hero’s Long Sword Ultimate',
     assetName: 'HerosLongSword',
     description: 'A fabled blade that adds a Lightning Bolt on Crit.',
-    damage: {
-      physical: 124,
-    },
+    damage: { physical: 124 },
     id: 'HerosLongSwordUltimate',
   },
   InfernoCaller: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'LowHpCritBoostAbility',
-      },
-    ],
+    abilities: [{ id: 'LowHpCritBoostAbility' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.07,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.07, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'IceResist',
@@ -17276,27 +12194,16 @@ export const items: Record<string, Item> = {
     assetName: 'InfernoCaller',
     description:
       'A fiery weapon that when health is low, fills the wielder with a fierce heat that boosts Crit.',
-    damage: {
-      fire: 35,
-    },
+    damage: { fire: 35 },
     id: 'InfernoCaller',
   },
   InfernoCallerEX: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'LowHpCritBoostAbility',
-      },
-    ],
+    abilities: [{ id: 'LowHpCritBoostAbility' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.09,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.09, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'IceResist',
@@ -17315,9 +12222,7 @@ export const items: Record<string, Item> = {
     assetName: 'InfernoCaller',
     description:
       'A fiery weapon that when health is low, fills the wielder with a fierce heat that boosts Crit.',
-    damage: {
-      fire: 48,
-    },
+    damage: { fire: 48 },
     id: 'InfernoCallerEX',
   },
   Oaksplitter: {
@@ -17326,12 +12231,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -17339,14 +12239,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceCrunchy',
-            amount: 35,
-          },
-          {
-            id: 'Wood',
-            amount: 390,
-          },
+          { id: 'EssenceCrunchy', amount: 35 },
+          { id: 'Wood', amount: 390 },
         ],
         yields: 'Oaksplitter2',
       },
@@ -17357,10 +12251,8 @@ export const items: Record<string, Item> = {
     name: 'Oaksplitter Lvl 1',
     assetName: 'Oaksplitter',
     description:
-      'A woodsman\u2019s blade with an unlockable ability for felling even the biggest of enemies.',
-    damage: {
-      physical: 72,
-    },
+      'A woodsman’s blade with an unlockable ability for felling even the biggest of enemies.',
+    damage: { physical: 72 },
     id: 'Oaksplitter',
   },
   Oaksplitter2: {
@@ -17369,12 +12261,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.025,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.025, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -17382,14 +12269,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceCrunchy',
-            amount: 42,
-          },
-          {
-            id: 'Wood',
-            amount: 540,
-          },
+          { id: 'EssenceCrunchy', amount: 42 },
+          { id: 'Wood', amount: 540 },
         ],
         yields: 'Oaksplitter3',
       },
@@ -17400,10 +12281,8 @@ export const items: Record<string, Item> = {
     name: 'Oaksplitter Lvl 2',
     assetName: 'Oaksplitter',
     description:
-      'A woodsman\u2019s blade with an unlockable ability for felling even the biggest of enemies.',
-    damage: {
-      physical: 78,
-    },
+      'A woodsman’s blade with an unlockable ability for felling even the biggest of enemies.',
+    damage: { physical: 78 },
     id: 'Oaksplitter2',
   },
   Oaksplitter3: {
@@ -17412,12 +12291,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.03, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -17425,14 +12299,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceCrunchy',
-            amount: 47,
-          },
-          {
-            id: 'Wood',
-            amount: 620,
-          },
+          { id: 'EssenceCrunchy', amount: 47 },
+          { id: 'Wood', amount: 620 },
         ],
         yields: 'Oaksplitter4',
       },
@@ -17443,10 +12311,8 @@ export const items: Record<string, Item> = {
     name: 'Oaksplitter Lvl 3',
     assetName: 'Oaksplitter',
     description:
-      'A woodsman\u2019s blade with an unlockable ability for felling even the biggest of enemies.',
-    damage: {
-      physical: 84,
-    },
+      'A woodsman’s blade with an unlockable ability for felling even the biggest of enemies.',
+    damage: { physical: 84 },
     id: 'Oaksplitter3',
   },
   Oaksplitter4: {
@@ -17455,12 +12321,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.035,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.035, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -17468,14 +12329,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceCrunchy',
-            amount: 55,
-          },
-          {
-            id: 'Wood',
-            amount: 850,
-          },
+          { id: 'EssenceCrunchy', amount: 55 },
+          { id: 'Wood', amount: 850 },
         ],
         yields: 'OaksplitterUltimate',
       },
@@ -17486,28 +12341,17 @@ export const items: Record<string, Item> = {
     name: 'Oaksplitter Lvl 4',
     assetName: 'Oaksplitter',
     description:
-      'A woodsman\u2019s blade with an unlockable ability for felling even the biggest of enemies.',
-    damage: {
-      physical: 90,
-    },
+      'A woodsman’s blade with an unlockable ability for felling even the biggest of enemies.',
+    damage: { physical: 90 },
     id: 'Oaksplitter4',
   },
   OaksplitterUltimate: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'ApplyVulnerableOnAttack',
-      },
-    ],
+    abilities: [{ id: 'ApplyVulnerableOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.04,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.04, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -17519,10 +12363,8 @@ export const items: Record<string, Item> = {
     name: 'Oaksplitter Ultimate',
     assetName: 'Oaksplitter',
     description:
-      'A woodsman\u2019s blade with an unlockable ability for felling even the biggest of enemies.',
-    damage: {
-      physical: 90,
-    },
+      'A woodsman’s blade with an unlockable ability for felling even the biggest of enemies.',
+    damage: { physical: 90 },
     id: 'OaksplitterUltimate',
   },
   Painpoint: {
@@ -17537,18 +12379,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceDecadent',
-            amount: 45,
-          },
-          {
-            id: 'Iron',
-            amount: 830,
-          },
-          {
-            id: 'Luminite',
-            amount: 32,
-          },
+          { id: 'EssenceDecadent', amount: 45 },
+          { id: 'Iron', amount: 830 },
+          { id: 'Luminite', amount: 32 },
         ],
         yields: 'Painpoint2',
       },
@@ -17560,9 +12393,7 @@ export const items: Record<string, Item> = {
     assetName: 'Painpoint',
     description:
       'A thin, precise blade with an unlockable ability that delivers an agonizing poison.',
-    damage: {
-      physical: 126,
-    },
+    damage: { physical: 126 },
     id: 'Painpoint',
   },
   Painpoint2: {
@@ -17577,18 +12408,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceDecadent',
-            amount: 52,
-          },
-          {
-            id: 'Iron',
-            amount: 1050,
-          },
-          {
-            id: 'Luminite',
-            amount: 35,
-          },
+          { id: 'EssenceDecadent', amount: 52 },
+          { id: 'Iron', amount: 1050 },
+          { id: 'Luminite', amount: 35 },
         ],
         yields: 'Painpoint3',
       },
@@ -17600,9 +12422,7 @@ export const items: Record<string, Item> = {
     assetName: 'Painpoint',
     description:
       'A thin, precise blade with an unlockable ability that delivers an agonizing poison.',
-    damage: {
-      physical: 132,
-    },
+    damage: { physical: 132 },
     id: 'Painpoint2',
   },
   Painpoint3: {
@@ -17617,18 +12437,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceDecadent',
-            amount: 58,
-          },
-          {
-            id: 'Iron',
-            amount: 1250,
-          },
-          {
-            id: 'Luminite',
-            amount: 35,
-          },
+          { id: 'EssenceDecadent', amount: 58 },
+          { id: 'Iron', amount: 1250 },
+          { id: 'Luminite', amount: 35 },
         ],
         yields: 'Painpoint4',
       },
@@ -17640,9 +12451,7 @@ export const items: Record<string, Item> = {
     assetName: 'Painpoint',
     description:
       'A thin, precise blade with an unlockable ability that delivers an agonizing poison.',
-    damage: {
-      physical: 140,
-    },
+    damage: { physical: 140 },
     id: 'Painpoint3',
   },
   Painpoint4: {
@@ -17657,18 +12466,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceDecadent',
-            amount: 67,
-          },
-          {
-            id: 'Iron',
-            amount: 1500,
-          },
-          {
-            id: 'Luminite',
-            amount: 40,
-          },
+          { id: 'EssenceDecadent', amount: 67 },
+          { id: 'Iron', amount: 1500 },
+          { id: 'Luminite', amount: 40 },
         ],
         yields: 'PainpointUltimate',
       },
@@ -17680,9 +12480,7 @@ export const items: Record<string, Item> = {
     assetName: 'Painpoint',
     description:
       'A thin, precise blade with an unlockable ability that delivers an agonizing poison.',
-    damage: {
-      physical: 148,
-    },
+    damage: { physical: 148 },
     id: 'Painpoint4',
   },
   PainpointUltimate: {
@@ -17691,10 +12489,7 @@ export const items: Record<string, Item> = {
     abilities: [
       {
         id: 'ApplyPoisonOnAttack',
-        params: {
-          damagePerTurn: 90,
-          applyChance: 0.6,
-        },
+        params: { damagePerTurn: 90, applyChance: 0.6 },
       },
     ],
     tags: ['equipment'],
@@ -17710,27 +12505,16 @@ export const items: Record<string, Item> = {
     assetName: 'Painpoint',
     description:
       'A thin, precise blade with an unlockable ability that delivers an agonizing poison.',
-    damage: {
-      physical: 148,
-    },
+    damage: { physical: 148 },
     id: 'PainpointUltimate',
   },
   PhantomBladeSword: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'KnifeOnAttack',
-      },
-    ],
+    abilities: [{ id: 'KnifeOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.035,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.035, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -17743,27 +12527,16 @@ export const items: Record<string, Item> = {
     assetName: 'PhantomBladeSword',
     description:
       'This blade launches a Magic Knife at the enemy when attacking.',
-    damage: {
-      physical: 24,
-    },
+    damage: { physical: 24 },
     id: 'PhantomBladeSword',
   },
   PhantomEdge: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'KnifeOnAttack',
-      },
-    ],
+    abilities: [{ id: 'KnifeOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 2,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 2, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -17775,9 +12548,7 @@ export const items: Record<string, Item> = {
     name: 'Phantom Edge',
     assetName: 'PhantomEdge',
     description: 'A swift blade that throws a Magic Knife on Attack.',
-    damage: {
-      physical: 100,
-    },
+    damage: { physical: 100 },
     id: 'PhantomEdge',
   },
   PiercingBlade: {
@@ -17792,22 +12563,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 50,
-          },
-          {
-            id: 'Luminite',
-            amount: 4,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 15,
-          },
-          {
-            id: 'Wood',
-            amount: 100,
-          },
+          { id: 'Iron', amount: 50 },
+          { id: 'Luminite', amount: 4 },
+          { id: 'EssenceTangy', amount: 15 },
+          { id: 'Wood', amount: 100 },
         ],
         yields: 'PiercingBlade2',
       },
@@ -17818,9 +12577,7 @@ export const items: Record<string, Item> = {
     name: 'Piercing Blade Lvl 1',
     assetName: 'PiercingBlade',
     description: 'A penetrating blade that delivers high damage.',
-    damage: {
-      physical: 38,
-    },
+    damage: { physical: 38 },
     id: 'PiercingBlade',
   },
   PiercingBlade2: {
@@ -17829,12 +12586,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.01,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.01, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -17842,22 +12594,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 150,
-          },
-          {
-            id: 'Luminite',
-            amount: 12,
-          },
-          {
-            id: 'Wood',
-            amount: 140,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 25,
-          },
+          { id: 'Iron', amount: 150 },
+          { id: 'Luminite', amount: 12 },
+          { id: 'Wood', amount: 140 },
+          { id: 'EssenceTangy', amount: 25 },
         ],
         yields: 'PiercingBlade3',
       },
@@ -17868,9 +12608,7 @@ export const items: Record<string, Item> = {
     name: 'Piercing Blade Lvl 2',
     assetName: 'PiercingBlade',
     description: 'A penetrating blade that delivers high damage.',
-    damage: {
-      physical: 74,
-    },
+    damage: { physical: 74 },
     id: 'PiercingBlade2',
   },
   PiercingBlade3: {
@@ -17896,30 +12634,16 @@ export const items: Record<string, Item> = {
     name: 'Piercing Blade Lvl 3',
     assetName: 'PiercingBlade',
     description: 'A penetrating blade that delivers high damage.',
-    damage: {
-      physical: 114,
-    },
+    damage: { physical: 114 },
     id: 'PiercingBlade3',
   },
   Plowshare: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'MagicKnifeOnEnemyDeath',
-      },
-      {
-        id: 'SecondWindAbility',
-      },
-    ],
+    abilities: [{ id: 'MagicKnifeOnEnemyDeath' }, { id: 'SecondWindAbility' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 200,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 200, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -17927,22 +12651,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 800,
-          },
-          {
-            id: 'Luminite',
-            amount: 44,
-          },
-          {
-            id: 'Stone',
-            amount: 600,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 22,
-          },
+          { id: 'Ore', amount: 800 },
+          { id: 'Luminite', amount: 44 },
+          { id: 'Stone', amount: 600 },
+          { id: 'EssenceCreamy', amount: 22 },
         ],
         yields: 'Plowshare2',
       },
@@ -17953,30 +12665,16 @@ export const items: Record<string, Item> = {
     name: 'Plowshare Lvl 1',
     assetName: 'Plowshare',
     description: 'A repurposed tool for harvesting defeat from your foes.',
-    damage: {
-      physical: 135,
-    },
+    damage: { physical: 135 },
     id: 'Plowshare',
   },
   Plowshare2: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'MagicKnifeOnEnemyDeath',
-      },
-      {
-        id: 'SecondWindAbility',
-      },
-    ],
+    abilities: [{ id: 'MagicKnifeOnEnemyDeath' }, { id: 'SecondWindAbility' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 235,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 235, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -17984,22 +12682,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Ore',
-            amount: 850,
-          },
-          {
-            id: 'Luminite',
-            amount: 44,
-          },
-          {
-            id: 'Stone',
-            amount: 700,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 40,
-          },
+          { id: 'Ore', amount: 850 },
+          { id: 'Luminite', amount: 44 },
+          { id: 'Stone', amount: 700 },
+          { id: 'EssenceCreamy', amount: 40 },
         ],
         yields: 'Plowshare3',
       },
@@ -18010,30 +12696,16 @@ export const items: Record<string, Item> = {
     name: 'Plowshare Lvl 2',
     assetName: 'Plowshare',
     description: 'A repurposed tool for harvesting defeat from your foes.',
-    damage: {
-      physical: 141,
-    },
+    damage: { physical: 141 },
     id: 'Plowshare2',
   },
   Plowshare3: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'MagicKnifeOnEnemyDeath',
-      },
-      {
-        id: 'SecondWindAbility',
-      },
-    ],
+    abilities: [{ id: 'MagicKnifeOnEnemyDeath' }, { id: 'SecondWindAbility' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 280,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 280, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -18045,9 +12717,7 @@ export const items: Record<string, Item> = {
     name: 'Plowshare Lvl 3',
     assetName: 'Plowshare',
     description: 'A repurposed tool for harvesting defeat from your foes.',
-    damage: {
-      physical: 150,
-    },
+    damage: { physical: 150 },
     id: 'Plowshare3',
   },
   RampartDefender: {
@@ -18056,18 +12726,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 20,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 15,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 20, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 15, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -18075,18 +12735,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceChewy',
-            amount: 45,
-          },
-          {
-            id: 'Luminite',
-            amount: 35,
-          },
-          {
-            id: 'Stone',
-            amount: 1150,
-          },
+          { id: 'EssenceChewy', amount: 45 },
+          { id: 'Luminite', amount: 35 },
+          { id: 'Stone', amount: 1150 },
         ],
         yields: 'RampartDefender2',
       },
@@ -18097,9 +12748,7 @@ export const items: Record<string, Item> = {
     name: 'Rampart Defender Lvl 1',
     assetName: 'RampartDefender',
     description: 'A sturdy weapon designed to defend against marauding foes.',
-    damage: {
-      physical: 136,
-    },
+    damage: { physical: 136 },
     id: 'RampartDefender',
   },
   RampartDefender2: {
@@ -18108,18 +12757,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 30,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 20,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 30, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 20, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -18127,18 +12766,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceChewy',
-            amount: 53,
-          },
-          {
-            id: 'Stone',
-            amount: 1300,
-          },
-          {
-            id: 'Luminite',
-            amount: 40,
-          },
+          { id: 'EssenceChewy', amount: 53 },
+          { id: 'Stone', amount: 1300 },
+          { id: 'Luminite', amount: 40 },
         ],
         yields: 'RampartDefender3',
       },
@@ -18149,9 +12779,7 @@ export const items: Record<string, Item> = {
     name: 'Rampart Defender Lvl 2',
     assetName: 'RampartDefender',
     description: 'A sturdy weapon designed to defend against marauding foes.',
-    damage: {
-      physical: 142,
-    },
+    damage: { physical: 142 },
     id: 'RampartDefender2',
   },
   RampartDefender3: {
@@ -18160,18 +12788,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 40,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 25,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 40, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 25, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -18179,18 +12797,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceChewy',
-            amount: 60,
-          },
-          {
-            id: 'Stone',
-            amount: 1500,
-          },
-          {
-            id: 'Luminite',
-            amount: 40,
-          },
+          { id: 'EssenceChewy', amount: 60 },
+          { id: 'Stone', amount: 1500 },
+          { id: 'Luminite', amount: 40 },
         ],
         yields: 'RampartDefender4',
       },
@@ -18201,9 +12810,7 @@ export const items: Record<string, Item> = {
     name: 'Rampart Defender Lvl 3',
     assetName: 'RampartDefender',
     description: 'A sturdy weapon designed to defend against marauding foes.',
-    damage: {
-      physical: 150,
-    },
+    damage: { physical: 150 },
     id: 'RampartDefender3',
   },
   RampartDefender4: {
@@ -18212,18 +12819,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 50,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 30,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 50, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 30, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -18231,18 +12828,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceChewy',
-            amount: 77,
-          },
-          {
-            id: 'Luminite',
-            amount: 55,
-          },
-          {
-            id: 'Stone',
-            amount: 1850,
-          },
+          { id: 'EssenceChewy', amount: 77 },
+          { id: 'Luminite', amount: 55 },
+          { id: 'Stone', amount: 1850 },
         ],
         yields: 'RampartDefenderUltimate',
       },
@@ -18253,9 +12841,7 @@ export const items: Record<string, Item> = {
     name: 'Rampart Defender Lvl 4',
     assetName: 'RampartDefender',
     description: 'A sturdy weapon designed to defend against marauding foes.',
-    damage: {
-      physical: 156,
-    },
+    damage: { physical: 156 },
     id: 'RampartDefender4',
   },
   RampartDefenderUltimate: {
@@ -18264,18 +12850,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 60,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 40,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 60, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Defense', value: 40, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -18287,9 +12863,7 @@ export const items: Record<string, Item> = {
     name: 'Rampart Defender Ultimate',
     assetName: 'RampartDefender',
     description: 'A sturdy weapon designed to defend against marauding foes.',
-    damage: {
-      physical: 156,
-    },
+    damage: { physical: 156 },
     id: 'RampartDefenderUltimate',
   },
   RoughRazor: {
@@ -18304,18 +12878,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 110,
-          },
-          {
-            id: 'Wood',
-            amount: 80,
-          },
-          {
-            id: 'EssenceChewy',
-            amount: 8,
-          },
+          { id: 'Stone', amount: 110 },
+          { id: 'Wood', amount: 80 },
+          { id: 'EssenceChewy', amount: 8 },
         ],
         yields: 'RoughRazor2',
       },
@@ -18326,9 +12891,7 @@ export const items: Record<string, Item> = {
     name: 'Rough Razor Lvl 1',
     assetName: 'RoughRazor',
     description: 'A cut-throat blade for dispatching foes.',
-    damage: {
-      physical: 58,
-    },
+    damage: { physical: 58 },
     id: 'RoughRazor',
   },
   RoughRazor2: {
@@ -18343,18 +12906,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 150,
-          },
-          {
-            id: 'Wood',
-            amount: 150,
-          },
-          {
-            id: 'EssenceChewy',
-            amount: 18,
-          },
+          { id: 'Stone', amount: 150 },
+          { id: 'Wood', amount: 150 },
+          { id: 'EssenceChewy', amount: 18 },
         ],
         yields: 'RoughRazor3',
       },
@@ -18365,9 +12919,7 @@ export const items: Record<string, Item> = {
     name: 'Rough Razor Lvl 2',
     assetName: 'RoughRazor',
     description: 'A cut-throat blade for dispatching foes.',
-    damage: {
-      physical: 71,
-    },
+    damage: { physical: 71 },
     id: 'RoughRazor2',
   },
   RoughRazor3: {
@@ -18386,9 +12938,7 @@ export const items: Record<string, Item> = {
     name: 'Rough Razor Lvl 3',
     assetName: 'RoughRazor',
     description: 'A cut-throat blade for dispatching foes.',
-    damage: {
-      physical: 88,
-    },
+    damage: { physical: 88 },
     id: 'RoughRazor3',
   },
   RuinedRod: {
@@ -18397,18 +12947,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: -3,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.015,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: -3, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.015, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -18416,22 +12956,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 105,
-          },
-          {
-            id: 'Iron',
-            amount: 105,
-          },
-          {
-            id: 'Luminite',
-            amount: 6,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 6,
-          },
+          { id: 'Stone', amount: 105 },
+          { id: 'Iron', amount: 105 },
+          { id: 'Luminite', amount: 6 },
+          { id: 'EssenceHearty', amount: 6 },
         ],
         yields: 'RuinedRod2',
       },
@@ -18442,9 +12970,7 @@ export const items: Record<string, Item> = {
     name: 'Ruined Rod Lvl 1',
     assetName: 'RuinedRod',
     description: 'A makeshift weapon pulled from the rubble.',
-    damage: {
-      physical: 90,
-    },
+    damage: { physical: 90 },
     id: 'RuinedRod',
   },
   RuinedRod2: {
@@ -18453,18 +12979,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: -3,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: -3, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -18472,22 +12988,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 160,
-          },
-          {
-            id: 'Iron',
-            amount: 160,
-          },
-          {
-            id: 'Luminite',
-            amount: 6,
-          },
-          {
-            id: 'EssenceHearty',
-            amount: 12,
-          },
+          { id: 'Stone', amount: 160 },
+          { id: 'Iron', amount: 160 },
+          { id: 'Luminite', amount: 6 },
+          { id: 'EssenceHearty', amount: 12 },
         ],
         yields: 'RuinedRod3',
       },
@@ -18498,9 +13002,7 @@ export const items: Record<string, Item> = {
     name: 'Ruined Rod Lvl 2',
     assetName: 'RuinedRod',
     description: 'A makeshift weapon pulled from the rubble.',
-    damage: {
-      physical: 96,
-    },
+    damage: { physical: 96 },
     id: 'RuinedRod2',
   },
   RuinedRod3: {
@@ -18509,12 +13011,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: -3,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: -3, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Crit',
@@ -18532,9 +13029,7 @@ export const items: Record<string, Item> = {
     name: 'Ruined Rod Lvl 3',
     assetName: 'RuinedRod',
     description: 'A makeshift weapon pulled from the rubble.',
-    damage: {
-      physical: 103,
-    },
+    damage: { physical: 103 },
     id: 'RuinedRod3',
   },
   RusticSword: {
@@ -18553,19 +13048,13 @@ export const items: Record<string, Item> = {
     name: 'Rustic Sword',
     assetName: 'RusticSword',
     description: 'A homemade sword with a wooden blade.',
-    damage: {
-      physical: 14,
-    },
+    damage: { physical: 14 },
     id: 'RusticSword',
   },
   SalvationScimitar: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'HealOnCritAbility',
-      },
-    ],
+    abilities: [{ id: 'HealOnCritAbility' }],
     tags: ['equipment'],
     statModifiers: [],
     equipSlots: ['Weapon'],
@@ -18574,22 +13063,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 470,
-          },
-          {
-            id: 'Luminite',
-            amount: 24,
-          },
-          {
-            id: 'Wood',
-            amount: 370,
-          },
-          {
-            id: 'EssenceFresh',
-            amount: 13,
-          },
+          { id: 'Iron', amount: 470 },
+          { id: 'Luminite', amount: 24 },
+          { id: 'Wood', amount: 370 },
+          { id: 'EssenceFresh', amount: 13 },
         ],
         yields: 'SalvationScimitar2',
       },
@@ -18600,19 +13077,13 @@ export const items: Record<string, Item> = {
     name: 'Salvation Scimitar Lvl 1',
     assetName: 'SalvationScimitar',
     description: 'A slicing blade with an unlockable Ability.',
-    damage: {
-      physical: 57,
-    },
+    damage: { physical: 57 },
     id: 'SalvationScimitar',
   },
   SalvationScimitar2: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'HealOnCritAbility',
-      },
-    ],
+    abilities: [{ id: 'HealOnCritAbility' }],
     tags: ['equipment'],
     statModifiers: [],
     equipSlots: ['Weapon'],
@@ -18621,22 +13092,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 800,
-          },
-          {
-            id: 'Luminite',
-            amount: 42,
-          },
-          {
-            id: 'Wood',
-            amount: 800,
-          },
-          {
-            id: 'EssenceFresh',
-            amount: 50,
-          },
+          { id: 'Iron', amount: 800 },
+          { id: 'Luminite', amount: 42 },
+          { id: 'Wood', amount: 800 },
+          { id: 'EssenceFresh', amount: 50 },
         ],
         yields: 'SalvationScimitarUltimate',
       },
@@ -18647,27 +13106,16 @@ export const items: Record<string, Item> = {
     name: 'Salvation Scimitar Lvl 2',
     assetName: 'SalvationScimitar',
     description: 'A slicing blade with an unlockable Ability.',
-    damage: {
-      physical: 81,
-    },
+    damage: { physical: 81 },
     id: 'SalvationScimitar2',
   },
   SalvationScimitarUltimate: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'HealOnCritAbility',
-      },
-    ],
+    abilities: [{ id: 'HealOnCritAbility' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.01,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.01, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -18679,9 +13127,7 @@ export const items: Record<string, Item> = {
     name: 'Salvation Scimitar Ultimate',
     assetName: 'SalvationScimitar',
     description: 'Heals a small amount on every Crit.',
-    damage: {
-      physical: 120,
-    },
+    damage: { physical: 120 },
     id: 'SalvationScimitarUltimate',
   },
   SawtoothAxe: {
@@ -18690,12 +13136,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.005,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.005, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -18703,18 +13144,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 65,
-          },
-          {
-            id: 'Stone',
-            amount: 75,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 3,
-          },
+          { id: 'Iron', amount: 65 },
+          { id: 'Stone', amount: 75 },
+          { id: 'EssenceTangy', amount: 3 },
         ],
         yields: 'SawtoothAxe2',
       },
@@ -18725,9 +13157,7 @@ export const items: Record<string, Item> = {
     name: 'Sawtooth Axe Lvl 1',
     assetName: 'SawtoothAxe',
     description: 'A heavy axe that improves Crit rate.',
-    damage: {
-      physical: 48,
-    },
+    damage: { physical: 48 },
     id: 'SawtoothAxe',
   },
   SawtoothAxe2: {
@@ -18736,12 +13166,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.007,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.007, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -18749,18 +13174,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 110,
-          },
-          {
-            id: 'Stone',
-            amount: 120,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 14,
-          },
+          { id: 'Iron', amount: 110 },
+          { id: 'Stone', amount: 120 },
+          { id: 'EssenceTangy', amount: 14 },
         ],
         yields: 'SawtoothAxe3',
       },
@@ -18771,9 +13187,7 @@ export const items: Record<string, Item> = {
     name: 'Sawtooth Axe Lvl 2',
     assetName: 'SawtoothAxe',
     description: 'A heavy axe that improves Crit rate.',
-    damage: {
-      physical: 67,
-    },
+    damage: { physical: 67 },
     id: 'SawtoothAxe2',
   },
   SawtoothAxe3: {
@@ -18782,12 +13196,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.01,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.01, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -18799,27 +13208,16 @@ export const items: Record<string, Item> = {
     name: 'Sawtooth Axe Lvl 3',
     assetName: 'SawtoothAxe',
     description: 'A heavy axe that improves Crit rate.',
-    damage: {
-      physical: 90,
-    },
+    damage: { physical: 90 },
     id: 'SawtoothAxe3',
   },
   Scarsteel: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'LightningOnRage',
-      },
-    ],
+    abilities: [{ id: 'LightningOnRage' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.01,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.01, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -18827,22 +13225,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceCrunchy',
-            amount: 22,
-          },
-          {
-            id: 'Ore',
-            amount: 110,
-          },
-          {
-            id: 'Luminite',
-            amount: 1,
-          },
-          {
-            id: 'Wood',
-            amount: 110,
-          },
+          { id: 'EssenceCrunchy', amount: 22 },
+          { id: 'Ore', amount: 110 },
+          { id: 'Luminite', amount: 1 },
+          { id: 'Wood', amount: 110 },
         ],
         yields: 'Scarsteel2',
       },
@@ -18853,27 +13239,16 @@ export const items: Record<string, Item> = {
     name: 'Scarsteel Lvl 1',
     assetName: 'Scarsteel',
     description: 'A battered blade awarded to veterans of the Closed Beta.',
-    damage: {
-      physical: 28,
-    },
+    damage: { physical: 28 },
     id: 'Scarsteel',
   },
   Scarsteel2: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'LightningOnRage',
-      },
-    ],
+    abilities: [{ id: 'LightningOnRage' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -18881,22 +13256,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'EssenceCrunchy',
-            amount: 88,
-          },
-          {
-            id: 'Wood',
-            amount: 350,
-          },
-          {
-            id: 'Ore',
-            amount: 500,
-          },
-          {
-            id: 'Luminite',
-            amount: 24,
-          },
+          { id: 'EssenceCrunchy', amount: 88 },
+          { id: 'Wood', amount: 350 },
+          { id: 'Ore', amount: 500 },
+          { id: 'Luminite', amount: 24 },
         ],
         yields: 'ScarsteelUltimate',
       },
@@ -18907,27 +13270,16 @@ export const items: Record<string, Item> = {
     name: 'Scarsteel Lvl 2',
     assetName: 'Scarsteel',
     description: 'A battered blade awarded to veterans of the Closed Beta.',
-    damage: {
-      physical: 55,
-    },
+    damage: { physical: 55 },
     id: 'Scarsteel2',
   },
   ScarsteelUltimate: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'LightningOnRage',
-      },
-    ],
+    abilities: [{ id: 'LightningOnRage' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.03, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -18939,9 +13291,7 @@ export const items: Record<string, Item> = {
     name: 'Scarsteel Ultimate',
     assetName: 'Scarsteel',
     description: 'A battered blade awarded to veterans of the Closed Beta.',
-    damage: {
-      physical: 120,
-    },
+    damage: { physical: 120 },
     id: 'ScarsteelUltimate',
   },
   SerratedSword: {
@@ -18956,18 +13306,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 35,
-          },
-          {
-            id: 'Ore',
-            amount: 35,
-          },
-          {
-            id: 'EssenceChewy',
-            amount: 5,
-          },
+          { id: 'Iron', amount: 35 },
+          { id: 'Ore', amount: 35 },
+          { id: 'EssenceChewy', amount: 5 },
         ],
         yields: 'SerratedSword2',
       },
@@ -18978,9 +13319,7 @@ export const items: Record<string, Item> = {
     name: 'Serrated Sword Lvl 1',
     assetName: 'SerratedSword',
     description: 'A sword with some real bite.',
-    damage: {
-      physical: 30,
-    },
+    damage: { physical: 30 },
     id: 'SerratedSword',
   },
   SerratedSword2: {
@@ -18995,18 +13334,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 75,
-          },
-          {
-            id: 'Ore',
-            amount: 75,
-          },
-          {
-            id: 'EssenceChewy',
-            amount: 15,
-          },
+          { id: 'Iron', amount: 75 },
+          { id: 'Ore', amount: 75 },
+          { id: 'EssenceChewy', amount: 15 },
         ],
         yields: 'SerratedSword3',
       },
@@ -19017,9 +13347,7 @@ export const items: Record<string, Item> = {
     name: 'Serrated Sword Lvl 2',
     assetName: 'SerratedSword',
     description: 'A sword with some real bite.',
-    damage: {
-      physical: 48,
-    },
+    damage: { physical: 48 },
     id: 'SerratedSword2',
   },
   SerratedSword3: {
@@ -19038,9 +13366,7 @@ export const items: Record<string, Item> = {
     name: 'Serrated Sword Lvl 3',
     assetName: 'SerratedSword',
     description: 'A sword with some real bite.',
-    damage: {
-      physical: 62,
-    },
+    damage: { physical: 62 },
     id: 'SerratedSword3',
   },
   ShadowSlicer: {
@@ -19049,18 +13375,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 2,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 2, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -19072,9 +13388,7 @@ export const items: Record<string, Item> = {
     name: 'Shadow Slicer',
     assetName: 'ShadowSlicer',
     description: 'A slicing blade that deals swift and deadly Shadow damage.',
-    damage: {
-      shadow: 26,
-    },
+    damage: { shadow: 26 },
     id: 'ShadowSlicer',
   },
   Shatterblade: {
@@ -19096,18 +13410,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 1150,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 35,
-          },
-          {
-            id: 'Luminite',
-            amount: 36,
-          },
+          { id: 'Stone', amount: 1150 },
+          { id: 'EssenceTangy', amount: 35 },
+          { id: 'Luminite', amount: 36 },
         ],
         yields: 'Shatterblade2',
       },
@@ -19118,9 +13423,7 @@ export const items: Record<string, Item> = {
     name: 'Shatterblade Lvl 1',
     assetName: 'Shatterblade',
     description: 'A crystalline shard that reduces Defense.',
-    damage: {
-      physical: 68,
-    },
+    damage: { physical: 68 },
     id: 'Shatterblade',
   },
   Shatterblade2: {
@@ -19142,18 +13445,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 1450,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 56,
-          },
-          {
-            id: 'Luminite',
-            amount: 44,
-          },
+          { id: 'Stone', amount: 1450 },
+          { id: 'EssenceTangy', amount: 56 },
+          { id: 'Luminite', amount: 44 },
         ],
         yields: 'Shatterblade3',
       },
@@ -19164,9 +13458,7 @@ export const items: Record<string, Item> = {
     name: 'Shatterblade Lvl 2',
     assetName: 'Shatterblade',
     description: 'A crystalline shard that reduces Defense.',
-    damage: {
-      physical: 87,
-    },
+    damage: { physical: 87 },
     id: 'Shatterblade2',
   },
   Shatterblade3: {
@@ -19192,9 +13484,7 @@ export const items: Record<string, Item> = {
     name: 'Shatterblade Lvl 3',
     assetName: 'Shatterblade',
     description: 'A crystalline shard that reduces Defense.',
-    damage: {
-      physical: 120,
-    },
+    damage: { physical: 120 },
     id: 'Shatterblade3',
   },
   SimpleCutlass: {
@@ -19207,15 +13497,7 @@ export const items: Record<string, Item> = {
     isStackable: false,
     amount: 1,
     upgrades: [
-      {
-        requires: [
-          {
-            id: 'Iron',
-            amount: 10,
-          },
-        ],
-        yields: 'SimpleCutlass2',
-      },
+      { requires: [{ id: 'Iron', amount: 10 }], yields: 'SimpleCutlass2' },
     ],
     retainOnUpgrade: false,
     requiredLevel: 1,
@@ -19223,9 +13505,7 @@ export const items: Record<string, Item> = {
     name: 'Simple Cutlass Lvl 1',
     assetName: 'SimpleCutlass',
     description: 'An old cutlass with a sharp edge.',
-    damage: {
-      physical: 17,
-    },
+    damage: { physical: 17 },
     id: 'SimpleCutlass',
   },
   SimpleCutlass2: {
@@ -19238,15 +13518,7 @@ export const items: Record<string, Item> = {
     isStackable: false,
     amount: 1,
     upgrades: [
-      {
-        requires: [
-          {
-            id: 'Iron',
-            amount: 16,
-          },
-        ],
-        yields: 'SimpleCutlass3',
-      },
+      { requires: [{ id: 'Iron', amount: 16 }], yields: 'SimpleCutlass3' },
     ],
     retainOnUpgrade: false,
     requiredLevel: 1,
@@ -19254,9 +13526,7 @@ export const items: Record<string, Item> = {
     name: 'Simple Cutlass Lvl 2',
     assetName: 'SimpleCutlass',
     description: 'An old cutlass with a sharp edge.',
-    damage: {
-      physical: 23,
-    },
+    damage: { physical: 23 },
     id: 'SimpleCutlass2',
   },
   SimpleCutlass3: {
@@ -19275,27 +13545,16 @@ export const items: Record<string, Item> = {
     name: 'Simple Cutlass Lvl 3',
     assetName: 'SimpleCutlass',
     description: 'An old cutlass with a sharp edge.',
-    damage: {
-      physical: 30,
-    },
+    damage: { physical: 30 },
     id: 'SimpleCutlass3',
   },
   SmithysFriend: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'WeakOnAttack',
-      },
-    ],
+    abilities: [{ id: 'WeakOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -19307,27 +13566,16 @@ export const items: Record<string, Item> = {
     name: "Smithy's Friend",
     assetName: 'SmithysFriend',
     description: 'A stone blade that knocks the fight out of enemies.',
-    damage: {
-      physical: 140,
-    },
+    damage: { physical: 140 },
     id: 'SmithysFriend',
   },
   SmithysFriendEX: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'WeakOnAttack',
-      },
-    ],
+    abilities: [{ id: 'WeakOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'WeakResist',
@@ -19345,27 +13593,16 @@ export const items: Record<string, Item> = {
     name: "Smithy's Friend EX",
     assetName: 'SmithysFriend',
     description: 'A stone blade that knocks the fight out of enemies.',
-    damage: {
-      physical: 148,
-    },
+    damage: { physical: 148 },
     id: 'SmithysFriendEX',
   },
   SmitingEdge: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'LightningOnAttack',
-      },
-    ],
+    abilities: [{ id: 'LightningOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 2,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 2, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -19377,27 +13614,16 @@ export const items: Record<string, Item> = {
     name: 'Smiting Edge',
     assetName: 'SmitingEdge',
     description: 'A swift blade that grants Lightning On Attack.',
-    damage: {
-      physical: 100,
-    },
+    damage: { physical: 100 },
     id: 'SmitingEdge',
   },
   SouldrainAxe: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'HealOnEnemyDeath',
-      },
-    ],
+    abilities: [{ id: 'HealOnEnemyDeath' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 50,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 50, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -19410,27 +13636,16 @@ export const items: Record<string, Item> = {
     assetName: 'SouldrainAxe',
     description:
       'Legacy item. A merciless icy axe that restores lifeforce from fallen enemies.',
-    damage: {
-      ice: 36,
-    },
+    damage: { ice: 36 },
     id: 'SouldrainAxe',
   },
   SouldrainAxeEX: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'HealOnEnemyDeath',
-      },
-    ],
+    abilities: [{ id: 'HealOnEnemyDeath' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 85,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 85, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -19443,30 +13658,16 @@ export const items: Record<string, Item> = {
     assetName: 'SouldrainAxe',
     description:
       'Legacy item. A merciless ice axe which restores lifeforce from fallen enemies.',
-    damage: {
-      ice: 36,
-    },
+    damage: { ice: 36 },
     id: 'SouldrainAxeEX',
   },
   SowersLament: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'GainShieldOnHitCount',
-      },
-      {
-        id: 'FireKnifeOnAttack',
-      },
-    ],
+    abilities: [{ id: 'GainShieldOnHitCount' }, { id: 'FireKnifeOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -19474,22 +13675,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 1100,
-          },
-          {
-            id: 'Ore',
-            amount: 1150,
-          },
-          {
-            id: 'Luminite',
-            amount: 60,
-          },
-          {
-            id: 'EssenceFresh',
-            amount: 77,
-          },
+          { id: 'Wood', amount: 1100 },
+          { id: 'Ore', amount: 1150 },
+          { id: 'Luminite', amount: 60 },
+          { id: 'EssenceFresh', amount: 77 },
         ],
         yields: 'SowersLament2',
       },
@@ -19497,33 +13686,19 @@ export const items: Record<string, Item> = {
     retainOnUpgrade: false,
     requiredLevel: 124,
     sellPrice: 400,
-    name: 'Sower\u2019s Lament Lvl 1',
+    name: 'Sower’s Lament Lvl 1',
     assetName: 'SowersLament',
     description: 'An axe whetted with the tears of a forgotten settler.',
-    damage: {
-      physical: 145,
-    },
+    damage: { physical: 145 },
     id: 'SowersLament',
   },
   SowersLament2: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'GainShieldOnHitCount',
-      },
-      {
-        id: 'FireKnifeOnAttack',
-      },
-    ],
+    abilities: [{ id: 'GainShieldOnHitCount' }, { id: 'FireKnifeOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -19531,22 +13706,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 1300,
-          },
-          {
-            id: 'Luminite',
-            amount: 60,
-          },
-          {
-            id: 'Ore',
-            amount: 1400,
-          },
-          {
-            id: 'EssenceFresh',
-            amount: 89,
-          },
+          { id: 'Wood', amount: 1300 },
+          { id: 'Luminite', amount: 60 },
+          { id: 'Ore', amount: 1400 },
+          { id: 'EssenceFresh', amount: 89 },
         ],
         yields: 'SowersLament3',
       },
@@ -19554,33 +13717,19 @@ export const items: Record<string, Item> = {
     retainOnUpgrade: false,
     requiredLevel: 141,
     sellPrice: 470,
-    name: 'Sower\u2019s Lament Lvl 2',
+    name: 'Sower’s Lament Lvl 2',
     assetName: 'SowersLament',
     description: 'An axe whetted with the tears of a forgotten settler.',
-    damage: {
-      physical: 150,
-    },
+    damage: { physical: 150 },
     id: 'SowersLament2',
   },
   SowersLament3: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'GainShieldOnHitCount',
-      },
-      {
-        id: 'FireKnifeOnAttack',
-      },
-    ],
+    abilities: [{ id: 'GainShieldOnHitCount' }, { id: 'FireKnifeOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -19589,12 +13738,10 @@ export const items: Record<string, Item> = {
     retainOnUpgrade: false,
     requiredLevel: 150,
     sellPrice: 600,
-    name: 'Sower\u2019s Lament Lvl 3',
+    name: 'Sower’s Lament Lvl 3',
     assetName: 'SowersLament',
     description: 'An axe whetted with the tears of a forgotten settler.',
-    damage: {
-      physical: 158,
-    },
+    damage: { physical: 158 },
     id: 'SowersLament3',
   },
   StoneBlade: {
@@ -19609,18 +13756,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 25,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 24,
-          },
-          {
-            id: 'Ore',
-            amount: 20,
-          },
+          { id: 'Stone', amount: 25 },
+          { id: 'EssenceSpicy', amount: 24 },
+          { id: 'Ore', amount: 20 },
         ],
         yields: 'StoneBlade2',
       },
@@ -19631,9 +13769,7 @@ export const items: Record<string, Item> = {
     name: 'Stone Blade Lvl 1',
     assetName: 'StoneBlade',
     description: 'A deadly blade with an unlockable Ability.',
-    damage: {
-      physical: 23,
-    },
+    damage: { physical: 23 },
     id: 'StoneBlade',
   },
   StoneBlade2: {
@@ -19648,18 +13784,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 55,
-          },
-          {
-            id: 'Ore',
-            amount: 55,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 32,
-          },
+          { id: 'Stone', amount: 55 },
+          { id: 'Ore', amount: 55 },
+          { id: 'EssenceSpicy', amount: 32 },
         ],
         yields: 'StoneBladeUltimate',
       },
@@ -19670,27 +13797,16 @@ export const items: Record<string, Item> = {
     name: 'Stone Blade Lvl 2',
     assetName: 'StoneBlade',
     description: 'A deadly blade with an unlockable Ability.',
-    damage: {
-      physical: 42,
-    },
+    damage: { physical: 42 },
     id: 'StoneBlade2',
   },
   StoneBladeUltimate: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'MagicKnifeOnRage',
-      },
-    ],
+    abilities: [{ id: 'MagicKnifeOnRage' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 22,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 22, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -19703,9 +13819,7 @@ export const items: Record<string, Item> = {
     assetName: 'StoneBlade',
     description:
       'A deadly blade that summons a Magic Knife when you unleash Rage.',
-    damage: {
-      physical: 60,
-    },
+    damage: { physical: 60 },
     id: 'StoneBladeUltimate',
   },
   StrikeSoul: {
@@ -19714,12 +13828,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -19727,14 +13836,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 380,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 32,
-          },
+          { id: 'Iron', amount: 380 },
+          { id: 'EssenceCreamy', amount: 32 },
         ],
         yields: 'StrikeSoul2',
       },
@@ -19746,9 +13849,7 @@ export const items: Record<string, Item> = {
     assetName: 'StrikeSoul',
     description:
       'Charged with lightning energy, this blade has an unlockable Ability.',
-    damage: {
-      lightning: 42,
-    },
+    damage: { lightning: 42 },
     id: 'StrikeSoul',
   },
   StrikeSoul2: {
@@ -19757,12 +13858,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -19770,14 +13866,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 430,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 38,
-          },
+          { id: 'Iron', amount: 430 },
+          { id: 'EssenceCreamy', amount: 38 },
         ],
         yields: 'StrikeSoul3',
       },
@@ -19789,9 +13879,7 @@ export const items: Record<string, Item> = {
     assetName: 'StrikeSoul',
     description:
       'Charged with lightning energy, this blade has an unlockable Ability.',
-    damage: {
-      lightning: 48,
-    },
+    damage: { lightning: 48 },
     id: 'StrikeSoul2',
   },
   StrikeSoul3: {
@@ -19800,12 +13888,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -19813,14 +13896,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 600,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 44,
-          },
+          { id: 'Iron', amount: 600 },
+          { id: 'EssenceCreamy', amount: 44 },
         ],
         yields: 'StrikeSoul4',
       },
@@ -19832,9 +13909,7 @@ export const items: Record<string, Item> = {
     assetName: 'StrikeSoul',
     description:
       'Charged with lightning energy, this blade has an unlockable Ability.',
-    damage: {
-      lightning: 54,
-    },
+    damage: { lightning: 54 },
     id: 'StrikeSoul3',
   },
   StrikeSoul4: {
@@ -19843,12 +13918,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -19856,14 +13926,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 800,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 62,
-          },
+          { id: 'Iron', amount: 800 },
+          { id: 'EssenceCreamy', amount: 62 },
         ],
         yields: 'StrikeSoul5',
       },
@@ -19875,27 +13939,16 @@ export const items: Record<string, Item> = {
     assetName: 'StrikeSoul',
     description:
       'Charged with lightning energy, this blade has an unlockable Ability.',
-    damage: {
-      lightning: 58,
-    },
+    damage: { lightning: 58 },
     id: 'StrikeSoul4',
   },
   StrikeSoul5: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'LightningOnHitCount',
-      },
-    ],
+    abilities: [{ id: 'LightningOnHitCount' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -19908,9 +13961,7 @@ export const items: Record<string, Item> = {
     assetName: 'StrikeSoul',
     description:
       'Charged with lightning energy, this blade has an unlockable Ability.',
-    damage: {
-      lightning: 58,
-    },
+    damage: { lightning: 58 },
     id: 'StrikeSoul5',
   },
   SturdyCleaver: {
@@ -19919,12 +13970,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: -2,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: -2, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -19932,14 +13978,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 16,
-          },
-          {
-            id: 'Wood',
-            amount: 8,
-          },
+          { id: 'Iron', amount: 16 },
+          { id: 'Wood', amount: 8 },
         ],
         yields: 'SturdyCleaver2',
       },
@@ -19950,9 +13990,7 @@ export const items: Record<string, Item> = {
     name: 'Sturdy Cleaver Lvl 1',
     assetName: 'SturdyCleaver',
     description: 'A tough blade for a tough job.',
-    damage: {
-      physical: 26,
-    },
+    damage: { physical: 26 },
     id: 'SturdyCleaver',
   },
   SturdyCleaver2: {
@@ -19961,12 +13999,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: -2,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: -2, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -19974,14 +14007,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Iron',
-            amount: 40,
-          },
-          {
-            id: 'Wood',
-            amount: 30,
-          },
+          { id: 'Iron', amount: 40 },
+          { id: 'Wood', amount: 30 },
         ],
         yields: 'SturdyCleaver3',
       },
@@ -19992,9 +14019,7 @@ export const items: Record<string, Item> = {
     name: 'Sturdy Cleaver Lvl 2',
     assetName: 'SturdyCleaver',
     description: 'A tough blade for a tough job.',
-    damage: {
-      physical: 47,
-    },
+    damage: { physical: 47 },
     id: 'SturdyCleaver2',
   },
   SturdyCleaver3: {
@@ -20003,12 +14028,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: -2,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: -2, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -20020,19 +14040,13 @@ export const items: Record<string, Item> = {
     name: 'Sturdy Cleaver Lvl 3',
     assetName: 'SturdyCleaver',
     description: 'A tough blade for a tough job.',
-    damage: {
-      physical: 60,
-    },
+    damage: { physical: 60 },
     id: 'SturdyCleaver3',
   },
   SuddenVengeance: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'MagicKnifeOnRage',
-      },
-    ],
+    abilities: [{ id: 'MagicKnifeOnRage' }],
     tags: ['equipment'],
     statModifiers: [],
     equipSlots: ['Weapon'],
@@ -20045,39 +14059,18 @@ export const items: Record<string, Item> = {
     name: 'Sudden Vengeance',
     assetName: 'SuddenVengeance',
     description: 'A ferocious blade that generates a Magic Knife on Rage.',
-    damage: {
-      physical: 36,
-    },
+    damage: { physical: 36 },
     id: 'SuddenVengeance',
   },
   SurgeBlade: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'LightningOnAttack',
-      },
-    ],
+    abilities: [{ id: 'LightningOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 2,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.015,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 2, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.015, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -20089,33 +14082,17 @@ export const items: Record<string, Item> = {
     name: 'Surge Blade',
     assetName: 'SurgeBlade',
     description: 'A blade rippling with electrical potential.',
-    damage: {
-      physical: 30,
-    },
+    damage: { physical: 30 },
     id: 'SurgeBlade',
   },
   SurgeBladeEX: {
     type: 'ItemDefinition',
     rarity: 'epic',
-    abilities: [
-      {
-        id: 'LightningOnAttack',
-      },
-    ],
+    abilities: [{ id: 'LightningOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 3,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Crit',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 3, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Crit', value: 0.02, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Dodge',
@@ -20133,27 +14110,16 @@ export const items: Record<string, Item> = {
     name: 'Surge Blade EX',
     assetName: 'SurgeBlade',
     description: 'A blade rippling with electrical potential.',
-    damage: {
-      physical: 51,
-    },
+    damage: { physical: 51 },
     id: 'SurgeBladeEX',
   },
   SwordOfRespite: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'GainShieldOnEnemyDeath',
-      },
-    ],
+    abilities: [{ id: 'GainShieldOnEnemyDeath' }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 75,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 75, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -20165,19 +14131,13 @@ export const items: Record<string, Item> = {
     name: 'Sword Of Respite',
     assetName: 'SwordOfRespite',
     description: 'Legacy item. A blade that protects when felling an enemy.',
-    damage: {
-      physical: 110,
-    },
+    damage: { physical: 110 },
     id: 'SwordOfRespite',
   },
   SwordOfRespiteEX: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'GainShieldOnEnemyDeath',
-      },
-    ],
+    abilities: [{ id: 'GainShieldOnEnemyDeath' }],
     tags: ['equipment'],
     statModifiers: [
       {
@@ -20197,30 +14157,47 @@ export const items: Record<string, Item> = {
     name: 'Sword Of Respite EX',
     assetName: 'SwordOfRespite',
     description: 'Legacy item. A blade that protects when felling an enemy.',
-    damage: {
-      physical: 125,
-    },
+    damage: { physical: 125 },
     id: 'SwordOfRespiteEX',
+  },
+  VanguardBlade: {
+    type: 'ItemDefinition',
+    rarity: 'uncommon',
+    abilities: [],
+    tags: ['equipment'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'MaxHp', value: 36, modifierType: 'add' },
+    ],
+    equipSlots: ['Weapon'],
+    isStackable: false,
+    amount: 1,
+    upgrades: [
+      {
+        requires: [
+          { id: 'Ore', amount: 15 },
+          { id: 'Stone', amount: 15 },
+          { id: 'EssenceSpicy', amount: 6 },
+        ],
+        yields: 'VanguardBladeUltimate',
+      },
+    ],
+    retainOnUpgrade: false,
+    requiredLevel: 1,
+    sellPrice: 40,
+    name: 'Vanguard Blade',
+    assetName: 'BattlereadyBlade',
+    description:
+      'A reliable weapon that gives the wielder HP. Has an unlockable Ability.',
+    damage: { physical: 28 },
+    id: 'VanguardBlade',
   },
   VanguardBladeUltimate: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
-    abilities: [
-      {
-        id: 'HealOnFirstTurn',
-        params: {
-          healAmount: 0.1,
-        },
-      },
-    ],
+    abilities: [{ id: 'HealOnFirstTurn', params: { healAmount: 0.1 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'MaxHp',
-        value: 45,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'MaxHp', value: 45, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -20233,30 +14210,16 @@ export const items: Record<string, Item> = {
     assetName: 'BattlereadyBlade',
     description:
       'A reliable weapon that gives the wielder HP and heals on first turn.',
-    damage: {
-      physical: 40,
-    },
+    damage: { physical: 40 },
     id: 'VanguardBladeUltimate',
   },
   SouleaterAxe: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'HealOnEnemyDeath',
-        params: {
-          healAmount: 0.025,
-        },
-      },
-    ],
+    abilities: [{ id: 'HealOnEnemyDeath', params: { healAmount: 0.025 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 50,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 50, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -20269,30 +14232,16 @@ export const items: Record<string, Item> = {
     assetName: 'SouldrainAxe',
     description:
       'A merciless icy axe that restores lifeforce from fallen enemies.',
-    damage: {
-      ice: 36,
-    },
+    damage: { ice: 36 },
     id: 'SouleaterAxe',
   },
   SouleaterAxeEX: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'HealOnEnemyDeath',
-        params: {
-          healAmount: 0.025,
-        },
-      },
-    ],
+    abilities: [{ id: 'HealOnEnemyDeath', params: { healAmount: 0.025 } }],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 85,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 85, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -20305,30 +14254,18 @@ export const items: Record<string, Item> = {
     assetName: 'SouldrainAxe',
     description:
       'A merciless ice axe which restores lifeforce from fallen enemies.',
-    damage: {
-      ice: 36,
-    },
+    damage: { ice: 36 },
     id: 'SouleaterAxeEX',
   },
   SwordOfSolace: {
     type: 'ItemDefinition',
     rarity: 'legendary',
     abilities: [
-      {
-        id: 'GainShieldOnEnemyDeath',
-        params: {
-          shieldAmount: 0.15,
-        },
-      },
+      { id: 'GainShieldOnEnemyDeath', params: { shieldAmount: 0.05 } },
     ],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Defense',
-        value: 75,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Defense', value: 75, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -20340,21 +14277,14 @@ export const items: Record<string, Item> = {
     name: 'Sword Of Solace',
     assetName: 'SwordOfRespite',
     description: 'A blade that protects when felling an enemy.',
-    damage: {
-      physical: 110,
-    },
+    damage: { physical: 110 },
     id: 'SwordOfSolace',
   },
   SwordOfSolaceEX: {
     type: 'ItemDefinition',
     rarity: 'legendary',
     abilities: [
-      {
-        id: 'GainShieldOnEnemyDeath',
-        params: {
-          shieldAmount: 0.15,
-        },
-      },
+      { id: 'GainShieldOnEnemyDeath', params: { shieldAmount: 0.05 } },
     ],
     tags: ['equipment'],
     statModifiers: [
@@ -20375,9 +14305,7 @@ export const items: Record<string, Item> = {
     name: 'Sword Of Solace EX',
     assetName: 'SwordOfRespite',
     description: 'A blade that protects when felling an enemy.',
-    damage: {
-      physical: 125,
-    },
+    damage: { physical: 125 },
     id: 'SwordOfSolaceEX',
   },
   SwordOfSerpents: {
@@ -20386,10 +14314,7 @@ export const items: Record<string, Item> = {
     abilities: [
       {
         id: 'ApplyPoisonOnAttack',
-        params: {
-          damagePerTurn: 30,
-          applyChance: 0.4,
-        },
+        params: { damagePerTurn: 30, applyChance: 0.4 },
       },
     ],
     tags: ['equipment'],
@@ -20400,14 +14325,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 680,
-          },
-          {
-            id: 'EssenceDecadent',
-            amount: 55,
-          },
+          { id: 'Wood', amount: 680 },
+          { id: 'EssenceDecadent', amount: 55 },
         ],
         yields: 'SwordOfSerpents2',
       },
@@ -20418,9 +14337,7 @@ export const items: Record<string, Item> = {
     name: 'Sword of Serpents Lvl 1',
     assetName: 'SwordOfSerpents',
     description: 'Swift, silent and laced with traces of a deadly venom.',
-    damage: {
-      physical: 110,
-    },
+    damage: { physical: 110 },
     id: 'SwordOfSerpents',
   },
   SwordOfSerpents2: {
@@ -20429,10 +14346,7 @@ export const items: Record<string, Item> = {
     abilities: [
       {
         id: 'ApplyPoisonOnAttack',
-        params: {
-          damagePerTurn: 35,
-          applyChance: 0.45,
-        },
+        params: { damagePerTurn: 35, applyChance: 0.45 },
       },
     ],
     tags: ['equipment'],
@@ -20443,18 +14357,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 790,
-          },
-          {
-            id: 'Luminite',
-            amount: 32,
-          },
-          {
-            id: 'EssenceDecadent',
-            amount: 61,
-          },
+          { id: 'Wood', amount: 790 },
+          { id: 'Luminite', amount: 32 },
+          { id: 'EssenceDecadent', amount: 61 },
         ],
         yields: 'SwordOfSerpents3',
       },
@@ -20465,9 +14370,7 @@ export const items: Record<string, Item> = {
     name: 'Sword of Serpents Lvl 2',
     assetName: 'SwordOfSerpents',
     description: 'Swift, silent and laced with traces of a deadly venom.',
-    damage: {
-      physical: 118,
-    },
+    damage: { physical: 118 },
     id: 'SwordOfSerpents2',
   },
   SwordOfSerpents3: {
@@ -20476,10 +14379,7 @@ export const items: Record<string, Item> = {
     abilities: [
       {
         id: 'ApplyPoisonOnAttack',
-        params: {
-          damagePerTurn: 40,
-          applyChance: 0.5,
-        },
+        params: { damagePerTurn: 40, applyChance: 0.5 },
       },
     ],
     tags: ['equipment'],
@@ -20490,18 +14390,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 850,
-          },
-          {
-            id: 'Luminite',
-            amount: 32,
-          },
-          {
-            id: 'EssenceDecadent',
-            amount: 70,
-          },
+          { id: 'Wood', amount: 850 },
+          { id: 'Luminite', amount: 32 },
+          { id: 'EssenceDecadent', amount: 70 },
         ],
         yields: 'SwordOfSerpents4',
       },
@@ -20512,9 +14403,7 @@ export const items: Record<string, Item> = {
     name: 'Sword of Serpents Lvl 3',
     assetName: 'SwordOfSerpents',
     description: 'Swift, silent and laced with traces of a deadly venom.',
-    damage: {
-      physical: 126,
-    },
+    damage: { physical: 126 },
     id: 'SwordOfSerpents3',
   },
   SwordOfSerpents4: {
@@ -20523,10 +14412,7 @@ export const items: Record<string, Item> = {
     abilities: [
       {
         id: 'ApplyPoisonOnAttack',
-        params: {
-          damagePerTurn: 45,
-          applyChance: 0.55,
-        },
+        params: { damagePerTurn: 45, applyChance: 0.55 },
       },
     ],
     tags: ['equipment'],
@@ -20537,18 +14423,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 1200,
-          },
-          {
-            id: 'Luminite',
-            amount: 35,
-          },
-          {
-            id: 'EssenceDecadent',
-            amount: 85,
-          },
+          { id: 'Wood', amount: 1200 },
+          { id: 'Luminite', amount: 35 },
+          { id: 'EssenceDecadent', amount: 85 },
         ],
         yields: 'SwordOfSerpents5',
       },
@@ -20559,9 +14436,7 @@ export const items: Record<string, Item> = {
     name: 'Sword of Serpents Lvl 4',
     assetName: 'SwordOfSerpents',
     description: 'Swift, silent and laced with traces of a deadly venom.',
-    damage: {
-      physical: 134,
-    },
+    damage: { physical: 134 },
     id: 'SwordOfSerpents4',
   },
   SwordOfSerpents5: {
@@ -20570,10 +14445,7 @@ export const items: Record<string, Item> = {
     abilities: [
       {
         id: 'ApplyPoisonOnAttack',
-        params: {
-          damagePerTurn: 50,
-          applyChance: 0.6,
-        },
+        params: { damagePerTurn: 50, applyChance: 0.6 },
       },
     ],
     tags: ['equipment'],
@@ -20588,22 +14460,13 @@ export const items: Record<string, Item> = {
     name: 'Sword of Serpents Ultimate',
     assetName: 'SwordOfSerpents',
     description: 'Swift, silent and laced with traces of a deadly venom.',
-    damage: {
-      physical: 134,
-    },
+    damage: { physical: 134 },
     id: 'SwordOfSerpents5',
   },
   Thornbane: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'ApplyPoisonOnAttack',
-        params: {
-          damagePerTurn: 25,
-        },
-      },
-    ],
+    abilities: [{ id: 'ApplyPoisonOnAttack', params: { damagePerTurn: 25 } }],
     tags: ['equipment'],
     statModifiers: [],
     equipSlots: ['Weapon'],
@@ -20612,18 +14475,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 520,
-          },
-          {
-            id: 'EssenceCrunchy',
-            amount: 32,
-          },
-          {
-            id: 'Luminite',
-            amount: 18,
-          },
+          { id: 'Wood', amount: 520 },
+          { id: 'EssenceCrunchy', amount: 32 },
+          { id: 'Luminite', amount: 18 },
         ],
         yields: 'Thornbane2',
       },
@@ -20635,22 +14489,13 @@ export const items: Record<string, Item> = {
     assetName: 'Thornbane',
     description:
       'A serrated blade dipped in poison which grows in strength on upgrade.',
-    damage: {
-      physical: 100,
-    },
+    damage: { physical: 100 },
     id: 'Thornbane',
   },
   Thornbane2: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'ApplyPoisonOnAttack',
-        params: {
-          damagePerTurn: 30,
-        },
-      },
-    ],
+    abilities: [{ id: 'ApplyPoisonOnAttack', params: { damagePerTurn: 30 } }],
     tags: ['equipment'],
     statModifiers: [],
     equipSlots: ['Weapon'],
@@ -20659,18 +14504,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 640,
-          },
-          {
-            id: 'Luminite',
-            amount: 32,
-          },
-          {
-            id: 'EssenceCrunchy',
-            amount: 27,
-          },
+          { id: 'Wood', amount: 640 },
+          { id: 'Luminite', amount: 32 },
+          { id: 'EssenceCrunchy', amount: 27 },
         ],
         yields: 'Thornbane3',
       },
@@ -20682,22 +14518,13 @@ export const items: Record<string, Item> = {
     assetName: 'Thornbane',
     description:
       'A serrated blade dipped in poison which grows in strength on upgrade.',
-    damage: {
-      physical: 110,
-    },
+    damage: { physical: 110 },
     id: 'Thornbane2',
   },
   Thornbane3: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'ApplyPoisonOnAttack',
-        params: {
-          damagePerTurn: 35,
-        },
-      },
-    ],
+    abilities: [{ id: 'ApplyPoisonOnAttack', params: { damagePerTurn: 35 } }],
     tags: ['equipment'],
     statModifiers: [],
     equipSlots: ['Weapon'],
@@ -20706,18 +14533,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 820,
-          },
-          {
-            id: 'Luminite',
-            amount: 32,
-          },
-          {
-            id: 'EssenceCrunchy',
-            amount: 44,
-          },
+          { id: 'Wood', amount: 820 },
+          { id: 'Luminite', amount: 32 },
+          { id: 'EssenceCrunchy', amount: 44 },
         ],
         yields: 'Thornbane4',
       },
@@ -20729,22 +14547,13 @@ export const items: Record<string, Item> = {
     assetName: 'Thornbane',
     description:
       'A serrated blade dipped in poison which grows in strength on upgrade.',
-    damage: {
-      physical: 120,
-    },
+    damage: { physical: 120 },
     id: 'Thornbane3',
   },
   Thornbane4: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'ApplyPoisonOnAttack',
-        params: {
-          damagePerTurn: 40,
-        },
-      },
-    ],
+    abilities: [{ id: 'ApplyPoisonOnAttack', params: { damagePerTurn: 40 } }],
     tags: ['equipment'],
     statModifiers: [],
     equipSlots: ['Weapon'],
@@ -20753,18 +14562,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Wood',
-            amount: 1200,
-          },
-          {
-            id: 'Luminite',
-            amount: 38,
-          },
-          {
-            id: 'EssenceCrunchy',
-            amount: 57,
-          },
+          { id: 'Wood', amount: 1200 },
+          { id: 'Luminite', amount: 38 },
+          { id: 'EssenceCrunchy', amount: 57 },
         ],
         yields: 'ThornbaneUltimate',
       },
@@ -20776,9 +14576,7 @@ export const items: Record<string, Item> = {
     assetName: 'Thornbane',
     description:
       'A serrated blade dipped in poison which grows in strength on upgrade.',
-    damage: {
-      physical: 130,
-    },
+    damage: { physical: 130 },
     id: 'Thornbane4',
   },
   ThornbaneUltimate: {
@@ -20787,10 +14585,7 @@ export const items: Record<string, Item> = {
     abilities: [
       {
         id: 'ApplyPoisonOnAttack',
-        params: {
-          damagePerTurn: 50,
-          applyChance: 0.6,
-        },
+        params: { damagePerTurn: 50, applyChance: 0.6 },
       },
     ],
     tags: ['equipment'],
@@ -20806,19 +14601,13 @@ export const items: Record<string, Item> = {
     assetName: 'Thornbane',
     description:
       'A serrated blade dipped in poison which grows in strength on upgrade.',
-    damage: {
-      physical: 130,
-    },
+    damage: { physical: 130 },
     id: 'ThornbaneUltimate',
   },
   VectraEdge: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'LightningOnAttack',
-      },
-    ],
+    abilities: [{ id: 'LightningOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
       {
@@ -20839,22 +14628,13 @@ export const items: Record<string, Item> = {
     assetName: 'VectraEdge',
     description:
       'A hacked utility slicer which delivers a lightning bolt on attack.',
-    damage: {
-      physical: 95,
-    },
+    damage: { physical: 95 },
     id: 'VectraEdge',
   },
   VectraEdgeEX: {
     type: 'ItemDefinition',
     rarity: 'legendary',
-    abilities: [
-      {
-        id: 'LightningOnAttack',
-      },
-      {
-        id: 'AddRageOnLightning',
-      },
-    ],
+    abilities: [{ id: 'LightningOnAttack' }, { id: 'AddRageOnLightning' }],
     tags: ['equipment'],
     statModifiers: [
       {
@@ -20875,9 +14655,7 @@ export const items: Record<string, Item> = {
     assetName: 'VectraEdge',
     description:
       'A hacked utility slicer which delivers a lightning bolt on attack and builds Rage.',
-    damage: {
-      physical: 105,
-    },
+    damage: { physical: 105 },
     id: 'VectraEdgeEX',
   },
   VipersFang: {
@@ -20886,10 +14664,7 @@ export const items: Record<string, Item> = {
     abilities: [
       {
         id: 'ApplyPoisonOnAttack',
-        params: {
-          damagePerTurn: 110,
-          applyChance: 1,
-        },
+        params: { damagePerTurn: 110, applyChance: 1 },
       },
     ],
     tags: ['equipment'],
@@ -20904,19 +14679,13 @@ export const items: Record<string, Item> = {
     name: "Viper's Fang",
     assetName: 'VipersFang',
     description: 'Once it draws blood, the fight is already decided.',
-    damage: {
-      physical: 110,
-    },
+    damage: { physical: 110 },
     id: 'VipersFang',
   },
   WastelandBlade: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'FireKnifeOnTurnStart',
-      },
-    ],
+    abilities: [{ id: 'FireKnifeOnTurnStart' }],
     tags: ['equipment'],
     statModifiers: [
       {
@@ -20937,19 +14706,13 @@ export const items: Record<string, Item> = {
     assetName: 'WastelandBlade',
     description:
       'A rough and ready blade that spits a fire knife on turn start.',
-    damage: {
-      physical: 82,
-    },
+    damage: { physical: 82 },
     id: 'WastelandBlade',
   },
   WastelandBladeEX: {
     type: 'ItemDefinition',
     rarity: 'rare',
-    abilities: [
-      {
-        id: 'FireKnifeOnAttack',
-      },
-    ],
+    abilities: [{ id: 'FireKnifeOnAttack' }],
     tags: ['equipment'],
     statModifiers: [
       {
@@ -20969,9 +14732,7 @@ export const items: Record<string, Item> = {
     name: 'Wasteland Blade EX',
     assetName: 'WastelandBlade',
     description: 'A rough and ready blade that spits a fire knife on attack.',
-    damage: {
-      physical: 98,
-    },
+    damage: { physical: 98 },
     id: 'WastelandBladeEX',
   },
   WindPoweredBlade: {
@@ -20980,18 +14741,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 5,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.02,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 5, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.02, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -20999,22 +14750,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 800,
-          },
-          {
-            id: 'Iron',
-            amount: 800,
-          },
-          {
-            id: 'Luminite',
-            amount: 50,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 22,
-          },
+          { id: 'Stone', amount: 800 },
+          { id: 'Iron', amount: 800 },
+          { id: 'Luminite', amount: 50 },
+          { id: 'EssenceFluffy', amount: 22 },
         ],
         yields: 'WindPoweredBlade2',
       },
@@ -21025,9 +14764,7 @@ export const items: Record<string, Item> = {
     name: 'Wind Powered Blade Lvl 1',
     assetName: 'WindPoweredBlade',
     description: 'A broad blade recovered from a towering hilltop ruin.',
-    damage: {
-      physical: 150,
-    },
+    damage: { physical: 150 },
     id: 'WindPoweredBlade',
   },
   WindPoweredBlade2: {
@@ -21036,12 +14773,7 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 6,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 6, modifierType: 'add' },
       {
         type: 'StatModifier',
         stat: 'Dodge',
@@ -21055,22 +14787,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Stone',
-            amount: 800,
-          },
-          {
-            id: 'Iron',
-            amount: 800,
-          },
-          {
-            id: 'Luminite',
-            amount: 50,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 22,
-          },
+          { id: 'Stone', amount: 800 },
+          { id: 'Iron', amount: 800 },
+          { id: 'Luminite', amount: 50 },
+          { id: 'EssenceFluffy', amount: 22 },
         ],
         yields: 'WindPoweredBlade3',
       },
@@ -21081,9 +14801,7 @@ export const items: Record<string, Item> = {
     name: 'Wind Powered Blade Lvl 2',
     assetName: 'WindPoweredBlade',
     description: 'A broad blade recovered from a towering hilltop ruin.',
-    damage: {
-      physical: 156,
-    },
+    damage: { physical: 156 },
     id: 'WindPoweredBlade2',
   },
   WindPoweredBlade3: {
@@ -21092,18 +14810,8 @@ export const items: Record<string, Item> = {
     abilities: [],
     tags: ['equipment'],
     statModifiers: [
-      {
-        type: 'StatModifier',
-        stat: 'Speed',
-        value: 7,
-        modifierType: 'add',
-      },
-      {
-        type: 'StatModifier',
-        stat: 'Dodge',
-        value: 0.03,
-        modifierType: 'add',
-      },
+      { type: 'StatModifier', stat: 'Speed', value: 7, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
     ],
     equipSlots: ['Weapon'],
     isStackable: false,
@@ -21115,10 +14823,224 @@ export const items: Record<string, Item> = {
     name: 'Wind Powered Blade Lvl 3',
     assetName: 'WindPoweredBlade',
     description: 'A broad blade recovered from a towering hilltop ruin.',
-    damage: {
-      physical: 164,
-    },
+    damage: { physical: 164 },
     id: 'WindPoweredBlade3',
+  },
+  TesterAshbornRageWave: {
+    type: 'ItemDefinition',
+    rarity: 'rare',
+    abilities: [{ id: 'RageWave' }],
+    tags: ['equipment'],
+    statModifiers: [
+      {
+        type: 'StatModifier',
+        stat: 'SilenceResist',
+        value: 0.05,
+        modifierType: 'add',
+      },
+    ],
+    equipSlots: ['Weapon'],
+    isStackable: false,
+    amount: 1,
+    upgrades: [],
+    retainOnUpgrade: false,
+    requiredLevel: 1,
+    sellPrice: 110,
+    name: 'TEST - Rage Wave - Ashborn Blade',
+    assetName: 'AshbornBlade',
+    description:
+      'A blade tempered in volcanic heat, with an unlockable Ability.',
+    damage: { fire: 38 },
+    id: 'TesterAshbornRageWave',
+  },
+  TesterAshbornBladeStorm: {
+    type: 'ItemDefinition',
+    rarity: 'rare',
+    abilities: [{ id: 'RageBladeStorm' }],
+    tags: ['equipment'],
+    statModifiers: [
+      {
+        type: 'StatModifier',
+        stat: 'SilenceResist',
+        value: 0.05,
+        modifierType: 'add',
+      },
+    ],
+    equipSlots: ['Weapon'],
+    isStackable: false,
+    amount: 1,
+    upgrades: [],
+    retainOnUpgrade: false,
+    requiredLevel: 1,
+    sellPrice: 110,
+    name: 'TEST - Blade Storm - Ashborn Blade',
+    assetName: 'AshbornBlade',
+    description:
+      'A blade tempered in volcanic heat, with an unlockable Ability.',
+    damage: { fire: 38 },
+    id: 'TesterAshbornBladeStorm',
+  },
+  TesterAshbornFieryBelly: {
+    type: 'ItemDefinition',
+    rarity: 'rare',
+    abilities: [{ id: 'RageAttackUp' }],
+    tags: ['equipment'],
+    statModifiers: [
+      {
+        type: 'StatModifier',
+        stat: 'SilenceResist',
+        value: 0.05,
+        modifierType: 'add',
+      },
+    ],
+    equipSlots: ['Weapon'],
+    isStackable: false,
+    amount: 1,
+    upgrades: [],
+    retainOnUpgrade: false,
+    requiredLevel: 1,
+    sellPrice: 110,
+    name: 'TEST - Fiery Belly - Ashborn Blade',
+    assetName: 'AshbornBlade',
+    description:
+      'A blade tempered in volcanic heat, with an unlockable Ability.',
+    damage: { fire: 38 },
+    id: 'TesterAshbornFieryBelly',
+  },
+  TesterBuccaneerRageWave: {
+    type: 'ItemDefinition',
+    rarity: 'epic',
+    abilities: [{ id: 'RageWave' }],
+    tags: ['equipment'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Crit', value: 0.03, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
+    ],
+    equipSlots: ['Weapon'],
+    isStackable: false,
+    amount: 1,
+    upgrades: [],
+    retainOnUpgrade: false,
+    requiredLevel: 1,
+    sellPrice: 175,
+    name: "TEST - Rage Wave - Buccaneer's Friend",
+    assetName: 'BuccaneersFriend',
+    description:
+      'A swashbuckling blade that infuses its bearer with improved Crit and Dodge.',
+    damage: { physical: 100 },
+    id: 'TesterBuccaneerRageWave',
+  },
+  TesterBuccaneerBladeStorm: {
+    type: 'ItemDefinition',
+    rarity: 'epic',
+    abilities: [{ id: 'RageBladeStorm' }],
+    tags: ['equipment'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Crit', value: 0.03, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
+    ],
+    equipSlots: ['Weapon'],
+    isStackable: false,
+    amount: 1,
+    upgrades: [],
+    retainOnUpgrade: false,
+    requiredLevel: 1,
+    sellPrice: 175,
+    name: "TEST - Blade Storm - Buccaneer's Friend",
+    assetName: 'BuccaneersFriend',
+    description:
+      'A swashbuckling blade that infuses its bearer with improved Crit and Dodge.',
+    damage: { physical: 100 },
+    id: 'TesterBuccaneerBladeStorm',
+  },
+  TesterBuccaneerFieryBelly: {
+    type: 'ItemDefinition',
+    rarity: 'epic',
+    abilities: [{ id: 'RageAttackUp' }],
+    tags: ['equipment'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Crit', value: 0.03, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
+    ],
+    equipSlots: ['Weapon'],
+    isStackable: false,
+    amount: 1,
+    upgrades: [],
+    retainOnUpgrade: false,
+    requiredLevel: 1,
+    sellPrice: 175,
+    name: "TEST - Fiery Belly - Buccaneer's Friend",
+    assetName: 'BuccaneersFriend',
+    description:
+      'A swashbuckling blade that infuses its bearer with improved Crit and Dodge.',
+    damage: { physical: 100 },
+    id: 'TesterBuccaneerFieryBelly',
+  },
+  TesterWindBladeRageWave: {
+    type: 'ItemDefinition',
+    rarity: 'epic',
+    abilities: [{ id: 'RageWave' }],
+    tags: ['equipment'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Speed', value: 7, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
+    ],
+    equipSlots: ['Weapon'],
+    isStackable: false,
+    amount: 1,
+    upgrades: [],
+    retainOnUpgrade: false,
+    requiredLevel: 1,
+    sellPrice: 500,
+    name: 'TEST - Rage Wave - Wind Powered Blade',
+    assetName: 'WindPoweredBlade',
+    description: 'A broad blade recovered from a towering hilltop ruin.',
+    damage: { physical: 164 },
+    id: 'TesterWindBladeRageWave',
+  },
+  TesterWindBladeBladeStorm: {
+    type: 'ItemDefinition',
+    rarity: 'epic',
+    abilities: [{ id: 'RageBladeStorm' }],
+    tags: ['equipment'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Speed', value: 7, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
+    ],
+    equipSlots: ['Weapon'],
+    isStackable: false,
+    amount: 1,
+    upgrades: [],
+    retainOnUpgrade: false,
+    requiredLevel: 1,
+    sellPrice: 500,
+    name: 'TEST - Blade Storm - Wind Powered Blade',
+    assetName: 'WindPoweredBlade',
+    description: 'A broad blade recovered from a towering hilltop ruin.',
+    damage: { physical: 164 },
+    id: 'TesterWindBladeBladeStorm',
+  },
+  TesterWindBladeFieryBelly: {
+    type: 'ItemDefinition',
+    rarity: 'epic',
+    abilities: [{ id: 'RageAttackUp' }],
+    tags: ['equipment'],
+    statModifiers: [
+      { type: 'StatModifier', stat: 'Speed', value: 7, modifierType: 'add' },
+      { type: 'StatModifier', stat: 'Dodge', value: 0.03, modifierType: 'add' },
+    ],
+    equipSlots: ['Weapon'],
+    isStackable: false,
+    amount: 1,
+    upgrades: [],
+    retainOnUpgrade: false,
+    requiredLevel: 1,
+    sellPrice: 500,
+    name: 'TEST - Fiery Belly - Wind Powered Blade',
+    assetName: 'WindPoweredBlade',
+    description: 'A broad blade recovered from a towering hilltop ruin.',
+    damage: { physical: 164 },
+    id: 'TesterWindBladeFieryBelly',
   },
   BlueprintBattlethirstyVest: {
     type: 'ItemDefinition',
@@ -21132,22 +15054,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'RuggedJerkin',
-            amount: 1,
-          },
-          {
-            id: 'SharkskinShirt',
-            amount: 1,
-          },
-          {
-            id: 'Ore',
-            amount: 320,
-          },
-          {
-            id: 'Wood',
-            amount: 140,
-          },
+          { id: 'RuggedJerkin', amount: 1 },
+          { id: 'SharkskinShirt', amount: 1 },
+          { id: 'Ore', amount: 320 },
+          { id: 'Wood', amount: 140 },
         ],
         yields: 'BattlethirstyVest',
       },
@@ -21172,18 +15082,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'ChippedShortsword',
-            amount: 1,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 4,
-          },
-          {
-            id: 'Wood',
-            amount: 15,
-          },
+          { id: 'ChippedShortsword', amount: 1 },
+          { id: 'EssenceSpicy', amount: 4 },
+          { id: 'Wood', amount: 15 },
         ],
         yields: 'BlazingShortsword',
       },
@@ -21208,18 +15109,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'FuryBlade',
-            amount: 1,
-          },
-          {
-            id: 'LifevineBelt',
-            amount: 1,
-          },
-          {
-            id: 'EssenceChewy',
-            amount: 40,
-          },
+          { id: 'FuryBlade', amount: 1 },
+          { id: 'LifevineBelt', amount: 1 },
+          { id: 'EssenceChewy', amount: 40 },
         ],
         yields: 'CursedNaginata',
       },
@@ -21244,14 +15136,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'GhostlyPendant',
-            amount: 1,
-          },
-          {
-            id: 'Duskbringer',
-            amount: 1,
-          },
+          { id: 'GhostlyPendant', amount: 1 },
+          { id: 'Duskbringer', amount: 1 },
         ],
         yields: 'DarkBargainCharm',
       },
@@ -21276,18 +15162,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'ChippedShortsword',
-            amount: 1,
-          },
-          {
-            id: 'EssenceDecadent',
-            amount: 4,
-          },
-          {
-            id: 'Ore',
-            amount: 15,
-          },
+          { id: 'ChippedShortsword', amount: 1 },
+          { id: 'EssenceDecadent', amount: 4 },
+          { id: 'Ore', amount: 15 },
         ],
         yields: 'DarkShortsword',
       },
@@ -21312,18 +15189,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'CrystalHeartCharm',
-            amount: 1,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 5,
-          },
-          {
-            id: 'EssenceDecadent',
-            amount: 5,
-          },
+          { id: 'CrystalHeartCharm', amount: 1 },
+          { id: 'EssenceCreamy', amount: 5 },
+          { id: 'EssenceDecadent', amount: 5 },
         ],
         yields: 'DeadlyRelic',
       },
@@ -21348,18 +15216,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'RoughRazor',
-            amount: 1,
-          },
-          {
-            id: 'RustedHelm',
-            amount: 1,
-          },
-          {
-            id: 'Wood',
-            amount: 600,
-          },
+          { id: 'RoughRazor', amount: 1 },
+          { id: 'RustedHelm', amount: 1 },
+          { id: 'Wood', amount: 600 },
         ],
         yields: 'DrainingEdge',
       },
@@ -21384,18 +15243,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'ChippedShortsword',
-            amount: 1,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 4,
-          },
-          {
-            id: 'Iron',
-            amount: 15,
-          },
+          { id: 'ChippedShortsword', amount: 1 },
+          { id: 'EssenceTangy', amount: 4 },
+          { id: 'Iron', amount: 15 },
         ],
         yields: 'ElectricShortsword',
       },
@@ -21420,18 +15270,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'MuscleRing',
-            amount: 1,
-          },
-          {
-            id: 'EssenceSpicy',
-            amount: 12,
-          },
-          {
-            id: 'InfernoRing',
-            amount: 1,
-          },
+          { id: 'MuscleRing', amount: 1 },
+          { id: 'EssenceSpicy', amount: 12 },
+          { id: 'InfernoRing', amount: 1 },
         ],
         yields: 'FerocityRing',
       },
@@ -21456,18 +15297,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'ChippedShortsword',
-            amount: 1,
-          },
-          {
-            id: 'EssenceFresh',
-            amount: 4,
-          },
-          {
-            id: 'Stone',
-            amount: 15,
-          },
+          { id: 'ChippedShortsword', amount: 1 },
+          { id: 'EssenceFresh', amount: 4 },
+          { id: 'Stone', amount: 15 },
         ],
         yields: 'FrozenShortsword',
       },
@@ -21492,18 +15324,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'RoughRazor',
-            amount: 1,
-          },
-          {
-            id: 'Shatterblade',
-            amount: 1,
-          },
-          {
-            id: 'Ore',
-            amount: 600,
-          },
+          { id: 'RoughRazor', amount: 1 },
+          { id: 'Shatterblade', amount: 1 },
+          { id: 'Ore', amount: 600 },
         ],
         yields: 'PhantomEdge',
       },
@@ -21528,18 +15351,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'HeavyBand',
-            amount: 1,
-          },
-          {
-            id: 'TwineCinch',
-            amount: 1,
-          },
-          {
-            id: 'EssenceDecadent',
-            amount: 8,
-          },
+          { id: 'HeavyBand', amount: 1 },
+          { id: 'TwineCinch', amount: 1 },
+          { id: 'EssenceDecadent', amount: 8 },
         ],
         yields: 'ShieldingBand',
       },
@@ -21564,22 +15378,10 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'RuggedJerkin',
-            amount: 1,
-          },
-          {
-            id: 'SharkskinShirt',
-            amount: 1,
-          },
-          {
-            id: 'Ore',
-            amount: 320,
-          },
-          {
-            id: 'Wood',
-            amount: 140,
-          },
+          { id: 'RuggedJerkin', amount: 1 },
+          { id: 'SharkskinShirt', amount: 1 },
+          { id: 'Ore', amount: 320 },
+          { id: 'Wood', amount: 140 },
         ],
         yields: 'BloodhungryVest',
       },
@@ -21604,18 +15406,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'CrystalHeartCharm',
-            amount: 1,
-          },
-          {
-            id: 'EssenceCreamy',
-            amount: 5,
-          },
-          {
-            id: 'EssenceDecadent',
-            amount: 5,
-          },
+          { id: 'CrystalHeartCharm', amount: 1 },
+          { id: 'EssenceCreamy', amount: 5 },
+          { id: 'EssenceDecadent', amount: 5 },
         ],
         yields: 'MortalRelic',
       },
@@ -21640,18 +15433,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'HeavyBand',
-            amount: 1,
-          },
-          {
-            id: 'TwineCinch',
-            amount: 1,
-          },
-          {
-            id: 'EssenceDecadent',
-            amount: 8,
-          },
+          { id: 'HeavyBand', amount: 1 },
+          { id: 'TwineCinch', amount: 1 },
+          { id: 'EssenceDecadent', amount: 8 },
         ],
         yields: 'WardingBand',
       },
@@ -21676,18 +15460,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'RoughRazor',
-            amount: 1,
-          },
-          {
-            id: 'GroundedPlate',
-            amount: 1,
-          },
-          {
-            id: 'Iron',
-            amount: 600,
-          },
+          { id: 'RoughRazor', amount: 1 },
+          { id: 'GroundedPlate', amount: 1 },
+          { id: 'Iron', amount: 600 },
         ],
         yields: 'SmitingEdge',
       },
@@ -21712,14 +15487,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Pumpkin',
-            amount: 400,
-          },
-          {
-            id: 'Candy',
-            amount: 900,
-          },
+          { id: 'Pumpkin', amount: 400 },
+          { id: 'Candy', amount: 900 },
         ],
         yields: 'SpookyScarf',
       },
@@ -21744,14 +15513,8 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'Pumpkin',
-            amount: 280,
-          },
-          {
-            id: 'Candy',
-            amount: 1400,
-          },
+          { id: 'Pumpkin', amount: 280 },
+          { id: 'Candy', amount: 1400 },
         ],
         yields: 'SpookyWitchHat',
       },
@@ -21776,18 +15539,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'HastySash',
-            amount: 1,
-          },
-          {
-            id: 'EssenceTangy',
-            amount: 6,
-          },
-          {
-            id: 'EssenceFluffy',
-            amount: 6,
-          },
+          { id: 'HastySash', amount: 1 },
+          { id: 'EssenceTangy', amount: 6 },
+          { id: 'EssenceFluffy', amount: 6 },
         ],
         yields: 'StormWrathBelt',
       },
@@ -21812,18 +15566,9 @@ export const items: Record<string, Item> = {
     upgrades: [
       {
         requires: [
-          {
-            id: 'ChargedFalchion',
-            amount: 1,
-          },
-          {
-            id: 'LeatherCap',
-            amount: 1,
-          },
-          {
-            id: 'Iron',
-            amount: 275,
-          },
+          { id: 'ChargedFalchion', amount: 1 },
+          { id: 'LeatherCap', amount: 1 },
+          { id: 'Iron', amount: 275 },
         ],
         yields: 'ThunderHelm',
       },
@@ -22797,6 +16542,42 @@ export const items: Record<string, Item> = {
     description: 'A spooky ingredient in seasonal blueprints.',
     id: 'Pumpkin',
   },
+  MapCastleRoadUncommon: {
+    type: 'ItemDefinition',
+    rarity: 'uncommon',
+    abilities: [],
+    tags: ['map', 'usable'],
+    statModifiers: [],
+    equipSlots: [],
+    isStackable: false,
+    amount: 1,
+    upgrades: [],
+    retainOnUpgrade: false,
+    requiredLevel: 1,
+    sellPrice: 20,
+    name: 'Map: Castle Road',
+    assetName: 'map_castle_road',
+    description: 'A map to the Castle Road.',
+    id: 'MapCastleRoadUncommon',
+  },
+  MapWeaponsMarketUncommon: {
+    type: 'ItemDefinition',
+    rarity: 'uncommon',
+    abilities: [],
+    tags: ['map', 'usable'],
+    statModifiers: [],
+    equipSlots: [],
+    isStackable: false,
+    amount: 1,
+    upgrades: [],
+    retainOnUpgrade: false,
+    requiredLevel: 1,
+    sellPrice: 20,
+    name: 'Map: Weapons Market',
+    assetName: 'map_weapons_market',
+    description: 'A map to the Weapons Market.',
+    id: 'MapWeaponsMarketUncommon',
+  },
   MapAncientBattlefieldUncommon: {
     type: 'ItemDefinition',
     rarity: 'uncommon',
@@ -22958,6 +16739,42 @@ export const items: Record<string, Item> = {
     assetName: 'map_seaside_cliffs',
     description: 'A map to the Seaside Cliffs.',
     id: 'MapSeasideCliffsUncommon',
+  },
+  MapCastleRoadRare: {
+    type: 'ItemDefinition',
+    rarity: 'rare',
+    abilities: [],
+    tags: ['map', 'usable'],
+    statModifiers: [],
+    equipSlots: [],
+    isStackable: false,
+    amount: 1,
+    upgrades: [],
+    retainOnUpgrade: false,
+    requiredLevel: 1,
+    sellPrice: 40,
+    name: 'Map: Castle Road',
+    assetName: 'map_castle_road',
+    description: 'An unusual map to the Castle Road.',
+    id: 'MapCastleRoadRare',
+  },
+  MapWeaponsMarketRare: {
+    type: 'ItemDefinition',
+    rarity: 'rare',
+    abilities: [],
+    tags: ['map', 'usable'],
+    statModifiers: [],
+    equipSlots: [],
+    isStackable: false,
+    amount: 1,
+    upgrades: [],
+    retainOnUpgrade: false,
+    requiredLevel: 1,
+    sellPrice: 40,
+    name: 'Map: Weapons Market',
+    assetName: 'map_weapons_market',
+    description: 'An unusual map to the Weapons Market.',
+    id: 'MapWeaponsMarketRare',
   },
   MapAncientBattlefieldRare: {
     type: 'ItemDefinition',

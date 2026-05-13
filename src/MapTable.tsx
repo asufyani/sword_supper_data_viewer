@@ -84,7 +84,7 @@ export const MapTable: React.FC<ItemsTableProps> = ({
                       ? `${tier.minLevel}-${tier.maxLevel}`
                       : `${tier.minLevel}+`
                     return (
-                      <Accordion>
+                      <Accordion key={`${mapKey}-${levels}`}>
                         <AccordionSummary>
                           <Typography component={'span'}>{levels}</Typography>
                         </AccordionSummary>
@@ -93,7 +93,10 @@ export const MapTable: React.FC<ItemsTableProps> = ({
                             const enemyName =
                               enemyNames[enemy.id as keyof typeof enemyNames]
                             return (
-                              <Typography component="div">{`${enemyName}: ${formatter.format(enemy.weight / totalWeight)}`}</Typography>
+                              <Typography
+                                component="div"
+                                key={`${mapKey}-${levels}-${enemy.id}`}
+                              >{`${enemyName}: ${formatter.format(enemy.weight / totalWeight)}`}</Typography>
                             )
                           })}
                         </AccordionDetails>
@@ -102,7 +105,7 @@ export const MapTable: React.FC<ItemsTableProps> = ({
                   })}
                 </TableCell>
                 <TableCell>
-                  {bossesByMap[mapKey].tiers.map((tier) => {
+                  {(bossesByMap[mapKey]?.tiers ?? []).map((tier) => {
                     const totalWeight: number = tier.items.reduce(
                       (total, item) => {
                         return total + (item.weight || 0)
@@ -110,15 +113,16 @@ export const MapTable: React.FC<ItemsTableProps> = ({
                       0
                     )
                     return (
-                      <>
-                        {tier.items.map((enemy) => {
-                          const enemyName =
-                            enemyNames[enemy.id as keyof typeof enemyNames]
-                          return (
-                            <Typography component="div">{`${enemyName}: ${formatter.format(enemy.weight / totalWeight)}`}</Typography>
-                          )
-                        })}
-                      </>
+                      tier.items.map((enemy) => {
+                        const enemyName =
+                          enemyNames[enemy.id as keyof typeof enemyNames]
+                        return (
+                          <Typography
+                            component="div"
+                            key={`${mapKey}-${tier.minLevel}-${enemy.id}`}
+                          >{`${enemyName}: ${formatter.format(enemy.weight / totalWeight)}`}</Typography>
+                        )
+                      })
                     )
                   })}
                 </TableCell>

@@ -27,12 +27,30 @@ export const AssetIcon = ({
   return (
     <span
       className={mini ? 'assetIconContainer mini' : 'assetIconContainer'}
+      role="img"
+      aria-label={`Item icon for ${assetName}`}
+      title={`Item icon for ${assetName}`}
       style={{
         backgroundImage: `url(${getRarityBgUrl(rarity)})`,
       }}
     >
+      <span
+        aria-hidden="true"
+        className={mini ? 'assetIconFallback mini' : 'assetIconFallback'}
+        hidden
+      >
+        ?
+      </span>
       <img
+        key={assetName}
+        alt=""
         className={mini ? 'assetIcon mini' : 'assetIcon'}
+        onError={(event) => {
+          const fallback =
+            event.currentTarget.previousElementSibling as HTMLElement | null
+          if (fallback) fallback.hidden = false
+          event.currentTarget.hidden = true
+        }}
         src={getImageIconUrl(assetName)}
       />
     </span>

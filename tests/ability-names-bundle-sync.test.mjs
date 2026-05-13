@@ -2,8 +2,10 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import fs from 'node:fs'
 
-test('ability names stay in sync with bundle ability registry', () => {
-  const bundle = fs.readFileSync('public/index-CGcaOcB4.js', 'utf8')
+import { resolveBundlePath } from '../scripts/sync_bundle_data.mjs'
+
+test('ability names stay in sync with bundle ability registry', async () => {
+  const bundle = fs.readFileSync(await resolveBundlePath(process.cwd()), 'utf8')
   const start = bundle.indexOf('function validateAbilityParams')
   const end = bundle.indexOf('const DEFAULT_WEAPON_DAMAGE', start)
 

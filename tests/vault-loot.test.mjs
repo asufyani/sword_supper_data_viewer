@@ -3,6 +3,8 @@ import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import vm from 'node:vm'
 
+import { resolveBundlePath } from '../scripts/sync_bundle_data.mjs'
+
 function extractBalancedObject(source, objectStart) {
   let depth = 0
   let inStr = false
@@ -53,8 +55,8 @@ function loadExportObject(filePath, exportName, nextExportName) {
   return context.result
 }
 
-test('vault loot source stays aligned with bundled dungeon vault loot tables', () => {
-  const bundle = fs.readFileSync('index-CGcaOcB4.js', 'utf8')
+test('vault loot source stays aligned with bundled dungeon vault loot tables', async () => {
+  const bundle = fs.readFileSync(await resolveBundlePath(process.cwd()), 'utf8')
 
   const goldStart = bundle.indexOf('vaultGoldLoot=')
   const goldObjectStart = bundle.indexOf('{', goldStart)

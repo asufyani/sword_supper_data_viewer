@@ -273,9 +273,39 @@ body::before {
     width: 25px;
   }
 }
+.assetIconFallback {
+  position: absolute;
+  inset: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: none;
+  text-shadow:
+    -2px -2px 0 var(--game-outline),
+    2px -2px 0 var(--game-outline),
+    -2px 2px 0 var(--game-outline),
+    2px 2px 0 var(--game-outline);
+  &.mini {
+    inset: 3px;
+    font-size: 14px;
+    text-shadow:
+      -1px -1px 0 var(--game-outline),
+      1px -1px 0 var(--game-outline),
+      -1px 1px 0 var(--game-outline),
+      1px 1px 0 var(--game-outline);
+  }
+}
+.assetIconFallback[hidden] {
+  display: none;
+}
 .assetIcon {
   height: 40px;
   position: relative;
+  z-index: 1;
   left: 5px;
   top: 5px;
   &.mini {

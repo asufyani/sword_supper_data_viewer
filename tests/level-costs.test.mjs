@@ -3,6 +3,8 @@ import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import vm from 'node:vm'
 
+import { resolveBundlePath } from '../scripts/sync_bundle_data.mjs'
+
 function extractFunction(source, functionName) {
   const start = source.indexOf(`function ${functionName}`)
   if (start === -1) throw new Error(`Function ${functionName} not found`)
@@ -41,8 +43,8 @@ result = { getLevelUpgradeCost, getLevelCostSoFar }`,
   return context.result
 }
 
-test('level costs utility stays aligned with bundle getUpgradeCost formula', () => {
-  const bundle = fs.readFileSync('index-CGcaOcB4.js', 'utf8')
+test('level costs utility stays aligned with bundle getUpgradeCost formula', async () => {
+  const bundle = fs.readFileSync(await resolveBundlePath(process.cwd()), 'utf8')
   const bundleFunction = extractFunction(bundle, 'getUpgradeCost')
   const bundleContext = { result: null, Math }
   vm.createContext(bundleContext)

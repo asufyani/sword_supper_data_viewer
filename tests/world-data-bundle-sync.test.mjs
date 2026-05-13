@@ -3,6 +3,8 @@ import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import vm from 'node:vm'
 
+import { resolveBundlePath } from '../scripts/sync_bundle_data.mjs'
+
 function extractBalancedObject(source, objectStart) {
   let i = objectStart
   let depth = 0
@@ -61,8 +63,8 @@ function assertJsonEqual(actual, expected) {
   assert.equal(JSON.stringify(actual), JSON.stringify(expected))
 }
 
-test('foods, map enemies, and quests stay aligned with the bundle', () => {
-  const bundle = fs.readFileSync('public/index-CGcaOcB4.js', 'utf8')
+test('foods, map enemies, and quests stay aligned with the bundle', async () => {
+  const bundle = fs.readFileSync(await resolveBundlePath(process.cwd()), 'utf8')
 
   const foodsStart = bundle.indexOf('essencesByImageName=')
   const foodsObjectStart = bundle.indexOf('{', foodsStart)
