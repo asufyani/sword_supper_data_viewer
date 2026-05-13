@@ -1,7 +1,7 @@
 #root {
   max-width: 1480px;
   margin: 0 auto;
-  padding: 1rem 1rem 0;
+  padding: 0 1rem 0;
   text-align: center;
   color: var(--game-ink);
 }
@@ -177,7 +177,7 @@
 
 @media (max-width: 700px) {
   #root {
-    padding: 0.35rem 0.35rem 0;
+    padding: 0 0.35rem 0;
   }
 
   .app-tab-header {

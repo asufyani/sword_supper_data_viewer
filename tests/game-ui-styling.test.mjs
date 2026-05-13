@@ -64,7 +64,7 @@ test('footer links use game button styling for the dark background', () => {
     appSource,
     /<Box component="footer" className="app-footer-links">/
   )
-  assert.match(appStyles, /#root\s*{[\s\S]*padding: 1rem 1rem 0;/)
+  assert.match(appStyles, /#root\s*{[\s\S]*padding: 0 1rem 0;/)
   assert.match(appSource, /className="app-tab-panel"/)
   assert.match(appStyles, /#root \.app-tab-header\s*{[\s\S]*padding: 0;/)
   assert.match(appStyles, /#root \.app-tab-panel\s*{[\s\S]*padding: 0\.75rem 0\.75rem 0;/)
@@ -154,7 +154,7 @@ test('mobile styles compact controls, tables, and item popovers', () => {
   assert.match(appStyles, /@media \(max-width: 700px\)/)
   assert.match(
     appStyles,
-    /@media \(max-width: 700px\)[\s\S]*#root\s*{[\s\S]*padding: 0\.35rem 0\.35rem 0;/
+    /@media \(max-width: 700px\)[\s\S]*#root\s*{[\s\S]*padding: 0 0\.35rem 0;/
   )
   assert.match(appStyles, /\.sticky-data-table::after\s*{/)
   assert.match(
