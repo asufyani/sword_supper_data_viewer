@@ -1,6 +1,7 @@
 import Chip from '@mui/material/Chip'
-import type { Item, Rarity, TabName } from './types'
+import type { Item, TabName } from './types'
 import { getItemType, useItemDetailsPopover } from './ItemDetailsPopover'
+import { getRarityColor } from './utils/rarityColors'
 
 interface RarityChipProps {
   item: Item
@@ -9,14 +10,6 @@ interface RarityChipProps {
   weight?: string
   quantityString?: string
   showIcon?: boolean
-}
-const colorMap: Record<Rarity, string> = {
-  common: '#617E8A',
-  uncommon: '#1DC056',
-  rare: '#00A8FF',
-  epic: '#B260FD',
-  legendary: '#FFC900',
-  mythic: '#EB2F47',
 }
 export const RarityChip: React.FC<RarityChipProps> = ({
   item,
@@ -69,7 +62,7 @@ export const RarityChip: React.FC<RarityChipProps> = ({
         key={item.id}
         color="primary"
         style={{
-          backgroundColor: colorMap[item.rarity],
+          backgroundColor: getRarityColor(item.rarity),
           margin: '3px',
           padding: '4px 2px 4px 2px',
         }}

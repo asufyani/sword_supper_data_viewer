@@ -10,9 +10,9 @@
   position: sticky;
   top: 0;
   z-index: 10;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  width: var(--app-viewport-width, 100%);
+  margin-left: calc((100% - var(--app-viewport-width, 100%)) / 2);
+  margin-right: calc((100% - var(--app-viewport-width, 100%)) / 2);
   background: var(--game-navy);
   border-bottom: 4px solid var(--game-outline);
   box-shadow: 0 7px 0 rgba(0, 0, 0, 0.72);
@@ -83,6 +83,8 @@
 }
 
 #root .app-tab-panel {
+  position: relative;
+  z-index: 1;
   padding: 0.75rem 0.75rem 0;
 }
 
@@ -91,11 +93,72 @@
   max-height: min(720px, calc(100vh - 156px));
   overflow: auto;
   scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(5, 6, 10, 0.6) rgba(0, 6, 10, 0);
 }
 
 .sticky-data-table::after {
   content: '';
   display: none;
+}
+
+.sticky-data-table::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+  background: var(--game-panel);
+}
+
+.sticky-data-table::-webkit-scrollbar-button {
+  display: block;
+  background: var(--game-panel);
+}
+
+.sticky-data-table::-webkit-scrollbar-button:vertical:start:decrement {
+  height: 10px;
+  background: var(--game-blue);
+  border-top-right-radius: 10px;
+}
+
+.sticky-data-table::-webkit-scrollbar-button:vertical:end:increment {
+  height: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.sticky-data-table::-webkit-scrollbar-button:horizontal:start:decrement,
+.sticky-data-table::-webkit-scrollbar-button:horizontal:end:increment {
+  width: 10px;
+}
+
+.sticky-data-table::-webkit-scrollbar-track {
+  background: var(--game-panel-strong);
+}
+
+.sticky-data-table::-webkit-scrollbar-track:vertical {
+  margin-block: 6px;
+  border-left: 2px solid rgba(5, 6, 10, 0.18);
+  border-radius: 999px;
+}
+
+.sticky-data-table::-webkit-scrollbar-track:horizontal {
+  margin-inline: 6px;
+  border-top: 2px solid rgba(5, 6, 10, 0.18);
+  border-radius: 999px;
+}
+
+.sticky-data-table::-webkit-scrollbar-thumb {
+  background: rgba(5, 6, 10, 0.64);
+  background-clip: padding-box;
+  border: 3px solid var(--game-panel-strong);
+  border-radius: 999px;
+}
+
+.sticky-data-table::-webkit-scrollbar-thumb:hover {
+  background: rgba(5, 6, 10, 0.82);
+  background-clip: padding-box;
+}
+
+.sticky-data-table::-webkit-scrollbar-corner {
+  background: var(--game-panel-strong);
 }
 
 .MuiTableContainer-root.sticky-data-table {

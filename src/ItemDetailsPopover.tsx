@@ -2,23 +2,15 @@ import { createContext, useContext, useMemo, useState, type ReactNode } from 're
 import Popover from '@mui/material/Popover'
 import Typography from '@mui/material/Typography'
 import { Box, Chip, Stack } from '@mui/material'
-import type { Item, Rarity, TabName } from './types'
+import type { Item, TabName } from './types'
 import { StatsDisplay } from './StatsDisplay'
 import { AssetIcon } from './AssetIcon'
 import { DamageDisplay } from './DamageDisplay'
+import { getRarityColor } from './utils/rarityColors'
 
 type ItemDetailsPopoverValue = {
   closePopover: () => void
   openPopover: (item: Item, anchorEl: HTMLElement) => void
-}
-
-const rarityBorderMap: Record<Rarity, string> = {
-  common: '#617E8A',
-  uncommon: '#1DC056',
-  rare: '#00A8FF',
-  epic: '#B260FD',
-  legendary: '#FFC900',
-  mythic: '#EB2F47',
 }
 
 const ItemDetailsPopoverContext = createContext<ItemDetailsPopoverValue | null>(
@@ -90,7 +82,7 @@ function ItemDetailsPopover({
     return null
   }
 
-  const rarityAccent = rarityBorderMap[item.rarity]
+  const rarityAccent = getRarityColor(item.rarity)
 
   return (
     <Popover
@@ -114,6 +106,7 @@ function ItemDetailsPopover({
         },
         paper: {
           sx: {
+            '--item-rarity-accent': rarityAccent,
             background:
               'linear-gradient(180deg, rgba(251,252,255,0.98) 0%, rgba(241,245,249,0.98) 100%)',
             border: `1px solid ${rarityAccent}`,

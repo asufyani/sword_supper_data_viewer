@@ -84,6 +84,25 @@ test('footer links use game button styling for the dark background', () => {
   assert.match(appStyles, /\.app-footer-links a:hover\s*{/)
 })
 
+test('desktop tab header does not use scrollbar-inclusive viewport width', () => {
+  const appStyles = fs.readFileSync('src/App.css', 'utf8')
+
+  const headerRule = appStyles.match(/\.app-tab-header\s*{(?<body>[\s\S]*?)}/)
+    ?.groups?.body
+
+  assert.ok(headerRule)
+  assert.doesNotMatch(headerRule, /100vw/)
+  assert.match(headerRule, /width:\s*var\(--app-viewport-width, 100%\);/)
+  assert.match(
+    headerRule,
+    /margin-left:\s*calc\(\(100% - var\(--app-viewport-width, 100%\)\) \/ 2\);/
+  )
+  assert.match(
+    headerRule,
+    /margin-right:\s*calc\(\(100% - var\(--app-viewport-width, 100%\)\) \/ 2\);/
+  )
+})
+
 test('wide data tables opt into sticky scroll headers only where requested', () => {
   const appSource = fs.readFileSync('src/App.tsx', 'utf8')
   const appStyles = fs.readFileSync('src/App.css', 'utf8')
@@ -130,6 +149,47 @@ test('wide data tables opt into sticky scroll headers only where requested', () 
   assert.match(appStyles, /\.sticky-data-table\s*{/)
   assert.match(appStyles, /\.MuiTableContainer-root\.sticky-data-table\s*{/)
   assert.match(appStyles, /\.sticky-data-table \.MuiTableCell-stickyHeader\s*{/)
+})
+
+test('tab panel content stacks above decorative Spine overlays', () => {
+  const appStyles = fs.readFileSync('src/App.css', 'utf8')
+  const globalStyles = fs.readFileSync('src/index.css', 'utf8')
+
+  const tabPanelRule = appStyles.match(
+    /#root \.app-tab-panel\s*{(?<body>[\s\S]*?)}/
+  )?.groups?.body
+
+  assert.ok(tabPanelRule)
+  assert.match(tabPanelRule, /position:\s*relative;/)
+  assert.match(tabPanelRule, /z-index:\s*1;/)
+  assert.match(globalStyles, /\.page-player-spine\s*{[\s\S]*z-index:\s*0;/)
+  assert.match(globalStyles, /\.page-enemy-spine\s*{[\s\S]*z-index:\s*0;/)
+})
+
+test('sticky table scrollbars are styled into the bordered panel', () => {
+  const appStyles = fs.readFileSync('src/App.css', 'utf8')
+
+  assert.match(appStyles, /\.sticky-data-table\s*{[\s\S]*scrollbar-width: thin;/)
+  assert.match(
+    appStyles,
+    /\.sticky-data-table\s*{[\s\S]*scrollbar-color: rgba\(5, 6, 10, 0\.64\) var\(--game-panel-strong\);/
+  )
+  assert.match(appStyles, /\.sticky-data-table::-webkit-scrollbar\s*{/)
+  assert.match(appStyles, /\.sticky-data-table::-webkit-scrollbar-button\s*{/)
+  assert.match(
+    appStyles,
+    /\.sticky-data-table::-webkit-scrollbar-button:vertical:start:decrement\s*{[\s\S]*background: var\(--game-blue\);/
+  )
+  assert.match(appStyles, /\.sticky-data-table::-webkit-scrollbar-track\s*{/)
+  assert.match(
+    appStyles,
+    /\.sticky-data-table::-webkit-scrollbar-track:vertical\s*{[\s\S]*margin-block: 6px;/
+  )
+  assert.match(appStyles, /\.sticky-data-table::-webkit-scrollbar-thumb\s*{/)
+  assert.match(
+    appStyles,
+    /\.sticky-data-table::-webkit-scrollbar-corner\s*{[\s\S]*background: var\(--game-panel-strong\);/
+  )
 })
 
 test('enemy level numeric control uses the outlined text field styling', () => {

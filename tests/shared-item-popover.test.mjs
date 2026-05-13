@@ -36,3 +36,18 @@ test('item popovers use the same compact damage display as the weapons table', (
   assert.match(displaySource, /damage\[typeString\]/)
   assert.doesNotMatch(popoverSource, /\{typeString\}:/)
 })
+
+test('item popover top edge uses the hovered item rarity color', () => {
+  const popoverSource = fs.readFileSync('src/ItemDetailsPopover.tsx', 'utf8')
+  const globalStyles = fs.readFileSync('src/index.css', 'utf8')
+
+  assert.match(popoverSource, /--item-rarity-accent/)
+  assert.match(
+    globalStyles,
+    /#item-details-popover \.MuiPaper-root\s*{[\s\S]*border-top:\s*8px solid\s*var\(--item-rarity-accent/
+  )
+  assert.doesNotMatch(
+    globalStyles,
+    /#item-details-popover \.MuiPaper-root\s*{[\s\S]*border-top:\s*8px solid var\(--game-purple\)/
+  )
+})
