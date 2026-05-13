@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "local": "tsc -b && vite build && vite preview",
     "preview": "vite preview",
     "data:check": "node scripts/sync_bundle_data.mjs --check",
     "data:update": "node scripts/sync_bundle_data.mjs --write",
