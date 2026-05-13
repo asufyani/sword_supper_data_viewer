@@ -2,6 +2,7 @@ import Tooltip from '@mui/material/Tooltip'
 import type { ability, statModifier } from './types'
 import { abilityNameMap } from './utils/abilityNames'
 import { Chip } from '@mui/material'
+import { formatAbilityTooltip } from './utils/abilityTooltips'
 
 const formatter = new Intl.NumberFormat('en-US', {
   style: 'percent',
@@ -34,8 +35,9 @@ export const StatsDisplay: React.FC<StatsDisplayProps> = ({
         <Tooltip
           key={ability.id}
           title={
-            abilityNameMap[ability.id as keyof typeof abilityNameMap]
-              .description
+            <span style={{ whiteSpace: 'pre-line' }}>
+              {formatAbilityTooltip(ability)}
+            </span>
           }
         >
           <Chip

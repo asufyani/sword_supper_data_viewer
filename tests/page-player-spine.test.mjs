@@ -66,7 +66,10 @@ test('app renders a desktop-only transparent player Spine overlay', () => {
     appSource,
     /import \{ PagePlayerSpine \} from '\.\/PagePlayerSpine'/
   )
-  assert.match(appSource, /<PagePlayerSpine \/>/)
+  assert.match(
+    appSource,
+    /<PagePlayerSpine selectedWeapon=\{selectedPlayerWeapon\} \/>/
+  )
 
   assert.match(playerSource, /new SpinePlayer/)
   assert.match(playerSource, /frogPlayer/)

@@ -129,6 +129,14 @@ function objectKey(key) {
   return isIdentifier(key) ? key : JSON.stringify(key)
 }
 
+function abilityParamKey(params) {
+  return JSON.stringify(
+    Object.fromEntries(
+      Object.entries(params).sort(([left], [right]) => left.localeCompare(right))
+    )
+  )
+}
+
 function toTsExpression(value, rawObjects = new WeakMap()) {
   if (value instanceof RawCode) return value.code
   if (value && typeof value === 'object' && rawObjects.has(value)) {
@@ -428,22 +436,33 @@ function extractBundleVaultLoot(bundleSource) {
   }
 }
 
-function extractBundleAbilityNames(bundleSource) {
+function extractBundleAbilityNames(bundleSource, items) {
   const start = bundleSource.indexOf('function validateAbilityParams')
   const end = bundleSource.indexOf('const DEFAULT_WEAPON_DAMAGE', start)
   assertFound(start, 'ability registry start')
   assertFound(end, 'ability registry end')
 
-  const { abilityRegistry, loadAbilityFromId } = Function(
-    `${bundleSource.slice(start, end)}; return { abilityRegistry, loadAbilityFromId };`
+  const { abilityRegistry, loadAbilityFromId, loadAbility } = Function(
+    `${bundleSource.slice(start, end)}; return { abilityRegistry, loadAbilityFromId, loadAbility };`
   )()
-
-  return Object.fromEntries(
+  const abilityNameMap = Object.fromEntries(
     Object.keys(abilityRegistry).map((id) => {
       const ability = loadAbilityFromId(id)
       return [id, { name: ability.name, description: ability.description }]
     })
   )
+  const abilityParamDescriptionMap = {}
+
+  for (const item of Object.values(items)) {
+    for (const ability of item.abilities ?? []) {
+      if (!ability.params || Object.keys(ability.params).length === 0) continue
+      abilityParamDescriptionMap[ability.id] ??= {}
+      abilityParamDescriptionMap[ability.id][abilityParamKey(ability.params)] =
+        loadAbility(ability).description
+    }
+  }
+
+  return { abilityNameMap, abilityParamDescriptionMap }
 }
 
 function splitTopLevelObjectEntries(objectSource) {
@@ -743,10 +762,24 @@ const targets = {
   abilityNames: {
     filePath: 'src/utils/abilityNames.ts',
     readBundle: (cache) =>
-      getCached(cache, 'abilityNames', () => extractBundleAbilityNames(cache.bundleSource)),
-    readLocal: ({ filePath }) => loadLocalExport(filePath, 'abilityNameMap'),
+      getCached(cache, 'abilityNames', () =>
+        extractBundleAbilityNames(
+          cache.bundleSource,
+          getCached(cache, 'items', () => extractBundleItems(cache.bundleSource))
+        )
+      ),
+    readLocal: async ({ filePath }) => ({
+      abilityNameMap: await loadLocalExport(filePath, 'abilityNameMap'),
+      abilityParamDescriptionMap:
+        (await maybeLoadLocalExport(filePath, 'abilityParamDescriptionMap')) ?? {},
+    }),
     render: ({ expected }) =>
-      renderConstModule({ exportName: 'abilityNameMap', value: expected }),
+      formatTypescript(
+        `export const abilityNameMap = ${toTsExpression(expected.abilityNameMap)}
+
+export const abilityParamDescriptionMap: Record<string, Record<string, string>> = ${toTsExpression(expected.abilityParamDescriptionMap)}
+`
+      ),
   },
   enemyNames: {
     filePath: 'src/utils/enemyNames.ts',

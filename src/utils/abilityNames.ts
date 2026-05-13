@@ -444,3 +444,129 @@ export const abilityNameMap = {
   },
   Accelerate: { name: 'Accelerate', description: 'Boosts Speed by 20%.' },
 }
+
+export const abilityParamDescriptionMap: Record<
+  string,
+  Record<string, string>
+> = {
+  WeakOnCrit: {
+    '{"applyChance":0.5}': '50% chance to weaken your target when you crit.',
+  },
+  RemovePoisonEveryHitCount: {
+    '{"multiplier":5,"removeChance":0.25}':
+      'Every 5 hits, 25% chance to remove Poison.',
+    '{"multiplier":5,"removeChance":0.3}':
+      'Every 5 hits, 30% chance to remove Poison.',
+    '{"multiplier":5,"removeChance":0.35}':
+      'Every 5 hits, 35% chance to remove Poison.',
+    '{"multiplier":5,"removeChance":0.4}':
+      'Every 5 hits, 40% chance to remove Poison.',
+    '{"multiplier":5,"removeChance":0.45}':
+      'Every 5 hits, 45% chance to remove Poison.',
+    '{"removeChance":0.1}': 'Every 3 hits, 10% chance to remove Poison.',
+    '{"removeChance":0.12}': 'Every 3 hits, 12% chance to remove Poison.',
+    '{"removeChance":0.15}': 'Every 3 hits, 15% chance to remove Poison.',
+    '{"removeChance":0.18}': 'Every 3 hits, 18% chance to remove Poison.',
+    '{"removeChance":0.25}': 'Every 3 hits, 25% chance to remove Poison.',
+  },
+  WeakOnTurnCount: {
+    '{"applyChance":0.75}':
+      'Every 3 turns, you have a chance to weaken your target.',
+  },
+  PoisonOnMagicKnife: {
+    '{"damagePerTurn":25}': 'Apply poison when magic knives hit',
+    '{"damagePerTurn":28}': 'Apply poison when magic knives hit',
+    '{"damagePerTurn":35}': 'Apply poison when magic knives hit',
+    '{"damagePerTurn":45}': 'Apply poison when magic knives hit',
+    '{"damagePerTurn":60}': 'Apply poison when magic knives hit',
+  },
+  HealOnEnemyDeath: {
+    '{"healAmount":0.025}': 'Heal for 3% when an enemy dies.',
+  },
+  ShieldOnLowHP: {
+    '{"shieldAmount":0.15,"threshold":0.2}':
+      'Charge shield by 15% if HP goes below 20%.',
+  },
+  AddRageOnEnemyDeath: { '{"rageAmount":20}': 'Gain 20 when an enemy dies.' },
+  RemoveSilenceOnHitCount: {
+    '{"hitCount":2,"removeChance":1}':
+      'On hit 2, 100% chance to remove Silence.',
+  },
+  BonusRageOnAttack: {
+    '{"rageAmount":5}': 'Every attack builds rage by an additional +5',
+  },
+  RageOnFirstTurn: {
+    '{"rageAmount":30}': 'On your first turn, gain 30 Rage.',
+    '{"rageAmount":35}': 'On your first turn, gain 35 Rage.',
+  },
+  RemoveWeakOnRage: {
+    '{"removeChance":0.25}':
+      '25% chance to remove Weak from yourself when you use a rage attack.',
+  },
+  RemoveWeakOnTurnCount: {
+    '{"removeChance":0.5}': 'Every 3 turns, 50% chance to remove Weak.',
+    '{"removeChance":0.55}': 'Every 3 turns, 55% chance to remove Weak.',
+    '{"removeChance":0.6}': 'Every 3 turns, 60% chance to remove Weak.',
+    '{"removeChance":0.65}': 'Every 3 turns, 65% chance to remove Weak.',
+    '{"removeChance":0.75}': 'Every 3 turns, 75% chance to remove Weak.',
+  },
+  HealOnLightning: {
+    '{"healAmount":0.015}':
+      'Heal for 2% of Max HP whenever a lightning bolt fires.',
+    '{"healAmount":0.01}':
+      'Heal for 1% of Max HP whenever a lightning bolt fires.',
+  },
+  GainShieldOnEnemyDeath: {
+    '{"shieldAmount":0.05}':
+      'Charge shield by 5% of Max HP when an enemy dies.',
+  },
+  GainShieldOnRage: {
+    '{"shieldAmount":0.05}':
+      'Gain 5% of Max HP as shield when you unleash rage.',
+  },
+  SilenceOnRage: {
+    '{"turnDuration":3}':
+      '50% chance to Silence your target when you use a rage attack.',
+  },
+  PoisonShield: {
+    '{"applyChance":0.75,"damagePerTurn":35}':
+      'When attacked while shielded, poison the attacker.',
+    '{"applyChance":0.75,"damagePerTurn":45}':
+      'When attacked while shielded, poison the attacker.',
+  },
+  VulnerableOnLightning: {
+    '{"applyChance":0.1,"turnDuration":2}':
+      '10% chance to make the victim Vulnerable when lightning strikes.',
+    '{"applyChance":0.12,"turnDuration":2}':
+      '12% chance to make the victim Vulnerable when lightning strikes.',
+    '{"applyChance":0.15,"turnDuration":2}':
+      '15% chance to make the victim Vulnerable when lightning strikes.',
+    '{"applyChance":0.2,"turnDuration":2}':
+      '20% chance to make the victim Vulnerable when lightning strikes.',
+    '{"applyChance":0.25,"turnDuration":2}':
+      '25% chance to make the victim Vulnerable when lightning strikes.',
+  },
+  ApplyPoisonOnAttack: {
+    '{"applyChance":0.6,"damagePerTurn":90}':
+      '60% chance to poison your target when you attack.',
+    '{"applyChance":0.4,"damagePerTurn":30}':
+      '40% chance to poison your target when you attack.',
+    '{"applyChance":0.45,"damagePerTurn":35}':
+      '45% chance to poison your target when you attack.',
+    '{"applyChance":0.5,"damagePerTurn":40}':
+      '50% chance to poison your target when you attack.',
+    '{"applyChance":0.55,"damagePerTurn":45}':
+      '55% chance to poison your target when you attack.',
+    '{"applyChance":0.6,"damagePerTurn":50}':
+      '60% chance to poison your target when you attack.',
+    '{"damagePerTurn":25}': '50% chance to poison your target when you attack.',
+    '{"damagePerTurn":30}': '50% chance to poison your target when you attack.',
+    '{"damagePerTurn":35}': '50% chance to poison your target when you attack.',
+    '{"damagePerTurn":40}': '50% chance to poison your target when you attack.',
+    '{"applyChance":1,"damagePerTurn":110}':
+      '100% chance to poison your target when you attack.',
+  },
+  HealOnFirstTurn: {
+    '{"healAmount":0.1}': 'Heal for 10% of Max HP on first turn.',
+  },
+}

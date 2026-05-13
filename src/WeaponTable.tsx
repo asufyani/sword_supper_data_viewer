@@ -17,6 +17,10 @@ import { KeyboardArrowUp, KeyboardArrowDown } from '@mui/icons-material'
 import { IconButton, Collapse } from '@mui/material'
 import React from 'react'
 import { DamageDisplay } from './DamageDisplay'
+import {
+  getPlayerWeaponAssetForItem,
+  type PlayerWeaponAsset,
+} from './utils/playerWeapons'
 
 const formatter = new Intl.NumberFormat('en-US', {
   style: 'percent',
@@ -30,12 +34,14 @@ function WeaponRow({
   itemNameMap,
   upgradeMaterialsList,
   goTo,
+  onSelectPlayerWeapon,
 }: {
   item: Item
   itemDropLocations: Record<string, Record<string, number>>
   itemNameMap: ItemsTableProps['itemNameMap']
   upgradeMaterialsList: ItemsTableProps['upgradeMaterialsList']
   goTo: ItemsTableProps['goTo']
+  onSelectPlayerWeapon?: (weapon: PlayerWeaponAsset) => void
 }) {
   const [open, setOpen] = React.useState(false)
   const dropLocations = itemDropLocations[item.id]
@@ -50,10 +56,19 @@ function WeaponRow({
         id={item.id + '-row'}
       >
         <TableCell key={item.id} id={item.id}>
-          <AssetIcon
-            assetName={item.assetName || item.id}
-            rarity={item.rarity}
-          />
+          <button
+            type="button"
+            className="weapon-asset-button"
+            aria-label={`Preview ${item.name} on player`}
+            onClick={() =>
+              onSelectPlayerWeapon?.(getPlayerWeaponAssetForItem(item))
+            }
+          >
+            <AssetIcon
+              assetName={item.assetName || item.id}
+              rarity={item.rarity}
+            />
+          </button>
           <RarityChip item={item} goTo={goTo} />
         </TableCell>
         <TableCell key={item.id + '-damage'}>
@@ -103,12 +118,17 @@ function WeaponRow({
   )
 }
 
-export const WeaponTable: React.FC<ItemsTableProps> = ({
+type WeaponTableProps = ItemsTableProps & {
+  onSelectPlayerWeapon?: (weapon: PlayerWeaponAsset) => void
+}
+
+export const WeaponTable: React.FC<WeaponTableProps> = ({
   itemsArray,
   itemNameMap,
   goTo,
   upgradeMaterialsList,
   itemDropLocations,
+  onSelectPlayerWeapon,
 }) => {
   const [searchString, setSearchString] = useDebounceValue('', 250)
   const [orderBy, setOrderBy] = useState<SortableProperty>('name')
@@ -181,6 +201,7 @@ export const WeaponTable: React.FC<ItemsTableProps> = ({
               itemNameMap={itemNameMap}
               upgradeMaterialsList={upgradeMaterialsList}
               goTo={goTo}
+              onSelectPlayerWeapon={onSelectPlayerWeapon}
             />
           ))}
         </TableBody>

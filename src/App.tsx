@@ -30,6 +30,7 @@ import { enemyNames } from './utils/enemyNames'
 import { PagePlayerSpine } from './PagePlayerSpine'
 import { PageEnemySpine } from './PageEnemySpine'
 import type { PageBackground } from './utils/pageBackground'
+import type { PlayerWeaponAsset } from './utils/playerWeapons'
 
 const WeaponTable = React.lazy(() => import('./WeaponTable'))
 const ArmorTable = React.lazy(() => import('./ArmorTable'))
@@ -163,6 +164,8 @@ function App({ pageBackground }: AppProps) {
   const [tabIndex, setTabIndex] = React.useState(0)
   const [focusedItem, setFocusedItem] = React.useState('')
   const [loadedTabs, setLoadedTabs] = React.useState(() => new Set([0]))
+  const [selectedPlayerWeapon, setSelectedPlayerWeapon] =
+    React.useState<PlayerWeaponAsset | null>(null)
 
   const handleTabChange = (_event: React.SyntheticEvent, newValue: number) => {
     setTabIndex(newValue)
@@ -203,7 +206,7 @@ function App({ pageBackground }: AppProps) {
   }, [focusedItem])
   return (
     <ThemeProvider theme={theme}>
-      <PagePlayerSpine />
+      <PagePlayerSpine selectedWeapon={selectedPlayerWeapon} />
       <PageEnemySpine pageBackground={pageBackground} />
       <ItemDetailsPopoverProvider>
         <Box component="header" className="app-tab-header">
@@ -238,6 +241,7 @@ function App({ pageBackground }: AppProps) {
                 goTo={goTo}
                 upgradeMaterialsList={itemArrays.upgradeMaterialItems}
                 itemDropLocations={itemArrays.itemDropLocations}
+                onSelectPlayerWeapon={setSelectedPlayerWeapon}
               />
             </TableContainer>
           </Suspense>

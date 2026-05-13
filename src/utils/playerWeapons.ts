@@ -1,4 +1,5 @@
 import { items } from './items'
+import type { Item } from '../types'
 
 export type PlayerWeaponAsset = {
   id: string
@@ -44,6 +45,16 @@ export function selectRandomPlayerWeapon(random = Math.random) {
   const index = Math.floor(random() * PLAYER_WEAPON_ASSETS.length)
 
   return PLAYER_WEAPON_ASSETS[index] ?? FALLBACK_PLAYER_WEAPON
+}
+
+export function getPlayerWeaponAssetForItem(
+  item: Pick<Item, 'id' | 'assetName' | 'name'>
+): PlayerWeaponAsset {
+  return {
+    id: item.id,
+    assetName: item.assetName || item.id,
+    name: item.name,
+  }
 }
 
 export function getPlayerWeaponAssetPath(weapon: PlayerWeaponAsset) {

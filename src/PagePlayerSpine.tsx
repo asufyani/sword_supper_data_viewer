@@ -60,7 +60,7 @@ function buildTextureRegion(texture: GLTexture, image: HTMLImageElement) {
   return region
 }
 
-async function applyWeaponTexture(
+export async function applyWeaponTexture(
   player: SpinePlayer,
   weapon: PlayerWeaponAsset
 ) {
@@ -88,11 +88,16 @@ async function applyWeaponTexture(
   return texture
 }
 
-export function PagePlayerSpine() {
+type PagePlayerSpineProps = {
+  selectedWeapon?: PlayerWeaponAsset | null
+}
+
+export function PagePlayerSpine({ selectedWeapon }: PagePlayerSpineProps) {
   const spineRef = useRef<HTMLDivElement>(null)
   const playerRef = useRef<SpinePlayer | null>(null)
   const weaponTextureRef = useRef<GLTexture | null>(null)
-  const weapon = useMemo(() => selectRandomPlayerWeapon(), [])
+  const randomWeapon = useMemo(() => selectRandomPlayerWeapon(), [])
+  const weapon = selectedWeapon ?? randomWeapon
 
   useEffect(() => {
     const spineRoot = spineRef.current

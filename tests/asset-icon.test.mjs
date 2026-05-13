@@ -62,3 +62,10 @@ test('AssetIcon hidden fallback is not displayed behind loaded transparent art',
     /\.assetIconFallback\[hidden\]\s*\{\s*display:\s*none/
   )
 })
+
+test('AssetIcon art keeps stable alignment inside the rarity background', () => {
+  const styles = fs.readFileSync('src/index.css', 'utf8')
+
+  assert.match(styles, /\.assetIconContainer\s*\{[^}]*line-height:\s*0/)
+  assert.match(styles, /\.assetIcon\s*\{[^}]*display:\s*block/)
+})

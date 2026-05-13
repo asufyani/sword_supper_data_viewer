@@ -51,6 +51,22 @@ class RobotBoss extends DisplayCharacter{constructor(){super({displayName:"Robot
 const EnemyTypeToClass={robotBoss:RobotBoss};
 `
 
+const abilityNamesBundleSource = `
+function validateAbilityParams(x,e,i){}
+class TestAbility{constructor(e){this.name="Test Ability",this.amount=typeof(e==null?void 0:e.amount)=="number"?e.amount:.5,this.description="Use "+Math.round(this.amount*100)+"% power."}}
+class PlainAbility{constructor(){this.name="Plain Ability",this.description="Plain description."}}
+const abilityRegistry={TestAbility:x=>new TestAbility(x),PlainAbility:()=>new PlainAbility};
+function loadAbilityFromId(x){return abilityRegistry[x]()}
+function loadAbility(x){return abilityRegistry[x.id](x.params)}
+const DEFAULT_WEAPON_DAMAGE={};
+const TAG_EQUIPMENT="equipment";
+const ItemDefinitions={
+  TestItem:{id:"TestItem",abilities:[{id:"TestAbility",params:{amount:.25}}]},
+  PlainItem:{id:"PlainItem",abilities:[{id:"PlainAbility"}]}
+};
+function itemDamageToDamageProfile(){}
+`
+
 const staleVaultLootSource = `export const vt = {
   vaultGoldLoot: {
     type: 'oneOf',
@@ -145,6 +161,27 @@ async function withTempEnemyScalesProject(callback) {
 
   try {
     await callback({ rootDir, bundlePath, enemiesPath })
+  } finally {
+    await fs.rm(rootDir, { recursive: true, force: true })
+  }
+}
+
+async function withTempAbilityNamesProject(callback) {
+  const rootDir = await fs.mkdtemp(path.join(os.tmpdir(), 'sync-ability-names-'))
+  const utilsDir = path.join(rootDir, 'src', 'utils')
+  const bundlePath = path.join(rootDir, 'index-test.js')
+  const abilityNamesPath = path.join(utilsDir, 'abilityNames.ts')
+
+  await fs.mkdir(utilsDir, { recursive: true })
+  await fs.writeFile(bundlePath, abilityNamesBundleSource)
+  await fs.writeFile(
+    abilityNamesPath,
+    `export const abilityNameMap = {}
+`
+  )
+
+  try {
+    await callback({ rootDir, bundlePath, abilityNamesPath })
   } finally {
     await fs.rm(rootDir, { recursive: true, force: true })
   }
@@ -258,6 +295,26 @@ test('syncBundleData includes display scale in generated enemy records', async (
     assert.match(source, /robotBoss:[\s\S]*spineScale: 0\.22/)
     assert.doesNotMatch(source, /skeleton:[\s\S]*spineScale/)
   })
+})
+
+test('syncBundleData generates ability descriptions for item ability params', async () => {
+  await withTempAbilityNamesProject(
+    async ({ rootDir, bundlePath, abilityNamesPath }) => {
+      await syncBundleData({
+        rootDir,
+        bundlePath,
+        targets: ['abilityNames'],
+        write: true,
+      })
+      const source = await fs.readFile(abilityNamesPath, 'utf8')
+
+      assert.match(source, /export const abilityNameMap =/)
+      assert.match(source, /TestAbility:[\s\S]*description: 'Use 50% power\.'/)
+      assert.match(source, /export const abilityParamDescriptionMap/)
+      assert.match(source, /TestAbility:[\s\S]*'\{"amount":0\.25\}': 'Use 25% power\.'/)
+      assert.doesNotMatch(source, /PlainAbility:[\s\S]*Plain description[\s\S]*\{\}/)
+    }
+  )
 })
 
 test('resolveBundlePath prefers a root bundle over built viewer assets', async () => {
