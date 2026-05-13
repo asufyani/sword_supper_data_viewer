@@ -2,6 +2,7 @@ import { Typography } from '@mui/material'
 import { AssetIcon } from './AssetIcon'
 import { RarityChip } from './RarityChip'
 import type { ItemNameMap, TabName, Upgrade } from './types'
+import { Fragment } from 'react'
 
 interface UpgradeListProps {
   itemId: string
@@ -25,12 +26,11 @@ export const UpgradeList: React.FC<UpgradeListProps> = ({
         <>
           <Typography component={'h3'}>Required by:</Typography>
           {upgradeMaterialsList[itemId].map((upgradeResult) => (
-            <div>
+            <div key={upgradeResult}>
               <RarityChip
                 item={itemNameMap[upgradeResult]}
                 goTo={goTo}
                 showIcon={true}
-                key={upgradeResult}
               />
             </div>
           ))}
@@ -42,7 +42,7 @@ export const UpgradeList: React.FC<UpgradeListProps> = ({
     <>
       {upgradesTo}
       {upgrades.map((upgrade, idx) => (
-        <>
+        <Fragment key={`${upgrade.yields}-${idx}`}>
           {idx === 0 && <Typography component={'h3'}>Upgrades to:</Typography>}
           <div key={upgrade.yields + '-upgrade'}>
             {/* <AssetIcon
@@ -78,7 +78,7 @@ export const UpgradeList: React.FC<UpgradeListProps> = ({
               ))}
             </ul>
           </div>
-        </>
+        </Fragment>
       ))}
     </>
   )

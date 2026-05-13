@@ -110,6 +110,10 @@ test('page enemy selector uses enemies from the selected map background', async 
     )
     const { getPageEnemySpineAssetPath, selectRandomPageEnemy } =
       await server.ssrLoadModule('/src/utils/pageEnemy.ts')
+    const { getPageEnemySpineScale } = await server.ssrLoadModule(
+      '/src/utils/pageEnemy.ts'
+    )
+    const { z3 } = await server.ssrLoadModule('/src/utils/enemies.ts')
 
     const fieldsBackground = MAP_PAGE_BACKGROUNDS.find(
       (background) => background.key === 'fields'
@@ -133,6 +137,15 @@ test('page enemy selector uses enemies from the selected map background', async 
       ),
       /^\/sword_supper_data_viewer\/spine\/mushroom_child\.skel$/
     )
+    assert.equal(getPageEnemySpineScale({}), 1)
+    assert.equal(
+      getPageEnemySpineScale({ id: 'customEnemy', spineScale: 0.42 }),
+      0.42
+    )
+    assert.equal(z3.mushroomLargeBoss.spineScale, 0.4)
+    assert.equal(z3.skelFireHead.spineScale, 0.3)
+    assert.equal(z3.livingArmorCute.spineScale, 0.16)
+    assert.equal(z3.robotBoss.spineScale, 0.22)
   })
 })
 
@@ -167,6 +180,14 @@ test('app renders a desktop-only transparent enemy Spine overlay for the selecte
   assert.match(enemySource, /interactive:\s*false/)
   assert.match(enemySource, /alpha:\s*true/)
   assert.match(enemySource, /backgroundColor:\s*'00000000'/)
+  assert.match(enemySource, /getPageEnemySpineScale/)
+  assert.match(enemySource, /scale:\s*getPageEnemySpineScale\(enemy\)/)
+  assert.doesNotMatch(enemySource, /x:\s*-300/)
+  assert.doesNotMatch(enemySource, /width:\s*600/)
+  assert.match(enemySource, /padLeft:\s*60/)
+  assert.match(enemySource, /padRight:\s*108/)
+  assert.match(enemySource, /padTop:\s*44/)
+  assert.match(enemySource, /padBottom:\s*0/)
 
   assert.match(globalStyles, /\.page-enemy-spine\s*{[\s\S]*position:\s*fixed;/)
   assert.match(globalStyles, /\.page-enemy-spine\s*{[\s\S]*right:/)

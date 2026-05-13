@@ -9,9 +9,11 @@ function getBaseHref(assetKey: string) {
 
 export const EnemyAnimationViewer = ({
   spineAssetKey,
+  spineScale,
   showControls,
 }: {
   spineAssetKey: string
+  spineScale?: number
   showControls?: boolean
 }) => {
   const spineRef = useRef<HTMLDivElement>(null)
@@ -30,10 +32,13 @@ export const EnemyAnimationViewer = ({
       atlas: `${getBaseHref(spineAssetKey)}.atlas`,
       showControls: showControls || false,
       animation: 'idle',
-      backgroundColor: '#ffffff',
+      alpha: true,
+      scale: spineScale ?? 1,
       viewport: {
-        width: 600,
-        height: 400,
+        padLeft: 80,
+        padRight: 80,
+        padTop: 60,
+        padBottom: 20,
       },
     })
 
@@ -44,11 +49,11 @@ export const EnemyAnimationViewer = ({
       playerRef.current = null
       spineRoot.replaceChildren()
     }
-  }, [showControls, spineAssetKey])
+  }, [showControls, spineAssetKey, spineScale])
 
   return (
     <div
-      className="spine-player"
+      className="spine-player enemy-viewer"
       style={{
         overflow: 'hidden',
         margin: 'auto',
@@ -59,5 +64,10 @@ export const EnemyAnimationViewer = ({
 }
 
 export const EnemyViewer = ({ enemy }: { enemy: Enemy }) => {
-  return <EnemyAnimationViewer spineAssetKey={enemy.spineAssetKey} />
+  return (
+    <EnemyAnimationViewer
+      spineAssetKey={enemy.spineAssetKey}
+      spineScale={enemy.spineScale}
+    />
+  )
 }

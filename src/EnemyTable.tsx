@@ -102,6 +102,7 @@ function EnemyRow({
           <Collapse in={open} timeout="auto" unmountOnExit>
             <EnemyAnimationViewer
               spineAssetKey={enemy.spineAssetKey}
+              spineScale={enemy.spineScale}
               showControls={true}
             />
             {lootTable.tiers.map((tier) => {

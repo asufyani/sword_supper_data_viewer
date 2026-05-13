@@ -37,3 +37,7 @@ export function getPageEnemySpineAssetPath(
 ) {
   return `${import.meta.env.BASE_URL}spine/${enemy.spineAssetKey}.${extension}`
 }
+
+export function getPageEnemySpineScale(enemy: Pick<Enemy, 'spineScale'>) {
+  return enemy.spineScale ?? 1
+}

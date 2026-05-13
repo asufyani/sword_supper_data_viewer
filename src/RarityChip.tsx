@@ -44,6 +44,13 @@ export const RarityChip: React.FC<RarityChipProps> = ({
   if (quantityString) {
     label += ' ' + quantityString
   }
+  const chipIcon = showIcon ? (
+    <img
+      src={getImageIconUrl(item.assetName || item.id)}
+      className="chipIcon"
+    />
+  ) : undefined
+
   return (
     <span
       onMouseEnter={
@@ -58,16 +65,7 @@ export const RarityChip: React.FC<RarityChipProps> = ({
       className={goTo ? 'interactive' : ''}
     >
       <Chip
-        icon={
-          showIcon ? (
-            <img
-              src={getImageIconUrl(item.assetName || item.id)}
-              className="chipIcon"
-            />
-          ) : (
-            <></>
-          )
-        }
+        {...(chipIcon ? { icon: chipIcon } : {})}
         key={item.id}
         color="primary"
         style={{

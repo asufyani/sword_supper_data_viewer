@@ -124,6 +124,7 @@ export const LootTable: React.FC<LootTableProps> = ({ itemNameMap, goTo }) => {
                   <EnemyAnimationViewer
                     key={`${table.key}-${enemyKey}`}
                     spineAssetKey={z3[enemyKey].spineAssetKey}
+                    spineScale={z3[enemyKey].spineScale}
                   />
                 ))}
             </div>

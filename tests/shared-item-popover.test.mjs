@@ -14,6 +14,14 @@ test('app uses a shared item popover provider and RarityChip no longer mounts it
   assert.match(popoverSource, /linear-gradient/)
 })
 
+test('RarityChip omits the Chip icon prop when icon art is disabled', () => {
+  const chipSource = fs.readFileSync('src/RarityChip.tsx', 'utf8')
+
+  assert.doesNotMatch(chipSource, /<>\s*<\/>/)
+  assert.match(chipSource, /const chipIcon = showIcon/)
+  assert.match(chipSource, /\{\.\.\.\(chipIcon \? \{ icon: chipIcon \} : \{\}\)\}/)
+})
+
 test('item popovers use the same compact damage display as the weapons table', () => {
   assert.equal(fs.existsSync('src/DamageDisplay.tsx'), true)
 

@@ -245,6 +245,7 @@ export const z3: Record<string, Enemy> = {
     lootTables: [et.fireHeadBossLoot],
     abilities: [{ id: 'BossBrain_SkeletonFireHead' }],
     tags: ['boss', 'skeleton', 'red'],
+    spineScale: 0.3,
   },
   skelIceHead: {
     id: 'skelIceHead',
@@ -266,6 +267,7 @@ export const z3: Record<string, Enemy> = {
     lootTables: [et.fireHeadBossLoot],
     abilities: [{ id: 'BossBrain_SkeletonIceHead' }],
     tags: ['boss', 'skeleton', 'blue'],
+    spineScale: 0.3,
   },
   skelArcher: {
     id: 'skelArcher',
@@ -392,6 +394,7 @@ export const z3: Record<string, Enemy> = {
     dodge: 0,
     lootTables: [et.mushroomLargeEliteLoot],
     tags: ['mushroom', 'elite'],
+    spineScale: 0.4,
   },
   mushroomLargeBoss: {
     id: 'mushroomLargeBoss',
@@ -412,6 +415,7 @@ export const z3: Record<string, Enemy> = {
     lootTables: [et.mushroomLargeBossLoot],
     abilities: [{ id: 'BossBrain_MushroomLargeBoss' }],
     tags: ['boss', 'mushroom'],
+    spineScale: 0.4,
   },
   skelWizard: {
     id: 'skelWizard',
@@ -661,6 +665,7 @@ export const z3: Record<string, Enemy> = {
     lootTables: [et.darkBossLoot],
     abilities: [{ id: 'LightningOnCrit' }],
     tags: ['dark', 'elite'],
+    spineScale: 0.3,
   },
   darkWorm: {
     id: 'darkWorm',
@@ -733,6 +738,7 @@ export const z3: Record<string, Enemy> = {
     lootTables: [et.darkDemonBossLoot],
     abilities: [{ id: 'BossBrain_DarkDemon' }],
     tags: ['boss', 'dark', 'armed'],
+    spineScale: 0.3,
   },
   poisonDemon: {
     id: 'poisonDemon',
@@ -752,6 +758,7 @@ export const z3: Record<string, Enemy> = {
     lootTables: [et.poisonDemonBossLoot],
     abilities: [{ id: 'BossBrain_PoisonDemon' }],
     tags: ['boss', 'dark'],
+    spineScale: 0.3,
   },
   mushroomChild: {
     id: 'mushroomChild',
@@ -870,6 +877,7 @@ export const z3: Record<string, Enemy> = {
     lootTables: [et.livingArmorBossLoot],
     abilities: [{ id: 'BossBrain_LivingArmor' }],
     tags: ['boss', 'skeleton', 'armed'],
+    spineScale: 0.25,
   },
   gildedGuardian: {
     id: 'gildedGuardian',
@@ -891,6 +899,7 @@ export const z3: Record<string, Enemy> = {
     lootTables: [et.livingArmorBossLoot],
     abilities: [{ id: 'BossBrain_GildedGuardian' }],
     tags: ['boss', 'skeleton', 'armed'],
+    spineScale: 0.25,
   },
   slimeArmored: {
     id: 'slimeArmored',
@@ -947,6 +956,7 @@ export const z3: Record<string, Enemy> = {
     shadowResist: 0.3,
     lootTables: [et.skeletonLoot],
     tags: ['skeleton', 'armed'],
+    spineScale: 0.16,
   },
   livingArmorKnight: {
     id: 'livingArmorKnight',
@@ -966,6 +976,7 @@ export const z3: Record<string, Enemy> = {
     shadowResist: 0.3,
     lootTables: [et.skeletonLoot],
     tags: ['skeleton', 'armed'],
+    spineScale: 0.22,
   },
   livingArmorLight: {
     id: 'livingArmorLight',
@@ -985,6 +996,7 @@ export const z3: Record<string, Enemy> = {
     fireResist: 0.2,
     lootTables: [et.skeletonLoot],
     tags: ['skeleton', 'armed'],
+    spineScale: 0.17,
   },
   mushroomMonster: {
     id: 'mushroomMonster',
@@ -1292,6 +1304,7 @@ export const z3: Record<string, Enemy> = {
     lootTables: [et.robotNo6BossLoot],
     abilities: [{ id: 'BossBrain_RobotNo6' }],
     tags: ['boss', 'robot'],
+    spineScale: 0.33,
   },
   robotNo7: {
     id: 'robotNo7',
@@ -1329,6 +1342,7 @@ export const z3: Record<string, Enemy> = {
     lootTables: [et.robotBossBossLoot],
     abilities: [{ id: 'BossBrain_RobotBoss' }],
     tags: ['boss', 'robot'],
+    spineScale: 0.22,
   },
   corruptedSkeleton: {
     id: 'corruptedSkeleton',

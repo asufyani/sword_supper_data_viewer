@@ -204,9 +204,173 @@ function extractBundleItems(bundleSource) {
 }
 
 function extractBundleEnemies(bundleSource, lootTables) {
-  return runExpression(`(${extractObjectAfter(bundleSource, '_EnemyDefinitions=')})`, {
+  const enemies = runExpression(`(${extractObjectAfter(bundleSource, '_EnemyDefinitions=')})`, {
     LOOT_TABLES: lootTables,
   })
+  const spineScales = extractBundleEnemySpineScales(bundleSource)
+
+  for (const [enemyId, spineScale] of Object.entries(spineScales)) {
+    if (enemies[enemyId]) enemies[enemyId].spineScale = spineScale
+  }
+
+  return enemies
+}
+
+function extractTopLevelNumericProperty(objectSource, propertyName) {
+  let depth = 0
+  let inString = false
+  let quote = ''
+  let escaped = false
+
+  for (let i = 0; i < objectSource.length; i += 1) {
+    const char = objectSource[i]
+
+    if (inString) {
+      if (escaped) escaped = false
+      else if (char === '\\') escaped = true
+      else if (char === quote) {
+        inString = false
+        quote = ''
+      }
+      continue
+    }
+
+    if (char === '"' || char === "'" || char === '`') {
+      inString = true
+      quote = char
+      continue
+    }
+
+    if (char === '{' || char === '(' || char === '[') depth += 1
+    else if (char === '}' || char === ')' || char === ']') depth -= 1
+
+    if (depth !== 1) continue
+
+    const match = new RegExp(
+      `^${propertyName}\\s*:\\s*(-?(?:\\d+(?:\\.\\d*)?|\\.\\d+))`
+    ).exec(objectSource.slice(i))
+    if (match) return Number(match[1])
+  }
+
+  return undefined
+}
+
+function extractBundleDisplayObjectSpineScales(bundleSource) {
+  const start = bundleSource.indexOf('function variant')
+  if (start === -1) return new Map()
+
+  const end = bundleSource.indexOf('ENEMY_DISPLAY_REGISTRY=', start)
+  if (end === -1) return new Map()
+
+  const displaySource = bundleSource.slice(start, end)
+  const displayObjectScales = new Map()
+  const assignmentPattern = /(?:const\s+|,\s*)([A-Za-z_$][A-Za-z0-9_$]*)=\{/g
+
+  for (const match of displaySource.matchAll(assignmentPattern)) {
+    const objectStart = displaySource.indexOf('{', match.index)
+    assertFound(objectStart, `${match[1]} display object`)
+    const objectSource = extractBalanced(displaySource, objectStart)
+    const spineScale = extractTopLevelNumericProperty(objectSource, 'scale')
+
+    if (spineScale !== undefined) displayObjectScales.set(match[1], spineScale)
+  }
+
+  return displayObjectScales
+}
+
+function extractSpineScaleFromConstructor(constructorBody) {
+  const match = constructorBody.match(
+    /this\.setScale\(\s*(-?(?:\d+(?:\.\d*)?|\.\d+))(?:\s*,\s*(-?(?:\d+(?:\.\d*)?|\.\d+)))?\s*\)/
+  )
+
+  return match ? Number(match[1]) : undefined
+}
+
+function extractBundleClassSpineScales(bundleSource) {
+  const classScales = new Map()
+  const classPattern =
+    /class\s+([A-Za-z_$][A-Za-z0-9_$]*)\s+extends\s+[A-Za-z_$][A-Za-z0-9_$]*/g
+
+  for (const match of bundleSource.matchAll(classPattern)) {
+    const bodyStart = bundleSource.indexOf('{', match.index)
+    assertFound(bodyStart, `class ${match[1]} body`)
+    const classBody = extractBalanced(bundleSource, bodyStart)
+    const constructorStart = classBody.indexOf('constructor(')
+    if (constructorStart === -1) continue
+
+    const constructorParamsStart = classBody.indexOf('(', constructorStart)
+    const constructorParams = extractBalanced(
+      classBody,
+      constructorParamsStart,
+      '(',
+      ')'
+    )
+    const constructorBodyStart = classBody.indexOf(
+      '{',
+      constructorParamsStart + constructorParams.length
+    )
+    if (constructorBodyStart === -1) continue
+
+    const spineScale = extractSpineScaleFromConstructor(
+      extractBalanced(classBody, constructorBodyStart)
+    )
+    if (spineScale !== undefined) classScales.set(match[1], spineScale)
+  }
+
+  return classScales
+}
+
+function extractBundleEnemySpineScales(bundleSource) {
+  const displayObjectScales = extractBundleDisplayObjectSpineScales(bundleSource)
+  const classScales = extractBundleClassSpineScales(bundleSource)
+  const enemySpineScales = {}
+
+  try {
+    const registrySource = extractObjectAfter(bundleSource, 'ENEMY_DISPLAY_REGISTRY=')
+
+    for (const entry of splitTopLevelObjectEntries(registrySource)) {
+      const variant = entry.match(
+        /^([A-Za-z_$][A-Za-z0-9_$]*):variant\(([A-Za-z_$][A-Za-z0-9_$]*),/
+      )
+      if (variant) {
+        const spineScale = displayObjectScales.get(variant[2])
+        if (spineScale !== undefined) enemySpineScales[variant[1]] = spineScale
+        continue
+      }
+
+      const alias = entry.match(
+        /^([A-Za-z_$][A-Za-z0-9_$]*):([A-Za-z_$][A-Za-z0-9_$]*)$/
+      )
+      if (alias) {
+        const spineScale = displayObjectScales.get(alias[2])
+        if (spineScale !== undefined) enemySpineScales[alias[1]] = spineScale
+        continue
+      }
+
+      const spineScale = displayObjectScales.get(entry)
+      if (spineScale !== undefined) enemySpineScales[entry] = spineScale
+    }
+  } catch {
+    // Older or reduced bundles may not include display metadata.
+  }
+
+  try {
+    const typeToClassSource = extractObjectAfter(bundleSource, 'EnemyTypeToClass=')
+
+    for (const entry of splitTopLevelObjectEntries(typeToClassSource)) {
+      const mappedClass = entry.match(
+        /^([A-Za-z_$][A-Za-z0-9_$]*):([A-Za-z_$][A-Za-z0-9_$]*)$/
+      )
+      if (!mappedClass) continue
+
+      const spineScale = classScales.get(mappedClass[2])
+      if (spineScale !== undefined) enemySpineScales[mappedClass[1]] = spineScale
+    }
+  } catch {
+    // Reduced bundles in tests do not always include class mappings.
+  }
+
+  return enemySpineScales
 }
 
 function extractBundleFoods(bundleSource) {

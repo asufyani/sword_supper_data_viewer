@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef } from 'react'
 import { SpinePlayer } from '@esotericsoftware/spine-player'
 import {
   getPageEnemySpineAssetPath,
+  getPageEnemySpineScale,
   selectRandomPageEnemy,
 } from './utils/pageEnemy'
 import type { PageBackground } from './utils/pageBackground'
@@ -32,14 +33,15 @@ export function PageEnemySpine({ pageBackground }: PageEnemySpineProps) {
       alpha: true,
       backgroundColor: '00000000',
       preserveDrawingBuffer: false,
+      scale: getPageEnemySpineScale(enemy),
       showControls: false,
       showLoading: false,
       interactive: false,
       viewport: {
-        padLeft: '10%',
-        padRight: '18%',
-        padTop: '10%',
-        padBottom: '0%',
+        padLeft: 60,
+        padRight: 108,
+        padTop: 44,
+        padBottom: 0,
       },
     })
 
