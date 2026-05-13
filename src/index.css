@@ -13,7 +13,6 @@
   --game-outline: #05060a;
   --game-ink: #10111c;
   --game-blue: #3c83cf;
-  --game-grass: #a9c94e;
   --game-danger: #ee4055;
   --game-purple: #9b48ee;
   --game-gold: #ffc94a;
@@ -36,16 +35,27 @@ body {
   padding: 0;
   min-height: 100vh;
   color: var(--game-ink);
-  background: linear-gradient(
-    180deg,
-    #8ed4f6 0%,
-    #eaf8ff 28%,
-    var(--game-grass) 28%,
-    #7d9644 43%,
-    var(--game-navy) 43%,
-    var(--game-deep-navy) 100%
-  );
+  background-color: var(--game-deep-navy);
+}
+
+body[data-map-background] {
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(23, 27, 47, 0) 0,
+      rgba(23, 27, 47, 0) 720px,
+      rgba(35, 40, 63, 0.9) 1040px,
+      var(--game-deep-navy) 100%
+    ),
+    var(--page-bg-images);
   background-attachment: fixed;
+  background-position:
+    center top,
+    var(--page-bg-positions);
+  background-repeat: no-repeat, var(--page-bg-repeats);
+  background-size:
+    100% 100%,
+    var(--page-bg-sizes);
 }
 
 body::before {
@@ -339,6 +349,50 @@ a {
   background-color: rgb(127, 255, 212);
 }
 
+.page-player-spine {
+  position: fixed;
+  left: -1rem;
+  bottom: 0px;
+  width: 250px;
+  height: 250px;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.page-player-spine .spine-player {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: transparent !important;
+}
+
+.page-player-spine canvas {
+  background: transparent !important;
+}
+
+.page-enemy-spine {
+  position: fixed;
+  right: -1rem;
+  bottom: 50px;
+  width: 250px;
+  height: 250px;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.page-enemy-spine .spine-player {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: transparent !important;
+}
+
+.page-enemy-spine canvas {
+  background: transparent !important;
+}
+
 .spine-player {
   width: 50%;
   height: 400px;
@@ -429,6 +483,14 @@ a {
     font-size: 0.68rem;
     line-height: 1.15;
     overflow-wrap: anywhere;
+  }
+
+  .page-player-spine {
+    display: none;
+  }
+
+  .page-enemy-spine {
+    display: none;
   }
 
   .spine-player {

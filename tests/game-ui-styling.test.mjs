@@ -10,7 +10,7 @@ test('app styling uses game-inspired panels, tabs, and global palette', () => {
   assert.match(globalStyles, /--game-panel:/)
   assert.match(globalStyles, /--game-outline:/)
   assert.match(globalStyles, /--game-danger:/)
-  assert.match(globalStyles, /background:\s*linear-gradient/)
+  assert.match(globalStyles, /background-image:[\s\S]*linear-gradient/)
   assert.match(appStyles, /background:\s*var\(--game-navy\)/)
   assert.match(appStyles, /border-bottom:\s*4px solid var\(--game-outline\)/)
   assert.match(appStyles, /\.app-tab-header \.MuiTab-root\s*{/)
@@ -18,6 +18,26 @@ test('app styling uses game-inspired panels, tabs, and global palette', () => {
   assert.match(globalStyles, /\.MuiPaper-root\s*{/)
   assert.match(globalStyles, /\.MuiTableCell-head\s*{/)
   assert.match(globalStyles, /\.rarityChip\s*{/)
+})
+
+test('global page background uses randomized map art instead of sky and ground stripes', () => {
+  const globalStyles = fs.readFileSync('src/index.css', 'utf8')
+
+  assert.match(globalStyles, /background-image:[\s\S]*var\(--page-bg-images\)/)
+  assert.match(
+    globalStyles,
+    /background-position:[\s\S]*var\(--page-bg-positions\)/
+  )
+  assert.match(
+    globalStyles,
+    /background-repeat:[\s\S]*var\(--page-bg-repeats\)/
+  )
+  assert.match(globalStyles, /background-size:[\s\S]*var\(--page-bg-sizes\)/)
+  assert.match(globalStyles, /data-map-background/)
+  assert.doesNotMatch(globalStyles, /url\('\/backgrounds\/new_eden/)
+
+  assert.doesNotMatch(globalStyles, /var\(--game-grass\)\s+28%/)
+  assert.doesNotMatch(globalStyles, /#8ed4f6\s+0%/)
 })
 
 test('abilities and help tabs render inside readable game panels', () => {

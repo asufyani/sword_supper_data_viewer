@@ -27,6 +27,9 @@ import {
 } from './utils/itemDropLocations'
 import { z3 } from './utils/enemies'
 import { enemyNames } from './utils/enemyNames'
+import { PagePlayerSpine } from './PagePlayerSpine'
+import { PageEnemySpine } from './PageEnemySpine'
+import type { PageBackground } from './utils/pageBackground'
 
 const WeaponTable = React.lazy(() => import('./WeaponTable'))
 const ArmorTable = React.lazy(() => import('./ArmorTable'))
@@ -81,7 +84,11 @@ function CustomTabPanel(props: TabPanelProps) {
   )
 }
 
-function App() {
+type AppProps = {
+  pageBackground: PageBackground
+}
+
+function App({ pageBackground }: AppProps) {
   // const assetsArray = []
   const itemArrays = useMemo(() => {
     const itemNameMap: ItemNameMap = {}
@@ -196,6 +203,8 @@ function App() {
   }, [focusedItem])
   return (
     <ThemeProvider theme={theme}>
+      <PagePlayerSpine />
+      <PageEnemySpine pageBackground={pageBackground} />
       <ItemDetailsPopoverProvider>
         <Box component="header" className="app-tab-header">
           <Tabs
