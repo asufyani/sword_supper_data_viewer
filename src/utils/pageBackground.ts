@@ -11,6 +11,19 @@ export type PageBackground = {
   layers: readonly PageBackgroundLayer[]
 }
 
+type PageBackgroundDocument = Pick<Document, 'body'> &
+  Partial<Pick<Document, 'defaultView' | 'documentElement'>>
+
+type PageBackgroundWindow = Pick<
+  Window,
+  'addEventListener' | 'removeEventListener'
+> & {
+  visualViewport?: Pick<
+    VisualViewport,
+    'addEventListener' | 'height' | 'removeEventListener'
+  > | null
+}
+
 export const MAP_PAGE_BACKGROUNDS = [
   {
     key: 'fields',
@@ -302,21 +315,64 @@ function getBackgroundPath(background: PageBackground, layer: PageBackgroundLaye
   return `${import.meta.env.BASE_URL}backgrounds/${background.key}/${layer.name}.png`
 }
 
-function getLayerPosition(layer: PageBackgroundLayer) {
+function formatPixels(value: number) {
+  return `${Number.parseFloat(value.toFixed(3))}px`
+}
+
+function isUsableDimension(value: unknown): value is number {
+  return typeof value === 'number' && Number.isFinite(value) && value > 0
+}
+
+export function getPageBackgroundSceneHeight(background: PageBackground) {
+  return Math.max(
+    ...background.layers.map((layer) => layer.yOffset + layer.height)
+  )
+}
+
+function getPageBackgroundScale(
+  background: PageBackground,
+  viewportHeight?: number
+) {
+  if (!isUsableDimension(viewportHeight)) {
+    return 1
+  }
+
+  return Math.max(1, viewportHeight / getPageBackgroundSceneHeight(background))
+}
+
+function getDocumentViewportHeight(activeDocument: PageBackgroundDocument) {
+  const visualHeight = activeDocument.defaultView?.visualViewport?.height
+
+  if (isUsableDimension(visualHeight)) {
+    return visualHeight
+  }
+
+  const clientHeight = activeDocument.documentElement?.clientHeight
+
+  if (isUsableDimension(clientHeight)) {
+    return clientHeight
+  }
+
+  return undefined
+}
+
+function getLayerPosition(layer: PageBackgroundLayer, scale = 1) {
   const xPosition =
     layer.xOffset === 0 ? 'center' : `calc(50% + ${layer.xOffset}px)`
 
-  return `${xPosition} ${layer.yOffset}px`
+  return `${xPosition} ${formatPixels(layer.yOffset * scale)}`
 }
 
 function getLayerRepeat(layer: PageBackgroundLayer) {
   return layer.name === 'sky' ? 'repeat' : 'repeat-x'
 }
 
-function getLayerSize(layer: PageBackgroundLayer) {
-  if (layer.width < 200) return `${layer.width}px ${layer.height}px`
+function getLayerSize(layer: PageBackgroundLayer, scale = 1) {
+  if (layer.width < 200) {
+    return `${formatPixels(layer.width)} ${formatPixels(layer.height * scale)}`
+  }
 
-  return `${layer.width}px auto`
+  return `${formatPixels(layer.width * scale)} auto`
 }
 
 export function selectRandomPageBackground(
@@ -333,36 +389,81 @@ export function selectRandomPageBackground(
   return MAP_PAGE_BACKGROUNDS[index]
 }
 
-export function getPageBackgroundCssVariables(background: PageBackground) {
+export function getPageBackgroundCssVariables(
+  background: PageBackground,
+  viewportHeight?: number
+) {
   const layers = [...background.layers].reverse()
+  const scale = getPageBackgroundScale(background, viewportHeight)
 
   return {
     '--page-bg-images': layers
       .map((layer) => `url('${getBackgroundPath(background, layer)}')`)
       .join(', '),
-    '--page-bg-positions': layers.map(getLayerPosition).join(', '),
+    '--page-bg-positions': layers
+      .map((layer) => getLayerPosition(layer, scale))
+      .join(', '),
     '--page-bg-repeats': layers.map(getLayerRepeat).join(', '),
-    '--page-bg-sizes': layers.map(getLayerSize).join(', '),
+    '--page-bg-sizes': layers
+      .map((layer) => getLayerSize(layer, scale))
+      .join(', '),
+  }
+}
+
+export function applyPageBackground(
+  background: PageBackground,
+  targetDocument?: PageBackgroundDocument
+) {
+  const activeDocument =
+    targetDocument ?? (typeof document === 'undefined' ? undefined : document)
+
+  if (!activeDocument?.body) return
+
+  activeDocument.body.dataset.mapBackground = background.key
+
+  Object.entries(
+    getPageBackgroundCssVariables(
+      background,
+      getDocumentViewportHeight(activeDocument)
+    )
+  ).forEach(([property, value]) => {
+    activeDocument.body.style.setProperty(property, value)
+  })
+}
+
+export function installPageBackgroundScaleSync(
+  background: PageBackground,
+  targetDocument?: PageBackgroundDocument
+) {
+  const activeDocument =
+    targetDocument ?? (typeof document === 'undefined' ? undefined : document)
+
+  if (!activeDocument?.body) return () => {}
+
+  const activeWindow: PageBackgroundWindow | undefined =
+    activeDocument.defaultView ??
+    (typeof window === 'undefined' ? undefined : window)
+  const handleResize = () => {
+    applyPageBackground(background, activeDocument)
+  }
+
+  handleResize()
+  activeWindow?.addEventListener('resize', handleResize)
+  activeWindow?.visualViewport?.addEventListener('resize', handleResize)
+
+  return () => {
+    activeWindow?.removeEventListener('resize', handleResize)
+    activeWindow?.visualViewport?.removeEventListener('resize', handleResize)
   }
 }
 
 export function applyRandomPageBackground(
-  targetDocument?: Pick<Document, 'body'>,
+  targetDocument?: PageBackgroundDocument,
   random: () => number = Math.random
 ) {
   const selected = selectRandomPageBackground(random)
-  const activeDocument =
-    targetDocument ?? (typeof document === 'undefined' ? undefined : document)
 
-  if (!activeDocument?.body) return selected
-
-  activeDocument.body.dataset.mapBackground = selected.key
-
-  Object.entries(getPageBackgroundCssVariables(selected)).forEach(
-    ([property, value]) => {
-      activeDocument.body.style.setProperty(property, value)
-    }
-  )
+  applyPageBackground(selected, targetDocument)
 
   return selected
 }

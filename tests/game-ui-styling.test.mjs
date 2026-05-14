@@ -22,8 +22,17 @@ test('app styling uses game-inspired panels, tabs, and global palette', () => {
 
 test('global page background uses randomized map art instead of sky and ground stripes', () => {
   const globalStyles = fs.readFileSync('src/index.css', 'utf8')
+  const mapBackgroundRule = globalStyles.match(
+    /body\[data-map-background\]\s*{(?<body>[\s\S]*?)\n}/
+  )?.groups?.body
 
   assert.match(globalStyles, /background-image:[\s\S]*var\(--page-bg-images\)/)
+  assert.ok(mapBackgroundRule)
+  assert.match(
+    mapBackgroundRule,
+    /background-image:\s*var\(--page-bg-images\);/
+  )
+  assert.doesNotMatch(mapBackgroundRule, /linear-gradient/)
   assert.match(
     globalStyles,
     /background-position:[\s\S]*var\(--page-bg-positions\)/
@@ -68,7 +77,12 @@ test('footer links use game button styling for the dark background', () => {
   assert.match(appSource, /className="app-tab-panel"/)
   assert.match(appStyles, /#root \.app-tab-header\s*{[\s\S]*padding: 0;/)
   assert.match(appStyles, /#root \.app-tab-panel\s*{[\s\S]*padding: 0\.75rem 0\.75rem 0;/)
-  assert.match(appStyles, /max-height:\s*min\(720px, calc\(100vh - 156px\)\);/)
+  assert.match(appStyles, /--sticky-data-table-offset:\s*156px;/)
+  assert.match(
+    appStyles,
+    /max-height:\s*calc\(\s*var\(--app-viewport-height, 100dvh\)\s*-\s*var\(--sticky-data-table-offset\)\s*\);/
+  )
+  assert.doesNotMatch(appStyles, /min\(720px/)
   assert.match(
     appStyles,
     /\.MuiTableContainer-root\.sticky-data-table\s*{[\s\S]*margin: 0\.35rem auto 0\.35rem;/
@@ -222,7 +236,7 @@ test('mobile styles compact controls, tables, and item popovers', () => {
     appStyles,
     /@media \(max-width: 700px\)[\s\S]*#root \.app-tab-panel\s*{[\s\S]*padding: 0\.35rem 0\.15rem 0;/
   )
-  assert.match(appStyles, /max-height:\s*calc\(100vh - 176px\);/)
+  assert.match(appStyles, /--sticky-data-table-offset:\s*176px;/)
   assert.match(appStyles, /gap:\s*0\.2rem;/)
   assert.match(appStyles, /margin:\s*0\.1rem auto 0;/)
   assert.match(appStyles, /min-height:\s*30px;/)

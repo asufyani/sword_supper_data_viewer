@@ -89,8 +89,11 @@
 }
 
 .sticky-data-table {
+  --sticky-data-table-offset: 156px;
   position: relative;
-  max-height: min(720px, calc(100vh - 156px));
+  max-height: calc(
+    var(--app-viewport-height, 100dvh) - var(--sticky-data-table-offset)
+  );
   overflow: auto;
   scrollbar-gutter: stable;
   scrollbar-width: thin;
@@ -273,7 +276,7 @@
   }
 
   .sticky-data-table {
-    max-height: calc(100vh - 176px);
+    --sticky-data-table-offset: 176px;
     margin-inline: -0.1rem;
   }
 

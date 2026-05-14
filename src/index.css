@@ -39,29 +39,17 @@ body {
   font-family: 'Poppins';
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  min-height: var(--app-viewport-height, 100dvh);
   color: var(--game-ink);
   background-color: var(--game-deep-navy);
 }
 
 body[data-map-background] {
-  background-image:
-    linear-gradient(
-      180deg,
-      rgba(23, 27, 47, 0) 0,
-      rgba(23, 27, 47, 0) 720px,
-      rgba(35, 40, 63, 0.9) 1040px,
-      var(--game-deep-navy) 100%
-    ),
-    var(--page-bg-images);
+  background-image: var(--page-bg-images);
   background-attachment: fixed;
-  background-position:
-    center top,
-    var(--page-bg-positions);
-  background-repeat: no-repeat, var(--page-bg-repeats);
-  background-size:
-    100% 100%,
-    var(--page-bg-sizes);
+  background-position: var(--page-bg-positions);
+  background-repeat: var(--page-bg-repeats);
+  background-size: var(--page-bg-sizes);
 }
 
 body::before {

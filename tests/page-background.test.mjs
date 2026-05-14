@@ -102,3 +102,73 @@ test('applyRandomPageBackground sets the body dataset and layered CSS variables'
     assert.doesNotMatch(values.get('--page-bg-sizes'), /100vw/)
   })
 })
+
+test('page background layers scale vertically to cover taller viewports', async () => {
+  await withViteServer(async (server) => {
+    const {
+      MAP_PAGE_BACKGROUNDS,
+      installPageBackgroundScaleSync,
+    } = await server.ssrLoadModule('/src/utils/pageBackground.ts')
+
+    const values = new Map()
+    const listeners = []
+    const visualViewportListeners = []
+    const visualViewport = {
+      height: 1032,
+      addEventListener(name, listener) {
+        visualViewportListeners.push({ name, listener })
+      },
+      removeEventListener(name, listener) {
+        const index = visualViewportListeners.findIndex(
+          (entry) => entry.name === name && entry.listener === listener
+        )
+        if (index !== -1) {
+          visualViewportListeners.splice(index, 1)
+        }
+      },
+    }
+    const documentStub = {
+      body: {
+        dataset: {},
+        style: {
+          setProperty(name, value) {
+            values.set(name, value)
+          },
+        },
+      },
+      documentElement: { clientHeight: 1032 },
+      defaultView: {
+        visualViewport,
+        addEventListener(name, listener) {
+          listeners.push({ name, listener })
+        },
+        removeEventListener(name, listener) {
+          const index = listeners.findIndex(
+            (entry) => entry.name === name && entry.listener === listener
+          )
+          if (index !== -1) {
+            listeners.splice(index, 1)
+          }
+        },
+      },
+    }
+
+    const cleanup = installPageBackgroundScaleSync(
+      MAP_PAGE_BACKGROUNDS[0],
+      documentStub
+    )
+
+    assert.match(values.get('--page-bg-positions'), /center 670px/)
+    assert.match(values.get('--page-bg-sizes'), /(^|, )1821px auto(,|$)/)
+
+    visualViewport.height = 2064
+    visualViewportListeners[0].listener()
+
+    assert.match(values.get('--page-bg-positions'), /center 1340px/)
+    assert.match(values.get('--page-bg-sizes'), /(^|, )3642px auto(,|$)/)
+
+    cleanup()
+    assert.equal(listeners.length, 0)
+    assert.equal(visualViewportListeners.length, 0)
+  })
+})
