@@ -9,10 +9,23 @@ export type EnemyAbility = {
   params?: Record<string, number>
 }
 
+export type EnemyResistances = {
+  lightningResist?: number
+  iceResist?: number
+  fireResist?: number
+  shadowResist?: number
+  poisonResist?: number
+  hypnotizeResist?: number
+  silenceResist?: number
+  weakResist?: number
+  vulnerableResist?: number
+}
+
 export type EnemyLevelOverride = {
   minLevel: number
   maxLevel?: number
   abilities?: EnemyAbility[]
+  resistOverrides?: EnemyResistances
 }
 
 export type statModifier = {
@@ -97,7 +110,7 @@ export const damageTypes = [
 
 export type damageType = (typeof damageTypes)[number]
 
-export type Enemy = {
+export type Enemy = EnemyResistances & {
   id: string
   name?: string
   baseDamage: number
@@ -114,10 +127,6 @@ export type Enemy = {
   spineAssetKey: string
   spineScale?: number
   tags: string[]
-  lightningResist?: number
-  iceResist?: number
-  fireResist?: number
-  shadowResist?: number
   abilities?: EnemyAbility[]
   levelOverrides?: EnemyLevelOverride[]
   scaledHp?: number

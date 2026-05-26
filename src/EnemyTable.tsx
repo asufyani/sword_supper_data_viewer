@@ -5,7 +5,6 @@ import TableHead from '@mui/material/TableHead'
 import TableBody from '@mui/material/TableBody'
 import TextField from '@mui/material/TextField'
 import {
-  damageTypes,
   type Enemy,
   type GoToType,
   type ItemNameMap,
@@ -33,6 +32,11 @@ import { enemyNames } from './utils/enemyNames'
 import { getEnemyComparator } from './utils/get_comparator'
 import { SortableEnemyHeader } from './SortableEnemyHeader'
 import { EnemyAnimationViewer } from './EnemyViewer'
+import {
+  getEnemyResistanceRows,
+  type EnemyResistanceKey,
+  type EnemyResistanceRow,
+} from './utils/enemyResistances'
 
 const formatter = new Intl.NumberFormat('en-US', {
   style: 'percent',
@@ -45,6 +49,19 @@ type DisplayEnemy = Enemy & {
   scaledHp: number
   scaledDamage: number
   scaledDefense: number
+  resistanceRows: EnemyResistanceRow[]
+}
+
+const resistanceLabels: Record<EnemyResistanceKey, string> = {
+  shadowResist: damageTypeSymbols.shadow,
+  iceResist: damageTypeSymbols.ice,
+  lightningResist: damageTypeSymbols.lightning,
+  fireResist: damageTypeSymbols.fire,
+  poisonResist: 'Poison',
+  weakResist: 'Weak',
+  vulnerableResist: 'Vulnerable',
+  silenceResist: 'Silence',
+  hypnotizeResist: 'Hypnotize',
 }
 
 function EnemyRow({
@@ -69,20 +86,12 @@ function EnemyRow({
         <TableCell>{enemy.scaledHp}</TableCell>
         <TableCell>{enemy.scaledDefense}</TableCell>
         <TableCell>
-          {damageTypes.map((damageType) => {
-            const resistType: keyof Enemy = `${damageType}Resist` as keyof Enemy
-            if (enemy[resistType]) {
-              const resistAmount: number = enemy[resistType] as number
-              return (
-                <div
-                  className={resistAmount < 0 ? 'bonus' : 'penalty'}
-                  key={resistType}
-                >{`${damageTypeSymbols[damageType]}: ${formatter.format(resistAmount)}`}</div>
-              )
-            }
-
-            return null
-          })}
+          {enemy.resistanceRows.map(({ key, value }) => (
+            <div
+              className={value < 0 ? 'bonus' : 'penalty'}
+              key={key}
+            >{`${resistanceLabels[key]}: ${formatter.format(value)}`}</div>
+          ))}
         </TableCell>
         <TableCell>{formatter.format(enemy.crit)}</TableCell>
         <TableCell>{formatter.format(enemy.dodge)}</TableCell>
@@ -240,6 +249,7 @@ export const EnemyTable: React.FC<{
             ...enemy,
             ...scaledValues,
             name: enemyNameMap[enemyKey],
+            resistanceRows: getEnemyResistanceRows(enemy, level),
           }
         })
         .sort(getEnemyComparator(orderBy, order)),
