@@ -5,7 +5,11 @@ import os from 'node:os'
 import path from 'node:path'
 import http from 'node:http'
 
-import { syncAssets } from '../scripts/get_assets.mjs'
+import {
+  collectMapKeys,
+  syncAssets,
+  syncMapBackgroundAssets,
+} from '../scripts/get_assets.mjs'
 
 async function withServer(handler, callback) {
   const server = http.createServer(handler)
@@ -77,44 +81,47 @@ export const items = {
   ])
 
   try {
-    await withServer((request, response) => {
-      const body = responses.get(request.url)
+    await withServer(
+      (request, response) => {
+        const body = responses.get(request.url)
 
-      if (!body) {
-        response.writeHead(404)
-        response.end('missing')
-        return
+        if (!body) {
+          response.writeHead(404)
+          response.end('missing')
+          return
+        }
+
+        response.writeHead(200, { 'Content-Type': 'application/octet-stream' })
+        response.end(body)
+      },
+      async (baseUrl) => {
+        const result = await syncAssets({
+          baseUrl,
+          enemiesFile,
+          itemsFile,
+          iconsDir,
+          spineDir,
+          weaponDir,
+        })
+
+        assert.deepEqual(result, {
+          totalItemAssetNames: 3,
+          totalSpineAssetKeys: 1,
+          totalWeaponAssetNames: 2,
+          downloaded: [
+            'gear/weapons/FreshBlade.png',
+            'gear/weapons/default.png',
+            'itemIcons/FreshBlade.png',
+            'itemIcons/FreshIcon.png',
+            'spine/fresh_enemy.atlas',
+            'spine/fresh_enemy.png',
+            'spine/fresh_enemy.skel',
+          ],
+          skipped: ['itemIcons/ExistingIcon.png'],
+          failed: [],
+        })
       }
-
-      response.writeHead(200, { 'Content-Type': 'application/octet-stream' })
-      response.end(body)
-    }, async (baseUrl) => {
-      const result = await syncAssets({
-        baseUrl,
-        enemiesFile,
-        itemsFile,
-        iconsDir,
-        spineDir,
-        weaponDir,
-      })
-
-      assert.deepEqual(result, {
-        totalItemAssetNames: 3,
-        totalSpineAssetKeys: 1,
-        totalWeaponAssetNames: 2,
-        downloaded: [
-          'gear/weapons/FreshBlade.png',
-          'gear/weapons/default.png',
-          'itemIcons/FreshBlade.png',
-          'itemIcons/FreshIcon.png',
-          'spine/fresh_enemy.atlas',
-          'spine/fresh_enemy.png',
-          'spine/fresh_enemy.skel',
-        ],
-        skipped: ['itemIcons/ExistingIcon.png'],
-        failed: [],
-      })
-    })
+    )
 
     assert.equal(
       await fs.readFile(path.join(iconsDir, 'ExistingIcon.png'), 'utf8'),
@@ -147,6 +154,167 @@ export const items = {
     assert.equal(
       await fs.readFile(path.join(weaponDir, 'FreshBlade.png'), 'utf8'),
       'fresh-blade-weapon'
+    )
+  } finally {
+    await fs.rm(tempRoot, { recursive: true, force: true })
+  }
+})
+
+test('collectMapKeys returns unique map asset keys in first-seen order', () => {
+  assert.deepEqual(
+    collectMapKeys(`
+export const items = {
+  FieldsMap: { assetName: 'map_fields' },
+  FieldsMapRare: { assetName: 'map_fields' },
+  CrystalMap: { assetName: 'map_crystal_cave' },
+  Sword: { assetName: 'IronBlade' },
+}
+    `),
+    ['fields', 'crystal_cave']
+  )
+})
+
+test('syncMapBackgroundAssets downloads manifests and layer pngs from local map data', async () => {
+  const tempRoot = await fs.mkdtemp(path.join(os.tmpdir(), 'get-map-assets-'))
+  const itemsFile = path.join(tempRoot, 'items.ts')
+  const backgroundsDir = path.join(tempRoot, 'backgrounds')
+  const mapBackgroundsDir = path.join(tempRoot, 'pageBackgrounds')
+
+  await fs.writeFile(
+    itemsFile,
+    `
+export const items = {
+  ExistingFields: { assetName: 'map_fields' },
+  DuplicateFields: { assetName: 'map_fields' },
+  CrystalCave: { assetName: 'map_crystal_cave' },
+  PlainItem: { assetName: 'NotAMap' },
+}
+    `
+  )
+  const manifests = {
+    fields: {
+      layers: [
+        {
+          key: 'assets/battle/environments/fields/sky',
+          width: 16,
+          height: 800,
+          xOffset: 0,
+          yOffset: 0,
+        },
+        {
+          key: 'assets/battle/environments/fields/walkable_area',
+          width: 1821,
+          height: 362,
+          xOffset: 0,
+          yOffset: 670,
+        },
+      ],
+    },
+    crystal_cave: {
+      layers: [
+        {
+          key: 'assets/battle/environments/crystal_cave/sky',
+          width: 32,
+          height: 512,
+          xOffset: 0,
+          yOffset: 0,
+        },
+        {
+          key: 'assets/battle/environments/crystal_cave/crystals',
+          width: 1821,
+          height: 640,
+          xOffset: 0,
+          yOffset: 35,
+        },
+        {
+          key: 'assets/battle/environments/crystal_cave/walkable_area',
+          width: 1821,
+          height: 320,
+          xOffset: 0,
+          yOffset: 700,
+        },
+      ],
+    },
+  }
+
+  const responses = new Map([
+    ['/assets/data/environments/fields.json', JSON.stringify(manifests.fields)],
+    [
+      '/assets/data/environments/crystal_cave.json',
+      JSON.stringify(manifests.crystal_cave),
+    ],
+    ['/assets/battle/environments/fields/sky.png', 'fields-sky'],
+    ['/assets/battle/environments/fields/walkable_area.png', 'fields-walkable'],
+    ['/assets/battle/environments/crystal_cave/sky.png', 'crystal-sky'],
+    [
+      '/assets/battle/environments/crystal_cave/crystals.png',
+      'crystal-crystals',
+    ],
+    [
+      '/assets/battle/environments/crystal_cave/walkable_area.png',
+      'crystal-walkable',
+    ],
+  ])
+
+  try {
+    await withServer(
+      (request, response) => {
+        const body = responses.get(request.url)
+
+        if (!body) {
+          response.writeHead(404)
+          response.end('missing')
+          return
+        }
+
+        response.writeHead(200, { 'Content-Type': 'application/octet-stream' })
+        response.end(body)
+      },
+      async (baseUrl) => {
+        const result = await syncMapBackgroundAssets({
+          baseUrl,
+          itemsFile,
+          backgroundsDir,
+          mapBackgroundsDir,
+        })
+
+        assert.deepEqual(result, {
+          totalMapKeys: 2,
+          downloaded: [
+            'backgrounds/crystal_cave/crystals.png',
+            'backgrounds/crystal_cave/sky.png',
+            'backgrounds/crystal_cave/walkable_area.png',
+            'backgrounds/fields/sky.png',
+            'backgrounds/fields/walkable_area.png',
+            'pageBackgrounds/crystal_cave.json',
+            'pageBackgrounds/fields.json',
+          ],
+          skipped: [],
+          failed: [],
+        })
+      }
+    )
+
+    assert.equal(
+      await fs.readFile(path.join(backgroundsDir, 'fields', 'sky.png'), 'utf8'),
+      'fields-sky'
+    )
+    assert.equal(
+      await fs.readFile(
+        path.join(backgroundsDir, 'crystal_cave', 'crystals.png'),
+        'utf8'
+      ),
+      'crystal-crystals'
+    )
+
+    assert.deepEqual(
+      JSON.parse(
+        await fs.readFile(
+          path.join(mapBackgroundsDir, 'crystal_cave.json'),
+          'utf8'
+        )
+      ),
+      manifests.crystal_cave
     )
   } finally {
     await fs.rm(tempRoot, { recursive: true, force: true })

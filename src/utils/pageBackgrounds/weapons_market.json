@@ -1,0 +1,62 @@
+{
+  "bgm": "assets/audio/bgm/explore_sunny.mp3",
+  "layers": [
+    {
+      "key": "assets/battle/environments/weapons_market/sky",
+      "scrollRatio": 0,
+      "width": 64,
+      "height": 512,
+      "xOffset": 0,
+      "yOffset": 0
+    },
+    {
+      "key": "assets/battle/environments/weapons_market/clouds",
+      "scrollRatio": 0.01,
+      "width": 1821,
+      "height": 246,
+      "xOffset": 0,
+      "yOffset": 0,
+      "autoScrollX": 2
+    },
+    {
+      "key": "assets/battle/environments/weapons_market/castle",
+      "scrollRatio": 0.02,
+      "width": 1821,
+      "height": 352,
+      "xOffset": 0,
+      "yOffset": 0
+    },
+    {
+      "key": "assets/battle/environments/weapons_market/wall",
+      "scrollRatio": 0.1,
+      "width": 1821,
+      "height": 632,
+      "xOffset": 0,
+      "yOffset": -10
+    },
+    {
+      "key": "assets/battle/environments/weapons_market/stalls2",
+      "scrollRatio": 0.25,
+      "width": 1821,
+      "height": 373,
+      "xOffset": 0,
+      "yOffset": 345
+    },
+    {
+      "key": "assets/battle/environments/weapons_market/stalls1",
+      "scrollRatio": 0.5,
+      "width": 1821,
+      "height": 601,
+      "xOffset": 0,
+      "yOffset": 175
+    },
+    {
+      "key": "assets/battle/environments/weapons_market/walkable_area",
+      "scrollRatio": 1,
+      "width": 1821,
+      "height": 324,
+      "xOffset": 0,
+      "yOffset": 700
+    }
+  ]
+}

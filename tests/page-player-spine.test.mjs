@@ -124,6 +124,9 @@ test('page enemy selector uses enemies from the selected map background', async 
     const forbiddenCityBackground = MAP_PAGE_BACKGROUNDS.find(
       (background) => background.key === 'forbidden_city'
     )
+    const castleRoadBackground = MAP_PAGE_BACKGROUNDS.find(
+      (background) => background.key === 'castle_road'
+    )
 
     assert.equal(
       selectRandomPageEnemy(fieldsBackground, () => 0).id,
@@ -132,6 +135,10 @@ test('page enemy selector uses enemies from the selected map background', async 
     assert.equal(
       selectRandomPageEnemy(forbiddenCityBackground, () => 0).spineAssetKey,
       'robot_no1'
+    )
+    assert.equal(
+      selectRandomPageEnemy(castleRoadBackground, () => 0).id,
+      'corruptedSkelAssassin'
     )
     assert.match(
       getPageEnemySpineAssetPath(

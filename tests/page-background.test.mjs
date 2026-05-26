@@ -35,14 +35,23 @@ test('page background pool includes every map with remote environment art', asyn
         'outer_temple',
         'forbidden_city',
         'new_eden',
+        'castle_road',
+        'weapons_market',
+        'ancient_battlefield',
+        'haunted_forest',
+        'winter_festival',
       ]
     )
 
     for (const background of MAP_PAGE_BACKGROUNDS) {
       assert.ok(background.layers.length >= 4)
       assert.ok(
+        fs.existsSync(`src/utils/pageBackgrounds/${background.key}.json`),
+        `${background.key}.json should be stored as local environment data`
+      )
+      assert.ok(
         background.layers.some((layer) => layer.name === 'walkable_area'),
-        `${background.key} should include the ground layer`
+        `${background.key} should include a walkable_area layer`
       )
 
       for (const layer of background.layers) {
@@ -64,7 +73,7 @@ test('selectRandomPageBackground picks one map using the provided random source'
     )
 
     assert.equal(selectRandomPageBackground(() => 0).key, 'fields')
-    assert.equal(selectRandomPageBackground(() => 0.999).key, 'new_eden')
+    assert.equal(selectRandomPageBackground(() => 0.999).key, 'winter_festival')
   })
 })
 
@@ -105,10 +114,8 @@ test('applyRandomPageBackground sets the body dataset and layered CSS variables'
 
 test('page background layers scale vertically to cover taller viewports', async () => {
   await withViteServer(async (server) => {
-    const {
-      MAP_PAGE_BACKGROUNDS,
-      installPageBackgroundScaleSync,
-    } = await server.ssrLoadModule('/src/utils/pageBackground.ts')
+    const { MAP_PAGE_BACKGROUNDS, installPageBackgroundScaleSync } =
+      await server.ssrLoadModule('/src/utils/pageBackground.ts')
 
     const values = new Map()
     const listeners = []

@@ -1,0 +1,45 @@
+{
+  "bgm": "assets/audio/bgm/explore_neutral.mp3",
+  "layers": [
+    {
+      "key": "assets/battle/environments/ancient_battlefield/sky",
+      "scrollRatio": 0,
+      "width": 32,
+      "height": 586,
+      "xOffset": 0,
+      "yOffset": 0
+    },
+    {
+      "key": "assets/battle/environments/ancient_battlefield/mountains",
+      "scrollRatio": 0.05,
+      "width": 1821,
+      "height": 123,
+      "xOffset": 0,
+      "yOffset": 425
+    },
+    {
+      "key": "assets/battle/environments/ancient_battlefield/mushrooms",
+      "scrollRatio": 0.1,
+      "width": 1821,
+      "height": 649,
+      "xOffset": 0,
+      "yOffset": 0
+    },
+    {
+      "key": "assets/battle/environments/ancient_battlefield/midground",
+      "scrollRatio": 0.3,
+      "width": 1821,
+      "height": 465,
+      "xOffset": 0,
+      "yOffset": 325
+    },
+    {
+      "key": "assets/battle/environments/ancient_battlefield/walkable_area",
+      "scrollRatio": 1,
+      "width": 1821,
+      "height": 336,
+      "xOffset": 0,
+      "yOffset": 695
+    }
+  ]
+}

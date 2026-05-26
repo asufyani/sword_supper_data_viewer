@@ -1,0 +1,53 @@
+{
+  "bgm": "assets/audio/bgm/explore_champ.mp3",
+  "layers": [
+    {
+      "key": "assets/battle/environments/fields/sky",
+      "scrollRatio": 0,
+      "width": 16,
+      "height": 800,
+      "xOffset": 0,
+      "yOffset": 0
+    },
+    {
+      "key": "assets/battle/environments/fields/clouds",
+      "scrollRatio": 0.01,
+      "width": 1821,
+      "height": 358,
+      "xOffset": 0,
+      "yOffset": 250
+    },
+    {
+      "key": "assets/battle/environments/fields/mountains",
+      "scrollRatio": 0.02,
+      "width": 1821,
+      "height": 218,
+      "xOffset": 0,
+      "yOffset": 400
+    },
+    {
+      "key": "assets/battle/environments/fields/sword",
+      "scrollRatio": 0.03,
+      "width": 1821,
+      "height": 612,
+      "xOffset": 0,
+      "yOffset": 50
+    },
+    {
+      "key": "assets/battle/environments/fields/hills",
+      "scrollRatio": 0.3,
+      "width": 1821,
+      "height": 303,
+      "xOffset": 0,
+      "yOffset": 550
+    },
+    {
+      "key": "assets/battle/environments/fields/walkable_area",
+      "scrollRatio": 1,
+      "width": 1821,
+      "height": 362,
+      "xOffset": 0,
+      "yOffset": 670
+    }
+  ]
+}

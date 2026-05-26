@@ -1,0 +1,80 @@
+{
+  "bgm": "assets/audio/bgm/explore_sunny.mp3",
+  "layers": [
+    {
+      "key": "assets/battle/environments/seaside_cliffs/sky",
+      "scrollRatio": 0,
+      "width": 96,
+      "height": 898,
+      "xOffset": 0,
+      "yOffset": 0
+    },
+    {
+      "key": "assets/battle/environments/seaside_cliffs/cloud_far",
+      "scrollRatio": 0.03,
+      "width": 1821,
+      "height": 246,
+      "xOffset": 0,
+      "yOffset": 355,
+      "autoScrollX": 2
+    },
+    {
+      "key": "assets/battle/environments/seaside_cliffs/cloud_small",
+      "scrollRatio": 0.035,
+      "width": 1821,
+      "height": 152,
+      "xOffset": 0,
+      "yOffset": 510,
+      "autoScrollX": 5
+    },
+    {
+      "key": "assets/battle/environments/seaside_cliffs/cloud_big",
+      "scrollRatio": 0.04,
+      "width": 1821,
+      "height": 338,
+      "xOffset": 0,
+      "yOffset": 110,
+      "autoScrollX": 3
+    },
+    {
+      "key": "assets/battle/environments/seaside_cliffs/sea",
+      "scrollRatio": 0.05,
+      "width": 96,
+      "height": 290,
+      "xOffset": 0,
+      "yOffset": 507
+    },
+    {
+      "key": "assets/battle/environments/seaside_cliffs/rock_far",
+      "scrollRatio": 0.075,
+      "width": 1821,
+      "height": 304,
+      "xOffset": 0,
+      "yOffset": 490
+    },
+    {
+      "key": "assets/battle/environments/seaside_cliffs/rock_near1",
+      "scrollRatio": 0.2,
+      "width": 1821,
+      "height": 373,
+      "xOffset": 0,
+      "yOffset": 425
+    },
+    {
+      "key": "assets/battle/environments/seaside_cliffs/rock_near2",
+      "scrollRatio": 0.3,
+      "width": 1821,
+      "height": 468,
+      "xOffset": 0,
+      "yOffset": 330
+    },
+    {
+      "key": "assets/battle/environments/seaside_cliffs/walkable_area",
+      "scrollRatio": 1,
+      "width": 1821,
+      "height": 358,
+      "xOffset": 0,
+      "yOffset": 675
+    }
+  ]
+}

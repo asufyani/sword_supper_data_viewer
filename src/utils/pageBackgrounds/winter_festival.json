@@ -1,0 +1,61 @@
+{
+  "bgm": "assets/audio/bgm/festival_bgm.mp3",
+  "layers": [
+    {
+      "key": "assets/battle/environments/winter_festival/sky",
+      "scrollRatio": 0,
+      "width": 32,
+      "height": 512,
+      "xOffset": 0,
+      "yOffset": 0
+    },
+    {
+      "key": "assets/battle/environments/winter_festival/spire",
+      "scrollRatio": 0.01,
+      "width": 1821,
+      "height": 348,
+      "xOffset": 0,
+      "yOffset": 0
+    },
+    {
+      "key": "assets/battle/environments/winter_festival/forest_far",
+      "scrollRatio": 0.025,
+      "width": 1821,
+      "height": 396,
+      "xOffset": 0,
+      "yOffset": 0
+    },
+    {
+      "key": "assets/battle/environments/winter_festival/forest_mid",
+      "scrollRatio": 0.05,
+      "width": 1821,
+      "height": 767,
+      "xOffset": 0,
+      "yOffset": 0
+    },
+    {
+      "key": "assets/battle/environments/winter_festival/forest_near",
+      "scrollRatio": 0.1,
+      "width": 1821,
+      "height": 767,
+      "xOffset": 0,
+      "yOffset": 90
+    },
+    {
+      "key": "assets/battle/environments/winter_festival/wall",
+      "scrollRatio": 1,
+      "width": 1821,
+      "height": 612,
+      "xOffset": 0,
+      "yOffset": 175
+    },
+    {
+      "key": "assets/battle/environments/winter_festival/walkable_area",
+      "scrollRatio": 1,
+      "width": 1821,
+      "height": 346,
+      "xOffset": 0,
+      "yOffset": 670
+    }
+  ]
+}

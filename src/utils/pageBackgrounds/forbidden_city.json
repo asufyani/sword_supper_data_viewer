@@ -1,0 +1,45 @@
+{
+  "bgm": "assets/audio/bgm/explore_mystery.mp3",
+  "layers": [
+    {
+      "key": "assets/battle/environments/forbidden_city/sky",
+      "scrollRatio": 0,
+      "width": 32,
+      "height": 851,
+      "xOffset": 0,
+      "yOffset": 0
+    },
+    {
+      "key": "assets/battle/environments/forbidden_city/far_back",
+      "scrollRatio": 0.03,
+      "width": 1821,
+      "height": 808,
+      "xOffset": 0,
+      "yOffset": 0
+    },
+    {
+      "key": "assets/battle/environments/forbidden_city/back_buildings",
+      "scrollRatio": 0.06,
+      "width": 1821,
+      "height": 794,
+      "xOffset": 0,
+      "yOffset": 0
+    },
+    {
+      "key": "assets/battle/environments/forbidden_city/mid_buildings",
+      "scrollRatio": 0.3,
+      "width": 1821,
+      "height": 774,
+      "xOffset": 0,
+      "yOffset": -40
+    },
+    {
+      "key": "assets/battle/environments/forbidden_city/walkable_area",
+      "scrollRatio": 1,
+      "width": 1821,
+      "height": 806,
+      "xOffset": 0,
+      "yOffset": 220
+    }
+  ]
+}

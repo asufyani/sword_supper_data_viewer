@@ -1,0 +1,81 @@
+{
+  "bgm": "assets/audio/bgm/explore_spooky.mp3",
+  "layers": [
+    {
+      "key": "assets/battle/environments/mountain_pass/sky",
+      "scrollRatio": 0,
+      "width": 96,
+      "height": 898,
+      "xOffset": 0,
+      "yOffset": 0
+    },
+    {
+      "key": "assets/battle/environments/mountain_pass/mountain_far",
+      "scrollRatio": 0.025,
+      "width": 1821,
+      "height": 581,
+      "xOffset": 0,
+      "yOffset": 300
+    },
+    {
+      "key": "assets/battle/environments/mountain_pass/clouds_far",
+      "scrollRatio": 0.05,
+      "width": 1821,
+      "height": 433,
+      "xOffset": 0,
+      "yOffset": 50,
+      "autoScrollX": 5
+    },
+    {
+      "key": "assets/battle/environments/mountain_pass/mountain_mid",
+      "scrollRatio": 0.1,
+      "width": 1821,
+      "height": 898,
+      "xOffset": 0,
+      "yOffset": 0
+    },
+    {
+      "key": "assets/battle/environments/mountain_pass/clouds_mid1",
+      "scrollRatio": 0.12,
+      "width": 1821,
+      "height": 446,
+      "xOffset": 0,
+      "yOffset": 460,
+      "autoScrollX": 7
+    },
+    {
+      "key": "assets/battle/environments/mountain_pass/clouds_mid2",
+      "scrollRatio": 0.15,
+      "width": 1821,
+      "height": 578,
+      "xOffset": 0,
+      "yOffset": 200,
+      "autoScrollX": 6
+    },
+    {
+      "key": "assets/battle/environments/mountain_pass/mountain_front",
+      "scrollRatio": 0.2,
+      "width": 1821,
+      "height": 898,
+      "xOffset": 0,
+      "yOffset": 0
+    },
+    {
+      "key": "assets/battle/environments/mountain_pass/clouds_near",
+      "scrollRatio": 0.3,
+      "width": 1821,
+      "height": 268,
+      "xOffset": 0,
+      "yOffset": 500,
+      "autoScrollX": 5
+    },
+    {
+      "key": "assets/battle/environments/mountain_pass/walkable_area",
+      "scrollRatio": 1,
+      "width": 1821,
+      "height": 323,
+      "xOffset": 0,
+      "yOffset": 695
+    }
+  ]
+}

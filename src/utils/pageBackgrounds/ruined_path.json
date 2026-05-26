@@ -1,0 +1,61 @@
+{
+  "bgm": "assets/audio/bgm/explore_spooky.mp3",
+  "layers": [
+    {
+      "key": "assets/battle/environments/ruined_path/sky",
+      "scrollRatio": 0,
+      "width": 96,
+      "height": 562,
+      "xOffset": 0,
+      "yOffset": -20
+    },
+    {
+      "key": "assets/battle/environments/ruined_path/clouds",
+      "scrollRatio": 0.05,
+      "width": 1821,
+      "height": 872,
+      "xOffset": 0,
+      "yOffset": 0
+    },
+    {
+      "key": "assets/battle/environments/ruined_path/back_hills",
+      "scrollRatio": 0.2,
+      "width": 1821,
+      "height": 161,
+      "xOffset": 0,
+      "yOffset": 450
+    },
+    {
+      "key": "assets/battle/environments/ruined_path/hills",
+      "scrollRatio": 0.3,
+      "width": 1821,
+      "height": 542,
+      "xOffset": 0,
+      "yOffset": 300
+    },
+    {
+      "key": "assets/battle/environments/ruined_path/overpass",
+      "scrollRatio": 1,
+      "width": 1821,
+      "height": 400,
+      "xOffset": 0,
+      "yOffset": 0
+    },
+    {
+      "key": "assets/battle/environments/ruined_path/walkable_area",
+      "scrollRatio": 1,
+      "width": 1821,
+      "height": 363,
+      "xOffset": 0,
+      "yOffset": 675
+    },
+    {
+      "key": "assets/battle/environments/ruined_path/column",
+      "scrollRatio": 1,
+      "width": 1821,
+      "height": 822,
+      "xOffset": 0,
+      "yOffset": -40
+    }
+  ]
+}

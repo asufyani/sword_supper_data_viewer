@@ -1,0 +1,45 @@
+{
+  "bgm": "assets/audio/bgm/AbandonedCastle.mp3",
+  "layers": [
+    {
+      "key": "assets/battle/environments/haunted_forest/sky",
+      "scrollRatio": 0.1,
+      "width": 1821,
+      "height": 653,
+      "xOffset": 0,
+      "yOffset": 0
+    },
+    {
+      "key": "assets/battle/environments/haunted_forest/background_trees",
+      "scrollRatio": 0.4,
+      "width": 1821,
+      "height": 717,
+      "xOffset": 0,
+      "yOffset": 0
+    },
+    {
+      "key": "assets/battle/environments/haunted_forest/midground_trees",
+      "scrollRatio": 0.7,
+      "width": 1821,
+      "height": 799,
+      "xOffset": 0,
+      "yOffset": 0
+    },
+    {
+      "key": "assets/battle/environments/haunted_forest/foreground_trees",
+      "scrollRatio": 1,
+      "width": 1821,
+      "height": 808,
+      "xOffset": 0,
+      "yOffset": 0
+    },
+    {
+      "key": "assets/battle/environments/haunted_forest/walkable_area",
+      "scrollRatio": 1,
+      "width": 1821,
+      "height": 358,
+      "xOffset": 0,
+      "yOffset": 675
+    }
+  ]
+}

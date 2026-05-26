@@ -24,294 +24,91 @@ type PageBackgroundWindow = Pick<
   > | null
 }
 
-export const MAP_PAGE_BACKGROUNDS = [
-  {
-    key: 'fields',
-    layers: [
-      { name: 'sky', width: 16, height: 800, xOffset: 0, yOffset: 0 },
-      { name: 'clouds', width: 1821, height: 358, xOffset: 0, yOffset: 250 },
-      { name: 'mountains', width: 1821, height: 218, xOffset: 0, yOffset: 400 },
-      { name: 'sword', width: 1821, height: 612, xOffset: 0, yOffset: 50 },
-      { name: 'hills', width: 1821, height: 303, xOffset: 0, yOffset: 550 },
-      {
-        name: 'walkable_area',
-        width: 1821,
-        height: 362,
-        xOffset: 0,
-        yOffset: 670,
-      },
-    ],
-  },
-  {
-    key: 'mossy_forest',
-    layers: [
-      { name: 'sky', width: 1821, height: 653, xOffset: 0, yOffset: 0 },
-      {
-        name: 'background_trees',
-        width: 1821,
-        height: 717,
-        xOffset: 0,
-        yOffset: 0,
-      },
-      {
-        name: 'midground_trees',
-        width: 1821,
-        height: 799,
-        xOffset: 0,
-        yOffset: 0,
-      },
-      {
-        name: 'foreground_trees',
-        width: 1821,
-        height: 808,
-        xOffset: 0,
-        yOffset: 0,
-      },
-      {
-        name: 'walkable_area',
-        width: 1821,
-        height: 358,
-        xOffset: 0,
-        yOffset: 675,
-      },
-    ],
-  },
-  {
-    key: 'mountain_pass',
-    layers: [
-      { name: 'sky', width: 96, height: 898, xOffset: 0, yOffset: 0 },
-      {
-        name: 'mountain_far',
-        width: 1821,
-        height: 581,
-        xOffset: 0,
-        yOffset: 300,
-      },
-      {
-        name: 'clouds_far',
-        width: 1821,
-        height: 433,
-        xOffset: 0,
-        yOffset: 50,
-      },
-      {
-        name: 'mountain_mid',
-        width: 1821,
-        height: 898,
-        xOffset: 0,
-        yOffset: 0,
-      },
-      {
-        name: 'clouds_mid1',
-        width: 1821,
-        height: 446,
-        xOffset: 0,
-        yOffset: 460,
-      },
-      {
-        name: 'clouds_mid2',
-        width: 1821,
-        height: 578,
-        xOffset: 0,
-        yOffset: 200,
-      },
-      {
-        name: 'mountain_front',
-        width: 1821,
-        height: 898,
-        xOffset: 0,
-        yOffset: 0,
-      },
-      {
-        name: 'clouds_near',
-        width: 1821,
-        height: 268,
-        xOffset: 0,
-        yOffset: 500,
-      },
-      {
-        name: 'walkable_area',
-        width: 1821,
-        height: 323,
-        xOffset: 0,
-        yOffset: 660,
-      },
-    ],
-  },
-  {
-    key: 'ruined_path',
-    layers: [
-      { name: 'sky', width: 96, height: 562, xOffset: 0, yOffset: -20 },
-      { name: 'clouds', width: 1821, height: 872, xOffset: 0, yOffset: 0 },
-      {
-        name: 'back_hills',
-        width: 1821,
-        height: 161,
-        xOffset: 0,
-        yOffset: 450,
-      },
-      { name: 'hills', width: 1821, height: 542, xOffset: 0, yOffset: 300 },
-      { name: 'overpass', width: 1821, height: 400, xOffset: 0, yOffset: 0 },
-      {
-        name: 'walkable_area',
-        width: 1821,
-        height: 363,
-        xOffset: 0,
-        yOffset: 675,
-      },
-      { name: 'column', width: 1821, height: 822, xOffset: 0, yOffset: -40 },
-    ],
-  },
-  {
-    key: 'seaside_cliffs',
-    layers: [
-      { name: 'sky', width: 96, height: 898, xOffset: 0, yOffset: 0 },
-      {
-        name: 'cloud_far',
-        width: 1821,
-        height: 246,
-        xOffset: 0,
-        yOffset: 355,
-      },
-      {
-        name: 'cloud_small',
-        width: 1821,
-        height: 152,
-        xOffset: 0,
-        yOffset: 510,
-      },
-      {
-        name: 'cloud_big',
-        width: 1821,
-        height: 338,
-        xOffset: 0,
-        yOffset: 110,
-      },
-      { name: 'sea', width: 96, height: 290, xOffset: 0, yOffset: 507 },
-      {
-        name: 'rock_far',
-        width: 1821,
-        height: 304,
-        xOffset: 0,
-        yOffset: 490,
-      },
-      {
-        name: 'rock_near1',
-        width: 1821,
-        height: 373,
-        xOffset: 0,
-        yOffset: 425,
-      },
-      {
-        name: 'rock_near2',
-        width: 1821,
-        height: 468,
-        xOffset: 0,
-        yOffset: 330,
-      },
-      {
-        name: 'walkable_area',
-        width: 1821,
-        height: 358,
-        xOffset: 0,
-        yOffset: 675,
-      },
-    ],
-  },
-  {
-    key: 'outer_temple',
-    layers: [
-      { name: 'sky', width: 32, height: 512, xOffset: 0, yOffset: 0 },
-      { name: 'spire', width: 1821, height: 343, xOffset: 0, yOffset: 0 },
-      {
-        name: 'forest_far',
-        width: 1821,
-        height: 396,
-        xOffset: 0,
-        yOffset: 0,
-      },
-      {
-        name: 'forest_mid',
-        width: 1821,
-        height: 526,
-        xOffset: 0,
-        yOffset: 220,
-      },
-      {
-        name: 'forest_near',
-        width: 1821,
-        height: 730,
-        xOffset: 0,
-        yOffset: 90,
-      },
-      { name: 'wall', width: 1821, height: 539, xOffset: 0, yOffset: 225 },
-      {
-        name: 'walkable_area',
-        width: 1821,
-        height: 376,
-        xOffset: 0,
-        yOffset: 670,
-      },
-    ],
-  },
-  {
-    key: 'forbidden_city',
-    layers: [
-      { name: 'sky', width: 32, height: 851, xOffset: 0, yOffset: 0 },
-      { name: 'far_back', width: 1821, height: 808, xOffset: 0, yOffset: 0 },
-      {
-        name: 'back_buildings',
-        width: 1821,
-        height: 794,
-        xOffset: 0,
-        yOffset: 0,
-      },
-      {
-        name: 'mid_buildings',
-        width: 1821,
-        height: 774,
-        xOffset: 0,
-        yOffset: -40,
-      },
-      {
-        name: 'walkable_area',
-        width: 1821,
-        height: 806,
-        xOffset: 0,
-        yOffset: 220,
-      },
-    ],
-  },
-  {
-    key: 'new_eden',
-    layers: [
-      { name: 'sky', width: 32, height: 758, xOffset: 0, yOffset: 0 },
-      {
-        name: 'background',
-        width: 1821,
-        height: 754,
-        xOffset: 0,
-        yOffset: -50,
-      },
-      {
-        name: 'midground',
-        width: 1821,
-        height: 843,
-        xOffset: 0,
-        yOffset: -50,
-      },
-      {
-        name: 'walkable_area',
-        width: 1821,
-        height: 395,
-        xOffset: 0,
-        yOffset: 620,
-      },
-    ],
-  },
-] as const satisfies readonly PageBackground[]
+type EnvironmentManifestLayer = {
+  key: string
+  width: number
+  height: number
+  xOffset: number
+  yOffset: number
+}
 
-function getBackgroundPath(background: PageBackground, layer: PageBackgroundLayer) {
+type EnvironmentManifest = {
+  layers: readonly EnvironmentManifestLayer[]
+}
+
+const mapBackgroundManifestModules = import.meta.glob<EnvironmentManifest>(
+  './pageBackgrounds/*.json',
+  { eager: true, import: 'default' }
+)
+
+const MAP_PAGE_BACKGROUND_ORDER = [
+  'fields',
+  'mossy_forest',
+  'mountain_pass',
+  'ruined_path',
+  'seaside_cliffs',
+  'outer_temple',
+  'forbidden_city',
+  'new_eden',
+  'castle_road',
+  'weapons_market',
+  'ancient_battlefield',
+  'haunted_forest',
+  'winter_festival',
+] as const
+
+function getMapKeyFromManifestPath(manifestPath: string) {
+  const fileName = manifestPath.split('/').pop() ?? manifestPath
+  return fileName.replace(/\.json$/, '')
+}
+
+function getLayerName(layerKey: string) {
+  const normalizedLayerKey = layerKey.endsWith('.png')
+    ? layerKey.slice(0, -'.png'.length)
+    : layerKey
+  const segments = normalizedLayerKey.split('/')
+
+  return segments.at(-1) ?? normalizedLayerKey
+}
+
+function getMapSortIndex(mapKey: string) {
+  const orderIndex = MAP_PAGE_BACKGROUND_ORDER.indexOf(
+    mapKey as (typeof MAP_PAGE_BACKGROUND_ORDER)[number]
+  )
+
+  return orderIndex === -1 ? MAP_PAGE_BACKGROUND_ORDER.length : orderIndex
+}
+
+function comparePageBackgrounds(first: PageBackground, second: PageBackground) {
+  const firstIndex = getMapSortIndex(first.key)
+  const secondIndex = getMapSortIndex(second.key)
+
+  if (firstIndex !== secondIndex) {
+    return firstIndex - secondIndex
+  }
+
+  return first.key.localeCompare(second.key)
+}
+
+export const MAP_PAGE_BACKGROUNDS: readonly PageBackground[] = Object.entries(
+  mapBackgroundManifestModules
+)
+  .map(([manifestPath, manifest]) => ({
+    key: getMapKeyFromManifestPath(manifestPath),
+    layers: manifest.layers.map((layer) => ({
+      name: getLayerName(layer.key),
+      width: layer.width,
+      height: layer.height,
+      xOffset: layer.xOffset,
+      yOffset: layer.yOffset,
+    })),
+  }))
+  .sort(comparePageBackgrounds)
+
+function getBackgroundPath(
+  background: PageBackground,
+  layer: PageBackgroundLayer
+) {
   return `${import.meta.env.BASE_URL}backgrounds/${background.key}/${layer.name}.png`
 }
 
@@ -375,9 +172,7 @@ function getLayerSize(layer: PageBackgroundLayer, scale = 1) {
   return `${formatPixels(layer.width * scale)} auto`
 }
 
-export function selectRandomPageBackground(
-  random: () => number = Math.random
-) {
+export function selectRandomPageBackground(random: () => number = Math.random) {
   const index = Math.max(
     0,
     Math.min(

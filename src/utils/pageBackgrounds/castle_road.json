@@ -1,0 +1,70 @@
+{
+  "bgm": "assets/audio/bgm/explore_sunny.mp3",
+  "layers": [
+    {
+      "key": "assets/battle/environments/castle_road/sky",
+      "scrollRatio": 0,
+      "width": 64,
+      "height": 512,
+      "xOffset": 0,
+      "yOffset": 0
+    },
+    {
+      "key": "assets/battle/environments/castle_road/clouds",
+      "scrollRatio": 0.01,
+      "width": 1821,
+      "height": 246,
+      "xOffset": 0,
+      "yOffset": 0,
+      "autoScrollX": 2
+    },
+    {
+      "key": "assets/battle/environments/castle_road/hills2",
+      "scrollRatio": 0.01,
+      "width": 1821,
+      "height": 130,
+      "xOffset": 0,
+      "yOffset": 300
+    },
+    {
+      "key": "assets/battle/environments/castle_road/castle",
+      "scrollRatio": 0.02,
+      "width": 1821,
+      "height": 420,
+      "xOffset": 0,
+      "yOffset": 80
+    },
+    {
+      "key": "assets/battle/environments/castle_road/hills1",
+      "scrollRatio": 0.05,
+      "width": 1821,
+      "height": 301,
+      "xOffset": 0,
+      "yOffset": 425
+    },
+    {
+      "key": "assets/battle/environments/castle_road/poppies2",
+      "scrollRatio": 0.1,
+      "width": 1821,
+      "height": 267,
+      "xOffset": 0,
+      "yOffset": 450
+    },
+    {
+      "key": "assets/battle/environments/castle_road/poppies1",
+      "scrollRatio": 0.3,
+      "width": 1821,
+      "height": 241,
+      "xOffset": 0,
+      "yOffset": 515
+    },
+    {
+      "key": "assets/battle/environments/castle_road/walkable_area",
+      "scrollRatio": 1,
+      "width": 1821,
+      "height": 343,
+      "xOffset": 0,
+      "yOffset": 690
+    }
+  ]
+}
