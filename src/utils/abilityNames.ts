@@ -206,6 +206,16 @@ export const abilityNameMap = {
     description:
       'Controls the Gilded Guardian — summons minions on rage, attacks when minions are alive.',
   },
+  BossBrain_LivingWall: {
+    name: 'Living Wall Brain',
+    description:
+      'Controls the Living Wall — sweeps with his shield (builds rage), periodically fortifies his attack and defense, and unleashes a multi-boulder slam on rage.',
+  },
+  BossBrain_GiantWizard: {
+    name: 'Giant Wizard Brain',
+    description:
+      'Controls the Giant Wizard — shadow staff bonks by default, leafs through his book every few turns to cleanse/heal/learn an ability, and unleashes a status curse on rage.',
+  },
   BossBrain_MushroomLargeBoss: {
     name: 'Mushroom Large Boss Brain',
     description:
