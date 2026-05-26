@@ -17,7 +17,6 @@ import { RarityChip } from './RarityChip'
 import { useCallback, useMemo, type ChangeEvent } from 'react'
 import { useDebounceValue } from 'usehooks-ts'
 import { z3 } from './utils/enemies'
-import { enemyNames } from './utils/enemyNames'
 import { EnemyAnimationViewer } from './EnemyViewer'
 
 interface LootTableProps {
@@ -73,8 +72,8 @@ export const LootTable: React.FC<LootTableProps> = ({ itemNameMap, goTo }) => {
   )
 
   const getEnemyNames = useCallback((enemyKeys: string[]) => {
-    return enemyKeys.map((enemyName) => {
-      return enemyNames[enemyName]
+    return enemyKeys.map((enemyKey) => {
+      return z3[enemyKey]?.name ?? enemyKey
     })
   }, [])
 

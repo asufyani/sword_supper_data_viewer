@@ -43,7 +43,7 @@ The generated data modules in `src/utils` include:
 
 - `items.ts`, `loot.ts`, `enemies.ts`, `foods.ts`
 - `mapEnemies.ts`, `quests.ts`, `vaultLoot.ts`
-- `abilityNames.ts`, `enemyNames.ts`, `levelCosts.ts`
+- `abilityNames.ts`, `levelCosts.ts`
 
 The other utility modules provide derived display behavior, including item drop
 location lookup, sort comparators, rarity colors, ability tooltips, page
@@ -104,8 +104,7 @@ node --test tests/sync-bundle-data.test.mjs
 | `npm run preview` | Starts `vite preview`; run `npm run build` first if `dist/` is stale or missing. |
 | `npm run data:check` | Checks generated data in `src/utils` against a built game bundle. Exits non-zero when drift is found. |
 | `npm run data:update` | Updates generated data files in `src/utils` from a built game bundle. |
-| `npm run get:item-assets` | Downloads missing item icon PNGs into `public/itemIcons`. Requires a base asset URL. |
-| `npm run get:spine-assets` | Downloads missing enemy Spine files and weapon textures into `public/spine` and `public/gear/weapons`. Requires a base asset URL. |
+| `npm run get:assets` | Downloads missing item icon PNGs, enemy Spine files, and weapon textures. Requires the game `/assets/` base URL. |
 
 ## Data Sync Script
 
@@ -137,7 +136,7 @@ Available targets:
 
 ```text
 loot, items, enemies, foods, mapEnemies, quests, vaultLoot, abilityNames,
-enemyNames, levelCosts
+levelCosts
 ```
 
 Examples:
@@ -151,37 +150,17 @@ node scripts/sync_bundle_data.mjs --check --root . --bundle ./dist/assets/index-
 Review the generated diff after `data:update`; the script intentionally rewrites
 the generated utility files for the requested targets.
 
-## Asset Sync Scripts
+## Asset Sync Script
 
-### Item Icons
-
-`scripts/get_item_assets.mjs` reads `assetName` values from `src/utils/items.ts`
-and downloads missing `<assetName>.png` files into `public/itemIcons`.
-Existing files are skipped.
-
-```bash
-npm run get:item-assets -- https://example.com/assets/ui/item-icons/
-```
-
-The command prints counts for discovered, downloaded, skipped, and failed
-assets. It exits non-zero if any requested icon fails to download.
-
-### Spine And Weapon Assets
-
-`scripts/get_spine_assets.mjs` reads `spineAssetKey` values from
-`src/utils/enemies.ts` and downloads each missing `.png`, `.skel`, and `.atlas`
-file into `public/spine`. It also reads weapon item asset names from
-`src/utils/items.ts` and downloads missing weapon PNGs into
-`public/gear/weapons`, including `default.png`.
+`scripts/get_assets.mjs` reads item `assetName` values from `src/utils/items.ts`
+and enemy `spineAssetKey` values from `src/utils/enemies.ts`. From one game
+`/assets/` base URL, it downloads missing item icons into `public/itemIcons`,
+enemy Spine `.png`, `.skel`, and `.atlas` files into `public/spine`, and weapon
+PNGs into `public/gear/weapons`, including `default.png`.
 
 ```bash
-npm run get:spine-assets -- https://example.com/assets/
+npm run get:assets -- https://example.com/assets/
 ```
-
-When the base URL ends with `/spine/`, enemy Spine files are downloaded from
-that URL and weapon files are resolved from the sibling `../gear/weapons/`
-folder. Otherwise, Spine files are resolved from `<base>/spine/` and weapon
-files from `<base>/gear/weapons/`.
 
 The command skips existing files, reports failures, and exits non-zero if any
 download fails.
@@ -204,8 +183,7 @@ download fails.
 4. Fetch any newly referenced item, Spine, or weapon assets:
 
    ```bash
-   npm run get:item-assets -- https://example.com/assets/ui/item-icons/
-   npm run get:spine-assets -- https://example.com/assets/
+   npm run get:assets -- https://example.com/assets/
    ```
 
 5. Verify the app:

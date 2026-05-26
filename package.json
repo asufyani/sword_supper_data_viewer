@@ -11,8 +11,7 @@
     "preview": "vite preview",
     "data:check": "node scripts/sync_bundle_data.mjs --check",
     "data:update": "node scripts/sync_bundle_data.mjs --write",
-    "get:item-assets": "node scripts/get_item_assets.mjs",
-    "get:spine-assets": "node scripts/get_spine_assets.mjs"
+    "get:assets": "node scripts/get_assets.mjs"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",

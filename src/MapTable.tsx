@@ -6,7 +6,7 @@ import TableBody from '@mui/material/TableBody'
 import type { Item, ItemsTableProps } from './types'
 import { RarityChip } from './RarityChip'
 import { Z0, $0 } from './utils/mapEnemies'
-import { enemyNames } from './utils/enemyNames'
+import { z3 } from './utils/enemies'
 import {
   Accordion,
   AccordionDetails,
@@ -90,8 +90,7 @@ export const MapTable: React.FC<ItemsTableProps> = ({
                         </AccordionSummary>
                         <AccordionDetails>
                           {tier.items.map((enemy) => {
-                            const enemyName =
-                              enemyNames[enemy.id as keyof typeof enemyNames]
+                            const enemyName = z3[enemy.id]?.name ?? enemy.id
                             return (
                               <Typography
                                 component="div"
@@ -114,8 +113,7 @@ export const MapTable: React.FC<ItemsTableProps> = ({
                     )
                     return (
                       tier.items.map((enemy) => {
-                        const enemyName =
-                          enemyNames[enemy.id as keyof typeof enemyNames]
+                        const enemyName = z3[enemy.id]?.name ?? enemy.id
                         return (
                           <Typography
                             component="div"

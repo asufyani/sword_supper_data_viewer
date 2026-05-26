@@ -16,21 +16,15 @@ const lootBundleSource = `
 const ENVIRONMENT_LOOT_TABLES={mossy_forest:"mossyForestLoot"},LOOT_TABLES={mossyForestLoot:{type:"always",tiers:[{minLevel:1,items:[{id:"Gold",quantity:[10,20]}]}]}};
 `
 
-const enemyNamesBundleSource = `
-const golemBaby={displayName:"Baby Golem",spineAssetKey:"golem_baby"};
-const ENEMY_DISPLAY_REGISTRY={golemBaby};
+const namedEnemyBundleSource = `
+const LOOT_TABLES={darkLoot:{type:"oneOf",tiers:[]}};
+const evilBook={displayName:"Grouchy Grimoire",spineAssetKey:"EvilBook"};
+const ENEMY_DISPLAY_REGISTRY={evilBook};
 const _EnemyDefinitions={
-  golemBaby:{id:"golemBaby"},
-  poisonDemon:{id:"poisonDemon"},
-  blossomGolem:{id:"blossomGolem"},
-  robotNo5Lucky:{id:"robotNo5Lucky"}
+  evilBook:{id:"evilBook",spineAssetKey:"EvilBook",damageType:"shadow",baseHp:35,hpGrowth:4,baseDamage:38,damageGrowth:3.3,baseDefense:12,defenseGrowth:3.5,speed:11,crit:0,dodge:.08,lootTables:[LOOT_TABLES.darkLoot],tags:["dark"]}
 };
-class PoisonDemon extends DisplayCharacter{constructor({scene:e,x:i}){super({displayName:"PoisonDemon"}),this.displayName="Toxic Winged Shadeborn"}}
-class BlossomGolem extends DisplayCharacter{constructor({scene:e,x:i}){super({displayName:"Blossom Golem"})}}
-class RobotNo5 {}
-function createDisplayNameVariant(x,e){return class extends x{constructor(...i){super(...i),this.displayName=e}}}
-const RobotNo5Lucky=createDisplayNameVariant(RobotNo5,"Loaded Robot 5");
-const EnemyTypeToClass={poisonDemon:PoisonDemon,blossomGolem:BlossomGolem,robotNo5Lucky:RobotNo5Lucky};
+class EvilBook extends DisplayCharacter{constructor(){super({displayName:"Grouchy Grimoire"}),this.displayName="Angry Grymoire"}}
+const EnemyTypeToClass={evilBook:EvilBook};
 `
 
 const enemyScalesBundleSource = `
@@ -108,27 +102,6 @@ async function withTempProject(callback) {
 
   try {
     await callback({ rootDir, bundlePath, vaultLootPath })
-  } finally {
-    await fs.rm(rootDir, { recursive: true, force: true })
-  }
-}
-
-async function withTempEnemyNamesProject(callback) {
-  const rootDir = await fs.mkdtemp(path.join(os.tmpdir(), 'sync-enemy-names-'))
-  const utilsDir = path.join(rootDir, 'src', 'utils')
-  const bundlePath = path.join(rootDir, 'index-test.js')
-  const enemyNamesPath = path.join(utilsDir, 'enemyNames.ts')
-
-  await fs.mkdir(utilsDir, { recursive: true })
-  await fs.writeFile(bundlePath, enemyNamesBundleSource)
-  await fs.writeFile(
-    enemyNamesPath,
-    `export const enemyNames: Record<string, string> = {}
-`
-  )
-
-  try {
-    await callback({ rootDir, bundlePath, enemyNamesPath })
   } finally {
     await fs.rm(rootDir, { recursive: true, force: true })
   }
@@ -262,21 +235,52 @@ export const et: Record<string, LootTable> = {}
   }
 })
 
-test('syncBundleData keeps enemyNames complete for bundled enemy definitions', async () => {
-  await withTempEnemyNamesProject(async ({ rootDir, bundlePath, enemyNamesPath }) => {
-    await syncBundleData({
+test('syncBundleData embeds enemy display names in generated enemy records', async () => {
+  const rootDir = await fs.mkdtemp(path.join(os.tmpdir(), 'sync-named-enemies-'))
+  const utilsDir = path.join(rootDir, 'src', 'utils')
+  const bundlePath = path.join(rootDir, 'index-test.js')
+  const enemiesPath = path.join(utilsDir, 'enemies.ts')
+
+  await fs.mkdir(utilsDir, { recursive: true })
+  await fs.writeFile(bundlePath, namedEnemyBundleSource)
+  await fs.writeFile(
+    path.join(utilsDir, 'loot.ts'),
+    `export const et = {
+  darkLoot: { type: 'oneOf', tiers: [] },
+}
+`
+  )
+  await fs.writeFile(
+    enemiesPath,
+    `export const z3 = {
+  evilBook: {
+    id: 'evilBook',
+    name: 'Grouchy Grimoire',
+    lootTables: [],
+  },
+}
+`
+  )
+
+  try {
+    const result = await syncBundleData({
       rootDir,
       bundlePath,
-      targets: ['enemyNames'],
+      targets: ['enemies'],
       write: true,
     })
-    const source = await fs.readFile(enemyNamesPath, 'utf8')
+    const source = await fs.readFile(enemiesPath, 'utf8')
 
-    assert.match(source, /golemBaby: 'Baby Golem'/)
-    assert.match(source, /poisonDemon: 'Toxic Winged Shadeborn'/)
-    assert.match(source, /blossomGolem: 'Blossom Golem'/)
-    assert.match(source, /robotNo5Lucky: 'Loaded Robot 5'/)
-  })
+    assert.equal(result.hasChanges, true)
+    assert.equal(result.results[0].written, true)
+    assert.match(
+      source,
+      /evilBook:\s*\{\n\s+id: 'evilBook',\n\s+name: 'Angry Grymoire'/
+    )
+    assert.doesNotMatch(source, /Grouchy Grimoire/)
+  } finally {
+    await fs.rm(rootDir, { recursive: true, force: true })
+  }
 })
 
 test('syncBundleData includes display scale in generated enemy records', async () => {

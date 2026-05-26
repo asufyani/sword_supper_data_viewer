@@ -4,6 +4,7 @@ import { et } from './loot'
 export const z3: Record<string, Enemy> = {
   golemBaby: {
     id: 'golemBaby',
+    name: 'Baby Golem',
     spineAssetKey: 'golem_baby',
     damageType: 'physical',
     baseHp: 6.75,
@@ -22,6 +23,7 @@ export const z3: Record<string, Enemy> = {
   },
   slimeKnight: {
     id: 'slimeKnight',
+    name: 'Slime Knight',
     spineAssetKey: 'slime_knight',
     damageType: 'physical',
     baseHp: 10.8,
@@ -41,6 +43,7 @@ export const z3: Record<string, Enemy> = {
   },
   slimeBigMouth: {
     id: 'slimeBigMouth',
+    name: 'Chomp Slime',
     spineAssetKey: 'slime_bigMouth',
     damageType: 'physical',
     baseHp: 14.4,
@@ -72,6 +75,7 @@ export const z3: Record<string, Enemy> = {
   },
   slimeCat: {
     id: 'slimeCat',
+    name: 'Cat Slime',
     spineAssetKey: 'slime_cat',
     damageType: 'physical',
     baseHp: 12.6,
@@ -91,6 +95,7 @@ export const z3: Record<string, Enemy> = {
   },
   slimeGems: {
     id: 'slimeGems',
+    name: 'Crystal Slime',
     spineAssetKey: 'slime_gems',
     damageType: 'physical',
     baseHp: 12.6,
@@ -110,6 +115,7 @@ export const z3: Record<string, Enemy> = {
   },
   skeleton: {
     id: 'skeleton',
+    name: 'Warrior Skeleton',
     spineAssetKey: 'skeleton',
     damageType: 'physical',
     baseHp: 10.8,
@@ -130,6 +136,7 @@ export const z3: Record<string, Enemy> = {
   },
   skelNoHead: {
     id: 'skelNoHead',
+    name: 'Headless Skeleton',
     spineAssetKey: 'skel_noHead',
     damageType: 'physical',
     baseHp: 13.5,
@@ -149,6 +156,7 @@ export const z3: Record<string, Enemy> = {
   },
   golemMountain: {
     id: 'golemMountain',
+    name: 'Mountain Golem',
     spineAssetKey: 'golem_mountain',
     damageType: 'physical',
     baseHp: 13.05,
@@ -179,6 +187,7 @@ export const z3: Record<string, Enemy> = {
   },
   golemMountainLucky: {
     id: 'golemMountainLucky',
+    name: 'Loaded Mountain Golem',
     spineAssetKey: 'golem_mountain',
     damageType: 'physical',
     baseHp: 13.05,
@@ -209,6 +218,7 @@ export const z3: Record<string, Enemy> = {
   },
   golemBoar: {
     id: 'golemBoar',
+    name: 'Boar Golem',
     spineAssetKey: 'golem_boar',
     damageType: 'physical',
     baseHp: 9.9,
@@ -227,6 +237,7 @@ export const z3: Record<string, Enemy> = {
   },
   skelFireHead: {
     id: 'skelFireHead',
+    name: 'Flaming Skeleton',
     spineAssetKey: 'skel_fireHead',
     damageType: 'fire',
     baseHp: 22.5,
@@ -249,6 +260,7 @@ export const z3: Record<string, Enemy> = {
   },
   skelIceHead: {
     id: 'skelIceHead',
+    name: 'Ice Flame Skeleton',
     spineAssetKey: 'skel_iceHead',
     damageType: 'ice',
     baseHp: 45,
@@ -271,6 +283,7 @@ export const z3: Record<string, Enemy> = {
   },
   skelArcher: {
     id: 'skelArcher',
+    name: 'Ranger Skeleton',
     spineAssetKey: 'skel_archer',
     damageType: 'physical',
     baseHp: 12.6,
@@ -290,6 +303,7 @@ export const z3: Record<string, Enemy> = {
   },
   skel2Axe: {
     id: 'skel2Axe',
+    name: 'Barbarian Skeleton',
     spineAssetKey: 'skel_2Axe',
     damageType: 'physical',
     baseHp: 15.3,
@@ -310,6 +324,7 @@ export const z3: Record<string, Enemy> = {
   },
   slimeBone: {
     id: 'slimeBone',
+    name: 'Bone Slime',
     spineAssetKey: 'slime_bone',
     damageType: 'physical',
     baseHp: 9.9,
@@ -346,6 +361,7 @@ export const z3: Record<string, Enemy> = {
   },
   slimeBoneLucky: {
     id: 'slimeBoneLucky',
+    name: 'Loaded Bone Slime',
     spineAssetKey: 'slime_bone',
     damageType: 'physical',
     baseHp: 9.9,
@@ -365,6 +381,7 @@ export const z3: Record<string, Enemy> = {
   },
   mushroomSmall: {
     id: 'mushroomSmall',
+    name: 'Bitey Shroom',
     spineAssetKey: 'mushroom_small',
     damageType: 'physical',
     baseHp: 12.6,
@@ -381,6 +398,7 @@ export const z3: Record<string, Enemy> = {
   },
   mushroomLarge: {
     id: 'mushroomLarge',
+    name: 'Erin-guy',
     spineAssetKey: 'mushroom_large',
     damageType: 'physical',
     baseHp: 40.5,
@@ -398,6 +416,7 @@ export const z3: Record<string, Enemy> = {
   },
   mushroomLargeBoss: {
     id: 'mushroomLargeBoss',
+    name: 'Boss Mushroom',
     spineAssetKey: 'mushroom_large',
     damageType: 'physical',
     baseHp: 11.25,
@@ -419,6 +438,7 @@ export const z3: Record<string, Enemy> = {
   },
   skelWizard: {
     id: 'skelWizard',
+    name: 'Wizard Skeleton',
     spineAssetKey: 'skel_wizard',
     damageType: 'physical',
     baseHp: 13.5,
@@ -438,6 +458,7 @@ export const z3: Record<string, Enemy> = {
   },
   skelGreatSword: {
     id: 'skelGreatSword',
+    name: 'Swordsman Skeleton',
     spineAssetKey: 'skel_greatSword',
     damageType: 'physical',
     baseHp: 11.25,
@@ -458,6 +479,7 @@ export const z3: Record<string, Enemy> = {
   },
   skelGreatSwordLucky: {
     id: 'skelGreatSwordLucky',
+    name: 'Loaded Swordsman Skeleton',
     spineAssetKey: 'skel_greatSword',
     damageType: 'physical',
     baseHp: 11.25,
@@ -478,6 +500,7 @@ export const z3: Record<string, Enemy> = {
   },
   skelAssassin: {
     id: 'skelAssassin',
+    name: 'Assassin Skeleton',
     spineAssetKey: 'skel_assassin',
     damageType: 'physical',
     baseHp: 14.4,
@@ -495,6 +518,7 @@ export const z3: Record<string, Enemy> = {
   },
   cannibal: {
     id: 'cannibal',
+    name: 'Shadowbearer',
     spineAssetKey: 'cannibal',
     damageType: 'physical',
     baseHp: 10.8,
@@ -513,6 +537,7 @@ export const z3: Record<string, Enemy> = {
   },
   darkBat: {
     id: 'darkBat',
+    name: 'Shadow Wing',
     spineAssetKey: 'dark_bat',
     damageType: 'physical',
     baseHp: 9.9,
@@ -531,6 +556,7 @@ export const z3: Record<string, Enemy> = {
   },
   darkShaman: {
     id: 'darkShaman',
+    name: 'Shadowbringer',
     spineAssetKey: 'dark_shaman',
     damageType: 'shadow',
     baseHp: 10.8,
@@ -558,6 +584,7 @@ export const z3: Record<string, Enemy> = {
   },
   darkChild: {
     id: 'darkChild',
+    name: 'Shadowkin',
     spineAssetKey: 'dark_child',
     damageType: 'physical',
     baseHp: 11.25,
@@ -576,6 +603,7 @@ export const z3: Record<string, Enemy> = {
   },
   darkBigGuy: {
     id: 'darkBigGuy',
+    name: 'Shadow Brute',
     spineAssetKey: 'dark_bigGuy',
     damageType: 'physical',
     baseHp: 12.6,
@@ -594,6 +622,7 @@ export const z3: Record<string, Enemy> = {
   },
   darkBigGuyLucky: {
     id: 'darkBigGuyLucky',
+    name: 'Loaded Shadow Brute',
     spineAssetKey: 'dark_bigGuy',
     damageType: 'physical',
     baseHp: 12.6,
@@ -612,6 +641,7 @@ export const z3: Record<string, Enemy> = {
   },
   darkHand: {
     id: 'darkHand',
+    name: 'Arm of Shadow',
     spineAssetKey: 'dark_hand',
     damageType: 'shadow',
     baseHp: 9,
@@ -630,6 +660,7 @@ export const z3: Record<string, Enemy> = {
   },
   darkWizard: {
     id: 'darkWizard',
+    name: 'Shadow Conjurer',
     spineAssetKey: 'dark_wiz',
     damageType: 'shadow',
     baseHp: 14.4,
@@ -648,6 +679,7 @@ export const z3: Record<string, Enemy> = {
   },
   darkGiantHorns: {
     id: 'darkGiantHorns',
+    name: 'Hollowhorn',
     spineAssetKey: 'dark_giantHorns',
     damageType: 'physical',
     baseHp: 45,
@@ -669,6 +701,7 @@ export const z3: Record<string, Enemy> = {
   },
   darkWorm: {
     id: 'darkWorm',
+    name: 'Shadow Hatchling',
     spineAssetKey: 'dark_worm',
     damageType: 'physical',
     baseHp: 16.2,
@@ -696,6 +729,7 @@ export const z3: Record<string, Enemy> = {
   },
   darkSpider: {
     id: 'darkSpider',
+    name: 'Skittering Shadow',
     spineAssetKey: 'dark_spider',
     damageType: 'physical',
     baseHp: 9,
@@ -722,6 +756,7 @@ export const z3: Record<string, Enemy> = {
   },
   darkDemon: {
     id: 'darkDemon',
+    name: 'Umbral Winged Shadeborn',
     spineAssetKey: 'dark_demon',
     damageType: 'shadow',
     baseHp: 54,
@@ -742,6 +777,7 @@ export const z3: Record<string, Enemy> = {
   },
   poisonDemon: {
     id: 'poisonDemon',
+    name: 'Toxic Winged Shadeborn',
     spineAssetKey: 'poison_demon',
     damageType: 'shadow',
     baseHp: 54,
@@ -762,6 +798,7 @@ export const z3: Record<string, Enemy> = {
   },
   mushroomChild: {
     id: 'mushroomChild',
+    name: 'Shroomkin',
     spineAssetKey: 'mushroom_child',
     damageType: 'physical',
     baseHp: 11.25,
@@ -787,6 +824,7 @@ export const z3: Record<string, Enemy> = {
   },
   mushroomFrog: {
     id: 'mushroomFrog',
+    name: 'Sporehead',
     spineAssetKey: 'mushroom_frog',
     damageType: 'physical',
     baseHp: 15.3,
@@ -803,6 +841,7 @@ export const z3: Record<string, Enemy> = {
   },
   mushroomSoldierLucky: {
     id: 'mushroomSoldierLucky',
+    name: 'Loaded Sporewarden',
     spineAssetKey: 'mushroom_soldier',
     damageType: 'physical',
     baseHp: 16.2,
@@ -831,6 +870,7 @@ export const z3: Record<string, Enemy> = {
   },
   mushroomSoldier: {
     id: 'mushroomSoldier',
+    name: 'Sporewarden',
     spineAssetKey: 'mushroom_soldier',
     damageType: 'physical',
     baseHp: 16.2,
@@ -859,6 +899,7 @@ export const z3: Record<string, Enemy> = {
   },
   livingArmor: {
     id: 'livingArmor',
+    name: 'Steel Revenant',
     spineAssetKey: 'livingArmor',
     damageType: 'lightning',
     baseHp: 78.75,
@@ -881,6 +922,7 @@ export const z3: Record<string, Enemy> = {
   },
   gildedGuardian: {
     id: 'gildedGuardian',
+    name: 'Gilded Guardian',
     spineAssetKey: 'gildedGuardian',
     damageType: 'lightning',
     baseHp: 70,
@@ -903,6 +945,7 @@ export const z3: Record<string, Enemy> = {
   },
   slimeArmored: {
     id: 'slimeArmored',
+    name: 'Armored Slime',
     spineAssetKey: 'ArmoredSlime',
     damageType: 'physical',
     baseHp: 16,
@@ -925,6 +968,7 @@ export const z3: Record<string, Enemy> = {
   },
   gargoyle: {
     id: 'gargoyle',
+    name: 'Gargoyle',
     spineAssetKey: 'Gargoyle',
     damageType: 'shadow',
     baseHp: 15,
@@ -952,6 +996,7 @@ export const z3: Record<string, Enemy> = {
   },
   livingArmorCute: {
     id: 'livingArmorCute',
+    name: 'Tin Squire',
     spineAssetKey: 'livingArmorCute',
     damageType: 'physical',
     baseHp: 12,
@@ -978,6 +1023,7 @@ export const z3: Record<string, Enemy> = {
   },
   livingArmorKnight: {
     id: 'livingArmorKnight',
+    name: 'Iron Revenant',
     spineAssetKey: 'livingArmorKnight',
     damageType: 'physical',
     baseHp: 50,
@@ -999,6 +1045,7 @@ export const z3: Record<string, Enemy> = {
   },
   livingArmorLight: {
     id: 'livingArmorLight',
+    name: 'Restless Sentinel',
     spineAssetKey: 'livingArmorLight',
     damageType: 'lightning',
     baseHp: 9,
@@ -1026,6 +1073,7 @@ export const z3: Record<string, Enemy> = {
   },
   livingWall: {
     id: 'livingWall',
+    name: 'Stonekeep',
     spineAssetKey: 'livingWallBoss',
     damageType: 'physical',
     baseHp: 120,
@@ -1050,6 +1098,7 @@ export const z3: Record<string, Enemy> = {
   },
   giantWizard: {
     id: 'giantWizard',
+    name: 'Corrupted Scholar',
     spineAssetKey: 'GiantWizardBoss',
     damageType: 'shadow',
     baseHp: 80,
@@ -1072,6 +1121,7 @@ export const z3: Record<string, Enemy> = {
   },
   mimicChest: {
     id: 'mimicChest',
+    name: 'Mimic',
     spineAssetKey: 'mimicChest',
     damageType: 'physical',
     baseHp: 11,
@@ -1092,6 +1142,7 @@ export const z3: Record<string, Enemy> = {
   },
   mushroomMonster: {
     id: 'mushroomMonster',
+    name: 'Sturdy Sporeborn',
     spineAssetKey: 'mushroom_monster',
     damageType: 'physical',
     baseHp: 15.75,
@@ -1108,6 +1159,7 @@ export const z3: Record<string, Enemy> = {
   },
   mushroomTeeth: {
     id: 'mushroomTeeth',
+    name: 'Mawcap',
     spineAssetKey: 'mushroom_teeth',
     damageType: 'physical',
     baseHp: 12.15,
@@ -1135,6 +1187,7 @@ export const z3: Record<string, Enemy> = {
   },
   woodGolem: {
     id: 'woodGolem',
+    name: 'Heartroot Guardian',
     spineAssetKey: 'wood_golem',
     damageType: 'physical',
     baseHp: 81,
@@ -1155,6 +1208,7 @@ export const z3: Record<string, Enemy> = {
   },
   blossomGolem: {
     id: 'blossomGolem',
+    name: 'Blossom Golem',
     spineAssetKey: 'blossom_golem',
     damageType: 'physical',
     baseHp: 81,
@@ -1174,6 +1228,7 @@ export const z3: Record<string, Enemy> = {
   },
   icyWoodGolem: {
     id: 'icyWoodGolem',
+    name: 'Frostroot Guardian',
     spineAssetKey: 'icyWood_golem',
     damageType: 'ice',
     baseHp: 81,
@@ -1194,6 +1249,7 @@ export const z3: Record<string, Enemy> = {
   },
   woodOctopus: {
     id: 'woodOctopus',
+    name: 'Branchclutch',
     spineAssetKey: 'wood_octopus',
     damageType: 'physical',
     baseHp: 10.35,
@@ -1221,6 +1277,7 @@ export const z3: Record<string, Enemy> = {
   },
   woodRoof: {
     id: 'woodRoof',
+    name: 'Stumpkin',
     spineAssetKey: 'wood_roof',
     damageType: 'physical',
     baseHp: 18.45,
@@ -1248,6 +1305,7 @@ export const z3: Record<string, Enemy> = {
   },
   robotNo1: {
     id: 'robotNo1',
+    name: 'Y5-Sentry',
     spineAssetKey: 'robot_no1',
     damageType: 'lightning',
     baseHp: 9.45,
@@ -1265,6 +1323,7 @@ export const z3: Record<string, Enemy> = {
   },
   robotNo2: {
     id: 'robotNo2',
+    name: 'KRG-01',
     spineAssetKey: 'robot_no2',
     damageType: 'physical',
     baseHp: 10.8,
@@ -1284,6 +1343,7 @@ export const z3: Record<string, Enemy> = {
   },
   robotNo3: {
     id: 'robotNo3',
+    name: 'Gen5-HVY',
     spineAssetKey: 'robot_no3',
     damageType: 'physical',
     baseHp: 11.7,
@@ -1301,6 +1361,7 @@ export const z3: Record<string, Enemy> = {
   },
   robotNo4: {
     id: 'robotNo4',
+    name: 'Medibot-Mark IV',
     spineAssetKey: 'robot_no4',
     damageType: 'ice',
     baseHp: 11.7,
@@ -1320,6 +1381,7 @@ export const z3: Record<string, Enemy> = {
   },
   robotNo5: {
     id: 'robotNo5',
+    name: 'WasteLogic LX-9',
     spineAssetKey: 'robot_no5',
     damageType: 'fire',
     baseHp: 12.15,
@@ -1349,6 +1411,7 @@ export const z3: Record<string, Enemy> = {
   },
   robotNo5Lucky: {
     id: 'robotNo5Lucky',
+    name: 'Loaded Robot 5',
     spineAssetKey: 'robot_no5',
     damageType: 'fire',
     baseHp: 12.15,
@@ -1378,6 +1441,7 @@ export const z3: Record<string, Enemy> = {
   },
   robotNo6: {
     id: 'robotNo6',
+    name: 'BRX-7 Sentry Chassis',
     spineAssetKey: 'robot_no6',
     damageType: 'fire',
     baseHp: 67.5,
@@ -1400,6 +1464,7 @@ export const z3: Record<string, Enemy> = {
   },
   robotNo7: {
     id: 'robotNo7',
+    name: 'Minifax Model B',
     spineAssetKey: 'robot_no7',
     damageType: 'physical',
     baseHp: 9.9,
@@ -1418,6 +1483,7 @@ export const z3: Record<string, Enemy> = {
   },
   robotBoss: {
     id: 'robotBoss',
+    name: 'Slumbering Guardian-X5',
     spineAssetKey: 'robot_boss',
     damageType: 'lightning',
     baseHp: 112.5,
@@ -1438,6 +1504,7 @@ export const z3: Record<string, Enemy> = {
   },
   corruptedSkeleton: {
     id: 'corruptedSkeleton',
+    name: 'Corrupted Warrior Skeleton',
     spineAssetKey: 'corrupted_skeleton',
     damageType: 'physical',
     baseHp: 10.8,
@@ -1458,6 +1525,7 @@ export const z3: Record<string, Enemy> = {
   },
   corruptedSkelNoHead: {
     id: 'corruptedSkelNoHead',
+    name: 'Corrupted Headless Skeleton',
     spineAssetKey: 'corrupted_skel_noHead',
     damageType: 'physical',
     baseHp: 13.5,
@@ -1481,6 +1549,7 @@ export const z3: Record<string, Enemy> = {
   },
   corruptedSkel2Axe: {
     id: 'corruptedSkel2Axe',
+    name: 'Corrupted Barbarian Skeleton',
     spineAssetKey: 'corrupted_skel_2Axe',
     damageType: 'physical',
     baseHp: 15.3,
@@ -1501,6 +1570,7 @@ export const z3: Record<string, Enemy> = {
   },
   corruptedSkelWizard: {
     id: 'corruptedSkelWizard',
+    name: 'Corrupted Skeleton Wizard',
     spineAssetKey: 'corrupted_skel_wizard',
     damageType: 'physical',
     baseHp: 13.5,
@@ -1524,6 +1594,7 @@ export const z3: Record<string, Enemy> = {
   },
   corruptedSkelAssassin: {
     id: 'corruptedSkelAssassin',
+    name: 'Corrupted Skeleton Assassin',
     spineAssetKey: 'corrupted_skel_assassin',
     damageType: 'physical',
     baseHp: 14.4,
@@ -1547,6 +1618,7 @@ export const z3: Record<string, Enemy> = {
   },
   evilBook: {
     id: 'evilBook',
+    name: 'Grouchy Grimoire',
     spineAssetKey: 'EvilBook',
     damageType: 'shadow',
     baseHp: 35,

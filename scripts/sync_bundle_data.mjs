@@ -13,7 +13,6 @@ const DEFAULT_TARGETS = [
   'quests',
   'vaultLoot',
   'abilityNames',
-  'enemyNames',
   'levelCosts',
 ]
 
@@ -216,9 +215,16 @@ function extractBundleEnemies(bundleSource, lootTables) {
     LOOT_TABLES: lootTables,
   })
   const spineScales = extractBundleEnemySpineScales(bundleSource)
+  const enemyNames = extractBundleEnemyNames(bundleSource)
 
   for (const [enemyId, spineScale] of Object.entries(spineScales)) {
     if (enemies[enemyId]) enemies[enemyId].spineScale = spineScale
+  }
+  for (const [enemyId, name] of Object.entries(enemyNames)) {
+    if (enemies[enemyId]) {
+      const { id, name: _staleName, ...enemy } = enemies[enemyId]
+      enemies[enemyId] = { id, name, ...enemy }
+    }
   }
 
   return enemies
@@ -570,7 +576,7 @@ function addEnemyTypeClassNames(bundleSource, enemyNames, classDisplayNames) {
     const mappedClass = entry.match(
       /^([A-Za-z_$][A-Za-z0-9_$]*):([A-Za-z_$][A-Za-z0-9_$]*)$/
     )
-    if (!mappedClass || enemyNames[mappedClass[1]]) continue
+    if (!mappedClass) continue
 
     const displayName = classDisplayNames.get(mappedClass[2])
     if (displayName) enemyNames[mappedClass[1]] = displayName
@@ -647,7 +653,6 @@ function createCache(bundleSource) {
     quests: undefined,
     vaultLoot: undefined,
     abilityNames: undefined,
-    enemyNames: undefined,
     levelCosts: undefined,
   }
 }
@@ -780,18 +785,6 @@ const targets = {
 export const abilityParamDescriptionMap: Record<string, Record<string, string>> = ${toTsExpression(expected.abilityParamDescriptionMap)}
 `
       ),
-  },
-  enemyNames: {
-    filePath: 'src/utils/enemyNames.ts',
-    readBundle: (cache) =>
-      getCached(cache, 'enemyNames', () => extractBundleEnemyNames(cache.bundleSource)),
-    readLocal: ({ filePath }) => loadLocalExport(filePath, 'enemyNames'),
-    render: ({ expected }) =>
-      renderConstModule({
-        exportName: 'enemyNames',
-        typeAnnotation: ': Record<string, string>',
-        value: expected,
-      }),
   },
   levelCosts: {
     filePath: 'src/utils/levelCosts.ts',

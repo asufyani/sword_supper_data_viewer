@@ -5,7 +5,7 @@ import os from 'node:os'
 import path from 'node:path'
 import http from 'node:http'
 
-import { collectAssetNames, syncItemAssets } from '../scripts/get_item_assets.mjs'
+import { collectAssetNames, syncItemAssets } from '../scripts/get_assets.mjs'
 
 async function withServer(handler, callback) {
   const server = http.createServer(handler)
@@ -67,8 +67,8 @@ test('syncItemAssets skips existing icons and downloads missing ones', async () 
   await fs.writeFile(path.join(iconsDir, 'ExistingBlade.png'), 'keep-me')
 
   const responses = new Map([
-    ['/assets/MissingRing.png', 'downloaded-ring'],
-    ['/assets/FreshCape.png', 'downloaded-cape'],
+    ['/assets/ui/item-icons/MissingRing.png', 'downloaded-ring'],
+    ['/assets/ui/item-icons/FreshCape.png', 'downloaded-cape'],
   ])
 
   try {

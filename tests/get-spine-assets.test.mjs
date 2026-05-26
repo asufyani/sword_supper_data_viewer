@@ -9,7 +9,7 @@ import {
   collectSpineAssetKeys,
   collectWeaponAssetNames,
   syncSpineAssets,
-} from '../scripts/get_spine_assets.mjs'
+} from '../scripts/get_assets.mjs'
 
 async function withServer(handler, callback, basePath = 'spine') {
   const server = http.createServer(handler)

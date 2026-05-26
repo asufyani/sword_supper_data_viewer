@@ -26,7 +26,6 @@ import {
   buildItemDropLocations,
 } from './utils/itemDropLocations'
 import { z3 } from './utils/enemies'
-import { enemyNames } from './utils/enemyNames'
 import { PagePlayerSpine } from './PagePlayerSpine'
 import { PageEnemySpine } from './PageEnemySpine'
 import type { PageBackground } from './utils/pageBackground'
@@ -138,11 +137,7 @@ function App({ pageBackground }: AppProps) {
       })
     })
 
-    const enemyNamesByLootTable = buildEnemyNamesByLootTable(
-      et,
-      z3,
-      enemyNames
-    )
+    const enemyNamesByLootTable = buildEnemyNamesByLootTable(et, z3)
     const itemDropLocations = buildItemDropLocations(
       itemNameMap,
       [et, vaultLootTables as Record<string, LootTable>],

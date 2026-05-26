@@ -47,17 +47,14 @@ function getReadableLootTableName(
 
 export function buildEnemyNamesByLootTable(
   lootTables: Record<string, LootTable>,
-  enemies: Record<string, Enemy>,
-  enemyNameMap: Record<string, string>
+  enemies: Record<string, Enemy>
 ) {
   return Object.entries(lootTables).reduce<EnemyNamesByLootTable>(
     (enemyNamesByLootTable, [lootTableName, lootTable]) => {
       Object.values(enemies).forEach((enemy) => {
         if (enemy.lootTables.includes(lootTable)) {
           enemyNamesByLootTable[lootTableName] ||= []
-          enemyNamesByLootTable[lootTableName].push(
-            enemyNameMap[enemy.id] || enemy.id
-          )
+          enemyNamesByLootTable[lootTableName].push(enemy.name || enemy.id)
         }
       })
 

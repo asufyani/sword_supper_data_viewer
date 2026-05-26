@@ -4,11 +4,7 @@ import TableCell from '@mui/material/TableCell'
 import TableHead from '@mui/material/TableHead'
 import TableBody from '@mui/material/TableBody'
 import TextField from '@mui/material/TextField'
-import {
-  type Enemy,
-  type GoToType,
-  type ItemNameMap,
-} from './types'
+import { type Enemy, type GoToType, type ItemNameMap } from './types'
 import { useCallback, useMemo, type ChangeEvent } from 'react'
 import { z3 } from './utils/enemies'
 import React from 'react'
@@ -28,7 +24,6 @@ import {
 import { RarityChip } from './RarityChip'
 import { damageTypeSymbols } from './utils/constants'
 import { useDebounceValue } from 'usehooks-ts'
-import { enemyNames } from './utils/enemyNames'
 import { getEnemyComparator } from './utils/get_comparator'
 import { SortableEnemyHeader } from './SortableEnemyHeader'
 import { EnemyAnimationViewer } from './EnemyViewer'
@@ -182,7 +177,6 @@ export const EnemyTable: React.FC<{
   const [level, setLevel] = React.useState(1)
   const [order, setOrder] = React.useState(1)
   const [orderBy, setOrderBy] = React.useState<keyof Enemy>('name')
-  const enemyNameMap: Record<string, string> = enemyNames
 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchString(event.target.value.toLowerCase())
@@ -205,10 +199,14 @@ export const EnemyTable: React.FC<{
   }
 
   const filterFunction = useCallback(
-    (key: string) =>
-      key.toLowerCase().includes(searchString.toLowerCase()) ||
-      enemyNameMap[key].toLowerCase().includes(searchString.toLowerCase()),
-    [enemyNameMap, searchString]
+    (key: string) => {
+      const enemyName = z3[key].name ?? key
+      return (
+        key.toLowerCase().includes(searchString.toLowerCase()) ||
+        enemyName.toLowerCase().includes(searchString.toLowerCase())
+      )
+    },
+    [searchString]
   )
 
   const calcScalingValues = useCallback((enemy: Enemy, level: number) => {
@@ -248,12 +246,12 @@ export const EnemyTable: React.FC<{
           return {
             ...enemy,
             ...scaledValues,
-            name: enemyNameMap[enemyKey],
+            name: enemy.name ?? enemyKey,
             resistanceRows: getEnemyResistanceRows(enemy, level),
           }
         })
         .sort(getEnemyComparator(orderBy, order)),
-    [calcScalingValues, enemyNameMap, filterFunction, level, order, orderBy]
+    [calcScalingValues, filterFunction, level, order, orderBy]
   )
 
   return (
