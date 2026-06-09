@@ -5064,6 +5064,22 @@ export const et: Record<string, LootTable> = {
       { minLevel: 201, items: [{ id: 'Gold', quantity: 12500 }] },
     ],
   },
+  evilBookEliteLoot: {
+    type: 'oneOf',
+    tiers: [
+      { minLevel: 1, maxLevel: 20, items: [{ id: 'Gold', quantity: 200 }] },
+      { minLevel: 21, maxLevel: 40, items: [{ id: 'Gold', quantity: 400 }] },
+      { minLevel: 41, maxLevel: 60, items: [{ id: 'Gold', quantity: 600 }] },
+      { minLevel: 61, maxLevel: 80, items: [{ id: 'Gold', quantity: 1000 }] },
+      { minLevel: 81, maxLevel: 100, items: [{ id: 'Gold', quantity: 2000 }] },
+      { minLevel: 101, maxLevel: 120, items: [{ id: 'Gold', quantity: 3000 }] },
+      { minLevel: 121, maxLevel: 140, items: [{ id: 'Gold', quantity: 4250 }] },
+      { minLevel: 141, maxLevel: 160, items: [{ id: 'Gold', quantity: 5750 }] },
+      { minLevel: 161, maxLevel: 180, items: [{ id: 'Gold', quantity: 7500 }] },
+      { minLevel: 181, maxLevel: 200, items: [{ id: 'Gold', quantity: 9000 }] },
+      { minLevel: 201, items: [{ id: 'Gold', quantity: 12500 }] },
+    ],
+  },
   darkDemonBossLoot: {
     type: 'oneOf',
     tiers: [
@@ -6056,6 +6072,22 @@ export const et: Record<string, LootTable> = {
     ],
   },
   mushroomLargeEliteLoot: {
+    type: 'oneOf',
+    tiers: [
+      { minLevel: 1, maxLevel: 20, items: [{ id: 'Gold', quantity: 200 }] },
+      { minLevel: 21, maxLevel: 40, items: [{ id: 'Gold', quantity: 400 }] },
+      { minLevel: 41, maxLevel: 60, items: [{ id: 'Gold', quantity: 600 }] },
+      { minLevel: 61, maxLevel: 80, items: [{ id: 'Gold', quantity: 1000 }] },
+      { minLevel: 81, maxLevel: 100, items: [{ id: 'Gold', quantity: 2000 }] },
+      { minLevel: 101, maxLevel: 120, items: [{ id: 'Gold', quantity: 3000 }] },
+      { minLevel: 121, maxLevel: 140, items: [{ id: 'Gold', quantity: 4250 }] },
+      { minLevel: 141, maxLevel: 160, items: [{ id: 'Gold', quantity: 5750 }] },
+      { minLevel: 161, maxLevel: 180, items: [{ id: 'Gold', quantity: 7500 }] },
+      { minLevel: 181, maxLevel: 200, items: [{ id: 'Gold', quantity: 9000 }] },
+      { minLevel: 201, items: [{ id: 'Gold', quantity: 12500 }] },
+    ],
+  },
+  livingArmorKnightEliteLoot: {
     type: 'oneOf',
     tiers: [
       { minLevel: 1, maxLevel: 20, items: [{ id: 'Gold', quantity: 200 }] },

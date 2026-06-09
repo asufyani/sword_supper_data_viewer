@@ -1039,7 +1039,7 @@ export const z3: Record<string, Enemy> = {
     weakResist: 0.2,
     vulnerableResist: 0.2,
     abilities: [{ id: 'LowHpCritBoostAbility' }],
-    lootTables: [et.skeletonLoot],
+    lootTables: [et.livingArmorKnightEliteLoot],
     tags: ['skeleton', 'armed', 'elite'],
     spineScale: 0.22,
   },
@@ -1632,7 +1632,7 @@ export const z3: Record<string, Enemy> = {
     dodge: 0.08,
     shadowResist: 0.3,
     fireResist: -0.2,
-    lootTables: [et.darkLoot],
+    lootTables: [et.evilBookEliteLoot],
     abilities: [
       { id: 'DefaultAttack', params: { weight: 6 } },
       { id: 'CastWeak', params: { weight: 1, recastChance: 0 } },
