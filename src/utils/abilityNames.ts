@@ -341,6 +341,10 @@ export const abilityNameMap = {
     name: 'Remove Poison Every 3 Hits',
     description: 'Every 3 hits, 50% chance to remove Poison.',
   },
+  RemovePoisonOnFirstTurn: {
+    name: 'Cure Chance on First Turn',
+    description: '30% chance to remove Poison on first turn.',
+  },
   WeakOnAttack: {
     name: 'Cast Weak On Attack',
     description: '50% chance to weaken your target when you attack.',
