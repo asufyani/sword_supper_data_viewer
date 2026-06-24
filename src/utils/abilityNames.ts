@@ -113,7 +113,7 @@ export const abilityNameMap = {
   },
   ShieldOnLowHP: {
     name: 'Shield if Low',
-    description: 'Charge shield by 25% if HP goes below 30%.',
+    description: 'Charge shield by 25% the first time HP goes below 30%.',
   },
   LightningOnShieldActivate: {
     name: 'Lightning On Shield Activate',
@@ -346,16 +346,16 @@ export const abilityNameMap = {
     description: '30% chance to remove Poison on first turn.',
   },
   WeakOnAttack: {
-    name: 'Cast Weak On Attack',
+    name: 'Apply Weak On Attack',
     description: '50% chance to weaken your target when you attack.',
   },
   WeakOnTurnCount: {
     name: 'Cast Weak Every 3 Turns',
-    description: 'Every 3 turns, you have a chance to weaken your target.',
+    description: 'Every 3 turns, 50% chance to cast Weak on your target.',
   },
   WeakOnCrit: {
     name: 'Cast Weak On Crit',
-    description: '50% chance to weaken your target when you crit.',
+    description: '50% chance to cast Weak on your target when you Crit.',
   },
   RemoveWeakOnRage: {
     name: 'Remove Weak On Rage',
@@ -383,42 +383,43 @@ export const abilityNameMap = {
     description: '100% chance to remove Vulnerable when you dodge.',
   },
   HypnotizeOnAttack: {
-    name: 'Hypnotize On Attack',
+    name: 'Apply Hypnotize On Attack',
     description: '30% chance to Hypnotize your target when you attack.',
   },
   HypnotizeOnHitCount: {
-    name: 'Hypnotize on Hit 3',
-    description: 'On hit 3, chance to Hypnotize your target.',
+    name: 'Cast Hypnotize On Hit 3',
+    description: 'On hit 3, 30% chance to cast Hypnotize on your target.',
   },
   HypnotizeOnMagicKnife: {
-    name: 'Hypnotize On Magic Knife',
-    description: '35% chance to Hypnotize your target when magic knives hit.',
+    name: 'Cast Hypnotize On Magic Knife',
+    description:
+      '35% chance to cast Hypnotize on your target when magic knives hit.',
   },
   VulnerableEveryTurnCount: {
     name: 'Cast Vulnerable Every 3 Turns',
-    description: 'Every 3 turns, chance to make your target Vulnerable.',
+    description: 'Every 3 turns, 50% chance to cast Vulnerable on your target.',
   },
   VulnerableOnLightning: {
     name: 'Cast Vulnerable On Lightning',
     description:
-      '40% chance to make the victim Vulnerable when lightning strikes.',
+      '40% chance to cast Vulnerable on your target when lightning strikes.',
   },
   SilenceOnAttack: {
-    name: 'Silence On Attack',
+    name: 'Apply Silence On Attack',
     description: '50% chance to Silence your target when you attack.',
   },
   SilenceOnRage: {
-    name: 'Silence On Rage',
+    name: 'Cast Silence On Rage',
     description:
-      '50% chance to Silence your target when you use a rage attack.',
+      '50% chance to cast Silence on your target when you use a Rage attack.',
   },
   RemoveSilenceOnEnemyDeath: {
     name: 'Remove Silence On Enemy Death',
     description: '50% chance to remove Silence when an enemy dies.',
   },
   SilenceOnTurnCount: {
-    name: 'Silence Every 3 Turns',
-    description: 'Every 3 turns, 50% chance to Silence your target.',
+    name: 'Cast Silence Every 3 Turns',
+    description: 'Every 3 turns, 50% chance to cast Silence on your target.',
   },
   RemoveSilenceOnHitCount: {
     name: 'Remove Silence on Hit 3',
@@ -426,7 +427,7 @@ export const abilityNameMap = {
   },
   CastWeak: {
     name: 'Cast Weak',
-    description: 'Weaken your target, reducing their attack damage.',
+    description: 'Cast Weak on your target, reducing their attack damage.',
   },
   RageWave: {
     name: 'Rage Wave',
@@ -436,7 +437,7 @@ export const abilityNameMap = {
   CastSilence: {
     name: 'Cast Silence',
     description:
-      'Silence your target, preventing them from using special abilities.',
+      'Cast Silence on your target, preventing them from using special abilities.',
   },
   RageBladeStorm: {
     name: 'Blade Storm',
@@ -445,11 +446,13 @@ export const abilityNameMap = {
   },
   CastHypnotize: {
     name: 'Cast Hypnotize',
-    description: 'Hypnotize your target, preventing them from taking actions.',
+    description:
+      'Cast Hypnotize on your target, preventing them from taking actions.',
   },
   CastVulnerable: {
     name: 'Cast Vulnerable',
-    description: "Reduce your target's defense for several turns.",
+    description:
+      'Cast Vulnerable on your target, reducing their defense for several turns.',
   },
   RageAttackUp: {
     name: 'Fiery Belly',
@@ -464,7 +467,8 @@ export const abilityParamDescriptionMap: Record<
   Record<string, string>
 > = {
   WeakOnCrit: {
-    '{"applyChance":0.5}': '50% chance to weaken your target when you crit.',
+    '{"applyChance":0.5}':
+      '50% chance to cast Weak on your target when you Crit.',
   },
   RemovePoisonEveryHitCount: {
     '{"multiplier":5,"removeChance":0.25}':
@@ -485,7 +489,7 @@ export const abilityParamDescriptionMap: Record<
   },
   WeakOnTurnCount: {
     '{"applyChance":0.75}':
-      'Every 3 turns, you have a chance to weaken your target.',
+      'Every 3 turns, 75% chance to cast Weak on your target.',
   },
   PoisonOnMagicKnife: {
     '{"damagePerTurn":25}': 'Apply poison when magic knives hit',
@@ -499,7 +503,7 @@ export const abilityParamDescriptionMap: Record<
   },
   ShieldOnLowHP: {
     '{"shieldAmount":0.15,"threshold":0.2}':
-      'Charge shield by 15% if HP goes below 20%.',
+      'Charge shield by 15% the first time HP goes below 20%.',
   },
   AddRageOnEnemyDeath: { '{"rageAmount":20}': 'Gain 20 when an enemy dies.' },
   RemoveSilenceOnHitCount: {
@@ -540,7 +544,7 @@ export const abilityParamDescriptionMap: Record<
   },
   SilenceOnRage: {
     '{"turnDuration":3}':
-      '50% chance to Silence your target when you use a rage attack.',
+      '50% chance to cast Silence on your target when you use a Rage attack.',
   },
   PoisonShield: {
     '{"applyChance":0.75,"damagePerTurn":35}':
@@ -550,15 +554,15 @@ export const abilityParamDescriptionMap: Record<
   },
   VulnerableOnLightning: {
     '{"applyChance":0.1,"turnDuration":2}':
-      '10% chance to make the victim Vulnerable when lightning strikes.',
+      '10% chance to cast Vulnerable on your target when lightning strikes.',
     '{"applyChance":0.12,"turnDuration":2}':
-      '12% chance to make the victim Vulnerable when lightning strikes.',
+      '12% chance to cast Vulnerable on your target when lightning strikes.',
     '{"applyChance":0.15,"turnDuration":2}':
-      '15% chance to make the victim Vulnerable when lightning strikes.',
+      '15% chance to cast Vulnerable on your target when lightning strikes.',
     '{"applyChance":0.2,"turnDuration":2}':
-      '20% chance to make the victim Vulnerable when lightning strikes.',
+      '20% chance to cast Vulnerable on your target when lightning strikes.',
     '{"applyChance":0.25,"turnDuration":2}':
-      '25% chance to make the victim Vulnerable when lightning strikes.',
+      '25% chance to cast Vulnerable on your target when lightning strikes.',
   },
   ApplyPoisonOnAttack: {
     '{"applyChance":0.6,"damagePerTurn":90}':
