@@ -21,7 +21,7 @@ export const abilityNameMap = {
   },
   AddRageOnDamage: {
     name: 'Add Rage on Damage',
-    description: 'Add rage when taking damage.',
+    description: 'Add 35 rage when taking damage.',
   },
   AddRageOnMagicKnife: {
     name: 'Add Rage On Magic Knife',
@@ -54,9 +54,9 @@ export const abilityNameMap = {
       'Zap your target with a lightning bolt at the start of your turn.',
   },
   LightningOnRage: {
-    name: 'Bolt On Rage',
+    name: 'Lightning On Rage',
     description:
-      'When rage meter is full, zap your target with a lightning bolt',
+      'When rage meter is full, zap your target with a lightning bolt.',
   },
   SecondWindAbility: {
     name: 'Second Wind',
@@ -89,7 +89,7 @@ export const abilityNameMap = {
   },
   HealOnMagicKnife: {
     name: 'Heal On Magic Knife',
-    description: 'Heal a small amount whenever a magic knife fires.',
+    description: 'Heal for 3% of Max HP whenever a magic knife fires.',
   },
   HealOnRage: {
     name: 'Heal On Rage',
@@ -101,7 +101,7 @@ export const abilityNameMap = {
   },
   HealEveryHitCount: {
     name: 'Heal Every Two Hits',
-    description: 'Heal every 2 successful hits.',
+    description: 'Heal for 10% of Max HP every 2 hits.',
   },
   LowHPRageFill: {
     name: 'Fill Rage On Low HP',
@@ -117,7 +117,7 @@ export const abilityNameMap = {
   },
   LightningOnShieldActivate: {
     name: 'Lightning On Shield Activate',
-    description: 'When your shield activates, fire a Lightning Bolt.',
+    description: 'When your shield activates, fire a lightning bolt.',
   },
   BonusRageOnAttack: {
     name: 'Bonus Rage On Attack',
@@ -125,11 +125,11 @@ export const abilityNameMap = {
   },
   LightningEveryHitCount: {
     name: 'Lightning Every 5 Hits',
-    description: 'Every 5 hits, zap your target with a lightning bolt',
+    description: 'Every 5 hits, zap your target with a lightning bolt.',
   },
   LightningOnEnemyDeath: {
-    name: 'Lightning on Enemy Death',
-    description: 'Fire a bolt when an enemy dies.',
+    name: 'Lightning On Enemy Death',
+    description: 'Fire a lightning bolt when an enemy dies.',
   },
   AddRageOnEnemyDeath: {
     name: 'Add Rage on Enemy Death',
@@ -263,7 +263,8 @@ export const abilityNameMap = {
   },
   KnifeDoubler: {
     name: 'Imperfect Knife Doubler',
-    description: 'Throw twice as many knives, but each one does less damage.',
+    description:
+      'Throw twice as many knives, but each one does 60% less damage.',
   },
   TripleAttack: {
     name: 'Triple Attack',
@@ -275,7 +276,7 @@ export const abilityNameMap = {
   },
   HealOnHitCount: {
     name: 'Heal On Hit 3',
-    description: 'Heal for 3 on hit 3.',
+    description: 'Heal for 3% of Max HP on hit 3.',
   },
   HealOnFirstTurn: {
     name: 'Heal on First Turn',
@@ -296,25 +297,24 @@ export const abilityNameMap = {
   },
   AddRageOnCrit: {
     name: 'Add Rage On Crit',
-    description: 'Add a small amout of rage each time you crit.',
+    description: 'Add 10 rage each time you crit.',
   },
   AddRageOnLightning: {
     name: 'Add Rage On Lightning',
-    description:
-      'Add a small amount of rage every time a lightning bolt fires.',
+    description: 'Add 10 rage every time a lightning bolt fires.',
   },
   HealChanceOnShadowDamage: {
     name: 'Dark Recovery',
     description: '40% Chance to Heal for 5% of Max HP when taking 🌑 DMG',
   },
   LightningOnHitCount: {
-    name: 'Lightning on Hit 4',
+    name: 'Lightning On Hit 4',
     description: 'Zap your target with a lightning bolt on hit 4.',
   },
   CastSelfHeal: { name: 'Cast Self Heal', description: 'Heal yourself.' },
   ApplyPoisonOnAttack: {
     name: 'Poisonous Attack',
-    description: '50% chance to poison your target when you attack.',
+    description: '50% chance to poison your target for 5 when you attack.',
   },
   ApplyVulnerableOnAttack: {
     name: 'Apply Vulnerable On Attack',
@@ -322,16 +322,17 @@ export const abilityNameMap = {
   },
   PoisonOnMagicKnife: {
     name: 'Poisonous Magic Knives',
-    description: 'Apply poison when magic knives hit',
+    description: '50% chance to poison for 5 when magic knives hit.',
   },
   PoisonOnAttackScaled: {
     name: 'Poisonous Attack',
     description:
-      'When you attack, poison your target. Poison damage scales with Attack stat.',
+      '50% chance to poison your target for 5% of your weapon damage per turn when you attack.',
   },
   PoisonShield: {
     name: 'Poisonous Shield',
-    description: 'When attacked while shielded, poison the attacker.',
+    description:
+      'When attacked while shielded, 50% chance to poison the attacker for 5.',
   },
   RemovePoisonOnHeal: {
     name: 'Panacea',
@@ -457,7 +458,7 @@ export const abilityNameMap = {
   RageAttackUp: {
     name: 'Fiery Belly',
     description:
-      'Enables the Fiery Belly ability. Increases attack power when rage meter fills.',
+      'Enables the Fiery Belly ability. Increases attack power by 10% when rage meter fills.',
   },
   Accelerate: { name: 'Accelerate', description: 'Boosts Speed by 20%.' },
 }
@@ -492,11 +493,16 @@ export const abilityParamDescriptionMap: Record<
       'Every 3 turns, 75% chance to cast Weak on your target.',
   },
   PoisonOnMagicKnife: {
-    '{"damagePerTurn":25}': 'Apply poison when magic knives hit',
-    '{"damagePerTurn":28}': 'Apply poison when magic knives hit',
-    '{"damagePerTurn":35}': 'Apply poison when magic knives hit',
-    '{"damagePerTurn":45}': 'Apply poison when magic knives hit',
-    '{"damagePerTurn":60}': 'Apply poison when magic knives hit',
+    '{"damagePerTurn":25}':
+      '50% chance to poison for 25 when magic knives hit.',
+    '{"damagePerTurn":28}':
+      '50% chance to poison for 28 when magic knives hit.',
+    '{"damagePerTurn":35}':
+      '50% chance to poison for 35 when magic knives hit.',
+    '{"damagePerTurn":45}':
+      '50% chance to poison for 45 when magic knives hit.',
+    '{"damagePerTurn":60}':
+      '50% chance to poison for 60 when magic knives hit.',
   },
   HealOnEnemyDeath: {
     '{"healAmount":0.025}': 'Heal for 3% when an enemy dies.',
@@ -548,9 +554,9 @@ export const abilityParamDescriptionMap: Record<
   },
   PoisonShield: {
     '{"applyChance":0.75,"damagePerTurn":35}':
-      'When attacked while shielded, poison the attacker.',
+      'When attacked while shielded, 75% chance to poison the attacker for 35.',
     '{"applyChance":0.75,"damagePerTurn":45}':
-      'When attacked while shielded, poison the attacker.',
+      'When attacked while shielded, 75% chance to poison the attacker for 45.',
   },
   VulnerableOnLightning: {
     '{"applyChance":0.1,"turnDuration":2}':
@@ -566,23 +572,27 @@ export const abilityParamDescriptionMap: Record<
   },
   ApplyPoisonOnAttack: {
     '{"applyChance":0.6,"damagePerTurn":90}':
-      '60% chance to poison your target when you attack.',
+      '60% chance to poison your target for 90 when you attack.',
     '{"applyChance":0.4,"damagePerTurn":30}':
-      '40% chance to poison your target when you attack.',
+      '40% chance to poison your target for 30 when you attack.',
     '{"applyChance":0.45,"damagePerTurn":35}':
-      '45% chance to poison your target when you attack.',
+      '45% chance to poison your target for 35 when you attack.',
     '{"applyChance":0.5,"damagePerTurn":40}':
-      '50% chance to poison your target when you attack.',
+      '50% chance to poison your target for 40 when you attack.',
     '{"applyChance":0.55,"damagePerTurn":45}':
-      '55% chance to poison your target when you attack.',
+      '55% chance to poison your target for 45 when you attack.',
     '{"applyChance":0.6,"damagePerTurn":50}':
-      '60% chance to poison your target when you attack.',
-    '{"damagePerTurn":25}': '50% chance to poison your target when you attack.',
-    '{"damagePerTurn":30}': '50% chance to poison your target when you attack.',
-    '{"damagePerTurn":35}': '50% chance to poison your target when you attack.',
-    '{"damagePerTurn":40}': '50% chance to poison your target when you attack.',
+      '60% chance to poison your target for 50 when you attack.',
+    '{"damagePerTurn":25}':
+      '50% chance to poison your target for 25 when you attack.',
+    '{"damagePerTurn":30}':
+      '50% chance to poison your target for 30 when you attack.',
+    '{"damagePerTurn":35}':
+      '50% chance to poison your target for 35 when you attack.',
+    '{"damagePerTurn":40}':
+      '50% chance to poison your target for 40 when you attack.',
     '{"applyChance":1,"damagePerTurn":110}':
-      '100% chance to poison your target when you attack.',
+      '100% chance to poison your target for 110 when you attack.',
   },
   HealOnFirstTurn: {
     '{"healAmount":0.1}': 'Heal for 10% of Max HP on first turn.',
