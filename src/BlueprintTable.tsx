@@ -9,6 +9,7 @@ import { RarityChip } from './RarityChip'
 import { useState, type ChangeEvent } from 'react'
 import { UpgradeList } from './UpgradeList'
 import { AssetIcon } from './AssetIcon'
+import { itemMatchesSearch } from './utils/itemSearch'
 
 export const BlueprintTable: React.FC<ItemsTableProps> = ({
   itemsArray,
@@ -24,6 +25,7 @@ export const BlueprintTable: React.FC<ItemsTableProps> = ({
     <>
       <TextField
         label="Search blueprints"
+        placeholder="Name, stat, ability"
         onChange={handleSearchChange}
       ></TextField>
       <Table stickyHeader>
@@ -35,7 +37,9 @@ export const BlueprintTable: React.FC<ItemsTableProps> = ({
         </TableHead>
         <TableBody>
           {itemsArray
-            .filter((item) => item.name.toLowerCase().includes(searchString))
+            .filter((item) =>
+              itemMatchesSearch(item, searchString, itemNameMap)
+            )
             .map((item) => (
               <TableRow key={item.id}>
                 <TableCell id={item.id}>

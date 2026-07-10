@@ -21,6 +21,7 @@ import { useDebounceValue } from 'usehooks-ts'
 import { AssetIcon } from './AssetIcon'
 import React from 'react'
 import { KeyboardArrowDown, KeyboardArrowUp } from '@mui/icons-material'
+import { itemMatchesSearch } from './utils/itemSearch'
 
 const formatter = new Intl.NumberFormat('en-US', {
   style: 'percent',
@@ -140,11 +141,11 @@ export const ArmorTable: React.FC<ItemsTableProps> = ({
   const filterFunction = useCallback(
     (item: Item) => {
       return (
-        item.name.toLowerCase().includes(searchString) &&
+        itemMatchesSearch(item, searchString, itemNameMap) &&
         (!slot || item.equipSlots.includes(slot))
       )
     },
-    [searchString, slot]
+    [itemNameMap, searchString, slot]
   )
 
   const visibleItems = React.useMemo<Item[]>(
@@ -157,7 +158,11 @@ export const ArmorTable: React.FC<ItemsTableProps> = ({
 
   return (
     <>
-      <TextField label="Search armor" onChange={handleSearchChange}></TextField>
+      <TextField
+        label="Search armor"
+        placeholder="Name, stat, ability (e.g. second wind, shield)"
+        onChange={handleSearchChange}
+      ></TextField>
       <ToggleButtonGroup
         value={slot}
         exclusive
