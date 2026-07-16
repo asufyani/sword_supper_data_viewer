@@ -18,7 +18,120 @@ export const z3: Record<string, Enemy> = {
     dodge: 0,
     lightningResist: 0.3,
     shadowResist: 0.2,
-    lootTables: [et.golemLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [10, 20] },
+              { id: 'Stone', weight: 4, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [10, 25] },
+              { id: 'Stone', weight: 32, quantity: 1 },
+              { id: 'BlueprintFrozenShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [15, 25] },
+              { id: 'Stone', weight: 4, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [20, 30] },
+              { id: 'Stone', weight: 4, quantity: [2, 4] },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 96, quantity: [30, 40] },
+              { id: 'Stone', weight: 64, quantity: 4 },
+              { id: 'BlueprintDarkBargainCharm', weight: 1, quantity: 1 },
+              { id: 'BlueprintDrainingEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintFerocityRingV2', weight: 1, quantity: 1 },
+              { id: 'BlueprintPhantomEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintSmitingEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintFrostweaveSerape', weight: 2, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [40, 50] },
+              { id: 'Stone', weight: 4, quantity: [5, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [45, 60] },
+              { id: 'Stone', weight: 4, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [50, 65] },
+              { id: 'Stone', weight: 4, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [50, 75] },
+              { id: 'Stone', weight: 4, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [60, 75] },
+              { id: 'Stone', weight: 4, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [70, 80] },
+              { id: 'Stone', weight: 4, quantity: [6, 10] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [70, 100] },
+              { id: 'Stone', weight: 4, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['golem'],
   },
   slimeKnight: {
@@ -38,7 +151,121 @@ export const z3: Record<string, Enemy> = {
     fireResist: -0.2,
     iceResist: 0.3,
     lightningResist: 0.3,
-    lootTables: [et.slimeLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [10, 20] },
+              { id: 'Ore', weight: 4, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 36, quantity: [10, 25] },
+              { id: 'Ore', weight: 24, quantity: [1, 2] },
+              { id: 'BlueprintWardingBand', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [15, 25] },
+              { id: 'Ore', weight: 4, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [20, 30] },
+              { id: 'Ore', weight: 4, quantity: [2, 4] },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 96, quantity: [30, 40] },
+              { id: 'Ore', weight: 64, quantity: 4 },
+              { id: 'BlueprintSmitingEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintDrainingEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintPhantomEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintFerocityRingV2', weight: 1, quantity: 1 },
+              { id: 'BlueprintDarkBargainCharm', weight: 1, quantity: 1 },
+              { id: 'BlueprintCursedNaginata', weight: 1, quantity: 1 },
+              { id: 'BlueprintScorchedSerape', weight: 2, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [40, 50] },
+              { id: 'Ore', weight: 4, quantity: [5, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [45, 60] },
+              { id: 'Ore', weight: 4, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [50, 65] },
+              { id: 'Ore', weight: 4, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [50, 75] },
+              { id: 'Ore', weight: 4, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [60, 75] },
+              { id: 'Ore', weight: 4, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [70, 80] },
+              { id: 'Ore', weight: 4, quantity: [6, 10] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [70, 100] },
+              { id: 'Ore', weight: 4, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['slime', 'armed'],
   },
   slimeBigMouth: {
@@ -58,7 +285,121 @@ export const z3: Record<string, Enemy> = {
     fireResist: -0.2,
     iceResist: 0.3,
     lightningResist: 0.3,
-    lootTables: [et.slimeLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [10, 20] },
+              { id: 'Ore', weight: 4, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 36, quantity: [10, 25] },
+              { id: 'Ore', weight: 24, quantity: [1, 2] },
+              { id: 'BlueprintWardingBand', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [15, 25] },
+              { id: 'Ore', weight: 4, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [20, 30] },
+              { id: 'Ore', weight: 4, quantity: [2, 4] },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 96, quantity: [30, 40] },
+              { id: 'Ore', weight: 64, quantity: 4 },
+              { id: 'BlueprintSmitingEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintDrainingEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintPhantomEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintFerocityRingV2', weight: 1, quantity: 1 },
+              { id: 'BlueprintDarkBargainCharm', weight: 1, quantity: 1 },
+              { id: 'BlueprintCursedNaginata', weight: 1, quantity: 1 },
+              { id: 'BlueprintScorchedSerape', weight: 2, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [40, 50] },
+              { id: 'Ore', weight: 4, quantity: [5, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [45, 60] },
+              { id: 'Ore', weight: 4, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [50, 65] },
+              { id: 'Ore', weight: 4, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [50, 75] },
+              { id: 'Ore', weight: 4, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [60, 75] },
+              { id: 'Ore', weight: 4, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [70, 80] },
+              { id: 'Ore', weight: 4, quantity: [6, 10] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [70, 100] },
+              { id: 'Ore', weight: 4, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['slime', 'blue'],
     levelOverrides: [
       {
@@ -90,7 +431,121 @@ export const z3: Record<string, Enemy> = {
     fireResist: -0.2,
     iceResist: 0.3,
     lightningResist: 0.3,
-    lootTables: [et.slimeLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [10, 20] },
+              { id: 'Ore', weight: 4, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 36, quantity: [10, 25] },
+              { id: 'Ore', weight: 24, quantity: [1, 2] },
+              { id: 'BlueprintWardingBand', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [15, 25] },
+              { id: 'Ore', weight: 4, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [20, 30] },
+              { id: 'Ore', weight: 4, quantity: [2, 4] },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 96, quantity: [30, 40] },
+              { id: 'Ore', weight: 64, quantity: 4 },
+              { id: 'BlueprintSmitingEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintDrainingEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintPhantomEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintFerocityRingV2', weight: 1, quantity: 1 },
+              { id: 'BlueprintDarkBargainCharm', weight: 1, quantity: 1 },
+              { id: 'BlueprintCursedNaginata', weight: 1, quantity: 1 },
+              { id: 'BlueprintScorchedSerape', weight: 2, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [40, 50] },
+              { id: 'Ore', weight: 4, quantity: [5, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [45, 60] },
+              { id: 'Ore', weight: 4, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [50, 65] },
+              { id: 'Ore', weight: 4, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [50, 75] },
+              { id: 'Ore', weight: 4, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [60, 75] },
+              { id: 'Ore', weight: 4, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [70, 80] },
+              { id: 'Ore', weight: 4, quantity: [6, 10] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [70, 100] },
+              { id: 'Ore', weight: 4, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['slime'],
   },
   slimeGems: {
@@ -110,7 +565,121 @@ export const z3: Record<string, Enemy> = {
     fireResist: -0.2,
     iceResist: 0.3,
     lightningResist: 0.3,
-    lootTables: [et.slimeLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [10, 20] },
+              { id: 'Ore', weight: 4, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 36, quantity: [10, 25] },
+              { id: 'Ore', weight: 24, quantity: [1, 2] },
+              { id: 'BlueprintWardingBand', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [15, 25] },
+              { id: 'Ore', weight: 4, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [20, 30] },
+              { id: 'Ore', weight: 4, quantity: [2, 4] },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 96, quantity: [30, 40] },
+              { id: 'Ore', weight: 64, quantity: 4 },
+              { id: 'BlueprintSmitingEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintDrainingEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintPhantomEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintFerocityRingV2', weight: 1, quantity: 1 },
+              { id: 'BlueprintDarkBargainCharm', weight: 1, quantity: 1 },
+              { id: 'BlueprintCursedNaginata', weight: 1, quantity: 1 },
+              { id: 'BlueprintScorchedSerape', weight: 2, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [40, 50] },
+              { id: 'Ore', weight: 4, quantity: [5, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [45, 60] },
+              { id: 'Ore', weight: 4, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [50, 65] },
+              { id: 'Ore', weight: 4, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [50, 75] },
+              { id: 'Ore', weight: 4, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [60, 75] },
+              { id: 'Ore', weight: 4, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [70, 80] },
+              { id: 'Ore', weight: 4, quantity: [6, 10] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [70, 100] },
+              { id: 'Ore', weight: 4, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['slime', 'armed'],
   },
   skeleton: {
@@ -131,7 +700,123 @@ export const z3: Record<string, Enemy> = {
     iceResist: -0.2,
     lightningResist: -0.2,
     shadowResist: 0.3,
-    lootTables: [et.skeletonLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [10, 20] },
+              { id: 'Iron', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [10, 25] },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+              { id: 'BlueprintBlazingShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [15, 25] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [20, 30] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [2, 4] },
+              { id: 'BlueprintBoltproofSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [30, 40] },
+              { id: 'Iron', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [40, 50] },
+              { id: 'Iron', weight: 3, quantity: [4, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [45, 60] },
+              { id: 'Iron', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 65] },
+              { id: 'Iron', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [60, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 80] },
+              { id: 'Iron', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 100] },
+              { id: 'Iron', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['skeleton', 'armed'],
   },
   skelNoHead: {
@@ -151,7 +836,123 @@ export const z3: Record<string, Enemy> = {
     fireResist: 0.3,
     iceResist: -0.2,
     shadowResist: 0.3,
-    lootTables: [et.skeletonLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [10, 20] },
+              { id: 'Iron', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [10, 25] },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+              { id: 'BlueprintBlazingShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [15, 25] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [20, 30] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [2, 4] },
+              { id: 'BlueprintBoltproofSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [30, 40] },
+              { id: 'Iron', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [40, 50] },
+              { id: 'Iron', weight: 3, quantity: [4, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [45, 60] },
+              { id: 'Iron', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 65] },
+              { id: 'Iron', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [60, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 80] },
+              { id: 'Iron', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 100] },
+              { id: 'Iron', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['skeleton'],
   },
   golemMountain: {
@@ -170,7 +971,120 @@ export const z3: Record<string, Enemy> = {
     dodge: 0,
     lightningResist: 0.3,
     shadowResist: 0.2,
-    lootTables: [et.golemLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [10, 20] },
+              { id: 'Stone', weight: 4, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [10, 25] },
+              { id: 'Stone', weight: 32, quantity: 1 },
+              { id: 'BlueprintFrozenShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [15, 25] },
+              { id: 'Stone', weight: 4, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [20, 30] },
+              { id: 'Stone', weight: 4, quantity: [2, 4] },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 96, quantity: [30, 40] },
+              { id: 'Stone', weight: 64, quantity: 4 },
+              { id: 'BlueprintDarkBargainCharm', weight: 1, quantity: 1 },
+              { id: 'BlueprintDrainingEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintFerocityRingV2', weight: 1, quantity: 1 },
+              { id: 'BlueprintPhantomEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintSmitingEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintFrostweaveSerape', weight: 2, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [40, 50] },
+              { id: 'Stone', weight: 4, quantity: [5, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [45, 60] },
+              { id: 'Stone', weight: 4, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [50, 65] },
+              { id: 'Stone', weight: 4, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [50, 75] },
+              { id: 'Stone', weight: 4, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [60, 75] },
+              { id: 'Stone', weight: 4, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [70, 80] },
+              { id: 'Stone', weight: 4, quantity: [6, 10] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [70, 100] },
+              { id: 'Stone', weight: 4, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['golem', 'armed'],
     levelOverrides: [
       {
@@ -201,7 +1115,86 @@ export const z3: Record<string, Enemy> = {
     dodge: 0,
     lightningResist: 0.3,
     shadowResist: 0.2,
-    lootTables: [et.golemLuckyLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 40,
+            items: [
+              { id: 'PlatedBelt', weight: 6 },
+              { id: 'LifevineBelt', weight: 6 },
+              { id: 'InsulatedWrap', weight: 6 },
+              { id: 'GroundedPlate', weight: 6 },
+              { id: 'AcuityHelm', weight: 6 },
+              { id: 'GlacialShard2', weight: 6 },
+              { id: 'GlacialShard', weight: 6 },
+              { id: 'WizardSigil', weight: 3 },
+              { id: 'GroundingBelt', weight: 3 },
+              { id: 'SentinelPlate', weight: 3 },
+              { id: 'FlameguardJacket', weight: 3 },
+              { id: 'FuryBlade', weight: 3 },
+              { id: 'FlameguardSword', weight: 3 },
+              { id: 'GhostlyPendant', weight: 1 },
+              { id: 'StackedSignet', weight: 1 },
+              { id: 'SalvationScimitar', weight: 1 },
+              { id: 'DoublePoleAxe', weight: 1 },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Duskbringer', weight: 2 },
+              { id: 'BraveheartHelm', weight: 2 },
+              { id: 'PlatedBelt', weight: 3 },
+              { id: 'LifevineBelt', weight: 3 },
+              { id: 'InsulatedWrap', weight: 3 },
+              { id: 'GroundedPlate', weight: 3 },
+              { id: 'AcuityHelm', weight: 3 },
+              { id: 'GlacialShard2', weight: 3 },
+              { id: 'GlacialShard', weight: 3 },
+              { id: 'WizardSigil', weight: 4 },
+              { id: 'GroundingBelt', weight: 4 },
+              { id: 'SentinelPlate', weight: 4 },
+              { id: 'FlameguardJacket', weight: 4 },
+              { id: 'FuryBlade', weight: 4 },
+              { id: 'FlameguardSword', weight: 4 },
+              { id: 'GhostlyPendant', weight: 1 },
+              { id: 'StackedSignet', weight: 1 },
+              { id: 'SalvationScimitar', weight: 1 },
+              { id: 'DoublePoleAxe', weight: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            items: [
+              { id: 'Duskbringer', weight: 1 },
+              { id: 'BraveheartHelm', weight: 1 },
+              { id: 'PlatedBelt', weight: 1 },
+              { id: 'LifevineBelt', weight: 1 },
+              { id: 'InsulatedWrap', weight: 1 },
+              { id: 'GuardsBelt', weight: 1 },
+              { id: 'GroundedPlate', weight: 1 },
+              { id: 'AcuityHelm', weight: 1 },
+              { id: 'GlacialShard2', weight: 1 },
+              { id: 'GlacialShard', weight: 1 },
+              { id: 'WizardSigil', weight: 6 },
+              { id: 'GroundingBelt', weight: 6 },
+              { id: 'SentinelPlate', weight: 6 },
+              { id: 'FlameguardJacket', weight: 6 },
+              { id: 'FuryBlade', weight: 6 },
+              { id: 'FlameguardSword', weight: 6 },
+              { id: 'GhostlyPendant', weight: 1 },
+              { id: 'StackedSignet', weight: 1 },
+              { id: 'SalvationScimitar', weight: 1 },
+              { id: 'DoublePoleAxe', weight: 1 },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['golem', 'armed'],
     levelOverrides: [
       {
@@ -232,7 +1225,120 @@ export const z3: Record<string, Enemy> = {
     dodge: 0,
     lightningResist: 0.3,
     shadowResist: 0.2,
-    lootTables: [et.golemLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [10, 20] },
+              { id: 'Stone', weight: 4, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [10, 25] },
+              { id: 'Stone', weight: 32, quantity: 1 },
+              { id: 'BlueprintFrozenShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [15, 25] },
+              { id: 'Stone', weight: 4, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [20, 30] },
+              { id: 'Stone', weight: 4, quantity: [2, 4] },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 96, quantity: [30, 40] },
+              { id: 'Stone', weight: 64, quantity: 4 },
+              { id: 'BlueprintDarkBargainCharm', weight: 1, quantity: 1 },
+              { id: 'BlueprintDrainingEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintFerocityRingV2', weight: 1, quantity: 1 },
+              { id: 'BlueprintPhantomEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintSmitingEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintFrostweaveSerape', weight: 2, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [40, 50] },
+              { id: 'Stone', weight: 4, quantity: [5, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [45, 60] },
+              { id: 'Stone', weight: 4, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [50, 65] },
+              { id: 'Stone', weight: 4, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [50, 75] },
+              { id: 'Stone', weight: 4, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [60, 75] },
+              { id: 'Stone', weight: 4, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [70, 80] },
+              { id: 'Stone', weight: 4, quantity: [6, 10] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [70, 100] },
+              { id: 'Stone', weight: 4, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['golem'],
   },
   skelFireHead: {
@@ -253,7 +1359,125 @@ export const z3: Record<string, Enemy> = {
     iceResist: -0.3,
     lightningResist: -0.3,
     shadowResist: -0.3,
-    lootTables: [et.fireHeadBossLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 60,
+            items: [
+              { id: 'InfernoCaller', weight: 1 },
+              { id: 'HeartyBelt', weight: 1 },
+              { id: 'BlazingRing', weight: 8 },
+              { id: 'BolsteringHeadgear', weight: 1 },
+              { id: 'RuinedRod', weight: 1 },
+              { id: 'RestorationChainmail', weight: 2 },
+              { id: 'RoughRazor', weight: 8 },
+              { id: 'BatteredBroadsword', weight: 8 },
+              { id: 'CrystalHeartCharm', weight: 4 },
+              { id: 'WraithSash', weight: 4 },
+              { id: 'PainfulWrap', weight: 4 },
+              { id: 'SharkskinShirt', weight: 4 },
+              { id: 'RustedHelm', weight: 4 },
+              { id: 'PaddedHelmet', weight: 4 },
+              { id: 'RingOfRepair', weight: 4 },
+              { id: 'TwilightBand', weight: 4 },
+              { id: 'Stormseeker', weight: 4 },
+              { id: 'SawtoothAxe', weight: 4 },
+              { id: 'SurvivalCharm', weight: 2 },
+              { id: 'TwineCord', weight: 2 },
+              { id: 'SwiftCowl', weight: 2 },
+              { id: 'VanishingHood', weight: 2 },
+              { id: 'QuicksilverRing', weight: 2 },
+              { id: 'FocusRing', weight: 2 },
+              { id: 'ShadowSlicer', weight: 1 },
+              { id: 'WingedHelm', weight: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'CrystalHeartCharm', weight: 4 },
+              { id: 'WraithSash', weight: 4 },
+              { id: 'PainfulWrap', weight: 4 },
+              { id: 'SharkskinShirt', weight: 4 },
+              { id: 'RustedHelm', weight: 4 },
+              { id: 'PaddedHelmet', weight: 4 },
+              { id: 'TwilightBand', weight: 4 },
+              { id: 'Stormseeker', weight: 4 },
+              { id: 'SawtoothAxe', weight: 4 },
+              { id: 'RestorationChainmail', weight: 2 },
+              { id: 'SurvivalCharm', weight: 2 },
+              { id: 'TwineCord', weight: 2 },
+              { id: 'SwiftCowl', weight: 2 },
+              { id: 'VanishingHood', weight: 2 },
+              { id: 'QuicksilverRing', weight: 2 },
+              { id: 'FocusRing', weight: 2 },
+              { id: 'ShadowSlicer', weight: 2 },
+              { id: 'BolsteringHeadgear', weight: 2 },
+              { id: 'RuinedRod', weight: 2 },
+              { id: 'InfernoCaller', weight: 2 },
+              { id: 'HeartyBelt', weight: 2 },
+              { id: 'WingedHelm', weight: 2 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'RestorationChainmailEX', weight: 1 },
+              { id: 'BolsteringHeadgearEX', weight: 1 },
+              { id: 'HeartyBeltEX', weight: 1 },
+              { id: 'InfernoCallerEX', weight: 1 },
+              { id: 'CrystalHeartCharm', weight: 1 },
+              { id: 'WraithSash', weight: 1 },
+              { id: 'PainfulWrap', weight: 1 },
+              { id: 'SharkskinShirt', weight: 1 },
+              { id: 'RustedHelm', weight: 1 },
+              { id: 'PaddedHelmet', weight: 1 },
+              { id: 'TwilightBand', weight: 1 },
+              { id: 'Stormseeker', weight: 1 },
+              { id: 'SawtoothAxe', weight: 1 },
+              { id: 'RestorationChainmail', weight: 3 },
+              { id: 'SurvivalCharm', weight: 3 },
+              { id: 'TwineCord', weight: 3 },
+              { id: 'SwiftCowl', weight: 3 },
+              { id: 'VanishingHood', weight: 3 },
+              { id: 'QuicksilverRing', weight: 3 },
+              { id: 'FocusRing', weight: 3 },
+              { id: 'ShadowSlicer', weight: 3 },
+              { id: 'BolsteringHeadgear', weight: 3 },
+              { id: 'RuinedRod', weight: 3 },
+              { id: 'InfernoCaller', weight: 3 },
+              { id: 'HeartyBelt', weight: 3 },
+              { id: 'WingedHelm', weight: 1 },
+            ],
+          },
+          {
+            minLevel: 101,
+            items: [
+              { id: 'RestorationChainmail', weight: 3 },
+              { id: 'SurvivalCharm', weight: 3 },
+              { id: 'TwineCord', weight: 3 },
+              { id: 'SwiftCowl', weight: 3 },
+              { id: 'VanishingHood', weight: 3 },
+              { id: 'QuicksilverRing', weight: 3 },
+              { id: 'FocusRing', weight: 3 },
+              { id: 'ShadowSlicer', weight: 3 },
+              { id: 'BolsteringHeadgear', weight: 3 },
+              { id: 'InfernoCaller', weight: 3 },
+              { id: 'HeartyBelt', weight: 3 },
+              { id: 'RestorationChainmailEX', weight: 3 },
+              { id: 'BolsteringHeadgearEX', weight: 3 },
+              { id: 'HeartyBeltEX', weight: 3 },
+              { id: 'InfernoCallerEX', weight: 3 },
+            ],
+          },
+        ],
+      },
+    ],
     abilities: [{ id: 'BossBrain_SkeletonFireHead' }],
     tags: ['boss', 'skeleton', 'red'],
     spineScale: 0.3,
@@ -276,7 +1500,125 @@ export const z3: Record<string, Enemy> = {
     iceResist: 0.6,
     lightningResist: -0.3,
     shadowResist: -0.3,
-    lootTables: [et.fireHeadBossLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 60,
+            items: [
+              { id: 'InfernoCaller', weight: 1 },
+              { id: 'HeartyBelt', weight: 1 },
+              { id: 'BlazingRing', weight: 8 },
+              { id: 'BolsteringHeadgear', weight: 1 },
+              { id: 'RuinedRod', weight: 1 },
+              { id: 'RestorationChainmail', weight: 2 },
+              { id: 'RoughRazor', weight: 8 },
+              { id: 'BatteredBroadsword', weight: 8 },
+              { id: 'CrystalHeartCharm', weight: 4 },
+              { id: 'WraithSash', weight: 4 },
+              { id: 'PainfulWrap', weight: 4 },
+              { id: 'SharkskinShirt', weight: 4 },
+              { id: 'RustedHelm', weight: 4 },
+              { id: 'PaddedHelmet', weight: 4 },
+              { id: 'RingOfRepair', weight: 4 },
+              { id: 'TwilightBand', weight: 4 },
+              { id: 'Stormseeker', weight: 4 },
+              { id: 'SawtoothAxe', weight: 4 },
+              { id: 'SurvivalCharm', weight: 2 },
+              { id: 'TwineCord', weight: 2 },
+              { id: 'SwiftCowl', weight: 2 },
+              { id: 'VanishingHood', weight: 2 },
+              { id: 'QuicksilverRing', weight: 2 },
+              { id: 'FocusRing', weight: 2 },
+              { id: 'ShadowSlicer', weight: 1 },
+              { id: 'WingedHelm', weight: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'CrystalHeartCharm', weight: 4 },
+              { id: 'WraithSash', weight: 4 },
+              { id: 'PainfulWrap', weight: 4 },
+              { id: 'SharkskinShirt', weight: 4 },
+              { id: 'RustedHelm', weight: 4 },
+              { id: 'PaddedHelmet', weight: 4 },
+              { id: 'TwilightBand', weight: 4 },
+              { id: 'Stormseeker', weight: 4 },
+              { id: 'SawtoothAxe', weight: 4 },
+              { id: 'RestorationChainmail', weight: 2 },
+              { id: 'SurvivalCharm', weight: 2 },
+              { id: 'TwineCord', weight: 2 },
+              { id: 'SwiftCowl', weight: 2 },
+              { id: 'VanishingHood', weight: 2 },
+              { id: 'QuicksilverRing', weight: 2 },
+              { id: 'FocusRing', weight: 2 },
+              { id: 'ShadowSlicer', weight: 2 },
+              { id: 'BolsteringHeadgear', weight: 2 },
+              { id: 'RuinedRod', weight: 2 },
+              { id: 'InfernoCaller', weight: 2 },
+              { id: 'HeartyBelt', weight: 2 },
+              { id: 'WingedHelm', weight: 2 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'RestorationChainmailEX', weight: 1 },
+              { id: 'BolsteringHeadgearEX', weight: 1 },
+              { id: 'HeartyBeltEX', weight: 1 },
+              { id: 'InfernoCallerEX', weight: 1 },
+              { id: 'CrystalHeartCharm', weight: 1 },
+              { id: 'WraithSash', weight: 1 },
+              { id: 'PainfulWrap', weight: 1 },
+              { id: 'SharkskinShirt', weight: 1 },
+              { id: 'RustedHelm', weight: 1 },
+              { id: 'PaddedHelmet', weight: 1 },
+              { id: 'TwilightBand', weight: 1 },
+              { id: 'Stormseeker', weight: 1 },
+              { id: 'SawtoothAxe', weight: 1 },
+              { id: 'RestorationChainmail', weight: 3 },
+              { id: 'SurvivalCharm', weight: 3 },
+              { id: 'TwineCord', weight: 3 },
+              { id: 'SwiftCowl', weight: 3 },
+              { id: 'VanishingHood', weight: 3 },
+              { id: 'QuicksilverRing', weight: 3 },
+              { id: 'FocusRing', weight: 3 },
+              { id: 'ShadowSlicer', weight: 3 },
+              { id: 'BolsteringHeadgear', weight: 3 },
+              { id: 'RuinedRod', weight: 3 },
+              { id: 'InfernoCaller', weight: 3 },
+              { id: 'HeartyBelt', weight: 3 },
+              { id: 'WingedHelm', weight: 1 },
+            ],
+          },
+          {
+            minLevel: 101,
+            items: [
+              { id: 'RestorationChainmail', weight: 3 },
+              { id: 'SurvivalCharm', weight: 3 },
+              { id: 'TwineCord', weight: 3 },
+              { id: 'SwiftCowl', weight: 3 },
+              { id: 'VanishingHood', weight: 3 },
+              { id: 'QuicksilverRing', weight: 3 },
+              { id: 'FocusRing', weight: 3 },
+              { id: 'ShadowSlicer', weight: 3 },
+              { id: 'BolsteringHeadgear', weight: 3 },
+              { id: 'InfernoCaller', weight: 3 },
+              { id: 'HeartyBelt', weight: 3 },
+              { id: 'RestorationChainmailEX', weight: 3 },
+              { id: 'BolsteringHeadgearEX', weight: 3 },
+              { id: 'HeartyBeltEX', weight: 3 },
+              { id: 'InfernoCallerEX', weight: 3 },
+            ],
+          },
+        ],
+      },
+    ],
     abilities: [{ id: 'BossBrain_SkeletonIceHead' }],
     tags: ['boss', 'skeleton', 'blue'],
     spineScale: 0.3,
@@ -298,7 +1640,123 @@ export const z3: Record<string, Enemy> = {
     fireResist: 0.3,
     iceResist: -0.2,
     shadowResist: 0.3,
-    lootTables: [et.skeletonLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [10, 20] },
+              { id: 'Iron', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [10, 25] },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+              { id: 'BlueprintBlazingShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [15, 25] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [20, 30] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [2, 4] },
+              { id: 'BlueprintBoltproofSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [30, 40] },
+              { id: 'Iron', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [40, 50] },
+              { id: 'Iron', weight: 3, quantity: [4, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [45, 60] },
+              { id: 'Iron', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 65] },
+              { id: 'Iron', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [60, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 80] },
+              { id: 'Iron', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 100] },
+              { id: 'Iron', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['skeleton', 'armed'],
   },
   skel2Axe: {
@@ -319,7 +1777,123 @@ export const z3: Record<string, Enemy> = {
     iceResist: -0.2,
     lightningResist: -0.2,
     shadowResist: 0.3,
-    lootTables: [et.skeletonLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [10, 20] },
+              { id: 'Iron', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [10, 25] },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+              { id: 'BlueprintBlazingShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [15, 25] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [20, 30] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [2, 4] },
+              { id: 'BlueprintBoltproofSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [30, 40] },
+              { id: 'Iron', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [40, 50] },
+              { id: 'Iron', weight: 3, quantity: [4, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [45, 60] },
+              { id: 'Iron', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 65] },
+              { id: 'Iron', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [60, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 80] },
+              { id: 'Iron', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 100] },
+              { id: 'Iron', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['skeleton', 'armed'],
   },
   slimeBone: {
@@ -339,7 +1913,121 @@ export const z3: Record<string, Enemy> = {
     fireResist: -0.2,
     iceResist: 0.3,
     lightningResist: 0.3,
-    lootTables: [et.slimeLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [10, 20] },
+              { id: 'Ore', weight: 4, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 36, quantity: [10, 25] },
+              { id: 'Ore', weight: 24, quantity: [1, 2] },
+              { id: 'BlueprintWardingBand', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [15, 25] },
+              { id: 'Ore', weight: 4, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [20, 30] },
+              { id: 'Ore', weight: 4, quantity: [2, 4] },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 96, quantity: [30, 40] },
+              { id: 'Ore', weight: 64, quantity: 4 },
+              { id: 'BlueprintSmitingEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintDrainingEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintPhantomEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintFerocityRingV2', weight: 1, quantity: 1 },
+              { id: 'BlueprintDarkBargainCharm', weight: 1, quantity: 1 },
+              { id: 'BlueprintCursedNaginata', weight: 1, quantity: 1 },
+              { id: 'BlueprintScorchedSerape', weight: 2, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [40, 50] },
+              { id: 'Ore', weight: 4, quantity: [5, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [45, 60] },
+              { id: 'Ore', weight: 4, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [50, 65] },
+              { id: 'Ore', weight: 4, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [50, 75] },
+              { id: 'Ore', weight: 4, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [60, 75] },
+              { id: 'Ore', weight: 4, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [70, 80] },
+              { id: 'Ore', weight: 4, quantity: [6, 10] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [70, 100] },
+              { id: 'Ore', weight: 4, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['slime'],
     levelOverrides: [
       {
@@ -376,7 +2064,45 @@ export const z3: Record<string, Enemy> = {
     fireResist: -0.2,
     iceResist: 0.3,
     lightningResist: 0.3,
-    lootTables: [et.slimeLuckyLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 60,
+            items: [
+              { id: 'PlatedBelt', weight: 6 },
+              { id: 'InsulatedWrap', weight: 6 },
+              { id: 'GroundedPlate', weight: 6 },
+              { id: 'BrutalBlade', weight: 6 },
+              { id: 'GlacialShard2', weight: 6 },
+              { id: 'WizardSigil', weight: 1 },
+              { id: 'GroundingBelt', weight: 1 },
+              { id: 'SentinelPlate', weight: 1 },
+              { id: 'FlameguardSword', weight: 1 },
+              { id: 'FuryBlade', weight: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            items: [
+              { id: 'EternityMace', weight: 9 },
+              { id: 'PlatedBelt', weight: 3 },
+              { id: 'InsulatedWrap', weight: 3 },
+              { id: 'GroundedPlate', weight: 3 },
+              { id: 'BrutalBlade', weight: 3 },
+              { id: 'GlacialShard2', weight: 3 },
+              { id: 'WizardSigil', weight: 6 },
+              { id: 'GroundingBelt', weight: 6 },
+              { id: 'SentinelPlate', weight: 6 },
+              { id: 'FlameguardSword', weight: 6 },
+              { id: 'FuryBlade', weight: 6 },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['slime'],
   },
   mushroomSmall: {
@@ -393,12 +2119,131 @@ export const z3: Record<string, Enemy> = {
     speed: 11,
     crit: 0,
     dodge: 0,
-    lootTables: [et.mushroomLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [10, 20] },
+              { id: 'Wood', weight: 2, quantity: [1, 2] },
+              { id: 'Stone', weight: 2, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 36, quantity: [10, 25] },
+              { id: 'Wood', weight: 8, quantity: [1, 2] },
+              { id: 'Iron', weight: 8, quantity: [1, 2] },
+              { id: 'BlueprintElectricShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [15, 25] },
+              { id: 'Wood', weight: 2, quantity: [1, 3] },
+              { id: 'Ore', weight: 2, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [20, 30] },
+              { id: 'Wood', weight: 2, quantity: [2, 3] },
+              { id: 'Iron', weight: 2, quantity: [2, 3] },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [30, 40] },
+              { id: 'Wood', weight: 2, quantity: [3, 5] },
+              { id: 'Iron', weight: 2, quantity: [3, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [40, 50] },
+              { id: 'Wood', weight: 2, quantity: [3, 7] },
+              { id: 'Iron', weight: 2, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [45, 60] },
+              { id: 'Iron', weight: 2, quantity: [4, 6] },
+              { id: 'Wood', weight: 2, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [50, 65] },
+              { id: 'Iron', weight: 2, quantity: [4, 7] },
+              { id: 'Wood', weight: 2, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [50, 75] },
+              { id: 'Iron', weight: 2, quantity: [4, 8] },
+              { id: 'Wood', weight: 2, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [60, 75] },
+              { id: 'Iron', weight: 2, quantity: [5, 8] },
+              { id: 'Wood', weight: 2, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [70, 80] },
+              { id: 'Iron', weight: 2, quantity: [5, 9] },
+              { id: 'Wood', weight: 2, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [70, 100] },
+              { id: 'Iron', weight: 2, quantity: [6, 10] },
+              { id: 'Wood', weight: 2, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['mushroom'],
   },
   mushroomLarge: {
     id: 'mushroomLarge',
-    name: 'Erin-guy',
+    name: 'Boss Mushroom',
     spineAssetKey: 'mushroom_large',
     damageType: 'physical',
     baseHp: 40.5,
@@ -410,7 +2255,60 @@ export const z3: Record<string, Enemy> = {
     speed: 8,
     crit: 0,
     dodge: 0,
-    lootTables: [et.mushroomLargeEliteLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          { minLevel: 1, maxLevel: 20, items: [{ id: 'Gold', quantity: 200 }] },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [{ id: 'Gold', quantity: 400 }],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [{ id: 'Gold', quantity: 600 }],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [{ id: 'Gold', quantity: 1000 }],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [{ id: 'Gold', quantity: 2000 }],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [{ id: 'Gold', quantity: 3000 }],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [{ id: 'Gold', quantity: 4250 }],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [{ id: 'Gold', quantity: 5750 }],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [{ id: 'Gold', quantity: 7500 }],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [{ id: 'Gold', quantity: 9000 }],
+          },
+          { minLevel: 201, items: [{ id: 'Gold', quantity: 12500 }] },
+        ],
+      },
+    ],
     tags: ['mushroom', 'elite'],
     spineScale: 0.4,
   },
@@ -431,7 +2329,96 @@ export const z3: Record<string, Enemy> = {
     fireResist: 0.3,
     iceResist: 0.3,
     lightningResist: -0.3,
-    lootTables: [et.mushroomLargeBossLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 20,
+            items: [
+              { id: 'RagingCharm', weight: 2 },
+              { id: 'VolatileSash', weight: 2 },
+              { id: 'SurgeBlade', weight: 2 },
+              { id: 'StormHelm', weight: 2 },
+              { id: 'RawhideCap', weight: 8 },
+              { id: 'HeavyBand', weight: 8 },
+              { id: 'SimpleCutlass', weight: 8 },
+              { id: 'RusticSword', weight: 8 },
+              { id: 'ChippedShortsword', weight: 8 },
+              { id: 'RusticBelt', weight: 8 },
+              { id: 'VengefulLocket', weight: 2 },
+              { id: 'HardenedGarb', weight: 6 },
+              { id: 'ConjurersCap', weight: 6 },
+              { id: 'ToughHelmet', weight: 6 },
+              { id: 'BronzeAmulet', weight: 4 },
+              { id: 'ChargedFalchion', weight: 4 },
+              { id: 'FragmentOfTheGreatSword', weight: 4 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'RawhideCap', weight: 6 },
+              { id: 'HeavyBand', weight: 6 },
+              { id: 'SimpleCutlass', weight: 6 },
+              { id: 'RusticSword', weight: 6 },
+              { id: 'RusticBelt', weight: 6 },
+              { id: 'ChippedShortsword', weight: 8 },
+              { id: 'RagingCharm', weight: 4 },
+              { id: 'VengefulLocket', weight: 4 },
+              { id: 'ConjurersCap', weight: 4 },
+              { id: 'HardenedGarb', weight: 6 },
+              { id: 'ToughHelmet', weight: 6 },
+              { id: 'VolatileSash', weight: 4 },
+              { id: 'BronzeAmulet', weight: 4 },
+              { id: 'ChargedFalchion', weight: 4 },
+              { id: 'FragmentOfTheGreatSword', weight: 4 },
+              { id: 'SurgeBlade', weight: 4 },
+              { id: 'StormHelm', weight: 4 },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'RagingCharmEX', weight: 1 },
+              { id: 'VolatileSashEX', weight: 1 },
+              { id: 'StormHelmEX', weight: 1 },
+              { id: 'SurgeBladeEX', weight: 1 },
+              { id: 'RagingCharm', weight: 3 },
+              { id: 'VengefulLocket', weight: 3 },
+              { id: 'HardenedGarb', weight: 6 },
+              { id: 'ToughHelmet', weight: 6 },
+              { id: 'VolatileSash', weight: 6 },
+              { id: 'BronzeAmulet', weight: 6 },
+              { id: 'ChargedFalchion', weight: 6 },
+              { id: 'SurgeBlade', weight: 3 },
+              { id: 'StormHelm', weight: 3 },
+            ],
+          },
+          {
+            minLevel: 61,
+            items: [
+              { id: 'RagingCharm', weight: 6 },
+              { id: 'HardenedGarb', weight: 6 },
+              { id: 'VengefulLocket', weight: 6 },
+              { id: 'ToughHelmet', weight: 6 },
+              { id: 'VolatileSash', weight: 6 },
+              { id: 'BronzeAmulet', weight: 6 },
+              { id: 'ChargedFalchion', weight: 6 },
+              { id: 'SurgeBlade', weight: 6 },
+              { id: 'StormHelm', weight: 6 },
+              { id: 'RagingCharmEX', weight: 6 },
+              { id: 'VolatileSashEX', weight: 6 },
+              { id: 'StormHelmEX', weight: 6 },
+              { id: 'SurgeBladeEX', weight: 6 },
+            ],
+          },
+        ],
+      },
+    ],
     abilities: [{ id: 'BossBrain_MushroomLargeBoss' }],
     tags: ['boss', 'mushroom'],
     spineScale: 0.4,
@@ -453,7 +2440,123 @@ export const z3: Record<string, Enemy> = {
     fireResist: 0.3,
     iceResist: -0.2,
     shadowResist: 0.3,
-    lootTables: [et.skeletonLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [10, 20] },
+              { id: 'Iron', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [10, 25] },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+              { id: 'BlueprintBlazingShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [15, 25] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [20, 30] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [2, 4] },
+              { id: 'BlueprintBoltproofSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [30, 40] },
+              { id: 'Iron', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [40, 50] },
+              { id: 'Iron', weight: 3, quantity: [4, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [45, 60] },
+              { id: 'Iron', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 65] },
+              { id: 'Iron', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [60, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 80] },
+              { id: 'Iron', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 100] },
+              { id: 'Iron', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['skeleton'],
   },
   skelGreatSword: {
@@ -474,7 +2577,123 @@ export const z3: Record<string, Enemy> = {
     iceResist: -0.2,
     lightningResist: -0.2,
     shadowResist: 0.3,
-    lootTables: [et.skeletonLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [10, 20] },
+              { id: 'Iron', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [10, 25] },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+              { id: 'BlueprintBlazingShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [15, 25] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [20, 30] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [2, 4] },
+              { id: 'BlueprintBoltproofSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [30, 40] },
+              { id: 'Iron', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [40, 50] },
+              { id: 'Iron', weight: 3, quantity: [4, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [45, 60] },
+              { id: 'Iron', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 65] },
+              { id: 'Iron', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [60, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 80] },
+              { id: 'Iron', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 100] },
+              { id: 'Iron', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['skeleton', 'armed'],
   },
   skelGreatSwordLucky: {
@@ -495,7 +2714,87 @@ export const z3: Record<string, Enemy> = {
     iceResist: -0.2,
     lightningResist: -0.2,
     shadowResist: 0.3,
-    lootTables: [et.skeletonLuckyLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 40,
+            items: [
+              { id: 'BlazingRing', weight: 14 },
+              { id: 'RoughRazor', weight: 14 },
+              { id: 'BatteredBroadsword', weight: 14 },
+              { id: 'CrystalHeartCharm', weight: 4 },
+              { id: 'WraithSash', weight: 4 },
+              { id: 'PainfulWrap', weight: 4 },
+              { id: 'SharkskinShirt', weight: 4 },
+              { id: 'RustedHelm', weight: 4 },
+              { id: 'PaddedHelmet', weight: 4 },
+              { id: 'TwilightBand', weight: 4 },
+              { id: 'Stormseeker', weight: 4 },
+              { id: 'SawtoothAxe', weight: 4 },
+              { id: 'SurvivalCharm', weight: 1 },
+              { id: 'TwineCord', weight: 1 },
+              { id: 'SwiftCowl', weight: 1 },
+              { id: 'VanishingHood', weight: 1 },
+              { id: 'QuicksilverRing', weight: 1 },
+              { id: 'FocusRing', weight: 1 },
+              { id: 'ShadowSlicer', weight: 1 },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'BlazingRing', weight: 3 },
+              { id: 'BerserkerAxe', weight: 1 },
+              { id: 'RoughRazor', weight: 3 },
+              { id: 'BatteredBroadsword', weight: 3 },
+              { id: 'CrystalHeartCharm', weight: 7 },
+              { id: 'WraithSash', weight: 7 },
+              { id: 'PainfulWrap', weight: 7 },
+              { id: 'SharkskinShirt', weight: 7 },
+              { id: 'RustedHelm', weight: 7 },
+              { id: 'PaddedHelmet', weight: 7 },
+              { id: 'TwilightBand', weight: 7 },
+              { id: 'Stormseeker', weight: 7 },
+              { id: 'SawtoothAxe', weight: 7 },
+              { id: 'SurvivalCharm', weight: 2 },
+              { id: 'TwineCord', weight: 2 },
+              { id: 'SwiftCowl', weight: 2 },
+              { id: 'VanishingHood', weight: 2 },
+              { id: 'QuicksilverRing', weight: 2 },
+              { id: 'FocusRing', weight: 2 },
+              { id: 'ShadowSlicer', weight: 2 },
+            ],
+          },
+          {
+            minLevel: 61,
+            items: [
+              { id: 'PainfulWrap', weight: 3 },
+              { id: 'CrystalHeartCharm', weight: 3 },
+              { id: 'WraithSash', weight: 3 },
+              { id: 'SharkskinShirt', weight: 3 },
+              { id: 'RustedHelm', weight: 3 },
+              { id: 'PaddedHelmet', weight: 3 },
+              { id: 'TwilightBand', weight: 3 },
+              { id: 'Stormseeker', weight: 3 },
+              { id: 'SawtoothAxe', weight: 3 },
+              { id: 'SurvivalCharm', weight: 5 },
+              { id: 'TwineCord', weight: 5 },
+              { id: 'SwiftCowl', weight: 5 },
+              { id: 'VanishingHood', weight: 5 },
+              { id: 'QuicksilverRing', weight: 5 },
+              { id: 'FocusRing', weight: 5 },
+              { id: 'ShadowSlicer', weight: 5 },
+              { id: 'BerserkerAxe', weight: 2 },
+              { id: 'HerosLongSword', weight: 2 },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['skeleton', 'armed'],
   },
   skelAssassin: {
@@ -513,7 +2812,123 @@ export const z3: Record<string, Enemy> = {
     crit: 0,
     dodge: 0.03,
     lightningResist: -0.2,
-    lootTables: [et.skeletonLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [10, 20] },
+              { id: 'Iron', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [10, 25] },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+              { id: 'BlueprintBlazingShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [15, 25] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [20, 30] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [2, 4] },
+              { id: 'BlueprintBoltproofSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [30, 40] },
+              { id: 'Iron', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [40, 50] },
+              { id: 'Iron', weight: 3, quantity: [4, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [45, 60] },
+              { id: 'Iron', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 65] },
+              { id: 'Iron', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [60, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 80] },
+              { id: 'Iron', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 100] },
+              { id: 'Iron', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['skeleton', 'armed'],
   },
   cannibal: {
@@ -532,7 +2947,136 @@ export const z3: Record<string, Enemy> = {
     dodge: 0,
     fireResist: 0.2,
     iceResist: 0.2,
-    lootTables: [et.darkLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [10, 20] },
+              { id: 'Wood', weight: 3, quantity: [1, 2] },
+              { id: 'Ore', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 96, quantity: [10, 25] },
+              { id: 'Wood', weight: 18, quantity: [1, 2] },
+              { id: 'Stone', weight: 18, quantity: [1, 2] },
+              { id: 'BlueprintDarkShortsword', weight: 2, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [15, 25] },
+              { id: 'Wood', weight: 9, quantity: [1, 3] },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 9, quantity: [1, 3] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [20, 30] },
+              { id: 'Wood', weight: 9, quantity: [2, 4] },
+              { id: 'BlueprintBloodhungryVest', weight: 2, quantity: 1 },
+              { id: 'Stone', weight: 9, quantity: [2, 4] },
+              { id: 'BlueprintMortalRelic', weight: 2, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 2, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 2, quantity: 1 },
+              { id: 'BlueprintShadowSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 64, quantity: [30, 40] },
+              { id: 'Wood', weight: 12, quantity: [3, 5] },
+              { id: 'Ore', weight: 12, quantity: [3, 5] },
+              { id: 'BlueprintShadowSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [40, 50] },
+              { id: 'Wood', weight: 3, quantity: [3, 7] },
+              { id: 'Ore', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [45, 60] },
+              { id: 'Ore', weight: 3, quantity: [4, 7] },
+              { id: 'Wood', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [50, 65] },
+              { id: 'Ore', weight: 3, quantity: [5, 7] },
+              { id: 'Wood', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [50, 75] },
+              { id: 'Ore', weight: 3, quantity: [5, 8] },
+              { id: 'Wood', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [60, 75] },
+              { id: 'Ore', weight: 3, quantity: [5, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [70, 80] },
+              { id: 'Ore', weight: 3, quantity: [6, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [70, 100] },
+              { id: 'Ore', weight: 3, quantity: [6, 10] },
+              { id: 'Wood', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['dark'],
   },
   darkBat: {
@@ -551,7 +3095,136 @@ export const z3: Record<string, Enemy> = {
     dodge: 0,
     fireResist: 0.2,
     iceResist: 0.2,
-    lootTables: [et.darkLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [10, 20] },
+              { id: 'Wood', weight: 3, quantity: [1, 2] },
+              { id: 'Ore', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 96, quantity: [10, 25] },
+              { id: 'Wood', weight: 18, quantity: [1, 2] },
+              { id: 'Stone', weight: 18, quantity: [1, 2] },
+              { id: 'BlueprintDarkShortsword', weight: 2, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [15, 25] },
+              { id: 'Wood', weight: 9, quantity: [1, 3] },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 9, quantity: [1, 3] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [20, 30] },
+              { id: 'Wood', weight: 9, quantity: [2, 4] },
+              { id: 'BlueprintBloodhungryVest', weight: 2, quantity: 1 },
+              { id: 'Stone', weight: 9, quantity: [2, 4] },
+              { id: 'BlueprintMortalRelic', weight: 2, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 2, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 2, quantity: 1 },
+              { id: 'BlueprintShadowSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 64, quantity: [30, 40] },
+              { id: 'Wood', weight: 12, quantity: [3, 5] },
+              { id: 'Ore', weight: 12, quantity: [3, 5] },
+              { id: 'BlueprintShadowSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [40, 50] },
+              { id: 'Wood', weight: 3, quantity: [3, 7] },
+              { id: 'Ore', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [45, 60] },
+              { id: 'Ore', weight: 3, quantity: [4, 7] },
+              { id: 'Wood', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [50, 65] },
+              { id: 'Ore', weight: 3, quantity: [5, 7] },
+              { id: 'Wood', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [50, 75] },
+              { id: 'Ore', weight: 3, quantity: [5, 8] },
+              { id: 'Wood', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [60, 75] },
+              { id: 'Ore', weight: 3, quantity: [5, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [70, 80] },
+              { id: 'Ore', weight: 3, quantity: [6, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [70, 100] },
+              { id: 'Ore', weight: 3, quantity: [6, 10] },
+              { id: 'Wood', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['dark'],
   },
   darkShaman: {
@@ -570,7 +3243,136 @@ export const z3: Record<string, Enemy> = {
     dodge: 0,
     fireResist: 0.2,
     iceResist: 0.2,
-    lootTables: [et.darkLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [10, 20] },
+              { id: 'Wood', weight: 3, quantity: [1, 2] },
+              { id: 'Ore', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 96, quantity: [10, 25] },
+              { id: 'Wood', weight: 18, quantity: [1, 2] },
+              { id: 'Stone', weight: 18, quantity: [1, 2] },
+              { id: 'BlueprintDarkShortsword', weight: 2, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [15, 25] },
+              { id: 'Wood', weight: 9, quantity: [1, 3] },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 9, quantity: [1, 3] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [20, 30] },
+              { id: 'Wood', weight: 9, quantity: [2, 4] },
+              { id: 'BlueprintBloodhungryVest', weight: 2, quantity: 1 },
+              { id: 'Stone', weight: 9, quantity: [2, 4] },
+              { id: 'BlueprintMortalRelic', weight: 2, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 2, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 2, quantity: 1 },
+              { id: 'BlueprintShadowSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 64, quantity: [30, 40] },
+              { id: 'Wood', weight: 12, quantity: [3, 5] },
+              { id: 'Ore', weight: 12, quantity: [3, 5] },
+              { id: 'BlueprintShadowSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [40, 50] },
+              { id: 'Wood', weight: 3, quantity: [3, 7] },
+              { id: 'Ore', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [45, 60] },
+              { id: 'Ore', weight: 3, quantity: [4, 7] },
+              { id: 'Wood', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [50, 65] },
+              { id: 'Ore', weight: 3, quantity: [5, 7] },
+              { id: 'Wood', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [50, 75] },
+              { id: 'Ore', weight: 3, quantity: [5, 8] },
+              { id: 'Wood', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [60, 75] },
+              { id: 'Ore', weight: 3, quantity: [5, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [70, 80] },
+              { id: 'Ore', weight: 3, quantity: [6, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [70, 100] },
+              { id: 'Ore', weight: 3, quantity: [6, 10] },
+              { id: 'Wood', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['dark'],
     levelOverrides: [
       {
@@ -598,7 +3400,136 @@ export const z3: Record<string, Enemy> = {
     dodge: 0,
     fireResist: 0.2,
     iceResist: 0.2,
-    lootTables: [et.darkLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [10, 20] },
+              { id: 'Wood', weight: 3, quantity: [1, 2] },
+              { id: 'Ore', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 96, quantity: [10, 25] },
+              { id: 'Wood', weight: 18, quantity: [1, 2] },
+              { id: 'Stone', weight: 18, quantity: [1, 2] },
+              { id: 'BlueprintDarkShortsword', weight: 2, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [15, 25] },
+              { id: 'Wood', weight: 9, quantity: [1, 3] },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 9, quantity: [1, 3] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [20, 30] },
+              { id: 'Wood', weight: 9, quantity: [2, 4] },
+              { id: 'BlueprintBloodhungryVest', weight: 2, quantity: 1 },
+              { id: 'Stone', weight: 9, quantity: [2, 4] },
+              { id: 'BlueprintMortalRelic', weight: 2, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 2, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 2, quantity: 1 },
+              { id: 'BlueprintShadowSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 64, quantity: [30, 40] },
+              { id: 'Wood', weight: 12, quantity: [3, 5] },
+              { id: 'Ore', weight: 12, quantity: [3, 5] },
+              { id: 'BlueprintShadowSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [40, 50] },
+              { id: 'Wood', weight: 3, quantity: [3, 7] },
+              { id: 'Ore', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [45, 60] },
+              { id: 'Ore', weight: 3, quantity: [4, 7] },
+              { id: 'Wood', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [50, 65] },
+              { id: 'Ore', weight: 3, quantity: [5, 7] },
+              { id: 'Wood', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [50, 75] },
+              { id: 'Ore', weight: 3, quantity: [5, 8] },
+              { id: 'Wood', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [60, 75] },
+              { id: 'Ore', weight: 3, quantity: [5, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [70, 80] },
+              { id: 'Ore', weight: 3, quantity: [6, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [70, 100] },
+              { id: 'Ore', weight: 3, quantity: [6, 10] },
+              { id: 'Wood', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['dark'],
   },
   darkBigGuy: {
@@ -617,7 +3548,136 @@ export const z3: Record<string, Enemy> = {
     dodge: 0,
     fireResist: 0.2,
     iceResist: 0.2,
-    lootTables: [et.darkLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [10, 20] },
+              { id: 'Wood', weight: 3, quantity: [1, 2] },
+              { id: 'Ore', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 96, quantity: [10, 25] },
+              { id: 'Wood', weight: 18, quantity: [1, 2] },
+              { id: 'Stone', weight: 18, quantity: [1, 2] },
+              { id: 'BlueprintDarkShortsword', weight: 2, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [15, 25] },
+              { id: 'Wood', weight: 9, quantity: [1, 3] },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 9, quantity: [1, 3] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [20, 30] },
+              { id: 'Wood', weight: 9, quantity: [2, 4] },
+              { id: 'BlueprintBloodhungryVest', weight: 2, quantity: 1 },
+              { id: 'Stone', weight: 9, quantity: [2, 4] },
+              { id: 'BlueprintMortalRelic', weight: 2, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 2, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 2, quantity: 1 },
+              { id: 'BlueprintShadowSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 64, quantity: [30, 40] },
+              { id: 'Wood', weight: 12, quantity: [3, 5] },
+              { id: 'Ore', weight: 12, quantity: [3, 5] },
+              { id: 'BlueprintShadowSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [40, 50] },
+              { id: 'Wood', weight: 3, quantity: [3, 7] },
+              { id: 'Ore', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [45, 60] },
+              { id: 'Ore', weight: 3, quantity: [4, 7] },
+              { id: 'Wood', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [50, 65] },
+              { id: 'Ore', weight: 3, quantity: [5, 7] },
+              { id: 'Wood', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [50, 75] },
+              { id: 'Ore', weight: 3, quantity: [5, 8] },
+              { id: 'Wood', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [60, 75] },
+              { id: 'Ore', weight: 3, quantity: [5, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [70, 80] },
+              { id: 'Ore', weight: 3, quantity: [6, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [70, 100] },
+              { id: 'Ore', weight: 3, quantity: [6, 10] },
+              { id: 'Wood', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['dark'],
   },
   darkBigGuyLucky: {
@@ -636,7 +3696,111 @@ export const z3: Record<string, Enemy> = {
     dodge: 0,
     fireResist: 0.2,
     iceResist: 0.2,
-    lootTables: [et.darkLuckyLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 40,
+            items: [
+              { id: 'WardenCharm', weight: 6 },
+              { id: 'RazorRing', weight: 6 },
+              { id: 'PhaseCharm', weight: 8 },
+              { id: 'ConflagrationRing', weight: 1 },
+              { id: 'HastySash', weight: 8 },
+              { id: 'RuggedJerkin', weight: 8 },
+              { id: 'BloodiedChainMail', weight: 8 },
+              { id: 'SturdyHeadguard', weight: 8 },
+              { id: 'LeatherCap', weight: 8 },
+              { id: 'MuscleRing', weight: 8 },
+              { id: 'CopperRing', weight: 8 },
+              { id: 'SturdyCleaver', weight: 8 },
+              { id: 'SerratedSword', weight: 8 },
+              { id: 'WarpstoneAmulet', weight: 2 },
+              { id: 'BastionChain', weight: 2 },
+              { id: 'FlawedClasp', weight: 2 },
+              { id: 'SilkenRobe', weight: 2 },
+              { id: 'BrightPlate', weight: 2 },
+              { id: 'RestorationHelm', weight: 2 },
+              { id: 'ConfoundingMask', weight: 2 },
+              { id: 'JaggedRing', weight: 2 },
+              { id: 'BluntBludgeon', weight: 2 },
+              { id: 'AdventurersBlade', weight: 2 },
+              { id: 'BrutalBlade', weight: 2 },
+              { id: 'AudacityChain', weight: 1 },
+              { id: 'ShadowbaneCirclet', weight: 1 },
+              { id: 'Forgefang', weight: 1 },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'RazorRing', weight: 1 },
+              { id: 'WardenCharm', weight: 1 },
+              { id: 'PhaseCharm', weight: 2 },
+              { id: 'HastySash', weight: 2 },
+              { id: 'RuggedJerkin', weight: 2 },
+              { id: 'BloodiedChainMail', weight: 2 },
+              { id: 'SturdyHeadguard', weight: 2 },
+              { id: 'LeatherCap', weight: 2 },
+              { id: 'MuscleRing', weight: 2 },
+              { id: 'CopperRing', weight: 2 },
+              { id: 'SturdyCleaver', weight: 2 },
+              { id: 'SerratedSword', weight: 2 },
+              { id: 'WarpstoneAmulet', weight: 5 },
+              { id: 'BastionChain', weight: 5 },
+              { id: 'FlawedClasp', weight: 5 },
+              { id: 'SilkenRobe', weight: 5 },
+              { id: 'BrightPlate', weight: 5 },
+              { id: 'RestorationHelm', weight: 5 },
+              { id: 'ConfoundingMask', weight: 5 },
+              { id: 'JaggedRing', weight: 5 },
+              { id: 'BluntBludgeon', weight: 5 },
+              { id: 'AdventurersBlade', weight: 5 },
+              { id: 'BrutalBlade', weight: 5 },
+              { id: 'AudacityChain', weight: 1 },
+              { id: 'ShadowbaneCirclet', weight: 1 },
+              { id: 'ConflagrationRing', weight: 1 },
+              { id: 'Forgefang', weight: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            items: [
+              { id: 'WardenCharm', weight: 1 },
+              { id: 'RazorRing', weight: 1 },
+              { id: 'PhaseCharm', weight: 1 },
+              { id: 'HastySash', weight: 1 },
+              { id: 'RuggedJerkin', weight: 1 },
+              { id: 'BloodiedChainMail', weight: 1 },
+              { id: 'SturdyHeadguard', weight: 1 },
+              { id: 'LeatherCap', weight: 1 },
+              { id: 'MuscleRing', weight: 1 },
+              { id: 'CopperRing', weight: 1 },
+              { id: 'SturdyCleaver', weight: 1 },
+              { id: 'SerratedSword', weight: 1 },
+              { id: 'WarpstoneAmulet', weight: 5 },
+              { id: 'BastionChain', weight: 5 },
+              { id: 'FlawedClasp', weight: 5 },
+              { id: 'SilkenRobe', weight: 5 },
+              { id: 'BrightPlate', weight: 5 },
+              { id: 'RestorationHelm', weight: 5 },
+              { id: 'ConfoundingMask', weight: 5 },
+              { id: 'JaggedRing', weight: 5 },
+              { id: 'BluntBludgeon', weight: 5 },
+              { id: 'AdventurersBlade', weight: 5 },
+              { id: 'BrutalBlade', weight: 5 },
+              { id: 'AudacityChain', weight: 2 },
+              { id: 'ShadowbaneCirclet', weight: 2 },
+              { id: 'ConflagrationRing', weight: 2 },
+              { id: 'Forgefang', weight: 2 },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['dark'],
   },
   darkHand: {
@@ -655,7 +3819,136 @@ export const z3: Record<string, Enemy> = {
     dodge: 0,
     fireResist: 0.2,
     iceResist: 0.2,
-    lootTables: [et.darkLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [10, 20] },
+              { id: 'Wood', weight: 3, quantity: [1, 2] },
+              { id: 'Ore', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 96, quantity: [10, 25] },
+              { id: 'Wood', weight: 18, quantity: [1, 2] },
+              { id: 'Stone', weight: 18, quantity: [1, 2] },
+              { id: 'BlueprintDarkShortsword', weight: 2, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [15, 25] },
+              { id: 'Wood', weight: 9, quantity: [1, 3] },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 9, quantity: [1, 3] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [20, 30] },
+              { id: 'Wood', weight: 9, quantity: [2, 4] },
+              { id: 'BlueprintBloodhungryVest', weight: 2, quantity: 1 },
+              { id: 'Stone', weight: 9, quantity: [2, 4] },
+              { id: 'BlueprintMortalRelic', weight: 2, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 2, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 2, quantity: 1 },
+              { id: 'BlueprintShadowSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 64, quantity: [30, 40] },
+              { id: 'Wood', weight: 12, quantity: [3, 5] },
+              { id: 'Ore', weight: 12, quantity: [3, 5] },
+              { id: 'BlueprintShadowSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [40, 50] },
+              { id: 'Wood', weight: 3, quantity: [3, 7] },
+              { id: 'Ore', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [45, 60] },
+              { id: 'Ore', weight: 3, quantity: [4, 7] },
+              { id: 'Wood', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [50, 65] },
+              { id: 'Ore', weight: 3, quantity: [5, 7] },
+              { id: 'Wood', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [50, 75] },
+              { id: 'Ore', weight: 3, quantity: [5, 8] },
+              { id: 'Wood', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [60, 75] },
+              { id: 'Ore', weight: 3, quantity: [5, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [70, 80] },
+              { id: 'Ore', weight: 3, quantity: [6, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [70, 100] },
+              { id: 'Ore', weight: 3, quantity: [6, 10] },
+              { id: 'Wood', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['dark'],
   },
   darkWizard: {
@@ -674,7 +3967,136 @@ export const z3: Record<string, Enemy> = {
     dodge: 0,
     fireResist: 0.2,
     iceResist: 0.2,
-    lootTables: [et.darkLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [10, 20] },
+              { id: 'Wood', weight: 3, quantity: [1, 2] },
+              { id: 'Ore', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 96, quantity: [10, 25] },
+              { id: 'Wood', weight: 18, quantity: [1, 2] },
+              { id: 'Stone', weight: 18, quantity: [1, 2] },
+              { id: 'BlueprintDarkShortsword', weight: 2, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [15, 25] },
+              { id: 'Wood', weight: 9, quantity: [1, 3] },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 9, quantity: [1, 3] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [20, 30] },
+              { id: 'Wood', weight: 9, quantity: [2, 4] },
+              { id: 'BlueprintBloodhungryVest', weight: 2, quantity: 1 },
+              { id: 'Stone', weight: 9, quantity: [2, 4] },
+              { id: 'BlueprintMortalRelic', weight: 2, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 2, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 2, quantity: 1 },
+              { id: 'BlueprintShadowSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 64, quantity: [30, 40] },
+              { id: 'Wood', weight: 12, quantity: [3, 5] },
+              { id: 'Ore', weight: 12, quantity: [3, 5] },
+              { id: 'BlueprintShadowSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [40, 50] },
+              { id: 'Wood', weight: 3, quantity: [3, 7] },
+              { id: 'Ore', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [45, 60] },
+              { id: 'Ore', weight: 3, quantity: [4, 7] },
+              { id: 'Wood', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [50, 65] },
+              { id: 'Ore', weight: 3, quantity: [5, 7] },
+              { id: 'Wood', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [50, 75] },
+              { id: 'Ore', weight: 3, quantity: [5, 8] },
+              { id: 'Wood', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [60, 75] },
+              { id: 'Ore', weight: 3, quantity: [5, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [70, 80] },
+              { id: 'Ore', weight: 3, quantity: [6, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [70, 100] },
+              { id: 'Ore', weight: 3, quantity: [6, 10] },
+              { id: 'Wood', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['dark'],
   },
   darkGiantHorns: {
@@ -694,7 +4116,60 @@ export const z3: Record<string, Enemy> = {
     fireResist: 0.2,
     iceResist: 0.2,
     shadowResist: 0.3,
-    lootTables: [et.darkBossLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          { minLevel: 1, maxLevel: 20, items: [{ id: 'Gold', quantity: 200 }] },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [{ id: 'Gold', quantity: 400 }],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [{ id: 'Gold', quantity: 600 }],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [{ id: 'Gold', quantity: 1000 }],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [{ id: 'Gold', quantity: 2000 }],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [{ id: 'Gold', quantity: 3000 }],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [{ id: 'Gold', quantity: 4250 }],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [{ id: 'Gold', quantity: 5750 }],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [{ id: 'Gold', quantity: 7500 }],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [{ id: 'Gold', quantity: 9000 }],
+          },
+          { minLevel: 201, items: [{ id: 'Gold', quantity: 12500 }] },
+        ],
+      },
+    ],
     abilities: [{ id: 'LightningOnCrit' }],
     tags: ['dark', 'elite'],
     spineScale: 0.3,
@@ -715,7 +4190,136 @@ export const z3: Record<string, Enemy> = {
     dodge: 0,
     fireResist: 0.2,
     iceResist: 0.2,
-    lootTables: [et.darkLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [10, 20] },
+              { id: 'Wood', weight: 3, quantity: [1, 2] },
+              { id: 'Ore', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 96, quantity: [10, 25] },
+              { id: 'Wood', weight: 18, quantity: [1, 2] },
+              { id: 'Stone', weight: 18, quantity: [1, 2] },
+              { id: 'BlueprintDarkShortsword', weight: 2, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [15, 25] },
+              { id: 'Wood', weight: 9, quantity: [1, 3] },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 9, quantity: [1, 3] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [20, 30] },
+              { id: 'Wood', weight: 9, quantity: [2, 4] },
+              { id: 'BlueprintBloodhungryVest', weight: 2, quantity: 1 },
+              { id: 'Stone', weight: 9, quantity: [2, 4] },
+              { id: 'BlueprintMortalRelic', weight: 2, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 2, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 2, quantity: 1 },
+              { id: 'BlueprintShadowSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 64, quantity: [30, 40] },
+              { id: 'Wood', weight: 12, quantity: [3, 5] },
+              { id: 'Ore', weight: 12, quantity: [3, 5] },
+              { id: 'BlueprintShadowSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [40, 50] },
+              { id: 'Wood', weight: 3, quantity: [3, 7] },
+              { id: 'Ore', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [45, 60] },
+              { id: 'Ore', weight: 3, quantity: [4, 7] },
+              { id: 'Wood', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [50, 65] },
+              { id: 'Ore', weight: 3, quantity: [5, 7] },
+              { id: 'Wood', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [50, 75] },
+              { id: 'Ore', weight: 3, quantity: [5, 8] },
+              { id: 'Wood', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [60, 75] },
+              { id: 'Ore', weight: 3, quantity: [5, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [70, 80] },
+              { id: 'Ore', weight: 3, quantity: [6, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [70, 100] },
+              { id: 'Ore', weight: 3, quantity: [6, 10] },
+              { id: 'Wood', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['dark'],
     levelOverrides: [
       {
@@ -743,7 +4347,136 @@ export const z3: Record<string, Enemy> = {
     dodge: 0.03,
     fireResist: 0.2,
     iceResist: 0.2,
-    lootTables: [et.darkLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [10, 20] },
+              { id: 'Wood', weight: 3, quantity: [1, 2] },
+              { id: 'Ore', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 96, quantity: [10, 25] },
+              { id: 'Wood', weight: 18, quantity: [1, 2] },
+              { id: 'Stone', weight: 18, quantity: [1, 2] },
+              { id: 'BlueprintDarkShortsword', weight: 2, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [15, 25] },
+              { id: 'Wood', weight: 9, quantity: [1, 3] },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 9, quantity: [1, 3] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [20, 30] },
+              { id: 'Wood', weight: 9, quantity: [2, 4] },
+              { id: 'BlueprintBloodhungryVest', weight: 2, quantity: 1 },
+              { id: 'Stone', weight: 9, quantity: [2, 4] },
+              { id: 'BlueprintMortalRelic', weight: 2, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 2, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 2, quantity: 1 },
+              { id: 'BlueprintShadowSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 64, quantity: [30, 40] },
+              { id: 'Wood', weight: 12, quantity: [3, 5] },
+              { id: 'Ore', weight: 12, quantity: [3, 5] },
+              { id: 'BlueprintShadowSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [40, 50] },
+              { id: 'Wood', weight: 3, quantity: [3, 7] },
+              { id: 'Ore', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [45, 60] },
+              { id: 'Ore', weight: 3, quantity: [4, 7] },
+              { id: 'Wood', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [50, 65] },
+              { id: 'Ore', weight: 3, quantity: [5, 7] },
+              { id: 'Wood', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [50, 75] },
+              { id: 'Ore', weight: 3, quantity: [5, 8] },
+              { id: 'Wood', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [60, 75] },
+              { id: 'Ore', weight: 3, quantity: [5, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [70, 80] },
+              { id: 'Ore', weight: 3, quantity: [6, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [70, 100] },
+              { id: 'Ore', weight: 3, quantity: [6, 10] },
+              { id: 'Wood', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['dark'],
     levelOverrides: [
       {
@@ -770,7 +4503,118 @@ export const z3: Record<string, Enemy> = {
     dodge: 0.03,
     lightningResist: -0.3,
     shadowResist: 0.3,
-    lootTables: [et.darkDemonBossLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 40,
+            items: [
+              { id: 'HatefulDarkness', weight: 6 },
+              { id: 'DarksteelPlate', weight: 6 },
+              { id: 'DarkWard', weight: 6 },
+              { id: 'WarpstoneAmulet', weight: 8 },
+              { id: 'SpikedCowl', weight: 6 },
+              { id: 'RubyClawedRing', weight: 6 },
+              { id: 'BastionChain', weight: 8 },
+              { id: 'FlawedClasp', weight: 8 },
+              { id: 'SilkenRobe', weight: 8 },
+              { id: 'BrightPlate', weight: 8 },
+              { id: 'RestorationHelm', weight: 8 },
+              { id: 'ConfoundingMask', weight: 8 },
+              { id: 'JaggedRing', weight: 8 },
+              { id: 'BluntBludgeon', weight: 8 },
+              { id: 'AdventurersBlade', weight: 8 },
+              { id: 'BrutalBlade', weight: 8 },
+              { id: 'AudacityChain', weight: 8 },
+              { id: 'ShadowbaneCirclet', weight: 8 },
+              { id: 'Forgefang', weight: 8 },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'RubyClawedRing', weight: 6 },
+              { id: 'SpikedCowl', weight: 6 },
+              { id: 'DarksteelPlate', weight: 6 },
+              { id: 'HatefulDarkness', weight: 6 },
+              { id: 'DarkWard', weight: 6 },
+              { id: 'WarpstoneAmulet', weight: 6 },
+              { id: 'BastionChain', weight: 6 },
+              { id: 'FlawedClasp', weight: 6 },
+              { id: 'SilkenRobe', weight: 6 },
+              { id: 'BrightPlate', weight: 6 },
+              { id: 'RestorationHelm', weight: 6 },
+              { id: 'ConfoundingMask', weight: 6 },
+              { id: 'JaggedRing', weight: 6 },
+              { id: 'BluntBludgeon', weight: 6 },
+              { id: 'AdventurersBlade', weight: 6 },
+              { id: 'BrutalBlade', weight: 6 },
+              { id: 'AudacityChain', weight: 6 },
+              { id: 'ShadowbaneCirclet', weight: 6 },
+              { id: 'Forgefang', weight: 6 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'RubyClawedRing', weight: 6 },
+              { id: 'SpikedCowl', weight: 6 },
+              { id: 'DarksteelPlate', weight: 6 },
+              { id: 'HatefulDarkness', weight: 6 },
+              { id: 'SpikedCowlEX', weight: 6 },
+              { id: 'RubyClawedRingEX', weight: 5 },
+              { id: 'DarksteelPlateEX', weight: 6 },
+              { id: 'HatefulDarknessEX', weight: 6 },
+              { id: 'WarpstoneAmulet', weight: 5 },
+              { id: 'BastionChain', weight: 5 },
+              { id: 'FlawedClasp', weight: 5 },
+              { id: 'SilkenRobe', weight: 5 },
+              { id: 'BrightPlate', weight: 5 },
+              { id: 'RestorationHelm', weight: 5 },
+              { id: 'ConfoundingMask', weight: 5 },
+              { id: 'JaggedRing', weight: 5 },
+              { id: 'BluntBludgeon', weight: 5 },
+              { id: 'AdventurersBlade', weight: 5 },
+              { id: 'BrutalBlade', weight: 5 },
+              { id: 'AudacityChain', weight: 5 },
+              { id: 'ShadowbaneCirclet', weight: 5 },
+              { id: 'Forgefang', weight: 5 },
+            ],
+          },
+          {
+            minLevel: 81,
+            items: [
+              { id: 'BastionChain', weight: 2 },
+              { id: 'FlawedClasp', weight: 2 },
+              { id: 'WarpstoneAmulet', weight: 2 },
+              { id: 'SilkenRobe', weight: 2 },
+              { id: 'BrightPlate', weight: 2 },
+              { id: 'RestorationHelm', weight: 2 },
+              { id: 'RubyClawedRing', weight: 5 },
+              { id: 'SpikedCowl', weight: 5 },
+              { id: 'DarksteelPlate', weight: 5 },
+              { id: 'HatefulDarkness', weight: 5 },
+              { id: 'RubyClawedRingEX', weight: 4 },
+              { id: 'SpikedCowlEX', weight: 4 },
+              { id: 'DarksteelPlateEX', weight: 4 },
+              { id: 'HatefulDarknessEX', weight: 4 },
+              { id: 'ConfoundingMask', weight: 2 },
+              { id: 'JaggedRing', weight: 2 },
+              { id: 'BluntBludgeon', weight: 2 },
+              { id: 'AdventurersBlade', weight: 2 },
+              { id: 'BrutalBlade', weight: 2 },
+              { id: 'AudacityChain', weight: 4 },
+              { id: 'ShadowbaneCirclet', weight: 4 },
+              { id: 'Forgefang', weight: 4 },
+            ],
+          },
+        ],
+      },
+    ],
     abilities: [{ id: 'BossBrain_DarkDemon' }],
     tags: ['boss', 'dark', 'armed'],
     spineScale: 0.3,
@@ -791,7 +4635,122 @@ export const z3: Record<string, Enemy> = {
     dodge: 0,
     fireResist: 0.3,
     iceResist: 0.3,
-    lootTables: [et.poisonDemonBossLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 40,
+            items: [
+              { id: 'DarksteelPlate', weight: 6 },
+              { id: 'DarkWard', weight: 6 },
+              { id: 'WarpstoneAmulet', weight: 8 },
+              { id: 'SpikedCowl', weight: 6 },
+              { id: 'RubyClawedRing', weight: 6 },
+              { id: 'BastionChain', weight: 8 },
+              { id: 'FlawedClasp', weight: 8 },
+              { id: 'SilkenRobe', weight: 8 },
+              { id: 'BrightPlate', weight: 8 },
+              { id: 'RestorationHelm', weight: 8 },
+              { id: 'ConfoundingMask', weight: 8 },
+              { id: 'JaggedRing', weight: 8 },
+              { id: 'BluntBludgeon', weight: 8 },
+              { id: 'AdventurersBlade', weight: 8 },
+              { id: 'BrutalBlade', weight: 8 },
+              { id: 'AudacityChain', weight: 8 },
+              { id: 'ShadowbaneCirclet', weight: 8 },
+              { id: 'Forgefang', weight: 8 },
+              { id: 'HatefulDarkness', weight: 6 },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'RubyClawedRing', weight: 6 },
+              { id: 'SpikedCowl', weight: 6 },
+              { id: 'DarksteelPlate', weight: 6 },
+              { id: 'HatefulDarkness', weight: 6 },
+              { id: 'DarkWard', weight: 6 },
+              { id: 'WarpstoneAmulet', weight: 6 },
+              { id: 'BastionChain', weight: 6 },
+              { id: 'FlawedClasp', weight: 6 },
+              { id: 'SilkenRobe', weight: 6 },
+              { id: 'BrightPlate', weight: 6 },
+              { id: 'RestorationHelm', weight: 6 },
+              { id: 'ConfoundingMask', weight: 6 },
+              { id: 'JaggedRing', weight: 6 },
+              { id: 'BluntBludgeon', weight: 6 },
+              { id: 'AdventurersBlade', weight: 6 },
+              { id: 'BrutalBlade', weight: 6 },
+              { id: 'AudacityChain', weight: 6 },
+              { id: 'ShadowbaneCirclet', weight: 6 },
+              { id: 'Forgefang', weight: 6 },
+              { id: 'UpholsteredJerkinEX', weight: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'RubyClawedRing', weight: 6 },
+              { id: 'SpikedCowl', weight: 6 },
+              { id: 'DarksteelPlate', weight: 6 },
+              { id: 'HatefulDarkness', weight: 6 },
+              { id: 'SpikedCowlEX', weight: 6 },
+              { id: 'RubyClawedRingEX', weight: 5 },
+              { id: 'DarksteelPlateEX', weight: 6 },
+              { id: 'HatefulDarknessEX', weight: 6 },
+              { id: 'WarpstoneAmulet', weight: 5 },
+              { id: 'BastionChain', weight: 5 },
+              { id: 'FlawedClasp', weight: 5 },
+              { id: 'SilkenRobe', weight: 5 },
+              { id: 'BrightPlate', weight: 5 },
+              { id: 'RestorationHelm', weight: 5 },
+              { id: 'ConfoundingMask', weight: 5 },
+              { id: 'JaggedRing', weight: 5 },
+              { id: 'BluntBludgeon', weight: 5 },
+              { id: 'AdventurersBlade', weight: 5 },
+              { id: 'BrutalBlade', weight: 5 },
+              { id: 'AudacityChain', weight: 5 },
+              { id: 'ShadowbaneCirclet', weight: 5 },
+              { id: 'Forgefang', weight: 5 },
+              { id: 'RivetedCasqueEX', weight: 6 },
+            ],
+          },
+          {
+            minLevel: 81,
+            items: [
+              { id: 'BastionChain', weight: 16 },
+              { id: 'FlawedClasp', weight: 16 },
+              { id: 'WarpstoneAmulet', weight: 16 },
+              { id: 'SilkenRobe', weight: 16 },
+              { id: 'BrightPlate', weight: 16 },
+              { id: 'RestorationHelm', weight: 16 },
+              { id: 'RubyClawedRing', weight: 40 },
+              { id: 'SpikedCowl', weight: 40 },
+              { id: 'DarksteelPlate', weight: 40 },
+              { id: 'HatefulDarkness', weight: 40 },
+              { id: 'ConfoundingMask', weight: 16 },
+              { id: 'JaggedRing', weight: 16 },
+              { id: 'BluntBludgeon', weight: 16 },
+              { id: 'AdventurersBlade', weight: 16 },
+              { id: 'BrutalBlade', weight: 16 },
+              { id: 'AudacityChain', weight: 32 },
+              { id: 'ShadowbaneCirclet', weight: 32 },
+              { id: 'Forgefang', weight: 32 },
+              { id: 'ParadoxBandEX', weight: 3 },
+              { id: 'SmithysFriendEX', weight: 3 },
+              { id: 'RivetedCasqueEX', weight: 16 },
+              { id: 'SavageSolitaire', weight: 5 },
+              { id: 'GloriousAmulet', weight: 1 },
+              { id: 'GloriousSignet', weight: 1 },
+            ],
+          },
+        ],
+      },
+    ],
     abilities: [{ id: 'BossBrain_PoisonDemon' }],
     tags: ['boss', 'dark'],
     spineScale: 0.3,
@@ -810,7 +4769,126 @@ export const z3: Record<string, Enemy> = {
     speed: 9,
     crit: 0,
     dodge: 0.03,
-    lootTables: [et.mushroomLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [10, 20] },
+              { id: 'Wood', weight: 2, quantity: [1, 2] },
+              { id: 'Stone', weight: 2, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 36, quantity: [10, 25] },
+              { id: 'Wood', weight: 8, quantity: [1, 2] },
+              { id: 'Iron', weight: 8, quantity: [1, 2] },
+              { id: 'BlueprintElectricShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [15, 25] },
+              { id: 'Wood', weight: 2, quantity: [1, 3] },
+              { id: 'Ore', weight: 2, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [20, 30] },
+              { id: 'Wood', weight: 2, quantity: [2, 3] },
+              { id: 'Iron', weight: 2, quantity: [2, 3] },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [30, 40] },
+              { id: 'Wood', weight: 2, quantity: [3, 5] },
+              { id: 'Iron', weight: 2, quantity: [3, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [40, 50] },
+              { id: 'Wood', weight: 2, quantity: [3, 7] },
+              { id: 'Iron', weight: 2, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [45, 60] },
+              { id: 'Iron', weight: 2, quantity: [4, 6] },
+              { id: 'Wood', weight: 2, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [50, 65] },
+              { id: 'Iron', weight: 2, quantity: [4, 7] },
+              { id: 'Wood', weight: 2, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [50, 75] },
+              { id: 'Iron', weight: 2, quantity: [4, 8] },
+              { id: 'Wood', weight: 2, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [60, 75] },
+              { id: 'Iron', weight: 2, quantity: [5, 8] },
+              { id: 'Wood', weight: 2, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [70, 80] },
+              { id: 'Iron', weight: 2, quantity: [5, 9] },
+              { id: 'Wood', weight: 2, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [70, 100] },
+              { id: 'Iron', weight: 2, quantity: [6, 10] },
+              { id: 'Wood', weight: 2, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['mushroom'],
     levelOverrides: [
       {
@@ -836,7 +4914,126 @@ export const z3: Record<string, Enemy> = {
     speed: 7,
     crit: 0,
     dodge: 0,
-    lootTables: [et.mushroomLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [10, 20] },
+              { id: 'Wood', weight: 2, quantity: [1, 2] },
+              { id: 'Stone', weight: 2, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 36, quantity: [10, 25] },
+              { id: 'Wood', weight: 8, quantity: [1, 2] },
+              { id: 'Iron', weight: 8, quantity: [1, 2] },
+              { id: 'BlueprintElectricShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [15, 25] },
+              { id: 'Wood', weight: 2, quantity: [1, 3] },
+              { id: 'Ore', weight: 2, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [20, 30] },
+              { id: 'Wood', weight: 2, quantity: [2, 3] },
+              { id: 'Iron', weight: 2, quantity: [2, 3] },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [30, 40] },
+              { id: 'Wood', weight: 2, quantity: [3, 5] },
+              { id: 'Iron', weight: 2, quantity: [3, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [40, 50] },
+              { id: 'Wood', weight: 2, quantity: [3, 7] },
+              { id: 'Iron', weight: 2, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [45, 60] },
+              { id: 'Iron', weight: 2, quantity: [4, 6] },
+              { id: 'Wood', weight: 2, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [50, 65] },
+              { id: 'Iron', weight: 2, quantity: [4, 7] },
+              { id: 'Wood', weight: 2, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [50, 75] },
+              { id: 'Iron', weight: 2, quantity: [4, 8] },
+              { id: 'Wood', weight: 2, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [60, 75] },
+              { id: 'Iron', weight: 2, quantity: [5, 8] },
+              { id: 'Wood', weight: 2, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [70, 80] },
+              { id: 'Iron', weight: 2, quantity: [5, 9] },
+              { id: 'Wood', weight: 2, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [70, 100] },
+              { id: 'Iron', weight: 2, quantity: [6, 10] },
+              { id: 'Wood', weight: 2, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['mushroom', 'blue'],
   },
   mushroomSoldierLucky: {
@@ -853,7 +5050,86 @@ export const z3: Record<string, Enemy> = {
     speed: 8,
     crit: 0,
     dodge: 0,
-    lootTables: [et.mushroomLuckyLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 20,
+            items: [
+              { id: 'BlazingAmulet', weight: 9 },
+              { id: 'ChippedPendant', weight: 9 },
+              { id: 'RopeBraid', weight: 9 },
+              { id: 'StoneBlade', weight: 1 },
+              { id: 'BladedBelt', weight: 9 },
+              { id: 'ProtectiveMantle', weight: 9 },
+              { id: 'LeatherTunic', weight: 9 },
+              { id: 'WardingHelm', weight: 9 },
+              { id: 'RawhideCap', weight: 9 },
+              { id: 'TarnishedBand', weight: 9 },
+              { id: 'HeavyBand', weight: 9 },
+              { id: 'RusticBelt', weight: 9 },
+              { id: 'SimpleCutlass', weight: 9 },
+              { id: 'RusticSword', weight: 9 },
+              { id: 'ChippedShortsword', weight: 14 },
+              { id: 'VengefulLocket', weight: 1 },
+              { id: 'HardenedGarb', weight: 1 },
+              { id: 'ConjurersCap', weight: 1 },
+              { id: 'ToughHelmet', weight: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'BlazingAmulet', weight: 6 },
+              { id: 'ChippedPendant', weight: 6 },
+              { id: 'RopeBraid', weight: 6 },
+              { id: 'StoneBlade', weight: 3 },
+              { id: 'FirststrikeVest', weight: 3 },
+              { id: 'FragmentOfTheGreatSword', weight: 3 },
+              { id: 'BladedBelt', weight: 6 },
+              { id: 'ProtectiveMantle', weight: 6 },
+              { id: 'LeatherTunic', weight: 6 },
+              { id: 'WardingHelm', weight: 6 },
+              { id: 'RawhideCap', weight: 6 },
+              { id: 'TarnishedBand', weight: 6 },
+              { id: 'HeavyBand', weight: 6 },
+              { id: 'SimpleCutlass', weight: 6 },
+              { id: 'RusticSword', weight: 6 },
+              { id: 'ChippedShortsword', weight: 9 },
+              { id: 'VengefulLocket', weight: 3 },
+              { id: 'HardenedGarb', weight: 3 },
+              { id: 'ToughHelmet', weight: 3 },
+            ],
+          },
+          {
+            minLevel: 41,
+            items: [
+              { id: 'ProtectiveMantle', weight: 3 },
+              { id: 'BlazingAmulet', weight: 3 },
+              { id: 'ChippedPendant', weight: 3 },
+              { id: 'RopeBraid', weight: 3 },
+              { id: 'BladedBelt', weight: 3 },
+              { id: 'LeatherTunic', weight: 3 },
+              { id: 'WardingHelm', weight: 3 },
+              { id: 'RawhideCap', weight: 3 },
+              { id: 'TarnishedBand', weight: 3 },
+              { id: 'HeavyBand', weight: 3 },
+              { id: 'SimpleCutlass', weight: 3 },
+              { id: 'RusticSword', weight: 3 },
+              { id: 'ChippedShortsword', weight: 6 },
+              { id: 'VengefulLocket', weight: 5 },
+              { id: 'HardenedGarb', weight: 5 },
+              { id: 'ToughHelmet', weight: 5 },
+              { id: 'StoneBlade', weight: 5 },
+              { id: 'FirststrikeVest', weight: 3 },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['mushroom', 'armed', 'red'],
     levelOverrides: [
       {
@@ -882,7 +5158,126 @@ export const z3: Record<string, Enemy> = {
     speed: 8,
     crit: 0,
     dodge: 0,
-    lootTables: [et.mushroomLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [10, 20] },
+              { id: 'Wood', weight: 2, quantity: [1, 2] },
+              { id: 'Stone', weight: 2, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 36, quantity: [10, 25] },
+              { id: 'Wood', weight: 8, quantity: [1, 2] },
+              { id: 'Iron', weight: 8, quantity: [1, 2] },
+              { id: 'BlueprintElectricShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [15, 25] },
+              { id: 'Wood', weight: 2, quantity: [1, 3] },
+              { id: 'Ore', weight: 2, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [20, 30] },
+              { id: 'Wood', weight: 2, quantity: [2, 3] },
+              { id: 'Iron', weight: 2, quantity: [2, 3] },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [30, 40] },
+              { id: 'Wood', weight: 2, quantity: [3, 5] },
+              { id: 'Iron', weight: 2, quantity: [3, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [40, 50] },
+              { id: 'Wood', weight: 2, quantity: [3, 7] },
+              { id: 'Iron', weight: 2, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [45, 60] },
+              { id: 'Iron', weight: 2, quantity: [4, 6] },
+              { id: 'Wood', weight: 2, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [50, 65] },
+              { id: 'Iron', weight: 2, quantity: [4, 7] },
+              { id: 'Wood', weight: 2, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [50, 75] },
+              { id: 'Iron', weight: 2, quantity: [4, 8] },
+              { id: 'Wood', weight: 2, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [60, 75] },
+              { id: 'Iron', weight: 2, quantity: [5, 8] },
+              { id: 'Wood', weight: 2, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [70, 80] },
+              { id: 'Iron', weight: 2, quantity: [5, 9] },
+              { id: 'Wood', weight: 2, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [70, 100] },
+              { id: 'Iron', weight: 2, quantity: [6, 10] },
+              { id: 'Wood', weight: 2, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['mushroom', 'armed', 'red'],
     levelOverrides: [
       {
@@ -915,7 +5310,73 @@ export const z3: Record<string, Enemy> = {
     iceResist: -0.3,
     lightningResist: 0.3,
     shadowResist: 0.6,
-    lootTables: [et.livingArmorBossLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 100,
+            items: [
+              { id: 'SwordOfSolace', weight: 1 },
+              { id: 'MantleofRefuge', weight: 1 },
+              { id: 'BrutalBlade', weight: 6 },
+              { id: 'BlastingRing', weight: 2 },
+              { id: 'WardingBelt', weight: 4 },
+              { id: 'PlatedBelt', weight: 6 },
+              { id: 'InsulatedWrap', weight: 6 },
+              { id: 'GroundedPlate', weight: 6 },
+              { id: 'GlacialShard2', weight: 6 },
+              { id: 'WizardSigil', weight: 4 },
+              { id: 'GroundingBelt', weight: 4 },
+              { id: 'TwistedCharm', weight: 4 },
+              { id: 'SentinelPlate', weight: 4 },
+              { id: 'FlameguardSword', weight: 4 },
+              { id: 'FuryBlade', weight: 4 },
+              { id: 'GhostlyPendant', weight: 2 },
+              { id: 'StackedSignet', weight: 2 },
+              { id: 'SalvationScimitar', weight: 2 },
+              { id: 'DoublePoleAxe', weight: 2 },
+              { id: 'FerociousVest', weight: 2 },
+              { id: 'BuccaneersFriend', weight: 2 },
+              { id: 'Shatterblade', weight: 2 },
+            ],
+          },
+          {
+            minLevel: 101,
+            items: [
+              { id: 'WardingBeltEX', weight: 2 },
+              { id: 'BrutalBlade', weight: 1 },
+              { id: 'BlastingRingEX', weight: 2 },
+              { id: 'MantleofRefugeEX', weight: 2 },
+              { id: 'SwordOfSolaceEX', weight: 2 },
+              { id: 'PlatedBelt', weight: 1 },
+              { id: 'InsulatedWrap', weight: 1 },
+              { id: 'GroundedPlate', weight: 1 },
+              { id: 'GlacialShard2', weight: 1 },
+              { id: 'WizardSigil', weight: 4 },
+              { id: 'GroundingBelt', weight: 4 },
+              { id: 'SentinelPlate', weight: 4 },
+              { id: 'TwistedCharm', weight: 4 },
+              { id: 'FlameguardSword', weight: 4 },
+              { id: 'FuryBlade', weight: 4 },
+              { id: 'WardingBelt', weight: 2 },
+              { id: 'GhostlyPendant', weight: 2 },
+              { id: 'StackedSignet', weight: 2 },
+              { id: 'SalvationScimitar', weight: 2 },
+              { id: 'DoublePoleAxe', weight: 2 },
+              { id: 'BlastingRing', weight: 2 },
+              { id: 'BuccaneersFriend', weight: 2 },
+              { id: 'FerociousVest', weight: 2 },
+              { id: 'Shatterblade', weight: 2 },
+              { id: 'WrathfulSash', weight: 2 },
+              { id: 'SwordOfSolace', weight: 2 },
+              { id: 'MantleofRefuge', weight: 2 },
+            ],
+          },
+        ],
+      },
+    ],
     abilities: [{ id: 'BossBrain_LivingArmor' }],
     tags: ['boss', 'skeleton', 'armed'],
     spineScale: 0.25,
@@ -938,7 +5399,140 @@ export const z3: Record<string, Enemy> = {
     iceResist: -0.3,
     fireResist: 0.3,
     shadowResist: 0.6,
-    lootTables: [et.gildedGuardianBossLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 80,
+            items: [
+              { id: 'VigilLocket', weight: 2 },
+              { id: 'PlatedBelt', weight: 16 },
+              { id: 'AdrenalineCap', weight: 4 },
+              { id: 'LifevineBelt', weight: 16 },
+              { id: 'InsulatedWrap', weight: 16 },
+              { id: 'GuardsBelt', weight: 16 },
+              { id: 'GroundedPlate', weight: 16 },
+              { id: 'AcuityHelm', weight: 16 },
+              { id: 'GlacialShard2', weight: 16 },
+              { id: 'GlacialShard', weight: 16 },
+              { id: 'FlameguardSword', weight: 8 },
+              { id: 'GhostlyPendant', weight: 4 },
+              { id: 'StackedSignet', weight: 4 },
+              { id: 'SalvationScimitar', weight: 4 },
+              { id: 'DoublePoleAxe', weight: 4 },
+              { id: 'SouleaterAxe', weight: 2 },
+              { id: 'FrostflakeBandEX', weight: 1 },
+              { id: 'FlashingFalchion', weight: 4 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'FlameguardSword', weight: 16 },
+              { id: 'AdrenalineCap', weight: 8 },
+              { id: 'GhostlyPendant', weight: 8 },
+              { id: 'StackedSignet', weight: 8 },
+              { id: 'SalvationScimitar', weight: 8 },
+              { id: 'DoublePoleAxe', weight: 8 },
+              { id: 'SouleaterAxe', weight: 4 },
+              { id: 'VigilLocket', weight: 4 },
+              { id: 'BravadoBindingEX', weight: 1 },
+              { id: 'FrostflakeBandEX', weight: 1 },
+              { id: 'FearsomeAmuletEX', weight: 1 },
+              { id: 'FlashingFalchion', weight: 3 },
+              { id: 'Mukage', weight: 2 },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'WatchersSparkEX', weight: 8 },
+              { id: 'FlameguardSword', weight: 16 },
+              { id: 'AdrenalineCap', weight: 12 },
+              { id: 'GhostlyPendant', weight: 12 },
+              { id: 'StackedSignet', weight: 12 },
+              { id: 'SalvationScimitar', weight: 12 },
+              { id: 'WrathfulSash', weight: 12 },
+              { id: 'DoublePoleAxe', weight: 12 },
+              { id: 'SouleaterAxe', weight: 8 },
+              { id: 'VigilLocket', weight: 8 },
+              { id: 'BreathtakerEX', weight: 1 },
+              { id: 'BravadoBindingEX', weight: 1 },
+              { id: 'FrostflakeBandEX', weight: 1 },
+              { id: 'FearsomeAmuletEX', weight: 1 },
+              { id: 'FlashingFalchion', weight: 4 },
+              { id: 'Mukage', weight: 3 },
+              { id: 'Stormslash', weight: 1 },
+              { id: 'JadeRoundel', weight: 2 },
+              { id: 'QuiltedDoublet', weight: 1 },
+              { id: 'ApothecarysCap', weight: 1 },
+              { id: 'EmberDroplet', weight: 1 },
+              { id: 'SavageSolitaire', weight: 1 },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'WatchersSparkEX', weight: 8 },
+              { id: 'FlameguardSword', weight: 16 },
+              { id: 'AdrenalineCap', weight: 12 },
+              { id: 'GhostlyPendant', weight: 12 },
+              { id: 'StackedSignet', weight: 12 },
+              { id: 'SalvationScimitar', weight: 12 },
+              { id: 'WrathfulSash', weight: 12 },
+              { id: 'DoublePoleAxe', weight: 12 },
+              { id: 'SouleaterAxe', weight: 8 },
+              { id: 'VigilLocket', weight: 8 },
+              { id: 'BreathtakerEX', weight: 1 },
+              { id: 'BravadoBindingEX', weight: 1 },
+              { id: 'FrostflakeBandEX', weight: 1 },
+              { id: 'FearsomeAmuletEX', weight: 1 },
+              { id: 'FlashingFalchion', weight: 4 },
+              { id: 'Mukage', weight: 3 },
+              { id: 'Stormslash', weight: 2 },
+              { id: 'JadeRoundel', weight: 3 },
+              { id: 'QuiltedDoublet', weight: 2 },
+              { id: 'ApothecarysCap', weight: 2 },
+              { id: 'EmberDroplet', weight: 1 },
+              { id: 'SavageSolitaire', weight: 2 },
+            ],
+          },
+          {
+            minLevel: 141,
+            items: [
+              { id: 'WatchersSparkEX', weight: 8 },
+              { id: 'FlameguardSword', weight: 16 },
+              { id: 'AdrenalineCap', weight: 12 },
+              { id: 'GhostlyPendant', weight: 12 },
+              { id: 'StackedSignet', weight: 12 },
+              { id: 'SalvationScimitar', weight: 12 },
+              { id: 'WrathfulSash', weight: 12 },
+              { id: 'DoublePoleAxe', weight: 12 },
+              { id: 'SouleaterAxe', weight: 8 },
+              { id: 'VigilLocket', weight: 8 },
+              { id: 'BreathtakerEX', weight: 1 },
+              { id: 'BravadoBindingEX', weight: 1 },
+              { id: 'FrostflakeBandEX', weight: 1 },
+              { id: 'FearsomeAmuletEX', weight: 1 },
+              { id: 'FlashingFalchion', weight: 4 },
+              { id: 'Mukage', weight: 3 },
+              { id: 'Stormslash', weight: 3 },
+              { id: 'JadeRoundel', weight: 5 },
+              { id: 'QuiltedDoublet', weight: 3 },
+              { id: 'ApothecarysCap', weight: 3 },
+              { id: 'EmberDroplet', weight: 1 },
+              { id: 'GloriousAmulet', weight: 6 },
+              { id: 'GloriousSignet', weight: 6 },
+            ],
+          },
+        ],
+      },
+    ],
     abilities: [{ id: 'BossBrain_GildedGuardian' }],
     tags: ['boss', 'skeleton', 'armed'],
     spineScale: 0.25,
@@ -960,7 +5554,121 @@ export const z3: Record<string, Enemy> = {
     iceResist: 0.3,
     lightningResist: -0.3,
     shadowResist: 0.3,
-    lootTables: [et.slimeLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [10, 20] },
+              { id: 'Ore', weight: 4, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 36, quantity: [10, 25] },
+              { id: 'Ore', weight: 24, quantity: [1, 2] },
+              { id: 'BlueprintWardingBand', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [15, 25] },
+              { id: 'Ore', weight: 4, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [20, 30] },
+              { id: 'Ore', weight: 4, quantity: [2, 4] },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 96, quantity: [30, 40] },
+              { id: 'Ore', weight: 64, quantity: 4 },
+              { id: 'BlueprintSmitingEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintDrainingEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintPhantomEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintFerocityRingV2', weight: 1, quantity: 1 },
+              { id: 'BlueprintDarkBargainCharm', weight: 1, quantity: 1 },
+              { id: 'BlueprintCursedNaginata', weight: 1, quantity: 1 },
+              { id: 'BlueprintScorchedSerape', weight: 2, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [40, 50] },
+              { id: 'Ore', weight: 4, quantity: [5, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [45, 60] },
+              { id: 'Ore', weight: 4, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [50, 65] },
+              { id: 'Ore', weight: 4, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [50, 75] },
+              { id: 'Ore', weight: 4, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [60, 75] },
+              { id: 'Ore', weight: 4, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [70, 80] },
+              { id: 'Ore', weight: 4, quantity: [6, 10] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [70, 100] },
+              { id: 'Ore', weight: 4, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     levelOverrides: [
       { minLevel: 81, abilities: [{ id: 'PoisonOnAttackScaled' }] },
     ],
@@ -985,7 +5693,136 @@ export const z3: Record<string, Enemy> = {
       { id: 'DefaultAttack', params: { weight: 2 } },
       { id: 'CastWeak', params: { weight: 1, recastChance: 0 } },
     ],
-    lootTables: [et.darkLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [10, 20] },
+              { id: 'Wood', weight: 3, quantity: [1, 2] },
+              { id: 'Ore', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 96, quantity: [10, 25] },
+              { id: 'Wood', weight: 18, quantity: [1, 2] },
+              { id: 'Stone', weight: 18, quantity: [1, 2] },
+              { id: 'BlueprintDarkShortsword', weight: 2, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [15, 25] },
+              { id: 'Wood', weight: 9, quantity: [1, 3] },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 9, quantity: [1, 3] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [20, 30] },
+              { id: 'Wood', weight: 9, quantity: [2, 4] },
+              { id: 'BlueprintBloodhungryVest', weight: 2, quantity: 1 },
+              { id: 'Stone', weight: 9, quantity: [2, 4] },
+              { id: 'BlueprintMortalRelic', weight: 2, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 2, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 2, quantity: 1 },
+              { id: 'BlueprintShadowSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 64, quantity: [30, 40] },
+              { id: 'Wood', weight: 12, quantity: [3, 5] },
+              { id: 'Ore', weight: 12, quantity: [3, 5] },
+              { id: 'BlueprintShadowSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [40, 50] },
+              { id: 'Wood', weight: 3, quantity: [3, 7] },
+              { id: 'Ore', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [45, 60] },
+              { id: 'Ore', weight: 3, quantity: [4, 7] },
+              { id: 'Wood', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [50, 65] },
+              { id: 'Ore', weight: 3, quantity: [5, 7] },
+              { id: 'Wood', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [50, 75] },
+              { id: 'Ore', weight: 3, quantity: [5, 8] },
+              { id: 'Wood', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [60, 75] },
+              { id: 'Ore', weight: 3, quantity: [5, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [70, 80] },
+              { id: 'Ore', weight: 3, quantity: [6, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [70, 100] },
+              { id: 'Ore', weight: 3, quantity: [6, 10] },
+              { id: 'Wood', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     levelOverrides: [
       {
         minLevel: 81,
@@ -1008,7 +5845,123 @@ export const z3: Record<string, Enemy> = {
     speed: 9,
     crit: 0.05,
     dodge: 0,
-    lootTables: [et.skeletonLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [10, 20] },
+              { id: 'Iron', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [10, 25] },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+              { id: 'BlueprintBlazingShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [15, 25] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [20, 30] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [2, 4] },
+              { id: 'BlueprintBoltproofSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [30, 40] },
+              { id: 'Iron', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [40, 50] },
+              { id: 'Iron', weight: 3, quantity: [4, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [45, 60] },
+              { id: 'Iron', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 65] },
+              { id: 'Iron', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [60, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 80] },
+              { id: 'Iron', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 100] },
+              { id: 'Iron', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     levelOverrides: [
       {
         minLevel: 101,
@@ -1039,7 +5992,60 @@ export const z3: Record<string, Enemy> = {
     weakResist: 0.2,
     vulnerableResist: 0.2,
     abilities: [{ id: 'LowHpCritBoostAbility' }],
-    lootTables: [et.livingArmorKnightEliteLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          { minLevel: 1, maxLevel: 20, items: [{ id: 'Gold', quantity: 200 }] },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [{ id: 'Gold', quantity: 400 }],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [{ id: 'Gold', quantity: 600 }],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [{ id: 'Gold', quantity: 1000 }],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [{ id: 'Gold', quantity: 2000 }],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [{ id: 'Gold', quantity: 3000 }],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [{ id: 'Gold', quantity: 4250 }],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [{ id: 'Gold', quantity: 5750 }],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [{ id: 'Gold', quantity: 7500 }],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [{ id: 'Gold', quantity: 9000 }],
+          },
+          { minLevel: 201, items: [{ id: 'Gold', quantity: 12500 }] },
+        ],
+      },
+    ],
     tags: ['skeleton', 'armed', 'elite'],
     spineScale: 0.22,
   },
@@ -1058,7 +6064,123 @@ export const z3: Record<string, Enemy> = {
     crit: 0,
     dodge: 0,
     abilities: [{ id: 'LightningOnTurnStart' }],
-    lootTables: [et.skeletonLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [10, 20] },
+              { id: 'Iron', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [10, 25] },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+              { id: 'BlueprintBlazingShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [15, 25] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [20, 30] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [2, 4] },
+              { id: 'BlueprintBoltproofSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [30, 40] },
+              { id: 'Iron', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [40, 50] },
+              { id: 'Iron', weight: 3, quantity: [4, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [45, 60] },
+              { id: 'Iron', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 65] },
+              { id: 'Iron', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [60, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 80] },
+              { id: 'Iron', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 100] },
+              { id: 'Iron', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     levelOverrides: [
       {
         minLevel: 101,
@@ -1091,7 +6213,173 @@ export const z3: Record<string, Enemy> = {
     shadowResist: 0.3,
     silenceResist: 1,
     hypnotizeResist: 1,
-    lootTables: [et.livingWallBossLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 40,
+            items: [
+              { id: 'DarkWard', weight: 6 },
+              { id: 'WarpstoneAmulet', weight: 8 },
+              { id: 'BastionChain', weight: 8 },
+              { id: 'SilkenRobe', weight: 8 },
+              { id: 'BrightPlate', weight: 8 },
+              { id: 'RestorationHelm', weight: 8 },
+              { id: 'ConfoundingMask', weight: 8 },
+              { id: 'JaggedRing', weight: 8 },
+              { id: 'BluntBludgeon', weight: 8 },
+              { id: 'AdventurersBlade', weight: 8 },
+              { id: 'Forgefang', weight: 8 },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'DarkWard', weight: 6 },
+              { id: 'WarpstoneAmulet', weight: 6 },
+              { id: 'BastionChain', weight: 6 },
+              { id: 'SilkenRobe', weight: 6 },
+              { id: 'BrightPlate', weight: 6 },
+              { id: 'RestorationHelm', weight: 6 },
+              { id: 'ConfoundingMask', weight: 6 },
+              { id: 'JaggedRing', weight: 6 },
+              { id: 'BluntBludgeon', weight: 6 },
+              { id: 'AdventurersBlade', weight: 6 },
+              { id: 'Forgefang', weight: 6 },
+              { id: 'UpholsteredJerkinEX', weight: 1 },
+              { id: 'Wakizashi', weight: 2 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'SpikedCowlEX', weight: 6 },
+              { id: 'RubyClawedRingEX', weight: 5 },
+              { id: 'DarksteelPlateEX', weight: 6 },
+              { id: 'HatefulDarknessEX', weight: 6 },
+              { id: 'WarpstoneAmulet', weight: 5 },
+              { id: 'BastionChain', weight: 5 },
+              { id: 'SilkenRobe', weight: 5 },
+              { id: 'BrightPlate', weight: 5 },
+              { id: 'RestorationHelm', weight: 5 },
+              { id: 'ConfoundingMask', weight: 5 },
+              { id: 'JaggedRing', weight: 5 },
+              { id: 'BluntBludgeon', weight: 5 },
+              { id: 'AdventurersBlade', weight: 5 },
+              { id: 'Forgefang', weight: 5 },
+              { id: 'RivetedCasqueEX', weight: 6 },
+              { id: 'Wakizashi', weight: 3 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'BastionChain', weight: 16 },
+              { id: 'WarpstoneAmulet', weight: 16 },
+              { id: 'SilkenRobe', weight: 16 },
+              { id: 'BrightPlate', weight: 16 },
+              { id: 'RestorationHelm', weight: 16 },
+              { id: 'ConfoundingMask', weight: 16 },
+              { id: 'JaggedRing', weight: 16 },
+              { id: 'BluntBludgeon', weight: 16 },
+              { id: 'AdventurersBlade', weight: 16 },
+              { id: 'Forgefang', weight: 32 },
+              { id: 'ParadoxBandEX', weight: 3 },
+              { id: 'SmithysFriendEX', weight: 3 },
+              { id: 'RivetedCasqueEX', weight: 16 },
+              { id: 'Wakizashi', weight: 9 },
+              { id: 'VanguardsFury', weight: 5 },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'BastionChain', weight: 16 },
+              { id: 'WarpstoneAmulet', weight: 16 },
+              { id: 'SilkenRobe', weight: 16 },
+              { id: 'BrightPlate', weight: 16 },
+              { id: 'RestorationHelm', weight: 16 },
+              { id: 'ConfoundingMask', weight: 16 },
+              { id: 'JaggedRing', weight: 16 },
+              { id: 'BluntBludgeon', weight: 16 },
+              { id: 'AdventurersBlade', weight: 16 },
+              { id: 'Forgefang', weight: 32 },
+              { id: 'ParadoxBandEX', weight: 3 },
+              { id: 'SmithysFriendEX', weight: 3 },
+              { id: 'RivetedCasqueEX', weight: 16 },
+              { id: 'Wakizashi', weight: 9 },
+              { id: 'VanguardsFury', weight: 7 },
+              { id: 'Sorrowstone', weight: 1 },
+              { id: 'Shadowcoil', weight: 5 },
+              { id: 'QuenchedHelm', weight: 1 },
+              { id: 'RingOfReveries', weight: 1 },
+              { id: 'EmberDroplet', weight: 1 },
+              { id: 'SavageSolitaire', weight: 1 },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'BastionChain', weight: 16 },
+              { id: 'WarpstoneAmulet', weight: 16 },
+              { id: 'SilkenRobe', weight: 16 },
+              { id: 'BrightPlate', weight: 16 },
+              { id: 'RestorationHelm', weight: 16 },
+              { id: 'ConfoundingMask', weight: 16 },
+              { id: 'JaggedRing', weight: 16 },
+              { id: 'BluntBludgeon', weight: 16 },
+              { id: 'AdventurersBlade', weight: 16 },
+              { id: 'Forgefang', weight: 32 },
+              { id: 'ParadoxBandEX', weight: 3 },
+              { id: 'SmithysFriendEX', weight: 3 },
+              { id: 'RivetedCasqueEX', weight: 16 },
+              { id: 'Wakizashi', weight: 9 },
+              { id: 'VanguardsFury', weight: 7 },
+              { id: 'Sorrowstone', weight: 5 },
+              { id: 'Shadowcoil', weight: 7 },
+              { id: 'QuenchedHelm', weight: 5 },
+              { id: 'RingOfReveries', weight: 5 },
+              { id: 'EmberDroplet', weight: 1 },
+              { id: 'SavageSolitaire', weight: 1 },
+            ],
+          },
+          {
+            minLevel: 141,
+            items: [
+              { id: 'BastionChain', weight: 16 },
+              { id: 'WarpstoneAmulet', weight: 16 },
+              { id: 'SilkenRobe', weight: 16 },
+              { id: 'BrightPlate', weight: 16 },
+              { id: 'RestorationHelm', weight: 16 },
+              { id: 'ConfoundingMask', weight: 16 },
+              { id: 'JaggedRing', weight: 16 },
+              { id: 'BluntBludgeon', weight: 16 },
+              { id: 'AdventurersBlade', weight: 16 },
+              { id: 'Forgefang', weight: 32 },
+              { id: 'ParadoxBandEX', weight: 3 },
+              { id: 'SmithysFriendEX', weight: 3 },
+              { id: 'RivetedCasqueEX', weight: 16 },
+              { id: 'Wakizashi', weight: 9 },
+              { id: 'VanguardsFury', weight: 7 },
+              { id: 'Sorrowstone', weight: 7 },
+              { id: 'Shadowcoil', weight: 10 },
+              { id: 'QuenchedHelm', weight: 7 },
+              { id: 'RingOfReveries', weight: 7 },
+              { id: 'EmberDroplet', weight: 1 },
+              { id: 'GloriousAmulet', weight: 9 },
+              { id: 'GloriousSignet', weight: 9 },
+            ],
+          },
+        ],
+      },
+    ],
     abilities: [{ id: 'BossBrain_LivingWall' }],
     tags: ['boss', 'wall'],
     spineScale: 0.25,
@@ -1114,7 +6402,166 @@ export const z3: Record<string, Enemy> = {
     iceResist: 0.6,
     lightningResist: 0.6,
     shadowResist: 0,
-    lootTables: [et.giantWizardBossLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 40,
+            items: [
+              { id: 'DarkWard', weight: 6 },
+              { id: 'WarpstoneAmulet', weight: 8 },
+              { id: 'BastionChain', weight: 8 },
+              { id: 'SilkenRobe', weight: 8 },
+              { id: 'BrightPlate', weight: 8 },
+              { id: 'RestorationHelm', weight: 8 },
+              { id: 'ConfoundingMask', weight: 8 },
+              { id: 'JaggedRing', weight: 8 },
+              { id: 'BluntBludgeon', weight: 8 },
+              { id: 'AdventurersBlade', weight: 8 },
+              { id: 'Forgefang', weight: 8 },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'DarkWard', weight: 6 },
+              { id: 'WarpstoneAmulet', weight: 6 },
+              { id: 'BastionChain', weight: 6 },
+              { id: 'SilkenRobe', weight: 6 },
+              { id: 'BrightPlate', weight: 6 },
+              { id: 'RestorationHelm', weight: 6 },
+              { id: 'ConfoundingMask', weight: 6 },
+              { id: 'JaggedRing', weight: 6 },
+              { id: 'BluntBludgeon', weight: 6 },
+              { id: 'AdventurersBlade', weight: 6 },
+              { id: 'Forgefang', weight: 6 },
+              { id: 'UpholsteredJerkinEX', weight: 1 },
+              { id: 'HeavyLongsword', weight: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'SpikedCowlEX', weight: 6 },
+              { id: 'RubyClawedRingEX', weight: 5 },
+              { id: 'DarksteelPlateEX', weight: 6 },
+              { id: 'HatefulDarknessEX', weight: 6 },
+              { id: 'WarpstoneAmulet', weight: 5 },
+              { id: 'BastionChain', weight: 5 },
+              { id: 'SilkenRobe', weight: 5 },
+              { id: 'BrightPlate', weight: 5 },
+              { id: 'RestorationHelm', weight: 5 },
+              { id: 'ConfoundingMask', weight: 5 },
+              { id: 'JaggedRing', weight: 5 },
+              { id: 'BluntBludgeon', weight: 5 },
+              { id: 'AdventurersBlade', weight: 5 },
+              { id: 'Forgefang', weight: 5 },
+              { id: 'RivetedCasqueEX', weight: 6 },
+              { id: 'HeavyLongsword', weight: 3 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'BastionChain', weight: 16 },
+              { id: 'WarpstoneAmulet', weight: 16 },
+              { id: 'SilkenRobe', weight: 16 },
+              { id: 'BrightPlate', weight: 16 },
+              { id: 'RestorationHelm', weight: 16 },
+              { id: 'ConfoundingMask', weight: 16 },
+              { id: 'JaggedRing', weight: 16 },
+              { id: 'BluntBludgeon', weight: 16 },
+              { id: 'AdventurersBlade', weight: 16 },
+              { id: 'Forgefang', weight: 32 },
+              { id: 'ParadoxBandEX', weight: 3 },
+              { id: 'SmithysFriendEX', weight: 3 },
+              { id: 'RivetedCasqueEX', weight: 16 },
+              { id: 'HeavyLongsword', weight: 9 },
+              { id: 'BastionBlade', weight: 5 },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'BastionChain', weight: 16 },
+              { id: 'WarpstoneAmulet', weight: 16 },
+              { id: 'SilkenRobe', weight: 16 },
+              { id: 'BrightPlate', weight: 16 },
+              { id: 'RestorationHelm', weight: 16 },
+              { id: 'ConfoundingMask', weight: 16 },
+              { id: 'JaggedRing', weight: 16 },
+              { id: 'BluntBludgeon', weight: 16 },
+              { id: 'AdventurersBlade', weight: 16 },
+              { id: 'Forgefang', weight: 32 },
+              { id: 'ParadoxBandEX', weight: 3 },
+              { id: 'SmithysFriendEX', weight: 3 },
+              { id: 'RivetedCasqueEX', weight: 16 },
+              { id: 'HeavyLongsword', weight: 9 },
+              { id: 'BastionBlade', weight: 7 },
+              { id: 'Warcry', weight: 1 },
+              { id: 'ResolutePlate', weight: 5 },
+              { id: 'ResoluteBindings', weight: 1 },
+              { id: 'EmberDroplet', weight: 1 },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'BastionChain', weight: 16 },
+              { id: 'WarpstoneAmulet', weight: 16 },
+              { id: 'SilkenRobe', weight: 16 },
+              { id: 'BrightPlate', weight: 16 },
+              { id: 'RestorationHelm', weight: 16 },
+              { id: 'ConfoundingMask', weight: 16 },
+              { id: 'JaggedRing', weight: 16 },
+              { id: 'BluntBludgeon', weight: 16 },
+              { id: 'AdventurersBlade', weight: 16 },
+              { id: 'Forgefang', weight: 32 },
+              { id: 'ParadoxBandEX', weight: 3 },
+              { id: 'SmithysFriendEX', weight: 3 },
+              { id: 'RivetedCasqueEX', weight: 16 },
+              { id: 'HeavyLongsword', weight: 9 },
+              { id: 'BastionBlade', weight: 7 },
+              { id: 'Warcry', weight: 5 },
+              { id: 'ResolutePlate', weight: 7 },
+              { id: 'ResoluteBindings', weight: 5 },
+              { id: 'EmberDroplet', weight: 1 },
+            ],
+          },
+          {
+            minLevel: 141,
+            items: [
+              { id: 'BastionChain', weight: 16 },
+              { id: 'WarpstoneAmulet', weight: 16 },
+              { id: 'SilkenRobe', weight: 16 },
+              { id: 'BrightPlate', weight: 16 },
+              { id: 'RestorationHelm', weight: 16 },
+              { id: 'ConfoundingMask', weight: 16 },
+              { id: 'JaggedRing', weight: 16 },
+              { id: 'BluntBludgeon', weight: 16 },
+              { id: 'AdventurersBlade', weight: 16 },
+              { id: 'Forgefang', weight: 32 },
+              { id: 'ParadoxBandEX', weight: 3 },
+              { id: 'SmithysFriendEX', weight: 3 },
+              { id: 'RivetedCasqueEX', weight: 16 },
+              { id: 'HeavyLongsword', weight: 9 },
+              { id: 'BastionBlade', weight: 7 },
+              { id: 'Warcry', weight: 7 },
+              { id: 'ResolutePlate', weight: 10 },
+              { id: 'ResoluteBindings', weight: 7 },
+              { id: 'EmberDroplet', weight: 1 },
+            ],
+          },
+        ],
+      },
+    ],
     abilities: [{ id: 'BossBrain_GiantWizard' }],
     tags: ['boss', 'wizard'],
     spineScale: 0.25,
@@ -1134,7 +6581,125 @@ export const z3: Record<string, Enemy> = {
     crit: 0,
     dodge: 0,
     fireResist: -0.3,
-    lootTables: [et.mimicLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ tableId: 'mimicGoldLoot', weight: 1 }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { tableId: 'mimicGoldLoot', weight: 16 },
+              { id: 'Wood', weight: 3, quantity: [1, 2] },
+              { id: 'Ore', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { tableId: 'mimicGoldLoot', weight: 96 },
+              { id: 'Wood', weight: 18, quantity: [1, 2] },
+              { id: 'Stone', weight: 18, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { tableId: 'mimicGoldLoot', weight: 48 },
+              { id: 'Wood', weight: 9, quantity: [1, 3] },
+              { id: 'Iron', weight: 9, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { tableId: 'mimicGoldLoot', weight: 48 },
+              { id: 'Wood', weight: 9, quantity: [2, 4] },
+              { id: 'Stone', weight: 9, quantity: [2, 4] },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { tableId: 'mimicGoldLoot', weight: 16 },
+              { id: 'Wood', weight: 3, quantity: [3, 5] },
+              { id: 'Ore', weight: 3, quantity: [3, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { tableId: 'mimicGoldLoot', weight: 16 },
+              { id: 'Wood', weight: 3, quantity: [3, 7] },
+              { id: 'Ore', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { tableId: 'mimicGoldLoot', weight: 16 },
+              { id: 'Ore', weight: 3, quantity: [4, 7] },
+              { id: 'Wood', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { tableId: 'mimicGoldLoot', weight: 16 },
+              { id: 'Ore', weight: 3, quantity: [5, 7] },
+              { id: 'Wood', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { tableId: 'mimicGoldLoot', weight: 16 },
+              { id: 'Ore', weight: 3, quantity: [5, 8] },
+              { id: 'Wood', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { tableId: 'mimicGoldLoot', weight: 16 },
+              { id: 'Ore', weight: 3, quantity: [5, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { tableId: 'mimicGoldLoot', weight: 16 },
+              { id: 'Ore', weight: 3, quantity: [6, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 201,
+            items: [
+              { tableId: 'mimicGoldLoot', weight: 16 },
+              { id: 'Ore', weight: 3, quantity: [6, 10] },
+              { id: 'Wood', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     levelOverrides: [
       { minLevel: 81, abilities: [{ id: 'ApplyVulnerableOnAttack' }] },
     ],
@@ -1154,7 +6719,126 @@ export const z3: Record<string, Enemy> = {
     speed: 8,
     crit: 0,
     dodge: 0,
-    lootTables: [et.mushroomLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [10, 20] },
+              { id: 'Wood', weight: 2, quantity: [1, 2] },
+              { id: 'Stone', weight: 2, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 36, quantity: [10, 25] },
+              { id: 'Wood', weight: 8, quantity: [1, 2] },
+              { id: 'Iron', weight: 8, quantity: [1, 2] },
+              { id: 'BlueprintElectricShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [15, 25] },
+              { id: 'Wood', weight: 2, quantity: [1, 3] },
+              { id: 'Ore', weight: 2, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [20, 30] },
+              { id: 'Wood', weight: 2, quantity: [2, 3] },
+              { id: 'Iron', weight: 2, quantity: [2, 3] },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [30, 40] },
+              { id: 'Wood', weight: 2, quantity: [3, 5] },
+              { id: 'Iron', weight: 2, quantity: [3, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [40, 50] },
+              { id: 'Wood', weight: 2, quantity: [3, 7] },
+              { id: 'Iron', weight: 2, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [45, 60] },
+              { id: 'Iron', weight: 2, quantity: [4, 6] },
+              { id: 'Wood', weight: 2, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [50, 65] },
+              { id: 'Iron', weight: 2, quantity: [4, 7] },
+              { id: 'Wood', weight: 2, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [50, 75] },
+              { id: 'Iron', weight: 2, quantity: [4, 8] },
+              { id: 'Wood', weight: 2, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [60, 75] },
+              { id: 'Iron', weight: 2, quantity: [5, 8] },
+              { id: 'Wood', weight: 2, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [70, 80] },
+              { id: 'Iron', weight: 2, quantity: [5, 9] },
+              { id: 'Wood', weight: 2, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [70, 100] },
+              { id: 'Iron', weight: 2, quantity: [6, 10] },
+              { id: 'Wood', weight: 2, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['mushroom'],
   },
   mushroomTeeth: {
@@ -1171,7 +6855,126 @@ export const z3: Record<string, Enemy> = {
     speed: 8,
     crit: 0,
     dodge: 0,
-    lootTables: [et.mushroomLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [10, 20] },
+              { id: 'Wood', weight: 2, quantity: [1, 2] },
+              { id: 'Stone', weight: 2, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 36, quantity: [10, 25] },
+              { id: 'Wood', weight: 8, quantity: [1, 2] },
+              { id: 'Iron', weight: 8, quantity: [1, 2] },
+              { id: 'BlueprintElectricShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [15, 25] },
+              { id: 'Wood', weight: 2, quantity: [1, 3] },
+              { id: 'Ore', weight: 2, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [20, 30] },
+              { id: 'Wood', weight: 2, quantity: [2, 3] },
+              { id: 'Iron', weight: 2, quantity: [2, 3] },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [30, 40] },
+              { id: 'Wood', weight: 2, quantity: [3, 5] },
+              { id: 'Iron', weight: 2, quantity: [3, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [40, 50] },
+              { id: 'Wood', weight: 2, quantity: [3, 7] },
+              { id: 'Iron', weight: 2, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [45, 60] },
+              { id: 'Iron', weight: 2, quantity: [4, 6] },
+              { id: 'Wood', weight: 2, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [50, 65] },
+              { id: 'Iron', weight: 2, quantity: [4, 7] },
+              { id: 'Wood', weight: 2, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [50, 75] },
+              { id: 'Iron', weight: 2, quantity: [4, 8] },
+              { id: 'Wood', weight: 2, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [60, 75] },
+              { id: 'Iron', weight: 2, quantity: [5, 8] },
+              { id: 'Wood', weight: 2, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [70, 80] },
+              { id: 'Iron', weight: 2, quantity: [5, 9] },
+              { id: 'Wood', weight: 2, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 9, quantity: [70, 100] },
+              { id: 'Iron', weight: 2, quantity: [6, 10] },
+              { id: 'Wood', weight: 2, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['mushroom'],
     levelOverrides: [
       {
@@ -1202,7 +7005,85 @@ export const z3: Record<string, Enemy> = {
     fireResist: -0.3,
     iceResist: 0.4,
     lightningResist: 0.6,
-    lootTables: [et.woodGolemBossLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 80,
+            items: [
+              { id: 'SouleaterAxe', weight: 1 },
+              { id: 'VigilLocket', weight: 1 },
+              { id: 'PlatedBelt', weight: 8 },
+              { id: 'AdrenalineCap', weight: 2 },
+              { id: 'WatchersSpark', weight: 4 },
+              { id: 'LifevineBelt', weight: 8 },
+              { id: 'InsulatedWrap', weight: 8 },
+              { id: 'GuardsBelt', weight: 8 },
+              { id: 'GroundedPlate', weight: 8 },
+              { id: 'AcuityHelm', weight: 8 },
+              { id: 'GlacialShard2', weight: 8 },
+              { id: 'GlacialShard', weight: 8 },
+              { id: 'WizardSigil', weight: 4 },
+              { id: 'GroundingBelt', weight: 4 },
+              { id: 'SentinelPlate', weight: 4 },
+              { id: 'FlameguardJacket', weight: 4 },
+              { id: 'FuryBlade', weight: 4 },
+              { id: 'FlameguardSword', weight: 4 },
+              { id: 'GhostlyPendant', weight: 2 },
+              { id: 'StackedSignet', weight: 2 },
+              { id: 'SalvationScimitar', weight: 2 },
+              { id: 'DoublePoleAxe', weight: 2 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'WatchersSpark', weight: 4 },
+              { id: 'WizardSigil', weight: 4 },
+              { id: 'GroundingBelt', weight: 4 },
+              { id: 'SentinelPlate', weight: 4 },
+              { id: 'FlameguardJacket', weight: 4 },
+              { id: 'FuryBlade', weight: 4 },
+              { id: 'FlameguardSword', weight: 4 },
+              { id: 'AdrenalineCap', weight: 2 },
+              { id: 'GhostlyPendant', weight: 2 },
+              { id: 'StackedSignet', weight: 2 },
+              { id: 'SalvationScimitar', weight: 2 },
+              { id: 'DoublePoleAxe', weight: 2 },
+              { id: 'SouleaterAxe', weight: 1 },
+              { id: 'VigilLocket', weight: 1 },
+            ],
+          },
+          {
+            minLevel: 101,
+            items: [
+              { id: 'WatchersSparkEX', weight: 2 },
+              { id: 'WatchersSpark', weight: 4 },
+              { id: 'AdrenalineCapEX', weight: 2 },
+              { id: 'VigilLocketEX', weight: 2 },
+              { id: 'SouleaterAxeEX', weight: 2 },
+              { id: 'WizardSigil', weight: 4 },
+              { id: 'GroundingBelt', weight: 4 },
+              { id: 'SentinelPlate', weight: 4 },
+              { id: 'FlameguardJacket', weight: 4 },
+              { id: 'FuryBlade', weight: 4 },
+              { id: 'FlameguardSword', weight: 4 },
+              { id: 'AdrenalineCap', weight: 3 },
+              { id: 'GhostlyPendant', weight: 3 },
+              { id: 'StackedSignet', weight: 3 },
+              { id: 'SalvationScimitar', weight: 3 },
+              { id: 'WrathfulSash', weight: 3 },
+              { id: 'DoublePoleAxe', weight: 3 },
+              { id: 'SouleaterAxe', weight: 2 },
+              { id: 'VigilLocket', weight: 2 },
+            ],
+          },
+        ],
+      },
+    ],
     abilities: [{ id: 'BossBrain_WoodGolem' }],
     tags: ['boss', 'golem'],
   },
@@ -1222,7 +7103,92 @@ export const z3: Record<string, Enemy> = {
     dodge: 0,
     fireResist: -0.4,
     shadowResist: 0.5,
-    lootTables: [et.blossomGolemBossLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 80,
+            items: [
+              { id: 'VigilLocket', weight: 2 },
+              { id: 'PlatedBelt', weight: 16 },
+              { id: 'AdrenalineCap', weight: 4 },
+              { id: 'WatchersSpark', weight: 8 },
+              { id: 'LifevineBelt', weight: 16 },
+              { id: 'InsulatedWrap', weight: 16 },
+              { id: 'GuardsBelt', weight: 16 },
+              { id: 'GroundedPlate', weight: 16 },
+              { id: 'AcuityHelm', weight: 16 },
+              { id: 'GlacialShard2', weight: 16 },
+              { id: 'GlacialShard', weight: 16 },
+              { id: 'WizardSigil', weight: 8 },
+              { id: 'GroundingBelt', weight: 8 },
+              { id: 'SentinelPlate', weight: 8 },
+              { id: 'FlameguardJacket', weight: 8 },
+              { id: 'FuryBlade', weight: 8 },
+              { id: 'FlameguardSword', weight: 8 },
+              { id: 'GhostlyPendant', weight: 4 },
+              { id: 'StackedSignet', weight: 4 },
+              { id: 'SalvationScimitar', weight: 4 },
+              { id: 'DoublePoleAxe', weight: 4 },
+              { id: 'SouleaterAxe', weight: 2 },
+              { id: 'FrostflakeBandEX', weight: 1 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'WatchersSpark', weight: 16 },
+              { id: 'WizardSigil', weight: 16 },
+              { id: 'GroundingBelt', weight: 16 },
+              { id: 'SentinelPlate', weight: 16 },
+              { id: 'FlameguardJacket', weight: 16 },
+              { id: 'FuryBlade', weight: 16 },
+              { id: 'FlameguardSword', weight: 16 },
+              { id: 'AdrenalineCap', weight: 8 },
+              { id: 'GhostlyPendant', weight: 8 },
+              { id: 'StackedSignet', weight: 8 },
+              { id: 'SalvationScimitar', weight: 8 },
+              { id: 'DoublePoleAxe', weight: 8 },
+              { id: 'SouleaterAxe', weight: 4 },
+              { id: 'VigilLocket', weight: 4 },
+              { id: 'BravadoBindingEX', weight: 1 },
+              { id: 'FrostflakeBandEX', weight: 1 },
+              { id: 'FearsomeAmuletEX', weight: 1 },
+            ],
+          },
+          {
+            minLevel: 101,
+            items: [
+              { id: 'WatchersSparkEX', weight: 8 },
+              { id: 'WatchersSpark', weight: 16 },
+              { id: 'WizardSigil', weight: 16 },
+              { id: 'GroundingBelt', weight: 16 },
+              { id: 'SentinelPlate', weight: 16 },
+              { id: 'FlameguardJacket', weight: 16 },
+              { id: 'FuryBlade', weight: 16 },
+              { id: 'FlameguardSword', weight: 16 },
+              { id: 'AdrenalineCap', weight: 12 },
+              { id: 'GhostlyPendant', weight: 12 },
+              { id: 'StackedSignet', weight: 12 },
+              { id: 'SalvationScimitar', weight: 12 },
+              { id: 'WrathfulSash', weight: 12 },
+              { id: 'DoublePoleAxe', weight: 12 },
+              { id: 'SouleaterAxe', weight: 8 },
+              { id: 'VigilLocket', weight: 8 },
+              { id: 'BreathtakerEX', weight: 1 },
+              { id: 'BravadoBindingEX', weight: 1 },
+              { id: 'FrostflakeBandEX', weight: 1 },
+              { id: 'FearsomeAmuletEX', weight: 1 },
+              { id: 'GloriousAmulet', weight: 6 },
+              { id: 'GloriousSignet', weight: 6 },
+            ],
+          },
+        ],
+      },
+    ],
     abilities: [{ id: 'BossBrain_BlossomGolem' }],
     tags: ['boss', 'golem'],
   },
@@ -1243,7 +7209,85 @@ export const z3: Record<string, Enemy> = {
     fireResist: 0.3,
     iceResist: -0.3,
     lightningResist: 0.6,
-    lootTables: [et.woodGolemBossLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 80,
+            items: [
+              { id: 'SouleaterAxe', weight: 1 },
+              { id: 'VigilLocket', weight: 1 },
+              { id: 'PlatedBelt', weight: 8 },
+              { id: 'AdrenalineCap', weight: 2 },
+              { id: 'WatchersSpark', weight: 4 },
+              { id: 'LifevineBelt', weight: 8 },
+              { id: 'InsulatedWrap', weight: 8 },
+              { id: 'GuardsBelt', weight: 8 },
+              { id: 'GroundedPlate', weight: 8 },
+              { id: 'AcuityHelm', weight: 8 },
+              { id: 'GlacialShard2', weight: 8 },
+              { id: 'GlacialShard', weight: 8 },
+              { id: 'WizardSigil', weight: 4 },
+              { id: 'GroundingBelt', weight: 4 },
+              { id: 'SentinelPlate', weight: 4 },
+              { id: 'FlameguardJacket', weight: 4 },
+              { id: 'FuryBlade', weight: 4 },
+              { id: 'FlameguardSword', weight: 4 },
+              { id: 'GhostlyPendant', weight: 2 },
+              { id: 'StackedSignet', weight: 2 },
+              { id: 'SalvationScimitar', weight: 2 },
+              { id: 'DoublePoleAxe', weight: 2 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'WatchersSpark', weight: 4 },
+              { id: 'WizardSigil', weight: 4 },
+              { id: 'GroundingBelt', weight: 4 },
+              { id: 'SentinelPlate', weight: 4 },
+              { id: 'FlameguardJacket', weight: 4 },
+              { id: 'FuryBlade', weight: 4 },
+              { id: 'FlameguardSword', weight: 4 },
+              { id: 'AdrenalineCap', weight: 2 },
+              { id: 'GhostlyPendant', weight: 2 },
+              { id: 'StackedSignet', weight: 2 },
+              { id: 'SalvationScimitar', weight: 2 },
+              { id: 'DoublePoleAxe', weight: 2 },
+              { id: 'SouleaterAxe', weight: 1 },
+              { id: 'VigilLocket', weight: 1 },
+            ],
+          },
+          {
+            minLevel: 101,
+            items: [
+              { id: 'WatchersSparkEX', weight: 2 },
+              { id: 'WatchersSpark', weight: 4 },
+              { id: 'AdrenalineCapEX', weight: 2 },
+              { id: 'VigilLocketEX', weight: 2 },
+              { id: 'SouleaterAxeEX', weight: 2 },
+              { id: 'WizardSigil', weight: 4 },
+              { id: 'GroundingBelt', weight: 4 },
+              { id: 'SentinelPlate', weight: 4 },
+              { id: 'FlameguardJacket', weight: 4 },
+              { id: 'FuryBlade', weight: 4 },
+              { id: 'FlameguardSword', weight: 4 },
+              { id: 'AdrenalineCap', weight: 3 },
+              { id: 'GhostlyPendant', weight: 3 },
+              { id: 'StackedSignet', weight: 3 },
+              { id: 'SalvationScimitar', weight: 3 },
+              { id: 'WrathfulSash', weight: 3 },
+              { id: 'DoublePoleAxe', weight: 3 },
+              { id: 'SouleaterAxe', weight: 2 },
+              { id: 'VigilLocket', weight: 2 },
+            ],
+          },
+        ],
+      },
+    ],
     abilities: [{ id: 'BossBrain_IcyWoodGolem' }],
     tags: ['boss', 'golem'],
   },
@@ -1263,7 +7307,120 @@ export const z3: Record<string, Enemy> = {
     dodge: 0,
     lightningResist: 0.3,
     shadowResist: 0.2,
-    lootTables: [et.golemLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [10, 20] },
+              { id: 'Stone', weight: 4, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [10, 25] },
+              { id: 'Stone', weight: 32, quantity: 1 },
+              { id: 'BlueprintFrozenShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [15, 25] },
+              { id: 'Stone', weight: 4, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [20, 30] },
+              { id: 'Stone', weight: 4, quantity: [2, 4] },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 96, quantity: [30, 40] },
+              { id: 'Stone', weight: 64, quantity: 4 },
+              { id: 'BlueprintDarkBargainCharm', weight: 1, quantity: 1 },
+              { id: 'BlueprintDrainingEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintFerocityRingV2', weight: 1, quantity: 1 },
+              { id: 'BlueprintPhantomEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintSmitingEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintFrostweaveSerape', weight: 2, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [40, 50] },
+              { id: 'Stone', weight: 4, quantity: [5, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [45, 60] },
+              { id: 'Stone', weight: 4, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [50, 65] },
+              { id: 'Stone', weight: 4, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [50, 75] },
+              { id: 'Stone', weight: 4, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [60, 75] },
+              { id: 'Stone', weight: 4, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [70, 80] },
+              { id: 'Stone', weight: 4, quantity: [6, 10] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [70, 100] },
+              { id: 'Stone', weight: 4, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['golem'],
     levelOverrides: [
       {
@@ -1291,7 +7448,120 @@ export const z3: Record<string, Enemy> = {
     dodge: 0,
     lightningResist: 0.3,
     shadowResist: 0.2,
-    lootTables: [et.golemLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [10, 20] },
+              { id: 'Stone', weight: 4, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 48, quantity: [10, 25] },
+              { id: 'Stone', weight: 32, quantity: 1 },
+              { id: 'BlueprintFrozenShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [15, 25] },
+              { id: 'Stone', weight: 4, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [20, 30] },
+              { id: 'Stone', weight: 4, quantity: [2, 4] },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 96, quantity: [30, 40] },
+              { id: 'Stone', weight: 64, quantity: 4 },
+              { id: 'BlueprintDarkBargainCharm', weight: 1, quantity: 1 },
+              { id: 'BlueprintDrainingEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintFerocityRingV2', weight: 1, quantity: 1 },
+              { id: 'BlueprintPhantomEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintSmitingEdge', weight: 1, quantity: 1 },
+              { id: 'BlueprintFrostweaveSerape', weight: 2, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [40, 50] },
+              { id: 'Stone', weight: 4, quantity: [5, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [45, 60] },
+              { id: 'Stone', weight: 4, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [50, 65] },
+              { id: 'Stone', weight: 4, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [50, 75] },
+              { id: 'Stone', weight: 4, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [60, 75] },
+              { id: 'Stone', weight: 4, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [70, 80] },
+              { id: 'Stone', weight: 4, quantity: [6, 10] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 6, quantity: [70, 100] },
+              { id: 'Stone', weight: 4, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['golem'],
     levelOverrides: [
       {
@@ -1318,7 +7588,141 @@ export const z3: Record<string, Enemy> = {
     crit: 0,
     dodge: 0,
     lightningResist: 0.2,
-    lootTables: [et.robotLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [10, 20] },
+              { id: 'Iron', weight: 3, quantity: [1, 2] },
+              { id: 'Ore', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [10, 25] },
+              { id: 'Iron', weight: 3, quantity: [1, 3] },
+              { id: 'Stone', weight: 3, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [15, 25] },
+              { id: 'Ore', weight: 3, quantity: [2, 4] },
+              { id: 'Iron', weight: 3, quantity: [2, 4] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [20, 30] },
+              { id: 'Iron', weight: 3, quantity: [3, 4] },
+              { id: 'Stone', weight: 3, quantity: [3, 4] },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [30, 70] },
+              { id: 'Iron', weight: 3, quantity: [3, 5] },
+              { id: 'Stone', weight: 3, quantity: [3, 5] },
+              { id: 'Wood', weight: 3, quantity: [3, 5] },
+              { id: 'Ore', weight: 3, quantity: [3, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [40, 50] },
+              { id: 'Iron', weight: 3, quantity: [4, 5] },
+              { id: 'Stone', weight: 3, quantity: [3, 7] },
+              { id: 'Wood', weight: 3, quantity: [3, 7] },
+              { id: 'Ore', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [45, 60] },
+              { id: 'Iron', weight: 3, quantity: [4, 6] },
+              { id: 'Ore', weight: 3, quantity: [4, 7] },
+              { id: 'Stone', weight: 3, quantity: [4, 7] },
+              { id: 'Wood', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [50, 65] },
+              { id: 'Iron', weight: 3, quantity: [4, 7] },
+              { id: 'Ore', weight: 3, quantity: [5, 7] },
+              { id: 'Stone', weight: 3, quantity: [5, 7] },
+              { id: 'Wood', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [50, 75] },
+              { id: 'Iron', weight: 3, quantity: [4, 8] },
+              { id: 'Ore', weight: 3, quantity: [5, 8] },
+              { id: 'Stone', weight: 3, quantity: [5, 8] },
+              { id: 'Wood', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [60, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 8] },
+              { id: 'Ore', weight: 3, quantity: [5, 9] },
+              { id: 'Stone', weight: 3, quantity: [6, 8] },
+              { id: 'Wood', weight: 3, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [70, 80] },
+              { id: 'Iron', weight: 3, quantity: [5, 9] },
+              { id: 'Ore', weight: 3, quantity: [6, 9] },
+              { id: 'Stone', weight: 3, quantity: [6, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [70, 100] },
+              { id: 'Iron', weight: 3, quantity: [6, 10] },
+              { id: 'Ore', weight: 3, quantity: [6, 10] },
+              { id: 'Stone', weight: 3, quantity: [6, 10] },
+              { id: 'Wood', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['robot'],
   },
   robotNo2: {
@@ -1338,7 +7742,141 @@ export const z3: Record<string, Enemy> = {
     fireResist: 0.2,
     iceResist: 0.2,
     shadowResist: 0.2,
-    lootTables: [et.robotLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [10, 20] },
+              { id: 'Iron', weight: 3, quantity: [1, 2] },
+              { id: 'Ore', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [10, 25] },
+              { id: 'Iron', weight: 3, quantity: [1, 3] },
+              { id: 'Stone', weight: 3, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [15, 25] },
+              { id: 'Ore', weight: 3, quantity: [2, 4] },
+              { id: 'Iron', weight: 3, quantity: [2, 4] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [20, 30] },
+              { id: 'Iron', weight: 3, quantity: [3, 4] },
+              { id: 'Stone', weight: 3, quantity: [3, 4] },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [30, 70] },
+              { id: 'Iron', weight: 3, quantity: [3, 5] },
+              { id: 'Stone', weight: 3, quantity: [3, 5] },
+              { id: 'Wood', weight: 3, quantity: [3, 5] },
+              { id: 'Ore', weight: 3, quantity: [3, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [40, 50] },
+              { id: 'Iron', weight: 3, quantity: [4, 5] },
+              { id: 'Stone', weight: 3, quantity: [3, 7] },
+              { id: 'Wood', weight: 3, quantity: [3, 7] },
+              { id: 'Ore', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [45, 60] },
+              { id: 'Iron', weight: 3, quantity: [4, 6] },
+              { id: 'Ore', weight: 3, quantity: [4, 7] },
+              { id: 'Stone', weight: 3, quantity: [4, 7] },
+              { id: 'Wood', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [50, 65] },
+              { id: 'Iron', weight: 3, quantity: [4, 7] },
+              { id: 'Ore', weight: 3, quantity: [5, 7] },
+              { id: 'Stone', weight: 3, quantity: [5, 7] },
+              { id: 'Wood', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [50, 75] },
+              { id: 'Iron', weight: 3, quantity: [4, 8] },
+              { id: 'Ore', weight: 3, quantity: [5, 8] },
+              { id: 'Stone', weight: 3, quantity: [5, 8] },
+              { id: 'Wood', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [60, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 8] },
+              { id: 'Ore', weight: 3, quantity: [5, 9] },
+              { id: 'Stone', weight: 3, quantity: [6, 8] },
+              { id: 'Wood', weight: 3, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [70, 80] },
+              { id: 'Iron', weight: 3, quantity: [5, 9] },
+              { id: 'Ore', weight: 3, quantity: [6, 9] },
+              { id: 'Stone', weight: 3, quantity: [6, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [70, 100] },
+              { id: 'Iron', weight: 3, quantity: [6, 10] },
+              { id: 'Ore', weight: 3, quantity: [6, 10] },
+              { id: 'Stone', weight: 3, quantity: [6, 10] },
+              { id: 'Wood', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['robot'],
   },
   robotNo3: {
@@ -1356,7 +7894,141 @@ export const z3: Record<string, Enemy> = {
     crit: 0.03,
     dodge: 0,
     shadowResist: 0.2,
-    lootTables: [et.robotLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [10, 20] },
+              { id: 'Iron', weight: 3, quantity: [1, 2] },
+              { id: 'Ore', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [10, 25] },
+              { id: 'Iron', weight: 3, quantity: [1, 3] },
+              { id: 'Stone', weight: 3, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [15, 25] },
+              { id: 'Ore', weight: 3, quantity: [2, 4] },
+              { id: 'Iron', weight: 3, quantity: [2, 4] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [20, 30] },
+              { id: 'Iron', weight: 3, quantity: [3, 4] },
+              { id: 'Stone', weight: 3, quantity: [3, 4] },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [30, 70] },
+              { id: 'Iron', weight: 3, quantity: [3, 5] },
+              { id: 'Stone', weight: 3, quantity: [3, 5] },
+              { id: 'Wood', weight: 3, quantity: [3, 5] },
+              { id: 'Ore', weight: 3, quantity: [3, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [40, 50] },
+              { id: 'Iron', weight: 3, quantity: [4, 5] },
+              { id: 'Stone', weight: 3, quantity: [3, 7] },
+              { id: 'Wood', weight: 3, quantity: [3, 7] },
+              { id: 'Ore', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [45, 60] },
+              { id: 'Iron', weight: 3, quantity: [4, 6] },
+              { id: 'Ore', weight: 3, quantity: [4, 7] },
+              { id: 'Stone', weight: 3, quantity: [4, 7] },
+              { id: 'Wood', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [50, 65] },
+              { id: 'Iron', weight: 3, quantity: [4, 7] },
+              { id: 'Ore', weight: 3, quantity: [5, 7] },
+              { id: 'Stone', weight: 3, quantity: [5, 7] },
+              { id: 'Wood', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [50, 75] },
+              { id: 'Iron', weight: 3, quantity: [4, 8] },
+              { id: 'Ore', weight: 3, quantity: [5, 8] },
+              { id: 'Stone', weight: 3, quantity: [5, 8] },
+              { id: 'Wood', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [60, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 8] },
+              { id: 'Ore', weight: 3, quantity: [5, 9] },
+              { id: 'Stone', weight: 3, quantity: [6, 8] },
+              { id: 'Wood', weight: 3, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [70, 80] },
+              { id: 'Iron', weight: 3, quantity: [5, 9] },
+              { id: 'Ore', weight: 3, quantity: [6, 9] },
+              { id: 'Stone', weight: 3, quantity: [6, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [70, 100] },
+              { id: 'Iron', weight: 3, quantity: [6, 10] },
+              { id: 'Ore', weight: 3, quantity: [6, 10] },
+              { id: 'Stone', weight: 3, quantity: [6, 10] },
+              { id: 'Wood', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['robot'],
   },
   robotNo4: {
@@ -1376,7 +8048,141 @@ export const z3: Record<string, Enemy> = {
     fireResist: -0.3,
     iceResist: 0.3,
     lightningResist: -0.3,
-    lootTables: [et.robotLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [10, 20] },
+              { id: 'Iron', weight: 3, quantity: [1, 2] },
+              { id: 'Ore', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [10, 25] },
+              { id: 'Iron', weight: 3, quantity: [1, 3] },
+              { id: 'Stone', weight: 3, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [15, 25] },
+              { id: 'Ore', weight: 3, quantity: [2, 4] },
+              { id: 'Iron', weight: 3, quantity: [2, 4] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [20, 30] },
+              { id: 'Iron', weight: 3, quantity: [3, 4] },
+              { id: 'Stone', weight: 3, quantity: [3, 4] },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [30, 70] },
+              { id: 'Iron', weight: 3, quantity: [3, 5] },
+              { id: 'Stone', weight: 3, quantity: [3, 5] },
+              { id: 'Wood', weight: 3, quantity: [3, 5] },
+              { id: 'Ore', weight: 3, quantity: [3, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [40, 50] },
+              { id: 'Iron', weight: 3, quantity: [4, 5] },
+              { id: 'Stone', weight: 3, quantity: [3, 7] },
+              { id: 'Wood', weight: 3, quantity: [3, 7] },
+              { id: 'Ore', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [45, 60] },
+              { id: 'Iron', weight: 3, quantity: [4, 6] },
+              { id: 'Ore', weight: 3, quantity: [4, 7] },
+              { id: 'Stone', weight: 3, quantity: [4, 7] },
+              { id: 'Wood', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [50, 65] },
+              { id: 'Iron', weight: 3, quantity: [4, 7] },
+              { id: 'Ore', weight: 3, quantity: [5, 7] },
+              { id: 'Stone', weight: 3, quantity: [5, 7] },
+              { id: 'Wood', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [50, 75] },
+              { id: 'Iron', weight: 3, quantity: [4, 8] },
+              { id: 'Ore', weight: 3, quantity: [5, 8] },
+              { id: 'Stone', weight: 3, quantity: [5, 8] },
+              { id: 'Wood', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [60, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 8] },
+              { id: 'Ore', weight: 3, quantity: [5, 9] },
+              { id: 'Stone', weight: 3, quantity: [6, 8] },
+              { id: 'Wood', weight: 3, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [70, 80] },
+              { id: 'Iron', weight: 3, quantity: [5, 9] },
+              { id: 'Ore', weight: 3, quantity: [6, 9] },
+              { id: 'Stone', weight: 3, quantity: [6, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [70, 100] },
+              { id: 'Iron', weight: 3, quantity: [6, 10] },
+              { id: 'Ore', weight: 3, quantity: [6, 10] },
+              { id: 'Stone', weight: 3, quantity: [6, 10] },
+              { id: 'Wood', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['robot'],
   },
   robotNo5: {
@@ -1395,7 +8201,141 @@ export const z3: Record<string, Enemy> = {
     dodge: 0,
     fireResist: 0.3,
     iceResist: -0.3,
-    lootTables: [et.robotLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [10, 20] },
+              { id: 'Iron', weight: 3, quantity: [1, 2] },
+              { id: 'Ore', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [10, 25] },
+              { id: 'Iron', weight: 3, quantity: [1, 3] },
+              { id: 'Stone', weight: 3, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [15, 25] },
+              { id: 'Ore', weight: 3, quantity: [2, 4] },
+              { id: 'Iron', weight: 3, quantity: [2, 4] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [20, 30] },
+              { id: 'Iron', weight: 3, quantity: [3, 4] },
+              { id: 'Stone', weight: 3, quantity: [3, 4] },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [30, 70] },
+              { id: 'Iron', weight: 3, quantity: [3, 5] },
+              { id: 'Stone', weight: 3, quantity: [3, 5] },
+              { id: 'Wood', weight: 3, quantity: [3, 5] },
+              { id: 'Ore', weight: 3, quantity: [3, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [40, 50] },
+              { id: 'Iron', weight: 3, quantity: [4, 5] },
+              { id: 'Stone', weight: 3, quantity: [3, 7] },
+              { id: 'Wood', weight: 3, quantity: [3, 7] },
+              { id: 'Ore', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [45, 60] },
+              { id: 'Iron', weight: 3, quantity: [4, 6] },
+              { id: 'Ore', weight: 3, quantity: [4, 7] },
+              { id: 'Stone', weight: 3, quantity: [4, 7] },
+              { id: 'Wood', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [50, 65] },
+              { id: 'Iron', weight: 3, quantity: [4, 7] },
+              { id: 'Ore', weight: 3, quantity: [5, 7] },
+              { id: 'Stone', weight: 3, quantity: [5, 7] },
+              { id: 'Wood', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [50, 75] },
+              { id: 'Iron', weight: 3, quantity: [4, 8] },
+              { id: 'Ore', weight: 3, quantity: [5, 8] },
+              { id: 'Stone', weight: 3, quantity: [5, 8] },
+              { id: 'Wood', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [60, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 8] },
+              { id: 'Ore', weight: 3, quantity: [5, 9] },
+              { id: 'Stone', weight: 3, quantity: [6, 8] },
+              { id: 'Wood', weight: 3, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [70, 80] },
+              { id: 'Iron', weight: 3, quantity: [5, 9] },
+              { id: 'Ore', weight: 3, quantity: [6, 9] },
+              { id: 'Stone', weight: 3, quantity: [6, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [70, 100] },
+              { id: 'Iron', weight: 3, quantity: [6, 10] },
+              { id: 'Ore', weight: 3, quantity: [6, 10] },
+              { id: 'Stone', weight: 3, quantity: [6, 10] },
+              { id: 'Wood', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['robot'],
     levelOverrides: [
       {
@@ -1411,7 +8351,7 @@ export const z3: Record<string, Enemy> = {
   },
   robotNo5Lucky: {
     id: 'robotNo5Lucky',
-    name: 'Loaded Robot 5',
+    name: 'WasteLogic LX-9',
     spineAssetKey: 'robot_no5',
     damageType: 'fire',
     baseHp: 12.15,
@@ -1425,7 +8365,45 @@ export const z3: Record<string, Enemy> = {
     dodge: 0,
     fireResist: 0.3,
     iceResist: -0.3,
-    lootTables: [et.robotLuckyLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 60,
+            items: [
+              { id: 'PlatedBelt', weight: 6 },
+              { id: 'InsulatedWrap', weight: 6 },
+              { id: 'GroundedPlate', weight: 6 },
+              { id: 'BrutalBlade', weight: 6 },
+              { id: 'GlacialShard2', weight: 6 },
+              { id: 'WizardSigil', weight: 1 },
+              { id: 'GroundingBelt', weight: 1 },
+              { id: 'SentinelPlate', weight: 1 },
+              { id: 'FlameguardSword', weight: 1 },
+              { id: 'FuryBlade', weight: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            items: [
+              { id: 'EternityMace', weight: 9 },
+              { id: 'PlatedBelt', weight: 3 },
+              { id: 'InsulatedWrap', weight: 3 },
+              { id: 'GroundedPlate', weight: 3 },
+              { id: 'BrutalBlade', weight: 3 },
+              { id: 'GlacialShard2', weight: 3 },
+              { id: 'WizardSigil', weight: 6 },
+              { id: 'GroundingBelt', weight: 6 },
+              { id: 'SentinelPlate', weight: 6 },
+              { id: 'FlameguardSword', weight: 6 },
+              { id: 'FuryBlade', weight: 6 },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['robot'],
     levelOverrides: [
       {
@@ -1457,7 +8435,49 @@ export const z3: Record<string, Enemy> = {
     iceResist: -0.2,
     lightningResist: -0.2,
     shadowResist: 0.3,
-    lootTables: [et.robotNo6BossLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            items: [
+              { id: 'BlastingRing', weight: 2 },
+              { id: 'BlastingRingEX', weight: 2 },
+              { id: 'DoublePoleAxe', weight: 2 },
+              { id: 'FlameguardSword', weight: 4 },
+              { id: 'FuryBlade', weight: 4 },
+              { id: 'FuryBlade', weight: 4 },
+              { id: 'FerociousVest', weight: 2 },
+              { id: 'GhostlyPendant', weight: 2 },
+              { id: 'GroundingBelt', weight: 4 },
+              { id: 'SentinelPlate', weight: 4 },
+              { id: 'MantleofRefuge', weight: 2 },
+              { id: 'MantleofRefugeEX', weight: 2 },
+              { id: 'SalvationScimitar', weight: 2 },
+              { id: 'Shatterblade', weight: 2 },
+              { id: 'StackedSignet', weight: 2 },
+              { id: 'SwordOfSolace', weight: 2 },
+              { id: 'SwordOfSolaceEX', weight: 2 },
+              { id: 'WardingBelt', weight: 2 },
+              { id: 'WardingBeltEX', weight: 2 },
+              { id: 'WizardSigil', weight: 4 },
+              { id: 'ShadowDrinkerHelmUltimate', weight: 4 },
+              { id: 'BloodhungryVest', weight: 1 },
+              { id: 'MortalRelic', weight: 4 },
+              { id: 'ThunderHelm', weight: 4 },
+              { id: 'DarkBargainCharm', weight: 2 },
+              { id: 'FrenziedSash', weight: 4 },
+              { id: 'FerocityRing', weight: 2 },
+              { id: 'SmitingEdge', weight: 2 },
+              { id: 'DrainingEdge', weight: 2 },
+              { id: 'PhantomEdge', weight: 2 },
+              { id: 'CursedNaginata', weight: 2 },
+            ],
+          },
+        ],
+      },
+    ],
     abilities: [{ id: 'BossBrain_RobotNo6' }],
     tags: ['boss', 'robot'],
     spineScale: 0.33,
@@ -1478,7 +8498,141 @@ export const z3: Record<string, Enemy> = {
     dodge: 0.03,
     fireResist: 0.3,
     lightningResist: -0.3,
-    lootTables: [et.robotLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [10, 20] },
+              { id: 'Iron', weight: 3, quantity: [1, 2] },
+              { id: 'Ore', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [10, 25] },
+              { id: 'Iron', weight: 3, quantity: [1, 3] },
+              { id: 'Stone', weight: 3, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [15, 25] },
+              { id: 'Ore', weight: 3, quantity: [2, 4] },
+              { id: 'Iron', weight: 3, quantity: [2, 4] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 16, quantity: [20, 30] },
+              { id: 'Iron', weight: 3, quantity: [3, 4] },
+              { id: 'Stone', weight: 3, quantity: [3, 4] },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [30, 70] },
+              { id: 'Iron', weight: 3, quantity: [3, 5] },
+              { id: 'Stone', weight: 3, quantity: [3, 5] },
+              { id: 'Wood', weight: 3, quantity: [3, 5] },
+              { id: 'Ore', weight: 3, quantity: [3, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [40, 50] },
+              { id: 'Iron', weight: 3, quantity: [4, 5] },
+              { id: 'Stone', weight: 3, quantity: [3, 7] },
+              { id: 'Wood', weight: 3, quantity: [3, 7] },
+              { id: 'Ore', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [45, 60] },
+              { id: 'Iron', weight: 3, quantity: [4, 6] },
+              { id: 'Ore', weight: 3, quantity: [4, 7] },
+              { id: 'Stone', weight: 3, quantity: [4, 7] },
+              { id: 'Wood', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [50, 65] },
+              { id: 'Iron', weight: 3, quantity: [4, 7] },
+              { id: 'Ore', weight: 3, quantity: [5, 7] },
+              { id: 'Stone', weight: 3, quantity: [5, 7] },
+              { id: 'Wood', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [50, 75] },
+              { id: 'Iron', weight: 3, quantity: [4, 8] },
+              { id: 'Ore', weight: 3, quantity: [5, 8] },
+              { id: 'Stone', weight: 3, quantity: [5, 8] },
+              { id: 'Wood', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [60, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 8] },
+              { id: 'Ore', weight: 3, quantity: [5, 9] },
+              { id: 'Stone', weight: 3, quantity: [6, 8] },
+              { id: 'Wood', weight: 3, quantity: [6, 8] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [70, 80] },
+              { id: 'Iron', weight: 3, quantity: [5, 9] },
+              { id: 'Ore', weight: 3, quantity: [6, 9] },
+              { id: 'Stone', weight: 3, quantity: [6, 9] },
+              { id: 'Wood', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 30, quantity: [70, 100] },
+              { id: 'Iron', weight: 3, quantity: [6, 10] },
+              { id: 'Ore', weight: 3, quantity: [6, 10] },
+              { id: 'Stone', weight: 3, quantity: [6, 10] },
+              { id: 'Wood', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['robot'],
   },
   robotBoss: {
@@ -1497,7 +8651,60 @@ export const z3: Record<string, Enemy> = {
     dodge: 0,
     fireResist: 0.3,
     iceResist: -0.3,
-    lootTables: [et.robotBossBossLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            items: [
+              { id: 'FlameguardSword', weight: 8 },
+              { id: 'FuryBlade', weight: 8 },
+              { id: 'FuryBlade', weight: 8 },
+              { id: 'GroundingBelt', weight: 8 },
+              { id: 'SentinelPlate', weight: 8 },
+              { id: 'ShadowDrinkerHelmUltimate', weight: 8 },
+              { id: 'ThunderHelm', weight: 8 },
+              { id: 'WizardSigil', weight: 8 },
+              { id: 'DoublePoleAxe', weight: 4 },
+              { id: 'GhostlyPendant', weight: 4 },
+              { id: 'SalvationScimitar', weight: 4 },
+              { id: 'StackedSignet', weight: 4 },
+              { id: 'BloodhungryVest', weight: 1 },
+              { id: 'WardingBelt', weight: 4 },
+              { id: 'BlastingRing', weight: 4 },
+              { id: 'DarkBargainCharm', weight: 4 },
+              { id: 'FerocityRing', weight: 4 },
+              { id: 'FerociousVest', weight: 4 },
+              { id: 'Shatterblade', weight: 4 },
+              { id: 'MantleofRefuge', weight: 4 },
+              { id: 'SwordOfSolace', weight: 4 },
+              { id: 'WardingBeltEX', weight: 4 },
+              { id: 'BlastingRingEX', weight: 4 },
+              { id: 'CursedNaginata', weight: 4 },
+              { id: 'MantleofRefugeEX', weight: 4 },
+              { id: 'SwordOfSolaceEX', weight: 4 },
+              { id: 'DeathzoneNecklet', weight: 8 },
+              { id: 'Fangblade', weight: 6 },
+              { id: 'RecoveryVest', weight: 8 },
+              { id: 'TwinForkedSash', weight: 6 },
+              { id: 'InvincibleMantle', weight: 4 },
+              { id: 'VectraEdge', weight: 4 },
+              { id: 'DeathzoneLocketEX', weight: 1 },
+              { id: 'WastelandBlade', weight: 8 },
+              { id: 'WrathfulVisor', weight: 6 },
+              { id: 'FangbladeEX', weight: 1 },
+              { id: 'RecoveryVestEX', weight: 1 },
+              { id: 'TwinForkedSashEX', weight: 1 },
+              { id: 'InvincibleMantleEX', weight: 1 },
+              { id: 'VectraEdgeEX', weight: 1 },
+              { id: 'WastelandBladeEX', weight: 1 },
+              { id: 'WrathfulVisorEX', weight: 1 },
+            ],
+          },
+        ],
+      },
+    ],
     abilities: [{ id: 'BossBrain_RobotBoss' }],
     tags: ['boss', 'robot'],
     spineScale: 0.22,
@@ -1520,7 +8727,123 @@ export const z3: Record<string, Enemy> = {
     iceResist: -0.2,
     lightningResist: -0.2,
     shadowResist: 0.3,
-    lootTables: [et.skeletonLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [10, 20] },
+              { id: 'Iron', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [10, 25] },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+              { id: 'BlueprintBlazingShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [15, 25] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [20, 30] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [2, 4] },
+              { id: 'BlueprintBoltproofSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [30, 40] },
+              { id: 'Iron', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [40, 50] },
+              { id: 'Iron', weight: 3, quantity: [4, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [45, 60] },
+              { id: 'Iron', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 65] },
+              { id: 'Iron', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [60, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 80] },
+              { id: 'Iron', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 100] },
+              { id: 'Iron', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['skeleton', 'armed'],
   },
   corruptedSkelNoHead: {
@@ -1540,7 +8863,123 @@ export const z3: Record<string, Enemy> = {
     fireResist: 0.3,
     iceResist: -0.2,
     shadowResist: 0.3,
-    lootTables: [et.skeletonLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [10, 20] },
+              { id: 'Iron', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [10, 25] },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+              { id: 'BlueprintBlazingShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [15, 25] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [20, 30] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [2, 4] },
+              { id: 'BlueprintBoltproofSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [30, 40] },
+              { id: 'Iron', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [40, 50] },
+              { id: 'Iron', weight: 3, quantity: [4, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [45, 60] },
+              { id: 'Iron', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 65] },
+              { id: 'Iron', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [60, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 80] },
+              { id: 'Iron', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 100] },
+              { id: 'Iron', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     abilities: [
       { id: 'DefaultAttack', params: { weight: 1 } },
       { id: 'CastWeak', params: { weight: 1, recastChance: 0 } },
@@ -1565,7 +9004,123 @@ export const z3: Record<string, Enemy> = {
     iceResist: -0.2,
     lightningResist: -0.2,
     shadowResist: 0.3,
-    lootTables: [et.skeletonLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [10, 20] },
+              { id: 'Iron', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [10, 25] },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+              { id: 'BlueprintBlazingShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [15, 25] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [20, 30] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [2, 4] },
+              { id: 'BlueprintBoltproofSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [30, 40] },
+              { id: 'Iron', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [40, 50] },
+              { id: 'Iron', weight: 3, quantity: [4, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [45, 60] },
+              { id: 'Iron', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 65] },
+              { id: 'Iron', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [60, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 80] },
+              { id: 'Iron', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 100] },
+              { id: 'Iron', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     tags: ['skeleton', 'armed'],
   },
   corruptedSkelWizard: {
@@ -1585,7 +9140,123 @@ export const z3: Record<string, Enemy> = {
     fireResist: 0.3,
     iceResist: -0.2,
     shadowResist: 0.3,
-    lootTables: [et.skeletonLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [10, 20] },
+              { id: 'Iron', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [10, 25] },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+              { id: 'BlueprintBlazingShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [15, 25] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [20, 30] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [2, 4] },
+              { id: 'BlueprintBoltproofSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [30, 40] },
+              { id: 'Iron', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [40, 50] },
+              { id: 'Iron', weight: 3, quantity: [4, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [45, 60] },
+              { id: 'Iron', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 65] },
+              { id: 'Iron', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [60, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 80] },
+              { id: 'Iron', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 100] },
+              { id: 'Iron', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     abilities: [
       { id: 'DefaultAttack', params: { weight: 1 } },
       { id: 'CastSilence', params: { weight: 1, recastChance: 0 } },
@@ -1607,7 +9278,123 @@ export const z3: Record<string, Enemy> = {
     crit: 0,
     dodge: 0.03,
     lightningResist: -0.2,
-    lootTables: [et.skeletonLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          {
+            minLevel: 1,
+            maxLevel: 3,
+            items: [{ id: 'Gold', weight: 1, quantity: [15, 20] }],
+          },
+          {
+            minLevel: 4,
+            maxLevel: 5,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [10, 20] },
+              { id: 'Iron', weight: 3, quantity: [1, 2] },
+            ],
+          },
+          {
+            minLevel: 6,
+            maxLevel: 20,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [10, 25] },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+              { id: 'BlueprintBlazingShortsword', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [15, 25] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [1, 3] },
+            ],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [
+              { id: 'Gold', weight: 42, quantity: [20, 30] },
+              { id: 'BlueprintBloodhungryVest', weight: 1, quantity: 1 },
+              { id: 'BlueprintMortalRelic', weight: 1, quantity: 1 },
+              { id: 'BlueprintStormWrathBelt', weight: 1, quantity: 1 },
+              { id: 'BlueprintThunderHelm', weight: 1, quantity: 1 },
+              { id: 'Iron', weight: 18, quantity: [2, 4] },
+              { id: 'BlueprintBoltproofSerape', weight: 1, quantity: 1 },
+            ],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [30, 40] },
+              { id: 'Iron', weight: 3, quantity: [4, 5] },
+            ],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [40, 50] },
+              { id: 'Iron', weight: 3, quantity: [4, 6] },
+            ],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [45, 60] },
+              { id: 'Iron', weight: 3, quantity: [4, 7] },
+            ],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 65] },
+              { id: 'Iron', weight: 3, quantity: [5, 7] },
+            ],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [50, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 8] },
+            ],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [60, 75] },
+              { id: 'Iron', weight: 3, quantity: [5, 9] },
+            ],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 80] },
+              { id: 'Iron', weight: 3, quantity: [6, 9] },
+            ],
+          },
+          {
+            minLevel: 200,
+            items: [
+              { id: 'Gold', weight: 7, quantity: [70, 100] },
+              { id: 'Iron', weight: 3, quantity: [6, 10] },
+            ],
+          },
+        ],
+      },
+    ],
     abilities: [
       {
         id: 'PoisonOnAttackScaled',
@@ -1632,7 +9419,60 @@ export const z3: Record<string, Enemy> = {
     dodge: 0.08,
     shadowResist: 0.3,
     fireResist: -0.2,
-    lootTables: [et.evilBookEliteLoot],
+    lootTables: [
+      {
+        type: 'oneOf',
+        tiers: [
+          { minLevel: 1, maxLevel: 20, items: [{ id: 'Gold', quantity: 200 }] },
+          {
+            minLevel: 21,
+            maxLevel: 40,
+            items: [{ id: 'Gold', quantity: 400 }],
+          },
+          {
+            minLevel: 41,
+            maxLevel: 60,
+            items: [{ id: 'Gold', quantity: 600 }],
+          },
+          {
+            minLevel: 61,
+            maxLevel: 80,
+            items: [{ id: 'Gold', quantity: 1000 }],
+          },
+          {
+            minLevel: 81,
+            maxLevel: 100,
+            items: [{ id: 'Gold', quantity: 2000 }],
+          },
+          {
+            minLevel: 101,
+            maxLevel: 120,
+            items: [{ id: 'Gold', quantity: 3000 }],
+          },
+          {
+            minLevel: 121,
+            maxLevel: 140,
+            items: [{ id: 'Gold', quantity: 4250 }],
+          },
+          {
+            minLevel: 141,
+            maxLevel: 160,
+            items: [{ id: 'Gold', quantity: 5750 }],
+          },
+          {
+            minLevel: 161,
+            maxLevel: 180,
+            items: [{ id: 'Gold', quantity: 7500 }],
+          },
+          {
+            minLevel: 181,
+            maxLevel: 200,
+            items: [{ id: 'Gold', quantity: 9000 }],
+          },
+          { minLevel: 201, items: [{ id: 'Gold', quantity: 12500 }] },
+        ],
+      },
+    ],
     abilities: [
       { id: 'DefaultAttack', params: { weight: 6 } },
       { id: 'CastWeak', params: { weight: 1, recastChance: 0 } },

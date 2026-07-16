@@ -73,11 +73,11 @@ export const abilityNameMap = {
   },
   MaxHpCritBoostAbility: {
     name: 'Crit Up if Max HP',
-    description: 'Increased crit chance by 20% while your HP is at 100%',
+    description: 'Increases crit chance by 20% while your HP is at 100%.',
   },
   BoostAttackOnHighHP: {
     name: 'Boost Attack On High HP',
-    description: 'Boosts attack when HP is 100%.',
+    description: 'Boosts attack by 20% while your HP is at 100%.',
   },
   HealOnCritAbility: {
     name: 'Critical Recovery',
@@ -105,7 +105,8 @@ export const abilityNameMap = {
   },
   LowHPRageFill: {
     name: 'Fill Rage On Low HP',
-    description: 'Fills rage meter at 30% HP the first time in a battle.',
+    description:
+      'Fills the rage meter the first time your HP drops below 30% in a battle.',
   },
   RageOnFirstTurn: {
     name: 'Rage On First Turn',
@@ -137,7 +138,7 @@ export const abilityNameMap = {
   },
   AddRageOnHitCount: {
     name: 'Add Rage on Hit 5',
-    description: 'Gain 25 when hit count reaches 5.',
+    description: 'Gain 25 rage when hit count reaches 5.',
   },
   GainShieldOnEnemyDeath: {
     name: 'Gain Shield on Enemy Death',
@@ -505,7 +506,7 @@ export const abilityParamDescriptionMap: Record<
       '50% chance to poison for 60 when magic knives hit.',
   },
   HealOnEnemyDeath: {
-    '{"healAmount":0.025}': 'Heal for 3% when an enemy dies.',
+    '{"healAmount":0.025}': 'Heal for 2.5% when an enemy dies.',
   },
   ShieldOnLowHP: {
     '{"shieldAmount":0.15,"threshold":0.2}':
@@ -536,7 +537,7 @@ export const abilityParamDescriptionMap: Record<
   },
   HealOnLightning: {
     '{"healAmount":0.015}':
-      'Heal for 2% of Max HP whenever a lightning bolt fires.',
+      'Heal for 1.5% of Max HP whenever a lightning bolt fires.',
     '{"healAmount":0.01}':
       'Heal for 1% of Max HP whenever a lightning bolt fires.',
   },
@@ -551,6 +552,8 @@ export const abilityParamDescriptionMap: Record<
   SilenceOnRage: {
     '{"turnDuration":3}':
       '50% chance to cast Silence on your target when you use a Rage attack.',
+    '{"applyChance":0.3}':
+      '30% chance to cast Silence on your target when you use a Rage attack.',
   },
   PoisonShield: {
     '{"applyChance":0.75,"damagePerTurn":35}':
@@ -593,8 +596,45 @@ export const abilityParamDescriptionMap: Record<
       '50% chance to poison your target for 40 when you attack.',
     '{"applyChance":1,"damagePerTurn":110}':
       '100% chance to poison your target for 110 when you attack.',
+    '{"applyChance":0.3,"damagePerTurn":25}':
+      '30% chance to poison your target for 25 when you attack.',
   },
   HealOnFirstTurn: {
     '{"healAmount":0.1}': 'Heal for 10% of Max HP on first turn.',
+  },
+  AddRageOnCrit: { '{"rageAmount":10}': 'Add 10 rage each time you crit.' },
+  LowHpDodgeBoostAbility: {
+    '{"dodgeBoostAmount":0.15,"threshold":0.3}':
+      'Increases dodge chance by 20% when HP is below 30%.',
+  },
+  AddRageOnHitCount: {
+    '{"hitCount":3,"rageAmount":20}': 'Gain 20 rage when hit count reaches 3.',
+  },
+  RemovePoisonOnHeal: {
+    '{"removeChance":0.2}': '20% chance to remove Poison when healed.',
+    '{"removeChance":0.25}': '25% chance to remove Poison when healed.',
+    '{"removeChance":0.3}': '30% chance to remove Poison when healed.',
+    '{"removeChance":0.35}': '35% chance to remove Poison when healed.',
+    '{"removeChance":0.4}': '40% chance to remove Poison when healed.',
+  },
+  MaxHpCritBoostAbility: {
+    '{"critBoostAmount":0.15}':
+      'Increases crit chance by 15% while your HP is at 100%.',
+    '{"critBoostAmount":0.17}':
+      'Increases crit chance by 17% while your HP is at 100%.',
+    '{"critBoostAmount":0.2}':
+      'Increases crit chance by 20% while your HP is at 100%.',
+    '{"critBoostAmount":0.24}':
+      'Increases crit chance by 24% while your HP is at 100%.',
+    '{"critBoostAmount":0.3}':
+      'Increases crit chance by 30% while your HP is at 100%.',
+  },
+  VulnerableEveryTurnCount: {
+    '{"applyChance":0.4,"defenseReduction":0.25,"turnDuration":2,"turnInterval":2}':
+      'Every 2 turns, 40% chance to cast Vulnerable on your target.',
+  },
+  HypnotizeOnAttack: {
+    '{"applyChance":0.25}':
+      '25% chance to Hypnotize your target when you attack.',
   },
 }
