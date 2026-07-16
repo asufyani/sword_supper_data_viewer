@@ -422,18 +422,22 @@ function abilityParamKey(params) {
   )
 }
 
-function toTsExpression(value, rawObjects = new WeakMap()) {
+function toTsExpression(value, rawObjects = new WeakMap(), contentMap = null) {
   if (value instanceof RawCode) return value.code
   if (value && typeof value === 'object' && rawObjects.has(value)) {
     return rawObjects.get(value).code
   }
+  if (value && typeof value === 'object' && !Array.isArray(value) && contentMap) {
+    const match = contentMap.get(JSON.stringify(canonicalize(value)))
+    if (match) return match.code
+  }
   if (Array.isArray(value)) {
-    return `[${value.map((item) => toTsExpression(item, rawObjects)).join(',')}]`
+    return `[${value.map((item) => toTsExpression(item, rawObjects, contentMap)).join(',')}]`
   }
   if (value && typeof value === 'object') {
     return `{${Object.entries(value)
       .filter(([, child]) => child !== undefined)
-      .map(([key, child]) => `${objectKey(key)}:${toTsExpression(child, rawObjects)}`)
+      .map(([key, child]) => `${objectKey(key)}:${toTsExpression(child, rawObjects, contentMap)}`)
       .join(',')}}`
   }
   if (typeof value === 'string') return JSON.stringify(value)
@@ -1281,8 +1285,13 @@ const targets = {
           new RawCode(`et.${name}`),
         ])
       )
+      const contentMap = new Map()
+      for (const [name, lootTable] of Object.entries(lootTables)) {
+        const key = JSON.stringify(canonicalize(lootTable))
+        if (!contentMap.has(key)) contentMap.set(key, new RawCode(`et.${name}`))
+      }
       return formatTypescript(
-        `import type { Enemy } from '../types'\nimport { et } from './loot'\n\nexport const z3: Record<string, Enemy> = ${toTsExpression(expected, rawObjects)}\n`
+        `import type { Enemy } from '../types'\nimport { et } from './loot'\n\nexport const z3: Record<string, Enemy> = ${toTsExpression(expected, rawObjects, contentMap)}\n`
       )
     },
   },
