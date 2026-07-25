@@ -7,24 +7,28 @@ export const HelpPanel = () => {
 
       <Typography variant={'h4'}>Weapons</Typography>
       <Typography variant={'body1'}>
-        Use the search box to filter by name and click the sortable headers to
-        reorder the table. Expand the row in the far right column to see where a
-        weapon drops. The Drops From list includes both regular mission rewards
-        and Daily Dungeon vault rewards when that weapon can appear in either
-        place.
+        Use the search box to filter by name, stat, or ability. Multi-word
+        searches match every word, so &quot;second wind&quot; finds items with
+        that ability. Click the sortable headers to reorder the table. Expand the
+        row in the far right column to see where a weapon drops. The Drops From
+        list includes both regular mission rewards and Daily Dungeon vault
+        rewards when that weapon can appear in either place.
       </Typography>
 
       <Typography variant={'h4'}>Armor</Typography>
       <Typography variant={'body1'}>
-        Use the search box and slot buttons together to narrow the list. Expand
-        the row in the far right column to see where that armor piece can drop,
-        including Daily Dungeon vault rewards when applicable.
+        Use the search box and slot buttons together to narrow the list. Search
+        works across item names, stats, and abilities, including unlockable
+        abilities from upgrade paths. Expand the row in the far right column to
+        see where that armor piece can drop, including Daily Dungeon vault
+        rewards when applicable.
       </Typography>
 
       <Typography variant={'h4'}>Blueprints</Typography>
       <Typography variant={'body1'}>
-        Filter the list with the search box. Click an item name in the upgrades
-        column to jump directly to that item in the Weapons or Armor tabs.
+        Filter the list with the search box by name, stat, or ability. Click an
+        item name in the upgrades column to jump directly to that item in the
+        Weapons or Armor tabs.
       </Typography>
 
       <Typography variant={'h4'}>Maps</Typography>

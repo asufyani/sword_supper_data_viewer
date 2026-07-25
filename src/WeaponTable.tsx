@@ -21,6 +21,7 @@ import {
   getPlayerWeaponAssetForItem,
   type PlayerWeaponAsset,
 } from './utils/playerWeapons'
+import { itemMatchesSearch } from './utils/itemSearch'
 
 const formatter = new Intl.NumberFormat('en-US', {
   style: 'percent',
@@ -151,16 +152,17 @@ export const WeaponTable: React.FC<WeaponTableProps> = ({
     () =>
       [
         ...itemsArray.filter((item) =>
-          item.name.toLowerCase().includes(searchString)
+          itemMatchesSearch(item, searchString, itemNameMap)
         ),
       ].sort(getItemComparator(orderBy, order)),
-    [itemsArray, order, orderBy, searchString]
+    [itemsArray, itemNameMap, order, orderBy, searchString]
   )
 
   return (
     <>
       <TextField
         label="Search weapons"
+        placeholder="Name, stat, ability (e.g. second wind, heal)"
         onChange={handleSearchChange}
       ></TextField>
       <Table stickyHeader>
